@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban College Preview</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,600&family=Sora:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind CSS (CDN for Preview Mode) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ucb: {
+                            dark: '#1C1C1E',
+                            emerald: '#0A6847',
+                            copper: '#B87333',
+                            ivory: '#FAF8F5',
+                            champagne: '#F0E6D3',
+                            plum: '#5B2C6F',
+                            blue: '#0F4D8A',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        display: ['Sora', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'scroll': 'scroll 2s ease-in-out infinite',
+                        'shimmer': 'shimmer 1.5s infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        scroll: {
+                            '0%': { transform: 'translateY(0)', opacity: '1' },
+                            '100%': { transform: 'translateY(10px)', opacity: '0' },
+                        },
+                        shimmer: {
+                            '100%': { transform: 'translateX(100%)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #FAF8F5;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #B87333;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0A6847;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .frosted {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+
+<body class="bg-ucb-ivory text-ucb-dark antialiased">
+
+    <!-- Navigation -->
+    <header
+        class="fixed top-0 w-full z-50 bg-ucb-ivory/95 frosted shadow-lg transition-all border-b border-ucb-champagne/30">
+        <div class="bg-ucb-dark text-white text-xs py-2 hidden md:block">
+            <div class="container mx-auto px-6 flex justify-end items-center gap-6 font-medium">
+                <span>📞 617-555-0123</span>
+                <span>🌎 Español</span>
+                <span class="text-ucb-copper">💬 Live Chat</span>
+                <button
+                    class="bg-ucb-emerald px-4 py-0.5 rounded-full font-bold uppercase tracking-wide text-[10px] hover:bg-emerald-600 transition">Apply
+                    Now</button>
+            </div>
+        </div>
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2 font-serif font-bold text-2xl text-ucb-dark">
+                <div
+                    class="w-10 h-10 bg-ucb-emerald rounded-tr-xl rounded-bl-xl flex items-center justify-center text-white">
+                    U</div>
+                Urban College
+            </div>
+            <div class="hidden md:flex items-center gap-8 font-medium text-ucb-dark">
+                <a href="#" class="hover:text-ucb-emerald transition">Programs</a>
+                <a href="#" class="hover:text-ucb-emerald transition">Admissions</a>
+                <a href="#" class="hover:text-ucb-emerald transition">About</a>
+                <a href="#"
+                    class="btn border-2 border-ucb-dark px-6 py-2 rounded-full hover:bg-ucb-dark hover:text-white transition">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="relative h-screen w-full overflow-hidden flex items-center justify-center bg-ucb-dark text-white">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2940&auto=format&fit=crop"
+                class="w-full h-full object-cover opacity-40">
+            <div
+                class="absolute inset-0 bg-gradient-to-r from-ucb-dark/95 via-ucb-dark/70 to-ucb-dark/40 mix-blend-multiply">
+            </div>
+        </div>
+
+        <div class="relative z-10 container mx-auto px-6 text-center">
+            <div
+                class="inline-block mb-6 px-4 py-1 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-sm font-medium tracking-wide animate-fade-in-up">
+                <span class="text-ucb-copper mr-2">✦</span> EST. 1993 • BOSTON, MA
+            </div>
+            <h1
+                class="font-display font-extrabold text-5xl md:text-7xl lg:text-8xl tracking-tight mb-8 leading-tight drop-shadow-lg">
+                Affordable Degrees.<br>Flexible Schedules.<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-ucb-champagne to-white">Your
+                    Language.</span>
+            </h1>
+            <p
+                class="font-sans text-xl md:text-2xl text-ucb-ivory/90 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+                Join a bold, modern community designated as a <span class="text-white font-medium">Hispanic-Serving
+                    Institution</span>.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-5">
+                <button
+                    class="bg-ucb-emerald text-white font-bold py-4 px-10 rounded-full shadow-xl shadow-emerald-900/30 hover:scale-105 transition-transform flex items-center gap-2">
+                    Explore Programs <span>→</span>
+                </button>
+                <button
+                    class="border-2 border-white/30 text-white font-bold py-4 px-10 rounded-full hover:bg-white hover:text-ucb-dark transition-colors backdrop-blur-sm">
+                    Request Info
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Preview -->
+    <section class="py-24 bg-ucb-ivory relative">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-ucb-copper font-bold tracking-widest uppercase text-sm mb-4 block">Academics</span>
+                <h2 class="font-display font-bold text-4xl md:text-5xl text-ucb-dark mb-6">Your Path Starts Here</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-2xl border border-gray-100 hover:border-ucb-emerald/30 transition-all duration-300 group hover:-translate-y-2">
+                    <div
+                        class="text-[10px] font-bold uppercase tracking-wider text-ucb-emerald bg-ucb-emerald/5 px-3 py-1.5 rounded-full inline-block mb-6">
+                        Associate Degree</div>
+                    <h3
+                        class="font-display font-bold text-2xl text-ucb-dark mb-4 group-hover:text-ucb-emerald transition-colors">
+                        Early Childhood Education</h3>
+                    <p class="text-gray-600 mb-8">Prepare for a career nurturing the next generation with our
+                        comprehensive, multilingual program.</p>
+                    <a href="#"
+                        class="text-ucb-dark font-bold group-hover:text-ucb-emerald flex items-center gap-2">Details
+                        <span>→</span></a>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-2xl border border-gray-100 hover:border-ucb-emerald/30 transition-all duration-300 group hover:-translate-y-2">
+                    <div
+                        class="text-[10px] font-bold uppercase tracking-wider text-ucb-emerald bg-ucb-emerald/5 px-3 py-1.5 rounded-full inline-block mb-6">
+                        Associate Degree</div>
+                    <h3
+                        class="font-display font-bold text-2xl text-ucb-dark mb-4 group-hover:text-ucb-emerald transition-colors">
+                        Human Services</h3>
+                    <p class="text-gray-600 mb-8">Lead with compassion in social work and community services. Flexible
+                        evening classes available.</p>
+                    <a href="#"
+                        class="text-ucb-dark font-bold group-hover:text-ucb-emerald flex items-center gap-2">Details
+                        <span>→</span></a>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-2xl border border-gray-100 hover:border-ucb-emerald/30 transition-all duration-300 group hover:-translate-y-2">
+                    <div
+                        class="text-[10px] font-bold uppercase tracking-wider text-ucb-emerald bg-ucb-emerald/5 px-3 py-1.5 rounded-full inline-block mb-6">
+                        Certificate</div>
+                    <h3
+                        class="font-display font-bold text-2xl text-ucb-dark mb-4 group-hover:text-ucb-emerald transition-colors">
+                        Clinical Research</h3>
+                    <p class="text-gray-600 mb-8">Enter the booming biotech and medical research field with our 12-month
+                        certificate program.</p>
+                    <a href="#"
+                        class="text-ucb-dark font-bold group-hover:text-ucb-emerald flex items-center gap-2">Details
+                        <span>→</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ucb-dark text-ucb-ivory py-16 border-t-8 border-ucb-emerald">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex items-center justify-center gap-2 font-serif font-bold text-2xl text-white mb-8">
+                <div
+                    class="w-10 h-10 bg-white text-ucb-dark rounded-tr-xl rounded-bl-xl flex items-center justify-center">
+                    U</div>
+                Urban College
+            </div>
+            <p class="text-gray-400 mb-8">Empowering a diverse community of learners since 1993.</p>
+            <p class="text-xs text-gray-600">© 2026 Urban College of Boston. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
