@@ -8,6 +8,10 @@ import Home from './pages/Home';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import Program from './pages/Program';
+import LearningResourceCenter from './pages/LearningResourceCenter';
+import StudentGovernment from './pages/StudentGovernment';
+import MentalHealth from './pages/MentalHealth';
+import Search from './pages/Search';
 
 // ScrollToTop component to handle scroll on route change
 const ScrollToTop = () => {
@@ -39,6 +43,10 @@ function App() {
             <Route path="/programs/:slug" element={<Program />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/learning-resource-center" element={<LearningResourceCenter />} />
+            <Route path="/student-government" element={<StudentGovernment />} />
+            <Route path="/mental-health" element={<MentalHealth />} />
+            <Route path="/search" element={<Search />} />
           </Routes>
         </main>
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, Phone, Globe, MessageCircle, ChevronDown, Search } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Logo from './Logo';
 
 const Navigation: React.FC = () => {
@@ -10,6 +10,7 @@ const Navigation: React.FC = () => {
   const [bannerOpen, setBannerOpen] = useState(true);
   const [searchOpen, setSearchOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -67,7 +68,15 @@ const Navigation: React.FC = () => {
       ]
     },
     { name: 'Admissions & Aid', path: '/#financial-aid' },
-    { name: 'Student Resources', path: '/#resources' },
+    { 
+      name: 'Student Resources', 
+      path: '/#resources',
+      dropdown: [
+        { name: 'Learning Resource Center', path: '/learning-resource-center' },
+        { name: 'Student Government', path: '/student-government' },
+        { name: 'Mental Health', path: '/mental-health' }
+      ]
+    },
     { name: 'Workforce & Community', path: '/workforce-development' },
     { name: 'Donate', path: '#' },
     { name: 'Blog', path: '/blog' }
@@ -245,7 +254,15 @@ const Navigation: React.FC = () => {
             className="flex-1 bg-transparent border-none outline-none text-xl md:text-2xl text-ucb-blue placeholder-gray-300 font-display font-light placeholder:font-light"
             autoFocus={searchOpen}
             onKeyDown={(e) => {
-              if (e.key === 'Enter' || e.key === 'Escape') setSearchOpen(false);
+              if (e.key === 'Enter') {
+                const query = e.currentTarget.value.trim();
+                if (query) {
+                  navigate(`/search?q=${encodeURIComponent(query)}`);
+                }
+                setSearchOpen(false);
+              } else if (e.key === 'Escape') {
+                setSearchOpen(false);
+              }
             }}
           />
           <button onClick={() => setSearchOpen(false)} className="text-gray-400 hover:text-ucb-orange transition-colors p-2 shrink-0">
