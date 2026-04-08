@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BookOpen, Monitor, Users, Calendar, Clock, MapPin, Mail, Phone, ExternalLink, MessageCircle, ChevronDown, ChevronUp } from 'lucide-react';
+import { BookOpen, Monitor, Users, Calendar, Clock, MapPin, Mail, Phone, ExternalLink, MessageCircle, ChevronDown, ChevronUp, CheckCircle } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 
 const faqs = [
@@ -51,7 +51,7 @@ const LearningResourceCenter: React.FC = () => {
                                         { title: "Language Support", desc: "Dedicated support in Spanish and Mandarin.", icon: MessageCircle },
                                         { title: "Technology Assistance", desc: "Help with software, online platforms, and computing.", icon: Monitor },
                                         { title: "Academic Workshops", desc: "Study skills, professional skills, and time management.", icon: BookOpen },
-                                        { title: "English Placement", desc: "Assistance with the English placement process.", icon: CheckCircle => <CheckCircle className="w-8 h-8 text-ucb-green" /> }, // Placeholder usage
+                                        { title: "English Placement", desc: "Assistance with the English placement process.", icon: CheckCircle }, 
                                         { title: "Community Events", desc: "Connect with peers at Urban College community events.", icon: Calendar }
                                     ].map((service, idx) => (
                                         <div key={idx} className="bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:border-ucb-blue/30 transition-colors">
