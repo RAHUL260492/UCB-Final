@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, Calendar, ChevronRight } from 'lucide-react';
-import blogsData from '../src/data/blogs.json';
+import { client, urlFor } from '../src/lib/sanityClient';
 import PageHeader from '../components/PageHeader';
+import localBlogsData from '../src/data/blogs.json';
 
 const formatTitle = (title: string, slug: string) => {
     if (title === "Urban College Blog | Urban College of Boston") {
@@ -13,10 +14,35 @@ const formatTitle = (title: string, slug: string) => {
 
 const Blog: React.FC = () => {
     const [searchQuery, setSearchQuery] = useState('');
+    const [blogsData, setBlogsData] = useState<any[]>(localBlogsData);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        client.fetch(`*[_type == "post"] | order(date desc) {
+            title,
+            "slug": slug.current,
+            description,
+            date,
+            image
+        }`).then((data) => {
+            if (data && data.length > 0) {
+                // Map the image object to url string just like local JSON expects
+                const mappedData = data.map((b: any) => ({
+                    ...b,
+                    image: b.image ? urlFor(b.image).url() : null
+                }));
+                setBlogsData(mappedData);
+            }
+            setLoading(false);
+        }).catch(err => {
+            console.error(err);
+            setLoading(false);
+        });
+    }, []);
 
     const filteredBlogs = blogsData.filter(blog => {
-        const title = formatTitle(blog.title, blog.slug).toLowerCase();
-        const desc = blog.description.toLowerCase();
+        const title = formatTitle(blog.title, blog.slug || '').toLowerCase();
+        const desc = (blog.description || '').toLowerCase();
         const query = searchQuery.toLowerCase();
         return title.includes(query) || desc.includes(query);
     });
@@ -44,12 +70,20 @@ const Blog: React.FC = () => {
                     />
                 </div>
 
+                {/* Loading state indicator */}
+                {loading && (
+                    <div className="text-center py-20">
+                         <div className="inline-block animate-spin w-8 h-8 border-4 border-ucb-orange border-t-transparent rounded-full mb-4"></div>
+                         <p className="text-gray-500 font-medium">Loading stories...</p>
+                    </div>
+                )}
+
                 {/* Blog Grid */}
-                {filteredBlogs.length > 0 ? (
+                {!loading && filteredBlogs.length > 0 ? (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {filteredBlogs.map((blog, index) => {
-                            const displayTitle = formatTitle(blog.title, blog.slug);
-                            const dateObj = new Date(blog.date);
+                            const displayTitle = formatTitle(blog.title, blog.slug || '');
+                            const dateObj = blog.date ? new Date(blog.date) : new Date();
                             const displayDate = dateObj.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 
                             return (
@@ -61,7 +95,7 @@ const Blog: React.FC = () => {
                                     <div className="h-56 relative overflow-hidden bg-gray-100">
                                         <div className="absolute inset-0 bg-ucb-blue/10 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500 z-10" />
                                         <img 
-                                            src={blog.image} 
+                                            src={blog.image || 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'} 
                                             alt={displayTitle} 
                                             className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                                             onError={(e) => {
@@ -97,7 +131,7 @@ const Blog: React.FC = () => {
                             )
                         })}
                     </div>
-                ) : (
+                ) : !loading ? (
                     <div className="text-center py-20 bg-white rounded-3xl border border-gray-100 shadow-sm max-w-2xl mx-auto">
                         <Search className="w-16 h-16 text-gray-200 mx-auto mb-4" />
                         <h3 className="text-xl font-bold text-gray-900 mb-2">No articles found</h3>
@@ -109,7 +143,7 @@ const Blog: React.FC = () => {
                             Clear search
                         </button>
                     </div>
-                )}
+                ) : null}
             </div>
         </div>
     );

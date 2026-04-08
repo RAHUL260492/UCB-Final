@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, ChevronRight } from 'lucide-react';
-import blogsData from '../src/data/blogs.json';
+import { client, urlFor } from '../src/lib/sanityClient';
 import ScrollAnimation from './ScrollAnimation';
+import localBlogsData from '../src/data/blogs.json';
 
 const formatTitle = (title: string, slug: string) => {
     if (title === "Urban College Blog | Urban College of Boston") {
@@ -12,8 +13,27 @@ const formatTitle = (title: string, slug: string) => {
 };
 
 const RecentBlogPosts: React.FC = () => {
-    // Get top 3 most recent blogs
-    const recentBlogs = [...blogsData].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 3);
+    const [recentBlogs, setRecentBlogs] = useState<any[]>(
+        [...localBlogsData].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 3)
+    );
+
+    useEffect(() => {
+        client.fetch(`*[_type == "post"] | order(date desc)[0...3] {
+            title,
+            "slug": slug.current,
+            description,
+            date,
+            image
+        }`).then((data) => {
+            if (data && data.length > 0) {
+                const mappedData = data.map((b: any) => ({
+                    ...b,
+                    image: b.image ? urlFor(b.image).url() : null
+                }));
+                setRecentBlogs(mappedData);
+            }
+        }).catch(err => console.error(err));
+    }, []);
 
     return (
         <section className="py-20 bg-gray-50 relative z-10 border-y border-gray-100">
@@ -28,8 +48,8 @@ const RecentBlogPosts: React.FC = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {recentBlogs.map((blog, index) => {
-                        const displayTitle = formatTitle(blog.title, blog.slug);
-                        const dateObj = new Date(blog.date);
+                        const displayTitle = formatTitle(blog.title, blog.slug || '');
+                        const dateObj = blog.date ? new Date(blog.date) : new Date();
                         const displayDate = dateObj.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 
                         return (
@@ -41,7 +61,7 @@ const RecentBlogPosts: React.FC = () => {
                                     <div className="h-56 relative overflow-hidden bg-gray-100">
                                         <div className="absolute inset-0 bg-ucb-blue/10 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500 z-10" />
                                         <img 
-                                            src={blog.image} 
+                                            src={blog.image || 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'} 
                                             alt={displayTitle} 
                                             className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                                             onError={(e) => {
