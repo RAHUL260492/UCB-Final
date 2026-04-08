@@ -1,83 +1,206 @@
-import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
-import { Testimonial } from '../types';
+import React, { useState, useEffect, useRef } from 'react';
+import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react';
 
-const TESTIMONIALS: Testimonial[] = [
+const TESTIMONIALS = [
   {
     id: '1',
     name: 'Maria Gonzalez',
     role: 'Class of 2024, Human Services',
     quote: "Being able to take classes in Spanish while improving my English changed everything. I didn't just get a degree; I got a family.",
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop',
+    accentColor: 'var(--color-ucb-blue)',
   },
   {
     id: '2',
     name: 'Jean Pierre',
-    role: 'Certificate in Digital Literacy',
-    quote: "I was working two jobs. The flexible schedule at UCB allowed me to study at night. Now I'm working in IT support.",
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop'
+    role: 'Professional Studies',
+    quote: "I was working two jobs. The flexible schedule at Urban College allowed me to study at night. Now I'm working in IT support.",
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop',
+    accentColor: 'var(--color-ucb-green)',
   },
   {
     id: '3',
     name: 'Sarah Chen',
     role: 'Early Childhood Education',
     quote: "The professors actually care. They know your name, your story, and they push you to succeed. Best decision I ever made.",
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1000&auto=format&fit=crop'
-  }
+    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400&auto=format&fit=crop',
+    accentColor: 'var(--color-ucb-orange)',
+  },
 ];
 
 const Testimonials: React.FC = () => {
   const [active, setActive] = useState(0);
+  const [animating, setAnimating] = useState(false);
+  const [direction, setDirection] = useState<'left' | 'right'>('right');
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLElement>(null);
 
-  const next = () => setActive((prev) => (prev + 1) % TESTIMONIALS.length);
-  const prev = () => setActive((prev) => (prev - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setIsVisible(true); },
+      { threshold: 0.2 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  const goTo = (idx: number, dir: 'left' | 'right') => {
+    if (animating) return;
+    setDirection(dir);
+    setAnimating(true);
+    setTimeout(() => {
+      setActive(idx);
+      setAnimating(false);
+    }, 350);
+  };
+
+  const next = () => goTo((active + 1) % TESTIMONIALS.length, 'right');
+  const prev = () => goTo((active - 1 + TESTIMONIALS.length) % TESTIMONIALS.length, 'left');
+
+  useEffect(() => {
+    const timer = setInterval(next, 4500);
+    return () => clearInterval(timer);
+  }, [active]);
+
+  const t = TESTIMONIALS[active];
 
   return (
-    <section id="testimonials" className="py-24 bg-ucb-champagne">
-      <div className="container mx-auto px-6">
-        <div className="flex flex-col items-center">
-          <Quote className="w-12 h-12 text-ucb-copper mb-8 opacity-50" />
-          
-          <div className="relative w-full max-w-4xl mx-auto min-h-[400px]">
-            {TESTIMONIALS.map((t, idx) => (
-              <div 
-                key={t.id}
-                className={`absolute inset-0 transition-all duration-700 transform flex flex-col md:flex-row items-center gap-10 md:gap-16 ${
-                  idx === active ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20 pointer-events-none'
-                }`}
+    <section
+      ref={ref}
+      id="testimonials"
+      className="py-4 md:py-6 relative overflow-hidden bg-white"
+    >
+      {/* Floating decorative quote marks */}
+      <div className="absolute top-4 left-8 opacity-10 pointer-events-none animate-float-slow">
+        <Quote className="w-32 h-32 text-ucb-periwinkle" style={{ animationDelay: '0s' }} />
+      </div>
+      <div className="absolute bottom-4 right-8 opacity-10 pointer-events-none animate-float-slow" style={{ animationDelay: '1.5s' }}>
+        <Quote className="w-20 h-20 text-ucb-periwinkle rotate-180" />
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
+
+        {/* Section heading */}
+        <div
+          className="text-center mb-4"
+          style={{
+            opacity: isVisible ? 1 : 0,
+            transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
+            transition: 'all 0.7s ease 0.1s'
+          }}
+        >
+          <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs mb-2 block">Student Stories</span>
+          <h2 className="font-display font-bold text-2xl md:text-3xl text-ucb-blue">What Our Students Say</h2>
+        </div>
+
+        {/* Card */}
+        <div
+          className="max-w-3xl mx-auto"
+          style={{
+            opacity: isVisible ? 1 : 0,
+            transform: isVisible ? 'translateY(0) scale(1)' : 'translateY(30px) scale(0.97)',
+            transition: 'all 0.8s cubic-bezier(0.16,1,0.3,1) 0.2s'
+          }}
+        >
+          <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 relative overflow-hidden">
+
+            {/* Animated top accent */}
+            <div
+              className="absolute top-0 left-0 right-0 h-1 transition-all duration-700 rounded-t-3xl"
+              style={{ backgroundColor: t.accentColor }}
+            />
+
+            <div className="flex items-start gap-6">
+              {/* Avatar */}
+              <div
+                className="shrink-0 relative"
+                style={{
+                  opacity: animating ? 0 : 1,
+                  transform: animating
+                    ? `translateX(${direction === 'right' ? '-20px' : '20px'}) scale(0.9)`
+                    : 'translateX(0) scale(1)',
+                  transition: 'all 0.35s cubic-bezier(0.16,1,0.3,1)'
+                }}
               >
-                <div className="w-48 h-48 md:w-64 md:h-64 shrink-0 rounded-full border-4 border-ucb-copper p-1">
-                   <img src={t.image} alt={t.name} className="w-full h-full rounded-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+                <div
+                  className="w-20 h-20 md:w-24 md:h-24 rounded-2xl overflow-hidden shadow-lg"
+                  style={{ border: `3px solid ${t.accentColor}` }}
+                >
+                  <img src={t.image} alt={t.name} className="w-full h-full object-cover" />
                 </div>
-                
-                <div className="text-center md:text-left">
-                  <p className="font-display text-2xl md:text-3xl font-medium text-ucb-dark leading-relaxed mb-6">
-                    "{t.quote}"
-                  </p>
-                  <h4 className="font-bold text-xl text-ucb-emerald">{t.name}</h4>
-                  <p className="text-gray-600 uppercase tracking-widest text-sm mt-1">{t.role}</p>
+                {/* Floating color dot */}
+                <div
+                  className="absolute -bottom-1.5 -right-1.5 w-6 h-6 rounded-full border-2 border-white flex items-center justify-center"
+                  style={{ backgroundColor: t.accentColor }}
+                >
+                  <Quote className="w-3 h-3 text-white fill-white" />
                 </div>
               </div>
+
+              {/* Content */}
+              <div
+                className="flex-1"
+                style={{
+                  opacity: animating ? 0 : 1,
+                  transform: animating
+                    ? `translateX(${direction === 'right' ? '20px' : '-20px'})`
+                    : 'translateX(0)',
+                  transition: 'all 0.35s cubic-bezier(0.16,1,0.3,1)'
+                }}
+              >
+                {/* Stars Removed */}
+
+                <blockquote className="text-sm md:text-base font-medium text-gray-700 leading-relaxed mb-4 italic">
+                  "{t.quote}"
+                </blockquote>
+
+                <div className="flex items-center gap-2">
+                  <div className="w-6 h-0.5 rounded-full transition-colors duration-500" style={{ backgroundColor: t.accentColor }} />
+                  <div>
+                    <span className="font-bold text-ucb-blue text-sm leading-relaxed">{t.name}</span>
+                    <span className="text-gray-400 text-xs ml-1 uppercase tracking-wider leading-relaxed">• {t.role}</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Large quote icon */}
+              <div className="hidden md:block shrink-0 opacity-10">
+                <Quote className="w-12 h-12" style={{ color: t.accentColor }} />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Controls */}
+        <div className="flex items-center justify-center gap-4 mt-5">
+          <button
+            onClick={prev}
+            className="p-2.5 rounded-full border-2 border-ucb-blue/20 hover:border-ucb-blue hover:bg-ucb-blue hover:text-white transition-all duration-300 hover:scale-110 active:scale-95 text-ucb-blue min-h-[44px]"
+          >
+            <ChevronLeft className="w-4 h-4" />
+          </button>
+
+          {/* Animated dots */}
+          <div className="flex gap-2">
+            {TESTIMONIALS.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => goTo(idx, idx > active ? 'right' : 'left')}
+                className="h-2 rounded-full transition-all duration-400 ease-out"
+                style={{
+                  width: active === idx ? '28px' : '8px',
+                  backgroundColor: active === idx ? t.accentColor : '#D1D5DB'
+                }}
+              />
             ))}
           </div>
 
-          <div className="flex gap-4 mt-8">
-            <button onClick={prev} className="p-3 rounded-full border border-ucb-dark/20 hover:bg-ucb-dark hover:text-white transition-colors">
-              <ChevronLeft className="w-6 h-6" />
-            </button>
-            <div className="flex gap-2 items-center">
-              {TESTIMONIALS.map((_, idx) => (
-                <button 
-                  key={idx}
-                  onClick={() => setActive(idx)} 
-                  className={`w-3 h-3 rounded-full transition-all ${active === idx ? 'bg-ucb-emerald w-8' : 'bg-gray-400'}`}
-                />
-              ))}
-            </div>
-            <button onClick={next} className="p-3 rounded-full border border-ucb-dark/20 hover:bg-ucb-dark hover:text-white transition-colors">
-              <ChevronRight className="w-6 h-6" />
-            </button>
-          </div>
+          <button
+            onClick={next}
+            className="p-2.5 rounded-full border-2 border-ucb-blue/20 hover:border-ucb-blue hover:bg-ucb-blue hover:text-white transition-all duration-300 hover:scale-110 active:scale-95 text-ucb-blue min-h-[44px]"
+          >
+            <ChevronRight className="w-4 h-4" />
+          </button>
         </div>
       </div>
     </section>

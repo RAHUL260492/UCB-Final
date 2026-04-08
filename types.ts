@@ -1,9 +1,10 @@
 export interface Program {
   id: string;
   title: string;
-  type: 'Associate' | 'Certificate';
+  type: 'Associate Degree' | 'Certificate';
   tags: string[];
   description: string;
+  link?: string;
 }
 
 export interface Stat {

@@ -1,45 +1,60 @@
 import React, { useEffect, useRef, useState } from 'react';
 
+type AnimationVariant = 'fade-up' | 'fade-in' | 'slide-left' | 'slide-right' | 'scale-in' | 'blur-in';
+
 interface ScrollAnimationProps {
     children: React.ReactNode;
-    delay?: string; // e.g. "0.2s"
-    className?: string; // Any extra classes
+    delay?: string;
+    className?: string;
+    variant?: AnimationVariant;
+    duration?: string;
+    threshold?: number;
 }
 
-const ScrollAnimation: React.FC<ScrollAnimationProps> = ({ children, delay = '0s', className = '' }) => {
+const variantStyles: Record<AnimationVariant, { hidden: string; visible: string }> = {
+    'fade-up': { hidden: 'opacity-0 translate-y-10', visible: 'opacity-100 translate-y-0' },
+    'fade-in': { hidden: 'opacity-0', visible: 'opacity-100' },
+    'slide-left': { hidden: 'opacity-0 -translate-x-10', visible: 'opacity-100 translate-x-0' },
+    'slide-right': { hidden: 'opacity-0 translate-x-10', visible: 'opacity-100 translate-x-0' },
+    'scale-in': { hidden: 'opacity-0 scale-90', visible: 'opacity-100 scale-100' },
+    'blur-in': { hidden: 'opacity-0 blur-sm scale-[0.97]', visible: 'opacity-100 blur-0 scale-100' },
+};
+
+const ScrollAnimation: React.FC<ScrollAnimationProps> = ({
+    children,
+    delay = '0s',
+    className = '',
+    variant = 'fade-up',
+    duration = '700ms',
+    threshold = 0.08,
+}) => {
     const [isVisible, setIsVisible] = useState(false);
     const ref = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.1, // Trigger when 10% visible
-            rootMargin: '0px 0px -50px 0px'
-        });
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setIsVisible(true);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold, rootMargin: '0px 0px -40px 0px' }
+        );
 
-        if (ref.current) {
-            observer.observe(ref.current);
-        }
+        if (ref.current) observer.observe(ref.current);
+        return () => { if (ref.current) observer.unobserve(ref.current); };
+    }, [threshold]);
 
-        return () => {
-            if (ref.current) observer.unobserve(ref.current);
-        };
-    }, []);
-
-    // animate-fade-in-up class should be defined in global CSS or we can use inline styles/custom classes
-    // Since we have existing animate-fade-in-up in index.css, let's leverage it or use tailwind transitions
+    const { hidden, visible } = variantStyles[variant];
 
     return (
         <div
             ref={ref}
-            className={`transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'} ${className}`}
-            style={{ transitionDelay: delay }}
+            className={`transition-all ease-out transform ${isVisible ? visible : hidden} ${className}`}
+            style={{ transitionDuration: duration, transitionDelay: isVisible ? delay : '0s' }}
         >
             {children}
         </div>

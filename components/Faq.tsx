@@ -12,11 +12,11 @@ const Faq: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-24 bg-ucb-ivory relative">
+    <section id="faq" className="py-3 md:py-4 bg-ucb-ivory relative">
       <div className="container mx-auto px-6 max-w-4xl">
-        <div className="text-center mb-16">
+        <div className="text-center mb-4">
           <h2 className="font-display font-bold text-4xl text-ucb-dark mb-4">Frequently Asked Questions</h2>
-          <p className="text-gray-500">Everything you need to know about starting your journey.</p>
+          <p className="text-gray-500 leading-relaxed">Everything you need to know about starting your journey.</p>
         </div>
 
         <div className="space-y-4">
@@ -24,13 +24,13 @@ const Faq: React.FC = () => {
             <div
               key={idx}
               className={`bg-white rounded-2xl overflow-hidden border transition-all duration-300 ${openIndex === idx
-                  ? 'shadow-lg border-ucb-emerald/30'
-                  : 'shadow-sm border-gray-100 hover:border-ucb-emerald/20'
+                ? 'shadow-lg border-ucb-emerald/30'
+                : 'shadow-sm border-gray-100 hover:border-ucb-emerald/20'
                 }`}
             >
               <button
                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
-                className="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50/50 transition-colors"
+                className="w-full flex justify-between items-center p-4 text-left hover:bg-gray-50/50 transition-colors"
               >
                 <span className={`font-bold text-lg transition-colors ${openIndex === idx ? 'text-ucb-emerald' : 'text-ucb-dark'}`}>
                   {faq.q}
@@ -41,7 +41,7 @@ const Faq: React.FC = () => {
               </button>
 
               <div className={`transition-all duration-500 ease-in-out ${openIndex === idx ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'}`}>
-                <div className="p-6 pt-0 text-gray-600 leading-relaxed border-t border-gray-100 mt-2">
+                <div className="p-4 pt-0 text-gray-600 leading-relaxed border-t border-gray-100 mt-2">
                   {faq.a}
                 </div>
               </div>
@@ -49,9 +49,9 @@ const Faq: React.FC = () => {
           ))}
         </div>
 
-        <div className="text-center mt-16 bg-ucb-champagne/30 rounded-2xl p-8">
-          <p className="font-bold text-ucb-dark mb-4">Still have questions?</p>
-          <a href="#contact" className="inline-flex items-center justify-center px-8 py-3 bg-white text-ucb-dark border border-ucb-dark/10 rounded-full font-bold hover:bg-ucb-dark hover:text-white transition-all shadow-sm">
+        <div className="text-center mt-4 bg-ucb-champagne/30 rounded-2xl p-4">
+          <p className="font-bold text-ucb-dark mb-4 leading-relaxed">Still have questions?</p>
+          <a href="#contact" className="inline-flex items-center justify-center px-4 md:px-6 py-3 bg-ucb-green text-white rounded-full font-bold hover:bg-ucb-green-glow transition-all shadow-sm min-h-[44px] inline-flex items-center justify-center">
             Contact Admissions
           </a>
         </div>

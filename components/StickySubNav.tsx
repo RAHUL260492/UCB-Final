@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const SECTIONS = [
   { id: 'programs', label: 'Programs' },
-  { id: 'why-ucb', label: 'Why UCB' },
+  { id: 'why-urban-college', label: 'Why Urban College' },
   { id: 'outcomes', label: 'Outcomes' },
   { id: 'financial-aid', label: 'Aid & Scholarships' },
   { id: 'testimonials', label: 'Stories' },
@@ -39,16 +39,15 @@ const StickySubNav: React.FC = () => {
   return (
     <div id="sticky-nav-anchor" className="sticky top-[70px] md:top-[85px] z-40 bg-ucb-ivory border-b border-ucb-champagne shadow-sm overflow-x-auto no-scrollbar">
       <div className="container mx-auto px-6">
-        <div className="flex items-center gap-8 whitespace-nowrap min-w-max">
+        <div className="flex items-center gap-4 md:gap-6 whitespace-nowrap min-w-max">
           {SECTIONS.map((section) => (
             <a
               key={section.id}
               href={`#${section.id}`}
-              className={`py-4 text-sm md:text-base font-medium transition-all border-b-2 ${
-                activeSection === section.id
+              className={`py-4 text-sm md:text-base font-medium transition-all border-b-2 ${activeSection === section.id
                   ? 'text-ucb-emerald border-ucb-emerald'
                   : 'text-ucb-dark/60 border-transparent hover:text-ucb-emerald hover:border-ucb-emerald/30'
-              }`}
+                }`}
             >
               {section.label}
             </a>
