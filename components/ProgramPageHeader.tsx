@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+
 import { ChevronRight, ArrowRight, TrendingUp } from 'lucide-react';
 
 interface BreadcrumbItem {
@@ -120,14 +120,14 @@ const ProgramPageHeader: React.FC<ProgramPageHeaderProps> = ({
             >
                 <div className="container mx-auto px-6 py-2.5">
                     <nav aria-label="Breadcrumb" className="flex items-center justify-center gap-1 text-xs text-white/70 flex-wrap">
-                        <Link to="/" className="hover:text-white transition-colors font-medium hover:underline">Home</Link>
+                        <a href="/" className="hover:text-white transition-colors font-medium hover:underline">Home</a>
                         {breadcrumbs.map((crumb, idx) => (
                             <React.Fragment key={idx}>
                                 <ChevronRight className="w-3 h-3 text-white/40 shrink-0" />
                                 {crumb.path ? (
-                                    <Link to={crumb.path} className="hover:text-white transition-colors font-medium hover:underline">
+                                    <a href={crumb.path} className="hover:text-white transition-colors font-medium hover:underline">
                                         {crumb.label}
-                                    </Link>
+                                    </a>
                                 ) : (
                                     <span className="text-white font-bold">{crumb.label}</span>
                                 )}

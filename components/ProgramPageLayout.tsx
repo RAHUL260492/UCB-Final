@@ -4,7 +4,17 @@ import {
     Users, DollarSign, Calendar, Award, GraduationCap, ArrowRight,
     ChevronDown, Star, Quote, Zap, Target, Shield
 } from 'lucide-react';
+import * as LucideIcons from 'lucide-react';
 import ProgramPageHeader from './ProgramPageHeader';
+
+// Helper to resolve icon from string
+const resolveIcon = (iconName: any) => {
+    if (typeof iconName === 'string') {
+        const IconComponent = (LucideIcons as any)[iconName];
+        return IconComponent || LucideIcons.Circle;
+    }
+    return iconName || LucideIcons.Circle;
+};
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -179,7 +189,7 @@ const BenefitCard: React.FC<{ benefit: ProgramBenefit; index: number }> = ({ ben
                 {/* Icon */}
                 <div className={`w-14 h-14 rounded-2xl ${c.light} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300`}>
                     <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${c.bg} flex items-center justify-center shadow-lg ${c.glow}`}>
-                        <benefit.icon className="w-5 h-5 text-white" />
+                        {React.createElement(resolveIcon(benefit.icon), { className: "w-5 h-5 text-white" })}
                     </div>
                 </div>
 
@@ -220,7 +230,7 @@ const StatCard: React.FC<{ stat: ProgramStat; index: number }> = ({ stat, index 
 
             <div className="relative z-10">
                 <div className={`w-12 h-12 rounded-full ${c.bg} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <stat.icon className={`w-5 h-5 ${c.text}`} />
+                    {React.createElement(resolveIcon(stat.icon), { className: `w-5 h-5 ${c.text}` })}
                 </div>
                 <div className={`font-black text-2xl lg:text-3xl ${c.text} mb-1 leading-tight`}>{stat.value}</div>
                 <div className="text-xs font-bold uppercase tracking-wider text-gray-500 leading-relaxed">{stat.sub}</div>
@@ -336,7 +346,7 @@ const ProgramPageLayout: React.FC<ProgramLayoutProps> = ({
                                     <div className="h-full bg-white rounded-3xl border border-gray-200 p-8 shadow-sm hover:-translate-y-1.5 hover:shadow-xl transition-all duration-400 group relative">
                                         <h3 className="text-xl font-bold text-ucb-blue mb-5 flex items-center gap-3">
                                             <div className="w-12 h-12 rounded-xl bg-ucb-orange/10 flex items-center justify-center">
-                                                <ach.icon className="w-6 h-6 text-ucb-orange" />
+                                                {React.createElement(resolveIcon(ach.icon), { className: "w-6 h-6 text-ucb-orange" })}
                                             </div>
                                             {ach.heading}
                                         </h3>

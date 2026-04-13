@@ -1,0 +1,163 @@
+{
+  "title": "General Studies Certificate",
+  "slug": "general-studies-certificate",
+  "type": "program",
+  "badge": "General Studies Certificate",
+  "subtitle": "In as little as one year. Most students graduate debt-free.",
+  "tagline": "Explore Your Possibilities—Build Your Future on Your Terms",
+  "taglineBody": "Not sure what you want to study? That's okay—this certificate is for you. The General Studies Certificate is perfect for students who want a college credential but aren't sure what career path to pursue.\n                    <br className=\"hidden md:block",
+  "benefits": [
+    {
+      "title": "Fast Track",
+      "desc": "Finish in as little as one year (21 credits)",
+      "icon": "Clock"
+    },
+    {
+      "title": "100% Online",
+      "desc": "Learn on a schedule that fits to your busy life",
+      "icon": "Globe"
+    },
+    {
+      "title": "Debt-Free Goal",
+      "desc": "Most students graduate debt-free!",
+      "icon": "DollarSign"
+    },
+    {
+      "title": "Stackable Credits",
+      "desc": "Credits transfer to an Associate or Bachelor's degree",
+      "icon": "TrendingUp"
+    },
+    {
+      "title": "No Application Fee",
+      "desc": "Start your journey today for free",
+      "icon": "BookOpen"
+    },
+    {
+      "title": "Bilingual Options",
+      "desc": "ESL support available",
+      "icon": "MessageCircleIcon"
+    }
+  ],
+  "stats": [
+    {
+      "label": "Credits",
+      "value": "21",
+      "icon": "Award",
+      "sub": "Credits"
+    },
+    {
+      "label": "Time",
+      "value": "1 Year",
+      "icon": "Clock",
+      "sub": "To Complete"
+    },
+    {
+      "label": "Format",
+      "value": "Online",
+      "icon": "Globe",
+      "sub": "Fully Online"
+    },
+    {
+      "label": "Cost",
+      "value": "$317",
+      "icon": "DollarSign",
+      "sub": "Per Credit"
+    },
+    {
+      "label": "Start",
+      "value": "Rolling",
+      "icon": "Calendar",
+      "sub": "Start Date"
+    },
+    {
+      "label": "Aid",
+      "value": "Yes",
+      "icon": "GraduationCap",
+      "sub": "Financial Aid"
+    },
+    {
+      "label": "Language",
+      "value": "Bilingual",
+      "icon": "Globe",
+      "sub": "English & Spanish"
+    },
+    {
+      "label": "Outcome",
+      "value": "Job Ready",
+      "icon": "CheckCircle",
+      "sub": "Career Focused"
+    }
+  ],
+  "courses": [
+    {
+      "title": "College Writing I and II",
+      "desc": "Master professional communication"
+    },
+    {
+      "title": "General Psychology",
+      "desc": "Understand human behavior and motivation"
+    },
+    {
+      "title": "Computer Information Systems",
+      "desc": "Build essential technology skills"
+    },
+    {
+      "title": "Electives Based on Your Interests",
+      "desc": "Customize your education"
+    },
+    {
+      "title": "Humanities & Social Sciences",
+      "desc": "Develop a broad foundation of knowledge"
+    },
+    {
+      "title": "Natural Sciences",
+      "desc": "Enhance critical thinking and problem-solving"
+    }
+  ],
+  "outcomes": [
+    {
+      "title": "Customer Service Representative",
+      "desc": "Assist customers and solve problems."
+    },
+    {
+      "title": "Administrative Assistant",
+      "desc": "Support office operations and management."
+    },
+    {
+      "title": "Office Coordinator",
+      "desc": "Manage daily office activities and schedules."
+    },
+    {
+      "title": "Data Entry Specialist",
+      "desc": "Input and manage critical business information."
+    },
+    {
+      "title": "Bank Teller",
+      "desc": "Assist customers with financial transactions."
+    },
+    {
+      "title": "Sales Associate",
+      "desc": "Build relationships and drive retail success."
+    }
+  ],
+  "outcomesIntro": "The General Studies Certificate provides a solid foundation for a variety of entry-level careers and further education.",
+  "faqs": [
+    {
+      "q": "Is the program entirely online?",
+      "a": "Yes! 100% online with synchronous and asynchronous options."
+    },
+    {
+      "q": "How long does the program take?",
+      "a": "In as little as one year! Complete 21 credits at your own pace."
+    },
+    {
+      "q": "Can I transfer my credits?",
+      "a": "Yes! The program is designed to be transferable to 4-year colleges."
+    },
+    {
+      "q": "Am I eligible for financial aid?",
+      "a": "Yes! Most students receive financial aid and graduate debt-free."
+    }
+  ],
+  "pathwayTitle": "Build Toward Your Future"
+}

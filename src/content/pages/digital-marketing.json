@@ -1,0 +1,155 @@
+{
+  "title": "Digital Marketing",
+  "slug": "digital-marketing",
+  "type": "program",
+  "badge": "Digital Marketing Certificate",
+  "subtitle": "In as little as one year. Most students graduate debt-free.",
+  "tagline": "Develop Skills That Get You Hired",
+  "taglineBody": "Build the digital marketing skills employers want—without interrupting your life.\n                    <br className=\"hidden md:block",
+  "benefits": [
+    {
+      "title": "Fast Track",
+      "desc": "Finish in as little as one year (only 18 credits!)",
+      "icon": "Clock"
+    },
+    {
+      "title": "100% Online",
+      "desc": "Learn on a schedule that fits into your busy life",
+      "icon": "Globe"
+    },
+    {
+      "title": "Debt-Free Goal",
+      "desc": "Most students graduate debt-free!",
+      "icon": "DollarSign"
+    },
+    {
+      "title": "Build a Portfolio",
+      "desc": "Graduate with professional marketing projects",
+      "icon": "Briefcase"
+    },
+    {
+      "title": "No Textbooks",
+      "desc": "No hidden fees, everything you need is included",
+      "icon": "BookOpen"
+    },
+    {
+      "title": "Bilingual Options",
+      "desc": "Study in English or Spanish",
+      "icon": "MessageCircleIcon"
+    }
+  ],
+  "stats": [
+    {
+      "label": "Credits",
+      "value": "18",
+      "icon": "Award",
+      "sub": "Credits"
+    },
+    {
+      "label": "Time",
+      "value": "1 Year",
+      "icon": "Clock",
+      "sub": "To Complete"
+    },
+    {
+      "label": "Format",
+      "value": "Online",
+      "icon": "Globe",
+      "sub": "Fully Online"
+    },
+    {
+      "label": "Cost",
+      "value": "$317",
+      "icon": "DollarSign",
+      "sub": "Per Credit"
+    },
+    {
+      "label": "Start",
+      "value": "Rolling",
+      "icon": "Calendar",
+      "sub": "Start Date"
+    },
+    {
+      "label": "Aid",
+      "value": "Yes",
+      "icon": "GraduationCap",
+      "sub": "Financial Aid"
+    },
+    {
+      "label": "Language",
+      "value": "Bilingual",
+      "icon": "Globe",
+      "sub": "English & Spanish"
+    },
+    {
+      "label": "Outcome",
+      "value": "Job Ready",
+      "icon": "CheckCircle",
+      "sub": "Career Focused"
+    }
+  ],
+  "courses": [
+    {
+      "title": "Introduction to Computer Applications",
+      "desc": "Master the tools you need for the digital workplace."
+    },
+    {
+      "title": "Principles of Marketing",
+      "desc": "Learn the fundamentals of consumer behavior and strategy."
+    },
+    {
+      "title": "Social Media Marketing",
+      "desc": "Gain hands-on experience managing major social platforms."
+    },
+    {
+      "title": "Speech Communication",
+      "desc": "Develop presentation and communication skills required in marketing."
+    },
+    {
+      "title": "Digital Marketing Strategies",
+      "desc": "Master SEO, email marketing, and paid advertising."
+    },
+    {
+      "title": "Content Creation & Brand Management",
+      "desc": "Learn to design visuals and write copy."
+    }
+  ],
+  "outcomes": [
+    {
+      "title": "Digital Marketing Coordinator",
+      "desc": "Manage online marketing campaigns. Average Salary: $51,000+"
+    },
+    {
+      "title": "Social Media Specialist",
+      "desc": "Lead social media strategy. Projected Growth: 10% (faster than average)"
+    },
+    {
+      "title": "Content Creator",
+      "desc": "Design visuals and write copy that builds brand loyalty."
+    },
+    {
+      "title": "Marketing Assistant",
+      "desc": "Support digital marketing campaigns and business strategies."
+    }
+  ],
+  "outcomesIntro": "The digital marketing field is expanding rapidly as every business needs a strong online presence. This certificate prepares you for high-growth roles.",
+  "faqs": [
+    {
+      "q": "How long does the program take?",
+      "a": "In as little as one year! Complete your 18 credits full-time in two semesters or part-time at your own pace."
+    },
+    {
+      "q": "Do I need prior marketing experience?",
+      "a": "No! This program is designed for beginners. We provide the foundational skills."
+    },
+    {
+      "q": "Can I study in Spanish?",
+      "a": "Yes! We offer the program in both English and Spanish."
+    },
+    {
+      "q": "Am I eligible for financial aid?",
+      "a": "Yes! Most Urban College students receive financial aid, and many graduate completely debt-free."
+    }
+  ],
+  "pathwayTitle": "Build Toward Your Future"
+}

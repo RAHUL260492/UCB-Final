@@ -1,0 +1,155 @@
+{
+  "title": "Children's Behavioral Health",
+  "slug": "childrens-behavioral-health",
+  "type": "program",
+  "badge": "Children's Behavioral Health Certificate",
+  "subtitle": "In as little as 9 months. Most students graduate debt-free.",
+  "tagline": "Transform Young Lives While Building Your Career",
+  "taglineBody": "Urban College of Boston's Children's Behavioral Health Certificate empowers you to master the skills\n                    to support children with special needs and their families—all without interrupting your busy life.{' '",
+  "benefits": [
+    {
+      "title": "Fast Track",
+      "desc": "Finish in as little as 9 months (only 16 credits!)",
+      "icon": "Clock"
+    },
+    {
+      "title": "100% Online",
+      "desc": "Study 100% online at your own pace",
+      "icon": "Globe"
+    },
+    {
+      "title": "Debt-Free Goal",
+      "desc": "Most students graduate debt-free!",
+      "icon": "DollarSign"
+    },
+    {
+      "title": "RBT® Exam Prep",
+      "desc": "Prepare to pass the Registered Behavior Technician exam",
+      "icon": "Award"
+    },
+    {
+      "title": "Accelerate CHW Cert.",
+      "desc": "Apply for MA CHW certification with only 2,000 hours of experience",
+      "icon": "TrendingUp"
+    },
+    {
+      "title": "Bilingual Options",
+      "desc": "Learn in English or Spanish",
+      "icon": "MessageCircleIcon"
+    }
+  ],
+  "stats": [
+    {
+      "label": "Credits",
+      "value": "16",
+      "icon": "Award",
+      "sub": "Credits"
+    },
+    {
+      "label": "Time",
+      "value": "9 Months",
+      "icon": "Clock",
+      "sub": "To Complete"
+    },
+    {
+      "label": "Format",
+      "value": "Online",
+      "icon": "Globe",
+      "sub": "Fully Online"
+    },
+    {
+      "label": "Cost",
+      "value": "$317",
+      "icon": "DollarSign",
+      "sub": "Per Credit"
+    },
+    {
+      "label": "Aid",
+      "value": "Yes",
+      "icon": "Award",
+      "sub": "Financial Aid Available"
+    },
+    {
+      "label": "Outcome",
+      "value": "Job Ready",
+      "icon": "CheckCircle",
+      "sub": "Career Focused"
+    }
+  ],
+  "courses": [
+    {
+      "title": "Fundamentals of Children's Behavioral Health",
+      "desc": "Build your foundation in understanding children's behavioral needs."
+    },
+    {
+      "title": "Trauma & Resiliency in Children's Behavioral Health",
+      "desc": "Understand what children face and how to support their recovery."
+    },
+    {
+      "title": "Introduction to Behavior Analysis & Intervention Skills",
+      "desc": "Prepares you for the RBT® certification exam!"
+    },
+    {
+      "title": "Core Competencies for Community Behavioral Health Workers",
+      "desc": "Accelerate your CHW certification path."
+    },
+    {
+      "title": "Behavioral Health Internship",
+      "desc": "Gain hands-on experience in real work settings!"
+    }
+  ],
+  "outcomes": [
+    {
+      "title": "Registered Behavior Technician (RBT)",
+      "desc": "Provide behavioral therapy to children with autism. Avg. salary: $53,298"
+    },
+    {
+      "title": "Community Health Worker",
+      "desc": "Connect families with vital behavioral health resources. Avg. salary: $44,057"
+    },
+    {
+      "title": "Residential Counselor",
+      "desc": "Support children in residential treatment and group home settings."
+    },
+    {
+      "title": "Youth Worker",
+      "desc": "Guide young people through behavioral and emotional challenges."
+    },
+    {
+      "title": "Behavioral Health Specialist",
+      "desc": "Work in schools, clinics, and community organizations."
+    },
+    {
+      "title": "Direct Support Professional",
+      "desc": "Provide hands-on support to children with special needs."
+    }
+  ],
+  "outcomesIntro": "This certificate prepares you for career-building roles in one of the fastest-growing fields. High demand across Massachusetts means opportunities are waiting for you!",
+  "faqs": [
+    {
+      "q": "Is the program entirely online?",
+      "a": "Absolutely! Fully online with both synchronous and asynchronous options."
+    },
+    {
+      "q": "How long does it take?",
+      "a": "As little as 9 months for 16 credits full-time."
+    },
+    {
+      "q": "Do I need prior experience?",
+      "a": "No! The program covers all foundational knowledge."
+    },
+    {
+      "q": "What is RBT® certification?",
+      "a": "A nationally recognized credential for providing behavioral therapy to children. Our program prepares you for the exam."
+    },
+    {
+      "q": "What is CHW certification?",
+      "a": "A credential for connecting families with resources. We are a Board-Certified training site, cutting your path to certification in half."
+    },
+    {
+      "q": "Am I eligible for financial aid?",
+      "a": "Yes! Most students qualify and graduate debt-free."
+    }
+  ],
+  "pathwayTitle": "Build Toward Your Future"
+}

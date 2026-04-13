@@ -1,0 +1,163 @@
+{
+  "title": "Elder Care Certificate",
+  "slug": "elder-care",
+  "type": "program",
+  "badge": "Elder Care Certificate",
+  "subtitle": "In as little as one year. Most students graduate debt-free.",
+  "tagline": "Transform Lives While Building Your Career",
+  "taglineBody": "Urban College of Boston's Elder Care Certificate empowers you to master the skills that help older adults and their families thrive—all while fitting into your busy life.\n                    <br className=\"hidden md:block",
+  "benefits": [
+    {
+      "title": "Fast Track",
+      "desc": "Finish in as little as one year (21 credits)",
+      "icon": "Clock"
+    },
+    {
+      "title": "100% Online",
+      "desc": "Learn on a schedule that fits into your busy life",
+      "icon": "Globe"
+    },
+    {
+      "title": "Debt-Free Goal",
+      "desc": "Most students graduate debt-free!",
+      "icon": "DollarSign"
+    },
+    {
+      "title": "Built-In CHW Credential",
+      "desc": "Earn your Community Health Worker credential",
+      "icon": "Award"
+    },
+    {
+      "title": "Credit for Prior Learning",
+      "desc": "Your experience counts!",
+      "icon": "TrendingUp"
+    },
+    {
+      "title": "Bilingual Options",
+      "desc": "ESL support available",
+      "icon": "MessageCircleIcon"
+    }
+  ],
+  "stats": [
+    {
+      "label": "Credits",
+      "value": "21",
+      "icon": "Award",
+      "sub": "Credits"
+    },
+    {
+      "label": "Time",
+      "value": "1 Year",
+      "icon": "Clock",
+      "sub": "To Complete"
+    },
+    {
+      "label": "Format",
+      "value": "Online",
+      "icon": "Globe",
+      "sub": "Fully Online"
+    },
+    {
+      "label": "Cost",
+      "value": "$317",
+      "icon": "DollarSign",
+      "sub": "Per Credit"
+    },
+    {
+      "label": "Start",
+      "value": "Rolling",
+      "icon": "Calendar",
+      "sub": "Start Date"
+    },
+    {
+      "label": "Aid",
+      "value": "Yes",
+      "icon": "GraduationCap",
+      "sub": "Financial Aid"
+    },
+    {
+      "label": "Language",
+      "value": "Bilingual",
+      "icon": "Globe",
+      "sub": "English & Spanish"
+    },
+    {
+      "label": "Outcome",
+      "value": "Job Ready",
+      "icon": "CheckCircle",
+      "sub": "Career Focused"
+    }
+  ],
+  "courses": [
+    {
+      "title": "Concepts and Practices in Elder Care",
+      "desc": "Master the foundations of gerontology"
+    },
+    {
+      "title": "Human Behavior and Development",
+      "desc": "Understand the aging process"
+    },
+    {
+      "title": "Core Competencies for Community Behavioral Health Workers",
+      "desc": "Prepare for CHW certification"
+    },
+    {
+      "title": "Communication & Conflict in the Helping Professions",
+      "desc": "Build essential interpersonal skills"
+    },
+    {
+      "title": "Case Management",
+      "desc": "Coordinate care effectively"
+    },
+    {
+      "title": "Behavioral Health Internship",
+      "desc": "Gain hands-on experience!"
+    }
+  ],
+  "outcomes": [
+    {
+      "title": "Community Health Worker",
+      "desc": "Connect seniors with vital health resources. Average salary: $55,090/year in Massachusetts!"
+    },
+    {
+      "title": "Case Manager",
+      "desc": "Coordinate care and services for older adults."
+    },
+    {
+      "title": "Residential Support Specialist",
+      "desc": "Support seniors in assisted living and residential settings."
+    },
+    {
+      "title": "Home Health Aide",
+      "desc": "Provide compassionate in-home care."
+    },
+    {
+      "title": "Elder Care Coordinator",
+      "desc": "Manage services for seniors in agency settings."
+    },
+    {
+      "title": "Private Homecare Agency Owner",
+      "desc": "Launch your own business providing vital care."
+    }
+  ],
+  "outcomesIntro": "This certificate prepares you for career-building roles in one of Massachusetts' fastest-growing fields.",
+  "faqs": [
+    {
+      "q": "Is the program entirely online?",
+      "a": "Absolutely! The program is fully online with both synchronous and asynchronous options."
+    },
+    {
+      "q": "How long does the program take?",
+      "a": "In as little as one year! Complete your 21 credits full-time, or take it at your own pace."
+    },
+    {
+      "q": "Can I afford this?",
+      "a": "Yes! Urban College is one of the most affordable colleges in Massachusetts. Most students graduate debt-free."
+    },
+    {
+      "q": "Do I need experience?",
+      "a": "No experience needed. This certificate gives you all the foundational skills you need."
+    }
+  ],
+  "pathwayTitle": "Build Toward Your Future"
+}

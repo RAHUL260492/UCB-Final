@@ -1,0 +1,58 @@
+---
+import fs from 'fs';
+import path from 'path';
+import Layout from '../../layouts/Layout.astro';
+import ProgramPageLayout from '../../../components/ProgramPageLayout.tsx';
+
+// 1. Generate Static Paths based on all JSON files inside src/content/pages/
+export async function getStaticPaths() {
+    const dataDir = path.join(process.cwd(), 'src/content/pages');
+    
+    if (!fs.existsSync(dataDir)) {
+        return [];
+    }
+
+    const files = fs.readdirSync(dataDir).filter(f => f.endsWith('.json'));
+    
+    return files.map(file => {
+        const slug = file.replace('.json', '');
+        return {
+            params: { slug }
+        };
+    });
+}
+
+// 2. Fetch data for this specific path
+const { slug } = Astro.params;
+const filePath = path.join(process.cwd(), 'src/content/pages', `${slug}.json`);
+const rawData = fs.readFileSync(filePath, 'utf-8');
+const data = JSON.parse(rawData);
+
+// Breadcrumb definition
+const breadcrumbs = [
+  { label: 'Home', path: '/' },
+  { label: 'Programs', path: '/programs' },
+  { label: data.title || 'Program' }
+];
+
+// Clean formatting for the layout
+const layoutProps = {
+  ...data,
+  breadcrumbs,
+  title: data.title,
+  headerImageSrc: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2000&auto=format&fit=crop",
+  programName: data.title
+};
+---
+
+<Layout title={`${data.title} | Urban College of Boston`}>
+  <!-- Fixed Header Placeholder until Navigation is moved -->
+  <header class="bg-ucb-blue text-white py-4 px-6 text-center font-bold tracking-widest text-sm uppercase sticky top-0 z-50">
+    <a href="/">← Return to Main Page</a>
+  </header>
+
+  <main>
+    <!-- Render the monolithic React component smoothly using Astro client:load -->
+    <ProgramPageLayout client:load {...layoutProps} />
+  </main>
+</Layout>

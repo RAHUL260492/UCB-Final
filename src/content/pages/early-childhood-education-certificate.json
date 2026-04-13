@@ -1,0 +1,167 @@
+{
+  "title": "ECE Certificate",
+  "slug": "early-childhood-education-certificate",
+  "type": "program",
+  "badge": "Early Childhood Education Certificate",
+  "subtitle": "In as little as one year. Most students graduate debt-free.",
+  "tagline": "Turn Your Love for Children Into A Career",
+  "taglineBody": "Urban College of Boston's Early Childhood Education Certificate empowers you to master the skills that shape young lives—all without interrupting your busy life.\n                    <br className=\"hidden md:block",
+  "benefits": [
+    {
+      "title": "Fast Track",
+      "desc": "Finish in as little as one year (19 credits)",
+      "icon": "Clock"
+    },
+    {
+      "title": "100% Online",
+      "desc": "Learn completely online, anytime you want",
+      "icon": "Globe"
+    },
+    {
+      "title": "Debt-Free Goal",
+      "desc": "Competitive tuition and generous financial aid",
+      "icon": "DollarSign"
+    },
+    {
+      "title": "Learn in Your Language",
+      "desc": "Courses in English, Spanish, and Mandarin",
+      "icon": "MessageCircleIcon"
+    },
+    {
+      "title": "Unmatched Support",
+      "desc": "Dedicated advisors and free tutoring",
+      "icon": "Users"
+    },
+    {
+      "title": "Career Growth",
+      "desc": "Apply what you learn immediately",
+      "icon": "TrendingUp"
+    }
+  ],
+  "stats": [
+    {
+      "label": "Credits",
+      "value": "19",
+      "icon": "Award",
+      "sub": "Credits"
+    },
+    {
+      "label": "Time",
+      "value": "1 Year",
+      "icon": "Clock",
+      "sub": "To Complete"
+    },
+    {
+      "label": "Format",
+      "value": "Online",
+      "icon": "Globe",
+      "sub": "Fully Online"
+    },
+    {
+      "label": "Cost",
+      "value": "$317",
+      "icon": "DollarSign",
+      "sub": "Per Credit"
+    },
+    {
+      "label": "Start",
+      "value": "Rolling",
+      "icon": "Calendar",
+      "sub": "Start Date"
+    },
+    {
+      "label": "Aid",
+      "value": "Yes",
+      "icon": "GraduationCap",
+      "sub": "Financial Aid"
+    },
+    {
+      "label": "Language",
+      "value": "Multilingual",
+      "icon": "Globe",
+      "sub": "EN, ES, Mandarin"
+    },
+    {
+      "label": "Outcome",
+      "value": "Job Ready",
+      "icon": "CheckCircle",
+      "sub": "Career Focused"
+    }
+  ],
+  "courses": [
+    {
+      "title": "Child Growth and Development",
+      "desc": "Understand development from birth through age 8"
+    },
+    {
+      "title": "Guidance and Discipline",
+      "desc": "Guide behavior with positive strategies"
+    },
+    {
+      "title": "The Exceptional Child",
+      "desc": "Support children with special needs"
+    },
+    {
+      "title": "Early Childhood Professional Development",
+      "desc": "Build professional standards"
+    },
+    {
+      "title": "Early Childhood Curriculum",
+      "desc": "Create engaging learning experiences"
+    },
+    {
+      "title": "Infant/Toddler Curriculum",
+      "desc": "Focus on the earliest years"
+    }
+  ],
+  "outcomes": [
+    {
+      "title": "Preschool Teacher",
+      "desc": "Guide young children through their most critical developmental years. Average salary: $46,330 in MA."
+    },
+    {
+      "title": "Childcare Worker",
+      "desc": "Provide nurturing care and education in childcare centers."
+    },
+    {
+      "title": "Family Childcare Provider",
+      "desc": "Start your own home-based childcare business."
+    },
+    {
+      "title": "Teacher Assistant",
+      "desc": "Support lead teachers in early education classrooms."
+    },
+    {
+      "title": "Early Intervention Specialist",
+      "desc": "Work with children with special needs."
+    },
+    {
+      "title": "Program Coordinator",
+      "desc": "Oversee early childhood education programs."
+    }
+  ],
+  "outcomesIntro": "Prepare for a rewarding career guiding young children through their most critical developmental years. (4% projected growth for Preschool Teachers!)",
+  "faqs": [
+    {
+      "q": "Is the program online?",
+      "a": "100% online with optional on-campus services."
+    },
+    {
+      "q": "How long does it take?",
+      "a": "As little as one year (flexible pace)."
+    },
+    {
+      "q": "Do I need prior experience?",
+      "a": "No prior experience required."
+    },
+    {
+      "q": "What languages are available?",
+      "a": "Native language tracks in Spanish and Mandarin, plus ESL support."
+    },
+    {
+      "q": "Am I eligible for financial aid?",
+      "a": "Available for most students; most graduate debt-free."
+    }
+  ],
+  "pathwayTitle": "Build Toward Your Future"
+}

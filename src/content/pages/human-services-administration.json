@@ -1,0 +1,151 @@
+{
+  "title": "Human Services Administration",
+  "slug": "human-services-administration",
+  "type": "program",
+  "badge": "Human Services Administration",
+  "subtitle": "A 60-Credit Associate Degree. Most students graduate debt-free.",
+  "tagline": "Empower Individuals, Families, and Communities",
+  "taglineBody": "Do you have a passion for helping people and addressing social injustices? The Associate of Arts in\n                    Human Services Administration degree prepares you to make a direct impact on the lives of others\n                    while building a stable, rewarding career.{' '",
+  "benefits": [
+    {
+      "title": "Flexible Learning",
+      "desc": "100% online options tailored for working adults",
+      "icon": "Globe"
+    },
+    {
+      "title": "Debt-Free Goal",
+      "desc": "Most students graduate debt-free!",
+      "icon": "DollarSign"
+    },
+    {
+      "title": "Career Placement",
+      "desc": "Internships built into the curriculum",
+      "icon": "Briefcase"
+    },
+    {
+      "title": "Bilingual Classes",
+      "desc": "Learn in English or Spanish with ESL support",
+      "icon": "MessageCircleIcon"
+    },
+    {
+      "title": "Real Transfer Pathways",
+      "desc": "Seamless progression to Bachelor's degrees",
+      "icon": "TrendingUp"
+    },
+    {
+      "title": "High Demand Field",
+      "desc": "9% job growth — faster than average!",
+      "icon": "Award"
+    }
+  ],
+  "stats": [
+    {
+      "label": "Credits",
+      "value": "60",
+      "icon": "Award",
+      "sub": "Credits"
+    },
+    {
+      "label": "Time",
+      "value": "2 Years",
+      "icon": "Clock",
+      "sub": "To Complete"
+    },
+    {
+      "label": "Format",
+      "value": "Online",
+      "icon": "Globe",
+      "sub": "Fully Online"
+    },
+    {
+      "label": "Cost",
+      "value": "$317",
+      "icon": "DollarSign",
+      "sub": "Per Credit"
+    },
+    {
+      "label": "Growth",
+      "value": "9%",
+      "icon": "TrendingUp",
+      "sub": "Job Growth Rate"
+    },
+    {
+      "label": "Outcome",
+      "value": "Job Ready",
+      "icon": "CheckCircle",
+      "sub": "Career Focused"
+    }
+  ],
+  "courses": [
+    {
+      "title": "Introduction to Human Services",
+      "desc": "Your foundation in the field."
+    },
+    {
+      "title": "Case Management",
+      "desc": "Learn to connect clients with vital resources."
+    },
+    {
+      "title": "Counseling and Interviewing Techniques",
+      "desc": "Build communication skills to support individuals in crisis."
+    },
+    {
+      "title": "Human Behavior and Social Environment",
+      "desc": "Understand how societal spaces affect development."
+    },
+    {
+      "title": "Human Services Internships I & II",
+      "desc": "Apply what you've learned through real-world professional practice."
+    }
+  ],
+  "outcomes": [
+    {
+      "title": "Social and Human Services Assistant",
+      "desc": "Support social workers in providing client services. ($48,460 average salary in MA)"
+    },
+    {
+      "title": "Community Health Worker",
+      "desc": "Bridge the gap between communities and health services."
+    },
+    {
+      "title": "Case Manager",
+      "desc": "Coordinate care and connect clients to resources."
+    },
+    {
+      "title": "Family Support Worker",
+      "desc": "Help families navigate systems like housing and childcare."
+    },
+    {
+      "title": "Direct Care Professional",
+      "desc": "Provide hands-on support in residential or community settings."
+    },
+    {
+      "title": "Youth Worker",
+      "desc": "Support children and teens in achieving their potential."
+    }
+  ],
+  "outcomesIntro": "The human services field is expanding rapidly. Earn your degree and secure a role in a high-demand profession with a 9% projected job growth rate.",
+  "faqs": [
+    {
+      "q": "Is the program online?",
+      "a": "Yes, you can complete the degree entirely online with synchronous and asynchronous options."
+    },
+    {
+      "q": "How long does it take?",
+      "a": "Typically 2 years if studying full-time. Financial aid allows many students to finish debt-free."
+    },
+    {
+      "q": "Can I transfer credits?",
+      "a": "Yes, credits transfer seamlessly to BSW programs, like our partnership with Regis College."
+    },
+    {
+      "q": "Do I need experience?",
+      "a": "No prior human services experience is needed. The curriculum starts with foundational concepts."
+    },
+    {
+      "q": "Are internships required?",
+      "a": "Yes, real-world internships are included so you can graduate with job-ready experience."
+    }
+  ],
+  "pathwayTitle": "Build Toward Your Future"
+}

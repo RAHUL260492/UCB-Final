@@ -1,0 +1,167 @@
+{
+  "title": "Human Services Certificate",
+  "slug": "human-services-certificate",
+  "type": "program",
+  "badge": "Human Services Certificate",
+  "subtitle": "In as little as one year. Most students graduate debt-free.",
+  "tagline": "Start Helping People Now—Don't Wait",
+  "taglineBody": "The Human Services Certificate is designed so you can work while earning your credential to advance your career in social services.\n                    <br className=\"hidden md:block",
+  "benefits": [
+    {
+      "title": "Fast Track",
+      "desc": "Finish in as little as one year (only 21 credits)",
+      "icon": "Clock"
+    },
+    {
+      "title": "100% Online",
+      "desc": "Learn on a schedule that fits your busy life",
+      "icon": "Globe"
+    },
+    {
+      "title": "Debt-Free Goal",
+      "desc": "Most students graduate debt-free!",
+      "icon": "DollarSign"
+    },
+    {
+      "title": "Growing Field",
+      "desc": "8% job growth—faster than the national average!",
+      "icon": "TrendingUp"
+    },
+    {
+      "title": "High Demand in MA",
+      "desc": "MA ranks #3 nationwide for these roles",
+      "icon": "Award"
+    },
+    {
+      "title": "Bilingual Options",
+      "desc": "ESL support and English/Spanish tracks",
+      "icon": "MessageCircleIcon"
+    }
+  ],
+  "stats": [
+    {
+      "label": "Credits",
+      "value": "21",
+      "icon": "Award",
+      "sub": "Credits"
+    },
+    {
+      "label": "Time",
+      "value": "1 Year",
+      "icon": "Clock",
+      "sub": "To Complete"
+    },
+    {
+      "label": "Format",
+      "value": "Online",
+      "icon": "Globe",
+      "sub": "Fully Online"
+    },
+    {
+      "label": "Cost",
+      "value": "$317",
+      "icon": "DollarSign",
+      "sub": "Per Credit"
+    },
+    {
+      "label": "Start",
+      "value": "Rolling",
+      "icon": "Calendar",
+      "sub": "Start Date"
+    },
+    {
+      "label": "Aid",
+      "value": "Yes",
+      "icon": "GraduationCap",
+      "sub": "Financial Aid"
+    },
+    {
+      "label": "Language",
+      "value": "Bilingual",
+      "icon": "Globe",
+      "sub": "English & Spanish"
+    },
+    {
+      "label": "Outcome",
+      "value": "Job Ready",
+      "icon": "CheckCircle",
+      "sub": "Career Focused"
+    }
+  ],
+  "courses": [
+    {
+      "title": "Professional Seminar I",
+      "desc": "Build professional skills for success in human services."
+    },
+    {
+      "title": "Introduction to Human Services",
+      "desc": "Understand the field, the systems, and the people."
+    },
+    {
+      "title": "Case Management",
+      "desc": "Master the core skills employers want most."
+    },
+    {
+      "title": "Human Services Electives",
+      "desc": "Customize your education."
+    },
+    {
+      "title": "Counseling & Interviewing",
+      "desc": "Connect with clients effectively."
+    },
+    {
+      "title": "Human Behavior and Social Environment",
+      "desc": "Understand the people you'll serve."
+    }
+  ],
+  "outcomes": [
+    {
+      "title": "Case Manager",
+      "desc": "Coordinate care and connect clients to essential services. (Median salary: $46,340 in MA)"
+    },
+    {
+      "title": "Social Services Assistant",
+      "desc": "Support social workers in helping clients navigate services."
+    },
+    {
+      "title": "Behavior Technician",
+      "desc": "Apply intervention strategies to support individuals with behavioral needs."
+    },
+    {
+      "title": "Direct Support Professional",
+      "desc": "Provide hands-on support to individuals with disabilities."
+    },
+    {
+      "title": "Community Health Worker",
+      "desc": "Connect communities with vital health and social resources."
+    },
+    {
+      "title": "Family Support Worker",
+      "desc": "Help families navigate housing, childcare, and financial assistance."
+    }
+  ],
+  "outcomesIntro": "Earn $46,340/year as a Social and Human Services Assistant in Massachusetts (ranked #3 nationwide!). Enter a growing field with 8% job growth.",
+  "faqs": [
+    {
+      "q": "Can I work while completing this certificate?",
+      "a": "Absolutely! Designed for working adults with flexible online scheduling."
+    },
+    {
+      "q": "Is the program entirely online?",
+      "a": "Yes, 100% online with synchronous and asynchronous options."
+    },
+    {
+      "q": "Do I need prior experience?",
+      "a": "No, the program covers all foundational knowledge."
+    },
+    {
+      "q": "Will my credits transfer?",
+      "a": "Yes, all 21 credits transfer to the Human Services Administration Associate Degree."
+    },
+    {
+      "q": "Can I study in Spanish?",
+      "a": "Yes, courses are available in both English and Spanish."
+    }
+  ],
+  "pathwayTitle": "Build Toward Your Future"
+}

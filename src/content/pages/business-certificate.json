@@ -1,0 +1,172 @@
+{
+  "title": "Business Certificate",
+  "slug": "business-certificate",
+  "type": "program",
+  "badge": "Business Certificate Program",
+  "subtitle": "In as little as one year. Most students graduate debt-free.",
+  "tagline": "Develop Skills That Get You Hired",
+  "taglineBody": "Develop the actual business skills that will enable you to get a job, increase your salary, or earn a promotion—all without interrupting your life.\n                    <br className=\"hidden md:block",
+  "benefits": [
+    {
+      "title": "Fast Track",
+      "desc": "Finish in as little as one year (only 18 credits!)",
+      "icon": "Clock"
+    },
+    {
+      "title": "100% Online",
+      "desc": "Learn on a schedule that fits into your busy life",
+      "icon": "Globe"
+    },
+    {
+      "title": "Debt-Free Goal",
+      "desc": "Most students graduate debt-free!",
+      "icon": "DollarSign"
+    },
+    {
+      "title": "Bilingual Options",
+      "desc": "Study in English and/or Spanish",
+      "icon": "MessageCircleIcon"
+    },
+    {
+      "title": "Transfer Credits",
+      "desc": "Credits transfer toward an associate or bachelor's degree",
+      "icon": "TrendingUp"
+    },
+    {
+      "title": "ESL Support",
+      "desc": "Tailored to each student's needs",
+      "icon": "BookOpen"
+    },
+    {
+      "title": "Career Growth",
+      "desc": "Build skills for career advancement and financial security",
+      "icon": "Briefcase"
+    }
+  ],
+  "stats": [
+    {
+      "label": "Credits",
+      "value": "18",
+      "icon": "Award",
+      "sub": "Credits"
+    },
+    {
+      "label": "Time",
+      "value": "1 Year",
+      "icon": "Clock",
+      "sub": "To Complete"
+    },
+    {
+      "label": "Format",
+      "value": "Online",
+      "icon": "Globe",
+      "sub": "Fully Online"
+    },
+    {
+      "label": "Cost",
+      "value": "$317",
+      "icon": "DollarSign",
+      "sub": "Per Credit"
+    },
+    {
+      "label": "Start",
+      "value": "Rolling",
+      "icon": "Calendar",
+      "sub": "Start Date"
+    },
+    {
+      "label": "Aid",
+      "value": "Yes",
+      "icon": "GraduationCap",
+      "sub": "Financial Aid"
+    },
+    {
+      "label": "Language",
+      "value": "Bilingual",
+      "icon": "Globe",
+      "sub": "English & Spanish"
+    },
+    {
+      "label": "Outcome",
+      "value": "Job Ready",
+      "icon": "CheckCircle",
+      "sub": "Career Focused"
+    }
+  ],
+  "courses": [
+    {
+      "title": "Principles of Management",
+      "desc": "Lead teams and projects effectively"
+    },
+    {
+      "title": "Business Communication",
+      "desc": "Write and speak professionally"
+    },
+    {
+      "title": "Introduction to Computer Applications",
+      "desc": "Master essential technology"
+    },
+    {
+      "title": "Introduction to Business",
+      "desc": "Understand how organizations work"
+    },
+    {
+      "title": "Principles of Accounting",
+      "desc": "Build financial literacy"
+    },
+    {
+      "title": "Business Ethics",
+      "desc": "Navigate professional responsibilities"
+    }
+  ],
+  "outcomes": [
+    {
+      "title": "Administrative or Office Support",
+      "desc": "Manage schedules, communications, and daily operations. Competitive salary with strong demand."
+    },
+    {
+      "title": "Operations and Management Support",
+      "desc": "Help teams run smoothly and efficiently."
+    },
+    {
+      "title": "Bookkeeping or Business Assistant",
+      "desc": "Manage financial records and support business functions."
+    },
+    {
+      "title": "Entry-Level Leadership Roles",
+      "desc": "Take on supervisory responsibilities."
+    },
+    {
+      "title": "Entrepreneurship or Small Business Support",
+      "desc": "Start or support your own business."
+    }
+  ],
+  "outcomesIntro": "This certificate helps prepare you for career-building roles where you can earn promotions, increase pay, or change career paths.",
+  "faqs": [
+    {
+      "q": "What is the duration of the program?",
+      "a": "As little as one year."
+    },
+    {
+      "q": "Is it fully online?",
+      "a": "Yes, entirely online with various formats."
+    },
+    {
+      "q": "What languages?",
+      "a": "English and Spanish."
+    },
+    {
+      "q": "Accredited?",
+      "a": "Yes, a fully accredited non-profit college and Hispanic-Serving Institution."
+    },
+    {
+      "q": "Will it help my career?",
+      "a": "Yes, for new jobs, promotions, or further studies."
+    },
+    {
+      "q": "Financial aid?",
+      "a": "Yes, most students graduate debt-free."
+    }
+  ],
+  "pathwayTitle": "Build Toward Your Future"
+}

@@ -1,0 +1,167 @@
+{
+  "title": "General Studies Associate",
+  "slug": "general-studies-associate",
+  "type": "program",
+  "badge": "General Studies Associate Degree",
+  "subtitle": "Flexible. Affordable. Transferable. Most students graduate debt-free.",
+  "tagline": "Explore Your Possibilities—Build Your Future on Your Terms",
+  "taglineBody": "Not sure what you want to study? That's okay—this degree is for you. The General Studies Associate Degree is perfect for students who want a college degree but aren't sure what career path to pursue.\n                    <br className=\"hidden md:block",
+  "benefits": [
+    {
+      "title": "Flexible Future",
+      "desc": "Explore different subjects and career paths",
+      "icon": "Compass"
+    },
+    {
+      "title": "100% Online",
+      "desc": "Learn on a schedule that fits to your busy life",
+      "icon": "Globe"
+    },
+    {
+      "title": "Debt-Free Goal",
+      "desc": "Most students graduate debt-free!",
+      "icon": "DollarSign"
+    },
+    {
+      "title": "Ready for Transfer",
+      "desc": "Credits transfer to a 4-year degree",
+      "icon": "TrendingUp"
+    },
+    {
+      "title": "Wide Variety of Careers",
+      "desc": "Your options are wide open",
+      "icon": "Briefcase"
+    },
+    {
+      "title": "Bilingual Options",
+      "desc": "ESL support available",
+      "icon": "MessageCircleIcon"
+    }
+  ],
+  "stats": [
+    {
+      "label": "Credits",
+      "value": "60",
+      "icon": "Award",
+      "sub": "Credits"
+    },
+    {
+      "label": "Time",
+      "value": "2 Years",
+      "icon": "Clock",
+      "sub": "To Complete"
+    },
+    {
+      "label": "Format",
+      "value": "Online",
+      "icon": "Globe",
+      "sub": "Fully Online"
+    },
+    {
+      "label": "Cost",
+      "value": "$317",
+      "icon": "DollarSign",
+      "sub": "Per Credit"
+    },
+    {
+      "label": "Start",
+      "value": "Rolling",
+      "icon": "Calendar",
+      "sub": "Start Date"
+    },
+    {
+      "label": "Aid",
+      "value": "Yes",
+      "icon": "GraduationCap",
+      "sub": "Financial Aid"
+    },
+    {
+      "label": "Language",
+      "value": "Bilingual",
+      "icon": "Globe",
+      "sub": "English & Spanish"
+    },
+    {
+      "label": "Outcome",
+      "value": "Job Ready",
+      "icon": "CheckCircle",
+      "sub": "Career Focused"
+    }
+  ],
+  "courses": [
+    {
+      "title": "General Psychology",
+      "desc": "Understand human behavior and motivation."
+    },
+    {
+      "title": "Computer Information Systems",
+      "desc": "Build essential technology skills."
+    },
+    {
+      "title": "Cultural Aspects of Families and Children",
+      "desc": "Explore diversity and family dynamics."
+    },
+    {
+      "title": "College Writing I and II",
+      "desc": "Master professional communication."
+    },
+    {
+      "title": "Electives Based on Your Interests",
+      "desc": "Customize your education to match your goals."
+    },
+    {
+      "title": "General Education Requirements",
+      "desc": "Complete transferable credits for a bachelor's degree."
+    }
+  ],
+  "outcomes": [
+    {
+      "title": "Administrative Assistant",
+      "desc": "Support office operations and management. Median national salary: $55,560!"
+    },
+    {
+      "title": "General Manager",
+      "desc": "Lead teams and oversee operations. 6% projected job growth!"
+    },
+    {
+      "title": "Sales Agent",
+      "desc": "Build client relationships and drive revenue."
+    },
+    {
+      "title": "Research Assistant",
+      "desc": "Support research projects across fields."
+    },
+    {
+      "title": "Executive Assistant",
+      "desc": "Provide high-level administrative support."
+    },
+    {
+      "title": "Bank Teller",
+      "desc": "Assist customers with financial transactions."
+    },
+    {
+      "title": "Small Business Owner",
+      "desc": "Start and run your own business."
+    }
+  ],
+  "outcomesIntro": "You'll graduate ready to pursue many different career opportunities, from starting your own small business to becoming a general manager.",
+  "faqs": [
+    {
+      "q": "Can I transfer my credits?",
+      "a": "Yes! The program is designed to be transferable to 4-year colleges and universities."
+    },
+    {
+      "q": "How much does it cost?",
+      "a": "$11,100 for the full degree. However, most students graduate debt-free with financial aid."
+    },
+    {
+      "q": "Am I eligible for financial aid?",
+      "a": "Yes! Most of our students receive financial aid that covers the full cost of tuition."
+    },
+    {
+      "q": "What do I need to apply?",
+      "a": "You'll need a copy of your high school diploma, GED, or HISET, a photo ID, and a completed application."
+    }
+  ],
+  "pathwayTitle": "Build Toward Your Future"
+}
