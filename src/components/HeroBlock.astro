@@ -1,0 +1,36 @@
+---
+const { data, objectId } = Astro.props;
+---
+
+<section 
+  data-sb-object-id={objectId} 
+  data-sb-field-path="hero"
+  class="relative flex items-center justify-center bg-gray-50 overflow-hidden pt-12 md:pt-20 pb-6 md:pb-10 min-h-[80vh]"
+>
+  <div class="absolute inset-0 z-0 animate-gradient"
+    style="background: linear-gradient(135deg, #ffffff 0%, #f0f6fa 25%, #f2f9f8 50%, #fdf6ec 75%, #f4f7fa 100%); background-size: 400% 400%;">
+  </div>
+
+  <div class="container mx-auto px-4 md:px-6 relative z-10 grid lg:grid-cols-2 gap-6 lg:gap-8 items-center">
+    <div class="space-y-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 border border-ucb-blue/10 rounded-full bg-white/60 shadow-sm backdrop-blur-sm">
+        <span data-sb-field-path=".badgeText" class="text-[10px] font-bold tracking-widest uppercase text-ucb-blue px-1">{data?.badgeText || 'Your online community college'}</span>
+      </div>
+
+      <h1 class="font-display font-black text-3xl md:text-4xl lg:text-5xl leading-[1.1] text-ucb-blue tracking-tight">
+        <span data-sb-field-path=".headline" set:html={data?.headline || 'Flexible, affordable'}></span> <br />
+        <span data-sb-field-path=".highlightedWord" class="text-gray-900 drop-shadow-sm">{data?.highlightedWord || 'online education for all.'}</span>
+      </h1>
+
+      <p data-sb-field-path=".subheadline" class="text-sm md:text-base text-gray-600 max-w-lg leading-relaxed font-light border-t border-ucb-blue/10 pt-2">
+        {data?.subheadline || 'The only accredited online college designed for working students, English Language Learners, and parents.'}
+      </p>
+
+      <div class="flex flex-wrap gap-2 pt-4">
+        <button class="px-6 py-3 bg-ucb-blue text-white font-bold rounded-none hover:shadow-xl transition-all duration-300 text-sm min-h-[44px]">
+          <span data-sb-field-path=".primaryCtaText">{data?.primaryCtaText || 'Explore Programs'}</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

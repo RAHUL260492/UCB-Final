@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeroBlock from '../components/HeroBlock.astro';
+---
+
+<Layout title="Urban College of Boston - Home">
+  <!-- Fixed Header Placeholder -->
+  <header class="bg-ucb-blue text-white py-4 px-6 text-center font-bold tracking-widest text-sm uppercase">
+    Urban College Web Header Island
+  </header>
+  
+  <main>
+    <HeroBlock data={{
+      badgeText: "Your online community college",
+      headline: "Flexible, affordable",
+      highlightedWord: "online education for all.",
+      subheadline: "The only accredited online college designed for working students, English Language Learners, and parents."
+    }} objectId="home-hero-1" />
+  </main>
+</Layout>
