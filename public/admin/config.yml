@@ -1,0 +1,62 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: public/images
+public_folder: /images
+
+collections:
+  - name: "programs"
+    label: "Program Pages"
+    folder: "src/content/pages"
+    create: true
+    slug: "{{slug}}"
+    format: "json"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Type", name: "type", widget: "hidden", default: "program" }
+      - { label: "Badge", name: "badge", widget: "string" }
+      - { label: "Subtitle", name: "subtitle", widget: "string" }
+      - { label: "Tagline", name: "tagline", widget: "string" }
+      - { label: "Tagline Body", name: "taglineBody", widget: "text" }
+      - { label: "Outcomes Intro", name: "outcomesIntro", widget: "text" }
+      - { label: "Pathway Title", name: "pathwayTitle", widget: "string" }
+
+      - label: "Benefits"
+        name: "benefits"
+        widget: "list"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "desc", widget: "string" }
+          - { label: "Icon", name: "icon", widget: "string" }
+
+      - label: "Stats"
+        name: "stats"
+        widget: "list"
+        fields:
+          - { label: "Label", name: "label", widget: "string" }
+          - { label: "Value", name: "value", widget: "string" }
+          - { label: "Icon", name: "icon", widget: "string" }
+          - { label: "Sub-label", name: "sub", widget: "string" }
+
+      - label: "Courses"
+        name: "courses"
+        widget: "list"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "desc", widget: "string" }
+
+      - label: "Career Outcomes"
+        name: "outcomes"
+        widget: "list"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "desc", widget: "string" }
+
+      - label: "FAQs"
+        name: "faqs"
+        widget: "list"
+        fields:
+          - { label: "Question", name: "q", widget: "string" }
+          - { label: "Answer", name: "a", widget: "text" }
