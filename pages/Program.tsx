@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
-import { client, urlFor } from '../src/lib/sanityClient';
 import ProgramPageLayout from '../components/ProgramPageLayout';
+import programsData from '../src/data/programs.json';
 
 // Fallback icon mapping since Sanity CMS will provide string names
 import * as Icons from 'lucide-react';
@@ -13,19 +13,13 @@ const Program: React.FC = () => {
     const [error, setError] = useState(false);
 
     useEffect(() => {
-        client.fetch(`*[_type == "program" && slug.current == $slug][0]`, { slug })
-        .then((data) => {
-            if (data) {
-                setProgramData(data);
-            } else {
-                setError(true);
-            }
-            setLoading(false);
-        }).catch(err => {
-            console.error(err);
+        const data = programsData.find((p: any) => p.slug?.current === slug);
+        if (data) {
+            setProgramData(data);
+        } else {
             setError(true);
-            setLoading(false);
-        });
+        }
+        setLoading(false);
     }, [slug]);
 
     if (loading) {
@@ -64,7 +58,7 @@ const Program: React.FC = () => {
         badge: programData.badge || 'Program',
         title: programData.title,
         subtitle: programData.subtitle || programData.type,
-        headerImageSrc: programData.heroImage ? urlFor(programData.heroImage).url() : 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2000&auto=format&fit=crop',
+        headerImageSrc: programData.heroImage || 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2000&auto=format&fit=crop',
         breadcrumbs: [
             { label: 'Home', path: '/' },
             { label: 'Programs' },
@@ -103,7 +97,7 @@ const Program: React.FC = () => {
 
         testimonial: programData.testimonial ? {
             ...programData.testimonial,
-            imageSrc: programData.testimonial.image ? urlFor(programData.testimonial.image).url() : undefined
+            imageSrc: programData.testimonial.image || undefined
         } : undefined,
 
         faqs: programData.faqs || [],

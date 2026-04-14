@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { Search as SearchIcon, BookOpen, FileText, Globe, ArrowRight } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
-import { client, urlFor } from '../src/lib/sanityClient';
+
 import localBlogsData from '../src/data/blogs.json';
 
 const staticPages = [
@@ -61,65 +61,15 @@ const Search: React.FC = () => {
 
         const fetchResults = async () => {
             setLoading(true);
-            try {
-                // Fetch dynamic data from Sanity
-                const sanityData = await client.fetch(`*[_type in ["post", "program"]] {
-                    _type,
-                    title,
-                    "slug": slug.current,
-                    description,
-                    tagline
-                }`);
-
-                // Map local JSON blogs to look like Sanity data if Sanity is empty/missing them
-                const localDataMapped = localBlogsData.map((b: any) => ({
-                    ...b,
-                    _type: 'post'
-                }));
-
-                // Combine Data (Avoid duplicates by slug)
-                const allDataMap = new Map();
-                
-                // 1. Add static pages
-                staticPages.forEach(p => allDataMap.set(p.slug, p));
-                
-                // 2. Add local JSON blogs
-                localDataMapped.forEach(b => {
-                    if (b.slug) allDataMap.set(b.slug, b);
-                });
-
-                // 3. Add Sanity Data (this will overwrite local JSON if they share the same slug, keeping CMS as source of truth)
-                if (sanityData && Array.isArray(sanityData)) {
-                    sanityData.forEach(item => {
-                        if (item.slug) allDataMap.set(item.slug, item);
-                    });
-                }
-
-                const allItems = Array.from(allDataMap.values());
-
-                // Perform JavaScript-based unified text search
-                const lowerQuery = query.toLowerCase();
-                const filtered = allItems.filter(item => {
-                    const t = formatTitle(item.title || '', item.slug || '').toLowerCase();
-                    const d = (item.description || '').toLowerCase();
-                    const tag = (item.tagline || '').toLowerCase();
-                    return t.includes(lowerQuery) || d.includes(lowerQuery) || tag.includes(lowerQuery);
-                });
-
-                setResults(filtered);
-            } catch (err) {
-                console.error("Search failed:", err);
-                // Fallback to static + local JSON if sanity fails
-                const localDataMapped = localBlogsData.map((b: any) => ({ ...b, _type: 'post' }));
-                const allItems = [...staticPages, ...localDataMapped];
-                const lowerQuery = query.toLowerCase();
-                const filtered = allItems.filter(item => {
-                    const t = formatTitle(item.title || '', item.slug || '').toLowerCase();
-                    const d = (item.description || '').toLowerCase();
-                    return t.includes(lowerQuery) || d.includes(lowerQuery);
-                });
-                setResults(filtered);
-            }
+            const localDataMapped = localBlogsData.map((b: any) => ({ ...b, _type: 'post' }));
+            const allItems = [...staticPages, ...localDataMapped];
+            const lowerQuery = query.toLowerCase();
+            const filtered = allItems.filter(item => {
+                const t = formatTitle(item.title || '', item.slug || '').toLowerCase();
+                const d = (item.description || '').toLowerCase();
+                return t.includes(lowerQuery) || d.includes(lowerQuery);
+            });
+            setResults(filtered);
             setLoading(false);
         };
 

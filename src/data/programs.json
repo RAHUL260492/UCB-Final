@@ -1,0 +1,24 @@
+[
+  {
+    "slug": { "current": "clinical-research-coordinator-certificate" },
+    "title": "Clinical Research Coordinator Certificate",
+    "badge": "Certificate",
+    "subtitle": "Clinical Research",
+    "tagline": "Launch Your Career in Clinical Research",
+    "description": "This certificate program prepares students to enter the rapidly growing field of clinical research. You'll learn the fundamentals of clinical trials, regulatory compliance, and patient coordination.",
+    "heroImage": "https://images.unsplash.com/photo-1576091160550-2173ff9e5ee5?q=80&w=2000&auto=format&fit=crop",
+    "benefits": [
+      { "title": "High Demand", "description": "Clinical research coordinators are in high demand across hospitals and biotech companies.", "icon": "TrendingUp" },
+      { "title": "Flexible Schedule", "description": "Classes designed for working adults with evening and online options.", "icon": "Clock" }
+    ],
+    "courses": [
+      { "code": "CRC 101", "credits": "3", "title": "Introduction to Clinical Trials", "description": "Overview of the clinical research industry." }
+    ],
+    "outcomesIntro": "Graduates of the Clinical Research Coordinator program will be able to:",
+    "outcomes": [
+      "Understand GCP (Good Clinical Practice) guidelines",
+      "Manage patient enrollment and screening",
+      "Ensure regulatory compliance in trial execution"
+    ]
+  }
+]

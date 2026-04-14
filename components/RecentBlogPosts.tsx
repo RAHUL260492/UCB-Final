@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, ChevronRight } from 'lucide-react';
-import { client, urlFor } from '../src/lib/sanityClient';
+
 import ScrollAnimation from './ScrollAnimation';
 import localBlogsData from '../src/data/blogs.json';
 
@@ -17,23 +17,7 @@ const RecentBlogPosts: React.FC = () => {
         [...localBlogsData].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 3)
     );
 
-    useEffect(() => {
-        client.fetch(`*[_type == "post"] | order(date desc)[0...3] {
-            title,
-            "slug": slug.current,
-            description,
-            date,
-            image
-        }`).then((data) => {
-            if (data && data.length > 0) {
-                const mappedData = data.map((b: any) => ({
-                    ...b,
-                    image: b.image ? urlFor(b.image).url() : null
-                }));
-                setRecentBlogs(mappedData);
-            }
-        }).catch(err => console.error(err));
-    }, []);
+
 
     return (
         <section className="py-20 bg-gray-50 relative z-10 border-y border-gray-100">
