@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import ProgramPageLayout from '../components/ProgramPageLayout';
-import programsData from '../src/data/programs.json';
+
 
 // Fallback icon mapping since Sanity CMS will provide string names
 import * as Icons from 'lucide-react';
@@ -13,13 +13,20 @@ const Program: React.FC = () => {
     const [error, setError] = useState(false);
 
     useEffect(() => {
-        const data = programsData.find((p: any) => p.slug?.current === slug);
-        if (data) {
-            setProgramData(data);
-        } else {
-            setError(true);
-        }
-        setLoading(false);
+        setLoading(true);
+        setError(false);
+        if (!slug) return;
+        
+        import(`../src/content/pages/${slug}.json`)
+            .then((module) => {
+                setProgramData(module.default || module);
+                setLoading(false);
+            })
+            .catch((err) => {
+                console.error("Failed to load program data:", err);
+                setError(true);
+                setLoading(false);
+            });
     }, [slug]);
 
     if (loading) {
@@ -40,7 +47,7 @@ const Program: React.FC = () => {
                 <div className="text-center max-w-md px-6">
                     <h2 className="text-2xl font-bold text-ucb-blue mb-4">Program Not Found in CMS</h2>
                     <p className="text-gray-600 mb-6">
-                        The program page for "{slug}" hasn't been added to the Sanity database yet. Please open the Sanity Studio and create a Program with the slug "{slug}".
+                        The program page for "{slug}" hasn't been added yet. Please open the Content Manager and create a Program with the slug "{slug}".
                     </p>
                 </div>
             </div>
