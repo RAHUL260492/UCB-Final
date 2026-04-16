@@ -17,6 +17,12 @@
   <meta name="description"
     content="Affordable associate degrees and certificates in Boston. Flexible schedules, multilingual classes, and financial aid available.">
 
+  <!-- Netlify Identity Invite Token Redirect -->
+  <script>
+    if (window.location.hash && window.location.hash.includes('invite_token')) {
+      window.location.href = '/admin/#' + window.location.hash.slice(1);
+    }
+  </script>
 </head>
 
 <body class="bg-[#FAF8F5] text-[#1C1C1E] font-sans antialiased overflow-x-hidden">
