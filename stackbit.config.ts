@@ -3,6 +3,9 @@ export default {
     ssgName: 'vite',
     nodeVersion: '18',
     cmsName: 'git',
+    devCommand: 'npm run dev',
+    devUrl: 'http://localhost:5173',
+    experimental: { ssg: false },
     models: {
         ProgramPage: {
             type: 'page',
