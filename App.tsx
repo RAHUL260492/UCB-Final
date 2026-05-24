@@ -18,6 +18,7 @@ import TuitionPaymentOptions from './pages/TuitionPaymentOptions';
 import FinancialAid from './pages/FinancialAid';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
+import News from './pages/News';
 import Program from './pages/Program';
 import LearningResourceCenter from './pages/LearningResourceCenter';
 import StudentGovernment from './pages/StudentGovernment';
@@ -76,6 +77,8 @@ function App() {
             <Route path="/programs/:slug" element={<Program />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/news/:slug" element={<BlogPost />} />
             <Route path="/learning-resource-center" element={<LearningResourceCenter />} />
             <Route path="/student-government" element={<StudentGovernment />} />
             <Route path="/mental-health" element={<MentalHealth />} />

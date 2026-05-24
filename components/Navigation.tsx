@@ -109,7 +109,14 @@ const Navigation: React.FC = () => {
     },
     { name: 'Workforce & Community', path: '/workforce-development' },
     { name: 'Donate', path: '#' },
-    { name: 'Blog', path: '/blog' }
+    { 
+      name: 'News & Blog', 
+      path: '/blog',
+      dropdown: [
+        { name: 'Urban College Blog', path: '/blog' },
+        { name: 'In the News', path: '/news' }
+      ]
+    }
   ];
 
   const [initialHeight, setInitialHeight] = useState<number | 'auto'>('auto');

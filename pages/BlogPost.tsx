@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useLocation } from 'react-router-dom';
 import { ChevronLeft, Calendar, Share2, Facebook, Twitter, Linkedin, Copy } from 'lucide-react';
 import blogsData from '../src/data/blogs.json';
 import PageHeader from '../components/PageHeader';
@@ -13,8 +13,10 @@ const formatTitle = (title: string, slug: string) => {
 
 const BlogPost: React.FC = () => {
     const { slug } = useParams();
+    const location = useLocation();
     const blog = blogsData.find(b => b.slug === slug);
     const [copied, setCopied] = useState(false);
+    const isNews = location.pathname.startsWith('/news');
 
     useEffect(() => {
         window.scrollTo(0, 0); // Scroll to top on load
@@ -70,8 +72,8 @@ const BlogPost: React.FC = () => {
                 </div>
 
                 <div className="container mx-auto px-6 relative z-10 max-w-4xl">
-                    <Link to="/blog" className="inline-flex items-center gap-2 text-ucb-gold hover:text-white transition-colors mb-6 text-sm font-bold tracking-widest uppercase">
-                        <ChevronLeft className="w-4 h-4" /> Back to News & Events
+                    <Link to={isNews ? "/news" : "/blog"} className="inline-flex items-center gap-2 text-ucb-gold hover:text-white transition-colors mb-6 text-sm font-bold tracking-widest uppercase">
+                        <ChevronLeft className="w-4 h-4" /> Back to {isNews ? "In the News" : "Blog"}
                     </Link>
                     
                     <h1 className="text-3xl md:text-5xl lg:text-6xl font-display font-black text-white leading-tight mb-8 drop-shadow-lg">

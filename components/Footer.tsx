@@ -46,7 +46,9 @@ const Footer: React.FC = () => {
                 { name: 'Academic Calendar', path: '#' },
                 { name: 'Library Services', path: '#' },
                 { name: 'Career Center', path: '#' },
-                { name: 'Student Portal', path: '#' }
+                { name: 'Student Portal', path: '#' },
+                { name: 'Urban College Blog', path: '/blog' },
+                { name: 'In the News', path: '/news' }
               ].map((item) => (
                 <li key={item.name}>
                   {item.path.startsWith('/') ? (
