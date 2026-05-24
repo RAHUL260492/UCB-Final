@@ -38,7 +38,7 @@ const Navigation: React.FC = () => {
     return () => window.removeEventListener('resize', updateHeaderHeight);
   }, [bannerOpen, isScrolled]);
   const navLinks: Array<{ name: string; path: string; dropdown?: any[]; groups?: any[] }> = [
-    { name: 'About Urban College', path: '/#why-urban-college' },
+    { name: 'About Urban College', path: '/about' },
     {
       name: 'Programs',
       path: '/programs',

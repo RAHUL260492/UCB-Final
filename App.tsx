@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import RFISidebar from './components/RFISidebar';
 import BackgroundShapes from './components/BackgroundShapes';
 import Home from './pages/Home';
+import About from './pages/About';
 import AcademicPrograms from './pages/AcademicPrograms';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
@@ -41,6 +42,7 @@ function App() {
         <main id="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
             <Route path="/programs" element={<AcademicPrograms />} />
             <Route path="/programs/:slug" element={<Program />} />
             <Route path="/blog" element={<Blog />} />
