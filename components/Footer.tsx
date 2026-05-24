@@ -34,7 +34,15 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               {[
                 { name: 'About Us', path: '/about' },
+                { name: 'Office of the President', path: '/president' },
+                { name: 'Board of Trustees', path: '/trustees' },
+                { name: 'Urban College Foundation', path: '/foundation' },
                 { name: 'Leadership & Team', path: '/team' },
+                { name: 'Admissions Overview', path: '/admissions' },
+                { name: 'Information Sessions', path: '/info-sessions' },
+                { name: 'Financial Aid & Funding', path: '/financial-services-and-funding-options' },
+                { name: 'Tuition & Cost of Attendance', path: '/financial-aid' },
+                { name: 'Tuition Payment Options', path: '/tuition-payment-options' },
                 { name: 'Academic Calendar', path: '#' },
                 { name: 'Library Services', path: '#' },
                 { name: 'Career Center', path: '#' },
@@ -103,7 +111,7 @@ const Footer: React.FC = () => {
           <div className="flex flex-wrap justify-center gap-6">
             <a href="#" className="hover:text-ucb-copper transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-ucb-copper transition-colors">Non-Discrimination</a>
-            <a href="#" className="hover:text-ucb-copper transition-colors">Accreditation</a>
+            <Link to="/accreditation" className="hover:text-ucb-copper transition-colors">Accreditation</Link>
             <a href="#" className="hover:text-ucb-copper transition-colors">Sitemap</a>
           </div>
         </div>

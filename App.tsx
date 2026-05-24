@@ -8,6 +8,14 @@ import Home from './pages/Home';
 import About from './pages/About';
 import AcademicPrograms from './pages/AcademicPrograms';
 import Team from './pages/Team';
+import President from './pages/President';
+import Trustees from './pages/Trustees';
+import Foundation from './pages/Foundation';
+import AdmissionsOverview from './pages/AdmissionsOverview';
+import InfoSessions from './pages/InfoSessions';
+import FinancialServices from './pages/FinancialServices';
+import TuitionPaymentOptions from './pages/TuitionPaymentOptions';
+import FinancialAid from './pages/FinancialAid';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import Program from './pages/Program';
@@ -15,6 +23,7 @@ import LearningResourceCenter from './pages/LearningResourceCenter';
 import StudentGovernment from './pages/StudentGovernment';
 import MentalHealth from './pages/MentalHealth';
 import Search from './pages/Search';
+import Accreditation from './pages/Accreditation';
 
 // ScrollToTop component to handle scroll on route change
 const ScrollToTop = () => {
@@ -45,6 +54,22 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/mission" element={<About />} />
+            <Route path="/president" element={<President />} />
+            <Route path="/office-of-the-president" element={<President />} />
+            <Route path="/trustees" element={<Trustees />} />
+            <Route path="/board-of-trustees" element={<Trustees />} />
+            <Route path="/foundation" element={<Foundation />} />
+            <Route path="/urban-college-foundation" element={<Foundation />} />
+            <Route path="/admissions" element={<AdmissionsOverview />} />
+            <Route path="/admissions-overview" element={<AdmissionsOverview />} />
+            <Route path="/info-sessions" element={<InfoSessions />} />
+            <Route path="/infosession" element={<InfoSessions />} />
+            <Route path="/information-sessions" element={<InfoSessions />} />
+            <Route path="/financial-services-and-funding-options" element={<FinancialServices />} />
+            <Route path="/financial-aid" element={<FinancialAid />} />
+            <Route path="/tuition-and-fees" element={<FinancialAid />} />
+            <Route path="/tuition-payment-options" element={<TuitionPaymentOptions />} />
+            <Route path="/payment-methods" element={<TuitionPaymentOptions />} />
             <Route path="/programs" element={<AcademicPrograms />} />
             <Route path="/team" element={<Team />} />
             <Route path="/leadership" element={<Team />} />
@@ -55,6 +80,7 @@ function App() {
             <Route path="/student-government" element={<StudentGovernment />} />
             <Route path="/mental-health" element={<MentalHealth />} />
             <Route path="/search" element={<Search />} />
+            <Route path="/accreditation" element={<Accreditation />} />
           </Routes>
         </main>
 

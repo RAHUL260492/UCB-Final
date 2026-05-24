@@ -44,7 +44,11 @@ const Navigation: React.FC = () => {
       dropdown: [
         { name: 'About Us', path: '/about' },
         { name: 'Our Mission & Vision', path: '/mission' },
-        { name: 'Leadership & Team', path: '/team' }
+        { name: 'Office of the President', path: '/president' },
+        { name: 'Board of Trustees', path: '/trustees' },
+        { name: 'Urban College Foundation', path: '/foundation' },
+        { name: 'Leadership & Team', path: '/team' },
+        { name: 'Accreditation', path: '/accreditation' }
       ]
     },
     {
@@ -82,14 +86,25 @@ const Navigation: React.FC = () => {
         }
       ]
     },
-    { name: 'Admissions & Aid', path: '/#financial-aid' },
+    { 
+      name: 'Admissions & Aid', 
+      path: '/admissions',
+      dropdown: [
+        { name: 'Admissions Overview', path: '/admissions' },
+        { name: 'Information Sessions', path: '/info-sessions' },
+        { name: 'Financial Aid & Funding', path: '/financial-services-and-funding-options' },
+        { name: 'Tuition & Cost of Attendance', path: '/financial-aid' },
+        { name: 'Tuition Payment Options', path: '/tuition-payment-options' }
+      ]
+    },
     { 
       name: 'Student Resources', 
       path: '/#resources',
       dropdown: [
         { name: 'Learning Resource Center', path: '/learning-resource-center' },
         { name: 'Student Government', path: '/student-government' },
-        { name: 'Mental Health', path: '/mental-health' }
+        { name: 'Mental Health', path: '/mental-health' },
+        { name: 'Tuition & Financial Aid', path: '/financial-aid' }
       ]
     },
     { name: 'Workforce & Community', path: '/workforce-development' },

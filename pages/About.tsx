@@ -383,7 +383,7 @@ const About: React.FC = () => {
                                 Whether you're looking to advance your career, explore a new path, or start your college journey—we're here to help you succeed.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-3">
-                                <Link to="#" className="inline-flex justify-center items-center bg-ucb-orange hover:bg-ucb-orange-glow text-white font-bold py-2.5 px-6 rounded-full text-xs uppercase tracking-wider transition-colors min-h-[44px]">
+                                <Link to="/admissions" className="inline-flex justify-center items-center bg-ucb-orange hover:bg-ucb-orange-glow text-white font-bold py-2.5 px-6 rounded-full text-xs uppercase tracking-wider transition-colors min-h-[44px]">
                                     Apply Now (Free) <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
                                 </Link>
                                 <Link to="/programs" className="inline-flex justify-center items-center bg-white hover:bg-gray-100 text-ucb-blue font-bold py-2.5 px-6 rounded-full text-xs uppercase tracking-wider transition-colors min-h-[44px]">
@@ -421,10 +421,11 @@ const About: React.FC = () => {
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
                             {[
                                 { name: "Academic Programs", path: "/programs" },
+                                { name: "Office of the President", path: "/president" },
                                 { name: "Administration & Leadership", path: "/team" },
                                 { name: "Accreditation", path: "#" },
-                                { name: "Board of Trustees", path: "/team" },
-                                { name: "Urban College Foundation", path: "#" },
+                                { name: "Board of Trustees", path: "/trustees" },
+                                { name: "Urban College Foundation", path: "/foundation" },
                                 { name: "Contact Us", path: "#" }
                             ].map((link, idx) => (
                                 <Link key={idx} to={link.path} className="px-4 py-3 bg-white hover:bg-ucb-blue hover:text-white border border-gray-100 rounded-xl shadow-sm text-xs font-semibold text-gray-700 transition-all flex items-center justify-center gap-1 group">

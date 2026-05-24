@@ -317,84 +317,21 @@ const Team: React.FC = () => {
 
             {/* Board of Trustees Section */}
             <section className="py-16 bg-white border-t border-gray-100">
-                <div className="container mx-auto px-6 max-w-4xl">
-                    <div className="text-center mb-12">
-                        <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs mb-2 block">Governance</span>
-                        <h2 className="text-3xl font-display font-bold text-ucb-blue">Board of Trustees</h2>
-                        <p className="text-gray-500 mt-2 font-light leading-relaxed max-w-2xl mx-auto text-sm">
-                            Urban College's Board of Trustees provides strategic oversight and governance, ensuring that the college remains true to its mission of opening new pathways to opportunity for our diverse community of learners.
-                        </p>
-                    </div>
-
+                <div className="container mx-auto px-6 max-w-4xl text-center">
                     <ScrollAnimation variant="fade-up">
-                        <div className="bg-gray-50 p-6 rounded-3xl border border-gray-100 space-y-8">
-                            {/* Leadership Officers */}
-                            <div>
-                                <h3 className="font-bold text-xs uppercase tracking-wider text-ucb-orange mb-4 border-b border-gray-200 pb-2">Officers</h3>
-                                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                                    {[
-                                        { name: "Joan Becker, Ed.D.", role: "Chair" },
-                                        { name: "Amelia Manning", role: "Vice Chair" },
-                                        { name: "Barbara Brittingham, Ph.D.", role: "Secretary" }
-                                    ].map((officer, idx) => (
-                                        <div key={idx} className="bg-white p-4 rounded-xl border border-gray-200/50 shadow-sm">
-                                            <h4 className="font-bold text-sm text-gray-900 leading-snug">{officer.name}</h4>
-                                            <p className="text-xs text-ucb-teal font-semibold mt-0.5">{officer.role}</p>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-
-                            {/* Trustees */}
-                            <div>
-                                <h3 className="font-bold text-xs uppercase tracking-wider text-ucb-orange mb-4 border-b border-gray-200 pb-2">Trustees</h3>
-                                <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                                    {[
-                                        "Constanza Cabello, Ed.D.",
-                                        "Peter Ebb, Esq.",
-                                        "Kenneth Lee",
-                                        "Mark Ouellette",
-                                        "Megan Stevens",
-                                        "Jan Wyatt, Ph.D."
-                                    ].map((name, idx) => (
-                                        <div key={idx} className="bg-white p-3 rounded-lg border border-gray-100 flex items-center gap-2">
-                                            <ChevronRight className="w-3.5 h-3.5 text-ucb-orange shrink-0" />
-                                            <span className="text-xs font-medium text-gray-700">{name}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-
-                            {/* Ex Officio and Reps */}
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                <div>
-                                    <h3 className="font-bold text-xs uppercase tracking-wider text-ucb-orange mb-4 border-b border-gray-200 pb-2">Ex Officio</h3>
-                                    <div className="space-y-2">
-                                        {[
-                                            { name: "Dr. Yves Salomon-Fernández", role: "President, Urban College of Boston" },
-                                            { name: "Sharon Scott-Chandler, Esq.", role: "President & CEO, ABCD" }
-                                        ].map((item, idx) => (
-                                            <div key={idx} className="bg-white p-3 rounded-lg border border-gray-100">
-                                                <h4 className="font-bold text-xs text-gray-900">{item.name}</h4>
-                                                <p className="text-[10px] text-gray-400 mt-0.5">{item.role}</p>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                                <div>
-                                    <h3 className="font-bold text-xs uppercase tracking-wider text-ucb-orange mb-4 border-b border-gray-200 pb-2">Non-Voting Representatives</h3>
-                                    <div className="space-y-2">
-                                        {[
-                                            { name: "Adzele Benoit", role: "Faculty Representative" },
-                                            { name: "Anneisha Thompson", role: "Student Representative" }
-                                        ].map((item, idx) => (
-                                            <div key={idx} className="bg-white p-3 rounded-lg border border-gray-100">
-                                                <h4 className="font-bold text-xs text-gray-900">{item.name}</h4>
-                                                <p className="text-[10px] text-gray-400 mt-0.5">{item.role}</p>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
+                        <div className="bg-ucb-blue/5 border border-ucb-blue/10 rounded-3xl p-8 max-w-2xl mx-auto space-y-6">
+                            <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs">Governance</span>
+                            <h2 className="text-2xl md:text-3xl font-display font-bold text-ucb-blue">Board of Trustees</h2>
+                            <p className="text-gray-600 text-sm font-light leading-relaxed max-w-lg mx-auto">
+                                Urban College of Boston's Board of Trustees provides strategic leadership and governance oversight to ensure the college remains true to its mission of opening new pathways to opportunity for our diverse community of learners.
+                            </p>
+                            <div className="pt-2">
+                                <Link 
+                                    to="/trustees" 
+                                    className="inline-flex items-center gap-2 bg-ucb-blue hover:bg-blue-900 text-white font-bold py-3 px-8 rounded-full text-xs uppercase tracking-wider transition-all shadow-md min-h-[44px]"
+                                >
+                                    Meet Our Trustees & Officers <ArrowRight className="w-4 h-4" />
+                                </Link>
                             </div>
                         </div>
                     </ScrollAnimation>
@@ -414,10 +351,13 @@ const Team: React.FC = () => {
                                 <p className="opacity-90 text-sm leading-relaxed font-light">
                                     The Urban College Foundation supports our mission by raising funds for scholarships, program development, and student support services. Through the generosity of donors and partners, the Foundation helps ensure that financial barriers never stand in the way of our students' dreams.
                                 </p>
-                                <div className="pt-4 flex justify-center gap-4">
-                                    <Link to="#" className="inline-flex items-center bg-white text-ucb-orange hover:bg-ucb-blue hover:text-white font-bold py-2.5 px-6 rounded-full text-xs uppercase tracking-wider transition-colors shadow-md min-h-[44px]">
-                                        Support Our Mission / Donate <Heart className="w-3.5 h-3.5 ml-1.5 text-red-500 fill-red-500" />
+                                <div className="pt-4 flex flex-wrap justify-center gap-4">
+                                    <Link to="/foundation" className="inline-flex items-center bg-white text-ucb-orange hover:bg-ucb-blue hover:text-white font-bold py-2.5 px-6 rounded-full text-xs uppercase tracking-wider transition-colors shadow-md min-h-[44px]">
+                                        Learn About the Foundation &rarr;
                                     </Link>
+                                    <a href="#" className="inline-flex items-center bg-transparent border border-white text-white hover:bg-white hover:text-ucb-orange font-bold py-2.5 px-6 rounded-full text-xs uppercase tracking-wider transition-colors shadow-md min-h-[44px]">
+                                        Support Our Mission / Donate <Heart className="w-3.5 h-3.5 ml-1.5 text-red-500 fill-red-500" />
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -450,7 +390,7 @@ const Team: React.FC = () => {
 
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                         {[
-                            { name: "Apply Now (Free)", path: "#" },
+                            { name: "Apply Now (Free)", path: "/admissions" },
                             { name: "Request Info", path: "#" },
                             { name: "View Careers", path: "#" },
                             { name: "Contact Us", path: "#" }

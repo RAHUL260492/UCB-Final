@@ -1,0 +1,236 @@
+import React, { useEffect } from 'react';
+import PageHeader from '../components/PageHeader';
+import ScrollAnimation from '../components/ScrollAnimation';
+import { 
+    Award, Shield, CheckCircle, Calendar, Mail, Phone, 
+    MapPin, Globe, ExternalLink, ShieldCheck, FileText, HelpCircle 
+} from 'lucide-react';
+
+const Accreditation: React.FC = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    const breadcrumbs = [
+        { label: "Home", path: "/" },
+        { label: "About Urban College", path: "/about" },
+        { label: "Accreditation" }
+    ];
+
+    const milestones = [
+        {
+            title: "Full Accreditation Continued",
+            desc: "Continued Urban College of Boston in full accreditation, affirming our adherence to NECHE standards.",
+            icon: ShieldCheck,
+            color: "text-ucb-emerald bg-ucb-emerald/10 border-ucb-emerald/20"
+        },
+        {
+            title: "Special Monitoring Program Removed",
+            desc: "Successfully removed Urban College from the Program of Special Monitoring, reflecting structural and operational progress.",
+            icon: CheckCircle,
+            color: "text-ucb-emerald bg-ucb-emerald/10 border-ucb-emerald/20"
+        },
+        {
+            title: "Progress Report Scheduled",
+            desc: "Progress Report requested by January 15, 2027, with focus areas on institutional sustainability, program review implementation, and governance clarity.",
+            icon: Calendar,
+            color: "text-ucb-orange bg-ucb-orange/10 border-ucb-orange/20"
+        },
+        {
+            title: "Next Comprehensive Review",
+            desc: "The next comprehensive accreditation review is scheduled for Spring 2035 as part of the standard 10-year cycle.",
+            icon: Award,
+            color: "text-ucb-blue bg-ucb-blue/10 border-ucb-blue/20"
+        }
+    ];
+
+    return (
+        <div className="pt-24 lg:pt-32">
+            <PageHeader
+                title="Accreditation"
+                subtitle="Accredited Excellence in Higher Education"
+                breadcrumbs={breadcrumbs}
+                imageSrc="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2940&auto=format&fit=crop"
+                imagePosition="center"
+            />
+
+            {/* Core Statement Section */}
+            <section className="py-16 bg-white relative z-10">
+                <div className="container mx-auto px-6 max-w-5xl">
+                    <ScrollAnimation variant="fade-up" className="text-center max-w-4xl mx-auto mb-16">
+                        <div className="inline-flex p-3 bg-ucb-blue/5 rounded-2xl border border-ucb-blue/10 text-ucb-blue mb-4">
+                            <Award className="w-8 h-8" />
+                        </div>
+                        <h2 className="text-3xl font-display font-bold text-ucb-blue mb-6 leading-tight">
+                            Institutional Quality & Credentials
+                        </h2>
+                        <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-light">
+                            Urban College of Boston is accredited by the <span className="font-semibold text-ucb-blue">New England Commission of Higher Education</span> (formerly the Commission on Institutions of Higher Education of the New England Association of Schools and Colleges, Inc.).
+                        </p>
+                    </ScrollAnimation>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                        {/* What Accreditation Means */}
+                        <div className="lg:col-span-8 space-y-6">
+                            <ScrollAnimation variant="fade-up">
+                                <h3 className="text-2xl font-display font-bold text-ucb-black mb-4 flex items-center gap-2">
+                                    <HelpCircle className="w-6 h-6 text-ucb-orange" /> What Does Accreditation Mean?
+                                </h3>
+                                <div className="space-y-6 text-gray-600 leading-relaxed font-normal">
+                                    <p>
+                                        Accreditation of an institution of higher education by the Commission indicates that it meets or exceeds criteria for the assessment of institutional quality periodically applied through a peer review process. An accredited college or university is one which has available the necessary resources to achieve its stated purposes through appropriate educational programs, is substantially doing so, and gives reasonable evidence that it will continue to do so in the foreseeable future. Institutional integrity is also addressed through accreditation.
+                                    </p>
+                                    <p>
+                                        Accreditation by the Commission is not partial but applies to the institution as a whole. As such, it is not a guarantee of every course or program offered, or the competence of individual graduates. Rather, it provides reasonable assurance about the quality of opportunities available to students who attend the institution.
+                                    </p>
+                                </div>
+                            </ScrollAnimation>
+                        </div>
+
+                        {/* Informational Callout */}
+                        <div className="lg:col-span-4">
+                            <ScrollAnimation variant="slide-left" className="bg-gray-50 border border-gray-100 rounded-3xl p-6 shadow-sm">
+                                <FileText className="w-8 h-8 text-ucb-orange mb-4" />
+                                <h4 className="font-bold text-ucb-black mb-2">NECHE Public Statement</h4>
+                                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                                    As part of NECHE's public disclosure guidelines, colleges are required to provide official statements detailing institutional accreditation in their entirety.
+                                </p>
+                                <a 
+                                    href="https://www.neche.org/wp-content/uploads/2026/03/Pp44-Public-Disclosure-of-Information-About-Affiliated-Institutions-March-2026.pdf" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="text-ucb-blue font-bold text-sm inline-flex items-center gap-1.5 hover:underline group"
+                                >
+                                    View Disclosure Policy <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                                </a>
+                            </ScrollAnimation>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Our Accreditation Status */}
+            <section className="py-16 bg-gray-50 border-y border-gray-100 relative z-10">
+                <div className="container mx-auto px-6 max-w-5xl">
+                    <ScrollAnimation variant="fade-up" className="text-center max-w-3xl mx-auto mb-12">
+                        <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs mb-2 block">Action Timeline</span>
+                        <h2 className="text-3xl md:text-4xl font-display font-bold text-ucb-black mb-4">Our Accreditation Status</h2>
+                        <p className="text-gray-600 leading-relaxed">
+                            On November 20, 2025, the New England Commission of Higher Education took formal action regarding Urban College of Boston's status:
+                        </p>
+                    </ScrollAnimation>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                        {milestones.map((item, idx) => {
+                            const IconComponent = item.icon;
+                            return (
+                                <ScrollAnimation 
+                                    key={idx} 
+                                    variant="fade-up" 
+                                    delay={`${idx * 0.1}s`}
+                                    className="bg-white rounded-3xl p-8 border border-gray-100/80 shadow-sm hover:shadow-md transition-shadow flex gap-5"
+                                >
+                                    <div className={`w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 border ${item.color}`}>
+                                        <IconComponent className="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <h3 className="font-display font-bold text-lg text-ucb-black mb-2">{item.title}</h3>
+                                        <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+                                    </div>
+                                </ScrollAnimation>
+                            );
+                        })}
+                    </div>
+
+                    <ScrollAnimation variant="fade-up" className="bg-ucb-blue text-white rounded-3xl p-8 text-center relative overflow-hidden shadow-xl">
+                        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '32px 32px' }} />
+                        <div className="relative z-10 max-w-3xl mx-auto">
+                            <h4 className="font-display font-bold text-2xl mb-4">Focus on Continuous Improvement</h4>
+                            <p className="text-blue-100 leading-relaxed font-light">
+                                This status reflects our commitment to continuous improvement and institutional excellence. We remain focused on sustainable growth, rigorous program assessment, and clear governance that serves our students.
+                            </p>
+                        </div>
+                    </ScrollAnimation>
+                </div>
+            </section>
+
+            {/* Questions About Our Accreditation */}
+            <section className="py-16 bg-white relative z-10">
+                <div className="container mx-auto px-6 max-w-5xl">
+                    <ScrollAnimation variant="fade-up" className="text-center max-w-2xl mx-auto mb-12">
+                        <h2 className="text-3xl font-display font-bold text-ucb-black mb-4">Questions About Our Accreditation?</h2>
+                        <p className="text-gray-600">
+                            For inquiries regarding Urban College's accreditation status, you may reach out to our administration or NECHE directly.
+                        </p>
+                    </ScrollAnimation>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {/* ALO Contact */}
+                        <ScrollAnimation variant="slide-right" className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm space-y-6 flex flex-col justify-between">
+                            <div>
+                                <div className="w-12 h-12 rounded-2xl bg-ucb-orange/10 flex items-center justify-center text-ucb-orange mb-4">
+                                    <Shield className="w-6 h-6" />
+                                </div>
+                                <h3 className="text-xl font-display font-bold text-ucb-black mb-2">Accreditation Liaison Officer</h3>
+                                <p className="text-sm text-gray-500 mb-4">Urban College Representative</p>
+                                <p className="font-semibold text-lg text-ucb-black">Caitlin Callahan</p>
+                                <p className="text-gray-600 text-sm">Accreditation Liaison Officer</p>
+                            </div>
+                            <div className="space-y-3 pt-4 border-t border-gray-50">
+                                <a href="mailto:caitlin.callahan@urbancollege.edu" className="flex items-center gap-3 text-gray-600 hover:text-ucb-blue transition-colors text-sm">
+                                    <div className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center shrink-0">
+                                        <Mail className="w-4 h-4" />
+                                    </div>
+                                    caitlin.callahan@urbancollege.edu
+                                </a>
+                                <a href="tel:617-449-7038" className="flex items-center gap-3 text-gray-600 hover:text-ucb-blue transition-colors text-sm">
+                                    <div className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center shrink-0">
+                                        <Phone className="w-4 h-4" />
+                                    </div>
+                                    (617) 449-7038
+                                </a>
+                            </div>
+                        </ScrollAnimation>
+
+                        {/* NECHE Direct Contact */}
+                        <ScrollAnimation variant="slide-left" className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm space-y-6 flex flex-col justify-between">
+                            <div>
+                                <div className="w-12 h-12 rounded-2xl bg-ucb-blue/10 flex items-center justify-center text-ucb-blue mb-4">
+                                    <Globe className="w-6 h-6" />
+                                </div>
+                                <h3 className="text-xl font-display font-bold text-ucb-black mb-2">NECHE Main Office</h3>
+                                <p className="text-sm text-gray-500 mb-4">Accrediting Commission</p>
+                                <p className="font-semibold text-lg text-ucb-black">New England Commission of Higher Education</p>
+                                <p className="text-gray-600 text-sm flex items-start gap-2 mt-1">
+                                    <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-gray-400" />
+                                    <span>3 Burlington Woods Drive #100<br />Burlington, MA 01803</span>
+                                </p>
+                            </div>
+                            <div className="space-y-3 pt-4 border-t border-gray-50">
+                                <a href="tel:781-425-7785" className="flex items-center gap-3 text-gray-600 hover:text-ucb-blue transition-colors text-sm">
+                                    <div className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center shrink-0">
+                                        <Phone className="w-4 h-4" />
+                                    </div>
+                                    (781) 425-7785
+                                </a>
+                                <a 
+                                    href="https://www.neche.org" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="flex items-center gap-3 text-gray-600 hover:text-ucb-blue transition-colors text-sm"
+                                >
+                                    <div className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center shrink-0">
+                                        <Globe className="w-4 h-4" />
+                                    </div>
+                                    www.neche.org <ExternalLink className="w-3.5 h-3.5 text-gray-400" />
+                                </a>
+                            </div>
+                        </ScrollAnimation>
+                    </div>
+                </div>
+            </section>
+        </div>
+    );
+};
+
+export default Accreditation;
