@@ -306,29 +306,46 @@ const Navigation: React.FC = () => {
       <div 
         className={`w-full bg-white overflow-hidden transition-all duration-300 ease-in-out absolute top-full left-0 origin-top shadow-xl border-t border-gray-100 ${searchOpen ? 'max-h-24 opacity-100' : 'max-h-0 opacity-0 pointer-events-none'}`}
       >
-        <div className="container mx-auto px-6 py-4 flex items-center gap-4">
-          <Search className="w-6 h-6 text-ucb-blue shrink-0" />
+        <form 
+          onSubmit={(e) => {
+            e.preventDefault();
+            const formData = new FormData(e.currentTarget);
+            const query = (formData.get('search') as string || '').trim();
+            if (query) {
+              navigate(`/search?q=${encodeURIComponent(query)}`);
+              setSearchOpen(false);
+            }
+          }}
+          className="container mx-auto px-6 py-4 flex items-center gap-4 animate-in fade-in duration-200"
+        >
+          <button 
+            type="submit" 
+            className="p-2 hover:bg-gray-150 active:bg-gray-200 rounded-xl transition-all text-ucb-blue shrink-0 flex items-center justify-center outline-none focus:ring-2 focus:ring-ucb-blue/30 cursor-pointer min-h-[44px]"
+            aria-label="Submit search query"
+          >
+            <Search className="w-6 h-6 hover:scale-105 transition-transform" />
+          </button>
           <input 
             type="text" 
+            name="search"
             placeholder="Search Urban College..." 
-            className="flex-1 bg-transparent border-none outline-none text-xl md:text-2xl text-ucb-blue placeholder-gray-300 font-display font-light placeholder:font-light"
+            className="flex-1 bg-transparent border-none outline-none text-xl md:text-2xl text-ucb-blue placeholder-gray-300 font-display font-light placeholder:font-light focus:ring-0 w-full"
             autoFocus={searchOpen}
             onKeyDown={(e) => {
-              if (e.key === 'Enter') {
-                const query = e.currentTarget.value.trim();
-                if (query) {
-                  navigate(`/search?q=${encodeURIComponent(query)}`);
-                }
-                setSearchOpen(false);
-              } else if (e.key === 'Escape') {
+              if (e.key === 'Escape') {
                 setSearchOpen(false);
               }
             }}
           />
-          <button onClick={() => setSearchOpen(false)} className="text-gray-400 hover:text-ucb-orange transition-colors p-2 shrink-0">
+          <button 
+            type="button" 
+            onClick={() => setSearchOpen(false)} 
+            className="text-gray-400 hover:text-ucb-orange transition-colors p-2 shrink-0 flex items-center justify-center cursor-pointer min-h-[44px]"
+            aria-label="Close search dropdown"
+          >
             <X className="w-6 h-6" />
           </button>
-        </div>
+        </form>
       </div>
 
       {/* Mobile Menu Overlay */}

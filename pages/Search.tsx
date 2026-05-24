@@ -14,6 +14,33 @@ const staticPages = [
     { _type: 'page', title: 'Blog', slug: '/blog', description: 'Stories, news, and insights from the Urban College community.' }
 ];
 
+const staticPrograms = [
+    { _type: 'program', title: "Early Childhood Education Associate Degree", slug: "early-childhood-education", description: "Turn your love for children into a rewarding career. Start working after completing ECE104—earn while you learn! Become a childcare center director, preschool teacher, or start your own childcare business.", tagline: "Associate Degree | 60 credits | English, Spanish & Mandarin" },
+    { _type: 'program', title: "General Studies Associate Degree", slug: "general-studies-associate", description: "Don't see the program you are interested in? Know you want to pursue a bachelor's degree? Keep your costs low, get started at Urban College, and prepare to transfer to the bachelor's degree of your choosing.", tagline: "Associate Degree | 60 credits | English" },
+    { _type: 'program', title: "Human Services Administration Associate Degree", slug: "human-services-administration", description: "Transform lives while building your career in social services. Includes hands-on internships and qualifies you to apply for Licensed Social Work Associate (LSWA) credentials.", tagline: "Associate Degree | 60 credits | English & Spanish" },
+    { _type: 'program', title: "Business Certificate", slug: "business-certificate", description: "Build management, communication, and entrepreneurship skills. Become an office manager, administrative assistant, bookkeeper, or start your own business.", tagline: "Certificate | 18 credits | English & Spanish" },
+    { _type: 'program', title: "Case Management Certificate", slug: "case-management", description: "Master the skills to support individuals and families navigating life's challenges. Become a case manager, social services assistant, or behavioral case worker.", tagline: "Certificate | 21 credits | English & Spanish" },
+    { _type: 'program', title: "Children's Behavioral Health Certificate", slug: "childrens-behavioral-health-certificate", description: "Prepare for Registered Behavior Technician (RBT®) certification and Community Health Worker credentials. Support children with special needs and their families with skill and compassion.", tagline: "Certificate | 16 credits | English" },
+    { _type: 'program', title: "Digital Marketing Certificate", slug: "digital-marketing-certificate", description: "Master social media, branding, and content creation. Become a social media specialist, marketing coordinator, or content creator.", tagline: "Certificate | 18 credits | English & Spanish" },
+    { _type: 'program', title: "Foundations of Early Childhood Education Certificate", slug: "early-childhood-education-certificate", description: "Turn your love for children into a career. This certificate meets the Massachusetts Department of Early Education and Care requirements for a lead teacher credential. Become a preschool teacher, childcare worker, or start your own family childcare business.", tagline: "Certificate | 19 credits | English, Spanish & Mandarin" },
+    { _type: 'program', title: "Elder Care Certificate", slug: "elder-care", description: "Enter Massachusetts' fastest-growing field. Earn Community Health Worker Certification and support older adults and their families.", tagline: "Certificate | 21 credits | English" },
+    { _type: 'program', title: "General Studies Certificate", slug: "general-studies-certificate", description: "Not sure what you want to study? Explore different subjects while earning transferable credits toward an associate degree.", tagline: "Certificate | 21 credits | English" },
+    { _type: 'program', title: "Human Services Certificate", slug: "human-services-certificate", description: "Launch your career helping others. Become a case manager, social services assistant, behavior technician, or direct support professional.", tagline: "Certificate | 21 credits | English & Spanish" },
+    { _type: 'program', title: "Paraprofessional Educator Certificate", slug: "paraprofessional-educator-certificate", description: "Support K-12 teachers and students with disabilities. Join Massachusetts schools that are actively seeking qualified educators.", tagline: "Certificate | 21 credits | English & Spanish" },
+    { _type: 'program', title: "Project Management Certificate", slug: "project-management-certificate", description: "Build skills in planning, scheduling, budgeting, and leadership. Open doors across every industry as a project coordinator or manager.", tagline: "Certificate | 18 credits | English & Spanish" },
+    { _type: 'program', title: "Professional Studies", slug: "professional-studies", description: "Non-degree seeking courses for professional growth, licensure, and skill advancement.", tagline: "Non-Degree | English" }
+];
+
+// Helper to wrap a promise with a timeout
+const fetchWithTimeout = (promise: Promise<any>, timeoutMs: number) => {
+    return Promise.race([
+        promise,
+        new Promise((_, reject) => 
+            setTimeout(() => reject(new Error('Fetch request timed out')), timeoutMs)
+        )
+    ]);
+};
+
 const formatTitle = (title: string, slug: string) => {
     if (title === "Urban College Blog | Urban College of Boston") {
         return slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
@@ -62,14 +89,17 @@ const Search: React.FC = () => {
         const fetchResults = async () => {
             setLoading(true);
             try {
-                // Fetch dynamic data from Sanity
-                const sanityData = await client.fetch(`*[_type in ["post", "program"]] {
-                    _type,
-                    title,
-                    "slug": slug.current,
-                    description,
-                    tagline
-                }`);
+                // Fetch dynamic data from Sanity with a 2.5 second timeout
+                const sanityData = await fetchWithTimeout(
+                    client.fetch(`*[_type in ["post", "program"]] {
+                        _type,
+                        title,
+                        "slug": slug.current,
+                        description,
+                        tagline
+                    }`),
+                    2500
+                ) as any[];
 
                 // Map local JSON blogs to look like Sanity data if Sanity is empty/missing them
                 const localDataMapped = localBlogsData.map((b: any) => ({
@@ -83,12 +113,15 @@ const Search: React.FC = () => {
                 // 1. Add static pages
                 staticPages.forEach(p => allDataMap.set(p.slug, p));
                 
-                // 2. Add local JSON blogs
+                // 2. Add local static programs
+                staticPrograms.forEach(p => allDataMap.set(p.slug, p));
+                
+                // 3. Add local JSON blogs
                 localDataMapped.forEach(b => {
                     if (b.slug) allDataMap.set(b.slug, b);
                 });
 
-                // 3. Add Sanity Data (this will overwrite local JSON if they share the same slug, keeping CMS as source of truth)
+                // 4. Add Sanity Data (this will overwrite local JSON/programs if they share the same slug, keeping CMS as source of truth)
                 if (sanityData && Array.isArray(sanityData)) {
                     sanityData.forEach(item => {
                         if (item.slug) allDataMap.set(item.slug, item);
@@ -108,15 +141,16 @@ const Search: React.FC = () => {
 
                 setResults(filtered);
             } catch (err) {
-                console.error("Search failed:", err);
-                // Fallback to static + local JSON if sanity fails
+                console.error("Search dynamic fetch failed, using local fallback database:", err);
+                // Fallback to static pages + static programs + local JSON blogs if sanity fails or times out
                 const localDataMapped = localBlogsData.map((b: any) => ({ ...b, _type: 'post' }));
-                const allItems = [...staticPages, ...localDataMapped];
+                const allItems = [...staticPages, ...staticPrograms, ...localDataMapped];
                 const lowerQuery = query.toLowerCase();
                 const filtered = allItems.filter(item => {
                     const t = formatTitle(item.title || '', item.slug || '').toLowerCase();
                     const d = (item.description || '').toLowerCase();
-                    return t.includes(lowerQuery) || d.includes(lowerQuery);
+                    const tag = (item.tagline || '').toLowerCase();
+                    return t.includes(lowerQuery) || d.includes(lowerQuery) || tag.includes(lowerQuery);
                 });
                 setResults(filtered);
             }
