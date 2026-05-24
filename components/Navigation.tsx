@@ -103,7 +103,7 @@ const Navigation: React.FC = () => {
       name: 'Current Students', 
       path: '/#students',
       dropdown: [
-        { name: 'REGISTRATION', path: '/course-registration' },
+        { name: 'Registration', path: '/course-registration' },
         { name: 'Student Services', path: '/student-services-overview' },
         { name: 'Academic Calendar', path: '/academic-calendar-webpage' },
         { name: 'College Catalog', path: 'https://catalog.urbancollege.edu/' },
