@@ -36,6 +36,7 @@ import CollegeTransferPathways from './pages/CollegeTransferPathways';
 import TechnologyAccountGuide from './pages/TechnologyAccountGuide';
 import TranscriptRequests from './pages/TranscriptRequests';
 import Commencement from './pages/Commencement';
+import CampusFacilities from './pages/CampusFacilities';
 
 // ScrollToTop component to handle scroll on route change
 const ScrollToTop = () => {
@@ -114,6 +115,7 @@ function App() {
             <Route path="/transcript-requests" element={<TranscriptRequests />} />
             <Route path="/commencement" element={<Commencement />} />
             <Route path="/commencement-ceremony" element={<Commencement />} />
+            <Route path="/campus-facilities" element={<CampusFacilities />} />
           </Routes>
         </main>
 
