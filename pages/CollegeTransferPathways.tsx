@@ -3,7 +3,7 @@ import PageHeader from '../components/PageHeader';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { 
     GraduationCap, Search, ExternalLink, Mail, ArrowRight,
-    Award, CheckCircle, Percent
+    Award, CheckCircle, Percent, School, Sparkles, Filter
 } from 'lucide-react';
 
 interface Agreement {
@@ -15,6 +15,7 @@ interface Agreement {
 
 const CollegeTransferPathways: React.FC = () => {
     const [searchQuery, setSearchQuery] = useState('');
+    const [activeFilter, setActiveFilter] = useState('all');
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -143,12 +144,149 @@ const CollegeTransferPathways: React.FC = () => {
         }
     ];
 
+    const getBadgeStyle = (partner: string) => {
+        const p = partner.toLowerCase();
+        if (p.includes('boston college')) {
+            return {
+                initials: "BC",
+                gradient: "from-red-800 to-amber-700",
+                text: "text-white"
+            };
+        }
+        if (p.includes('american college')) {
+            return {
+                initials: "ACE",
+                gradient: "from-blue-700 to-indigo-800",
+                text: "text-white"
+            };
+        }
+        if (p.includes('benjamin franklin') || p.includes('cummings')) {
+            return {
+                initials: "BF",
+                gradient: "from-teal-600 to-emerald-700",
+                text: "text-white"
+            };
+        }
+        if (p.includes('endicott')) {
+            return {
+                initials: "EC",
+                gradient: "from-cyan-600 to-blue-700",
+                text: "text-white"
+            };
+        }
+        if (p.includes('fitchburg')) {
+            return {
+                initials: "FSU",
+                gradient: "from-emerald-700 to-yellow-600",
+                text: "text-white"
+            };
+        }
+        if (p.includes('fisher')) {
+            return {
+                initials: "FC",
+                gradient: "from-blue-700 to-indigo-900",
+                text: "text-white"
+            };
+        }
+        if (p.includes('lasell')) {
+            return {
+                initials: "LU",
+                gradient: "from-blue-800 to-indigo-600",
+                text: "text-white"
+            };
+        }
+        if (p.includes('lesley')) {
+            return {
+                initials: "LE",
+                gradient: "from-green-700 to-emerald-800",
+                text: "text-white"
+            };
+        }
+        if (p.includes('quincy')) {
+            return {
+                initials: "QC",
+                gradient: "from-teal-600 to-blue-600",
+                text: "text-white"
+            };
+        }
+        if (p.includes('regis')) {
+            return {
+                initials: "RC",
+                gradient: "from-rose-600 to-red-700",
+                text: "text-white"
+            };
+        }
+        if (p.includes('southern new hampshire') || p.includes('snhu')) {
+            return {
+                initials: "SNHU",
+                gradient: "from-slate-800 to-blue-900",
+                text: "text-white"
+            };
+        }
+        if (p.includes('salem state')) {
+            return {
+                initials: "SSU",
+                gradient: "from-orange-600 to-red-600",
+                text: "text-white"
+            };
+        }
+        if (p.includes('william james')) {
+            return {
+                initials: "WJ",
+                gradient: "from-purple-600 to-indigo-700",
+                text: "text-white"
+            };
+        }
+        return {
+            initials: "UC",
+            gradient: "from-gray-600 to-gray-800",
+            text: "text-white"
+        };
+    };
+
+    const filterPills = [
+        { label: "All Pathways", id: "all" },
+        { label: "Early Childhood (ECE)", id: "ece" },
+        { label: "Human Services", id: "human-services" },
+        { label: "General Studies", id: "general-studies" },
+        { label: "Psychology & Science", id: "psychology" }
+    ];
+
+    const highlights = [
+        { university: "Boston College", benefit: "10% tuition scholarship for Woods B.A. programs.", icon: Percent, color: "text-red-600 bg-red-50 border-red-100" },
+        { university: "Lasell University", benefit: "$2,000 annual Award + additional merit scholarships.", icon: Award, color: "text-blue-700 bg-blue-50 border-blue-100" },
+        { university: "Quincy College", benefit: "$125 per-course discount, up to $2,500 total.", icon: Percent, color: "text-teal-700 bg-teal-50 border-teal-100" },
+        { university: "Regis College", benefit: "10%-20% tuition discount for online B.A. programs.", icon: Award, color: "text-rose-600 bg-rose-50 border-rose-100" }
+    ];
+
     const filteredAgreements = agreements.filter(item => {
+        // Search query match
         const query = searchQuery.toLowerCase();
         const partnerMatch = item.partner.toLowerCase().includes(query);
         const pathwaysMatch = item.pathways.some(p => p.toLowerCase().includes(query));
         const benefitMatch = item.benefit?.toLowerCase().includes(query) || false;
-        return partnerMatch || pathwaysMatch || benefitMatch;
+        
+        const matchesQuery = partnerMatch || pathwaysMatch || benefitMatch;
+        if (!matchesQuery) return false;
+        
+        // Major filter match
+        if (activeFilter === 'all') return true;
+        
+        const lowercasePathways = item.pathways.map(p => p.toLowerCase());
+        
+        if (activeFilter === 'ece') {
+            return lowercasePathways.some(p => p.includes('early childhood') || p.includes('ece'));
+        }
+        if (activeFilter === 'human-services') {
+            return lowercasePathways.some(p => p.includes('human services') || p.includes('social work') || p.includes('case management'));
+        }
+        if (activeFilter === 'general-studies') {
+            return lowercasePathways.some(p => p.includes('general studies') || p.includes('business'));
+        }
+        if (activeFilter === 'psychology') {
+            return lowercasePathways.some(p => p.includes('psychology') || p.includes('liberal studies') || p.includes('information technology'));
+        }
+        return true;
     });
 
     return (
@@ -167,12 +305,12 @@ const CollegeTransferPathways: React.FC = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                         <div className="lg:col-span-8 space-y-6">
                             <ScrollAnimation variant="fade-up">
-                                <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs mb-2 block">Bachelor's Degree Alignments</span>
+                                <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs mb-2 block font-display">Bachelor's Degree Alignments</span>
                                 <h2 className="text-3xl font-display font-black text-ucb-blue leading-tight">
                                     Transfer Your Credits Safely to Baccalaureate Partners
                                 </h2>
                                 <p className="text-lg text-gray-600 leading-relaxed font-light mt-4">
-                                    Urban College of Boston actively supports A.A. graduates who seek to transfer and earn their bachelor's degree. Articulation agreements describe when and how a student may transfer credits, outlining academic benchmarks, course mappings, and scholarship eligibility.
+                                    Urban College of Boston actively supports graduates exploring available transfer options. Articulation agreements describe when and how a student may transfer credits, outlining academic benchmarks, course mappings, and scholarship eligibility unique to each partner institution.
                                 </p>
                             </ScrollAnimation>
                         </div>
@@ -183,7 +321,7 @@ const CollegeTransferPathways: React.FC = () => {
                                 </div>
                                 <h4 className="font-display font-bold text-gray-800 text-base leading-snug">Transfer Questions?</h4>
                                 <p className="text-gray-500 text-xs leading-relaxed font-light">
-                                    Our academic office is ready to help you trace courses, request transcripts, and connect with university recruiters.
+                                    Our academic affairs office is ready to help you trace courses, request transcripts, and connect with university advisors.
                                 </p>
                                 <a 
                                     href="mailto:academicaffairs@urbancollege.edu?subject=College%20Transfer%20Articulation%20Inquiry"
@@ -197,89 +335,157 @@ const CollegeTransferPathways: React.FC = () => {
                 </div>
             </section>
 
+            {/* Featured Transfer Benefits Highlights */}
+            <section className="py-16 bg-gray-50/50 border-b border-gray-100">
+                <div className="container mx-auto px-6 max-w-6xl space-y-8">
+                    <ScrollAnimation variant="fade-up" className="text-center max-w-2xl mx-auto space-y-2">
+                        <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs block">Financial Incentives</span>
+                        <h3 className="text-2xl font-display font-black text-gray-800">Featured Scholarship Highlights</h3>
+                        <p className="text-gray-500 text-sm font-light">Many of our articulation partners offer exclusive discounts and grants for UCB alumni.</p>
+                    </ScrollAnimation>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {highlights.map((item, idx) => {
+                            const Icon = item.icon;
+                            return (
+                                <ScrollAnimation 
+                                    key={idx} 
+                                    variant="fade-up" 
+                                    delay={`${idx * 0.05}s`}
+                                    className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm flex flex-col justify-between hover:shadow transition-shadow"
+                                >
+                                    <div className="space-y-3">
+                                        <div className={`w-9 h-9 rounded-xl flex items-center justify-center border ${item.color}`}>
+                                            <Icon className="w-5 h-5" />
+                                        </div>
+                                        <h4 className="font-display font-bold text-gray-800 text-sm">{item.university}</h4>
+                                        <p className="text-gray-500 text-xs font-light leading-relaxed">{item.benefit}</p>
+                                    </div>
+                                </ScrollAnimation>
+                            );
+                        })}
+                    </div>
+                </div>
+            </section>
+
             {/* Agreements Search & Listings */}
-            <section className="py-16 md:py-24 bg-gray-50/50 border-b border-gray-100">
-                <div className="container mx-auto px-6 max-w-6xl space-y-10">
-                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 border-b border-gray-200/50 pb-6">
-                        <ScrollAnimation variant="slide-right" className="space-y-1">
-                            <h3 className="text-2xl font-display font-bold text-gray-800">Articulation Agreements</h3>
-                            <p className="text-gray-500 text-sm font-light">Explore transfer programs from {agreements.length} partner universities.</p>
-                        </ScrollAnimation>
-                        <ScrollAnimation variant="slide-left" className="w-full md:max-w-md shrink-0">
-                            <div className="relative">
-                                <Search className="w-4 h-4 text-gray-400 absolute left-3.5 top-3.5" />
-                                <input
-                                    type="text"
-                                    placeholder="Search by major (e.g. Psychology) or university..."
-                                    value={searchQuery}
-                                    onChange={(e) => setSearchQuery(e.target.value)}
-                                    className="w-full pl-10 pr-4 py-2.5 bg-white border border-gray-200 rounded-2xl text-sm focus:outline-none focus:border-ucb-blue shadow-sm transition-all text-gray-700 placeholder:text-gray-400"
-                                />
+            <section className="py-16 md:py-24 bg-white">
+                <div className="container mx-auto px-6 max-w-6xl space-y-8">
+                    <div className="flex flex-col space-y-6 border-b border-gray-100 pb-8">
+                        {/* Title and Search Row */}
+                        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                            <ScrollAnimation variant="slide-right" className="space-y-1">
+                                <h3 className="text-2xl font-display font-bold text-gray-800">Articulation Agreements</h3>
+                                <p className="text-gray-500 text-sm font-light">
+                                    Showing {filteredAgreements.length} of {agreements.length} partner universities
+                                </p>
+                            </ScrollAnimation>
+                            <ScrollAnimation variant="slide-left" className="w-full md:max-w-md shrink-0">
+                                <div className="relative">
+                                    <Search className="w-4 h-4 text-gray-400 absolute left-3.5 top-3.5" />
+                                    <input
+                                        type="text"
+                                        placeholder="Search by major (e.g. Psychology) or university..."
+                                        value={searchQuery}
+                                        onChange={(e) => setSearchQuery(e.target.value)}
+                                        className="w-full pl-10 pr-4 py-2.5 bg-gray-50 border border-gray-200 rounded-2xl text-sm focus:outline-none focus:border-ucb-blue focus:bg-white shadow-sm transition-all text-gray-700 placeholder:text-gray-400"
+                                    />
+                                </div>
+                            </ScrollAnimation>
+                        </div>
+
+                        {/* Interactive Major Program Filters */}
+                        <ScrollAnimation variant="fade-up" className="flex flex-wrap gap-2 pt-2">
+                            <div className="flex items-center gap-1.5 text-xs text-gray-400 mr-2 font-bold uppercase tracking-wider">
+                                <Filter className="w-3.5 h-3.5 text-ucb-orange" />
+                                <span>Filter Major:</span>
                             </div>
+                            {filterPills.map((pill) => {
+                                const isActive = activeFilter === pill.id;
+                                return (
+                                    <button
+                                        key={pill.id}
+                                        onClick={() => setActiveFilter(pill.id)}
+                                        className={`px-4 py-1.5 rounded-full text-xs font-bold border transition-all cursor-pointer min-h-[32px] ${
+                                            isActive 
+                                                ? "bg-ucb-blue text-white border-ucb-blue shadow-sm" 
+                                                : "bg-gray-50 text-gray-600 hover:text-ucb-blue border-gray-200 hover:border-ucb-blue/30"
+                                        }`}
+                                    >
+                                        {pill.label}
+                                    </button>
+                                );
+                            })}
                         </ScrollAnimation>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {filteredAgreements.map((item, idx) => (
-                            <ScrollAnimation 
-                                key={idx} 
-                                variant="fade-up" 
-                                delay={`${(idx % 2) * 0.05}s`}
-                                className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-6"
-                            >
-                                <div className="space-y-4">
-                                    <div className="flex items-center gap-3">
-                                        <div className="w-9 h-9 rounded-lg bg-ucb-blue/10 flex items-center justify-center text-ucb-blue shrink-0">
-                                            <GraduationCap className="w-5 h-5" />
-                                        </div>
-                                        <h4 className="font-display font-bold text-gray-800 text-lg leading-tight">{item.partner}</h4>
-                                    </div>
-
-                                    <div className="space-y-3 pt-3 border-t border-gray-50">
-                                        <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block font-display">Pathways & Programs</span>
-                                        <ul className="space-y-2">
-                                            {item.pathways.map((pathway, pidx) => (
-                                                <li key={pidx} className="flex items-start gap-2.5 text-sm text-gray-600 font-light leading-relaxed">
-                                                    <CheckCircle className="w-4 h-4 text-ucb-green shrink-0 mt-0.5" />
-                                                    <span>{pathway}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-
-                                    {item.benefit && (
-                                        <div className="p-4 bg-ucb-orange/5 border border-ucb-orange/10 rounded-2xl flex gap-3 items-start mt-2">
-                                            <Award className="w-5 h-5 text-ucb-orange shrink-0 mt-0.5" />
-                                            <div>
-                                                <span className="text-[9px] font-bold text-ucb-orange uppercase tracking-wider block font-display">Tuition Benefit / Scholarship</span>
-                                                <p className="text-gray-600 text-xs mt-0.5 font-light leading-relaxed">{item.benefit}</p>
+                    {/* Cards Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
+                        {filteredAgreements.map((item, idx) => {
+                            const badge = getBadgeStyle(item.partner);
+                            return (
+                                <ScrollAnimation 
+                                    key={idx} 
+                                    variant="fade-up" 
+                                    delay={`${(idx % 2) * 0.05}s`}
+                                    className="bg-white rounded-3xl p-8 border border-gray-200/60 shadow-sm hover:shadow-md hover:border-gray-200 transition-all flex flex-col justify-between gap-6"
+                                >
+                                    <div className="space-y-4">
+                                        <div className="flex items-center gap-4">
+                                            {/* Circular Initials Brand Badge */}
+                                            <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${badge.gradient} ${badge.text} flex items-center justify-center font-display font-black text-sm shadow-inner shrink-0 tracking-wider`}>
+                                                {badge.initials}
                                             </div>
+                                            <h4 className="font-display font-bold text-gray-800 text-lg leading-snug">{item.partner}</h4>
+                                        </div>
+
+                                        <div className="space-y-3 pt-4 border-t border-gray-50">
+                                            <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block font-display">Pathways & Programs</span>
+                                            <ul className="space-y-2.5">
+                                                {item.pathways.map((pathway, pidx) => (
+                                                    <li key={pidx} className="flex items-start gap-2.5 text-sm text-gray-600 font-light leading-relaxed">
+                                                        <CheckCircle className="w-4 h-4 text-ucb-green shrink-0 mt-0.5" />
+                                                        <span>{pathway}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+
+                                        {item.benefit && (
+                                            <div className="p-4 bg-ucb-orange/[0.03] border border-ucb-orange/10 rounded-2xl flex gap-3 items-start mt-2">
+                                                <Award className="w-5 h-5 text-ucb-orange shrink-0 mt-0.5" />
+                                                <div>
+                                                    <span className="text-[9px] font-bold text-ucb-orange uppercase tracking-wider block font-display">Tuition Benefit / Scholarship</span>
+                                                    <p className="text-gray-600 text-xs mt-0.5 font-light leading-relaxed">{item.benefit}</p>
+                                                </div>
+                                            </div>
+                                        )}
+                                    </div>
+
+                                    {item.links && item.links.length > 0 && (
+                                        <div className="flex flex-col gap-2.5 pt-4 border-t border-gray-100">
+                                            <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest block font-display mb-1">Articulation Details & Brochures</span>
+                                            {item.links.map((link, lidx) => (
+                                                <a 
+                                                    key={lidx}
+                                                    href={link.url}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-xs font-bold text-ucb-blue hover:text-ucb-blue-glow transition-colors inline-flex items-center gap-1.5 cursor-pointer"
+                                                >
+                                                    {link.label} <ExternalLink className="w-3.5 h-3.5" />
+                                                </a>
+                                            ))}
                                         </div>
                                     )}
-                                </div>
-
-                                {item.links && item.links.length > 0 && (
-                                    <div className="flex flex-col gap-2 pt-4 border-t border-gray-50">
-                                        {item.links.map((link, lidx) => (
-                                            <a 
-                                                key={lidx}
-                                                href={link.url}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="text-xs font-semibold text-ucb-blue hover:text-ucb-blue-glow transition-colors inline-flex items-center gap-1.5 cursor-pointer"
-                                            >
-                                                {link.label} <ExternalLink className="w-3 h-3" />
-                                            </a>
-                                        ))}
-                                    </div>
-                                )}
-                            </ScrollAnimation>
-                        ))}
+                                </ScrollAnimation>
+                            );
+                        })}
                     </div>
 
                     {filteredAgreements.length === 0 && (
-                        <div className="text-center py-12 bg-white rounded-3xl border border-gray-100 shadow-inner">
-                            <p className="text-gray-400 text-sm font-light">No transfer agreements match your search criteria. Try a different term.</p>
+                        <div className="text-center py-16 bg-gray-50/50 rounded-3xl border border-gray-100 border-dashed">
+                            <p className="text-gray-400 text-sm font-light">No transfer agreements match your search or filters. Try adjusting your selections.</p>
                         </div>
                     )}
                 </div>
