@@ -32,7 +32,7 @@ const TILE_COLORS = [
 
 const PROGRAMS: Program[] = [
   { id: '1', title: 'Early Childhood Education', type: 'Associate Degree', tags: ['English & Spanish', '2 Years'], description: 'Prepare for a career nurturing the next generation.', link: '/programs/early-childhood-education' },
-  { id: '2', title: 'Human Services Administration', type: 'Associate Degree', tags: ['English & Spanish', '2 Years'], description: 'Lead with compassion in social work and community services.', link: '/programs/human-services-administration' },
+  { id: '2', title: 'Human Services Administration', type: 'Associate Degree', tags: ['English & Spanish', '2 Years'], description: 'Do you want to help people? Make a real difference in your community while building the skills and credentials for a rewarding career in social services.', link: '/programs/human-services-administration' },
   { id: '3', title: 'General Studies', type: 'Associate Degree', tags: ['English & Spanish', '2 Years'], description: 'Build a solid foundation for your bachelor\'s degree.', link: '/programs/general-studies-associate' },
   { id: '7', title: 'Business', type: 'Certificate', tags: ['English', '1 Year'], description: 'Build foundational business skills and advance your career.', link: '/programs/business-certificate' },
   { id: '8', title: 'Case Management', type: 'Certificate', tags: ['English', '9 Months'], description: 'Make a difference with specialized case management skills.', link: '/programs/case-management' },

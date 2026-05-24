@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
-import { Clock, Globe, DollarSign, TrendingUp, Award, Briefcase, CheckCircle } from 'lucide-react';
+import { Clock, Globe, DollarSign, TrendingUp, Award, Briefcase, CheckCircle, Users, Calendar, GraduationCap } from 'lucide-react';
 import ProgramPageLayout, { ProgramBenefit, ProgramStat } from '../components/ProgramPageLayout';
 
+// ─── Icon helper for bilingual ────────────────────────────────────────────────
 const MessageCircleIcon: React.ElementType = (props: any) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
         fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
@@ -9,30 +10,36 @@ const MessageCircleIcon: React.ElementType = (props: any) => (
     </svg>
 );
 
+// ─── Data ─────────────────────────────────────────────────────────────────────
+
 const courses = [
-    { title: "Introduction to Human Services", desc: "Your foundation in the field." },
-    { title: "Case Management", desc: "Learn to connect clients with vital resources." },
-    { title: "Counseling and Interviewing Techniques", desc: "Build communication skills to support individuals in crisis." },
-    { title: "Human Behavior and Social Environment", desc: "Understand how societal spaces affect development." },
-    { title: "Human Services Internships I & II", desc: "Apply what you've learned through real-world professional practice." },
+    { title: "Introduction to Human Services", desc: "Build your foundation in the field" },
+    { title: "Case Management", desc: "Master the core skills employers want" },
+    { title: "Counseling & Interviewing Techniques", desc: "Connect with clients effectively" },
+    { title: "Human Services or Social Science Electives", desc: "Customize your education" },
+    { title: "Internship I", desc: "Gain hands-on experience in real work settings" },
+    { title: "General Education Requirements", desc: "Writing, psychology, and more to round out your education" }
 ];
 
 const outcomes = [
-    { title: "Social and Human Services Assistant", desc: "Support social workers in providing client services. ($48,460 average salary in MA)" },
-    { title: "Community Health Worker", desc: "Bridge the gap between communities and health services." },
-    { title: "Case Manager", desc: "Coordinate care and connect clients to resources." },
-    { title: "Family Support Worker", desc: "Help families navigate systems like housing and childcare." },
-    { title: "Direct Care Professional", desc: "Provide hands-on support in residential or community settings." },
-    { title: "Youth Worker", desc: "Support children and teens in achieving their potential." },
+    { title: "Social Work Assistant", desc: "Support social workers in helping clients. (Average salary: $48,460 in Massachusetts! 8% projected job growth—faster than average!)" },
+    { title: "Community Health Worker", desc: "Connect communities with vital health and social services" },
+    { title: "Family Support Worker", desc: "Help families navigate housing, childcare, and financial assistance" },
+    { title: "Human Services Coordinator", desc: "Manage programs and services for vulnerable populations" },
+    { title: "Case Manager", desc: "Coordinate care for individuals with complex needs" },
+    { title: "Behavioral Health Specialist", desc: "Support individuals with mental health or substance use challenges" },
+    { title: "Licensed Social Work Associate (LSWA)", desc: "Qualify to apply for state licensure in Massachusetts!" }
 ];
 
 const benefits: ProgramBenefit[] = [
-    { title: "Flexible Learning", desc: "100% online options tailored for working adults", icon: Globe },
-    { title: "Debt-Free Goal", desc: "Most students graduate debt-free!", icon: DollarSign },
-    { title: "Career Placement", desc: "Internships built into the curriculum", icon: Briefcase },
-    { title: "Bilingual Classes", desc: "Learn in English or Spanish with ESL support", icon: MessageCircleIcon },
-    { title: "Real Transfer Pathways", desc: "Seamless progression to Bachelor's degrees", icon: TrendingUp },
-    { title: "High Demand Field", desc: "9% job growth — faster than average!", icon: Award },
+    { title: "High MA Salaries", desc: "Earn up to $73,510/year as a Community and Social Service Specialist in Massachusetts!", icon: DollarSign },
+    { title: "Growing Field", desc: "8% job growth—faster than the national average!", icon: TrendingUp },
+    { title: "100% Online", desc: "Study 100% online: Learn on a schedule that fits into your busy life", icon: Globe },
+    { title: "Debt-Free Goal", desc: "Most students graduate debt-free!", icon: CheckCircle },
+    { title: "Bilingual Options", desc: "Study in English or Spanish: Choose the language that works for you", icon: MessageCircleIcon },
+    { title: "ESL Support", desc: "ESL support available: Tailored to each student's needs", icon: Users },
+    { title: "Hands-On Internships", desc: "Hands-on internships: Gain real-world experience before you graduate", icon: Briefcase },
+    { title: "Pathway to Licensure", desc: "Qualify to apply for Licensed Social Work Associate (LSWA) credential in Massachusetts", icon: Award }
 ];
 
 const stats: ProgramStat[] = [
@@ -40,17 +47,23 @@ const stats: ProgramStat[] = [
     { label: 'Time', value: '2 Years', icon: Clock, sub: 'To Complete' },
     { label: 'Format', value: 'Online', icon: Globe, sub: 'Fully Online' },
     { label: 'Cost', value: '$317', icon: DollarSign, sub: 'Per Credit' },
-    { label: 'Growth', value: '9%', icon: TrendingUp, sub: 'Job Growth Rate' },
-    { label: 'Outcome', value: 'Job Ready', icon: CheckCircle, sub: 'Career Focused' },
+    { label: 'Start', value: 'Rolling', icon: Calendar, sub: 'Start Date' },
+    { label: 'Aid', value: 'Yes', icon: GraduationCap, sub: 'Financial Aid' },
+    { label: 'Language', value: 'Bilingual', icon: Globe, sub: 'English & Spanish' },
+    { label: 'Special', value: 'LSWA & Interns', icon: CheckCircle, sub: 'Special Feature' },
 ];
 
 const faqs = [
-    { q: "Is the program online?", a: "Yes, you can complete the degree entirely online with synchronous and asynchronous options." },
-    { q: "How long does it take?", a: "Typically 2 years if studying full-time. Financial aid allows many students to finish debt-free." },
-    { q: "Can I transfer credits?", a: "Yes, credits transfer seamlessly to BSW programs, like our partnership with Regis College." },
-    { q: "Do I need experience?", a: "No prior human services experience is needed. The curriculum starts with foundational concepts." },
-    { q: "Are internships required?", a: "Yes, real-world internships are included so you can graduate with job-ready experience." },
+    { q: "Is this degree right for me if I want to help people?", a: "Absolutely! This program is designed for people who want to make a real difference in their communities. You'll graduate ready to help individuals and families navigate life's challenges." },
+    { q: "Is the program entirely online?", a: "Yes! The program is 100% online with both synchronous and asynchronous options. Learn on your schedule—early mornings, late nights, or weekends." },
+    { q: "Will I get hands-on experience?", a: "Yes! The program includes internship placements through our network of human service agencies, childcare programs, mental health sites, and other organizations. You'll graduate with real experience." },
+    { q: "What is the LSWA and can I apply for it?", a: "The Licensed Social Work Associate (LSWA) is a Massachusetts credential that demonstrates professional qualifications in social work. With your Human Services Associate Degree, you can apply for this credential and enhance your career opportunities." },
+    { q: "Can I study in Spanish?", a: "Yes! Courses are available in English and Spanish. ESL support is also available and tailored to each student's needs." },
+    { q: "Can I continue toward a bachelor's degree?", a: "Absolutely! Our transfer agreements with partner colleges make it easy to continue toward a Bachelor of Social Work (BSW)—the gold standard credential in the field." },
+    { q: "Am I eligible for financial aid?", a: "Yes! Most students are eligible for financial aid, scholarships, and grants. Contact our financial aid office at (617) 449-7070 for personalized guidance. Most students graduate debt-free!" }
 ];
+
+// ─── Component ────────────────────────────────────────────────────────────────
 
 const HumanServicesAdministration: React.FC = () => {
     useEffect(() => { window.scrollTo(0, 0); }, []);
@@ -58,22 +71,22 @@ const HumanServicesAdministration: React.FC = () => {
     return (
         <ProgramPageLayout
             badge="Human Services Administration"
-            title={<>Build a Career Advocating For Others & <span style={{ color: '#E68325' }}>Transform Your Community</span></>}
-            subtitle="A 60-Credit Associate Degree. Most students graduate debt-free."
+            title={<>Transform Lives & <span style={{ color: '#E68325' }}>Build Your Career in Social Services</span></>}
+            subtitle="8% Job Growth—Faster Than Average! Most Students Graduate Debt-Free!"
             headerImageSrc="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=2940&auto=format&fit=crop"
             breadcrumbs={[
                 { label: 'Programs', path: '/#programs' },
                 { label: 'Human Services Administration' }
             ]}
 
-            tagline="Empower Individuals, Families, and Communities"
+            tagline="Do you want to help people?"
             taglineBody={
                 <p>
-                    Do you have a passion for helping people and addressing social injustices? The Associate of Arts in
-                    Human Services Administration degree prepares you to make a direct impact on the lives of others
-                    while building a stable, rewarding career.{' '}
-                    <span className="text-ucb-blue font-semibold">Taught by experienced professionals</span>{', '}
-                    this program gives you the real-world skills needed in one of the fastest-growing fields.
+                    The Human Services Associate Degree is the perfect program for those who love to help others and want a successful career in social work, psychology, or family support.
+                    <br className="hidden md:block" />
+                    <span className="text-ucb-blue font-semibold">This degree empowers you to make a real difference in your community</span> while building the skills and credentials for a rewarding career. You'll gain hands-on experience through internships and graduate ready to step into high-demand roles.
+                    <br className="hidden md:block" />
+                    You can pursue many different career opportunities, including becoming a Social Work Assistant, Community Health Worker, Family Support Worker, Human Services Coordinator, or Case Manager—and even qualify to apply for a Licensed Social Work Associate (LSWA) credential.
                 </p>
             }
 
@@ -84,26 +97,27 @@ const HumanServicesAdministration: React.FC = () => {
                     heading: "Professional Skills",
                     icon: Briefcase,
                     items: [
-                        "Evaluate client needs and coordinate essential services",
-                        "Master interviewing techniques for counseling environments",
-                        "Examine social welfare policies and human behavior theories"
+                        "Assess client needs and connect them to essential services",
+                        "Manage cases effectively across social services settings",
+                        "Conduct counseling and interviews with clients and families",
+                        "Navigate human services systems to advocate for clients"
                     ]
                 },
                 {
-                    heading: "Hands-On Experience",
+                    heading: "Ethical & Leadership",
                     icon: Award,
                     items: [
-                        "Complete 300+ hours of hands-on internship experience",
-                        "Develop culturally competent practices for diverse populations",
-                        "Prepare for industry credentials like the LSWA"
+                        "Understand human behavior and apply it to help people",
+                        "Maintain ethical and professional standards",
+                        "Step into leadership roles in human services organizations"
                     ]
                 }
             ]}
-            achievementNote="Courses are practical and designed to help you apply skills immediately on the job, not just study theory."
+            achievementNote="Your courses include real-world internships—you'll graduate with experience on your resume, not just a degree."
 
             courses={courses}
             outcomes={outcomes}
-            outcomesIntro="The human services field is expanding rapidly. Earn your degree and secure a role in a high-demand profession with a 9% projected job growth rate."
+            outcomesIntro="Human services is one of the fastest-growing fields in Massachusetts. You'll graduate ready for meaningful, career-building roles where you help people every day. Work in hospitals, clinics, nonprofits, schools, government agencies, or community organizations. Your skills are in high demand."
             outcomeTags={['Social Work', 'Advocacy', 'Case Management', 'Community Support']}
 
             stats={stats}
@@ -117,15 +131,15 @@ const HumanServicesAdministration: React.FC = () => {
             ]}
 
             pathwayTitle="Build Toward Your Future"
-            pathwayDescription="The Human Services Administration is a stackable, for-credit program. Credits may transfer toward a bachelor's degree."
+            pathwayDescription="Our transfer agreements with partner colleges make it easy to continue your education toward a Bachelor's in Social Work (BSW)—the gold standard credential for the field."
             pathwaySteps={[
-                { label: 'A.A. Human Services', credits: '60 Credits', active: true },
-                { label: "BSW Degree", credits: 'Transfer Ready', active: false },
-                { label: "MSW / Career", credits: 'Advanced Path', active: false },
+                { label: 'Associate Degree', credits: '60 Credits', active: true },
+                { label: 'Bachelor of Social Work (BSW)', credits: 'Transfer Ready', active: false },
+                { label: 'Licensed Social Worker', credits: 'LCSW Path', active: false }
             ]}
 
             testimonial={{
-                quote: "Through Urban College, I really homed in on human services and social work. Understanding advocacy was pivotal for me. Urban was that stepping stone... and now I get to lead and empower other folks.",
+                quote: "Urban College was definitely a stepping stone that fueled my passion for advocacy. I love how my voice can make a difference, and I have the opportunity to influence positive change in my community.",
                 name: "Ayesha M. Wilson",
                 role: "Human Services Alum",
                 imageSrc: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop"
