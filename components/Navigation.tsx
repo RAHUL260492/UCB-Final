@@ -115,7 +115,7 @@ const Navigation: React.FC = () => {
         { name: 'Commencement Ceremony', path: '/commencement' }
       ]
     },
-    { name: 'Workforce & Community', path: '/workforce-development' },
+    { name: 'Workforce & Community', path: '/workforce' },
     { name: 'Donate', path: '#' },
     { 
       name: 'News & Blog', 

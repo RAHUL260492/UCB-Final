@@ -38,6 +38,7 @@ import TranscriptRequests from './pages/TranscriptRequests';
 import Commencement from './pages/Commencement';
 import CampusFacilities from './pages/CampusFacilities';
 import CollegeServicesAndResources from './pages/CollegeServicesAndResources';
+import Workforce from './pages/Workforce';
 
 // ScrollToTop component to handle scroll on route change
 const ScrollToTop = () => {
@@ -120,6 +121,8 @@ function App() {
             <Route path="/college-services-and-resources" element={<CollegeServicesAndResources />} />
             <Route path="/college-services" element={<CollegeServicesAndResources />} />
             <Route path="/lrc-english" element={<LearningResourceCenter />} />
+            <Route path="/workforce" element={<Workforce />} />
+            <Route path="/workforce-development" element={<Workforce />} />
             <Route path="/lrc-spanish" element={<Espanol />} />
             <Route path="/lrc-mandarin" element={<Mandarin />} />
           </Routes>
