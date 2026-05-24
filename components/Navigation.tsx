@@ -48,7 +48,8 @@ const Navigation: React.FC = () => {
         { name: 'Board of Trustees', path: '/trustees' },
         { name: 'Urban College Foundation', path: '/foundation' },
         { name: 'Leadership & Team', path: '/team' },
-        { name: 'Accreditation', path: '/accreditation' }
+        { name: 'Accreditation', path: '/accreditation' },
+        { name: 'Employment Opportunities', path: '/employment' }
       ]
     },
     {

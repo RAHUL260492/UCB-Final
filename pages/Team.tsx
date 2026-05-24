@@ -392,7 +392,7 @@ const Team: React.FC = () => {
                         {[
                             { name: "Apply Now (Free)", path: "/admissions" },
                             { name: "Request Info", path: "#" },
-                            { name: "View Careers", path: "#" },
+                            { name: "View Careers", path: "/employment" },
                             { name: "Contact Us", path: "#" }
                         ].map((btn, idx) => (
                             <Link 

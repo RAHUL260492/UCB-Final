@@ -27,6 +27,7 @@ import Search from './pages/Search';
 import Accreditation from './pages/Accreditation';
 import Espanol from './pages/Espanol';
 import Mandarin from './pages/Mandarin';
+import Employment from './pages/Employment';
 
 // ScrollToTop component to handle scroll on route change
 const ScrollToTop = () => {
@@ -90,6 +91,8 @@ function App() {
             <Route path="/es" element={<Espanol />} />
             <Route path="/mandarin" element={<Mandarin />} />
             <Route path="/zh" element={<Mandarin />} />
+            <Route path="/employment" element={<Employment />} />
+            <Route path="/careers" element={<Employment />} />
           </Routes>
         </main>
 
