@@ -53,13 +53,16 @@ const LearningResourceCenter: React.FC = () => {
                                         { title: "Academic Workshops", desc: "Study skills, professional skills, and time management.", icon: BookOpen },
                                         { title: "English Placement", desc: "Assistance with the English placement process.", icon: CheckCircle }, 
                                         { title: "Community Events", desc: "Connect with peers at Urban College community events.", icon: Calendar }
-                                    ].map((service, idx) => (
-                                        <div key={idx} className="bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:border-ucb-blue/30 transition-colors">
-                                            {typeof service.icon === 'function' ? service.icon({}) : <service.icon className="w-8 h-8 text-ucb-orange mb-4" />}
-                                            <h4 className="font-bold text-lg text-ucb-black mb-2">{service.title}</h4>
-                                            <p className="text-gray-600 leading-relaxed text-sm">{service.desc}</p>
-                                        </div>
-                                    ))}
+                                    ].map((service, idx) => {
+                                        const IconComponent = service.icon;
+                                        return (
+                                            <div key={idx} className="bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:border-ucb-blue/30 transition-colors">
+                                                <IconComponent className="w-8 h-8 text-ucb-orange mb-4" />
+                                                <h4 className="font-bold text-lg text-ucb-black mb-2">{service.title}</h4>
+                                                <p className="text-gray-600 leading-relaxed text-sm">{service.desc}</p>
+                                            </div>
+                                        );
+                                    })}
                                 </div>
                             </div>
                             
@@ -188,7 +191,7 @@ const LearningResourceCenter: React.FC = () => {
 };
 
 // Simple globe icon for bg
-const GlobeIcon: React.ElementType = (props) => (
+const GlobeIcon: React.FC<any> = (props) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
 );
 

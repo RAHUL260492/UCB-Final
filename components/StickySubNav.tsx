@@ -37,7 +37,11 @@ const StickySubNav: React.FC = () => {
   if (!isSticky) return <div id="sticky-nav-anchor" />;
 
   return (
-    <div id="sticky-nav-anchor" className="sticky top-[70px] md:top-[85px] z-40 bg-ucb-ivory border-b border-ucb-champagne shadow-sm overflow-x-auto no-scrollbar">
+    <div 
+      id="sticky-nav-anchor" 
+      className="sticky z-40 bg-ucb-ivory border-b border-ucb-champagne shadow-sm overflow-x-auto no-scrollbar"
+      style={{ top: 'var(--header-height, 70px)' }}
+    >
       <div className="container mx-auto px-6">
         <div className="flex items-center gap-4 md:gap-6 whitespace-nowrap min-w-max">
           {SECTIONS.map((section) => (

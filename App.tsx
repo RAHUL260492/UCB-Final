@@ -28,7 +28,7 @@ function App() {
   return (
     <Router basename={import.meta.env.BASE_URL}>
       <ScrollToTop />
-      <div className="min-h-screen bg-white relative selection:bg-ucb-orange selection:text-white overflow-clip">
+      <div className="min-h-screen bg-white relative selection:bg-ucb-orange selection:text-white">
         {/* Skip-to-content for keyboard navigation */}
         <a href="#main-content" className="skip-to-content">
           Skip to main content

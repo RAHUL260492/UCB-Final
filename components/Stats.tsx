@@ -34,7 +34,7 @@ const StatItem: React.FC<{ stat: typeof STATS[0]; icon: React.FC<any>; idx: numb
 
   return (
     <div
-      className="flex items-center gap-3 px-6 py-4 group hover:bg-white/8 transition-all duration-300 cursor-default relative"
+      className="flex items-center gap-3 px-6 py-4 group hover:bg-white/8 transition-all duration-300 cursor-default relative border-b border-white/15 lg:border-b-0 lg:border-r lg:border-white/15"
       style={{
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? 'translateY(0)' : 'translateY(16px)',
@@ -84,7 +84,7 @@ const Stats: React.FC = () => {
       <div className="absolute -bottom-10 -left-10 w-44 h-44 bg-ucb-gold/10 rounded-full blur-[60px] animate-float-slow pointer-events-none" style={{ animationDelay: '1s' }} />
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="flex flex-wrap items-center justify-center gap-0 divide-x divide-white/15">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-0">
           {STATS.map((stat, idx) => (
             <StatItem key={stat.id} stat={stat} icon={STAT_ICONS[idx]} idx={idx} isVisible={isVisible} />
           ))}

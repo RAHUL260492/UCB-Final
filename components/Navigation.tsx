@@ -6,8 +6,15 @@ import Logo from './Logo';
 const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [programsOpen, setProgramsOpen] = useState(false);
+  const [mobileSubmenus, setMobileSubmenus] = useState<Record<string, boolean>>({});
   const [bannerOpen, setBannerOpen] = useState(true);
+
+  const toggleMobileSubmenu = (name: string) => {
+    setMobileSubmenus(prev => ({
+      ...prev,
+      [name]: !prev[name]
+    }));
+  };
   const [searchOpen, setSearchOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
@@ -277,25 +284,34 @@ const Navigation: React.FC = () => {
       <div className={`fixed top-0 right-0 h-full w-[80%] max-w-sm bg-white z-40 shadow-2xl transform transition-transform duration-300 ease-out xl:hidden ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="flex flex-col h-full pt-24 px-4 md:px-6 pb-8 overflow-y-auto">
           <div className="flex flex-col gap-6">
-            {navLinks.map((item) => (
-              <div key={item.name}>
-                <div className="flex justify-between items-center group">
-                  <Link
-                    to={item.path}
-                    className="text-2xl font-display font-bold text-ucb-black hover:text-ucb-blue"
-                    onClick={() => !item.dropdown && setMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                  {item.dropdown && (
-                    <button onClick={() => setProgramsOpen(!programsOpen)} className="p-2">
-                      <ChevronDown className={`w-6 h-6 transition-transform ${programsOpen ? 'rotate-180' : ''}`} />
-                    </button>
-                  )}
-                </div>
+            {navLinks.map((item) => {
+              const isSubmenuOpen = !!mobileSubmenus[item.name];
+              return (
+                <div key={item.name}>
+                  <div className="flex justify-between items-center group">
+                    <Link
+                      to={item.path}
+                      className="text-2xl font-display font-bold text-ucb-black hover:text-ucb-blue"
+                      onClick={(e) => {
+                        if (item.dropdown || item.groups) {
+                          e.preventDefault();
+                          toggleMobileSubmenu(item.name);
+                        } else {
+                          setMobileMenuOpen(false);
+                        }
+                      }}
+                    >
+                      {item.name}
+                    </Link>
+                    {(item.dropdown || item.groups) && (
+                      <button onClick={() => toggleMobileSubmenu(item.name)} className="p-2" aria-label={`Toggle ${item.name} menu`}>
+                        <ChevronDown className={`w-6 h-6 transition-transform ${isSubmenuOpen ? 'rotate-180' : ''}`} />
+                      </button>
+                    )}
+                  </div>
 
                   {item.dropdown || item.groups ? (
-                    <div className={`mt-4 space-y-3 pl-4 border-l-2 border-gray-100 overflow-y-auto transition-all duration-300 ${programsOpen ? 'max-h-[80vh] opacity-100' : 'max-h-0 opacity-0'}`}>
+                    <div className={`space-y-3 pl-4 border-l-2 border-gray-100 overflow-y-auto transition-all duration-300 ${isSubmenuOpen ? 'mt-4 max-h-[80vh] opacity-100 visible' : 'max-h-0 opacity-0 invisible overflow-hidden'}`}>
                       {item.dropdown ? (
                         item.dropdown.map((subItem: any) => (
                           <Link
@@ -328,8 +344,9 @@ const Navigation: React.FC = () => {
                       ) : null}
                     </div>
                   ) : null}
-              </div>
-            ))}
+                </div>
+              );
+            })}
           </div>
 
           <div className="mt-auto space-y-4">

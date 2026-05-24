@@ -259,11 +259,13 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
   }
 
   body {
     font-optical-sizing: auto;
     /* Enables Inter's optical sizing for automatic weight adjustments at different sizes */
+    overflow-x: hidden;
   }
 
   /* ────────────────────────────────────────────
