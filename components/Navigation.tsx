@@ -158,6 +158,9 @@ const Navigation: React.FC = () => {
           <Link to="/espanol" className="flex items-center gap-1 hover:text-ucb-gold transition-colors min-h-[44px]">
             <Globe className="w-3 h-3" /> Español
           </Link>
+          <Link to="/mandarin" className="flex items-center gap-1 hover:text-ucb-gold transition-colors min-h-[44px]">
+            <Globe className="w-3 h-3" /> 中文
+          </Link>
           <button className="flex items-center gap-1 text-ucb-gold hover:text-white transition-colors min-h-[44px]">
             <MessageCircle className="w-3 h-3" /> Live Chat
           </button>
@@ -388,9 +391,18 @@ const Navigation: React.FC = () => {
               Student Portal
             </button>
 
-            <div className="flex justify-center gap-6 mt-6 text-ucb-blue">
-              <Link to="/espanol" className="hover:text-ucb-orange" onClick={() => setMobileMenuOpen(false)}><Globe className="w-6 h-6" /></Link>
-              <a href="tel:+16175550123" className="hover:text-ucb-orange"><Phone className="w-6 h-6" /></a>
+            <div className="flex justify-center gap-4 mt-6 text-ucb-blue items-center text-sm font-semibold">
+              <Link to="/espanol" className="hover:text-ucb-orange flex items-center gap-1.5" onClick={() => setMobileMenuOpen(false)}>
+                <Globe className="w-5 h-5" /> Español
+              </Link>
+              <span className="text-gray-300">|</span>
+              <Link to="/mandarin" className="hover:text-ucb-orange flex items-center gap-1.5" onClick={() => setMobileMenuOpen(false)}>
+                <Globe className="w-5 h-5" /> 中文
+              </Link>
+              <span className="text-gray-300">|</span>
+              <a href="tel:+16175550123" className="hover:text-ucb-orange flex items-center gap-1.5">
+                <Phone className="w-5 h-5" /> Call
+              </a>
             </div>
           </div>
         </div>
