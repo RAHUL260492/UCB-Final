@@ -103,15 +103,16 @@ const Navigation: React.FC = () => {
       name: 'Current Students', 
       path: '/#students',
       dropdown: [
-        { name: 'myUCB Student Portal', path: 'https://my.urbancollege.edu' },
-        { name: 'Student Email', path: 'https://outlook.office.com' },
-        { name: 'Canvas LMS', path: 'https://urbancollege.instructure.com' },
+        { name: 'REGISTRATION', path: '/course-registration' },
+        { name: 'Student Services', path: '/student-services-overview' },
+        { name: 'Academic Calendar', path: '/academic-calendar-webpage' },
+        { name: 'College Catalog', path: 'https://catalog.urbancollege.edu/' },
+        { name: 'College Transfer Pathways', path: '/college-transfer-pathways' },
         { name: 'Learning Resource Center', path: '/learning-resource-center' },
-        { name: 'Student Government', path: '/student-government' },
-        { name: 'Mental Health & Counseling', path: '/mental-health' },
-        { name: 'Academic Calendar', path: '/policies-disclosures#academic-affairs' },
-        { name: 'Course Catalogue', path: '/s/College-Catalog-V112025.pdf' },
-        { name: 'Policies & Disclosures', path: '/policies-disclosures' }
+        { name: 'Student Government Association', path: '/student-government' },
+        { name: 'Technology Account Guide', path: '/technology-account-guide' },
+        { name: 'Transcript Requests', path: '/transcript-requests' },
+        { name: 'Commencement Ceremony', path: '/commencement' }
       ]
     },
     { name: 'Workforce & Community', path: '/workforce-development' },

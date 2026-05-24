@@ -29,6 +29,13 @@ import Espanol from './pages/Espanol';
 import Mandarin from './pages/Mandarin';
 import Employment from './pages/Employment';
 import PoliciesDisclosures from './pages/PoliciesDisclosures';
+import Registration from './pages/Registration';
+import StudentServices from './pages/StudentServices';
+import AcademicCalendar from './pages/AcademicCalendar';
+import CollegeTransferPathways from './pages/CollegeTransferPathways';
+import TechnologyAccountGuide from './pages/TechnologyAccountGuide';
+import TranscriptRequests from './pages/TranscriptRequests';
+import Commencement from './pages/Commencement';
 
 // ScrollToTop component to handle scroll on route change
 const ScrollToTop = () => {
@@ -97,6 +104,16 @@ function App() {
             <Route path="/policies-disclosures" element={<PoliciesDisclosures />} />
             <Route path="/policies" element={<PoliciesDisclosures />} />
             <Route path="/disclosures" element={<PoliciesDisclosures />} />
+            <Route path="/course-registration" element={<Registration />} />
+            <Route path="/student-services-overview" element={<StudentServices />} />
+            <Route path="/student-services" element={<StudentServices />} />
+            <Route path="/academic-calendar-webpage" element={<AcademicCalendar />} />
+            <Route path="/academic-calendar" element={<AcademicCalendar />} />
+            <Route path="/college-transfer-pathways" element={<CollegeTransferPathways />} />
+            <Route path="/technology-account-guide" element={<TechnologyAccountGuide />} />
+            <Route path="/transcript-requests" element={<TranscriptRequests />} />
+            <Route path="/commencement" element={<Commencement />} />
+            <Route path="/commencement-ceremony" element={<Commencement />} />
           </Routes>
         </main>
 
