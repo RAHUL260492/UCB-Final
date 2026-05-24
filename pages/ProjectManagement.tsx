@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BookOpen, Clock, Globe, Briefcase, CheckCircle, TrendingUp, Users, DollarSign, Calendar, Award, GraduationCap, ArrowRight } from 'lucide-react';
+import { BookOpen, Clock, Globe, Briefcase, CheckCircle, TrendingUp, Users, DollarSign, Calendar, Award, GraduationCap } from 'lucide-react';
 import ProgramPageLayout, { ProgramBenefit, ProgramStat } from '../components/ProgramPageLayout';
 
 // ─── Icon helper for bilingual ────────────────────────────────────────────────
@@ -13,30 +13,31 @@ const MessageCircleIcon: React.ElementType = (props: any) => (
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
 const courses = [
-    { title: "Principles of Management", desc: "Lead teams and projects effectively" },
-    { title: "Business Communication", desc: "Write and speak professionally" },
-    { title: "Introduction to Computer Applications", desc: "Master essential technology" },
-    { title: "Introduction to Business", desc: "Understand how organizations work" },
-    { title: "Principles of Accounting", desc: "Build financial literacy" },
-    { title: "Business Ethics", desc: "Navigate professional responsibilities" }
+    { title: "Introduction to Computer Apps", desc: "Build essential technology skills for project management" },
+    { title: "Principles of Management", desc: "Learn leadership and organizational fundamentals" },
+    { title: "Project Management", desc: "Master planning, scheduling, budgeting, and execution" },
+    { title: "Speech Communication", desc: "Present with confidence to teams and stakeholders" },
+    { title: "Business Elective", desc: "Customize your learning to match your career goals" }
 ];
 
 const outcomes = [
-    { title: "Administrative or Office Support", desc: "Manage schedules, communications, and daily operations. Competitive salary with strong demand." },
-    { title: "Operations and Management Support", desc: "Help teams run smoothly and efficiently." },
-    { title: "Bookkeeping or Business Assistant", desc: "Manage financial records and support business functions." },
-    { title: "Entry-Level Leadership Roles", desc: "Take on supervisory responsibilities." },
-    { title: "Entrepreneurship or Small Business Support", desc: "Start or support your own business." }
+    { title: "Project Coordinator", desc: "Support project managers and keep projects on track. (Entry-level average salary: $59,009/year in Massachusetts!)" },
+    { title: "Operations Supervisor", desc: "Oversee daily operations and team performance" },
+    { title: "Program Analyst", desc: "Analyze program effectiveness and recommend improvements" },
+    { title: "Project Manager", desc: "Lead projects from planning through completion" },
+    { title: "Administrative Manager", desc: "Coordinate office operations and support services" },
+    { title: "Team Lead", desc: "Guide teams to achieve project goals" }
 ];
 
 const benefits: ProgramBenefit[] = [
+    { title: "High Entry Salary", desc: "Earn $59,009+ as an entry-level Project Coordinator in Massachusetts!", icon: DollarSign },
     { title: "Fast Track", desc: "Finish in as little as one year (only 18 credits!)", icon: Clock },
-    { title: "100% Online", desc: "Learn on a schedule that fits into your busy life", icon: Globe },
-    { title: "Debt-Free Goal", desc: "Most students graduate debt-free!", icon: DollarSign },
-    { title: "Bilingual Options", desc: "Study in English and/or Spanish", icon: MessageCircleIcon },
-    { title: "Transfer Credits", desc: "Credits transfer toward an associate or bachelor's degree", icon: TrendingUp },
-    { title: "ESL Support", desc: "Tailored to each student's needs", icon: BookOpen },
-    { title: "Career Growth", desc: "Build skills for career advancement and financial security", icon: Briefcase },
+    { title: "100% Online", desc: "Study 100% online: Learn on a schedule that fits into your busy life", icon: Globe },
+    { title: "Debt-Free Goal", desc: "Most students graduate debt-free!", icon: CheckCircle },
+    { title: "Bilingual Options", desc: "Study in English or Spanish: Choose the language that works for you", icon: MessageCircleIcon },
+    { title: "No Textbooks", desc: "No textbooks or hidden fees: Everything you need is included", icon: BookOpen },
+    { title: "ESL Support", desc: "ESL support available: Tailored to each student's needs", icon: Users },
+    { title: "High Demand", desc: "A wide variety of career paths: Project management skills are in demand across every industry", icon: Award }
 ];
 
 const stats: ProgramStat[] = [
@@ -51,12 +52,12 @@ const stats: ProgramStat[] = [
 ];
 
 const faqs = [
-    { q: "What is the duration of the program?", a: "As little as one year." },
-    { q: "Is it fully online?", a: "Yes, entirely online with various formats." },
-    { q: "What languages?", a: "English and Spanish." },
-    { q: "Accredited?", a: "Yes, a fully accredited non-profit college and Hispanic-Serving Institution." },
-    { q: "Will it help my career?", a: "Yes, for new jobs, promotions, or further studies." },
-    { q: "Financial aid?", a: "Yes, most students graduate debt-free." },
+    { q: "Is the program entirely online?", a: "Absolutely! The program is 100% online with both synchronous and asynchronous options. Learn on your schedule—early mornings, late nights, or weekends." },
+    { q: "How long does the program take?", a: "In as little as one year! Complete your 18 credits full-time, or take it at your own pace—the program fits into your busy life." },
+    { q: "Do I need prior project management experience?", a: "No! No prior experience is required. The program covers all foundational knowledge—whether you're starting fresh or looking to formalize your skills, you'll graduate ready to succeed." },
+    { q: "What industries can I work in with this certificate?", a: "Project management skills are needed across every industry—healthcare, technology, construction, finance, nonprofit, government, and more. This certificate opens doors to a wide variety of career paths." },
+    { q: "Can I study in Spanish?", a: "Yes! Courses are available in English and Spanish—choose the language that works for you. ESL support is also available." },
+    { q: "Am I eligible for financial aid?", a: "Yes! Most students are eligible for financial aid, scholarships, and grants. Contact our financial aid office at (617) 449-7070 for personalized guidance. Most students graduate debt-free!" }
 ];
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -67,20 +68,20 @@ const ProjectManagement: React.FC = () => {
     return (
         <ProgramPageLayout
             badge="Project Management Certificate"
-            title={<>Build Real Business Skills & <span style={{ color: '#E68325' }}>Advance Your Career</span></>}
-            subtitle="In as little as one year. Most students graduate debt-free."
+            title={<>Lead Projects, Build Your Career, & <span style={{ color: '#E68325' }}>Earn While You Learn</span></>}
+            subtitle="In As Little As One Year! Most Students Graduate Debt-Free!"
             headerImageSrc="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop"
             breadcrumbs={[
                 { label: 'Programs', path: '/#programs' },
                 { label: 'Project Management' }
             ]}
 
-            tagline="Develop Skills That Get You Hired"
+            tagline="Build the skills employers want"
             taglineBody={
                 <p>
-                    Develop the actual business skills that will enable you to get a job, increase your salary, or earn a promotion—all without interrupting your life.
+                    Build the skills employers want—and open doors to a wide variety of career paths. Urban College of Boston's Project Management Certificate empowers you to master project planning, scheduling, budgeting, and leadership—all without interrupting your busy life.
                     <br className="hidden md:block" />
-                    <span className="text-ucb-blue font-semibold">Urban College of Boston's Project Management Certificate</span> is a fully online, short-term program designed for modern working adults.
+                    <span className="text-ucb-blue font-semibold">This fully online, career-building program empowers you to work in the field</span> while completing your degree—allowing you to earn while you learn. You'll graduate ready to succeed as a project coordinator, operations supervisor, program analyst, or project manager.
                 </p>
             }
 
@@ -88,30 +89,31 @@ const ProjectManagement: React.FC = () => {
 
             achievements={[
                 {
-                    heading: "Professional Skills",
+                    heading: "Project Planning & Execution",
                     icon: Briefcase,
                     items: [
-                        "Support daily business and office operations",
-                        "Communicate professionally in writing, speaking, and digital tools",
-                        "Work confidently in teams or leadership support roles"
+                        "Plan and execute projects from start to finish",
+                        "Create and manage project schedules and timelines",
+                        "Develop and control budgets to keep projects on track",
+                        "Use project management tools and technology"
                     ]
                 },
                 {
-                    heading: "Ethical & Practical",
+                    heading: "Leadership & Communication",
                     icon: Award,
                     items: [
-                        "Apply ethical and responsible business practices",
-                        "Use business skills in real workplace situations",
-                        "Master essential technology for modern workplaces"
+                        "Lead teams effectively and communicate with stakeholders",
+                        "Identify and manage risks before they become problems",
+                        "Communicate professionally in presentations and business settings"
                     ]
                 }
             ]}
-            achievementNote="Courses are practical and designed to help you apply skills immediately on the job, not just study theory."
+            achievementNote="Your courses are practical and designed for real-world application—you'll apply these skills immediately on the job, not just study theory."
 
             courses={courses}
             outcomes={outcomes}
-            outcomesIntro="This certificate helps prepare you for career-building roles where you can earn promotions, increase pay, or change career paths."
-            outcomeTags={['Management', 'Administration', 'Bookkeeping', 'Entrepreneurship']}
+            outcomesIntro="Project management skills open doors across every industry. You'll graduate ready for career-building roles with strong earning potential and growth opportunities. Project managers are needed in healthcare, technology, construction, finance, and more."
+            outcomeTags={['Management', 'Project Planning', 'Leadership', 'Operations']}
 
             stats={stats}
 
@@ -125,17 +127,17 @@ const ProjectManagement: React.FC = () => {
             ]}
 
             pathwayTitle="Build Toward Your Future"
-            pathwayDescription="The Project Management Certificate is a stackable, for-credit program. Credits may transfer toward an associate or bachelor's degree."
+            pathwayDescription="Every credit you earn counts toward an Associate Degree at Urban College. When you're ready, our transfer agreements make it easy to continue toward a bachelor's degree at partner institutions and prepare you for credentials like the PMP certification."
             pathwaySteps={[
                 { label: 'Certificate', credits: '18 Credits', active: true },
                 { label: 'Associate Degree', credits: '60 Credits', active: false },
-                { label: "Bachelor's Degree", credits: 'Transfer Ready', active: false },
+                { label: "Bachelor's & PMP", credits: 'Transfer Ready', active: false }
             ]}
 
             testimonial={{
-                quote: "I liked that I could do the work on my own schedule, but it still felt like I was part of a real college experience. I never felt alone.",
-                name: "Elijah",
-                role: "Project Management Alum",
+                quote: "Urban College was the first place that unlocked in me the interest in higher learning. It sparked something in me clearly since I am now the CEO of an organization. I am very grateful to Urban College for seeing me, investing in me and pouring into me at a time where I needed it the most.",
+                name: "Jerrell",
+                role: "Alum",
                 imageSrc: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop"
             }}
 

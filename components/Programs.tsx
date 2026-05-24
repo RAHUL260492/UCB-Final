@@ -43,7 +43,7 @@ const PROGRAMS: Program[] = [
   { id: '13', title: 'General Studies', type: 'Certificate', tags: ['English & Spanish', '1 Year'], description: 'Explore subjects and build foundational knowledge.', link: '/programs/general-studies-certificate' },
   { id: '14', title: 'Human Services', type: 'Certificate', tags: ['English & Spanish', '1 Year'], description: 'Launch your career helping others while you work. Build the credentials to advance your career in social services.', link: '/programs/human-services-certificate' },
   { id: '15', title: 'Paraprofessional Educator', type: 'Certificate', tags: ['English & Spanish', '1 Year'], description: 'Shape young minds and launch your teaching career. Support teachers and help students of all abilities succeed.', link: '/programs/paraprofessional-educator-certificate' },
-  { id: '16', title: 'Project Management', type: 'Certificate', tags: ['English', '9 Months'], description: 'Learn to lead projects effectively and efficiently.', link: '/programs/project-management-certificate' },
+  { id: '16', title: 'Project Management', type: 'Certificate', tags: ['English & Spanish', '1 Year'], description: 'Lead projects, build your career, and earn while you learn. Master project planning, scheduling, budgeting, and leadership.', link: '/programs/project-management-certificate' },
 ];
 
 const Programs: React.FC = () => {
