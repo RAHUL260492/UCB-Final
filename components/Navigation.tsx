@@ -100,13 +100,18 @@ const Navigation: React.FC = () => {
       ]
     },
     { 
-      name: 'Student Resources', 
-      path: '/#resources',
+      name: 'Current Students', 
+      path: '/#students',
       dropdown: [
+        { name: 'myUCB Student Portal', path: 'https://my.urbancollege.edu' },
+        { name: 'Student Email', path: 'https://outlook.office.com' },
+        { name: 'Canvas LMS', path: 'https://urbancollege.instructure.com' },
         { name: 'Learning Resource Center', path: '/learning-resource-center' },
         { name: 'Student Government', path: '/student-government' },
-        { name: 'Mental Health', path: '/mental-health' },
-        { name: 'Tuition & Financial Aid', path: '/financial-aid' }
+        { name: 'Mental Health & Counseling', path: '/mental-health' },
+        { name: 'Academic Calendar', path: '/policies-disclosures#academic-affairs' },
+        { name: 'Course Catalogue', path: '/s/College-Catalog-V112025.pdf' },
+        { name: 'Policies & Disclosures', path: '/policies-disclosures' }
       ]
     },
     { name: 'Workforce & Community', path: '/workforce-development' },
@@ -210,13 +215,25 @@ const Navigation: React.FC = () => {
                       {item.dropdown ? (
                         <div className="grid grid-cols-1 gap-1">
                           {item.dropdown.map((subItem: any) => (
-                            <Link
-                              key={subItem.name}
-                              to={subItem.path}
-                              className="flex items-center px-4 py-2 text-sm hover:bg-ucb-blue/5 hover:text-ucb-blue transition-colors text-gray-700 font-medium rounded-lg"
-                            >
-                              {subItem.name}
-                            </Link>
+                            subItem.path.startsWith('http') || subItem.path.endsWith('.pdf') ? (
+                              <a
+                                key={subItem.name}
+                                href={subItem.path}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center px-4 py-2 text-sm hover:bg-ucb-blue/5 hover:text-ucb-blue transition-colors text-gray-700 font-medium rounded-lg"
+                              >
+                                {subItem.name}
+                              </a>
+                            ) : (
+                              <Link
+                                key={subItem.name}
+                                to={subItem.path}
+                                className="flex items-center px-4 py-2 text-sm hover:bg-ucb-blue/5 hover:text-ucb-blue transition-colors text-gray-700 font-medium rounded-lg"
+                              >
+                                {subItem.name}
+                              </Link>
+                            )
                           ))}
                         </div>
                       ) : item.groups ? (
@@ -349,14 +366,27 @@ const Navigation: React.FC = () => {
                     <div className={`space-y-3 pl-4 border-l-2 border-gray-100 overflow-y-auto transition-all duration-300 ${isSubmenuOpen ? 'mt-4 max-h-[80vh] opacity-100 visible' : 'max-h-0 opacity-0 invisible overflow-hidden'}`}>
                       {item.dropdown ? (
                         item.dropdown.map((subItem: any) => (
-                          <Link
-                            key={subItem.name}
-                            to={subItem.path}
-                            className="block text-lg text-gray-600 hover:text-ucb-blue font-medium"
-                            onClick={() => setMobileMenuOpen(false)}
-                          >
-                            {subItem.name}
-                          </Link>
+                          subItem.path.startsWith('http') || subItem.path.endsWith('.pdf') ? (
+                            <a
+                              key={subItem.name}
+                              href={subItem.path}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="block text-lg text-gray-600 hover:text-ucb-blue font-medium py-1"
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              {subItem.name}
+                            </a>
+                          ) : (
+                            <Link
+                              key={subItem.name}
+                              to={subItem.path}
+                              className="block text-lg text-gray-600 hover:text-ucb-blue font-medium py-1"
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              {subItem.name}
+                            </Link>
+                          )
                         ))
                       ) : item.groups ? (
                         item.groups.map((group: any) => (
