@@ -1,9 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import PageHeader from '../components/PageHeader';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { 
-    Accessibility, FileText, CalendarCheck, ShieldAlert, HeartHandshake,
-    Mail, Phone, ExternalLink, Download, AlertCircle, HelpCircle
+    Accessibility, FileText, CalendarCheck, HeartHandshake,
+    Mail, Phone, ExternalLink, Download, AlertCircle, 
+    ChevronDown, ChevronUp, Briefcase, GraduationCap, 
+    Coins, Laptop, BookOpen, ArrowRight, ShieldCheck, HelpCircle
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -12,268 +14,506 @@ const StudentServices: React.FC = () => {
         window.scrollTo(0, 0);
     }, []);
 
+    const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+
     const breadcrumbs = [
         { label: "Home", path: "/" },
         { label: "Current Students", path: "/#students" },
         { label: "Student Services" }
     ];
 
-    const accommodationServices = [
-        "Verifying eligibility for academic accommodations based on documentation",
-        "Providing academic advocacy support for students with documented disabilities",
-        "Assisting the campus community in responding to disability-related issues and concerns",
-        "Working with the campus community to overcome architectural, attitudinal, and administrative barriers",
-        "Educating and training students on assistive technology resources",
-        "Coordinating peer note-taking services and exam accommodations",
-        "Assisting students with academic strategies and study habits",
-        "Providing assistance and referrals for the diagnostic evaluation process"
-    ];
-
-    const forms = [
+    const serviceCards = [
         {
-            title: "Accommodation & Accessibility Process",
-            desc: "Download the detailed guide regarding UCB's accommodation steps, roles, and guidelines.",
-            path: "/s/Accommodation-and-Accessibility-Process-ytyr.pdf",
-            type: "PDF Document",
-            isExternal: false
+            title: "Academic Advising",
+            desc: "Meet with your advisor before registration to plan your path and stay on track.",
+            icon: GraduationCap,
+            link: "#advising",
+            badge: "Required Every Semester",
+            color: "blue"
         },
         {
-            title: "Accommodation Request Form",
-            desc: "Submit your official academic accommodation request via Microsoft Forms.",
-            path: "https://forms.office.com/Pages/ResponsePage.aspx?id=HnCdJ2cNiUupTrgmGCPjKzt0agm94stErG3OXo8chiNUQjlIRkpXVks5MEU2UU5QUUFMV0Y5Vk1LSy4u",
-            type: "Microsoft Forms Request",
-            isExternal: true
+            title: "Learning Resource Center",
+            desc: "Free tutoring, workshops, and multilingual academic support in English, Spanish, and Mandarin.",
+            icon: BookOpen,
+            link: "/learning-resource-center",
+            badge: "Free Tutoring",
+            color: "orange"
         },
         {
-            title: "Medical Provider Form",
-            desc: "Submit the necessary verification documents from your healthcare provider.",
-            path: "https://forms.office.com/Pages/ResponsePage.aspx?id=HnCdJ2cNiUupTrgmGCPjKzt0agm94stErG3OXo8chiNUMjNJMk41V040S0czMURXVzBERlRYU0tNMC4u",
-            type: "Microsoft Forms Verification",
-            isExternal: true
+            title: "Financial Aid",
+            desc: "Navigate FAFSA, grants, and scholarships. Most students graduate debt-free.",
+            icon: Coins,
+            link: "/financial-aid",
+            badge: "Tuition Support",
+            color: "green"
+        },
+        {
+            title: "Disability Services",
+            desc: "Access for every student. Request academic and exam accommodations under the ADA.",
+            icon: Accessibility,
+            link: "#disability-services",
+            badge: "Equal Access",
+            color: "purple"
+        },
+        {
+            title: "Career Services",
+            desc: "Resume help, interview prep, internships, and job placement built into your academics.",
+            icon: Briefcase,
+            link: "#career-services",
+            badge: "Job Ready",
+            color: "orange"
+        },
+        {
+            title: "Mental Health Resources",
+            desc: "Access community resources, crisis support, and multilingual counseling services.",
+            icon: HeartHandshake,
+            link: "/mental-health",
+            badge: "Personal Wellness",
+            color: "blue"
+        },
+        {
+            title: "Technology Support",
+            desc: "Get guides for student email, online courses, and portal login troubleshooting.",
+            icon: Laptop,
+            link: "/technology-account-guide",
+            badge: "Tech Assistance",
+            color: "purple"
+        },
+        {
+            title: "College Catalog & Handbook",
+            desc: "Detailed campus policies, course descriptions, academic standards, and resources.",
+            icon: FileText,
+            link: "/college-services-and-resources",
+            badge: "Official Handbook",
+            color: "green"
         }
     ];
 
+    const faqs = [
+        {
+            q: "How do I know which advisor I'm assigned to?",
+            a: "If you haven't been connected with your advisor yet, email registration@urbancollege.edu and the Registration Services team will point you in the right direction."
+        },
+        {
+            q: "Is tutoring really free?",
+            a: "Absolutely—and there's no limit on how many sessions you can schedule. Remote tutoring is available Monday through Saturday from 11:00 AM to 7:00 PM. Book your appointment online via the LRC booking link."
+        },
+        {
+            q: "What if I have a disability or need an accommodation?",
+            a: "Contact Rosana Perella at rosana.perella@urbancollege.edu or 617-449-7380 to start the accommodation process. You can also download the Accommodation Request Form and Medical Provider Form directly from this page."
+        },
+        {
+            q: "Who do I contact if I'm struggling personally?",
+            a: "Reach out to Student Services at studentservices@urbancollege.edu or call 617-449-7380. We make referrals and maintain a list of community mental health resources at /mental-health—including crisis hotlines by county."
+        }
+    ];
+
+    const handleFaqToggle = (idx: number) => {
+        setOpenFaqIndex(openFaqIndex === idx ? null : idx);
+    };
+
     return (
-        <div className="pt-24 lg:pt-32 bg-gray-50/30">
+        <div className="pt-24 lg:pt-32 bg-gray-50/40 min-h-screen">
             <PageHeader
-                title="Student Services & Support"
-                subtitle="Urban College of Boston is committed to your academic success, health, and personal development."
+                title="Student Services Overview"
+                subtitle="You've got a whole team in your corner. Here's everything Urban College offers to help you thrive."
                 breadcrumbs={breadcrumbs}
                 imageSrc="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2940&auto=format&fit=crop"
                 imagePosition="center"
             />
 
-            {/* Intro Grid */}
-            <section className="py-16 bg-white relative z-10 border-b border-gray-100">
+            {/* Intro / Welcome Section */}
+            <section className="py-16 bg-white border-b border-gray-100">
                 <div className="container mx-auto px-6 max-w-6xl">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                        <div className="lg:col-span-8 space-y-6">
+                        <div className="lg:col-span-7 space-y-6">
                             <ScrollAnimation variant="fade-up">
-                                <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs mb-2 block">Student Success Commitments</span>
-                                <h2 className="text-3xl font-display font-black text-ucb-blue leading-tight">
-                                    Supportive Resources Tailored for Your UCB Experience
+                                <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs mb-2 block">Always By Your Side</span>
+                                <h2 className="text-3xl md:text-4xl font-display font-black text-ucb-blue leading-tight">
+                                    Support Built For Your Educational Success
                                 </h2>
                                 <p className="text-lg text-gray-600 leading-relaxed font-light mt-4">
-                                    At Urban College, we offer students a variety of support networks to help you navigate your college experience, overcome barriers, and achieve your educational dreams.
+                                    Urban College of Boston isn't just a place to take classes — it's a community built to help you succeed. From the moment you enroll to the day you cross the stage at graduation, we've got a team of advisors, tutors, and support specialists ready to walk alongside you.
                                 </p>
-                                <p className="text-gray-500 leading-relaxed mt-2 text-sm">
-                                    The <Link to="/program-overview" className="text-ucb-blue hover:underline">Academic Affairs Department</Link> offers tutoring, writing, and technological resources through the <Link to="/learning-resource-center" className="text-ucb-blue hover:underline">Learning Resource Center (LRC)</Link>, as well as academic, program, and transfer advising.
+                                <p className="text-gray-500 leading-relaxed text-sm">
+                                    Explore what's available, save the contact info you need, and never hesitate to reach out. We are here to help.
                                 </p>
                             </ScrollAnimation>
                         </div>
-                        <div className="lg:col-span-4 bg-gray-50 rounded-3xl p-6 border border-gray-100 flex flex-col justify-center items-start gap-4">
-                            <ScrollAnimation variant="slide-left" className="space-y-4 w-full">
-                                <div className="inline-flex p-3 bg-ucb-orange/10 text-ucb-orange rounded-xl border border-ucb-orange/10">
+                        <div className="lg:col-span-5 bg-gradient-to-br from-ucb-blue to-ucb-blue-glow text-white rounded-3xl p-8 shadow-xl relative overflow-hidden">
+                            <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/5 rounded-full blur-2xl" />
+                            <div className="relative z-10 space-y-6">
+                                <div className="inline-flex p-3 bg-white/10 rounded-xl text-ucb-gold border border-white/10">
                                     <AlertCircle className="w-6 h-6" />
                                 </div>
-                                <h4 className="font-display font-bold text-gray-800 text-base leading-snug">Student Code of Conduct</h4>
-                                <p className="text-gray-500 text-xs leading-relaxed font-light">
-                                    Our community is built on mutual respect and integrity. Review academic standards and conduct policies inside our active handbook:
+                                <h3 className="text-xl font-display font-bold">Quick Sub-Pages</h3>
+                                <p className="text-blue-100 text-xs leading-relaxed font-light">
+                                    Explore specific campus support services, documents, and guides by clicking the links below:
                                 </p>
-                                <a 
-                                    href="/s/2025-2026-URBAN-COLLEGE-OF-BOSTON-STUDENT-HANDBOOK_Final.pdf"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="w-full text-center bg-white border border-gray-200 hover:border-ucb-blue hover:text-ucb-blue px-4 py-2.5 rounded-xl text-xs font-bold transition-all shadow-sm block cursor-pointer min-h-[38px]"
-                                >
-                                    Download Student Handbook (2025-2026)
-                                </a>
-                            </ScrollAnimation>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-semibold">
+                                    <Link to="/academic-calendar-webpage" className="flex items-center gap-2 text-white hover:text-ucb-gold transition-colors">
+                                        <ArrowRight className="w-3.5 h-3.5" /> Academic Calendar
+                                    </Link>
+                                    <Link to="/college-transfer-pathways" className="flex items-center gap-2 text-white hover:text-ucb-gold transition-colors">
+                                        <ArrowRight className="w-3.5 h-3.5" /> Transfer Pathways
+                                    </Link>
+                                    <Link to="/learning-resource-center" className="flex items-center gap-2 text-white hover:text-ucb-gold transition-colors">
+                                        <ArrowRight className="w-3.5 h-3.5" /> Learning Resource Center
+                                    </Link>
+                                    <Link to="/college-services-and-resources" className="flex items-center gap-2 text-white hover:text-ucb-gold transition-colors">
+                                        <ArrowRight className="w-3.5 h-3.5" /> Services Handbook
+                                    </Link>
+                                    <Link to="/student-government" className="flex items-center gap-2 text-white hover:text-ucb-gold transition-colors">
+                                        <ArrowRight className="w-3.5 h-3.5" /> Student Government
+                                    </Link>
+                                    <Link to="/technology-account-guide" className="flex items-center gap-2 text-white hover:text-ucb-gold transition-colors">
+                                        <ArrowRight className="w-3.5 h-3.5" /> Tech Accounts Guide
+                                    </Link>
+                                    <Link to="/transcript-requests" className="flex items-center gap-2 text-white hover:text-ucb-gold transition-colors">
+                                        <ArrowRight className="w-3.5 h-3.5" /> Transcript Requests
+                                    </Link>
+                                    <Link to="/commencement" className="flex items-center gap-2 text-white hover:text-ucb-gold transition-colors">
+                                        <ArrowRight className="w-3.5 h-3.5" /> Commencement
+                                    </Link>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Accessibility & Accommodations */}
-            <section className="py-16 md:py-24 bg-gray-50/50 relative z-10 border-b border-gray-100">
-                <div className="container mx-auto px-6 max-w-6xl space-y-12">
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                        <ScrollAnimation variant="slide-right" className="lg:col-span-5 space-y-6">
-                            <div className="w-12 h-12 rounded-2xl bg-ucb-blue/10 flex items-center justify-center text-ucb-blue border border-ucb-blue/10 shrink-0">
-                                <Accessibility className="w-6 h-6" />
+            {/* Services Grid Section */}
+            <section className="py-16 md:py-24 bg-gray-50/50">
+                <div className="container mx-auto px-6 max-w-6xl">
+                    <ScrollAnimation variant="fade-up" className="text-center max-w-2xl mx-auto mb-16">
+                        <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs">At A Glance</span>
+                        <h2 className="text-3xl font-display font-black text-ucb-black mt-2">Your Support Services</h2>
+                        <p className="text-gray-500 font-light mt-4 text-sm md:text-base">
+                            Click any service to view more information or access related tools, websites, and emails.
+                        </p>
+                    </ScrollAnimation>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                        {serviceCards.map((card, idx) => {
+                            const IconComp = card.icon;
+                            const isAnchor = card.link.startsWith('#');
+                            const CardWrapper = isAnchor ? 'a' : Link;
+                            const wrapperProps = isAnchor ? { href: card.link } : { to: card.link };
+
+                            return (
+                                <ScrollAnimation
+                                    key={idx}
+                                    variant="fade-up"
+                                    delay={`${idx * 0.05}s`}
+                                    className="h-full"
+                                >
+                                    {/* @ts-ignore */}
+                                    <CardWrapper
+                                        {...wrapperProps}
+                                        className="group bg-white border border-gray-150 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-ucb-blue/30 transition-all flex flex-col justify-between h-full hover:-translate-y-1 duration-300 block"
+                                    >
+                                        <div className="space-y-4">
+                                            <div className="flex justify-between items-start">
+                                                <div className="inline-flex p-3 bg-ucb-blue/5 text-ucb-blue rounded-xl group-hover:bg-ucb-blue group-hover:text-white transition-all border border-ucb-blue/10">
+                                                    <IconComp className="w-5 h-5" />
+                                                </div>
+                                                <span className="text-[9px] font-bold uppercase tracking-wider text-ucb-orange font-display px-2 py-0.5 bg-ucb-orange/10 rounded-full border border-ucb-orange/15">
+                                                    {card.badge}
+                                                </span>
+                                            </div>
+                                            <h3 className="font-display font-bold text-gray-800 group-hover:text-ucb-blue transition-colors text-base">
+                                                {card.title}
+                                            </h3>
+                                            <p className="text-gray-500 text-xs font-light leading-relaxed">
+                                                {card.desc}
+                                            </p>
+                                        </div>
+                                        <div className="flex items-center gap-1 text-[11px] font-bold text-ucb-blue mt-4 group-hover:text-ucb-orange transition-colors">
+                                            <span>Learn more</span>
+                                            <ChevronRightIcon className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                                        </div>
+                                    </CardWrapper>
+                                </ScrollAnimation>
+                            );
+                        })}
+                    </div>
+                </div>
+            </section>
+
+            {/* Detailed Info Sections */}
+            <section className="py-16 md:py-24 bg-white">
+                <div className="container mx-auto px-6 max-w-5xl space-y-24">
+                    
+                    {/* Academic Advising */}
+                    <div id="advising" className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center scroll-mt-32">
+                        <ScrollAnimation variant="slide-right" className="lg:col-span-7 space-y-6">
+                            <div className="w-12 h-12 rounded-2xl bg-ucb-blue/5 flex items-center justify-center text-ucb-blue border border-ucb-blue/10 shrink-0">
+                                <GraduationCap className="w-6 h-6" />
                             </div>
-                            <h2 className="text-3xl font-display font-black text-ucb-black">Accessibility & Accommodations</h2>
+                            <h2 className="text-3xl font-display font-black text-ucb-black">Academic Advising</h2>
                             <p className="text-gray-600 leading-relaxed font-light text-sm">
-                                The Student Services team provides accommodations to students qualifying as having a disability under the Americans with Disabilities Act (ADA) and Section 504 of the Rehabilitation Act.
+                                Your academic advisor is your single most important point of contact at Urban College. They help you choose the right courses, track your progress toward graduation, and plan your next steps — whether that's your next semester at Urban College or a transfer to a bachelor's program.
                             </p>
-                            <div className="p-5 bg-white border border-gray-100 rounded-2xl space-y-2 shadow-sm">
-                                <span className="text-[10px] font-bold text-ucb-blue uppercase tracking-widest block font-display">ADA Definition</span>
-                                <p className="text-gray-500 text-xs italic leading-relaxed font-light">
-                                    “A physical or mental impairment that substantially limits one or more major life activities; a record of such an impairment; or being regarded as having such an impairment.”
+                            <div className="bg-ucb-orange/5 border border-ucb-orange/10 rounded-2xl p-5 space-y-2">
+                                <span className="text-[10px] font-bold text-ucb-orange uppercase tracking-wider block font-display">Pro Tip</span>
+                                <p className="text-gray-600 text-xs leading-relaxed font-light">
+                                    Stay in regular contact with your advisor — don't wait until something goes wrong. The students who connect most often are the ones who succeed fastest.
                                 </p>
                             </div>
                         </ScrollAnimation>
+                        <ScrollAnimation variant="slide-left" className="lg:col-span-5 bg-gray-50 border border-gray-100 rounded-3xl p-8 space-y-4">
+                            <h4 className="font-display font-bold text-gray-800 text-base">Get in Touch</h4>
+                            <p className="text-gray-500 text-xs font-light leading-relaxed">
+                                When it's time to register, schedule an appointment with your advisor to build your course plan and enroll.
+                            </p>
+                            <div className="space-y-3 pt-2">
+                                <a href="mailto:registration@urbancollege.edu" className="flex items-center gap-3 p-3 bg-white rounded-xl border border-gray-150 text-gray-700 hover:text-ucb-blue transition-all font-semibold text-xs shadow-sm">
+                                    <Mail className="w-4.5 h-4.5 text-ucb-orange" />
+                                    <span>registration@urbancollege.edu</span>
+                                </a>
+                                <a href="mailto:admissions@urbancollege.edu" className="flex items-center gap-3 p-3 bg-white rounded-xl border border-gray-150 text-gray-700 hover:text-ucb-blue transition-all font-semibold text-xs shadow-sm">
+                                    <Mail className="w-4.5 h-4.5 text-ucb-blue" />
+                                    <span>New Students: Contact Admissions</span>
+                                </a>
+                            </div>
+                        </ScrollAnimation>
+                    </div>
 
-                        <ScrollAnimation variant="slide-left" className="lg:col-span-7 bg-white rounded-3xl p-8 border border-gray-100 shadow-sm space-y-4">
-                            <h3 className="font-display font-bold text-gray-800 text-lg">Services Provided May Include:</h3>
-                            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-gray-500 leading-relaxed font-light">
-                                {accommodationServices.map((service, idx) => (
-                                    <li key={idx} className="flex gap-2 items-start">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-ucb-orange shrink-0 mt-2"></span>
-                                        <span>{service}</span>
-                                    </li>
-                                ))}
+                    <hr className="border-gray-100" />
+
+                    {/* Disability Services & Accommodations */}
+                    <div id="disability-services" className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center scroll-mt-32">
+                        <ScrollAnimation variant="slide-right" className="lg:col-span-5 bg-gray-50 border border-gray-100 rounded-3xl p-8 space-y-6 lg:order-2">
+                            <div className="space-y-1">
+                                <span className="text-[10px] font-bold text-ucb-orange uppercase tracking-wider block font-display">Accessibility Coordinator</span>
+                                <h4 className="text-xl font-display font-bold text-ucb-blue">Rosana Perella</h4>
+                                <p className="text-gray-500 text-xs">Director of Student Services and Support</p>
+                            </div>
+                            <div className="space-y-3">
+                                <a href="mailto:rosana.perella@urbancollege.edu" className="flex items-center gap-3 p-3 bg-white rounded-xl border border-gray-150 text-gray-700 hover:text-ucb-blue transition-all font-semibold text-xs shadow-sm">
+                                    <Mail className="w-4.5 h-4.5 text-ucb-orange" />
+                                    <span>rosana.perella@urbancollege.edu</span>
+                                </a>
+                                <a href="tel:617-449-7380" className="flex items-center gap-3 p-3 bg-white rounded-xl border border-gray-150 text-gray-700 hover:text-ucb-blue transition-all font-semibold text-xs shadow-sm">
+                                    <Phone className="w-4.5 h-4.5 text-ucb-blue" />
+                                    <span>617-449-7380</span>
+                                </a>
+                            </div>
+                            <div className="space-y-2 border-t border-gray-200/50 pt-4">
+                                <a href="/s/Accommodation-and-Accessibility-Process-ytyr.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between text-xs font-bold text-gray-600 hover:text-ucb-blue transition-colors">
+                                    <span>Accommodation Guide (PDF)</span>
+                                    <Download className="w-4 h-4" />
+                                </a>
+                                <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=HnCdJ2cNiUupTrgmGCPjKzt0agm94stErG3OXo8chiNUQjlIRkpXVks5MEU2UU5QUUFMV0Y5Vk1LSy4u" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between text-xs font-bold text-gray-600 hover:text-ucb-blue transition-colors">
+                                    <span>Accommodation Request Form</span>
+                                    <ExternalLink className="w-4 h-4" />
+                                </a>
+                                <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=HnCdJ2cNiUupTrgmGCPjKzt0agm94stErG3OXo8chiNUMjNJMk41V040S0czMURXVzBERlRYU0tNMC4u" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between text-xs font-bold text-gray-600 hover:text-ucb-blue transition-colors">
+                                    <span>Medical Provider Form</span>
+                                    <ExternalLink className="w-4 h-4" />
+                                </a>
+                            </div>
+                        </ScrollAnimation>
+                        <ScrollAnimation variant="slide-left" className="lg:col-span-7 space-y-6 lg:order-1">
+                            <div className="w-12 h-12 rounded-2xl bg-ucb-blue/5 flex items-center justify-center text-ucb-blue border border-ucb-blue/10 shrink-0">
+                                <Accessibility className="w-6 h-6" />
+                            </div>
+                            <h2 className="text-3xl font-display font-black text-ucb-black">Disability Services & Accommodations</h2>
+                            <p className="text-gray-600 leading-relaxed font-light text-sm">
+                                Urban College is committed to equal access for every student. Students with a physical, psychological, or learning disability may be eligible for academic accommodations under the Americans with Disabilities Act (ADA). We'll work with you to make sure you have the reasonable accommodations needed to fully access and engage in your educational experience.
+                            </p>
+                            <p className="text-gray-500 text-xs">
+                                Services for registered students with disabilities may include the following accommodations after verification and engagement in an interactive process with the Director of Student Services:
+                            </p>
+                            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-gray-600 leading-relaxed font-light">
+                                <li className="flex gap-2 items-start"><ShieldCheck className="w-4 h-4 text-ucb-green shrink-0 mt-0.5" /> Exam accommodations (extended time)</li>
+                                <li className="flex gap-2 items-start"><ShieldCheck className="w-4 h-4 text-ucb-green shrink-0 mt-0.5" /> Peer note-taking coordination</li>
+                                <li className="flex gap-2 items-start"><ShieldCheck className="w-4 h-4 text-ucb-green shrink-0 mt-0.5" /> Assistive technology support</li>
+                                <li className="flex gap-2 items-start"><ShieldCheck className="w-4 h-4 text-ucb-green shrink-0 mt-0.5" /> Advocacy & accessibility guidance</li>
+                                <li className="flex gap-2 items-start"><ShieldCheck className="w-4 h-4 text-ucb-green shrink-0 mt-0.5" /> Diagnostic evaluation referrals</li>
                             </ul>
                         </ScrollAnimation>
                     </div>
 
-                    {/* Accommodation Forms */}
-                    <div className="space-y-6 pt-6 border-t border-gray-200/50">
-                        <ScrollAnimation variant="fade-up" className="text-center max-w-xl mx-auto mb-10">
-                            <h3 className="text-xl font-display font-bold text-gray-800">Accommodation Forms & Requests</h3>
-                            <p className="text-gray-500 text-sm mt-1">Submit your verification documents and request services using these direct links.</p>
-                        </ScrollAnimation>
+                    <hr className="border-gray-100" />
 
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            {forms.map((form, idx) => {
-                                const LinkIcon = form.isExternal ? ExternalLink : Download;
-                                return (
-                                    <ScrollAnimation 
-                                        key={idx} 
-                                        variant="fade-up" 
-                                        delay={`${idx * 0.05}s`}
-                                        className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm flex flex-col justify-between hover:shadow-md hover:border-ucb-blue/20 transition-all gap-6"
+                    {/* Career Services */}
+                    <div id="career-services" className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center scroll-mt-32">
+                        <ScrollAnimation variant="slide-right" className="lg:col-span-7 space-y-6">
+                            <div className="w-12 h-12 rounded-2xl bg-ucb-blue/5 flex items-center justify-center text-ucb-blue border border-ucb-blue/10 shrink-0">
+                                <Briefcase className="w-6 h-6" />
+                            </div>
+                            <h2 className="text-3xl font-display font-black text-ucb-black">Career Services</h2>
+                            <p className="text-gray-600 leading-relaxed font-light text-sm">
+                                Your career journey starts the moment you enroll at Urban College. Career planning and development is built directly into your academic experience — because we want you to apply what you learn directly during your studies and graduate ready to level-up your career. Many of our students are already working while they study, so we recognize that career acceleration doesn't wait for graduation; it begins the moment you enroll.
+                            </p>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-gray-500 font-light pt-2">
+                                <div className="p-4 bg-gray-50 rounded-xl border border-gray-100">
+                                    <strong className="text-gray-700 block mb-1">Professional Assessments</strong>
+                                    Understand your strengths, interests, and career direction from day one.
+                                </div>
+                                <div className="p-4 bg-gray-50 rounded-xl border border-gray-100">
+                                    <strong className="text-gray-700 block mb-1">Career Coursework</strong>
+                                    Put theory into practice with courses tied directly to your field.
+                                </div>
+                                <div className="p-4 bg-gray-50 rounded-xl border border-gray-100">
+                                    <strong className="text-gray-700 block mb-1">Development Seminars</strong>
+                                    Resume writing, mock interview skills, and LinkedIn workshops.
+                                </div>
+                                <div className="p-4 bg-gray-50 rounded-xl border border-gray-100">
+                                    <strong className="text-gray-700 block mb-1">Internships & Placements</strong>
+                                    Gain valuable, real-world experience while you earn your degree.
+                                </div>
+                            </div>
+                        </ScrollAnimation>
+                        <ScrollAnimation variant="slide-left" className="lg:col-span-5 bg-gray-50 border border-gray-100 rounded-3xl p-8 space-y-4">
+                            <h4 className="font-display font-bold text-gray-800 text-base">Contact Career Services</h4>
+                            <p className="text-gray-500 text-xs font-light leading-relaxed">
+                                Get job search support and learn how our team connects you with employment opportunities after graduation.
+                            </p>
+                            <a href="mailto:studentservices@urbancollege.edu" className="flex items-center gap-3 p-3 bg-white rounded-xl border border-gray-150 text-gray-700 hover:text-ucb-blue transition-all font-semibold text-xs shadow-sm block">
+                                <Mail className="w-4.5 h-4.5 text-ucb-orange inline mr-2" />
+                                <span>studentservices@urbancollege.edu</span>
+                            </a>
+                        </ScrollAnimation>
+                    </div>
+
+                    <hr className="border-gray-100" />
+
+                    {/* Workshops, Peer Groups & Personal Support */}
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                        <ScrollAnimation variant="slide-right" className="lg:col-span-6 bg-gray-50 border border-gray-100 rounded-3xl p-8 space-y-5">
+                            <div className="w-10 h-10 rounded-xl bg-ucb-blue/5 text-ucb-blue flex items-center justify-center border border-ucb-blue/10">
+                                <HeartHandshake className="w-5 h-5" />
+                            </div>
+                            <h3 className="text-xl font-display font-bold text-ucb-black">Personal Support & Wellness</h3>
+                            <p className="text-gray-600 text-xs font-light leading-relaxed">
+                                Life is busy — and sometimes it's hard. Our Student Services team is here for you when challenges come up, whether they're academic, personal, or somewhere in between. You don't have to navigate it alone.
+                            </p>
+                            <p className="text-gray-500 text-xs leading-relaxed font-light">
+                                <strong>Mental Health Resources:</strong> Visit the <Link to="/mental-health" className="text-ucb-blue hover:underline font-bold">Mental Health Resources</Link> page for crisis hotlines, Boston Public Health Commission resources, and multilingual support including NAMI's Latinx community resources.
+                            </p>
+                            <div className="flex gap-2">
+                                <a href="mailto:studentservices@urbancollege.edu" className="bg-white border border-gray-250 text-gray-700 hover:text-ucb-blue text-xs px-4 py-2 rounded-xl transition-all shadow-sm font-bold">Email Support</a>
+                                <Link to="/mental-health" className="bg-ucb-blue text-white hover:bg-ucb-blue-glow text-xs px-4 py-2 rounded-xl transition-all shadow-sm font-bold">Mental Health Page</Link>
+                            </div>
+                        </ScrollAnimation>
+                        <ScrollAnimation variant="slide-left" className="lg:col-span-6 bg-gray-50 border border-gray-100 rounded-3xl p-8 space-y-5">
+                            <div className="w-10 h-10 rounded-xl bg-ucb-orange/10 text-ucb-orange flex items-center justify-center border border-ucb-orange/10">
+                                <CalendarCheck className="w-5 h-5" />
+                            </div>
+                            <h3 className="text-xl font-display font-bold text-ucb-black">Workshops & Peer Groups</h3>
+                            <p className="text-gray-600 text-xs font-light leading-relaxed">
+                                Throughout the year, the Student Services Department and the Learning Resource Center offer workshops in English, Spanish, and Mandarin on topics students need most — understanding your syllabus, writing research papers, improving technology skills, and more. Look out for workshop announcements in your student email and Brightspace notifications.
+                            </p>
+                            <p className="text-gray-500 text-xs leading-relaxed font-light">
+                                Urban College staff also help organize peer support groups for academic, professional, and social networking — because the strongest students lift each other up.
+                            </p>
+                            <a href="mailto:lrc@urbancollege.edu" className="bg-white border border-gray-250 text-gray-700 hover:text-ucb-blue text-xs px-4 py-2 rounded-xl transition-all shadow-sm font-bold inline-block w-fit">Ask About Workshops</a>
+                        </ScrollAnimation>
+                    </div>
+
+                    <hr className="border-gray-100" />
+
+                    {/* Student Portal section */}
+                    <ScrollAnimation variant="fade-up" className="bg-gradient-to-r from-ucb-blue to-ucb-blue-glow text-white rounded-3xl p-8 md:p-12 shadow-lg relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl" />
+                        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                            <div className="lg:col-span-8 space-y-4">
+                                <span className="text-[10px] font-bold text-ucb-gold uppercase tracking-wider block font-display">Student Portal Access</span>
+                                <h3 className="text-2xl md:text-3xl font-display font-bold">Manage Everything in One Place</h3>
+                                <p className="text-blue-100 text-xs md:text-sm font-light leading-relaxed">
+                                    Log in to your student portal at <strong>portal.urbancollege.edu</strong> to access your academic and financial information anytime:
+                                </p>
+                                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-blue-100">
+                                    <li className="flex items-center gap-2"><CheckCircleIcon className="w-4 h-4 text-ucb-gold" /> View grades & unofficial transcript</li>
+                                    <li className="flex items-center gap-2"><CheckCircleIcon className="w-4 h-4 text-ucb-gold" /> Check schedule & course enrollment</li>
+                                    <li className="flex items-center gap-2"><CheckCircleIcon className="w-4 h-4 text-ucb-gold" /> Update address, phone, and PIN</li>
+                                    <li className="flex items-center gap-2"><CheckCircleIcon className="w-4 h-4 text-ucb-gold" /> Pay balance via Nelnet</li>
+                                    <li className="flex items-center gap-2"><CheckCircleIcon className="w-4 h-4 text-ucb-gold" /> Request official transcripts</li>
+                                </ul>
+                            </div>
+                            <div className="lg:col-span-4 flex flex-col items-start lg:items-end gap-3 justify-center">
+                                <a 
+                                    href="https://portal.urbancollege.edu" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="bg-white text-ucb-blue hover:bg-ucb-gold hover:text-white px-6 py-3 rounded-xl font-bold transition-all shadow-md text-xs inline-flex items-center gap-2 w-full justify-center min-h-[44px]"
+                                >
+                                    <span>portal.urbancollege.edu</span>
+                                    <ExternalLink className="w-4 h-4" />
+                                </a>
+                                <p className="text-[10px] text-blue-200 text-left lg:text-right w-full font-light">
+                                    Log in using: <em>firstname.lastname@urbancollege.edu</em>
+                                </p>
+                            </div>
+                        </div>
+                    </ScrollAnimation>
+
+                </div>
+            </section>
+
+            {/* FAQs Section */}
+            <section className="py-16 md:py-24 bg-gray-50 border-t border-b border-gray-150">
+                <div className="container mx-auto px-6 max-w-4xl">
+                    <div className="text-center mb-12">
+                        <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs">Questions & Answers</span>
+                        <h2 className="text-3xl font-display font-black text-ucb-black mt-2">Frequently Asked Questions</h2>
+                        <p className="text-gray-500 font-light mt-2 text-sm">Find answers to common student service queries.</p>
+                    </div>
+
+                    <div className="space-y-4">
+                        {faqs.map((faq, idx) => {
+                            const isOpen = openFaqIndex === idx;
+                            return (
+                                <ScrollAnimation
+                                    key={idx}
+                                    variant="fade-up"
+                                    delay={`${idx * 0.05}s`}
+                                    className={`bg-white rounded-2xl border transition-all duration-300 overflow-hidden ${
+                                        isOpen ? 'shadow-md border-ucb-blue/30' : 'shadow-sm border-gray-100 hover:border-ucb-blue/20'
+                                    }`}
+                                >
+                                    <button
+                                        onClick={() => handleFaqToggle(idx)}
+                                        className="w-full flex justify-between items-center p-6 text-left transition-colors cursor-pointer"
                                     >
-                                        <div className="space-y-3">
-                                            <div className="flex justify-between items-start gap-2">
-                                                <span className="text-[9px] font-bold uppercase tracking-widest bg-gray-100 text-gray-500 px-2 py-0.5 rounded-full border border-gray-200/40">{form.type}</span>
-                                            </div>
-                                            <h4 className="font-display font-bold text-gray-800 text-sm">{form.title}</h4>
-                                            <p className="text-gray-500 text-xs font-light leading-relaxed">{form.desc}</p>
+                                        <span className={`font-bold text-base transition-colors pr-6 ${isOpen ? 'text-ucb-blue' : 'text-ucb-black'}`}>
+                                            {faq.q}
+                                        </span>
+                                        <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${
+                                            isOpen ? 'bg-ucb-blue text-white rotate-180' : 'bg-gray-100 text-ucb-black'
+                                        }`}>
+                                            {isOpen ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
                                         </div>
-                                        <a 
-                                            href={form.path}
-                                            target={form.isExternal || form.path.endsWith('.pdf') ? "_blank" : undefined}
-                                            rel={form.isExternal || form.path.endsWith('.pdf') ? "noopener noreferrer" : undefined}
-                                            className="w-full text-center bg-ucb-blue text-white hover:bg-ucb-blue-glow py-2.5 rounded-xl text-xs font-bold transition-all shadow inline-flex items-center justify-center gap-1.5 min-h-[38px] cursor-pointer"
-                                        >
-                                            {form.isExternal ? "Open Form" : "Download PDF"}
-                                            <LinkIcon className="w-3.5 h-3.5" />
-                                        </a>
-                                    </ScrollAnimation>
-                                );
-                            })}
-                        </div>
+                                    </button>
+                                    <div 
+                                        className={`transition-all duration-300 ease-in-out overflow-hidden ${
+                                            isOpen ? 'max-h-[300px] opacity-100 border-t border-gray-100' : 'max-h-0 opacity-0'
+                                        }`}
+                                    >
+                                        <div className="p-6 text-sm text-gray-600 leading-relaxed font-light">
+                                            {faq.a}
+                                        </div>
+                                    </div>
+                                </ScrollAnimation>
+                            );
+                        })}
                     </div>
-                </div>
-            </section>
-
-            {/* Workshops & Resources */}
-            <section className="py-16 bg-white relative z-10 border-b border-gray-100">
-                <div className="container mx-auto px-6 max-w-6xl">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                        {/* Student Success Workshops */}
-                        <ScrollAnimation variant="slide-right" className="space-y-6 bg-gray-50/50 p-8 rounded-3xl border border-gray-100 flex flex-col justify-between">
-                            <div className="space-y-4">
-                                <div className="w-10 h-10 rounded-xl bg-ucb-orange/10 text-ucb-orange flex items-center justify-center border border-ucb-orange/10 shrink-0">
-                                    <CalendarCheck className="w-5 h-5" />
-                                </div>
-                                <h3 className="text-2xl font-display font-bold text-gray-800">Student Success Workshops</h3>
-                                <p className="text-gray-600 leading-relaxed font-light text-xs md:text-sm">
-                                    The Student Services Department and the Learning Resource Center (LRC) offer multilingual workshops throughout the academic year.
-                                </p>
-                                <p className="text-gray-500 leading-relaxed font-light text-xs">
-                                    These sessions cover syllabus structures, research strategies, writing templates, and tech guides. Check UCB's monthly newsletters for active times and listings.
-                                </p>
-                            </div>
-                        </ScrollAnimation>
-
-                        {/* Basic Needs Resources */}
-                        <ScrollAnimation variant="slide-left" className="space-y-6 bg-gray-50/50 p-8 rounded-3xl border border-gray-100 flex flex-col justify-between">
-                            <div className="space-y-4">
-                                <div className="w-10 h-10 rounded-xl bg-ucb-green/10 text-ucb-green flex items-center justify-center border border-ucb-green/10 shrink-0">
-                                    <HeartHandshake className="w-5 h-5" />
-                                </div>
-                                <h3 className="text-2xl font-display font-bold text-gray-800">Basic Needs & Housing</h3>
-                                <p className="text-gray-600 leading-relaxed font-light text-xs md:text-sm">
-                                    UCB supports students struggling with factors that block education, including housing, food, healthcare, or technology.
-                                </p>
-                                <p className="text-gray-500 leading-relaxed font-light text-xs">
-                                    For outside agency help, dial <strong>211</strong> or visit <a href="https://mass211.org" target="_blank" rel="noreferrer" className="text-ucb-blue hover:underline">mass211.org</a> to connect with community services.
-                                </p>
-                            </div>
-                            <div className="flex flex-wrap gap-2 pt-2 border-t border-gray-200/50">
-                                <a 
-                                    href="/s/Student-Services-Resource-Handbook-8.pdf"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="bg-white border border-gray-200 text-gray-700 hover:text-ucb-blue px-4 py-2.5 rounded-xl text-xs font-bold shadow-sm inline-flex items-center gap-1.5 transition-all"
-                                >
-                                    <Download className="w-4 h-4 text-ucb-orange" />
-                                    Student Resource Handbook
-                                </a>
-                                <a 
-                                    href="https://mass211.org/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="bg-white border border-gray-200 text-gray-700 hover:text-ucb-blue px-4 py-2.5 rounded-xl text-xs font-bold shadow-sm inline-flex items-center gap-1.5 transition-all"
-                                >
-                                    <ExternalLink className="w-4 h-4 text-ucb-blue" />
-                                    Visit Mass 211
-                                </a>
-                            </div>
-                        </ScrollAnimation>
-                    </div>
-                </div>
-            </section>
-
-            {/* Support Coordinator Contacts */}
-            <section className="py-16 bg-white relative z-10">
-                <div className="container mx-auto px-6 max-w-4xl text-center space-y-8">
-                    <ScrollAnimation variant="fade-up" className="space-y-3">
-                        <h2 className="text-3xl font-display font-black text-ucb-black">Contact Coordinator</h2>
-                        <p className="text-gray-500 font-light max-w-xl mx-auto text-sm">
-                            Have questions regarding accessibility, ADA guidelines, or housing resources? Reach out directly.
-                        </p>
-                    </ScrollAnimation>
-
-                    <ScrollAnimation variant="fade-up" className="bg-gray-50 rounded-3xl p-8 border border-gray-100 max-w-2xl mx-auto space-y-6">
-                        <div className="space-y-1">
-                            <span className="text-[10px] font-bold text-ucb-orange uppercase tracking-widest block font-display">Director of Student Services and Support</span>
-                            <h3 className="text-2xl font-display font-bold text-ucb-blue">Rosana Perella</h3>
-                        </div>
-
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-lg mx-auto pt-4 border-t border-gray-200/50">
-                            <a 
-                                href="tel:617-449-7380" 
-                                className="bg-white p-4 rounded-xl border border-gray-150 flex items-center justify-center gap-3 text-gray-700 hover:text-ucb-blue shadow-sm hover:shadow transition-all font-semibold"
-                            >
-                                <Phone className="w-5 h-5 text-ucb-blue" />
-                                (617) 449-7380
-                            </a>
-                            <a 
-                                href="mailto:Rosana.Perella@urbancollege.edu?subject=Accessibility%20and%20Support%20Services%20Inquiry"
-                                className="bg-white p-4 rounded-xl border border-gray-150 flex items-center justify-center gap-3 text-gray-700 hover:text-ucb-blue shadow-sm hover:shadow transition-all font-semibold"
-                            >
-                                <Mail className="w-5 h-5 text-ucb-orange" />
-                                Send Email
-                            </a>
-                        </div>
-                    </ScrollAnimation>
                 </div>
             </section>
         </div>
     );
 };
+
+// Simple Chevron Icon for links
+const ChevronRightIcon: React.FC<any> = (props) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="m9 18 6-6-6-6"/></svg>
+);
+
+// Simple Check Icon for lists
+const CheckCircleIcon: React.FC<any> = (props) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+);
 
 export default StudentServices;

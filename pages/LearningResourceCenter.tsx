@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { BookOpen, Monitor, Users, Calendar, Clock, MapPin, Mail, Phone, ExternalLink, MessageCircle, ChevronDown, ChevronUp, CheckCircle } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 
@@ -9,7 +10,7 @@ const faqs = [
     { q: "How do I schedule a tutoring session?", a: "Book appointments via Bookings or by phone (617-449-7070). Remote tutoring is available Monday–Saturday (by appointment)." },
     { q: "Are there group study sessions?", a: "Yes! The LRC can host workshops on time management, research skills, and software tutorials (e.g., Microsoft Office), and Free English conversation classes." },
     { q: "Does the LRC have computers or printers?", a: "Yes. The center has 2 computer workstations. However, we suggest if you come in person, bring the device you use for class. We may be able to help you install bookmarks to frequently used links or troubleshoot issues that are keeping you from completing work." },
-    { q: "What online resources are available?", a: "Access 30+ Gale Databases for journals, e-books, and newspapers. Use your student ID to log in remotely." },
+    { q: "What online resources are available?", a: "Access 30+ Gale Databases (available online at https://www.galepages.com/mlin_b_urbancb) for journals, e-books, and newspapers. Use your student ID to log in remotely." },
     { q: "Are interpreters available?", a: "Yes. The LRC coordinates interpreters and captioning services. Please let us know if you will need translation or interpreting services when you make an appointment and we will organize the support you need." },
     { q: "Is there a limit on tutoring sessions?", a: "No—students can schedule unlimited sessions, but same-day appointments depend on tutor availability." }
 ];
@@ -24,7 +25,7 @@ const LearningResourceCenter: React.FC = () => {
                 title="Learning Resource Center"
                 subtitle="Empowering your academic journey at Urban College with tutoring, language support, and technology assistance."
                 breadcrumbs={[
-                    { label: 'Student Services', path: '/#resources' },
+                    { label: 'Student Services', path: '/student-services' },
                     { label: 'Learning Resource Center' }
                 ]}
                 imageSrc="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2940&auto=format&fit=crop"
@@ -74,19 +75,24 @@ const LearningResourceCenter: React.FC = () => {
                                 <div className="relative z-10">
                                     <h3 className="font-display font-bold text-2xl mb-6">LRC Resources by Language</h3>
                                     <div className="flex flex-wrap gap-4">
-                                        <a href="#" className="bg-white text-ucb-blue px-6 py-3 rounded-full font-bold hover:bg-ucb-gold hover:text-white transition-colors">
+                                        <Link to="/lrc-english" className="bg-white text-ucb-blue px-6 py-3 rounded-full font-bold hover:bg-ucb-gold hover:text-white transition-colors">
                                             LRC Resources (English)
-                                        </a>
-                                        <a href="#" className="bg-white text-ucb-blue px-6 py-3 rounded-full font-bold hover:bg-ucb-gold hover:text-white transition-colors">
+                                        </Link>
+                                        <Link to="/lrc-spanish" className="bg-white text-ucb-blue px-6 py-3 rounded-full font-bold hover:bg-ucb-gold hover:text-white transition-colors">
                                             Recursos Académicos (Español)
-                                        </a>
-                                        <a href="#" className="bg-white text-ucb-blue px-6 py-3 rounded-full font-bold hover:bg-ucb-gold hover:text-white transition-colors">
+                                        </Link>
+                                        <Link to="/lrc-mandarin" className="bg-white text-ucb-blue px-6 py-3 rounded-full font-bold hover:bg-ucb-gold hover:text-white transition-colors">
                                             学术资源 (Mandarin)
+                                        </Link>
+                                    </div>
+                                    <div className="flex flex-wrap gap-6 mt-6">
+                                        <a href="/s/Outlook-Tools-Guide_LRC-July-2023.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-white hover:text-ucb-gold transition-colors font-medium">
+                                            <Monitor className="w-5 h-5" /> Download Microsoft Tools Guide (PDF)
+                                        </a>
+                                        <a href="/s/self-led-english-practice-2.html" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-white hover:text-ucb-gold transition-colors font-medium">
+                                            <ExternalLink className="w-5 h-5" /> Self-led English Practice
                                         </a>
                                     </div>
-                                    <a href="#" className="inline-flex items-center gap-2 mt-6 text-white hover:text-ucb-gold transition-colors font-medium">
-                                        <Monitor className="w-5 h-5" /> Download Microsoft Tools Guide (PDF)
-                                    </a>
                                 </div>
                             </div>
 

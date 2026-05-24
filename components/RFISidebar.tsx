@@ -1,13 +1,13 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { X, ChevronRight, GraduationCap, Send, CheckCircle, ArrowRight, Phone, Mail, User, BookOpen, Star } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { X, ChevronRight, GraduationCap, CheckCircle, Star } from 'lucide-react';
+
+
 
 const RFISidebar: React.FC = () => {
   const [panelOpen, setPanelOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-  const [form, setForm] = useState({ firstName: '', lastName: '', email: '', phone: '', program: '' });
-  const [focusedField, setFocusedField] = useState<string | null>(null);
   const [pulseAnim, setPulseAnim] = useState(false);
+  const [formId, setFormId] = useState('urbancollege.forms.23262');
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 150);
@@ -26,29 +26,68 @@ const RFISidebar: React.FC = () => {
     return () => clearInterval(timer);
   }, [panelOpen, scrolled]);
 
-  // Listen for custom event from Hero form
+  const getFormIdForCurrentPath = (pathname: string): string => {
+    const path = pathname.toLowerCase();
+    
+    if (path.includes('business-certificate')) return 'urbancollege.forms.23671';
+    if (path.includes('childrens-behavioral-health-certificate')) return 'urbancollege.forms.23674';
+    if (path.includes('mandarin') || path.includes('zh') || path.includes('chinese')) return 'urbancollege.forms.26517';
+    if (path.includes('digital-marketing-certificate')) return 'urbancollege.forms.23672';
+    if (path.includes('early-childhood-education-associate') || path.endsWith('early-childhood-education')) return 'urbancollege.forms.23663';
+    if (path.includes('early-childhood-education-certificate') || path.includes('foundations-early-childhood')) return 'urbancollege.forms.23664';
+    if (path.includes('elder-care')) return 'urbancollege.forms.23667';
+    if (path.includes('general-studies-associate')) return 'urbancollege.forms.23665';
+    if (path.includes('general-studies-certificate')) return 'urbancollege.forms.23666';
+    if (path.includes('human-services-administration')) return 'urbancollege.forms.23662';
+    if (path.includes('human-services-certificate')) return 'urbancollege.forms.23668';
+    if (path.includes('paraprofessional-educator-certificate')) return 'urbancollege.forms.23673';
+    if (path.includes('professional-studies')) return 'urbancollege.forms.23670';
+    if (path.includes('project-management-certificate')) return 'urbancollege.forms.23669';
+    if (path.includes('spanish') || path.includes('espanol') || path.includes('es')) return 'urbancollege.forms.26515';
+    if (path.includes('your-future')) return 'urbancollege.forms.23661';
+    if (path.includes('getstarted')) return 'urbancollege.forms.23660';
+    if (path.includes('say-yes-a') || path.includes('say-yes-b')) return 'urbancollege.forms.26190';
+    if (path.includes('whav')) return 'urbancollege.forms.23676';
+    
+    return 'urbancollege.forms.23262';
+  };
+
   useEffect(() => {
-    const openPanel = (e: CustomEvent) => {
-      if (e.detail?.name) setForm(f => ({ ...f, firstName: e.detail.name }));
-      if (e.detail?.email) setForm(f => ({ ...f, email: e.detail.email }));
-      setPanelOpen(true);
+    if (panelOpen) {
+      const resolved = getFormIdForCurrentPath(window.location.pathname);
+      setFormId(resolved);
+    }
+  }, [panelOpen]);
+
+  useEffect(() => {
+    if (!panelOpen) return;
+
+    // Set configuration
+    (window as any).__lum_config = {
+      formId: formId,
+      apiUrl: "https://urbancollege.api.451.io/v2/",
+      accessToken: "WeJW3dZzCzD0RDuF04Sg2CMZQoJOmdjqYCzsE76e",
+      featureToken: "sfdVcQug7oK8vr5G3uCr9QB1YZrqZapO2RBvSjzt",
+      analyticsToken: "MVrxFM5pwBJlDgZgXU4xULMKzv3mMKApUUcL1dMe",
+      sourceUrl: encodeURIComponent(window.location.href)
     };
-    window.addEventListener('openRFIPanel', openPanel as EventListener);
-    return () => window.removeEventListener('openRFIPanel', openPanel as EventListener);
-  }, []);
 
-  const handleSubmit = useCallback((e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setPanelOpen(false);
-      setForm({ firstName: '', lastName: '', email: '', phone: '', program: '' });
-    }, 3500);
-  }, []);
+    // Remove existing script if any
+    const oldScript = document.querySelector('script[src*="embed-forms.451.io"]');
+    if (oldScript) {
+      oldScript.remove();
+    }
 
-  // Focus ring style for teal outline
-  const inputFocusClass = 'focus:outline-none focus:ring-[3px] focus:ring-[#26AB9A] focus:border-transparent focus:bg-white';
+    // Append embed script
+    const script = document.createElement('script');
+    script.src = "https://embed-forms.451.io/bundle.min.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      script.remove();
+    };
+  }, [formId, panelOpen]);
 
   return (
     <>
@@ -78,7 +117,7 @@ const RFISidebar: React.FC = () => {
           <button
             id="rfi-cta-button"
             onClick={() => setPanelOpen(true)}
-            className={`flex items-center gap-2 bg-[#E68325] text-white px-5 py-2.5 rounded-full font-bold text-sm whitespace-nowrap hover:bg-[#d4751c] hover:scale-[1.03] active:scale-[0.98] transition-all duration-200 ${pulseAnim ? 'animate-[ctaPulse_0.6s_ease-in-out]' : ''
+            className={`flex items-center gap-2 bg-[#E68325] text-white px-5 py-2.5 rounded-full font-bold text-sm whitespace-nowrap hover:bg-[#d4751c] hover:scale-[1.03] active:scale-[0.98] transition-all duration-200 cursor-pointer ${pulseAnim ? 'animate-[ctaPulse_0.6s_ease-in-out]' : ''
               }`}
             style={{ boxShadow: '0 4px 20px rgba(230,131,37,0.5), 0 1px 4px rgba(0,0,0,0.15)' }}
           >
@@ -92,7 +131,7 @@ const RFISidebar: React.FC = () => {
       {/* ─── Mobile Floating CTA Tab (right edge) ─── */}
       <button
         onClick={() => setPanelOpen(true)}
-        className={`md:hidden fixed right-0 top-[45%] -translate-y-1/2 z-40 bg-[#E68325] text-white py-4 px-2 rounded-l-lg font-bold text-[11px] tracking-[0.15em] transition-all duration-500 ease-out whitespace-nowrap ${
+        className={`md:hidden fixed right-0 top-[45%] -translate-y-1/2 z-40 bg-[#E68325] text-white py-4 px-2 rounded-l-lg font-bold text-[11px] tracking-[0.15em] transition-all duration-500 ease-out whitespace-nowrap cursor-pointer ${
           scrolled && !panelOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full pointer-events-none'
         } ${pulseAnim ? 'animate-[ctaPulse_0.6s_ease-in-out]' : ''}`}
         style={{ 
@@ -143,7 +182,7 @@ const RFISidebar: React.FC = () => {
               </div>
               <button
                 onClick={() => setPanelOpen(false)}
-                className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/25 flex items-center justify-center transition-colors"
+                className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/25 flex items-center justify-center transition-colors cursor-pointer"
                 aria-label="Close panel"
               >
                 <X className="w-4 h-4" />
@@ -160,187 +199,15 @@ const RFISidebar: React.FC = () => {
         </div>
 
         {/* Panel Body — Scrollable */}
-        <div className="flex-1 overflow-y-auto">
+        <div className="flex-1 overflow-y-auto bg-gray-50/50">
           <div className="px-6 py-5">
-            {submitted ? (
-              /* ─── Success State ─── */
-              <div className="text-center py-4 md:py-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-[#26AB9A]/20 to-green-50 rounded-full flex items-center justify-center mx-auto mb-5 relative">
-                  <CheckCircle className="w-10 h-10 text-[#26AB9A]" />
-                  <div className="absolute inset-0 rounded-full border-2 border-[#26AB9A]/30 animate-ping" />
-                </div>
-                <h4 className="font-bold text-xl text-[#0066A2] mb-2">Thank You!</h4>
-                <p className="text-gray-600 text-sm mb-4 leading-relaxed">An enrollment advisor will contact you within 1 business day.</p>
-                <div className="bg-blue-50 rounded-xl p-4 text-left">
-                  <p className="text-xs font-bold text-[#0066A2] uppercase tracking-wider mb-2 leading-relaxed">What happens next?</p>
-                  <div className="space-y-2">
-                    {['We review your inquiry', 'An advisor calls or emails you', 'You get a personalized plan'].map((step, i) => (
-                      <div key={i} className="flex items-center gap-2 text-sm text-gray-600 leading-relaxed">
-                        <div className="w-5 h-5 rounded-full bg-[#0066A2] text-white text-[10px] font-bold flex items-center justify-center shrink-0">{i + 1}</div>
-                        <span>{step}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ) : (
-              /* ─── Form ─── */
-              <form onSubmit={handleSubmit} className="space-y-4">
-                {/* Name row */}
-                <div className="grid grid-cols-2 gap-3">
-                  <div>
-                    <label className="flex items-center gap-1.5 text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
-                      <User className="w-3 h-3 text-gray-400" />First Name <span className="text-[#E68325]">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      value={form.firstName}
-                      onChange={e => setForm(f => ({ ...f, firstName: e.target.value }))}
-                      onFocus={() => setFocusedField('firstName')}
-                      onBlur={() => setFocusedField(null)}
-                      className={`w-full px-3 py-2.5 rounded-lg bg-gray-50 border border-gray-200 ${inputFocusClass} transition-all text-sm`}
-                      placeholder="Maria"
-                    />
-                  </div>
-                  <div>
-                    <label className="flex items-center gap-1.5 text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
-                      <User className="w-3 h-3 text-gray-400" />Last Name <span className="text-[#E68325]">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      value={form.lastName}
-                      onChange={e => setForm(f => ({ ...f, lastName: e.target.value }))}
-                      onFocus={() => setFocusedField('lastName')}
-                      onBlur={() => setFocusedField(null)}
-                      className={`w-full px-3 py-2.5 rounded-lg bg-gray-50 border border-gray-200 ${inputFocusClass} transition-all text-sm`}
-                      placeholder="Gonzalez"
-                    />
-                  </div>
-                </div>
-
-                {/* Email */}
-                <div>
-                  <label className="flex items-center gap-1.5 text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
-                    <Mail className="w-3 h-3 text-gray-400" />Email Address <span className="text-[#E68325]">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    required
-                    value={form.email}
-                    onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
-                    onFocus={() => setFocusedField('email')}
-                    onBlur={() => setFocusedField(null)}
-                    className={`w-full px-3 py-2.5 rounded-lg bg-gray-50 border border-gray-200 ${inputFocusClass} transition-all text-sm`}
-                    placeholder="maria@email.com"
-                  />
-                </div>
-
-                {/* Phone */}
-                <div>
-                  <label className="flex items-center gap-1.5 text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
-                    <Phone className="w-3 h-3 text-gray-400" />Phone <span className="text-gray-400 normal-case font-normal leading-relaxed">(optional)</span>
-                  </label>
-                  <input
-                    type="tel"
-                    value={form.phone}
-                    onChange={e => setForm(f => ({ ...f, phone: e.target.value }))}
-                    onFocus={() => setFocusedField('phone')}
-                    onBlur={() => setFocusedField(null)}
-                    className={`w-full px-3 py-2.5 rounded-lg bg-gray-50 border border-gray-200 ${inputFocusClass} transition-all text-sm`}
-                    placeholder="(617) 555-0123"
-                  />
-                </div>
-
-                {/* Program */}
-                <div>
-                  <label className="flex items-center gap-1.5 text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
-                    <BookOpen className="w-3 h-3 text-gray-400" />Program of Interest
-                  </label>
-                  <select
-                    value={form.program}
-                    onChange={e => setForm(f => ({ ...f, program: e.target.value }))}
-                    onFocus={() => setFocusedField('program')}
-                    onBlur={() => setFocusedField(null)}
-                    className={`w-full px-3 py-2.5 rounded-lg bg-gray-50 border border-gray-200 ${inputFocusClass} transition-all text-sm`}
-                  >
-                    <option value="">Select a program...</option>
-                    <optgroup label="Associate Degrees">
-                      <option>Early Childhood Education (A.S.)</option>
-                      <option>Human Services Administration (A.S.)</option>
-                      <option>General Studies (A.S.)</option>
-                    </optgroup>
-                    <optgroup label="Certificates">
-                      <option>Business Certificate</option>
-                      <option>Case Management</option>
-                      <option>Children's Behavioral Health</option>
-                      <option>Digital Marketing</option>
-                      <option>Elder Care</option>
-                      <option>ECE Certificate</option>
-                      <option>General Studies Certificate</option>
-                      <option>Human Services Certificate</option>
-                      <option>Paraprofessional Educator</option>
-                      <option>Project Management</option>
-                    </optgroup>
-                  </select>
-                </div>
-
-                {/* Submit */}
-                <button
-                  type="submit"
-                  className="w-full bg-[#E68325] text-white font-bold py-3.5 rounded-xl hover:bg-[#d4751c] active:scale-[0.98] transition-all duration-200 text-sm flex items-center justify-center gap-2 group relative overflow-hidden min-h-[44px]"
-                  style={{ boxShadow: '0 4px 16px rgba(230,131,37,0.35)' }}
-                >
-                  <span className="relative z-10 flex items-center gap-2">
-                    Request Information <Send className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                  </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#d4751c] to-[#E68325] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </button>
-
-                <p className="text-[11px] text-gray-400 text-center leading-relaxed">
-                  By submitting, you agree to be contacted by Urban College of Boston. No commitment required.
-                </p>
-              </form>
-            )}
-
-            {/* Quick facts — always visible below form */}
-            {!submitted && (
-              <div className="mt-5 pt-5 border-t border-gray-100">
-                <p className="text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-3 leading-relaxed">Quick Facts</p>
-                <div className="grid grid-cols-2 gap-2">
-                  {[
-                    { label: 'Application Fee', value: 'FREE', color: '#26AB9A' },
-                    { label: 'Most Students Pay', value: '$0 Tuition', color: '#E68325' },
-                    { label: 'Start Date', value: 'Rolling', color: '#0066A2' },
-                    { label: 'Format', value: 'Online & Hybrid', color: '#0066A2' },
-                  ].map(item => (
-                    <div key={item.label} className="bg-gray-50 rounded-lg p-2.5 text-center">
-                      <div className="text-xs font-bold" style={{ color: item.color }}>{item.value}</div>
-                      <div className="text-[10px] text-gray-400 mt-0.5 leading-relaxed">{item.label}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
+            {/* Embed 451.io Form Element */}
+            <div className="rfi-form-embed-container min-h-[400px]">
+              {React.createElement('lum-root', { className: "text-gray-500 text-sm text-center py-10 block" }, "Loading official request form...")}
+            </div>
           </div>
         </div>
       </div>
-
-      {/* ─── Vertical Tab Trigger (desktop, visible before scroll) ─── */}
-      <button
-        id="rfi-tab-trigger"
-        onClick={() => setPanelOpen(true)}
-        className={`fixed right-0 top-1/2 -translate-y-1/2 z-40 font-bold tracking-widest transition-all duration-500 hidden lg:flex items-center ${scrolled || panelOpen ? 'opacity-0 pointer-events-none translate-x-full' : 'opacity-100 translate-x-0'
-          }`}
-      >
-        <div
-          className="bg-[#E68325] text-white py-5 px-2.5 rounded-l-xl hover:bg-[#d4751c] transition-colors"
-          style={{ writingMode: 'vertical-rl', fontSize: '11px', letterSpacing: '0.15em', boxShadow: '-4px 0 16px rgba(230,131,37,0.3)' }}
-        >
-          REQUEST INFO
-        </div>
-      </button>
     </>
   );
 };
