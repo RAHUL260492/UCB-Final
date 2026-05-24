@@ -15,7 +15,7 @@ const TranscriptRequests: React.FC = () => {
 
     const breadcrumbs = [
         { label: "Home", path: "/" },
-        { label: "Current Students", path: "/#students" },
+        { label: "Student Services", path: "/student-services" },
         { label: "Transcript Requests" }
     ];
 
