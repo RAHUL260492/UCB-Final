@@ -34,10 +34,10 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               {[
                 { name: 'About Us', path: '/about' },
+                { name: 'Leadership & Team', path: '/team' },
                 { name: 'Academic Calendar', path: '#' },
                 { name: 'Library Services', path: '#' },
                 { name: 'Career Center', path: '#' },
-                { name: 'Faculty Directory', path: '#' },
                 { name: 'Student Portal', path: '#' }
               ].map((item) => (
                 <li key={item.name}>

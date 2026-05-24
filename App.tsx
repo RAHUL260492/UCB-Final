@@ -7,6 +7,7 @@ import BackgroundShapes from './components/BackgroundShapes';
 import Home from './pages/Home';
 import About from './pages/About';
 import AcademicPrograms from './pages/AcademicPrograms';
+import Team from './pages/Team';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import Program from './pages/Program';
@@ -45,6 +46,8 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/mission" element={<About />} />
             <Route path="/programs" element={<AcademicPrograms />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/leadership" element={<Team />} />
             <Route path="/programs/:slug" element={<Program />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />

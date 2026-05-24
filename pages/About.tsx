@@ -421,9 +421,9 @@ const About: React.FC = () => {
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
                             {[
                                 { name: "Academic Programs", path: "/programs" },
-                                { name: "Administration & Leadership", path: "#" },
+                                { name: "Administration & Leadership", path: "/team" },
                                 { name: "Accreditation", path: "#" },
-                                { name: "Board of Trustees", path: "#" },
+                                { name: "Board of Trustees", path: "/team" },
                                 { name: "Urban College Foundation", path: "#" },
                                 { name: "Contact Us", path: "#" }
                             ].map((link, idx) => (

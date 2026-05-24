@@ -38,7 +38,15 @@ const Navigation: React.FC = () => {
     return () => window.removeEventListener('resize', updateHeaderHeight);
   }, [bannerOpen, isScrolled]);
   const navLinks: Array<{ name: string; path: string; dropdown?: any[]; groups?: any[] }> = [
-    { name: 'About Urban College', path: '/about' },
+    { 
+      name: 'About Urban College', 
+      path: '/about',
+      dropdown: [
+        { name: 'About Us', path: '/about' },
+        { name: 'Our Mission & Vision', path: '/mission' },
+        { name: 'Leadership & Team', path: '/team' }
+      ]
+    },
     {
       name: 'Programs',
       path: '/programs',
