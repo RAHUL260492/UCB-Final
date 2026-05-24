@@ -41,8 +41,8 @@ const PROGRAMS: Program[] = [
   { id: '11', title: 'Elder Care', type: 'Certificate', tags: ['English', '1 Year'], description: 'Transform lives while building your own career. Master the skills that help older adults and their families thrive.', link: '/programs/elder-care' },
   { id: '12', title: 'Early Childhood Education', type: 'Certificate', tags: ['English & Spanish', '1 Year'], description: 'Begin your journey in early childhood education.', link: '/programs/early-childhood-education-certificate' },
   { id: '13', title: 'General Studies', type: 'Certificate', tags: ['English & Spanish', '1 Year'], description: 'Explore subjects and build foundational knowledge.', link: '/programs/general-studies-certificate' },
-  { id: '14', title: 'Human Services', type: 'Certificate', tags: ['English', '1 Year'], description: 'Gain skills to support individuals and communities.', link: '/programs/human-services-certificate' },
-  { id: '15', title: 'Paraprofessional Educator', type: 'Certificate', tags: ['English & Spanish', '1 Year'], description: 'Assist teachers and support student learning.', link: '/programs/paraprofessional-educator-certificate' },
+  { id: '14', title: 'Human Services', type: 'Certificate', tags: ['English & Spanish', '1 Year'], description: 'Launch your career helping others while you work. Build the credentials to advance your career in social services.', link: '/programs/human-services-certificate' },
+  { id: '15', title: 'Paraprofessional Educator', type: 'Certificate', tags: ['English & Spanish', '1 Year'], description: 'Shape young minds and launch your teaching career. Support teachers and help students of all abilities succeed.', link: '/programs/paraprofessional-educator-certificate' },
   { id: '16', title: 'Project Management', type: 'Certificate', tags: ['English', '9 Months'], description: 'Learn to lead projects effectively and efficiently.', link: '/programs/project-management-certificate' },
 ];
 

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BookOpen, Clock, Globe, Briefcase, CheckCircle, TrendingUp, Users, DollarSign, Calendar, Award, GraduationCap, ArrowRight } from 'lucide-react';
+import { Clock, Globe, Briefcase, CheckCircle, TrendingUp, Users, DollarSign, Calendar, Award, GraduationCap } from 'lucide-react';
 import ProgramPageLayout, { ProgramBenefit, ProgramStat } from '../components/ProgramPageLayout';
 
 // ─── Icon helper for bilingual ────────────────────────────────────────────────
@@ -15,14 +15,14 @@ const MessageCircleIcon: React.ElementType = (props: any) => (
 const courses = [
     { title: "Introduction to Teaching and Learning", desc: "Understand how students learn and how to support them" },
     { title: "Human Behavior in the Social Environment", desc: "Recognize the factors that shape child development" },
-    { title: "Teaching Mathematics for Educators", desc: "Build skills to support math instruction" },
-    { title: "Introduction to Special Education", desc: "Master foundations of supporting students with special needs" },
-    { title: "Introduction to Behavior Analysis", desc: "Learn proven strategies for positive behavior support" },
-    { title: "Early Language and Literacy Development", desc: "Help students build reading and writing skills" }
+    { title: "Teaching Mathematics for Educators", desc: "Build skills to support math instruction at every level" },
+    { title: "Introduction to Special Education", desc: "Master the foundations of supporting students with special needs" },
+    { title: "Introduction to Behavior Analysis and Intervention Skills", desc: "Learn proven strategies for positive behavior support" },
+    { title: "Early Language and Literacy Development", desc: "Help students build the reading and writing skills they need to succeed" }
 ];
 
 const outcomes = [
-    { title: "Paraprofessional Educator", desc: "Average salary: $55,547/year in Massachusetts—one of the highest in the nation!" },
+    { title: "Paraprofessional Educator", desc: "Support classroom instruction and help students thrive. (Average salary: $55,547/year in Massachusetts—one of the highest in the nation! 7% job growth—faster than average!)" },
     { title: "Teaching Assistant", desc: "Work alongside teachers to support student learning" },
     { title: "Special Education Aide", desc: "Support students with special needs in inclusive classrooms" },
     { title: "Instructional Aide", desc: "Provide one-on-one and small group support to students" },
@@ -31,12 +31,14 @@ const outcomes = [
 ];
 
 const benefits: ProgramBenefit[] = [
+    { title: "High MA Salaries", desc: "Earn up to $55,547/year in Massachusetts—one of the highest-paying states for paraprofessional educators!", icon: DollarSign },
     { title: "Fast Track", desc: "Finish in as little as one year (only 21 credits)", icon: Clock },
-    { title: "100% Online", desc: "Learn on a schedule that fits to your busy life", icon: Globe },
-    { title: "Debt-Free Goal", desc: "Most students graduate debt-free!", icon: DollarSign },
-    { title: "Special Education Expertise", desc: "Master one of the most in-demand skills", icon: Award },
-    { title: "High MA Salaries", desc: "Earn up to $55,547/year in Massachusetts", icon: TrendingUp },
-    { title: "Bilingual Options", desc: "ESL support and courses in Spanish available", icon: MessageCircleIcon },
+    { title: "100% Online", desc: "Study 100% online: Learn on a schedule that fits into your busy life", icon: Globe },
+    { title: "Debt-Free Goal", desc: "Most students graduate debt-free!", icon: CheckCircle },
+    { title: "Bilingual Options", desc: "Study in English or Spanish: Choose the language that works for you", icon: MessageCircleIcon },
+    { title: "No Textbooks", desc: "No textbooks or hidden fees: Everything you need is included", icon: BookOpen },
+    { title: "ESL Support", desc: "ESL support available: Tailored to each student's needs", icon: Users },
+    { title: "Special Education", desc: "Special education expertise: Master one of the most in-demand skills in education today", icon: Award }
 ];
 
 const stats: ProgramStat[] = [
@@ -51,12 +53,23 @@ const stats: ProgramStat[] = [
 ];
 
 const faqs = [
-    { q: "Is the program entirely online?", a: "Yes! 100% online so you can learn on your schedule—early mornings, late nights, or weekends." },
-    { q: "How long does the program take?", a: "In as little as one year! Complete your 21 credits full-time, or take it at your own pace." },
-    { q: "Do I need prior experience in education?", a: "No! No prior experience is required. The program covers all foundational knowledge." },
-    { q: "Will I learn special education skills?", a: "Yes! Special education is an in-demand area, and this program gives you foundational skills." },
-    { q: "Can I study in Spanish?", a: "Absolutely! Courses are available in English and Spanish." },
+    { q: "Is this program right for me if I want to work with children?", a: "Absolutely! This certificate is built for people who want to make a difference in children's lives. You'll graduate ready to support students in K-12 classrooms across Massachusetts." },
+    { q: "Is the program entirely online?", a: "Yes! The program is 100% online. All classes, assignments, and discussions happen through our online platform, so you can learn on your schedule—early mornings, late nights, or weekends." },
+    { q: "How long does the program take?", a: "In as little as one year! Complete your 21 credits full-time, or take it at your own pace—the program fits into your busy life." },
+    { q: "Do I need prior experience in education?", a: "No! No prior experience is required. The program covers all foundational knowledge—whether you're starting fresh or transitioning from another career, you'll graduate classroom-ready." },
+    { q: "Will I learn special education skills?", a: "Yes! Special education is one of the most in-demand areas in education, and this program gives you foundational skills to work with students who have diverse learning needs. You'll stand out in the job market." },
+    { q: "Can I study in Spanish?", a: "Absolutely! Courses are available in English and Spanish—choose the language that works for you. ESL support is also available and tailored to each student." },
+    { q: "What's the job outlook for paraprofessional educators?", a: "Excellent! Massachusetts schools are actively seeking qualified paraprofessional educators, especially those with special education training. Job growth is 7%—faster than average—and salaries are among the highest in the nation ($55,547/year average)." },
+    { q: "Am I eligible for financial aid?", a: "Yes! Most students are eligible for financial aid, scholarships, and grants. Contact our financial aid office at (617) 449-7070 for personalized guidance. Most students graduate debt-free!" }
 ];
+
+const BookOpen: React.ElementType = (props: any) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+        fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+    </svg>
+);
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
@@ -66,20 +79,22 @@ const ParaprofessionalEducator: React.FC = () => {
     return (
         <ProgramPageLayout
             badge="Paraprofessional Educator Certificate"
-            title={<>Shape Young Minds & <span style={{ color: '#E68325' }}>Launch Your Teaching Career</span></>}
-            subtitle="In as little as one year. Most students graduate debt-free."
+            title={<>Shape Young Minds and <span style={{ color: '#E68325' }}>Launch Your Teaching Career</span></>}
+            subtitle="In As Little As One Year! Most Students Graduate Debt-Free!"
             headerImageSrc="https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=2940&auto=format&fit=crop"
             breadcrumbs={[
                 { label: 'Programs', path: '/#programs' },
                 { label: 'Paraprofessional Educator' }
             ]}
 
-            tagline="Massachusetts Schools Need You"
+            tagline="Massachusetts schools need you"
             taglineBody={
                 <p>
                     With a growing teacher shortage and increasing demand for special education support, there's never been a better time to launch your career in education.
                     <br className="hidden md:block" />
                     <span className="text-ucb-blue font-semibold">Urban College of Boston's Paraprofessional Educator Certificate empowers you to master the classroom skills</span> that help K-12 students succeed—all without interrupting your busy life.
+                    <br className="hidden md:block" />
+                    This fully online, career-building program fits into your busy life. You'll graduate ready to step into classrooms across Massachusetts and make a real difference in children's lives every single day.
                 </p>
             }
 
@@ -90,26 +105,26 @@ const ParaprofessionalEducator: React.FC = () => {
                     heading: "Professional Skills",
                     icon: Briefcase,
                     items: [
-                        "Support teachers in K-12 classrooms and help students learn",
-                        "Work with students who have special needs",
-                        "Guide early literacy and math development"
+                        "Support teachers in K-12 classrooms—help students of all abilities learn and grow",
+                        "Work with students who have special needs—master skills for one of education's most in-demand specializations",
+                        "Guide early literacy and math development—build foundational skills that shape children's futures"
                     ]
                 },
                 {
                     heading: "Ethical & Practical",
                     icon: Award,
                     items: [
-                        "Apply positive behavior strategies and intervention techniques",
-                        "Understand child development at every stage",
-                        "Communicate with families and educators as part of the school team"
+                        "Apply positive behavior strategies—support students using proven intervention techniques",
+                        "Understand child development—recognize how children learn and grow at every stage",
+                        "Communicate with families and educators—collaborate as part of the school team"
                     ]
                 }
             ]}
-            achievementNote="Courses are practical and designed to help you apply skills immediately on the job, not just study theory."
+            achievementNote="This isn't just theory—you'll learn practical skills you can use immediately in real classrooms."
 
             courses={courses}
             outcomes={outcomes}
-            outcomesIntro="Education is one of the most rewarding fields—and one of the most stable. You'll graduate ready for meaningful, career-building roles."
+            outcomesIntro="Education is one of the most rewarding fields—and one of the most stable. You'll graduate ready for meaningful, career-building roles where you help children succeed. Why Massachusetts? The state offers some of the highest salaries for paraprofessional educators in the country—and demand continues to grow."
             outcomeTags={['Education', 'Teaching', 'Special Education', 'Classroom Support']}
 
             stats={stats}
@@ -123,17 +138,17 @@ const ParaprofessionalEducator: React.FC = () => {
             ]}
 
             pathwayTitle="Build Toward Your Future"
-            pathwayDescription="Every credit you earn counts toward an Associate Degree at Urban College. Continue toward a bachelor's at partner institutions."
+            pathwayDescription="Every credit you earn counts toward an Associate Degree at Urban College. When you're ready, our transfer agreements make it easy to continue toward a bachelor's degree at partner institutions."
             pathwaySteps={[
                 { label: 'Certificate', credits: '21 Credits', active: true },
                 { label: 'Associate Degree', credits: '60 Credits', active: false },
-                { label: "Bachelor's Degree", credits: 'Transfer Ready', active: false },
+                { label: "Bachelor's & License", credits: 'Transfer Ready', active: false }
             ]}
 
             testimonial={{
-                quote: "Urban College gave me the skills and confidence to work with students who need extra support. Every day I go to work knowing I'm making a difference in children's lives.",
-                name: "Urban College Education Graduate",
-                role: "Education Alum",
+                quote: "I have been passionately endorsing Urban College to others... the vibrant atmosphere, dedicated faculty and diverse student body create an enriching experience that I believe everyone should have the opportunity to enjoy.",
+                name: "Mariely",
+                role: "Alumna",
                 imageSrc: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop"
             }}
 
