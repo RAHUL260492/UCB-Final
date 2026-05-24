@@ -155,9 +155,9 @@ const Navigation: React.FC = () => {
           <a href="tel:+16175550123" className="flex items-center gap-1 hover:text-ucb-gold transition-colors">
             <Phone className="w-3 h-3" /> 617-555-0123
           </a>
-          <button className="flex items-center gap-1 hover:text-ucb-gold transition-colors min-h-[44px]">
+          <Link to="/espanol" className="flex items-center gap-1 hover:text-ucb-gold transition-colors min-h-[44px]">
             <Globe className="w-3 h-3" /> Español
-          </button>
+          </Link>
           <button className="flex items-center gap-1 text-ucb-gold hover:text-white transition-colors min-h-[44px]">
             <MessageCircle className="w-3 h-3" /> Live Chat
           </button>
@@ -389,8 +389,8 @@ const Navigation: React.FC = () => {
             </button>
 
             <div className="flex justify-center gap-6 mt-6 text-ucb-blue">
-              <a href="#" className="hover:text-ucb-orange"><Globe className="w-6 h-6" /></a>
-              <a href="#" className="hover:text-ucb-orange"><Phone className="w-6 h-6" /></a>
+              <Link to="/espanol" className="hover:text-ucb-orange" onClick={() => setMobileMenuOpen(false)}><Globe className="w-6 h-6" /></Link>
+              <a href="tel:+16175550123" className="hover:text-ucb-orange"><Phone className="w-6 h-6" /></a>
             </div>
           </div>
         </div>

@@ -25,6 +25,7 @@ import StudentGovernment from './pages/StudentGovernment';
 import MentalHealth from './pages/MentalHealth';
 import Search from './pages/Search';
 import Accreditation from './pages/Accreditation';
+import Espanol from './pages/Espanol';
 
 // ScrollToTop component to handle scroll on route change
 const ScrollToTop = () => {
@@ -84,6 +85,8 @@ function App() {
             <Route path="/mental-health" element={<MentalHealth />} />
             <Route path="/search" element={<Search />} />
             <Route path="/accreditation" element={<Accreditation />} />
+            <Route path="/espanol" element={<Espanol />} />
+            <Route path="/es" element={<Espanol />} />
           </Routes>
         </main>
 
