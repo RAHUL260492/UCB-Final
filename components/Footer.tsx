@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Linkedin, MapPin, Mail, Phone } from 'lucide-react';
 import Logo from './Logo';
 
@@ -31,12 +32,26 @@ const Footer: React.FC = () => {
           <div className="lg:col-span-2 lg:col-start-6">
             <h4 className="font-display font-bold text-lg text-white mb-4">Quick Links</h4>
             <ul className="space-y-3">
-              {['Academic Calendar', 'Library Services', 'Career Center', 'Faculty Directory', 'Student Portal'].map((item) => (
-                <li key={item}>
-                  <a href="#" className="text-blue-100 hover:text-ucb-orange transition-colors flex items-center group">
-                    <span className="w-0 overflow-hidden group-hover:w-3 transition-all duration-300 text-ucb-copper">›</span>
-                    <span className="group-hover:translate-x-1 transition-transform">{item}</span>
-                  </a>
+              {[
+                { name: 'About Us', path: '/about' },
+                { name: 'Academic Calendar', path: '#' },
+                { name: 'Library Services', path: '#' },
+                { name: 'Career Center', path: '#' },
+                { name: 'Faculty Directory', path: '#' },
+                { name: 'Student Portal', path: '#' }
+              ].map((item) => (
+                <li key={item.name}>
+                  {item.path.startsWith('/') ? (
+                    <Link to={item.path} className="text-blue-100 hover:text-ucb-orange transition-colors flex items-center group">
+                      <span className="w-0 overflow-hidden group-hover:w-3 transition-all duration-300 text-ucb-copper">›</span>
+                      <span className="group-hover:translate-x-1 transition-transform">{item.name}</span>
+                    </Link>
+                  ) : (
+                    <a href={item.path} className="text-blue-100 hover:text-ucb-orange transition-colors flex items-center group">
+                      <span className="w-0 overflow-hidden group-hover:w-3 transition-all duration-300 text-ucb-copper">›</span>
+                      <span className="group-hover:translate-x-1 transition-transform">{item.name}</span>
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>

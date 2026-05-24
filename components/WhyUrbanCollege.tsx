@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Globe, DollarSign, Clock, Users, GraduationCap, Briefcase } from 'lucide-react';
 import ScrollAnimation from './ScrollAnimation';
 
@@ -143,13 +144,13 @@ const WhyUrbanCollege: React.FC = () => {
             </ScrollAnimation>
           ))}
 
-          {/* Learn more CTA */}
+           {/* Learn more CTA */}
           <ScrollAnimation variant="fade-up" delay="0.6s" className="sm:col-span-2 lg:col-span-3 flex items-center justify-center mt-2">
-            <button className="group text-ucb-green font-bold hover:text-ucb-blue transition-colors flex items-center gap-2 text-sm relative min-h-[44px]">
+            <Link to="/about" className="group text-ucb-green font-bold hover:text-ucb-blue transition-colors flex items-center gap-2 text-sm relative min-h-[44px]">
               <span>Learn about our history</span>
               <span className="group-hover:translate-x-1.5 transition-transform duration-300">→</span>
               <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-ucb-blue group-hover:w-full transition-all duration-300 rounded-full" />
-            </button>
+            </Link>
           </ScrollAnimation>
         </div>
 
