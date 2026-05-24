@@ -69,7 +69,7 @@ const Navigation: React.FC = () => {
         {
           title: 'Non-Degree Seeking',
           items: [
-             { name: 'Professional Studies', path: '/programs/professional-studies' }
+             { name: 'Professional Studies', path: '#' }
           ]
         }
       ]

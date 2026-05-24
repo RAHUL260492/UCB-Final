@@ -15,8 +15,6 @@ import HumanServicesAdministration from './HumanServicesAdministration';
 import HumanServicesCertificate from './HumanServicesCertificate';
 import ParaprofessionalEducator from './ParaprofessionalEducator';
 import ProjectManagement from './ProjectManagement';
-import ProfessionalStudies from './ProfessionalStudies';
-
 
 const PROGRAM_COMPONENTS: Record<string, React.FC> = {
     'business-certificate': BusinessCertificate,
@@ -32,7 +30,6 @@ const PROGRAM_COMPONENTS: Record<string, React.FC> = {
     'human-services-certificate': HumanServicesCertificate,
     'paraprofessional-educator-certificate': ParaprofessionalEducator,
     'project-management-certificate': ProjectManagement,
-    'professional-studies': ProfessionalStudies,
 };
 
 const Program: React.FC = () => {
