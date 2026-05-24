@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
                 { name: 'Financial Aid & Funding', path: '/financial-services-and-funding-options' },
                 { name: 'Tuition & Cost of Attendance', path: '/financial-aid' },
                 { name: 'Tuition Payment Options', path: '/tuition-payment-options' },
-                { name: 'Academic Calendar', path: '#' },
+                { name: 'Academic Calendar', path: '/policies-disclosures#academic-affairs' },
                 { name: 'Library Services', path: '#' },
                 { name: 'Career Center', path: '#' },
                 { name: 'Student Portal', path: '#' },
@@ -112,7 +112,8 @@ const Footer: React.FC = () => {
         <div className="border-t border-white/10 pt-4 flex flex-col md:flex-row justify-between items-center text-sm text-blue-200/80 gap-4 leading-relaxed">
           <p>© {new Date().getFullYear()} Urban College of Boston. All rights reserved.</p>
           <div className="flex flex-wrap justify-center gap-6">
-            <a href="#" className="hover:text-ucb-copper transition-colors">Privacy Policy</a>
+            <Link to="/policies-disclosures" className="hover:text-ucb-copper transition-colors">Policies & Disclosures</Link>
+            <Link to="/policies-disclosures#privacy-policy" className="hover:text-ucb-copper transition-colors">Privacy Policy</Link>
             <a href="#" className="hover:text-ucb-copper transition-colors">Non-Discrimination</a>
             <Link to="/accreditation" className="hover:text-ucb-copper transition-colors">Accreditation</Link>
             <a href="#" className="hover:text-ucb-copper transition-colors">Sitemap</a>
