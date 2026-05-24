@@ -26,17 +26,19 @@ const outcomes = [
     { title: "Case Manager", desc: "Coordinate care and services for older adults." },
     { title: "Residential Support Specialist", desc: "Support seniors in assisted living and residential settings." },
     { title: "Home Health Aide", desc: "Provide compassionate in-home care." },
-    { title: "Elder Care Coordinator", desc: "Manage services for seniors in agency settings." },
-    { title: "Private Homecare Agency Owner", desc: "Launch your own business providing vital care." }
+    { title: "Elder Care Coordinator", desc: "Manage programs and services for senior populations." },
+    { title: "Private Homecare Agency Owner", desc: "Start your own elder care business!" }
 ];
 
 const benefits: ProgramBenefit[] = [
     { title: "Fast Track", desc: "Finish in as little as one year (21 credits)", icon: Clock },
     { title: "100% Online", desc: "Learn on a schedule that fits into your busy life", icon: Globe },
     { title: "Debt-Free Goal", desc: "Most students graduate debt-free!", icon: DollarSign },
-    { title: "Built-In CHW Credential", desc: "Earn your Community Health Worker credential", icon: Award },
+    { title: "Built-In CHW Credential", desc: "Earn your Community Health Worker credential: Higher salary and career growth", icon: Award },
     { title: "Credit for Prior Learning", desc: "Your experience counts!", icon: TrendingUp },
-    { title: "Bilingual Options", desc: "ESL support available", icon: MessageCircleIcon },
+    { title: "Bilingual Options", desc: "ESL support available: Tailored to each student's needs", icon: MessageCircleIcon },
+    { title: "Booming Field", desc: "58% projected job growth in Massachusetts!", icon: TrendingUp },
+    { title: "Accelerated CHW Path", desc: "Apply for Massachusetts CHW certification with only 2,000 hours of work experience instead of 4,000.", icon: Clock },
 ];
 
 const stats: ProgramStat[] = [
@@ -46,16 +48,61 @@ const stats: ProgramStat[] = [
     { label: 'Cost', value: '$317', icon: DollarSign, sub: 'Per Credit' },
     { label: 'Start', value: 'Rolling', icon: Calendar, sub: 'Start Date' },
     { label: 'Aid', value: 'Yes', icon: GraduationCap, sub: 'Financial Aid' },
-    { label: 'Language', value: 'Bilingual', icon: Globe, sub: 'English & Spanish' },
+    { label: 'Language', value: 'English', icon: Globe, sub: 'English' },
     { label: 'Outcome', value: 'Job Ready', icon: CheckCircle, sub: 'Career Focused' },
 ];
 
-const faqs = [
-    { q: "Is the program entirely online?", a: "Absolutely! The program is fully online with both synchronous and asynchronous options." },
-    { q: "How long does the program take?", a: "In as little as one year! Complete your 21 credits full-time, or take it at your own pace." },
-    { q: "Can I afford this?", a: "Yes! Urban College is one of the most affordable colleges in Massachusetts. Most students graduate debt-free." },
-    { q: "Do I need experience?", a: "No experience needed. This certificate gives you all the foundational skills you need." },
+const achievements = [
+    {
+        heading: "Professional Skills",
+        icon: Briefcase,
+        items: [
+            "Understand the biological, physiological, and social dimensions of aging",
+            "Provide compassionate, person-centered care to older adults",
+            "Navigate healthcare and social services systems effectively"
+        ]
+    },
+    {
+        heading: "Ethical & Practical",
+        icon: Award,
+        items: [
+            "Advocate for seniors and their families",
+            "Manage case coordination and connect clients to vital resources",
+            "Apply best practices in elder care and gerontology"
+        ]
+    }
 ];
+
+const forWhom = [
+    "Passionate about helping older adults",
+    "Seeking to become a Community Health Worker",
+    "Looking for a fast-growing, secure career field",
+    "Already working in care and want college credit",
+    "Planning to earn an AA in Human Services"
+];
+
+const pathwaySteps = [
+    { label: 'Certificate (21 credits)', credits: '21 Credits', active: false },
+    { label: 'Associate Degree', credits: '60 Credits', active: true },
+    { label: "Bachelor's Degree", credits: 'Transfer Agreements', active: false },
+];
+
+const testimonial = {
+    quote: "Urban college was the foundation for where I am professional and personal. When I provide a service, I think about what I would want provided to me if I were in a similar situation. Treat everyone with love and kindness.",
+    name: "Charmaine",
+    role: "Urban College Graduate",
+    imageSrc: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop"
+};
+
+const faqs = [
+    { q: "Is the program entirely online?", a: "Absolutely! The program is fully online with both synchronous and asynchronous options. Learn on your schedule—early mornings, late nights, or weekends." },
+    { q: "How long does the program take?", a: "In as little as one year! Complete your 21 credits full-time, or take it at your own pace—the program fits into your busy life." },
+    { q: "What is the Community Health Worker (CHW) certification?", a: "Urban College is a Board-Certified CHW Education and Training Site. Students who complete our training need only 2,000 hours of work experience instead of 4,000 to apply for Massachusetts CHW certification!" },
+    { q: "Do I need prior experience?", a: "No! No prior experience is required. If you do have experience, we offer credit for prior learning!" },
+    { q: "Am I eligible for financial aid?", a: "Yes! Most students are eligible for financial aid. Contact our financial aid office at (617) 449-7070. Most students graduate debt-free. Our financial aid team will work with you one-on-one to identify grants, scholarships, and funding options that fit your situation. With most students graduating debt-free, we're committed to making your education as affordable as possible." },
+];
+
+const ctaRequirements = ['High School Diploma / GED / HiSET', 'Photo ID', 'Online Application'];
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
@@ -65,8 +112,8 @@ const ElderCare: React.FC = () => {
     return (
         <ProgramPageLayout
             badge="Elder Care Certificate"
-            title={<>Make a Difference in Seniors' Lives & <span style={{ color: '#E68325' }}>Build Your Career</span></>}
-            subtitle="In as little as one year. Most students graduate debt-free."
+            title={<>Make a Difference in Seniors' Lives While <span style={{ color: '#E68325' }}>Building Your Career</span></>}
+            subtitle="In As Little As One Year! Most Students Graduate Debt-Free!"
             headerImageSrc="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=2940&auto=format&fit=crop"
             breadcrumbs={[
                 { label: 'Programs', path: '/#programs' },
@@ -76,35 +123,18 @@ const ElderCare: React.FC = () => {
             tagline="Transform Lives While Building Your Career"
             taglineBody={
                 <p>
-                    Urban College of Boston's Elder Care Certificate empowers you to master the skills that help older adults and their families thrive—all while fitting into your busy life.
+                    Transform lives while building your own career. Urban College of Boston's Elder Care Certificate empowers you to master the skills that help older adults and their families thrive—all while fitting into your busy life.
                     <br className="hidden md:block" />
                     <span className="text-ucb-blue font-semibold">With 58% projected job growth</span> in Massachusetts, you'll graduate ready to succeed in one of the state's fastest-growing fields!
+                    <br className="hidden md:block" />
+                    <span className="text-ucb-green font-semibold">BONUS:</span> This program uniquely prepares you to earn the Community Health Worker credential—higher starting salary and eligibility for insurance reimbursement!
                 </p>
             }
 
             benefits={benefits}
 
-            achievements={[
-                {
-                    heading: "Professional Skills",
-                    icon: Briefcase,
-                    items: [
-                        "Understand the biological, physiological, and social dimensions of aging",
-                        "Provide compassionate, person-centered care to older adults",
-                        "Navigate healthcare and social services systems effectively"
-                    ]
-                },
-                {
-                    heading: "Ethical & Practical",
-                    icon: Award,
-                    items: [
-                        "Advocate for seniors and their families",
-                        "Manage case coordination and connect clients to vital resources",
-                        "Apply best practices in elder care and gerontology"
-                    ]
-                }
-            ]}
-            achievementNote="Courses are practical and designed to help you apply skills immediately on the job, not just study theory."
+            achievements={achievements}
+            achievementNote="Your courses include hands-on internships—gain real experience while you learn!"
 
             courses={courses}
             outcomes={outcomes}
@@ -113,32 +143,17 @@ const ElderCare: React.FC = () => {
 
             stats={stats}
 
-            forWhom={[
-                "Passionate about helping older adults",
-                "Seeking to become a Community Health Worker",
-                "Looking for a fast-growing, secure career field",
-                "Already working in care and want college credit",
-                "Planning to earn an AA in Human Services"
-            ]}
+            forWhom={forWhom}
 
             pathwayTitle="Build Toward Your Future"
-            pathwayDescription="Your certificate is your first step—not your last! Apply your Elder Care credits toward an Associate of Arts in Human Services."
-            pathwaySteps={[
-                { label: 'Certificate (21 Credits)', credits: '21 Credits', active: false },
-                { label: 'AA in Human Services', credits: '60 Credits', active: true },
-                { label: "Bachelor of Social Work (BSW)", credits: 'Transfer Ready', active: false },
-            ]}
+            pathwayDescription="Every credit you earn counts toward an Associate Degree at Urban College. When you're ready, our transfer agreements make it easy to continue toward a bachelor's degree. Your certificate is your first step—not your last!"
+            pathwaySteps={pathwaySteps}
 
-            testimonial={{
-                quote: "My favorite thing about Urban College of Boston is the support they offer students both academically and financially, and the communication between students and teachers.",
-                name: "Jennifer",
-                role: "Urban College Student",
-                imageSrc: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop"
-            }}
+            testimonial={testimonial}
 
             faqs={faqs}
 
-            ctaRequirements={['High School Diploma / GED / HiSET', 'Photo ID', 'Online Application']}
+            ctaRequirements={ctaRequirements}
             programName="Elder Care Certificate"
         />
     );

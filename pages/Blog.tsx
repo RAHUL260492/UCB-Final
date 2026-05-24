@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, Calendar, ChevronRight } from 'lucide-react';
-import { client, urlFor } from '../src/lib/sanityClient';
+// Sanity CMS fetching removed for static site setup
 import PageHeader from '../components/PageHeader';
 import localBlogsData from '../src/data/blogs.json';
 
@@ -15,29 +15,10 @@ const formatTitle = (title: string, slug: string) => {
 const Blog: React.FC = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const [blogsData, setBlogsData] = useState<any[]>(localBlogsData);
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        client.fetch(`*[_type == "post"] | order(date desc) {
-            title,
-            "slug": slug.current,
-            description,
-            date,
-            image
-        }`).then((data) => {
-            if (data && data.length > 0) {
-                // Map the image object to url string just like local JSON expects
-                const mappedData = data.map((b: any) => ({
-                    ...b,
-                    image: b.image ? urlFor(b.image).url() : null
-                }));
-                setBlogsData(mappedData);
-            }
-            setLoading(false);
-        }).catch(err => {
-            console.error(err);
-            setLoading(false);
-        });
+        // Render local static data directly
     }, []);
 
     const filteredBlogs = blogsData.filter(blog => {

@@ -3,6 +3,7 @@ import path from 'path';
 import { createClient } from '@sanity/client';
 import dotenv from 'dotenv';
 import { fileURLToPath } from 'url';
+import https from 'https';
 
 // Load .env.local
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -34,24 +35,38 @@ const programFiles = [
     'ProjectManagement.tsx'
 ];
 
+function downloadImage(url) {
+    return new Promise((resolve, reject) => {
+        https.get(url, (res) => {
+            if (res.statusCode !== 200) {
+                reject(new Error(`Failed to download image: ${res.statusCode}`));
+                return;
+            }
+            const data = [];
+            res.on('data', (chunk) => data.push(chunk));
+            res.on('end', () => resolve(Buffer.concat(data)));
+        }).on('error', reject);
+    });
+}
+
 function extractObject(source, varName) {
-    // Looks for `const varName = [...];` or `const varName: Type = [...];`
-    const regex = new RegExp(`const\\s+${varName}(?:\\s*:\\s*[\\w\\[\\]]+)?\\s*=\\s*(\\[[\\s\\S]*?\\]);`, 'm');
+    // Looks for `const varName = [...];` or `const varName: Type = [...];` or `const varName = {...};`
+    const regex = new RegExp(`const\\s+${varName}(?:\\s*:\\s*[\\w\\[\\]]+)?\\s*=\\s*([\\[\\{][\\s\\S]*?[\\]\\}]);`, 'm');
     const match = source.match(regex);
-    if (!match) return [];
+    if (!match) return null;
     
     let objStr = match[1];
     
     // Convert unquoted icon references like `icon: Clock` to `icon: 'Clock'`
-    objStr = objStr.replace(/icon:\s*([A-Z][a-zA-Z]+)(?!['"])/g, "icon: '$1'");
+    objStr = objStr.replace(/icon:\s*([A-Z][a-zA-Z0-9]+)(?!['"])/g, "icon: '$1'");
     // Support custom icons e.g. `<MessageCircleIcon />` or `MessageCircleIcon`
     objStr = objStr.replace(/icon:\s*<?[A-Za-z]+Icon\s*\/?>(?!['"])/g, "icon: 'MessageCircle'");
     
     try {
         return eval(`(${objStr})`);
     } catch (e) {
-        console.warn(`Failed to parse ${varName}`);
-        return [];
+        console.warn(`Failed to parse ${varName}:`, e.message);
+        return null;
     }
 }
 
@@ -72,18 +87,30 @@ function extractProp(source, propName) {
 async function run() {
     console.log("Starting Migration...");
 
-    for (const file of programFiles) {
+    // Allow running on a single file if specified via command line arguments
+    const targetFileArg = process.argv[2];
+    const filesToProcess = targetFileArg ? [targetFileArg] : programFiles;
+
+    for (const file of filesToProcess) {
         const filePath = path.join(pagesDir, file);
-        if (!fs.existsSync(filePath)) continue;
+        if (!fs.existsSync(filePath)) {
+            console.error(`File not found: ${filePath}`);
+            continue;
+        }
         
         const content = fs.readFileSync(filePath, 'utf-8');
         console.log(`\nProcessing ${file}...`);
 
-        const courses = extractObject(content, 'courses');
-        const outcomes = extractObject(content, 'outcomes');
-        let benefits = extractObject(content, 'benefits');
-        let stats = extractObject(content, 'stats');
-        const faqs = extractObject(content, 'faqs');
+        const courses = extractObject(content, 'courses') || [];
+        const outcomes = extractObject(content, 'outcomes') || [];
+        const benefits = extractObject(content, 'benefits') || [];
+        const stats = extractObject(content, 'stats') || [];
+        const faqs = extractObject(content, 'faqs') || [];
+        const achievements = extractObject(content, 'achievements') || [];
+        const forWhom = extractObject(content, 'forWhom') || [];
+        const pathwaySteps = extractObject(content, 'pathwaySteps') || [];
+        const testimonial = extractObject(content, 'testimonial');
+        const ctaRequirements = extractObject(content, 'ctaRequirements') || [];
 
         // Extract layout props
         const badge = extractProp(content, 'badge');
@@ -93,7 +120,9 @@ async function run() {
         const programName = extractProp(content, 'programName');
         const outcomesIntro = extractProp(content, 'outcomesIntro');
         const pathwayTitle = extractProp(content, 'pathwayTitle');
+        const pathwayDescription = extractProp(content, 'pathwayDescription');
         const headerImageSrc = extractProp(content, 'headerImageSrc');
+        const achievementNote = extractProp(content, 'achievementNote');
 
         // Generate slug from file name
         const slugStr = file.replace('.tsx', '').replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
@@ -115,11 +144,51 @@ async function run() {
             outcomesIntro: outcomesIntro,
             faqs: faqs.map(f => ({ _key: Math.random().toString(36).substr(2, 9), q: f.q, a: f.a })),
             pathwayTitle: pathwayTitle || 'Build Toward Your Future',
+            pathwayDescription: pathwayDescription || '',
+            pathwaySteps: pathwaySteps.map(step => ({ _key: Math.random().toString(36).substr(2, 9), label: step.label, credits: step.credits || '', active: !!step.active })),
+            forWhom: forWhom,
+            achievements: achievements.map(ach => ({ _key: Math.random().toString(36).substr(2, 9), heading: ach.heading, icon: ach.icon || 'Star', items: ach.items || [] })),
+            achievementNote: achievementNote || '',
+            ctaRequirements: ctaRequirements.length > 0 ? ctaRequirements : ['High School Diploma / GED / HiSET', 'Photo ID', 'Online Application']
         };
 
+        if (testimonial) {
+            doc.testimonial = {
+                quote: testimonial.quote || '',
+                name: testimonial.name || '',
+                role: testimonial.role || '',
+            };
+            if (testimonial.imageSrc) {
+                try {
+                    console.log(`Uploading testimonial image for ${doc.title}...`);
+                    const imageBuffer = await downloadImage(testimonial.imageSrc);
+                    const asset = await client.assets.upload('image', imageBuffer, {
+                        filename: `${slugStr}-testimonial.jpg`
+                    });
+                    doc.testimonial.image = {
+                        _type: 'image',
+                        asset: {
+                            _type: 'reference',
+                            _ref: asset._id
+                        }
+                    };
+                    console.log(`✅ Testimonial image uploaded successfully.`);
+                } catch (e) {
+                    console.warn(`⚠️ Failed to upload testimonial image:`, e.message);
+                }
+            }
+        }
+
         try {
-            console.log(`Uploading ${doc.title} to Sanity...`);
-            await client.create(doc);
+            // Find existing document with same slug to get its _id and avoid duplicates
+            const existing = await client.fetch(`*[_type == "program" && slug.current == $slug][0]`, { slug: slugStr });
+            if (existing) {
+                console.log(`Updating existing ${doc.title} (${existing._id})...`);
+                await client.createOrReplace({ ...doc, _id: existing._id });
+            } else {
+                console.log(`Creating new ${doc.title}...`);
+                await client.create(doc);
+            }
             console.log(`✅ Success: ${doc.title} (${slugStr})`);
         } catch (err) {
             console.error(`❌ Failed to upload ${doc.title}:`, err.message);
