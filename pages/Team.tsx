@@ -5,7 +5,7 @@ import ScrollAnimation from '../components/ScrollAnimation';
 import { 
     Users, Mail, Award, GraduationCap, Globe, Clock, CheckCircle, 
     ArrowRight, ChevronDown, ChevronRight, Briefcase, Building, ShieldCheck,
-    Calendar, Heart
+    Calendar, Heart, Quote
 } from 'lucide-react';
 
 interface CabinetMember {

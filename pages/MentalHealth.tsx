@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Phone, Heart, PhoneCall, Globe, LifeBuoy, AlertCircle, ShieldAlert, BookOpen, User } from 'lucide-react';
+import { Phone, Heart, PhoneCall, Globe, LifeBuoy, AlertCircle, ShieldAlert, BookOpen, User, Mail } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 
 const emergencyNumbers = [

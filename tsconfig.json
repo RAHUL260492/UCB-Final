@@ -24,7 +24,8 @@
         "./*"
       ]
     },
-    "allowImportingTsExtensions": true,
     "noEmit": true
-  }
+  },
+  "include": ["src/**/*", "pages/**/*", "components/**/*", "App.tsx", "index.tsx", "types.ts"],
+  "exclude": ["node_modules", "dist", "sanity-studio", "update_pages.js", "update_heroes.js", "enhance_program.js", "migratePrograms.mjs", "scrape.mjs", "seedHomepage.mjs", "space_script.cjs"]
 }
