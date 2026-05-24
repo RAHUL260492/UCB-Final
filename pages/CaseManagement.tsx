@@ -70,7 +70,7 @@ const CaseManagement: React.FC = () => {
             subtitle="In as little as one year. Most students graduate debt-free."
             headerImageSrc="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2940&auto=format&fit=crop"
             breadcrumbs={[
-                { label: 'Programs', path: '/#programs' },
+                { label: 'Programs', path: '/programs' },
                 { label: 'Case Management' }
             ]}
 

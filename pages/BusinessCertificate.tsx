@@ -71,7 +71,7 @@ const BusinessCertificate: React.FC = () => {
             subtitle="In as little as one year. Most students graduate debt-free."
             headerImageSrc="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2940&auto=format&fit=crop"
             breadcrumbs={[
-                { label: 'Programs', path: '/#programs' },
+                { label: 'Programs', path: '/programs' },
                 { label: 'Business Certificate' }
             ]}
 

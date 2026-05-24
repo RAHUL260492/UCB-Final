@@ -63,7 +63,7 @@ const ChildrensBehavioralHealth: React.FC = () => {
             subtitle="In as little as 9 months. Most students graduate debt-free."
             headerImageSrc="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=2940&auto=format&fit=crop"
             breadcrumbs={[
-                { label: 'Programs', path: '/#programs' },
+                { label: 'Programs', path: '/programs' },
                 { label: "Children's Behavioral Health" }
             ]}
 

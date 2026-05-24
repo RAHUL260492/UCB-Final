@@ -67,7 +67,7 @@ const DigitalMarketing: React.FC = () => {
             subtitle="In as little as one year. Most students graduate debt-free."
             headerImageSrc="https://images.unsplash.com/photo-1533750349088-cd871a92f312?q=80&w=2940&auto=format&fit=crop"
             breadcrumbs={[
-                { label: 'Programs', path: '/#programs' },
+                { label: 'Programs', path: '/programs' },
                 { label: 'Digital Marketing' }
             ]}
 

@@ -70,7 +70,7 @@ const EarlyChildhoodEducationCertificate: React.FC = () => {
             subtitle="In as little as one year. Most students graduate debt-free."
             headerImageSrc="https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=2940&auto=format&fit=crop"
             breadcrumbs={[
-                { label: 'Programs', path: '/#programs' },
+                { label: 'Programs', path: '/programs' },
                 { label: 'ECE Certificate' }
             ]}
 

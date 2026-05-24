@@ -72,7 +72,7 @@ const HumanServicesCertificate: React.FC = () => {
             subtitle="In As Little As One Year! Most Students Graduate Debt-Free!"
             headerImageSrc="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?q=80&w=2940&auto=format&fit=crop"
             breadcrumbs={[
-                { label: 'Programs', path: '/#programs' },
+                { label: 'Programs', path: '/programs' },
                 { label: 'Human Services Certificate' }
             ]}
 

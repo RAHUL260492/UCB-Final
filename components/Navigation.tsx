@@ -41,7 +41,7 @@ const Navigation: React.FC = () => {
     { name: 'About Urban College', path: '/#why-urban-college' },
     {
       name: 'Programs',
-      path: '/#programs',
+      path: '/programs',
       groups: [
         {
           title: 'Associate Degrees',

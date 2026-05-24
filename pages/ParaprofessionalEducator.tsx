@@ -76,7 +76,7 @@ const ParaprofessionalEducator: React.FC = () => {
             subtitle="In As Little As One Year! Most Students Graduate Debt-Free!"
             headerImageSrc="https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=2940&auto=format&fit=crop"
             breadcrumbs={[
-                { label: 'Programs', path: '/#programs' },
+                { label: 'Programs', path: '/programs' },
                 { label: 'Paraprofessional Educator' }
             ]}
 

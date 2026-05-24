@@ -73,7 +73,7 @@ const ProfessionalStudies: React.FC = () => {
             subtitle="Learn Something New. Grow Your Career. Follow Your Curiosity."
             headerImageSrc="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2940&auto=format&fit=crop"
             breadcrumbs={[
-                { label: 'Programs', path: '/#programs' },
+                { label: 'Programs', path: '/programs' },
                 { label: 'Professional Studies' }
             ]}
 

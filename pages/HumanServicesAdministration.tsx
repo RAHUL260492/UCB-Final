@@ -75,7 +75,7 @@ const HumanServicesAdministration: React.FC = () => {
             subtitle="8% Job Growth—Faster Than Average! Most Students Graduate Debt-Free!"
             headerImageSrc="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=2940&auto=format&fit=crop"
             breadcrumbs={[
-                { label: 'Programs', path: '/#programs' },
+                { label: 'Programs', path: '/programs' },
                 { label: 'Human Services Administration' }
             ]}
 

@@ -72,7 +72,7 @@ const ProjectManagement: React.FC = () => {
             subtitle="In As Little As One Year! Most Students Graduate Debt-Free!"
             headerImageSrc="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop"
             breadcrumbs={[
-                { label: 'Programs', path: '/#programs' },
+                { label: 'Programs', path: '/programs' },
                 { label: 'Project Management' }
             ]}
 

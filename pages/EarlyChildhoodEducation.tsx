@@ -71,7 +71,7 @@ const EarlyChildhoodEducation: React.FC = () => {
             subtitle="A 60-credit Associate Degree. Most students graduate debt-free."
             headerImageSrc="https://images.unsplash.com/photo-1601655781320-182e39959d06?q=80&w=2940&auto=format&fit=crop"
             breadcrumbs={[
-                { label: 'Programs', path: '/#programs' },
+                { label: 'Programs', path: '/programs' },
                 { label: 'Early Childhood Education' }
             ]}
 

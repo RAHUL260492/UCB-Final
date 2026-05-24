@@ -69,7 +69,7 @@ const GeneralStudiesCertificate: React.FC = () => {
             subtitle="In as little as one year. Most students graduate debt-free."
             headerImageSrc="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2940&auto=format&fit=crop"
             breadcrumbs={[
-                { label: 'Programs', path: '/#programs' },
+                { label: 'Programs', path: '/programs' },
                 { label: 'General Studies Certificate' }
             ]}
 

@@ -70,7 +70,7 @@ const GeneralStudiesAssociate: React.FC = () => {
             subtitle="Flexible. Affordable. Transferable. Most students graduate debt-free."
             headerImageSrc="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2940&auto=format&fit=crop"
             breadcrumbs={[
-                { label: 'Programs', path: '/#programs' },
+                { label: 'Programs', path: '/programs' },
                 { label: 'General Studies Associate' }
             ]}
 
