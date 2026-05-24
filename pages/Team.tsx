@@ -4,7 +4,8 @@ import PageHeader from '../components/PageHeader';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { 
     Users, Mail, Award, GraduationCap, Globe, Clock, CheckCircle, 
-    ArrowRight, ChevronDown, ChevronRight, Briefcase, Building, ShieldCheck 
+    ArrowRight, ChevronDown, ChevronRight, Briefcase, Building, ShieldCheck,
+    Calendar, Heart
 } from 'lucide-react';
 
 interface CabinetMember {
