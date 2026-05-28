@@ -12,27 +12,27 @@ const TAGLINES = [
 const HERO_TESTIMONIALS = [
   {
     id: '1',
-    name: 'Maria Gonzalez',
-    role: 'CLASS OF 2024, HUMAN SERVICES',
-    quote: "Being able to take classes in Spanish while improving my English changed everything. I didn't just get a degree; I got a family.",
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop',
+    name: 'Alecia H.',
+    role: 'ALUM',
+    quote: "My experience with Urban College has been very positive because of the support I have received from the faculty and staff. Urban College helped me find my voice.",
+    image: '/assets/images/testimonials/alecia-h.png',
     nameColor: '#006A3C'
   },
   {
     id: '2',
-    name: 'Jean Pierre',
-    role: 'PROFESSIONAL STUDIES',
-    quote: "I was working two jobs. The flexible schedule at Urban College allowed me to study at night. Now I'm working in IT support.",
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop',
+    name: 'Ayesha M. W.',
+    role: 'ALUM',
+    quote: "Classes were in the evening, so I could get off work and then attend. This allowed me to maintain my life and work schedule, and personal things that matter, too.",
+    image: '/assets/images/testimonials/ayesha-w.webp',
     nameColor: '#0066A2'
   },
   {
     id: '3',
-    name: 'Sarah Chen',
-    role: 'EARLY CHILDHOOD EDUCATION',
-    quote: "The professors actually care. They know your name, your story, and they push you to succeed. Best decision I ever made.",
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400&auto=format&fit=crop',
-    nameColor: '#0066A2'
+    name: 'Elijah W.',
+    role: 'ALUM',
+    quote: "I liked that I could do the work on my own schedule, but it still felt like I was part of a real college experience. I never felt alone.",
+    image: '/assets/images/testimonials/elijah-w.png',
+    nameColor: '#E68325'
   },
 ];
 
