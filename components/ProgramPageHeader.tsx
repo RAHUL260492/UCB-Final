@@ -98,13 +98,13 @@ const ProgramPageHeader: React.FC<ProgramPageHeaderProps> = ({
                         transition: 'all 0.75s cubic-bezier(0.16,1,0.3,1) 0.5s'
                     }}
                 >
-                    <Link
-                        to="/admissions"
-                        className="flex items-center gap-2 px-5 py-2.5 font-bold rounded-full shadow-lg text-sm hover:scale-105 hover:shadow-xl transition-all duration-300 shimmer-overlay min-h-[44px]"
+                    <button
+                        onClick={() => window.dispatchEvent(new CustomEvent('open-rfi-sidebar'))}
+                        className="flex items-center gap-2 px-5 py-2.5 font-bold rounded-full shadow-lg text-sm hover:scale-105 hover:shadow-xl transition-all duration-300 shimmer-overlay min-h-[44px] cursor-pointer"
                         style={{ backgroundColor: accentColor, color: 'white', boxShadow: `0 4px 20px ${accentColor}50` }}
                     >
                         {ctaPrimary} <TrendingUp className="w-4 h-4" />
-                    </Link>
+                    </button>
                     <button
                         onClick={() => window.dispatchEvent(new CustomEvent('open-rfi-sidebar'))}
                         className="px-5 py-2.5 border border-white/40 text-white font-bold rounded-full text-sm hover:bg-white hover:text-ucb-blue transition-all duration-300 hover:shadow-lg backdrop-blur-sm min-h-[44px] cursor-pointer"

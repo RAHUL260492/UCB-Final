@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
 import {
     BookOpen, Clock, Globe, Briefcase, CheckCircle, TrendingUp,
     Users, DollarSign, Calendar, Award, GraduationCap, ArrowRight,
@@ -754,11 +753,11 @@ const ProgramPageLayout: React.FC<ProgramLayoutProps> = ({
                             ))}
                         </div>
 
-                        <Link to="/admissions" className="group inline-flex items-center gap-3 bg-ucb-orange text-white font-black py-5 px-4 md:px-6 rounded-full hover:scale-105 hover:shadow-2xl transition-all duration-300 text-lg shadow-xl min-h-[44px] justify-center"
+                        <button onClick={() => window.dispatchEvent(new CustomEvent('open-rfi-sidebar'))} className="group inline-flex items-center gap-3 bg-ucb-orange text-white font-black py-5 px-4 md:px-6 rounded-full hover:scale-105 hover:shadow-2xl transition-all duration-300 text-lg shadow-xl min-h-[44px] justify-center cursor-pointer"
                             style={{ boxShadow: '0 8px 40px rgba(230,131,37,0.4)' }}>
                             Start Your Application
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                        </Link>
+                        </button>
                         <p className="mt-5 text-white/80 text-sm leading-relaxed">
                             Need help?{' '}
                             <a href="mailto:admissions@urbancollege.edu" className="underline hover:text-white transition-colors">
