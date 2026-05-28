@@ -6,6 +6,7 @@ import RFISidebar from './components/RFISidebar';
 import BackgroundShapes from './components/BackgroundShapes';
 import Home from './pages/Home';
 import About from './pages/About';
+import Mission from './pages/Mission';
 import AcademicPrograms from './pages/AcademicPrograms';
 import Team from './pages/Team';
 import President from './pages/President';
@@ -68,7 +69,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/mission" element={<About />} />
+            <Route path="/mission" element={<Mission />} />
             <Route path="/president" element={<President />} />
             <Route path="/office-of-the-president" element={<President />} />
             <Route path="/trustees" element={<Trustees />} />
