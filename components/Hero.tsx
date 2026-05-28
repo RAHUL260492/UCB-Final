@@ -230,7 +230,7 @@ const Hero: React.FC = () => {
                       key={t.id + 'img'}
                       src={t.image}
                       alt={t.name}
-                      className="absolute inset-0 w-full h-full object-cover grayscale-[20%]"
+                      className="absolute inset-0 w-full h-full object-cover object-top grayscale-[20%]"
                       style={{
                         opacity: i === testIndex ? 1 : 0,
                         transform: i === testIndex ? 'scale(1)' : 'scale(1.05)',

@@ -142,7 +142,7 @@ const Testimonials: React.FC = () => {
                   className="w-20 h-20 md:w-24 md:h-24 rounded-2xl overflow-hidden shadow-lg"
                   style={{ border: `3px solid ${t.accentColor}` }}
                 >
-                  <img src={t.image} alt={t.name} className="w-full h-full object-cover" />
+                  <img src={t.image} alt={t.name} className="w-full h-full object-cover object-top" />
                 </div>
                 {/* Floating color dot */}
                 <div
