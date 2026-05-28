@@ -1,37 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { X, ChevronRight, GraduationCap, CheckCircle, Star } from 'lucide-react';
 
-const EMBED_SCRIPT_SRC = 'https://embed-forms.451.io/bundle.min.js';
-
-let embedScriptPromise: Promise<void> | null = null;
-
-const loadEmbedScript = (): Promise<void> => {
-  if (embedScriptPromise) return embedScriptPromise;
-  if (document.querySelector(`script[src="${EMBED_SCRIPT_SRC}"]`)) {
-    embedScriptPromise = Promise.resolve();
-    return embedScriptPromise;
-  }
-  embedScriptPromise = new Promise((resolve, reject) => {
-    const script = document.createElement('script');
-    script.src = EMBED_SCRIPT_SRC;
-    script.async = true;
-    script.onload = () => resolve();
-    script.onerror = () => {
-      embedScriptPromise = null;
-      reject(new Error('Failed to load 451.io embed script'));
-    };
-    document.body.appendChild(script);
-  });
-  return embedScriptPromise;
-};
-
 const RFISidebar: React.FC = () => {
   const [panelOpen, setPanelOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [pulseAnim, setPulseAnim] = useState(false);
   const [formId, setFormId] = useState('urbancollege.forms.23262');
-  const [scriptReady, setScriptReady] = useState(false);
-  const [scriptError, setScriptError] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 150);
@@ -90,6 +64,10 @@ const RFISidebar: React.FC = () => {
   useEffect(() => {
     if (!panelOpen) return;
 
+    // The Element451 shell script (loaded in index.html from urbancollege.shell.451.io)
+    // already registers the <lum-root> custom element. We just need to make sure
+    // __lum_config is set before the element mounts. Re-mounting via key={formId}
+    // re-triggers the shell's form fetch with the new config.
     (window as any).__lum_config = {
       formId,
       apiUrl: 'https://urbancollege.api.451.io/v2/',
@@ -98,14 +76,6 @@ const RFISidebar: React.FC = () => {
       analyticsToken: 'MVrxFM5pwBJlDgZgXU4xULMKzv3mMKApUUcL1dMe',
       sourceUrl: encodeURIComponent(window.location.href),
     };
-
-    setScriptError(false);
-    loadEmbedScript()
-      .then(() => setScriptReady(true))
-      .catch((err) => {
-        console.error('[RFISidebar]', err);
-        setScriptError(true);
-      });
   }, [formId, panelOpen]);
 
   return (
@@ -220,24 +190,12 @@ const RFISidebar: React.FC = () => {
         {/* Panel Body — Scrollable */}
         <div className="flex-1 overflow-y-auto bg-gray-50/50">
           <div className="px-6 py-5">
-            {/* Embed 451.io Form Element */}
+            {/* Embed 451.io Form Element — rendered by the shell script in index.html */}
             <div className="rfi-form-embed-container min-h-[400px]">
-              {scriptError ? (
-                <div className="text-red-600 text-sm text-center py-10">
-                  We couldn't load the request form. Please refresh the page or email{' '}
-                  <a href="mailto:admissions@urbancollege.edu" className="underline font-semibold">
-                    admissions@urbancollege.edu
-                  </a>
-                  .
-                </div>
-              ) : scriptReady ? (
-                React.createElement('lum-root', {
-                  key: formId,
-                  className: 'text-gray-500 text-sm text-center py-10 block',
-                }, 'Loading official request form...')
-              ) : (
-                <div className="text-gray-500 text-sm text-center py-10">Loading official request form...</div>
-              )}
+              {React.createElement('lum-root', {
+                key: formId,
+                className: 'text-gray-500 text-sm text-center py-10 block',
+              }, 'Loading official request form...')}
             </div>
           </div>
         </div>
