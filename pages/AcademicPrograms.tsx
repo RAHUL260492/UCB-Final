@@ -70,7 +70,7 @@ const CERTIFICATES: ProgramItem[] = [
         title: "Case Management Certificate",
         type: "Certificate",
         credits: "21 credits",
-        languages: "English & Spanish",
+        languages: "English",
         description: "Master the skills to support individuals and families navigating life's challenges. Become a case manager, social services assistant, or behavioral case worker.",
         link: "/programs/case-management"
     },
@@ -78,7 +78,7 @@ const CERTIFICATES: ProgramItem[] = [
         title: "Children's Behavioral Health Certificate",
         type: "Certificate",
         credits: "16 credits",
-        languages: "English",
+        languages: "English & Spanish",
         description: "Prepare for Registered Behavior Technician (RBT®) certification and Community Health Worker credentials. Support children with special needs and their families with skill and compassion.",
         link: "/programs/childrens-behavioral-health-certificate"
     },
@@ -102,7 +102,7 @@ const CERTIFICATES: ProgramItem[] = [
         title: "Elder Care Certificate",
         type: "Certificate",
         credits: "21 credits",
-        languages: "English",
+        languages: "English & Spanish",
         extra: "58% Job Growth!",
         description: "Enter Massachusetts' fastest-growing field. Earn Community Health Worker Certification and support older adults and their families.",
         link: "/programs/elder-care"
@@ -148,7 +148,7 @@ const faqs = [
     { q: "Can I study in a language other than English?", a: "Absolutely! Many programs offer courses in English, Spanish, and Mandarin. ESL support is available for all students." },
     { q: "Do certificate credits transfer to an associate degree?", a: "Yes! Every certificate credit transfers directly into the corresponding associate degree at Urban College. You can continue your education whenever you're ready." },
     { q: "Can I transfer to a bachelor's program?", a: "Yes! Our transfer agreements with partner colleges make it easy to continue toward a bachelor's degree. Check out our College Transfer Pathways page for details." },
-    { q: "Am I eligible for financial aid?", a: "Yes! Most degree-seeking students are eligible for financial aid, scholarships, and grants. Contact our financial aid office at (617) 449-7070 for personalized guidance. Most students graduate debt-free!" }
+    { q: "Am I eligible for financial aid?", a: "Yes! Most degree-seeking students are eligible for financial aid, scholarships, and grants. Contact our financial aid office at (617) 449-7070 for personalized guidance. Our financial aid advisors work with each student to find pathways toward affordable education." }
 ];
 
 const AcademicPrograms: React.FC = () => {
@@ -182,7 +182,7 @@ const AcademicPrograms: React.FC = () => {
                         Achieve Your Dreams—On Your Terms
                     </span>
                     <h2 className="text-3xl font-display font-bold text-ucb-blue mb-4">
-                        Most Students Graduate Debt-Free!
+                        Your Affordable Pathway to Opportunity
                     </h2>
                     <p className="text-lg text-gray-600 leading-relaxed mb-6">
                         Whether you're looking to advance your current career, explore a new path, or want an accessible way to start college—we have an affordable online program for you!
@@ -205,7 +205,7 @@ const AcademicPrograms: React.FC = () => {
                         {[
                             { title: "100% Online", desc: "Learn anywhere, anytime—on your schedule", icon: Globe },
                             { title: "Flexible", desc: "Full-semester or 8-week Fast Track options, Fall/Spring/Summer", icon: Clock },
-                            { title: "Affordable", desc: "Low-cost tuition—most students graduate debt-free", icon: DollarSign },
+                            { title: "Affordable", desc: "Low-cost tuition with personalized financial aid options", icon: DollarSign },
                             { title: "Career-Focused", desc: "Gain job-ready skills you can use immediately", icon: Briefcase },
                             { title: "Short-Term", desc: "Complete a certificate in as little as one year", icon: Award },
                             { title: "Multilingual", desc: "Study in English, Spanish, or Mandarin with ESL support", icon: MessageCircleIcon }

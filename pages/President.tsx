@@ -22,7 +22,7 @@ const President: React.FC = () => {
     const areasOfFocus = [
         {
             title: "Accessible, Affordable Education",
-            desc: "Urban College is committed to removing financial barriers to education through its low-cost tuition, a variety of financial aid options, and a focus on helping students graduate debt-free. Education should be accessible to everyone—regardless of their economic circumstances.",
+            desc: "Urban College is committed to removing financial barriers to education through its low-cost tuition, a variety of financial aid options, and a focus on making higher education affordable for all. Education should be accessible to everyone—regardless of their economic circumstances.",
             icon: DollarIcon,
             color: "text-ucb-blue bg-blue-50"
         },
@@ -120,7 +120,7 @@ const President: React.FC = () => {
                                     "It is my honor and privilege to serve as the President of Urban College of Boston."
                                 </p>
                                 <p>
-                                    For over 30 years, Urban College of Boston has been educating students who are too often overlooked by traditional institutions—working adults, parents, immigrants, and first-generation college students who bring incredible resilience, determination, and talent to our community. With instruction in English, Spanish, Chinese, Portuguese, and Haitian Creole, learners who have called our communities home for centuries and those building their English language proficiency gain the skills employers need and participate as citizens in their local communities.
+                                    For over 30 years, Urban College of Boston has been educating students who are too often overlooked by traditional institutions—working adults, parents, immigrants, and first-generation college students who bring incredible resilience, determination, and talent to our community. With instruction in English, Spanish, and Mandarin (as well as Portuguese and Haitian Creole in contract courses), learners who have called our communities home for centuries and those building their English language proficiency gain the skills employers need and participate as citizens in their local communities.
                                 </p>
                                 <p>
                                     I understand our students’ journey because I have lived it. As someone who emigrated from Haiti with my family, I know firsthand the transformative power of education. I also know the barriers that can stand in the way and the importance of having people who believe in you along the path.

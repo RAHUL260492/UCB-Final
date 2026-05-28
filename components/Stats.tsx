@@ -2,9 +2,9 @@ import React, { useEffect, useRef, useState } from 'react';
 import { GraduationCap, DollarSign, Globe, TrendingUp } from 'lucide-react';
 
 const STATS = [
-  { id: '1', value: 94, suffix: '%', label: 'Graduate Debt-Free', prefix: '', display: '94%' },
-  { id: '2', value: 1200, suffix: '', label: 'Avg Out-of-Pocket Cost', prefix: '$', display: '$1,200' },
-  { id: '3', value: 5, suffix: '', label: 'Languages Offered', prefix: '', display: '5' },
+  { id: '1', value: 0, suffix: '', label: 'Graduate Debt-Free', prefix: '', display: 'Coming Soon', isComingSoon: true },
+  { id: '2', value: 0, suffix: '', label: 'Avg Out-of-Pocket Cost', prefix: '', display: 'Coming Soon', isComingSoon: true },
+  { id: '3', value: 3, suffix: '', label: 'Languages Offered', prefix: '', display: '3' },
   { id: '4', value: 30, suffix: '+', label: 'Years of Impact', prefix: '', display: '30+' },
 ];
 
@@ -28,9 +28,11 @@ function useCountUp(target: number, duration = 1500, active: boolean) {
 
 const StatItem: React.FC<{ stat: typeof STATS[0]; icon: React.FC<any>; idx: number; isVisible: boolean }> = ({ stat, icon: Icon, idx, isVisible }) => {
   const count = useCountUp(stat.value, 1200 + idx * 100, isVisible);
-  const display = isVisible
-    ? `${stat.prefix}${stat.value > 100 ? count.toLocaleString() : count}${stat.suffix}`
-    : stat.display;
+  const display = stat.isComingSoon
+    ? 'Coming Soon'
+    : isVisible
+      ? `${stat.prefix}${stat.value > 100 ? count.toLocaleString() : count}${stat.suffix}`
+      : stat.display;
 
   return (
     <div
@@ -46,7 +48,7 @@ const StatItem: React.FC<{ stat: typeof STATS[0]; icon: React.FC<any>; idx: numb
         <Icon className="w-4 h-4 text-ucb-gold" />
       </div>
       <div>
-        <div className="font-display font-black text-xl md:text-2xl text-ucb-gold leading-none tabular-nums">
+        <div className={`font-display font-black text-ucb-gold leading-none tabular-nums ${stat.isComingSoon ? 'text-xs md:text-sm uppercase tracking-wider' : 'text-xl md:text-2xl'}`}>
           {display}
         </div>
         <div className="text-white/70 tracking-wider uppercase text-[10px] font-bold mt-0.5 whitespace-nowrap">

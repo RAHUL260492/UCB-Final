@@ -22,8 +22,8 @@ const AdmissionsOverview: React.FC = () => {
 
     const whyChooseList = [
         {
-            title: "Most Graduate Debt-Free!",
-            desc: "Grants and scholarships cover 100% of tuition for the majority of our students.",
+            title: "Personalized Financial Aid",
+            desc: "Our advisors work with you to leverage federal, state, and private grants to minimize costs.",
             icon: GraduationCap,
             color: "text-ucb-blue bg-blue-50"
         },
@@ -490,7 +490,7 @@ const AdmissionsOverview: React.FC = () => {
                         <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
                             <h2 className="text-3xl font-display font-extrabold leading-tight">Ready to Transform Your Life?</h2>
                             <p className="opacity-90 text-sm md:text-base font-light leading-relaxed max-w-xl">
-                                Your journey to a better career starts today. Apply now—it's free, fast, and your first step toward a brighter, debt-free future.
+                                Your journey to a better career starts today. Apply now—it's free, fast, and your first step toward a brighter, affordable education and career future.
                             </p>
                             <div className="pt-4 flex flex-wrap gap-4 justify-center lg:justify-start">
                                 <a 

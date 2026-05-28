@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
 import StickySubNav from '../components/StickySubNav';
 import Programs from '../components/Programs';
@@ -33,13 +34,13 @@ const Home: React.FC = () => {
                             </p>
                             <div className="bg-blue-50 border-l-4 border-ucb-blue p-3 rounded-r-lg mb-4">
                                 <p className="text-ucb-blue font-medium text-sm leading-relaxed">
-                                    <span className="font-bold text-ucb-blue block text-base mb-0.5 leading-relaxed">Did you know?</span>
-                                    Most eligible Urban College students pay $0 out-of-pocket for tuition.
+                                    <span className="font-bold text-ucb-blue block text-base mb-0.5 leading-relaxed">Tuition & Financial Aid</span>
+                                    Our team works with every student one-on-one to create a customized payment plan. (Specific out-of-pocket cost metrics coming soon—under research by the Financial Aid Office.)
                                 </p>
                             </div>
-                            <button className="bg-ucb-blue text-white font-bold py-2.5 px-7 rounded-full hover:bg-ucb-blue-glow transition-colors shadow-md hover:-translate-y-0.5 transform duration-300 text-sm min-h-[44px]">
-                                Calculate Your Cost
-                            </button>
+                            <Link to="/admissions" className="bg-ucb-blue text-white font-bold py-2.5 px-7 rounded-full hover:bg-ucb-blue-glow transition-colors shadow-md hover:-translate-y-0.5 transform duration-300 text-sm min-h-[44px] inline-flex items-center justify-center">
+                                Admissions & Aid Options
+                            </Link>
                         </div>
                         <div className="grid grid-cols-1 gap-2">
                             {['Scholarships', 'Financial Aid & Grants', 'Payment Plans'].map((item, i) => (

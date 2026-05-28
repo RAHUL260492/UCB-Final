@@ -57,7 +57,7 @@ const FinancialServices: React.FC = () => {
         },
         {
             myth: "I can't afford college even with financial aid.",
-            reality: "False! Most Urban College students graduate with zero debt. Our financial services advisors create personalized, zero out-of-pocket tuition plans."
+            reality: "False! Our financial services advisors create personalized tuition plans leveraging federal, state, and private grants to make tuition highly affordable."
         },
         {
             myth: "Applying for financial aid is too complicated.",
@@ -73,7 +73,7 @@ const FinancialServices: React.FC = () => {
         <div className="pt-24 lg:pt-32">
             <PageHeader 
                 title="Financial Services & Funding" 
-                subtitle="Most Urban College students graduate debt-free! Discover the options and resources available to fund your education."
+                subtitle="Discover the options and resources available to fund your education. Our Financial Aid Office helps keep your out-of-pocket costs minimal."
                 breadcrumbs={breadcrumbs}
             />
 
@@ -120,7 +120,7 @@ const FinancialServices: React.FC = () => {
                                         <span className="block text-xs uppercase tracking-wider text-blue-200">per course</span>
                                     </div>
                                     <p className="text-[11px] font-light opacity-90 pt-3 leading-relaxed">
-                                        Unlike typical 4-year institutions, we keep our tuition rates low so that the vast majority of our students pay <strong className="text-ucb-gold font-bold">$0 out-of-pocket</strong>.
+                                    Unlike typical 4-year institutions, we keep our tuition rates low and help you access grants so that your out-of-pocket costs are minimized.
                                     </p>
                                 </div>
                             </ScrollAnimation>

@@ -35,7 +35,7 @@ const benefits: ProgramBenefit[] = [
     { title: "High MA Salaries", desc: "Earn up to $73,510/year as a Community and Social Service Specialist in Massachusetts!", icon: DollarSign },
     { title: "Growing Field", desc: "8% job growth—faster than the national average!", icon: TrendingUp },
     { title: "100% Online", desc: "Study 100% online: Learn on a schedule that fits into your busy life", icon: Globe },
-    { title: "Debt-Free Goal", desc: "Most students graduate debt-free!", icon: CheckCircle },
+    { title: "Financial Aid", desc: "Personalized aid plans & options", icon: CheckCircle },
     { title: "Bilingual Options", desc: "Study in English or Spanish: Choose the language that works for you", icon: MessageCircleIcon },
     { title: "ESL Support", desc: "ESL support available: Tailored to each student's needs", icon: Users },
     { title: "Hands-On Internships", desc: "Hands-on internships: Gain real-world experience before you graduate", icon: Briefcase },
@@ -60,7 +60,7 @@ const faqs = [
     { q: "What is the LSWA and can I apply for it?", a: "The Licensed Social Work Associate (LSWA) is a Massachusetts credential that demonstrates professional qualifications in social work. With your Human Services Associate Degree, you can apply for this credential and enhance your career opportunities." },
     { q: "Can I study in Spanish?", a: "Yes! Courses are available in English and Spanish. ESL support is also available and tailored to each student's needs." },
     { q: "Can I continue toward a bachelor's degree?", a: "Absolutely! Our transfer agreements with partner colleges make it easy to continue toward a Bachelor of Social Work (BSW)—the gold standard credential in the field." },
-    { q: "Am I eligible for financial aid?", a: "Yes! Most students are eligible for financial aid, scholarships, and grants. Contact our financial aid office at (617) 449-7070 for personalized guidance. Most students graduate debt-free!" }
+    { q: "Am I eligible for financial aid?", a: "Yes! Most students are eligible for financial aid, scholarships, and grants. Contact our financial aid office at (617) 449-7070 for personalized guidance. Our advisors help you find pathways to minimize out-of-pocket costs." }
 ];
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -72,7 +72,7 @@ const HumanServicesAdministration: React.FC = () => {
         <ProgramPageLayout
             badge="Human Services Administration"
             title={<>Transform Lives & <span style={{ color: '#E68325' }}>Build Your Career in Social Services</span></>}
-            subtitle="8% Job Growth—Faster Than Average! Most Students Graduate Debt-Free!"
+            subtitle="8% Job Growth—Faster Than Average! Accessible education designed for working adults."
             headerImageSrc="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=2940&auto=format&fit=crop"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },
@@ -127,7 +127,7 @@ const HumanServicesAdministration: React.FC = () => {
                 "Want to earn an Associate degree and pursue a BSW",
                 "Looking for an online program with bilingual options",
                 "Seeking hands-on internships to build a resume",
-                "Want to graduate debt-free with competitive tuition"
+                "Want to build a career in social work with affordable tuition"
             ]}
 
             pathwayTitle="Build Toward Your Future"

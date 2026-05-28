@@ -61,7 +61,7 @@ const Registration: React.FC = () => {
         },
         {
             q: "Is financial aid available?",
-            a: "Yes! Most students graduate debt-free. Contact our financial aid team at financialservices@urbancollege.edu to learn what you qualify for as soon as possible before your first class begins."
+            a: "Yes! Our financial aid team helps students find grants and scholarships to keep out-of-pocket costs minimal. Contact our financial aid team at financialservices@urbancollege.edu to learn what you qualify for as soon as possible before your first class begins."
         },
         {
             q: "What if I need tech support for online classes?",
@@ -202,7 +202,7 @@ const Registration: React.FC = () => {
                                 </div>
                                 <h3 className="font-display font-bold text-base text-gray-800">Confirm your financial plan</h3>
                                 <p className="text-gray-500 text-xs leading-relaxed font-light">
-                                    Tuition can be covered by financial aid, self-pay, or employer payment. Make sure your plan is in place. Email <a href="mailto:financialservices@urbancollege.edu" className="text-ucb-blue hover:underline font-semibold">financialservices@urbancollege.edu</a>. Most students graduate debt-free!
+                                    Tuition can be covered by financial aid, self-pay, or employer payment. Make sure your plan is in place. Email <a href="mailto:financialservices@urbancollege.edu" className="text-ucb-blue hover:underline font-semibold">financialservices@urbancollege.edu</a>. We work to keep your out-of-pocket costs minimal!
                                 </p>
                             </div>
                         </ScrollAnimation>

@@ -34,7 +34,7 @@ const benefits: ProgramBenefit[] = [
     { title: "High MA Salaries", desc: "Earn up to $55,547/year in Massachusetts—one of the highest-paying states for paraprofessional educators!", icon: DollarSign },
     { title: "Fast Track", desc: "Finish in as little as one year (only 21 credits)", icon: Clock },
     { title: "100% Online", desc: "Study 100% online: Learn on a schedule that fits into your busy life", icon: Globe },
-    { title: "Debt-Free Goal", desc: "Most students graduate debt-free!", icon: CheckCircle },
+    { title: "Financial Aid", desc: "Personalized aid plans & options", icon: CheckCircle },
     { title: "Bilingual Options", desc: "Study in English or Spanish: Choose the language that works for you", icon: MessageCircleIcon },
     { title: "No Textbooks", desc: "No textbooks or hidden fees: Everything you need is included", icon: BookOpen },
     { title: "ESL Support", desc: "ESL support available: Tailored to each student's needs", icon: Users },
@@ -60,7 +60,7 @@ const faqs = [
     { q: "Will I learn special education skills?", a: "Yes! Special education is one of the most in-demand areas in education, and this program gives you foundational skills to work with students who have diverse learning needs. You'll stand out in the job market." },
     { q: "Can I study in Spanish?", a: "Absolutely! Courses are available in English and Spanish—choose the language that works for you. ESL support is also available and tailored to each student." },
     { q: "What's the job outlook for paraprofessional educators?", a: "Excellent! Massachusetts schools are actively seeking qualified paraprofessional educators, especially those with special education training. Job growth is 7%—faster than average—and salaries are among the highest in the nation ($55,547/year average)." },
-    { q: "Am I eligible for financial aid?", a: "Yes! Most students are eligible for financial aid, scholarships, and grants. Contact our financial aid office at (617) 449-7070 for personalized guidance. Most students graduate debt-free!" }
+    { q: "Am I eligible for financial aid?", a: "Yes! Most students are eligible for financial aid, scholarships, and grants. Contact our financial aid office at (617) 449-7070 for personalized guidance. Our financial aid advisors work one-on-one with students to find grants and scholarships." }
 ];
 
 
@@ -73,7 +73,7 @@ const ParaprofessionalEducator: React.FC = () => {
         <ProgramPageLayout
             badge="Paraprofessional Educator Certificate"
             title={<>Shape Young Minds and <span style={{ color: '#E68325' }}>Launch Your Teaching Career</span></>}
-            subtitle="In As Little As One Year! Most Students Graduate Debt-Free!"
+            subtitle="In As Little As One Year! Accessible, high-quality education designed for working adults."
             headerImageSrc="https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=2940&auto=format&fit=crop"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },

@@ -61,7 +61,7 @@ const About: React.FC = () => {
         },
         {
             title: "Radical Affordability",
-            desc: "Low-cost tuition combined with state, federal, and private grants. Most of our students graduate completely debt-free.",
+            desc: "Low-cost tuition combined with state, federal, and private grants. Specific out-of-pocket cost and debt-free graduation rates are currently under research by our Financial Aid Office — coming soon!",
             icon: DollarSign,
             color: "text-ucb-emerald bg-emerald-50/50"
         },

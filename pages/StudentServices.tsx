@@ -41,7 +41,7 @@ const StudentServices: React.FC = () => {
         },
         {
             title: "Financial Aid",
-            desc: "Navigate FAFSA, grants, and scholarships. Most students graduate debt-free.",
+            desc: "Navigate FAFSA, grants, and scholarships to keep your tuition costs highly affordable.",
             icon: Coins,
             link: "/financial-aid",
             badge: "Tuition Support",

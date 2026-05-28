@@ -3,7 +3,7 @@ import { Plus, Minus } from 'lucide-react';
 
 const FAQS = [
   { q: "Can I work while studying?", a: "Absolutely. 85% of our students work while attending. We offer evening, weekend, and asynchronous online classes to fit your schedule." },
-  { q: "Is financial aid available?", a: "Yes. As an accredited institution, we accept federal financial aid (FAFSA). We also offer institutional scholarships. Many students attend with zero out-of-pocket costs." },
+  { q: "Is financial aid available?", a: "Yes. As an accredited institution, we accept federal financial aid (FAFSA). We also offer institutional scholarships, and our advisors work one-on-one with students to minimize out-of-pocket costs." },
   { q: "Do you offer classes in Spanish?", a: "Yes. Our Early Childhood Education and General Studies programs have specific tracks taught entirely or partially in Spanish, allowing you to learn while improving your English." },
   { q: "Are credits transferable?", a: "Yes. We have articulation agreements with Lesley University, Regis College, and other local institutions, making it easy to transfer your Associate degree into a Bachelor's program." }
 ];

@@ -33,7 +33,7 @@ const outcomes = [
 const benefits: ProgramBenefit[] = [
     { title: "Fast Track", desc: "Finish in as little as one year (19 credits)", icon: Clock },
     { title: "100% Online", desc: "Learn completely online, anytime you want", icon: Globe },
-    { title: "Debt-Free Goal", desc: "Competitive tuition and generous financial aid", icon: DollarSign },
+    { title: "Financial Aid", desc: "Competitive tuition and generous financial aid", icon: DollarSign },
     { title: "Learn in Your Language", desc: "Courses in English, Spanish, and Mandarin", icon: MessageCircleIcon },
     { title: "Unmatched Support", desc: "Dedicated advisors and free tutoring", icon: Users },
     { title: "Career Growth", desc: "Apply what you learn immediately", icon: TrendingUp },
@@ -55,7 +55,7 @@ const faqs = [
     { q: "How long does it take?", a: "As little as one year (flexible pace)." },
     { q: "Do I need prior experience?", a: "No prior experience required." },
     { q: "What languages are available?", a: "Native language tracks in Spanish and Mandarin, plus ESL support." },
-    { q: "Am I eligible for financial aid?", a: "Available for most students; most graduate debt-free." },
+    { q: "Am I eligible for financial aid?", a: "Available for most students; contact our team to explore grants and scholarships." },
 ];
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -67,7 +67,7 @@ const EarlyChildhoodEducationCertificate: React.FC = () => {
         <ProgramPageLayout
             badge="Early Childhood Education Certificate"
             title={<>Shape Young Minds & <span style={{ color: '#E68325' }}>Launch Your Career</span></>}
-            subtitle="In as little as one year. Most students graduate debt-free."
+            subtitle="In as little as one year. Accessible, high-quality education designed for working adults."
             headerImageSrc="https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=2940&auto=format&fit=crop"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },

@@ -111,7 +111,7 @@ const InfoSessions: React.FC = () => {
         },
         {
             q: "Will I get help with financial aid?",
-            a: "Yes! Our financial aid team will be available to answer your questions. Most of our students graduate debt-free—we'll show you exactly how that's possible for you too."
+            a: "Yes! Our financial aid team will be available to answer your questions and help you navigate federal, state, and private grants to make your tuition highly affordable."
         },
         {
             q: "Are sessions available in Spanish?",
@@ -129,8 +129,8 @@ const InfoSessions: React.FC = () => {
             desc: "No pre-screened questions. Ask anything about academic courses, schedules, support tutoring, or student life."
         },
         {
-            title: "Learn How to Graduate Debt-Free",
-            desc: "Our financial aid advisors will explain grants, state scholarships, and how most UCB students pay $0 out-of-pocket."
+            title: "Learn About Tuition & Aid Options",
+            desc: "Our financial aid advisors will explain grants, state scholarships, and how to minimize your out-of-pocket costs."
         },
         {
             title: "Explore Program Options",
@@ -151,7 +151,7 @@ const InfoSessions: React.FC = () => {
 
     const whyUcbBulletPoints = [
         "Finish in as little as one year — certificate programs range from 18–21 credits.",
-        "Most students graduate debt-free! — generous federal/state financial aid and grants cover full tuition.",
+        "Highly affordable programs — generous federal/state financial aid and grants can help cover your tuition costs.",
         "100% online, career-building programs — study asynchronously or live on a schedule built for working adults.",
         "Multilingual support — courses and academic services offered in English, Spanish, and Mandarin.",
         "1-on-1 advising, free tutoring, and career coaching — at Urban College, you're family, not a number.",
@@ -232,7 +232,7 @@ const InfoSessions: React.FC = () => {
                                 <div className="bg-blue-50 border-l-4 border-ucb-blue p-4 rounded-r-2xl">
                                     <p className="text-sm font-semibold text-ucb-blue flex items-center gap-2">
                                         <GraduationCap className="w-5 h-5 shrink-0" />
-                                        Most students graduate debt-free! Come find out how.
+                                        Discover how affordable your education can be. Come find out how.
                                     </p>
                                 </div>
                             </ScrollAnimation>

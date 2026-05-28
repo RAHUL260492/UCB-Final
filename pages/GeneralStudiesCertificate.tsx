@@ -33,7 +33,7 @@ const outcomes = [
 const benefits: ProgramBenefit[] = [
     { title: "Fast Track", desc: "Finish in as little as one year (21 credits)", icon: Clock },
     { title: "100% Online", desc: "Learn on a schedule that fits to your busy life", icon: Globe },
-    { title: "Debt-Free Goal", desc: "Most students graduate debt-free!", icon: DollarSign },
+    { title: "Financial Aid", desc: "Personalized aid plans & options", icon: DollarSign },
     { title: "Stackable Credits", desc: "Credits transfer to an Associate or Bachelor's degree", icon: TrendingUp },
     { title: "No Application Fee", desc: "Start your journey today for free", icon: BookOpen },
     { title: "Bilingual Options", desc: "ESL support available", icon: MessageCircleIcon },
@@ -54,7 +54,7 @@ const faqs = [
     { q: "Is the program entirely online?", a: "Yes! 100% online with synchronous and asynchronous options." },
     { q: "How long does the program take?", a: "In as little as one year! Complete 21 credits at your own pace." },
     { q: "Can I transfer my credits?", a: "Yes! The program is designed to be transferable to 4-year colleges." },
-    { q: "Am I eligible for financial aid?", a: "Yes! Most students receive financial aid and graduate debt-free." },
+    { q: "Am I eligible for financial aid?", a: "Yes! Most students receive financial aid. Contact our advisors to find options that work for you." },
 ];
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -66,7 +66,7 @@ const GeneralStudiesCertificate: React.FC = () => {
         <ProgramPageLayout
             badge="General Studies Certificate"
             title={<>Explore Your Possibilities & <span style={{ color: '#E68325' }}>Build Your Future</span></>}
-            subtitle="In as little as one year. Most students graduate debt-free."
+            subtitle="In as little as one year. Accessible, high-quality education designed for working adults."
             headerImageSrc="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2940&auto=format&fit=crop"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },

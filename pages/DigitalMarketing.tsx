@@ -31,7 +31,7 @@ const outcomes = [
 const benefits: ProgramBenefit[] = [
     { title: "Fast Track", desc: "Finish in as little as one year (only 18 credits!)", icon: Clock },
     { title: "100% Online", desc: "Learn on a schedule that fits into your busy life", icon: Globe },
-    { title: "Debt-Free Goal", desc: "Most students graduate debt-free!", icon: DollarSign },
+    { title: "Financial Aid", desc: "Personalized aid plans & options", icon: DollarSign },
     { title: "Build a Portfolio", desc: "Graduate with professional marketing projects", icon: Briefcase },
     { title: "No Textbooks", desc: "No hidden fees, everything you need is included", icon: BookOpen },
     { title: "Bilingual Options", desc: "Study in English or Spanish", icon: MessageCircleIcon },
@@ -52,7 +52,7 @@ const faqs = [
     { q: "How long does the program take?", a: "In as little as one year! Complete your 18 credits full-time in two semesters or part-time at your own pace." },
     { q: "Do I need prior marketing experience?", a: "No! This program is designed for beginners. We provide the foundational skills." },
     { q: "Can I study in Spanish?", a: "Yes! We offer the program in both English and Spanish." },
-    { q: "Am I eligible for financial aid?", a: "Yes! Most Urban College students receive financial aid, and many graduate completely debt-free." },
+    { q: "Am I eligible for financial aid?", a: "Yes! Most Urban College students receive financial aid, and our advisors work with you to leverage federal, state, and private grants." },
 ];
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -64,7 +64,7 @@ const DigitalMarketing: React.FC = () => {
         <ProgramPageLayout
             badge="Digital Marketing Certificate"
             title={<>Master In-Demand Digital Skills & <span style={{ color: '#E68325' }}>Launch Your Marketing Career</span></>}
-            subtitle="In as little as one year. Most students graduate debt-free."
+            subtitle="In as little as one year. Accessible, high-quality education designed for working adults."
             headerImageSrc="https://images.unsplash.com/photo-1533750349088-cd871a92f312?q=80&w=2940&auto=format&fit=crop"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },

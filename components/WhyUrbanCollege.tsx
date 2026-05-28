@@ -7,7 +7,7 @@ const FEATURES = [
   {
     icon: Globe,
     title: 'Multilingual Education',
-    desc: 'Courses in English, Spanish, Mandarin, Haitian Creole & Portuguese.',
+    desc: 'Courses in English, Spanish, and Mandarin (with others in contract courses).',
     gradient: 'from-ucb-blue to-ucb-teal',
     bg: 'bg-blue-50',
     iconColor: 'text-ucb-blue',
@@ -17,7 +17,7 @@ const FEATURES = [
   {
     icon: DollarSign,
     title: 'Radical Affordability',
-    desc: 'Most students graduate debt-free through grants and low tuition.',
+    desc: 'Personalized financial aid plans and low tuition to keep your education affordable.',
     gradient: 'from-ucb-green to-ucb-teal',
     bg: 'bg-green-50',
     iconColor: 'text-ucb-green',

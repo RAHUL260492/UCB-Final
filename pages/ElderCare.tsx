@@ -33,7 +33,7 @@ const outcomes = [
 const benefits: ProgramBenefit[] = [
     { title: "Fast Track", desc: "Finish in as little as one year (21 credits)", icon: Clock },
     { title: "100% Online", desc: "Learn on a schedule that fits into your busy life", icon: Globe },
-    { title: "Debt-Free Goal", desc: "Most students graduate debt-free!", icon: DollarSign },
+    { title: "Financial Aid", desc: "Personalized aid plans & options", icon: DollarSign },
     { title: "Built-In CHW Credential", desc: "Earn your Community Health Worker credential: Higher salary and career growth", icon: Award },
     { title: "Credit for Prior Learning", desc: "Your experience counts!", icon: TrendingUp },
     { title: "Bilingual Options", desc: "ESL support available: Tailored to each student's needs", icon: MessageCircleIcon },
@@ -48,7 +48,7 @@ const stats: ProgramStat[] = [
     { label: 'Cost', value: '$317', icon: DollarSign, sub: 'Per Credit' },
     { label: 'Start', value: 'Rolling', icon: Calendar, sub: 'Start Date' },
     { label: 'Aid', value: 'Yes', icon: GraduationCap, sub: 'Financial Aid' },
-    { label: 'Language', value: 'English', icon: Globe, sub: 'English' },
+    { label: 'Language', value: 'Bilingual', icon: Globe, sub: 'English & Spanish' },
     { label: 'Outcome', value: 'Job Ready', icon: CheckCircle, sub: 'Career Focused' },
 ];
 
@@ -99,7 +99,7 @@ const faqs = [
     { q: "How long does the program take?", a: "In as little as one year! Complete your 21 credits full-time, or take it at your own pace—the program fits into your busy life." },
     { q: "What is the Community Health Worker (CHW) certification?", a: "Urban College is a Board-Certified CHW Education and Training Site. Students who complete our training need only 2,000 hours of work experience instead of 4,000 to apply for Massachusetts CHW certification!" },
     { q: "Do I need prior experience?", a: "No! No prior experience is required. If you do have experience, we offer credit for prior learning!" },
-    { q: "Am I eligible for financial aid?", a: "Yes! Most students are eligible for financial aid. Contact our financial aid office at (617) 449-7070. Most students graduate debt-free. Our financial aid team will work with you one-on-one to identify grants, scholarships, and funding options that fit your situation. With most students graduating debt-free, we're committed to making your education as affordable as possible." },
+    { q: "Am I eligible for financial aid?", a: "Yes! Most students are eligible for financial aid. Contact our financial aid office at (617) 449-7070. Our financial aid team will work with you one-on-one to identify grants, scholarships, and funding options that fit your situation, making your education as affordable as possible." },
 ];
 
 const ctaRequirements = ['High School Diploma / GED / HiSET', 'Photo ID', 'Online Application'];
@@ -113,7 +113,7 @@ const ElderCare: React.FC = () => {
         <ProgramPageLayout
             badge="Elder Care Certificate"
             title={<>Make a Difference in Seniors' Lives While <span style={{ color: '#E68325' }}>Building Your Career</span></>}
-            subtitle="In As Little As One Year! Most Students Graduate Debt-Free!"
+            subtitle="In As Little As One Year! Accessible, high-quality education designed for working adults."
             headerImageSrc="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=2940&auto=format&fit=crop"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },

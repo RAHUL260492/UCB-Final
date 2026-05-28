@@ -34,7 +34,7 @@ const outcomes = [
 const benefits: ProgramBenefit[] = [
     { title: "Flexible Future", desc: "Explore different subjects and career paths", icon: Compass },
     { title: "100% Online", desc: "Learn on a schedule that fits to your busy life", icon: Globe },
-    { title: "Debt-Free Goal", desc: "Most students graduate debt-free!", icon: DollarSign },
+    { title: "Financial Aid", desc: "Personalized aid plans & options", icon: DollarSign },
     { title: "Ready for Transfer", desc: "Credits transfer to a 4-year degree", icon: TrendingUp },
     { title: "Wide Variety of Careers", desc: "Your options are wide open", icon: Briefcase },
     { title: "Bilingual Options", desc: "ESL support available", icon: MessageCircleIcon },
@@ -53,7 +53,7 @@ const stats: ProgramStat[] = [
 
 const faqs = [
     { q: "Can I transfer my credits?", a: "Yes! The program is designed to be transferable to 4-year colleges and universities." },
-    { q: "How much does it cost?", a: "$11,100 for the full degree. However, most students graduate debt-free with financial aid." },
+    { q: "How much does it cost?", a: "$11,100 for the full degree. However, most students qualify for financial aid to offset tuition costs." },
     { q: "Am I eligible for financial aid?", a: "Yes! Most of our students receive financial aid that covers the full cost of tuition." },
     { q: "What do I need to apply?", a: "You'll need a copy of your high school diploma, GED, or HISET, a photo ID, and a completed application." },
 ];
@@ -67,7 +67,7 @@ const GeneralStudiesAssociate: React.FC = () => {
         <ProgramPageLayout
             badge="General Studies Associate Degree"
             title={<>Explore Your Possibilities & <span style={{ color: '#E68325' }}>Build Your Future</span></>}
-            subtitle="Flexible. Affordable. Transferable. Most students graduate debt-free."
+            subtitle="Flexible. Affordable. Transferable. Accessible education designed for working adults."
             headerImageSrc="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2940&auto=format&fit=crop"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },

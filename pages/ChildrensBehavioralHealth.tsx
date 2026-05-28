@@ -29,7 +29,7 @@ const outcomes = [
 const benefits: ProgramBenefit[] = [
     { title: "Fast Track", desc: "Finish in as little as 9 months (only 16 credits!)", icon: Clock },
     { title: "100% Online", desc: "Study 100% online at your own pace", icon: Globe },
-    { title: "Debt-Free Goal", desc: "Most students graduate debt-free!", icon: DollarSign },
+    { title: "Financial Aid", desc: "Personalized aid plans & options", icon: DollarSign },
     { title: "RBT® Exam Prep", desc: "Prepare to pass the Registered Behavior Technician exam", icon: Award },
     { title: "Accelerate CHW Cert.", desc: "Apply for MA CHW certification with only 2,000 hours of experience", icon: TrendingUp },
     { title: "Bilingual Options", desc: "Learn in English or Spanish", icon: MessageCircleIcon },
@@ -50,7 +50,7 @@ const faqs = [
     { q: "Do I need prior experience?", a: "No! The program covers all foundational knowledge." },
     { q: "What is RBT® certification?", a: "A nationally recognized credential for providing behavioral therapy to children. Our program prepares you for the exam." },
     { q: "What is CHW certification?", a: "A credential for connecting families with resources. We are a Board-Certified training site, cutting your path to certification in half." },
-    { q: "Am I eligible for financial aid?", a: "Yes! Most students qualify and graduate debt-free." },
+    { q: "Am I eligible for financial aid?", a: "Yes! Federal, state, and institutional aid options are available for eligible students." },
 ];
 
 const ChildrensBehavioralHealth: React.FC = () => {
@@ -60,7 +60,7 @@ const ChildrensBehavioralHealth: React.FC = () => {
         <ProgramPageLayout
             badge="Children's Behavioral Health Certificate"
             title={<>Launch Your Career & <span style={{ color: '#E68325' }}>Help Children Thrive</span></>}
-            subtitle="In as little as 9 months. Most students graduate debt-free."
+            subtitle="In as little as 9 months. Accessible, high-quality education designed for working adults."
             headerImageSrc="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=2940&auto=format&fit=crop"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },

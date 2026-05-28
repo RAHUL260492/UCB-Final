@@ -31,9 +31,8 @@ const outcomes = [
 
 const benefits: ProgramBenefit[] = [
     { title: "Fast Track", desc: "Finish in as little as one year (only 18 credits!)", icon: Clock },
-    { title: "100% Online", desc: "Learn on a schedule that fits your busy life", icon: Globe },
-    { title: "Debt-Free Goal", desc: "Most students graduate debt-free!", icon: DollarSign },
-    { title: "Bilingual Options", desc: "Study in English and/or Spanish", icon: MessageCircleIcon },
+    { title: "100% Online", desc: "Learn on a schedule that fits into your busy life", icon: Globe },
+    { title: "Financial Aid", desc: "Personalized aid plans & options", icon: DollarSign },
     { title: "Transfer Credits", desc: "Credits transfer toward an associate or bachelor's degree", icon: TrendingUp },
     { title: "ESL Support", desc: "Tailored to each student's needs", icon: BookOpen },
     { title: "Career Growth", desc: "Build skills for career advancement and financial security", icon: Briefcase },
@@ -51,10 +50,10 @@ const stats: ProgramStat[] = [
 const faqs = [
     { q: "What is the duration of the program?", a: "As little as one year." },
     { q: "Is it fully online?", a: "Yes, entirely online with various formats including asynchronous and live options." },
-    { q: "What languages are courses available in?", a: "Courses are offered in both English and Spanish." },
+    { q: "What languages are courses available in?", a: "Courses are offered in English." },
     { q: "Is Urban College accredited?", a: "Yes, Urban College is a fully accredited non-profit college and Hispanic-Serving Institution." },
     { q: "Will this program help my career?", a: "Absolutely — whether you're seeking a new job, a promotion, or planning to continue your education." },
-    { q: "Is financial aid available?", a: "Yes, most students qualify for aid and graduate debt-free." },
+    { q: "Is financial aid available?", a: "Yes, federal, state, and institutional aid options are available for eligible students." },
 ];
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -67,7 +66,7 @@ const CaseManagement: React.FC = () => {
             // Header
             badge="Case Management Certificate"
             title={<>Build a Career Connecting People & <span style={{ color: '#E68325' }}>Changing Lives</span></>}
-            subtitle="In as little as one year. Most students graduate debt-free."
+            subtitle="In as little as one year. Accessible, high-quality education designed for working adults."
             headerImageSrc="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2940&auto=format&fit=crop"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },

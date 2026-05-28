@@ -33,7 +33,7 @@ const benefits: ProgramBenefit[] = [
     { title: "High Entry Salary", desc: "Earn $59,009+ as an entry-level Project Coordinator in Massachusetts!", icon: DollarSign },
     { title: "Fast Track", desc: "Finish in as little as one year (only 18 credits!)", icon: Clock },
     { title: "100% Online", desc: "Study 100% online: Learn on a schedule that fits into your busy life", icon: Globe },
-    { title: "Debt-Free Goal", desc: "Most students graduate debt-free!", icon: CheckCircle },
+    { title: "Financial Aid", desc: "Personalized aid plans & options", icon: CheckCircle },
     { title: "Bilingual Options", desc: "Study in English or Spanish: Choose the language that works for you", icon: MessageCircleIcon },
     { title: "No Textbooks", desc: "No textbooks or hidden fees: Everything you need is included", icon: BookOpen },
     { title: "ESL Support", desc: "ESL support available: Tailored to each student's needs", icon: Users },
@@ -57,7 +57,7 @@ const faqs = [
     { q: "Do I need prior project management experience?", a: "No! No prior experience is required. The program covers all foundational knowledge—whether you're starting fresh or looking to formalize your skills, you'll graduate ready to succeed." },
     { q: "What industries can I work in with this certificate?", a: "Project management skills are needed across every industry—healthcare, technology, construction, finance, nonprofit, government, and more. This certificate opens doors to a wide variety of career paths." },
     { q: "Can I study in Spanish?", a: "Yes! Courses are available in English and Spanish—choose the language that works for you. ESL support is also available." },
-    { q: "Am I eligible for financial aid?", a: "Yes! Most students are eligible for financial aid, scholarships, and grants. Contact our financial aid office at (617) 449-7070 for personalized guidance. Most students graduate debt-free!" }
+    { q: "Am I eligible for financial aid?", a: "Yes! Most students are eligible for financial aid, scholarships, and grants. Contact our financial aid office at (617) 449-7070 for personalized guidance. Our financial aid advisors work one-on-one with students to find grants and scholarships." }
 ];
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -69,7 +69,7 @@ const ProjectManagement: React.FC = () => {
         <ProgramPageLayout
             badge="Project Management Certificate"
             title={<>Lead Projects, Build Your Career, & <span style={{ color: '#E68325' }}>Earn While You Learn</span></>}
-            subtitle="In As Little As One Year! Most Students Graduate Debt-Free!"
+            subtitle="In As Little As One Year! Accessible, high-quality education designed for working adults."
             headerImageSrc="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },

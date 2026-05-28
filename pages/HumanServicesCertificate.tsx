@@ -33,7 +33,7 @@ const benefits: ProgramBenefit[] = [
     { title: "Growing Field", desc: "8% job growth—faster than the national average!", icon: TrendingUp },
     { title: "Fast Track", desc: "Finish in as little as one year (only 21 credits)", icon: Clock },
     { title: "100% Online", desc: "Learn on a schedule that fits into your busy life", icon: Globe },
-    { title: "Debt-Free Goal", desc: "Most students graduate debt-free!", icon: CheckCircle },
+    { title: "Financial Aid", desc: "Personalized aid plans & options", icon: CheckCircle },
     { title: "Bilingual Options", desc: "Study in English or Spanish: Choose the language that works for you", icon: MessageCircleIcon },
     { title: "ESL Support", desc: "ESL support available: Tailored to each student's needs", icon: Users },
     { title: "Access Internships", desc: "Access internships: Through our network of human service agencies, childcare programs, and mental health organizations", icon: BookOpen }
@@ -57,7 +57,7 @@ const faqs = [
     { q: "Do I need prior experience in human services?", a: "No! No prior experience is required. The program covers all foundational knowledge. Whether you're starting fresh or advancing in your current role, you'll get the skills you need." },
     { q: "Will my credits transfer to an associate's degree?", a: "Yes! All 21 credits transfer directly into the Human Services Administration Associate Degree at Urban College. Continue your education whenever you're ready." },
     { q: "Can I study in Spanish?", a: "Yes! Courses are available in English and Spanish—choose the language that works for you. ESL support is also available and tailored to each student." },
-    { q: "Am I eligible for financial aid?", a: "Yes! Most students are eligible for financial aid, scholarships, and grants. Contact our financial aid office at (617) 449-7070 for personalized guidance. Most students graduate debt-free!" }
+    { q: "Am I eligible for financial aid?", a: "Yes! Most students are eligible for financial aid, scholarships, and grants. Contact our financial aid office at (617) 449-7070 for personalized guidance. Our financial aid advisors work with each student to minimize out-of-pocket costs." }
 ];
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -69,7 +69,7 @@ const HumanServicesCertificate: React.FC = () => {
         <ProgramPageLayout
             badge="Human Services Certificate"
             title={<>Launch Your Career <span style={{ color: '#E68325' }}>Helping Others—While You Work</span></>}
-            subtitle="In As Little As One Year! Most Students Graduate Debt-Free!"
+            subtitle="In As Little As One Year! Accessible, high-quality education designed for working adults."
             headerImageSrc="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?q=80&w=2940&auto=format&fit=crop"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },

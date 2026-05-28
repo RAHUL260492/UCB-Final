@@ -32,7 +32,7 @@ const outcomes = [
 const benefits: ProgramBenefit[] = [
     { title: "Fast Track", desc: "Finish in as little as one year (only 18 credits!)", icon: Clock },
     { title: "100% Online", desc: "Learn on a schedule that fits into your busy life", icon: Globe },
-    { title: "Debt-Free Goal", desc: "Most students graduate debt-free!", icon: DollarSign },
+    { title: "Financial Aid", desc: "Personalized aid plans & options", icon: DollarSign },
     { title: "Bilingual Options", desc: "Study in English and/or Spanish", icon: MessageCircleIcon },
     { title: "Transfer Credits", desc: "Credits transfer toward an associate or bachelor's degree", icon: TrendingUp },
     { title: "ESL Support", desc: "Tailored to each student's needs", icon: BookOpen },
@@ -56,7 +56,7 @@ const faqs = [
     { q: "What languages?", a: "English and Spanish." },
     { q: "Accredited?", a: "Yes, a fully accredited non-profit college and Hispanic-Serving Institution." },
     { q: "Will it help my career?", a: "Yes, for new jobs, promotions, or further studies." },
-    { q: "Financial aid?", a: "Yes, most students graduate debt-free." },
+    { q: "Financial aid?", a: "Yes, federal, state, and institutional aid options are available for eligible students." },
 ];
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -68,7 +68,7 @@ const EarlyChildhoodEducation: React.FC = () => {
         <ProgramPageLayout
             badge="Early Childhood Education Associate"
             title={<>Inspire Young Minds & <span style={{ color: '#E68325' }}>Build Your Future</span></>}
-            subtitle="A 60-credit Associate Degree. Most students graduate debt-free."
+            subtitle="A 60-credit Associate Degree. Accessible, high-quality education designed for working adults."
             headerImageSrc="https://images.unsplash.com/photo-1601655781320-182e39959d06?q=80&w=2940&auto=format&fit=crop"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },
