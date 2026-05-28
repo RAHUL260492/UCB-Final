@@ -28,7 +28,7 @@
       var params = new URLSearchParams(window.location.search);
       var raw = params.get('formId') || 'urbancollege.forms.23262';
       var formId = /^urbancollege\.forms\.\d+$/.test(raw) ? raw : 'urbancollege.forms.23262';
-      window.__lum_config = {
+      window.__lum_config__ = {
         formId: formId,
         apiUrl: 'https://urbancollege.api.451.io/v2/',
         accessToken: 'WeJW3dZzCzD0RDuF04Sg2CMZQoJOmdjqYCzsE76e',
