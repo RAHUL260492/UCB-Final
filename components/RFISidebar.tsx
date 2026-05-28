@@ -15,6 +15,12 @@ const RFISidebar: React.FC = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  useEffect(() => {
+    const handleOpen = () => setPanelOpen(true);
+    window.addEventListener('open-rfi-sidebar', handleOpen);
+    return () => window.removeEventListener('open-rfi-sidebar', handleOpen);
+  }, []);
+
   // Periodic attention pulse on the floating CTA
   useEffect(() => {
     const timer = setInterval(() => {
