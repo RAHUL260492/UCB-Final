@@ -361,7 +361,7 @@ const About: React.FC = () => {
                         </blockquote>
                         <div className="flex items-center justify-center gap-3">
                             <img
-                                src="/assets/images/testimonials/krystal-j.jpg"
+                                src="/assets/images/testimonials/krystal-j.png"
                                 alt="Krystal Ray J."
                                 className="w-12 h-12 rounded-full object-cover shadow-md border-2 border-ucb-orange/20"
                             />

@@ -15,7 +15,7 @@ const HERO_TESTIMONIALS = [
     name: 'Alecia H.',
     role: 'ALUM',
     quote: "My experience with Urban College has been very positive because of the support I have received from the faculty and staff. Urban College helped me find my voice.",
-    image: '/assets/images/testimonials/alecia-h.png',
+    image: '/assets/images/testimonials/alecia-h.webp',
     nameColor: '#006A3C'
   },
   {
@@ -23,7 +23,7 @@ const HERO_TESTIMONIALS = [
     name: 'Ayesha M. W.',
     role: 'ALUM',
     quote: "Classes were in the evening, so I could get off work and then attend. This allowed me to maintain my life and work schedule, and personal things that matter, too.",
-    image: '/assets/images/testimonials/ayesha-w.webp',
+    image: '/assets/images/testimonials/ayesha-w.jpg',
     nameColor: '#0066A2'
   },
   {

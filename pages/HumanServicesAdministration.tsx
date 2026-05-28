@@ -73,7 +73,7 @@ const HumanServicesAdministration: React.FC = () => {
             badge="Human Services Administration"
             title={<>Transform Lives & <span style={{ color: '#E68325' }}>Build Your Career in Social Services</span></>}
             subtitle="8% Job Growth—Faster Than Average! Accessible education designed for working adults."
-            headerImageSrc="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=2940&auto=format&fit=crop"
+            headerImageSrc="/Program%20Images%20for%20Website/Human%20Services%20AA%201.jpg"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },
                 { label: 'Human Services Administration' }
@@ -142,7 +142,7 @@ const HumanServicesAdministration: React.FC = () => {
                 quote: "Urban College was definitely a stepping stone that fueled my passion for advocacy. I love how my voice can make a difference, and I have the opportunity to influence positive change in my community.",
                 name: "Ayesha M. W.",
                 role: "Alum",
-                imageSrc: "/assets/images/testimonials/ayesha-w.webp"
+                imageSrc: "/assets/images/testimonials/ayesha-w.jpg"
             }}
 
             faqs={faqs}

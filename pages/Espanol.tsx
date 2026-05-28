@@ -67,7 +67,7 @@ const Espanol: React.FC = () => {
             quote: "Estoy agradecida con Urban College porque me ayudaron en mi transición del español al inglés. Cuando empecé a tomar clases en inglés, tuve el apoyo y el ánimo que necesitaba. Si tienes sueños, ¡adelante! Cuando llegué aquí no hablaba inglés, pero me motivaron a seguir estudiando, obtener mi título en Servicios Humanos y trabajar en algo que disfruto.",
             author: "Ramona S.",
             role: "Exalumna de Servicios Humanos",
-            image: "/assets/images/testimonials/ramona-s.png"
+            image: "/assets/images/testimonials/ramona-s.webp"
         },
         {
             quote: "El personal, los profesores, los tutores, los asesores, incluso tus compañeros… todos te apoyan en Urban College sin importar quién seas o de dónde vengas. Siempre intentan ayudarte. ¡Gracias Urban College! Ahora tengo más experiencia hablando inglés; cuando empecé aquí no hablaba nada, pero ahora entiendo mucho más.",

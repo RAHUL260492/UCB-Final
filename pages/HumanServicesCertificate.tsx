@@ -70,7 +70,7 @@ const HumanServicesCertificate: React.FC = () => {
             badge="Human Services Certificate"
             title={<>Launch Your Career <span style={{ color: '#E68325' }}>Helping Others—While You Work</span></>}
             subtitle="In As Little As One Year! Accessible, high-quality education designed for working adults."
-            headerImageSrc="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?q=80&w=2940&auto=format&fit=crop"
+            headerImageSrc="/Program%20Images%20for%20Website/Human%20Services%20Cert%201.jpg"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },
                 { label: 'Human Services Certificate' }
@@ -138,7 +138,7 @@ const HumanServicesCertificate: React.FC = () => {
                 quote: "Urban College was definitely a stepping stone that fueled my passion for advocacy. I love how my voice can make a difference, and I have the opportunity to influence positive change in my community.",
                 name: "Ayesha M. W.",
                 role: "Alum",
-                imageSrc: "/assets/images/testimonials/ayesha-w.webp"
+                imageSrc: "/assets/images/testimonials/ayesha-w.jpg"
             }}
 
             faqs={faqs}

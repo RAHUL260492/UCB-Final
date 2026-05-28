@@ -7,7 +7,7 @@ const TESTIMONIALS = [
     name: 'Alecia H.',
     role: 'Alum',
     quote: "My experience with Urban College has been very positive because of the suppport I have received from the faculty and staff. Urban College helped me find my voice and helped me believed in myself and gain confidence.",
-    image: '/assets/images/testimonials/alecia-h.png',
+    image: '/assets/images/testimonials/alecia-h.webp',
     accentColor: 'var(--color-ucb-blue)',
   },
   {
@@ -15,7 +15,7 @@ const TESTIMONIALS = [
     name: 'Adzele B.',
     role: 'Alum',
     quote: "My experience with Urban College has been very positive because of the suppport I have received from the faculty and staff. Urban College helped me find my voice and helped me believed in myself and gain confidence.",
-    image: 'http://static1.squarespace.com/static/5be099a375f9eecbf2753e8d/t/68121fd4e895fe4b7c58613c/1746018269355/Adzele.png?format=1500w',
+    image: '/assets/images/testimonials/adzele-b.webp',
     accentColor: 'var(--color-ucb-green)',
   },
   {
@@ -23,7 +23,7 @@ const TESTIMONIALS = [
     name: 'Ayesha M. W.',
     role: 'Alum',
     quote: "The hours were a big part of choosing Urban College. Classes were in the evening, so I could get off work and then attend. This allowed me to maintain my life and work schedule, and personal things that matter, too. As an adult with bills to pay, I couldn’t take off work to attend school, so it worked well.",
-    image: '/assets/images/testimonials/ayesha-w.webp',
+    image: '/assets/images/testimonials/ayesha-w.jpg',
     accentColor: 'var(--color-ucb-orange)',
   },
   {
@@ -31,7 +31,7 @@ const TESTIMONIALS = [
     name: 'Dominga V.',
     role: 'Alum',
     quote: "Urban College opened doors for me, opened opportunities for me that I never envisioned. I dare to say that everything in my life is thanks to Urban College.",
-    image: '/assets/images/testimonials/dominga-v.jpg',
+    image: '/assets/images/testimonials/dominga-v.png',
     accentColor: 'var(--color-ucb-teal)',
   },
   {

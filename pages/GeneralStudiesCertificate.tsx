@@ -67,7 +67,7 @@ const GeneralStudiesCertificate: React.FC = () => {
             badge="General Studies Certificate"
             title={<>Explore Your Possibilities & <span style={{ color: '#E68325' }}>Build Your Future</span></>}
             subtitle="In as little as one year. Accessible, high-quality education designed for working adults."
-            headerImageSrc="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2940&auto=format&fit=crop"
+            headerImageSrc="/Program%20Images%20for%20Website/General%20Studies%20Cert%201.jpg"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },
                 { label: 'General Studies Certificate' }
@@ -133,7 +133,7 @@ const GeneralStudiesCertificate: React.FC = () => {
                 quote: "It really drove me to understand the concept of working and also going to school. That's when Urban College became my pathway to where I am today—I work in cyber security, and earned my master's.",
                 name: "Miguel S.",
                 role: "Alum",
-                imageSrc: "/assets/images/testimonials/miguel-s.jpg"
+                imageSrc: "/assets/images/testimonials/miguel-s.png"
             }}
 
             faqs={faqs}

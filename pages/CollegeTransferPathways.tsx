@@ -36,7 +36,7 @@ const CollegeTransferPathways: React.FC = () => {
             name: "Miguel S.",
             role: "Alum",
             quote: "It really drove me to understand the concept of working and also going to school. That’s when Urban College became my pathway to where I am today – I work in cyber security, and earned my master’s.",
-            imageSrc: "/assets/images/testimonials/miguel-s.jpg"
+            imageSrc: "/assets/images/testimonials/miguel-s.png"
         }
     ];
 

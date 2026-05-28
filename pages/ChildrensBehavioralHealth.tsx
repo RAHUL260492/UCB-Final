@@ -61,7 +61,7 @@ const ChildrensBehavioralHealth: React.FC = () => {
             badge="Children's Behavioral Health Certificate"
             title={<>Launch Your Career & <span style={{ color: '#E68325' }}>Help Children Thrive</span></>}
             subtitle="In as little as 9 months. Accessible, high-quality education designed for working adults."
-            headerImageSrc="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=2940&auto=format&fit=crop"
+            headerImageSrc="/Program%20Images%20for%20Website/CBH%20cert%20primary.jpg"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },
                 { label: "Children's Behavioral Health" }
@@ -128,7 +128,7 @@ const ChildrensBehavioralHealth: React.FC = () => {
                 quote: "Urban College created the pathway for me to go towards the future I want for myself.",
                 name: "Krystal Ray J.",
                 role: "Alum",
-                imageSrc: "/assets/images/testimonials/krystal-j.jpg"
+                imageSrc: "/assets/images/testimonials/krystal-j.png"
             }}
 
             faqs={faqs}

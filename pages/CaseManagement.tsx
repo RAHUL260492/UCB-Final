@@ -67,7 +67,7 @@ const CaseManagement: React.FC = () => {
             badge="Case Management Certificate"
             title={<>Build a Career Connecting People & <span style={{ color: '#E68325' }}>Changing Lives</span></>}
             subtitle="In as little as one year. Accessible, high-quality education designed for working adults."
-            headerImageSrc="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2940&auto=format&fit=crop"
+            headerImageSrc="/Program%20Images%20for%20Website/Case%20Management%20Cert%201.jpg"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },
                 { label: 'Case Management' }
@@ -145,7 +145,7 @@ const CaseManagement: React.FC = () => {
                 quote: "I wouldn't be able to do the work I do without my certificates and degree from Urban College. If you have any dreams, go forward. When I first came here, I didn't speak English, but I was pushed to continue to study and get my diploma.",
                 name: "Ramona S.",
                 role: "Alum",
-                imageSrc: "/assets/images/testimonials/ramona-s.png"
+                imageSrc: "/assets/images/testimonials/ramona-s.webp"
             }}
 
             // FAQ

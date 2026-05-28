@@ -74,7 +74,7 @@ const ParaprofessionalEducator: React.FC = () => {
             badge="Paraprofessional Educator Certificate"
             title={<>Shape Young Minds and <span style={{ color: '#E68325' }}>Launch Your Teaching Career</span></>}
             subtitle="In As Little As One Year! Accessible, high-quality education designed for working adults."
-            headerImageSrc="https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=2940&auto=format&fit=crop"
+            headerImageSrc="/Program%20Images%20for%20Website/paraprofessional%20educator%20cert%201.jpg"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },
                 { label: 'Paraprofessional Educator' }
@@ -142,7 +142,7 @@ const ParaprofessionalEducator: React.FC = () => {
                 quote: "I have been passionately endorsing Urban College to others... the vibrant atmosphere, dedicated faculty and diverse student body create an enriching experience that I believe everyone should have the opportunity to enjoy.",
                 name: "Mariely M.",
                 role: "Alum",
-                imageSrc: "/assets/images/testimonials/mariely-m.png"
+                imageSrc: "/assets/images/testimonials/mariely-m.jpg"
             }}
 
             faqs={faqs}

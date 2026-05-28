@@ -68,7 +68,7 @@ const GeneralStudiesAssociate: React.FC = () => {
             badge="General Studies Associate Degree"
             title={<>Explore Your Possibilities & <span style={{ color: '#E68325' }}>Build Your Future</span></>}
             subtitle="Flexible. Affordable. Transferable. Accessible education designed for working adults."
-            headerImageSrc="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2940&auto=format&fit=crop"
+            headerImageSrc="/Program%20Images%20for%20Website/General%20Studies%20AA%201.jpg"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },
                 { label: 'General Studies Associate' }
@@ -134,7 +134,7 @@ const GeneralStudiesAssociate: React.FC = () => {
                 quote: "It really drove me to understand the concept of working and also going to school. That's when Urban College became my pathway to where I am today—I work in cyber security, and earned my master's.",
                 name: "Miguel S.",
                 role: "Alum",
-                imageSrc: "/assets/images/testimonials/miguel-s.jpg"
+                imageSrc: "/assets/images/testimonials/miguel-s.png"
             }}
 
             faqs={faqs}

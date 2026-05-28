@@ -59,7 +59,7 @@ const Mandarin: React.FC = () => {
             quote: "我非常感谢城市学院，因为它帮助我顺利地从西班牙语过渡到英语学习。当我开始用英语上课时，我得到了我需要的支持和鼓励。如果你有梦想，就勇敢去追梦吧！我刚来这里的时候，一句英语都不会说，但我被鼓励继续学习，最终获得了人类服务专业的学位，并从事自己热爱的工作。",
             author: "校友 Ramona S.",
             role: "人类服务专业毕业生",
-            image: "/assets/images/testimonials/ramona-s.png"
+            image: "/assets/images/testimonials/ramona-s.webp"
         },
         {
             quote: "学院的教职员工、老师、辅导员、顾问，甚至你的同学，都会支持你。他们会尽力帮助你。谢谢城市学院！我的英语口语能力大大提升，因为我刚来的时候一句英语都不会说，但现在我能听懂更多了。",

@@ -69,7 +69,7 @@ const EarlyChildhoodEducation: React.FC = () => {
             badge="Early Childhood Education Associate"
             title={<>Inspire Young Minds & <span style={{ color: '#E68325' }}>Build Your Future</span></>}
             subtitle="A 60-credit Associate Degree. Accessible, high-quality education designed for working adults."
-            headerImageSrc="https://images.unsplash.com/photo-1601655781320-182e39959d06?q=80&w=2940&auto=format&fit=crop"
+            headerImageSrc="/Program%20Images%20for%20Website/ECE-AA-primary.jpg"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },
                 { label: 'Early Childhood Education' }
@@ -136,7 +136,7 @@ const EarlyChildhoodEducation: React.FC = () => {
                 quote: "The supportive environment and encouragement from faculty and peers instilled a sense of confidence that inspired me to take a bold step forward, allowing me to establish and operate my own family childcare center.",
                 name: "Mariely M.",
                 role: "Alum",
-                imageSrc: "/assets/images/testimonials/mariely-m.png"
+                imageSrc: "/assets/images/testimonials/mariely-m.jpg"
             }}
 
             faqs={faqs}

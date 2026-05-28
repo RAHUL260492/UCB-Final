@@ -26,3 +26,7 @@ dist-ssr
 # Netlify
 .netlify
 
+# Source assets (originals from Drive/design team — only the optimized
+# copies under public/assets/ should be committed)
+Testimonial images for website/
+
