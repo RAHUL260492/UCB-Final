@@ -175,7 +175,7 @@ const Hero: React.FC = () => {
               />
               <button
                 type="button"
-                onClick={() => window.dispatchEvent(new CustomEvent('openRFIPanel', { detail: { name, email } }))}
+                onClick={() => window.dispatchEvent(new CustomEvent('open-rfi-sidebar', { detail: { name, email } }))}
                 className="px-4 py-2 bg-ucb-orange text-white text-sm font-bold rounded-lg hover:bg-ucb-orange-glow active:scale-[0.97] transition-all whitespace-nowrap hover:shadow-lg hover:-translate-y-0.5 min-h-[40px]"
                 style={{ boxShadow: '0 2px 12px rgba(230,131,37,0.35)' }}
               >
