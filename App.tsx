@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import RFISidebar from './components/RFISidebar';
@@ -7,6 +7,7 @@ import BackgroundShapes from './components/BackgroundShapes';
 import Home from './pages/Home';
 import About from './pages/About';
 import Mission from './pages/Mission';
+import RFILandingPage from './pages/RFILandingPage';
 import AcademicPrograms from './pages/AcademicPrograms';
 import Team from './pages/Team';
 import President from './pages/President';
@@ -126,6 +127,32 @@ function App() {
             <Route path="/workforce-development" element={<Workforce />} />
             <Route path="/lrc-spanish" element={<Espanol />} />
             <Route path="/lrc-mandarin" element={<Mandarin />} />
+
+            {/* RFI Campaign Landing Pages */}
+            <Route path="/getstarted" element={<RFILandingPage />} />
+            <Route path="/your-future" element={<RFILandingPage />} />
+            <Route path="/say-yes-a" element={<RFILandingPage />} />
+            <Route path="/say-yes-b" element={<RFILandingPage />} />
+            <Route path="/whav" element={<RFILandingPage />} />
+            <Route path="/WHAV" element={<RFILandingPage />} />
+
+            {/* Language Path Aliases / Redirects */}
+            <Route path="/chinese" element={<Navigate to="/mandarin" replace />} />
+            <Route path="/spanish" element={<Navigate to="/espanol" replace />} />
+
+            {/* Legacy Program Page Redirects */}
+            <Route path="/business-certificate" element={<Navigate to="/programs/business-certificate" replace />} />
+            <Route path="/childrens-behavioral-health-certificate" element={<Navigate to="/programs/childrens-behavioral-health-certificate" replace />} />
+            <Route path="/early-childhood-education-associate-degree" element={<Navigate to="/programs/early-childhood-education" replace />} />
+            <Route path="/foundations-early-childhood-education-certificate" element={<Navigate to="/programs/early-childhood-education-certificate" replace />} />
+            <Route path="/elder-care" element={<Navigate to="/programs/elder-care" replace />} />
+            <Route path="/general-studies-associate-degree" element={<Navigate to="/programs/general-studies-associate" replace />} />
+            <Route path="/general-studies-certificate" element={<Navigate to="/programs/general-studies-certificate" replace />} />
+            <Route path="/human-services-administration-associate-degree" element={<Navigate to="/programs/human-services-administration" replace />} />
+            <Route path="/human-services-administration-certificate" element={<Navigate to="/programs/human-services-certificate" replace />} />
+            <Route path="/paraprofessional-educator-certificate" element={<Navigate to="/programs/paraprofessional-educator-certificate" replace />} />
+            <Route path="/professional-studies" element={<Navigate to="/programs/professional-studies" replace />} />
+            <Route path="/project-management-certificate" element={<Navigate to="/programs/project-management-certificate" replace />} />
           </Routes>
         </main>
 
