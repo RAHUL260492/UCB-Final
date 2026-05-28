@@ -16,7 +16,12 @@ const RFISidebar: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    const handleOpen = () => setPanelOpen(true);
+    const handleOpen = (event: Event) => {
+      const detail = (event as CustomEvent).detail;
+      const targetFormId = detail?.formId || getFormIdForCurrentPath(window.location.pathname);
+      setFormId(targetFormId);
+      setPanelOpen(true);
+    };
     window.addEventListener('open-rfi-sidebar', handleOpen);
     return () => window.removeEventListener('open-rfi-sidebar', handleOpen);
   }, []);
@@ -57,13 +62,6 @@ const RFISidebar: React.FC = () => {
     
     return 'urbancollege.forms.23262';
   };
-
-  useEffect(() => {
-    if (panelOpen) {
-      const resolved = getFormIdForCurrentPath(window.location.pathname);
-      setFormId(resolved);
-    }
-  }, [panelOpen]);
 
   useEffect(() => {
     if (!panelOpen) return;
@@ -122,7 +120,7 @@ const RFISidebar: React.FC = () => {
           {/* Primary CTA button */}
           <button
             id="rfi-cta-button"
-            onClick={() => setPanelOpen(true)}
+            onClick={() => window.dispatchEvent(new CustomEvent('open-rfi-sidebar'))}
             className={`flex items-center gap-2 bg-[#E68325] text-white px-5 py-2.5 rounded-full font-bold text-sm whitespace-nowrap hover:bg-[#d4751c] hover:scale-[1.03] active:scale-[0.98] transition-all duration-200 cursor-pointer ${pulseAnim ? 'animate-[ctaPulse_0.6s_ease-in-out]' : ''
               }`}
             style={{ boxShadow: '0 4px 20px rgba(230,131,37,0.5), 0 1px 4px rgba(0,0,0,0.15)' }}
@@ -136,7 +134,7 @@ const RFISidebar: React.FC = () => {
 
       {/* ─── Mobile Floating CTA Tab (right edge) ─── */}
       <button
-        onClick={() => setPanelOpen(true)}
+        onClick={() => window.dispatchEvent(new CustomEvent('open-rfi-sidebar'))}
         className={`md:hidden fixed right-0 top-[45%] -translate-y-1/2 z-40 bg-[#E68325] text-white py-4 px-2 rounded-l-lg font-bold text-[11px] tracking-[0.15em] transition-all duration-500 ease-out whitespace-nowrap cursor-pointer ${
           scrolled && !panelOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full pointer-events-none'
         } ${pulseAnim ? 'animate-[ctaPulse_0.6s_ease-in-out]' : ''}`}
