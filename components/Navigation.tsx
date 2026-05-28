@@ -37,9 +37,9 @@ const Navigation: React.FC = () => {
     window.addEventListener('resize', updateHeaderHeight);
     return () => window.removeEventListener('resize', updateHeaderHeight);
   }, [bannerOpen, isScrolled]);
-  const navLinks: Array<{ name: string; path: string; dropdown?: any[]; groups?: any[] }> = [
+  const navLinks: Array<{ name: string; path: string; dropdown?: any[]; groups?: any[]; className?: string }> = [
     { 
-      name: 'About Urban College', 
+      name: 'About', 
       path: '/about',
       dropdown: [
         { name: 'About Us', path: '/about' },
@@ -100,7 +100,7 @@ const Navigation: React.FC = () => {
       ]
     },
     { 
-      name: 'Current Students', 
+      name: 'Students', 
       path: '/#students',
       dropdown: [
         { name: 'Registration', path: '/course-registration' },
@@ -115,11 +115,12 @@ const Navigation: React.FC = () => {
         { name: 'Commencement Ceremony', path: '/commencement' }
       ]
     },
-    { name: 'Workforce & Community', path: '/workforce' },
-    { name: 'Donate', path: '#' },
+    { name: 'Workforce', path: '/workforce', className: 'hidden lg:block' },
+    { name: 'Donate', path: '#', className: 'hidden xl:block' },
     { 
-      name: 'News & Blog', 
+      name: 'News', 
       path: '/blog',
+      className: 'hidden lg:block',
       dropdown: [
         { name: 'Urban College Blog', path: '/blog' },
         { name: 'In the News', path: '/news' }
@@ -199,21 +200,20 @@ const Navigation: React.FC = () => {
           : 'bg-ucb-blue py-6 text-white'
         : 'bg-white/98 backdrop-blur-sm py-3 text-ucb-black shadow-sm'
         }`}>
-        <div className="container mx-auto px-4 lg:px-4 xl:px-6 flex flex-wrap justify-between items-center gap-y-3">
+        <div className="container mx-auto px-4 md:px-4 xl:px-6 flex flex-wrap justify-between items-center gap-y-3">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group relative z-50">
-            {/* Compact logo (image only) below lg, full logo at lg+ */}
+            {/* Logo text is now always visible on all screen sizes */}
             <Logo
-              className={`h-10 lg:h-11 xl:h-12 w-auto transition-all duration-500 ${isScrolled ? '' : 'drop-shadow-sm'}`}
+              className={`h-10 md:h-11 xl:h-12 w-auto transition-all duration-500 ${isScrolled ? '' : 'drop-shadow-sm'}`}
               variant={useWhiteNav ? 'light' : 'color'}
-              compact={true}
             />
           </Link>
 
-          {/* Desktop Links — shown at lg (1024px+) to avoid overlap on smaller tablets */}
-          <div className="hidden lg:flex items-center gap-2.5 xl:gap-4 2xl:gap-6 font-semibold text-xs xl:text-sm 2xl:text-base">
+          {/* Desktop Links — shown at md (768px+) to avoid collapse on 13" laptop screens */}
+          <div className="hidden md:flex items-center gap-2 xl:gap-3 2xl:gap-5 font-semibold text-xs xl:text-sm 2xl:text-base">
             {navLinks.map((item) => (
-              <div key={item.name} className="relative group/item">
+              <div key={item.name} className={`relative group/item ${item.className || ''}`}>
                 <Link
                   to={item.path}
                   className={`hover:text-ucb-blue transition-colors relative group py-2 flex items-center gap-1 ${location.pathname === item.path ? 'text-ucb-blue' : ''} ${useWhiteNav && location.pathname !== item.path ? 'hover:text-ucb-gold' : ''}`}
@@ -225,7 +225,7 @@ const Navigation: React.FC = () => {
 
                 {/* Dropdown (Mega Menu or Nested) */}
                 {(item.dropdown || item.groups) && (
-                  <div className="absolute top-full left-0 pt-4 opacity-0 invisible group-hover/item:opacity-100 group-hover/item:visible transition-all duration-300 transform translate-y-2 group-hover/item:translate-y-0 min-w-[320px] lg:min-w-[550px] xl:min-w-[600px] z-50">
+                  <div className="absolute top-full left-0 pt-4 opacity-0 invisible group-hover/item:opacity-100 group-hover/item:visible transition-all duration-300 transform translate-y-2 group-hover/item:translate-y-0 min-w-[320px] md:min-w-[500px] lg:min-w-[550px] xl:min-w-[600px] z-50">
                     <div className="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden py-4 px-6 text-ucb-black max-h-[70vh] overflow-y-auto">
                       {item.dropdown ? (
                         <div className="grid grid-cols-1 gap-1">
@@ -252,7 +252,7 @@ const Navigation: React.FC = () => {
                           ))}
                         </div>
                       ) : item.groups ? (
-                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
                           {item.groups.map((group: any) => (
                             <div key={group.title} className="flex flex-col">
                               <h4 className="text-sm font-bold text-ucb-orange mb-2 uppercase tracking-wide border-b border-gray-100 pb-2">{group.title}</h4>
@@ -297,8 +297,8 @@ const Navigation: React.FC = () => {
             </button>
           </div>
 
-          {/* Mobile/Tablet Menu Toggle — shown below lg (1024px) */}
-          <div className="lg:hidden flex items-center gap-1">
+          {/* Mobile/Tablet Menu Toggle — shown below md (768px) */}
+          <div className="md:hidden flex items-center gap-1">
             <button
               onClick={() => { setSearchOpen(!searchOpen); if(mobileMenuOpen) setMobileMenuOpen(false); }}
               className={`p-2 rounded-full transition-all duration-300 ${useWhiteNav && !mobileMenuOpen && !searchOpen ? 'text-white hover:bg-white/20' : 'text-ucb-blue hover:bg-ucb-blue/10'}`}
@@ -363,9 +363,9 @@ const Navigation: React.FC = () => {
       </div>
 
       {/* Mobile Menu Overlay */}
-      <div className={`fixed inset-0 z-40 bg-black/50 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${mobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`} onClick={() => setMobileMenuOpen(false)} />
+      <div className={`fixed inset-0 z-40 bg-black/50 backdrop-blur-sm transition-opacity duration-300 md:hidden ${mobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`} onClick={() => setMobileMenuOpen(false)} />
 
-      <div className={`fixed top-0 right-0 h-full w-[80%] max-w-sm bg-white z-40 shadow-2xl transform transition-transform duration-300 ease-out lg:hidden ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+      <div className={`fixed top-0 right-0 h-full w-[80%] max-w-sm bg-white z-40 shadow-2xl transform transition-transform duration-300 ease-out md:hidden ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="flex flex-col h-full pt-24 px-4 md:px-6 pb-8 overflow-y-auto">
           <div className="flex flex-col gap-6">
             {navLinks.map((item) => {
