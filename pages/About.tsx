@@ -360,9 +360,11 @@ const About: React.FC = () => {
                             “Urban College is special because so many of the faculty and staff have life stories that mirror the students. It's diverse, with many being first-generation college graduates themselves. It makes the environment uniquely supportive and empathetic.”
                         </blockquote>
                         <div className="flex items-center justify-center gap-3">
-                            <div className="w-10 h-10 rounded-full bg-ucb-orange/10 flex items-center justify-center text-ucb-orange font-bold">
-                                K
-                            </div>
+                            <img
+                                src="/assets/images/testimonials/krystal-j.jpg"
+                                alt="Krystal Ray J."
+                                className="w-12 h-12 rounded-full object-cover shadow-md border-2 border-ucb-orange/20"
+                            />
                             <div className="text-left">
                                 <h4 className="font-bold text-ucb-blue text-sm">Krystal Ray J.</h4>
                                 <p className="text-xs text-gray-400">Alum</p>

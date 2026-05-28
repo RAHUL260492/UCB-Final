@@ -7,7 +7,7 @@ const TESTIMONIALS = [
     name: 'Alecia H.',
     role: 'Alum',
     quote: "My experience with Urban College has been very positive because of the suppport I have received from the faculty and staff. Urban College helped me find my voice and helped me believed in myself and gain confidence.",
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop',
+    image: '/assets/images/testimonials/alecia-h.png',
     accentColor: 'var(--color-ucb-blue)',
   },
   {
@@ -23,7 +23,7 @@ const TESTIMONIALS = [
     name: 'Ayesha M. W.',
     role: 'Alum',
     quote: "The hours were a big part of choosing Urban College. Classes were in the evening, so I could get off work and then attend. This allowed me to maintain my life and work schedule, and personal things that matter, too. As an adult with bills to pay, I couldn’t take off work to attend school, so it worked well.",
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400&auto=format&fit=crop',
+    image: '/assets/images/testimonials/ayesha-w.webp',
     accentColor: 'var(--color-ucb-orange)',
   },
   {
@@ -31,7 +31,7 @@ const TESTIMONIALS = [
     name: 'Dominga V.',
     role: 'Alum',
     quote: "Urban College opened doors for me, opened opportunities for me that I never envisioned. I dare to say that everything in my life is thanks to Urban College.",
-    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop',
+    image: '/assets/images/testimonials/dominga-v.jpg',
     accentColor: 'var(--color-ucb-teal)',
   },
   {
@@ -39,7 +39,7 @@ const TESTIMONIALS = [
     name: 'Elijah W.',
     role: 'Alum',
     quote: "I liked that I could do the work on my own schedule, but it still felt like I was part of a real college experience. I never felt alone.",
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop',
+    image: '/assets/images/testimonials/elijah-w.png',
     accentColor: 'var(--color-ucb-blue)',
   }
 ];

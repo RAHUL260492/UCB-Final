@@ -140,7 +140,7 @@ const ProfessionalStudies: React.FC = () => {
                 quote: "Urban College is an institution where there are educators and structures and intentional systems put in place for you to be successful. My advice is to start now, take on one or two classes.",
                 name: "Jerrell C.",
                 role: "Alum",
-                imageSrc: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop"
+                imageSrc: "/assets/images/testimonials/jerrell-c.jpg"
             }}
 
             faqs={faqs}

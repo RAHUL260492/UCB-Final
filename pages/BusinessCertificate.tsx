@@ -136,7 +136,7 @@ const BusinessCertificate: React.FC = () => {
                 quote: "I liked that I could do the work on my own schedule, but it still felt like I was part of a real college experience. I never felt alone.",
                 name: "Elijah W.",
                 role: "Alum",
-                imageSrc: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop"
+                imageSrc: "/assets/images/testimonials/elijah-w.png"
             }}
 
             faqs={faqs}

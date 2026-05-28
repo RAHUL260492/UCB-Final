@@ -136,7 +136,7 @@ const EarlyChildhoodEducation: React.FC = () => {
                 quote: "The supportive environment and encouragement from faculty and peers instilled a sense of confidence that inspired me to take a bold step forward, allowing me to establish and operate my own family childcare center.",
                 name: "Mariely M.",
                 role: "Alum",
-                imageSrc: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop"
+                imageSrc: "/assets/images/testimonials/mariely-m.png"
             }}
 
             faqs={faqs}

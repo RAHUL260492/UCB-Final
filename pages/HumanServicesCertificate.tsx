@@ -138,7 +138,7 @@ const HumanServicesCertificate: React.FC = () => {
                 quote: "Urban College was definitely a stepping stone that fueled my passion for advocacy. I love how my voice can make a difference, and I have the opportunity to influence positive change in my community.",
                 name: "Ayesha M. W.",
                 role: "Alum",
-                imageSrc: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop"
+                imageSrc: "/assets/images/testimonials/ayesha-w.webp"
             }}
 
             faqs={faqs}

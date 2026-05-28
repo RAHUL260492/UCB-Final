@@ -432,9 +432,11 @@ const AcademicPrograms: React.FC = () => {
                         “The professors [at Urban College] are incredibly supportive, empathetic, and thoughtful. I was able to work at my own pace with online courses. With such an environment, I am inspired to persevere and keep going."
                     </blockquote>
                     <div className="flex items-center justify-center gap-3">
-                        <div className="w-10 h-10 rounded-full bg-ucb-orange/10 flex items-center justify-center text-ucb-orange font-bold">
-                            S
-                        </div>
+                        <img
+                            src="/assets/images/testimonials/seraphina-t.webp"
+                            alt="Seraphina T."
+                            className="w-12 h-12 rounded-full object-cover shadow-md border-2 border-ucb-orange/20"
+                        />
                         <div className="text-left">
                             <h4 className="font-bold text-ucb-blue text-sm">Seraphina T.</h4>
                             <p className="text-xs text-gray-400">Alum</p>

@@ -66,12 +66,14 @@ const Espanol: React.FC = () => {
         {
             quote: "Estoy agradecida con Urban College porque me ayudaron en mi transición del español al inglés. Cuando empecé a tomar clases en inglés, tuve el apoyo y el ánimo que necesitaba. Si tienes sueños, ¡adelante! Cuando llegué aquí no hablaba inglés, pero me motivaron a seguir estudiando, obtener mi título en Servicios Humanos y trabajar en algo que disfruto.",
             author: "Ramona S.",
-            role: "Exalumna de Servicios Humanos"
+            role: "Exalumna de Servicios Humanos",
+            image: "/assets/images/testimonials/ramona-s.png"
         },
         {
             quote: "El personal, los profesores, los tutores, los asesores, incluso tus compañeros… todos te apoyan en Urban College sin importar quién seas o de dónde vengas. Siempre intentan ayudarte. ¡Gracias Urban College! Ahora tengo más experiencia hablando inglés; cuando empecé aquí no hablaba nada, pero ahora entiendo mucho más.",
             author: "Jacqueline P.",
-            role: "Exalumna"
+            role: "Exalumna",
+            image: "/assets/images/testimonials/jacqueline-p.jpg"
         },
         {
             quote: "Urban College puede ofrecer educación en diferentes idiomas y ayudar a los estudiantes a descubrir su potencial de muchas maneras, fomentando una forma de pensar diversa. La educación que recibes aquí —de tus profesores, tus libros, tus clases y la interacción con compañeros de distintos orígenes— te brinda un conjunto de herramientas y habilidades que te convierten en un profesional más completo.",
@@ -274,9 +276,17 @@ const Espanol: React.FC = () => {
                                     </p>
                                 </div>
                                 <div className="pt-6 border-t border-gray-50 mt-6 flex items-center gap-3">
-                                    <div className="w-10 h-10 rounded-full bg-ucb-blue/10 flex items-center justify-center text-ucb-blue font-bold text-sm shrink-0">
-                                        {t.author.charAt(0)}
-                                    </div>
+                                    {(t as any).image ? (
+                                        <img
+                                            src={(t as any).image}
+                                            alt={t.author}
+                                            className="w-10 h-10 rounded-full object-cover shadow-sm border border-ucb-blue/10 shrink-0"
+                                        />
+                                    ) : (
+                                        <div className="w-10 h-10 rounded-full bg-ucb-blue/10 flex items-center justify-center text-ucb-blue font-bold text-sm shrink-0">
+                                            {t.author.charAt(0)}
+                                        </div>
+                                    )}
                                     <div>
                                         <p className="font-bold text-ucb-black text-sm">{t.author}</p>
                                         <p className="text-gray-400 text-xs">{t.role}</p>

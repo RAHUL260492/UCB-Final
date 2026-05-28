@@ -30,13 +30,13 @@ const CollegeTransferPathways: React.FC = () => {
             name: "Elijah W.",
             role: "Alum",
             quote: "My favorite part about Urban College has been the ability to complete my degree quickly and efficiently. I truly didn’t anticipate how fast the time would pass, and now I’m proud to be an alumni. The professors have played an essential role in my success, and I am incredibly grateful for their support and guidance throughout this journey.",
-            imageSrc: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop"
+            imageSrc: "/assets/images/testimonials/elijah-w.png"
         },
         {
             name: "Miguel S.",
             role: "Alum",
             quote: "It really drove me to understand the concept of working and also going to school. That’s when Urban College became my pathway to where I am today – I work in cyber security, and earned my master’s.",
-            imageSrc: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop"
+            imageSrc: "/assets/images/testimonials/miguel-s.jpg"
         }
     ];
 

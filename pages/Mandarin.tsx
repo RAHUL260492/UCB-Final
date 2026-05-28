@@ -58,12 +58,14 @@ const Mandarin: React.FC = () => {
         {
             quote: "我非常感谢城市学院，因为它帮助我顺利地从西班牙语过渡到英语学习。当我开始用英语上课时，我得到了我需要的支持和鼓励。如果你有梦想，就勇敢去追梦吧！我刚来这里的时候，一句英语都不会说，但我被鼓励继续学习，最终获得了人类服务专业的学位，并从事自己热爱的工作。",
             author: "校友 Ramona S.",
-            role: "人类服务专业毕业生"
+            role: "人类服务专业毕业生",
+            image: "/assets/images/testimonials/ramona-s.png"
         },
         {
             quote: "学院的教职员工、老师、辅导员、顾问，甚至你的同学，都会支持你。他们会尽力帮助你。谢谢城市学院！我的英语口语能力大大提升，因为我刚来的时候一句英语都不会说，但现在我能听懂更多了。",
             author: "校友 Jacqueline P.",
-            role: "城市学院毕业生"
+            role: "城市学院毕业生",
+            image: "/assets/images/testimonials/jacqueline-p.jpg"
         },
         {
             quote: "城市学院能够提供多种语言的教育，并通过多元化的思维方式，帮助学生以多种途径释放潜能。在城市学院，您通过教师、教材、教授以及与来自不同背景同学的互动，你将获得一套全面的工具和技能，使您成为更优秀的专业人士。",
@@ -269,9 +271,17 @@ const Mandarin: React.FC = () => {
                                     </p>
                                 </div>
                                 <div className="pt-6 border-t border-gray-50 mt-6 flex items-center gap-3">
-                                    <div className="w-10 h-10 rounded-full bg-ucb-blue/10 flex items-center justify-center text-ucb-blue font-bold text-sm shrink-0">
-                                        {t.author.charAt(0)}
-                                    </div>
+                                    {(t as any).image ? (
+                                        <img
+                                            src={(t as any).image}
+                                            alt={t.author}
+                                            className="w-10 h-10 rounded-full object-cover shadow-sm border border-ucb-blue/10 shrink-0"
+                                        />
+                                    ) : (
+                                        <div className="w-10 h-10 rounded-full bg-ucb-blue/10 flex items-center justify-center text-ucb-blue font-bold text-sm shrink-0">
+                                            {t.author.replace("校友 ", "").charAt(0)}
+                                        </div>
+                                    )}
                                     <div>
                                         <p className="font-bold text-ucb-black text-sm">{t.author}</p>
                                         <p className="text-gray-400 text-xs">{t.role}</p>

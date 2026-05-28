@@ -128,7 +128,7 @@ const ChildrensBehavioralHealth: React.FC = () => {
                 quote: "Urban College created the pathway for me to go towards the future I want for myself.",
                 name: "Krystal Ray J.",
                 role: "Alum",
-                imageSrc: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop"
+                imageSrc: "/assets/images/testimonials/krystal-j.jpg"
             }}
 
             faqs={faqs}

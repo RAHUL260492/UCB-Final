@@ -134,7 +134,7 @@ const GeneralStudiesAssociate: React.FC = () => {
                 quote: "It really drove me to understand the concept of working and also going to school. That's when Urban College became my pathway to where I am today—I work in cyber security, and earned my master's.",
                 name: "Miguel S.",
                 role: "Alum",
-                imageSrc: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop"
+                imageSrc: "/assets/images/testimonials/miguel-s.jpg"
             }}
 
             faqs={faqs}
