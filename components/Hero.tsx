@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Sparkles, Globe, Sun, Quote } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const TAGLINES = [
   "Your Future.",
@@ -192,15 +193,15 @@ const Hero: React.FC = () => {
               transition: 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.8s'
             }}
           >
-            <button className="group relative px-6 py-3 bg-ucb-blue text-white font-bold rounded-none overflow-hidden hover:shadow-xl transition-all duration-300 text-sm shimmer-overlay min-h-[44px]">
+            <Link to="/programs" className="group relative px-6 py-3 bg-ucb-blue text-white font-bold rounded-none overflow-hidden hover:shadow-xl transition-all duration-300 text-sm shimmer-overlay min-h-[44px] inline-flex items-center justify-center">
               <span className="relative z-10 flex items-center gap-2">
                 Explore Programs <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </span>
               <div className="absolute inset-0 bg-ucb-blue-glow transform -translate-x-full group-hover:translate-x-0 transition-transform duration-400 ease-out"></div>
-            </button>
-            <button className="px-6 py-3 border-2 border-ucb-blue text-ucb-blue font-bold text-sm bg-transparent hover:bg-ucb-blue/5 transition-all duration-300 hover:-translate-y-0.5 min-h-[44px]">
+            </Link>
+            <Link to="/admissions" className="px-6 py-3 border-2 border-ucb-blue text-ucb-blue font-bold text-sm bg-transparent hover:bg-ucb-blue/5 transition-all duration-300 hover:-translate-y-0.5 min-h-[44px] inline-flex items-center justify-center">
               Apply Free
-            </button>
+            </Link>
           </div>
         </div>
 

@@ -169,12 +169,26 @@ const Navigation: React.FC = () => {
           <Link to="/mandarin" className="flex items-center gap-1 hover:text-ucb-gold transition-colors min-h-[44px]">
             <Globe className="w-3 h-3" /> 中文
           </Link>
-          <button className="flex items-center gap-1 text-ucb-gold hover:text-white transition-colors min-h-[44px]">
+          <button
+            onClick={() => {
+              const el451 = (window as any).Element451;
+              if (el451 && el451.Messenger) {
+                el451.Messenger.open();
+              } else {
+                const launcher = document.querySelector('.el451-messenger-launcher, #el451-messenger-launcher, [class*="messenger"] button') as HTMLElement;
+                if (launcher) launcher.click();
+              }
+            }}
+            className="flex items-center gap-1 text-ucb-gold hover:text-white transition-colors min-h-[44px]"
+          >
             <MessageCircle className="w-3 h-3" /> Live Chat
           </button>
-          <button className="bg-ucb-orange text-white px-4 py-0.5 rounded-full hover:bg-ucb-orange-glow transition-colors ml-2 font-bold tracking-wide text-[10px] uppercase min-h-[44px]">
+          <Link
+            to="/admissions"
+            className="bg-ucb-orange text-white px-4 py-2 rounded-full hover:bg-ucb-orange-glow transition-colors ml-2 font-bold tracking-wide text-[10px] uppercase min-h-[44px] flex items-center justify-center"
+          >
             Apply Now
-          </button>
+          </Link>
         </div>
       </div>
 
@@ -407,23 +421,34 @@ const Navigation: React.FC = () => {
                           )
                         ))
                       ) : item.groups ? (
-                        item.groups.map((group: any) => (
-                          <div key={group.title} className="mb-4">
-                            <h4 className="text-ucb-orange font-bold text-sm uppercase tracking-wider mb-2">{group.title}</h4>
-                            <div className="flex flex-col gap-2 pl-2">
-                              {group.items.map((subItem: any) => (
-                                <Link
-                                  key={subItem.name}
-                                  to={subItem.path}
-                                  className="block text-base text-gray-600 hover:text-ucb-blue font-medium"
-                                  onClick={() => setMobileMenuOpen(false)}
-                                >
-                                  {subItem.name}
-                                </Link>
-                              ))}
+                        <div className="space-y-4">
+                          {item.path === '/programs' && (
+                            <Link
+                              to="/programs"
+                              className="block text-lg text-ucb-blue hover:text-ucb-orange font-bold py-2 mb-2 border-b border-gray-150"
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              View All Programs Overview
+                            </Link>
+                          )}
+                          {item.groups.map((group: any) => (
+                            <div key={group.title} className="mb-4">
+                              <h4 className="text-ucb-orange font-bold text-sm uppercase tracking-wider mb-2">{group.title}</h4>
+                              <div className="flex flex-col gap-2 pl-2">
+                                {group.items.map((subItem: any) => (
+                                  <Link
+                                    key={subItem.name}
+                                    to={subItem.path}
+                                    className="block text-base text-gray-600 hover:text-ucb-blue font-medium"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                  >
+                                    {subItem.name}
+                                  </Link>
+                                ))}
+                              </div>
                             </div>
-                          </div>
-                        ))
+                          ))}
+                        </div>
                       ) : null}
                     </div>
                   ) : null}
@@ -432,11 +457,15 @@ const Navigation: React.FC = () => {
             })}
           </div>
 
-          <div className="mt-auto space-y-4">
+           <div className="mt-auto space-y-4">
             <div className="h-px bg-gray-100 my-4"></div>
-            <button className="w-full bg-ucb-orange text-white py-4 rounded-xl font-bold text-lg shadow-lg active:scale-95 transition-transform min-h-[44px]">
+            <Link
+              to="/admissions"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full bg-ucb-orange text-white py-4 rounded-xl font-bold text-lg shadow-lg active:scale-95 transition-transform min-h-[44px] flex items-center justify-center"
+            >
               Apply Now
-            </button>
+            </Link>
             <button className="w-full border-2 border-ucb-blue text-ucb-blue py-4 rounded-xl font-bold text-lg hover:bg-ucb-blue hover:text-white transition-colors min-h-[44px]">
               Student Portal
             </button>

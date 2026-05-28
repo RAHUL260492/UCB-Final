@@ -448,13 +448,24 @@ const AdmissionsOverview: React.FC = () => {
                                     </div>
                                 </a>
 
-                                <a href="#" className="bg-gray-50 hover:bg-ucb-blue/5 border border-gray-100 p-4 rounded-2xl flex items-center gap-3 transition-colors group">
+                                <button
+                                    onClick={() => {
+                                        const el = (window as any).Element451;
+                                        if (el && el.Messenger) {
+                                            el.Messenger.open();
+                                        } else {
+                                            const launcher = document.querySelector('.el451-messenger-launcher, #el451-messenger-launcher, [class*="messenger"] button') as HTMLElement;
+                                            if (launcher) launcher.click();
+                                        }
+                                    }}
+                                    className="bg-gray-50 hover:bg-ucb-blue/5 border border-gray-100 p-4 rounded-2xl flex items-center gap-3 transition-colors group text-left cursor-pointer min-h-[44px] w-full"
+                                >
                                     <MessageSquare className="w-4 h-4 text-ucb-blue shrink-0 group-hover:scale-110 transition-transform" />
                                     <div>
                                         <span className="block text-[10px] font-bold uppercase tracking-wider text-gray-400">Chat Live</span>
                                         <span className="block text-[11px] text-ucb-blue font-semibold">Start Chat Room</span>
                                     </div>
-                                </a>
+                                </button>
                             </div>
 
                             <div className="pt-4 border-t border-gray-100 flex justify-center">

@@ -72,12 +72,17 @@ const Footer: React.FC = () => {
           <div className="lg:col-span-2">
             <h4 className="font-display font-bold text-lg text-white mb-4">Programs</h4>
             <ul className="space-y-3">
-              {['Business Certificate', 'Early Childhood Ed', 'Human Services', 'General Studies'].map((item) => (
-                <li key={item}>
-                  <a href={item === 'Business Certificate' ? '/programs/business-certificate' : '#'} className="text-blue-100 hover:text-ucb-orange transition-colors flex items-center group">
+              {[
+                { name: 'Business Certificate', path: '/programs/business-certificate' },
+                { name: 'Early Childhood Ed', path: '/programs/early-childhood-education' },
+                { name: 'Human Services', path: '/programs/human-services-administration' },
+                { name: 'General Studies', path: '/programs/general-studies-associate' }
+              ].map((item) => (
+                <li key={item.name}>
+                  <Link to={item.path} className="text-blue-100 hover:text-ucb-orange transition-colors flex items-center group">
                     <span className="w-0 overflow-hidden group-hover:w-3 transition-all duration-300 text-ucb-copper">›</span>
-                    <span className="group-hover:translate-x-1 transition-transform">{item}</span>
-                  </a>
+                    <span className="group-hover:translate-x-1 transition-transform">{item.name}</span>
+                  </Link>
                 </li>
               ))}
             </ul>
