@@ -4,28 +4,44 @@ import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react';
 const TESTIMONIALS = [
   {
     id: '1',
-    name: 'Maria Gonzalez',
-    role: 'Class of 2024, Human Services',
-    quote: "Being able to take classes in Spanish while improving my English changed everything. I didn't just get a degree; I got a family.",
+    name: 'Alecia H.',
+    role: 'Alum',
+    quote: "My experience with Urban College has been very positive because of the suppport I have received from the faculty and staff. Urban College helped me find my voice and helped me believed in myself and gain confidence.",
     image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop',
     accentColor: 'var(--color-ucb-blue)',
   },
   {
     id: '2',
-    name: 'Jean Pierre',
-    role: 'Professional Studies',
-    quote: "I was working two jobs. The flexible schedule at Urban College allowed me to study at night. Now I'm working in IT support.",
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop',
+    name: 'Adzele B.',
+    role: 'Alum',
+    quote: "My experience with Urban College has been very positive because of the suppport I have received from the faculty and staff. Urban College helped me find my voice and helped me believed in myself and gain confidence.",
+    image: 'http://static1.squarespace.com/static/5be099a375f9eecbf2753e8d/t/68121fd4e895fe4b7c58613c/1746018269355/Adzele.png?format=1500w',
     accentColor: 'var(--color-ucb-green)',
   },
   {
     id: '3',
-    name: 'Sarah Chen',
-    role: 'Early Childhood Education',
-    quote: "The professors actually care. They know your name, your story, and they push you to succeed. Best decision I ever made.",
+    name: 'Ayesha M. W.',
+    role: 'Alum',
+    quote: "The hours were a big part of choosing Urban College. Classes were in the evening, so I could get off work and then attend. This allowed me to maintain my life and work schedule, and personal things that matter, too. As an adult with bills to pay, I couldn’t take off work to attend school, so it worked well.",
     image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400&auto=format&fit=crop',
     accentColor: 'var(--color-ucb-orange)',
   },
+  {
+    id: '4',
+    name: 'Dominga V.',
+    role: 'Alum',
+    quote: "Urban College opened doors for me, opened opportunities for me that I never envisioned. I dare to say that everything in my life is thanks to Urban College.",
+    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop',
+    accentColor: 'var(--color-ucb-teal)',
+  },
+  {
+    id: '5',
+    name: 'Elijah W.',
+    role: 'Alum',
+    quote: "I liked that I could do the work on my own schedule, but it still felt like I was part of a real college experience. I never felt alone.",
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop',
+    accentColor: 'var(--color-ucb-blue)',
+  }
 ];
 
 const Testimonials: React.FC = () => {

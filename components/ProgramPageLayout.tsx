@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import {
     BookOpen, Clock, Globe, Briefcase, CheckCircle, TrendingUp,
     Users, DollarSign, Calendar, Award, GraduationCap, ArrowRight,
-    ChevronDown, Star, Quote, Zap, Target, Shield
+    ChevronDown, Star, Quote, Zap, Target, Shield, ChevronLeft, ChevronRight
 } from 'lucide-react';
 import ProgramPageHeader from './ProgramPageHeader';
 
@@ -88,7 +88,7 @@ export interface ProgramLayoutProps {
     pathwaySteps?: { label: string; credits?: string; active?: boolean }[];
 
     // Testimonial
-    testimonial?: ProgramTestimonial;
+    testimonial?: ProgramTestimonial | ProgramTestimonial[];
 
     // FAQ
     faqs: ProgramFaq[];
@@ -275,6 +275,13 @@ const ProgramPageLayout: React.FC<ProgramLayoutProps> = ({
 }) => {
     const scrollProgress = useScrollProgress();
     const [openFaq, setOpenFaq] = useState<number | null>(0);
+    const [activeTestimonialIdx, setActiveTestimonialIdx] = useState(0);
+
+    const testimonialsList = Array.isArray(testimonial)
+        ? testimonial
+        : testimonial
+            ? [testimonial]
+            : [];
 
     return (
         <div className="bg-white">
@@ -613,49 +620,82 @@ const ProgramPageLayout: React.FC<ProgramLayoutProps> = ({
                 </div>
             </section>
 
-            {/* ── Testimonial ── */}
-            {testimonial && (
-                <section className="py-4 md:py-6 bg-gray-900 text-white relative overflow-hidden">
-                    <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '32px 32px' }} />
-                    <div className="absolute top-0 right-0 w-96 h-96 bg-ucb-orange/5 rounded-full blur-3xl" />
+            {/* ── Testimonials ── */}
+            {testimonialsList.length > 0 && (() => {
+                const currentT = testimonialsList[activeTestimonialIdx] || testimonialsList[0];
+                return (
+                    <section className="py-8 md:py-12 bg-gray-900 text-white relative overflow-hidden">
+                        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '32px 32px' }} />
+                        <div className="absolute top-0 right-0 w-96 h-96 bg-ucb-orange/5 rounded-full blur-3xl" />
 
-                    <div className="container mx-auto px-6 relative z-10">
-                        <FadeInSection className="max-w-5xl mx-auto">
-                            <div className="rounded-3xl overflow-hidden flex flex-col md:flex-row shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-white/5 relative group">
-                                {/* Image */}
-                                <div className="md:w-2/5 min-h-[320px] relative bg-ucb-blue overflow-hidden">
-                                    <div className="absolute inset-0 bg-gradient-to-r from-ucb-blue/80 to-ucb-teal/40 mix-blend-multiply z-10 group-hover:opacity-50 transition-opacity duration-700" />
-                                    <img
-                                        src={testimonial.imageSrc || "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop"}
-                                        alt={testimonial.name}
-                                        className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent z-10" />
-                                </div>
+                        <div className="container mx-auto px-6 relative z-10">
+                            <FadeInSection className="max-w-5xl mx-auto">
+                                <div className="rounded-3xl overflow-hidden flex flex-col md:flex-row shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-white/5 relative group min-h-[320px]">
+                                    {/* Image */}
+                                    <div className="md:w-2/5 min-h-[320px] relative bg-ucb-blue overflow-hidden shrink-0">
+                                        <div className="absolute inset-0 bg-gradient-to-r from-ucb-blue/80 to-ucb-teal/40 mix-blend-multiply z-10 group-hover:opacity-50 transition-opacity duration-700" />
+                                        <img
+                                            src={currentT.imageSrc || "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop"}
+                                            alt={currentT.name}
+                                            className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent z-10" />
+                                    </div>
 
-                                {/* Content */}
-                                <div className="md:w-3/5 bg-gradient-to-br from-gray-900 to-[#111827] p-8 md:p-12 lg:p-14 flex flex-col justify-center relative overflow-hidden">
-                                    <div className="absolute top-0 right-0 w-1 bg-gradient-to-b from-ucb-orange to-ucb-gold h-full pointer-events-none" />
-                                    <Quote className="w-16 h-16 text-white/5 absolute top-6 right-8 pointer-events-none" />
+                                    {/* Content */}
+                                    <div className="md:w-3/5 bg-gradient-to-br from-gray-900 to-[#111827] p-8 md:p-12 lg:p-14 flex flex-col justify-center relative overflow-hidden">
+                                        <div className="absolute top-0 right-0 w-1 bg-gradient-to-b from-ucb-orange to-ucb-gold h-full pointer-events-none" />
+                                        <Quote className="w-16 h-16 text-white/5 absolute top-6 right-8 pointer-events-none" />
 
+                                        <p className="text-xl md:text-2xl lg:text-[24px] xl:text-[28px] leading-[1.6] font-serif italic text-white mb-8 relative z-10">
+                                            "{currentT.quote}"
+                                        </p>
 
+                                        <div className="mt-auto relative z-10 flex items-center justify-between">
+                                            <div>
+                                                <div className="font-bold text-lg md:text-xl text-white tracking-wide">{currentT.name}</div>
+                                                <div className="text-ucb-periwinkle font-medium uppercase tracking-widest text-xs mt-1">{currentT.role}</div>
+                                            </div>
 
-                                    <p className="text-xl md:text-2xl lg:text-[28px] leading-[1.6] font-serif italic text-white mb-8 relative z-10">
-                                        "{testimonial.quote}"
-                                    </p>
-
-                                    <div className="mt-auto relative z-10 flex items-center justify-between">
-                                        <div>
-                                            <div className="font-bold text-lg md:text-xl text-white tracking-wide">{testimonial.name}</div>
-                                            <div className="text-ucb-periwinkle font-medium uppercase tracking-widest text-xs mt-1">{testimonial.role}</div>
+                                            {testimonialsList.length > 1 && (
+                                                <div className="flex items-center gap-2">
+                                                    <button
+                                                        onClick={() => setActiveTestimonialIdx((prev) => (prev - 1 + testimonialsList.length) % testimonialsList.length)}
+                                                        className="p-2 rounded-full border border-white/10 hover:border-white/40 hover:bg-white/10 transition-all text-white min-h-[38px] flex items-center justify-center cursor-pointer"
+                                                        aria-label="Previous testimonial"
+                                                    >
+                                                        <ChevronLeft className="w-4 h-4" />
+                                                    </button>
+                                                    <button
+                                                        onClick={() => setActiveTestimonialIdx((prev) => (prev + 1) % testimonialsList.length)}
+                                                        className="p-2 rounded-full border border-white/10 hover:border-white/40 hover:bg-white/10 transition-all text-white min-h-[38px] flex items-center justify-center cursor-pointer"
+                                                        aria-label="Next testimonial"
+                                                    >
+                                                        <ChevronRight className="w-4 h-4" />
+                                                    </button>
+                                                </div>
+                                            )}
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </FadeInSection>
-                    </div>
-                </section>
-            )}
+
+                                {testimonialsList.length > 1 && (
+                                    <div className="flex justify-center gap-1.5 mt-4">
+                                        {testimonialsList.map((_, idx) => (
+                                            <button
+                                                key={idx}
+                                                onClick={() => setActiveTestimonialIdx(idx)}
+                                                className={`h-1.5 rounded-full transition-all duration-300 ${activeTestimonialIdx === idx ? 'w-6 bg-ucb-orange' : 'w-1.5 bg-white/30'}`}
+                                                aria-label={`Go to testimonial ${idx + 1}`}
+                                            />
+                                        ))}
+                                    </div>
+                                )}
+                            </FadeInSection>
+                        </div>
+                    </section>
+                );
+            })()}
 
             {/* ── FAQ ── */}
             <section className="py-4 md:py-6 bg-gradient-to-b from-gray-50 to-white">

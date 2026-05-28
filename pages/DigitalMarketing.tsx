@@ -128,9 +128,9 @@ const DigitalMarketing: React.FC = () => {
             ]}
 
             testimonial={{
-                quote: "My favorite part about Urban College has been the ability to complete my degree quickly and efficiently... The professors have played an essential role in my success...",
-                name: "Elijah",
-                role: "Digital Marketing Alum",
+                quote: "My favorite part about Urban College has been the ability to complete my degree quickly and efficiently. I truly didn’t anticipate how fast the time would pass, and now I’m proud to be an alumni. The professors have played an essential role in my success, and I am incredibly grateful for their support and guidance throughout this journey.",
+                name: "Elijah W.",
+                role: "Alum",
                 imageSrc: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop"
             }}
 

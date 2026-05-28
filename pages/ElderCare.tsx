@@ -89,8 +89,8 @@ const pathwaySteps = [
 
 const testimonial = {
     quote: "Urban college was the foundation for where I am professional and personal. When I provide a service, I think about what I would want provided to me if I were in a similar situation. Treat everyone with love and kindness.",
-    name: "Charmaine",
-    role: "Urban College Graduate",
+    name: "Charmaine B.",
+    role: "Alum",
     imageSrc: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop"
 };
 

@@ -142,9 +142,9 @@ const CaseManagement: React.FC = () => {
 
             // Testimonial
             testimonial={{
-                quote: "I liked that I could do the work on my own schedule, but it still felt like I was part of a real college experience. I never felt alone.",
-                name: "Elijah",
-                role: "Case Management Alum",
+                quote: "I wouldn't be able to do the work I do without my certificates and degree from Urban College. If you have any dreams, go forward. When I first came here, I didn't speak English, but I was pushed to continue to study and get my diploma.",
+                name: "Ramona S.",
+                role: "Alum",
                 imageSrc: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop"
             }}
 

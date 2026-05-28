@@ -140,8 +140,8 @@ const HumanServicesAdministration: React.FC = () => {
 
             testimonial={{
                 quote: "Urban College was definitely a stepping stone that fueled my passion for advocacy. I love how my voice can make a difference, and I have the opportunity to influence positive change in my community.",
-                name: "Ayesha M. Wilson",
-                role: "Human Services Alum",
+                name: "Ayesha M. W.",
+                role: "Alum",
                 imageSrc: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop"
             }}
 

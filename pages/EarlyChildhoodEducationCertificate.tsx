@@ -131,9 +131,9 @@ const EarlyChildhoodEducationCertificate: React.FC = () => {
             ]}
 
             testimonial={{
-                quote: "I have been passionately endorsing Urban College to others… the vibrant atmosphere, dedicated faculty and diverse student body create an enriching experience...",
-                name: "Mariely",
-                role: "Early Childhood Alum",
+                quote: "I have been passionately endorsing Urban College to others... the vibrant atmosphere, dedicated faculty and diverse student body create an enriching experience that I believe everyone should have the opportunity to enjoy.",
+                name: "Mariely M.",
+                role: "Alum",
                 imageSrc: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop"
             }}
 

@@ -436,8 +436,8 @@ const AcademicPrograms: React.FC = () => {
                             S
                         </div>
                         <div className="text-left">
-                            <h4 className="font-bold text-ucb-blue text-sm">Seraphina</h4>
-                            <p className="text-xs text-gray-400">Alumna</p>
+                            <h4 className="font-bold text-ucb-blue text-sm">Seraphina T.</h4>
+                            <p className="text-xs text-gray-400">Alum</p>
                         </div>
                     </div>
                 </div>

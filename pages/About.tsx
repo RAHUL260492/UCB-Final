@@ -364,8 +364,8 @@ const About: React.FC = () => {
                                 K
                             </div>
                             <div className="text-left">
-                                <h4 className="font-bold text-ucb-blue text-sm">Krystal Ray Jackson</h4>
-                                <p className="text-xs text-gray-400">Student Testimony</p>
+                                <h4 className="font-bold text-ucb-blue text-sm">Krystal Ray J.</h4>
+                                <p className="text-xs text-gray-400">Alum</p>
                             </div>
                         </div>
                     </ScrollAnimation>

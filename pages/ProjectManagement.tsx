@@ -135,8 +135,8 @@ const ProjectManagement: React.FC = () => {
             ]}
 
             testimonial={{
-                quote: "Urban College was the first place that unlocked in me the interest in higher learning. It sparked something in me clearly since I am now the CEO of an organization. I am very grateful to Urban College for seeing me, investing in me and pouring into me at a time where I needed it the most.",
-                name: "Jerrell",
+                quote: "Urban College was the first place that unlocked me the interest in higher learning, it sparked something in me clearly since I am now the CEO of an organization. I am very grateful to Urban College for seeing me, investing in me and pouring into me at a time where I needed it the most.",
+                name: "Jerrell C.",
                 role: "Alum",
                 imageSrc: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop"
             }}
