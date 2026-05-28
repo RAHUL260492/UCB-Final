@@ -8,6 +8,28 @@ const Footer: React.FC = () => {
     <footer className="bg-ucb-blue text-ucb-ivory pt-8 pb-6 border-t-8 border-ucb-orange relative overflow-hidden">
 
       <div className="container mx-auto px-6 relative z-10">
+        {/* CTA Strip */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 pb-6 mb-6 border-b border-white/10">
+          <div className="text-center md:text-left">
+            <h3 className="font-display font-bold text-xl text-white leading-tight">Ready to take the next step?</h3>
+            <p className="text-blue-100 text-sm mt-1">Apply for free or request info to learn more.</p>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <Link
+              to="/admissions"
+              className="bg-ucb-orange hover:bg-ucb-orange-glow text-white font-bold py-2.5 px-5 rounded-full text-xs uppercase tracking-wider transition-colors min-h-[44px] inline-flex items-center justify-center"
+            >
+              Apply Now
+            </Link>
+            <button
+              onClick={() => window.dispatchEvent(new CustomEvent('open-rfi-sidebar'))}
+              className="border-2 border-white/60 hover:bg-white hover:text-ucb-blue text-white font-bold py-2.5 px-5 rounded-full text-xs uppercase tracking-wider transition-colors min-h-[44px] inline-flex items-center justify-center cursor-pointer"
+            >
+              Request Info
+            </button>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 mb-6">
           {/* Brand & Newsletter */}
           <div className="lg:col-span-4">

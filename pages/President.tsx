@@ -409,12 +409,12 @@ const President: React.FC = () => {
                                 >
                                     Apply Now - Free Application
                                 </Link>
-                                <a 
-                                    href="#" 
-                                    className="border-2 border-white/60 hover:border-white hover:bg-white/10 text-white font-bold py-3 px-8 rounded-full text-xs uppercase tracking-wider transition-all min-h-[44px] flex items-center"
+                                <button
+                                    onClick={() => window.dispatchEvent(new CustomEvent('open-rfi-sidebar'))}
+                                    className="border-2 border-white/60 hover:border-white hover:bg-white/10 text-white font-bold py-3 px-8 rounded-full text-xs uppercase tracking-wider transition-all min-h-[44px] flex items-center cursor-pointer"
                                 >
                                     Request Info
-                                </a>
+                                </button>
                                 <Link 
                                     to="/team" 
                                     className="bg-white/20 hover:bg-white/30 text-white font-bold py-3 px-8 rounded-full text-xs uppercase tracking-wider transition-colors min-h-[44px] flex items-center"

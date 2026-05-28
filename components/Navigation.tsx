@@ -150,7 +150,7 @@ const Navigation: React.FC = () => {
       {bannerOpen && (
         <div className="bg-ucb-orange text-white text-xs md:text-sm font-medium py-2 px-4 flex justify-between items-center relative z-50">
           <div className="container mx-auto text-center flex-1">
-            Now enrolling for Fall 2026. Classes start September 8th. <Link to="#" className="underline ml-2 hover:text-ucb-blue transition-colors">Apply Today</Link>
+            Now enrolling for Fall 2026. Classes start September 8th. <Link to="/admissions" className="underline ml-2 hover:text-ucb-blue transition-colors">Apply Today</Link>
           </div>
           <button onClick={() => setBannerOpen(false)} className="hover:text-ucb-blue transition-colors p-1" aria-label="Close banner">
             <X className="w-4 h-4" />
@@ -184,9 +184,15 @@ const Navigation: React.FC = () => {
           >
             <MessageCircle className="w-3 h-3" /> Live Chat
           </button>
+          <button
+            onClick={() => window.dispatchEvent(new CustomEvent('open-rfi-sidebar'))}
+            className="border border-white/40 text-white px-4 py-2 rounded-full hover:bg-white hover:text-ucb-blue transition-colors ml-2 font-bold tracking-wide text-[10px] uppercase min-h-[44px] flex items-center justify-center cursor-pointer"
+          >
+            Request Info
+          </button>
           <Link
             to="/admissions"
-            className="bg-ucb-orange text-white px-4 py-2 rounded-full hover:bg-ucb-orange-glow transition-colors ml-2 font-bold tracking-wide text-[10px] uppercase min-h-[44px] flex items-center justify-center"
+            className="bg-ucb-orange text-white px-4 py-2 rounded-full hover:bg-ucb-orange-glow transition-colors font-bold tracking-wide text-[10px] uppercase min-h-[44px] flex items-center justify-center"
           >
             Apply Now
           </Link>
@@ -466,6 +472,15 @@ const Navigation: React.FC = () => {
             >
               Apply Now
             </Link>
+            <button
+              onClick={() => {
+                setMobileMenuOpen(false);
+                window.dispatchEvent(new CustomEvent('open-rfi-sidebar'));
+              }}
+              className="w-full border-2 border-ucb-blue text-ucb-blue py-4 rounded-xl font-bold text-lg hover:bg-ucb-blue hover:text-white transition-colors min-h-[44px] cursor-pointer"
+            >
+              Request Info
+            </button>
             <button className="w-full border-2 border-ucb-blue text-ucb-blue py-4 rounded-xl font-bold text-lg hover:bg-ucb-blue hover:text-white transition-colors min-h-[44px]">
               Student Portal
             </button>

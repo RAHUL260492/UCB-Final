@@ -390,22 +390,32 @@ const Team: React.FC = () => {
 
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                         {[
-                            { name: "Apply Now (Free)", path: "/admissions" },
-                            { name: "Request Info", path: "#" },
-                            { name: "View Careers", path: "/employment" },
-                            { name: "Contact Us", path: "#" }
-                        ].map((btn, idx) => (
-                            <Link 
-                                key={idx} 
-                                to={btn.path} 
-                                className={`flex items-center justify-center text-center font-bold text-xs uppercase tracking-wider py-3 px-4 rounded-xl transition-all min-h-[44px] ${idx === 0 
-                                    ? 'bg-ucb-orange hover:bg-ucb-orange-glow text-white shadow-md' 
-                                    : 'bg-white/10 hover:bg-white hover:text-ucb-blue border border-white/20'
-                                }`}
-                            >
-                                {btn.name}
-                            </Link>
-                        ))}
+                            { name: "Apply Now (Free)", path: "/admissions" as const, type: "link" as const },
+                            { name: "Request Info", type: "rfi" as const },
+                            { name: "View Careers", path: "/employment" as const, type: "link" as const },
+                            { name: "Contact Us", path: "#" as const, type: "link" as const }
+                        ].map((btn, idx) => {
+                            const className = `flex items-center justify-center text-center font-bold text-xs uppercase tracking-wider py-3 px-4 rounded-xl transition-all min-h-[44px] ${idx === 0
+                                ? 'bg-ucb-orange hover:bg-ucb-orange-glow text-white shadow-md'
+                                : 'bg-white/10 hover:bg-white hover:text-ucb-blue border border-white/20'
+                            }`;
+                            if (btn.type === "rfi") {
+                                return (
+                                    <button
+                                        key={idx}
+                                        onClick={() => window.dispatchEvent(new CustomEvent('open-rfi-sidebar'))}
+                                        className={`${className} cursor-pointer`}
+                                    >
+                                        {btn.name}
+                                    </button>
+                                );
+                            }
+                            return (
+                                <Link key={idx} to={btn.path} className={className}>
+                                    {btn.name}
+                                </Link>
+                            );
+                        })}
                     </div>
                 </div>
             </section>
