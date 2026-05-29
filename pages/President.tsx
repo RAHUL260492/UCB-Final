@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import ScrollAnimation from '../components/ScrollAnimation';
+import SEO from '../components/SEO';
+import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 import { 
     Mail, Globe, Award, BookOpen, Users, CheckCircle, Heart, 
     Calendar, ChevronRight, GraduationCap, Building, Sparkles, 
@@ -65,6 +67,15 @@ const President: React.FC = () => {
 
     return (
         <div className="pt-24 lg:pt-32">
+            <SEO
+                title={PAGE_META.president.title}
+                description={PAGE_META.president.description}
+                canonicalPath={PAGE_META.president.path}
+                jsonLd={buildBreadcrumbJsonLd([
+                    { name: 'Home', path: '/' },
+                    { name: 'Office of the President', path: PAGE_META.president.path },
+                ])}
+            />
             <PageHeader 
                 title="Office of the President" 
                 subtitle="Leading Urban College's mission of access, opportunity, and transformation."
@@ -80,9 +91,9 @@ const President: React.FC = () => {
                             <ScrollAnimation variant="slide-right">
                                 <div className="relative group">
                                     <div className="absolute inset-0 bg-gradient-to-t from-ucb-blue/20 to-transparent rounded-3xl z-10 transition-opacity duration-300"></div>
-                                    <img 
-                                        src="/assets/images/president-yves.png" 
-                                        alt="Dr. Yves Salomon-Fernández" 
+                                    <img
+                                        src="/assets/images/staff/yves-salomon-fernandez.jpg"
+                                        alt="Dr. Yves Salomon-Fernández"
                                         className="w-full h-auto object-cover rounded-3xl shadow-xl border border-gray-100 group-hover:scale-[1.01] transition-transform duration-500"
                                     />
                                     <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-ucb-gold/10 rounded-full blur-2xl -z-10"></div>

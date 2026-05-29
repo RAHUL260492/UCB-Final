@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import ScrollAnimation from '../components/ScrollAnimation';
+import SEO from '../components/SEO';
+import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 import { 
     Users, Mail, Award, GraduationCap, Globe, Clock, CheckCircle, 
     ArrowRight, ChevronDown, ChevronRight, Briefcase, Building, ShieldCheck,
@@ -15,6 +17,7 @@ interface CabinetMember {
     education: string;
     email: string;
     avatarInitials: string;
+    image?: string;
 }
 
 const CABINET: CabinetMember[] = [
@@ -24,7 +27,8 @@ const CABINET: CabinetMember[] = [
         bio: "Anna Berry joined Urban College in fall 2023 as the inaugural Vice President of Student Success. With 20 years in higher education and her own journey beginning at community colleges in California, Anna believes that anyone with the desire to pursue higher education can do so. She leads strategic enrollment management and student success planning, centering student needs in everything we do.",
         education: "B.S. and M.S. from Colorado State University",
         email: "Anna.Berry@urbancollege.edu",
-        avatarInitials: "AB"
+        avatarInitials: "AB",
+        image: "/assets/images/staff/anna-berry.webp"
     },
     {
         name: "Dr. Noemi Custodia-Lora",
@@ -32,7 +36,8 @@ const CABINET: CabinetMember[] = [
         bio: "Dr. Custodia-Lora brings over 20 years of dedication to expanding educational access for underrepresented communities. Specializing in immigrant integration and workforce training, she advocates for multilingual learners, adult students, and immigrants. A Puerto Rican native who learned English before pursuing graduate studies in Boston, she understands the journey of our students.",
         education: "Ph.D. in Biology from Boston University; B.S. from Universidad de Puerto Rico",
         email: "Noemi.Custodia-Lora@urbancollege.edu",
-        avatarInitials: "NC"
+        avatarInitials: "NC",
+        image: "/assets/images/staff/noemi-custodia-lora.webp"
     },
     {
         name: "Caitlin Callahan",
@@ -40,7 +45,8 @@ const CABINET: CabinetMember[] = [
         bio: "Caitlin Callahan has been a member of the leadership team since 2018, bringing experience from the higher education and non-profit sectors. She leads Urban College's fundraising efforts, manages the implementation of the strategic plan, supports the Board of Trustees, oversees IT, and serves as Accreditation Liaison Officer to NECHE.",
         education: "M.P.P. from Harvard Kennedy School; B.A. from Bowdoin College; MBA in progress at SNHU",
         email: "Caitlin.Callahan@urbancollege.edu",
-        avatarInitials: "CC"
+        avatarInitials: "CC",
+        image: "/assets/images/staff/caitlin-callahan.webp"
     },
     {
         name: "Erline Louis Tanice, MBA",
@@ -48,7 +54,8 @@ const CABINET: CabinetMember[] = [
         bio: "Erline Tanice oversees Urban College's financial operations with over 20 years of experience in finance and accounting across private, academic, and nonprofit sectors. Deeply involved in community service, she serves on the Somerville Museum Council and the Salvation Army Massachusetts board. Her motto: always leave a place better than you found it.",
         education: "MBA from Bentley University McCallum Graduate School",
         email: "Erline.Tanice@urbancollege.edu",
-        avatarInitials: "ET"
+        avatarInitials: "ET",
+        image: "/assets/images/staff/erline-tanice.webp"
     }
 ];
 
@@ -128,6 +135,15 @@ const Team: React.FC = () => {
 
     return (
         <div className="pt-24 lg:pt-32 bg-gray-50/50">
+            <SEO
+                title={PAGE_META.team.title}
+                description={PAGE_META.team.description}
+                canonicalPath={PAGE_META.team.path}
+                jsonLd={buildBreadcrumbJsonLd([
+                    { name: 'Home', path: '/' },
+                    { name: 'Leadership & Staff', path: PAGE_META.team.path },
+                ])}
+            />
             <PageHeader 
                 title="Leadership & Administration"
                 subtitle="Dedicated to Your Success at Every Level"
@@ -230,9 +246,13 @@ const Team: React.FC = () => {
                                 <div className="bg-white rounded-3xl border border-gray-100 shadow-md hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 p-6 flex flex-col justify-between w-full">
                                     <div className="space-y-4">
                                         <div className="flex items-center gap-4">
-                                            {/* Avatar Placeholder */}
-                                            <div className="w-14 h-14 rounded-2xl bg-ucb-blue/10 text-ucb-blue font-display font-black text-xl flex items-center justify-center shrink-0">
-                                                {member.avatarInitials}
+                                            {/* Avatar */}
+                                            <div className="w-14 h-14 rounded-2xl bg-ucb-blue/10 text-ucb-blue font-display font-black text-xl flex items-center justify-center shrink-0 overflow-hidden">
+                                                {member.image ? (
+                                                    <img src={member.image} alt={member.name} className="w-full h-full object-cover object-top" />
+                                                ) : (
+                                                    member.avatarInitials
+                                                )}
                                             </div>
                                             <div>
                                                 <h3 className="font-display font-bold text-lg text-ucb-blue leading-snug">{member.name}</h3>
