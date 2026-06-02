@@ -167,11 +167,9 @@ const RFISidebar: React.FC = () => {
               </button>
             </div>
 
-            {/* Trust indicators */}
+            {/* Subheading */}
             <div className="flex items-center gap-4 text-[11px] text-blue-200 mt-1">
-              <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-[#26AB9A]" /> Free Application</span>
-              <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-[#26AB9A]" /> No Commitment</span>
-              <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-[#26AB9A]" /> Reply in 24h</span>
+              <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3 text-[#26AB9A]" /> Connect with admissions</span>
             </div>
           </div>
         </div>
