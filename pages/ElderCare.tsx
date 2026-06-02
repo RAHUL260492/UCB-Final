@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { BookOpen, Clock, Globe, Briefcase, CheckCircle, TrendingUp, Users, DollarSign, Calendar, Award, GraduationCap, ArrowRight } from 'lucide-react';
 import ProgramPageLayout, { ProgramBenefit, ProgramStat } from '../components/ProgramPageLayout';
+import SEO from '../components/SEO';
+import { buildCourseJsonLd, buildBreadcrumbJsonLd } from '../components/seo-data';
 
 // ─── Icon helper for bilingual ────────────────────────────────────────────────
 const MessageCircleIcon: React.ElementType = (props: any) => (
@@ -110,11 +112,30 @@ const ElderCare: React.FC = () => {
     useEffect(() => { window.scrollTo(0, 0); }, []);
 
     return (
+        <>
+            <SEO
+                title="Elder Care Certificate Program"
+                description="Prepare for a meaningful career supporting older adults with an Elder Care Certificate from Urban College of Boston. Affordable, online, and multilingual."
+                canonicalPath="/programs/elder-care"
+                jsonLd={[
+                    buildCourseJsonLd({
+                        name: "Elder Care Certificate",
+                        description: "Prepare for a meaningful career supporting older adults with an Elder Care Certificate from Urban College of Boston. Affordable, online, and multilingual.",
+                        path: '/programs/elder-care',
+                        credentialCategory: 'certificate',
+                    }),
+                    buildBreadcrumbJsonLd([
+                        { name: 'Home', path: '/' },
+                        { name: 'Programs', path: '/programs' },
+                        { name: "Elder Care Certificate", path: '/programs/elder-care' },
+                    ]),
+                ]}
+            />
         <ProgramPageLayout
             badge="Elder Care Certificate"
             title={<>Make a Difference in Seniors' Lives While <span style={{ color: '#E68325' }}>Building Your Career</span></>}
             subtitle="In As Little As One Year! Accessible, high-quality education designed for working adults."
-            headerImageSrc="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=2940&auto=format&fit=crop"
+            headerImageSrc="/Program%20Images%20for%20Website/Elder%20Care%20Cert%201.jpg"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },
                 { label: 'Elder Care' }
@@ -156,6 +177,7 @@ const ElderCare: React.FC = () => {
             ctaRequirements={ctaRequirements}
             programName="Elder Care Certificate"
         />
+        </>
     );
 };
 

@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import PageHeader from '../components/PageHeader';
 import ScrollAnimation from '../components/ScrollAnimation';
+import SEO from '../components/SEO';
+import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 import { 
     GraduationCap, BookOpen, Accessibility, Briefcase, 
     Laptop, Users, Library, CreditCard, Mail, Phone, ExternalLink, Download 
@@ -71,6 +73,15 @@ const CollegeServicesAndResources: React.FC = () => {
 
     return (
         <div className="pt-24 lg:pt-32 bg-gray-50/30 min-h-screen">
+            <SEO
+                title={PAGE_META.collegeServices.title}
+                description={PAGE_META.collegeServices.description}
+                canonicalPath={PAGE_META.collegeServices.path}
+                jsonLd={buildBreadcrumbJsonLd([
+                    { name: 'Home', path: '/' },
+                    { name: 'College Services', path: PAGE_META.collegeServices.path },
+                ])}
+            />
             <PageHeader
                 title="College Services & Resources"
                 subtitle="Explore our comprehensive student handbook, campus resources, academic advisement, and support systems."

@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { Phone, Heart, PhoneCall, Globe, LifeBuoy, AlertCircle, ShieldAlert, BookOpen, User, Mail, ExternalLink, HelpCircle } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 import ScrollAnimation from '../components/ScrollAnimation';
+import SEO from '../components/SEO';
+import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 
 interface EmergencyNumber {
     name: string;
@@ -44,11 +46,20 @@ const MentalHealth: React.FC = () => {
 
     return (
         <div className="pt-24 lg:pt-32 bg-gray-50/30">
+            <SEO
+                title={PAGE_META.mentalHealth.title}
+                description={PAGE_META.mentalHealth.description}
+                canonicalPath={PAGE_META.mentalHealth.path}
+                jsonLd={buildBreadcrumbJsonLd([
+                    { name: 'Home', path: '/' },
+                    { name: 'Mental Health', path: PAGE_META.mentalHealth.path },
+                ])}
+            />
             <PageHeader
                 title="Mental Health Resources"
                 subtitle="Urban College is committed to protecting, preserving, and promoting the health, safety, and well-being of all our students."
                 breadcrumbs={breadcrumbs}
-                imageSrc="https://images.unsplash.com/photo-1571216503023-e18e69ee80db?q=80&w=2940&auto=format&fit=crop"
+                imageSrc="/Program%20Images%20for%20Website/CBH%20cert%20primary.jpg"
                 imagePosition="center"
             />
 

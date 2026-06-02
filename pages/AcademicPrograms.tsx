@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import ScrollAnimation from '../components/ScrollAnimation';
+import SEO from '../components/SEO';
+import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 import { 
     Clock, Globe, Briefcase, CheckCircle, TrendingUp, Users, DollarSign, 
     Award, GraduationCap, ArrowRight, ChevronDown, BookOpen, Quote 
@@ -165,6 +167,15 @@ const AcademicPrograms: React.FC = () => {
 
     return (
         <div className="pt-24 lg:pt-32 bg-gray-50/50">
+            <SEO
+                title={PAGE_META.programs.title}
+                description={PAGE_META.programs.description}
+                canonicalPath={PAGE_META.programs.path}
+                jsonLd={buildBreadcrumbJsonLd([
+                    { name: 'Home', path: '/' },
+                    { name: 'Academic Programs', path: PAGE_META.programs.path },
+                ])}
+            />
             <PageHeader 
                 title="Academic Programs"
                 subtitle="Affordable Online Programs Designed to Fit Your Busy Life"

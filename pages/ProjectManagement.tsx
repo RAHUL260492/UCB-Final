@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { BookOpen, Clock, Globe, Briefcase, CheckCircle, TrendingUp, Users, DollarSign, Calendar, Award, GraduationCap } from 'lucide-react';
 import ProgramPageLayout, { ProgramBenefit, ProgramStat } from '../components/ProgramPageLayout';
+import SEO from '../components/SEO';
+import { buildCourseJsonLd, buildBreadcrumbJsonLd } from '../components/seo-data';
 
 // ─── Icon helper for bilingual ────────────────────────────────────────────────
 const MessageCircleIcon: React.ElementType = (props: any) => (
@@ -66,11 +68,30 @@ const ProjectManagement: React.FC = () => {
     useEffect(() => { window.scrollTo(0, 0); }, []);
 
     return (
+        <>
+            <SEO
+                title="Project Management Certificate Program"
+                description="Build the skills to lead projects across industries with a Project Management Certificate from Urban College of Boston."
+                canonicalPath="/programs/project-management-certificate"
+                jsonLd={[
+                    buildCourseJsonLd({
+                        name: "Project Management Certificate",
+                        description: "Build the skills to lead projects across industries with a Project Management Certificate from Urban College of Boston.",
+                        path: '/programs/project-management-certificate',
+                        credentialCategory: 'certificate',
+                    }),
+                    buildBreadcrumbJsonLd([
+                        { name: 'Home', path: '/' },
+                        { name: 'Programs', path: '/programs' },
+                        { name: "Project Management Certificate", path: '/programs/project-management-certificate' },
+                    ]),
+                ]}
+            />
         <ProgramPageLayout
             badge="Project Management Certificate"
             title={<>Lead Projects, Build Your Career, & <span style={{ color: '#E68325' }}>Earn While You Learn</span></>}
             subtitle="In As Little As One Year! Accessible, high-quality education designed for working adults."
-            headerImageSrc="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop"
+            headerImageSrc="/Program%20Images%20for%20Website/Project%20Management%20Cert%201.jpg"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },
                 { label: 'Project Management' }
@@ -146,6 +167,7 @@ const ProjectManagement: React.FC = () => {
             ctaRequirements={['High School Diploma / GED / HiSET', 'Photo ID', 'Online Application']}
             programName="Project Management Certificate"
         />
+        </>
     );
 };
 

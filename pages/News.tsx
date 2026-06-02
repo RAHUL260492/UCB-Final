@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { Search, Calendar, ChevronRight, Newspaper } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 import localBlogsData from '../src/data/blogs.json';
+import SEO from '../components/SEO';
+import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 
 const formatTitle = (title: string, slug: string) => {
     if (title === "Urban College Blog | Urban College of Boston") {
@@ -32,6 +34,15 @@ const News: React.FC = () => {
 
     return (
         <div className="bg-gray-50 min-h-screen pb-20">
+            <SEO
+                title={PAGE_META.news.title}
+                description={PAGE_META.news.description}
+                canonicalPath={PAGE_META.news.path}
+                jsonLd={buildBreadcrumbJsonLd([
+                    { name: 'Home', path: '/' },
+                    { name: 'News', path: PAGE_META.news.path },
+                ])}
+            />
             <PageHeader
                 title="In the News"
                 subtitle="Official press releases, media coverage, and community announcements from Urban College of Boston."

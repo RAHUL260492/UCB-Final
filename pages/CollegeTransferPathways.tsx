@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import PageHeader from '../components/PageHeader';
 import ScrollAnimation from '../components/ScrollAnimation';
+import SEO from '../components/SEO';
+import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 import { 
     GraduationCap, Search, ExternalLink, Mail, ArrowRight,
     Award, CheckCircle, Percent, School, Sparkles, Filter,
@@ -314,6 +316,15 @@ const CollegeTransferPathways: React.FC = () => {
 
     return (
         <div className="pt-24 lg:pt-32 bg-gray-50/30">
+            <SEO
+                title={PAGE_META.transferPathways.title}
+                description={PAGE_META.transferPathways.description}
+                canonicalPath={PAGE_META.transferPathways.path}
+                jsonLd={buildBreadcrumbJsonLd([
+                    { name: 'Home', path: '/' },
+                    { name: 'Transfer Pathways', path: PAGE_META.transferPathways.path },
+                ])}
+            />
             <PageHeader
                 title="College Transfer Pathways"
                 subtitle="Continue your academic journey. Explore our articulation agreements that guarantee credit transfer and tuition discounts to 4-year universities."

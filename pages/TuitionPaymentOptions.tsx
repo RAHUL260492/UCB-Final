@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import ScrollAnimation from '../components/ScrollAnimation';
+import SEO from '../components/SEO';
+import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 import { 
     CreditCard, Calendar, Briefcase, FileText, CheckCircle, 
     ArrowRight, MapPin, Phone, Mail, Clock, HelpCircle, 
@@ -107,6 +109,15 @@ const TuitionPaymentOptions: React.FC = () => {
 
     return (
         <div className="pt-24 lg:pt-32">
+            <SEO
+                title={PAGE_META.tuitionPayment.title}
+                description={PAGE_META.tuitionPayment.description}
+                canonicalPath={PAGE_META.tuitionPayment.path}
+                jsonLd={buildBreadcrumbJsonLd([
+                    { name: 'Home', path: '/' },
+                    { name: 'Tuition Payment', path: PAGE_META.tuitionPayment.path },
+                ])}
+            />
             <PageHeader 
                 title="Tuition Payment Options" 
                 subtitle="Standard cost: $317 per credit or $951 per course. Explore payment methods, installment plans, and state scholarship programs."

@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { Users, Mail, Calendar, MessageSquare, Megaphone, Target, Award, Star } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
+import SEO from '../components/SEO';
+import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 
 const roles = [
     {
@@ -61,6 +63,15 @@ const StudentGovernment: React.FC = () => {
 
     return (
         <div className="pt-24 lg:pt-32">
+            <SEO
+                title={PAGE_META.studentGovernment.title}
+                description={PAGE_META.studentGovernment.description}
+                canonicalPath={PAGE_META.studentGovernment.path}
+                jsonLd={buildBreadcrumbJsonLd([
+                    { name: 'Home', path: '/' },
+                    { name: 'Student Government', path: PAGE_META.studentGovernment.path },
+                ])}
+            />
             <PageHeader
                 title="Student Government (SGA)"
                 subtitle="The voice of the Student Body. We help identify and address student concerns while promoting communication and collaboration."

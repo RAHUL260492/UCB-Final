@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import PageHeader from '../components/PageHeader';
 import ScrollAnimation from '../components/ScrollAnimation';
+import SEO from '../components/SEO';
+import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 import { 
     MapPin, Clock, Building, Compass, Bus, Car, Accessibility,
     Wifi, Monitor, ArrowRight, BookOpen, Users,
@@ -66,6 +68,15 @@ const CampusFacilities: React.FC = () => {
 
     return (
         <div className="pt-24 lg:pt-32 bg-gray-50/30">
+            <SEO
+                title={PAGE_META.campusFacilities.title}
+                description={PAGE_META.campusFacilities.description}
+                canonicalPath={PAGE_META.campusFacilities.path}
+                jsonLd={buildBreadcrumbJsonLd([
+                    { name: 'Home', path: '/' },
+                    { name: 'Campus & Facilities', path: PAGE_META.campusFacilities.path },
+                ])}
+            />
             <PageHeader
                 title="Campus Facilities & Access"
                 subtitle="Conveniently Located. Fully Accessible. Ready for You."

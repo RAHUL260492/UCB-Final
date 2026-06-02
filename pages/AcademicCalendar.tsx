@@ -6,6 +6,8 @@ import {
     Eye, Info, PlusCircle, AlertCircle
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
+import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 
 const AcademicCalendar: React.FC = () => {
     const [activeTab, setActiveTab] = useState(0);
@@ -114,6 +116,15 @@ const AcademicCalendar: React.FC = () => {
 
     return (
         <div className="pt-24 lg:pt-32 bg-gray-50/30">
+            <SEO
+                title={PAGE_META.academicCalendar.title}
+                description={PAGE_META.academicCalendar.description}
+                canonicalPath={PAGE_META.academicCalendar.path}
+                jsonLd={buildBreadcrumbJsonLd([
+                    { name: 'Home', path: '/' },
+                    { name: 'Academic Calendar', path: PAGE_META.academicCalendar.path },
+                ])}
+            />
             <PageHeader
                 title="Academic Calendar"
                 subtitle="Track semester start dates, session lengths, add/drop deadlines, and holiday schedules for the academic year."

@@ -7,6 +7,8 @@ import {
     ArrowUpRight, Award, DollarSign
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
+import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 
 const Registration: React.FC = () => {
     const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -71,6 +73,15 @@ const Registration: React.FC = () => {
 
     return (
         <div className="pt-24 lg:pt-32 bg-gray-50/30">
+            <SEO
+                title={PAGE_META.registration.title}
+                description={PAGE_META.registration.description}
+                canonicalPath={PAGE_META.registration.path}
+                jsonLd={buildBreadcrumbJsonLd([
+                    { name: 'Home', path: '/' },
+                    { name: 'Registration', path: PAGE_META.registration.path },
+                ])}
+            />
             <PageHeader
                 title="Register for Courses"
                 subtitle="Your next chapter starts here — and it fits into your busy life."

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import PageHeader from '../components/PageHeader';
 import ScrollAnimation from '../components/ScrollAnimation';
+import SEO from '../components/SEO';
+import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 import { 
     FileText, ExternalLink, Mail, Phone, Info, HelpCircle,
     Globe, CreditCard, ChevronRight
@@ -27,6 +29,15 @@ const TranscriptRequests: React.FC = () => {
 
     return (
         <div className="pt-24 lg:pt-32 bg-gray-50/30">
+            <SEO
+                title={PAGE_META.transcripts.title}
+                description={PAGE_META.transcripts.description}
+                canonicalPath={PAGE_META.transcripts.path}
+                jsonLd={buildBreadcrumbJsonLd([
+                    { name: 'Home', path: '/' },
+                    { name: 'Transcripts', path: PAGE_META.transcripts.path },
+                ])}
+            />
             <PageHeader
                 title="Transcript Requests"
                 subtitle="Request official academic transcripts. Order paper or electronic records securely online through the National Student Clearinghouse."

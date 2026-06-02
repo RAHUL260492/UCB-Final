@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { Clock, Globe, DollarSign, TrendingUp, BookOpen, Briefcase, Award, GraduationCap, Calendar, CheckCircle } from 'lucide-react';
 import ProgramPageLayout, { ProgramBenefit, ProgramStat } from '../components/ProgramPageLayout';
+import SEO from '../components/SEO';
+import { buildCourseJsonLd, buildBreadcrumbJsonLd } from '../components/seo-data';
 
 // ─── Icon helper for bilingual ────────────────────────────────────────────────
 const MessageCircleIcon: React.ElementType = (props: any) => (
@@ -65,11 +67,30 @@ const BusinessCertificate: React.FC = () => {
     useEffect(() => { window.scrollTo(0, 0); }, []);
 
     return (
+        <>
+            <SEO
+                title="Business Certificate Program — Online & Affordable"
+                description="Earn a Business Certificate from Urban College of Boston in as little as one year. Online, affordable, with bilingual (English/Spanish) options and transfer credit toward a degree."
+                canonicalPath="/programs/business-certificate"
+                jsonLd={[
+                    buildCourseJsonLd({
+                        name: "Business Certificate",
+                        description: "Earn a Business Certificate from Urban College of Boston in as little as one year. Online, affordable, with bilingual (English/Spanish) options and transfer credit toward a degree.",
+                        path: '/programs/business-certificate',
+                        credentialCategory: 'certificate',
+                    }),
+                    buildBreadcrumbJsonLd([
+                        { name: 'Home', path: '/' },
+                        { name: 'Programs', path: '/programs' },
+                        { name: "Business Certificate", path: '/programs/business-certificate' },
+                    ]),
+                ]}
+            />
         <ProgramPageLayout
             badge="Business Certificate Program"
             title={<>Build Real Business Skills & <span style={{ color: '#E68325' }}>Advance Your Career</span></>}
             subtitle="In as little as one year. Accessible, high-quality education designed for working adults."
-            headerImageSrc="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2940&auto=format&fit=crop"
+            headerImageSrc="/Program%20Images%20for%20Website/Business%20Cert%201.jpg"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },
                 { label: 'Business Certificate' }
@@ -144,6 +165,7 @@ const BusinessCertificate: React.FC = () => {
             ctaRequirements={['High School Diploma / GED / HiSET', 'Photo ID', 'Online Application']}
             programName="Business Certificate"
         />
+        </>
     );
 };
 

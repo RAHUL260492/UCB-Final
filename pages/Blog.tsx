@@ -4,6 +4,8 @@ import { Search, Calendar, ChevronRight } from 'lucide-react';
 // Sanity CMS fetching removed for static site setup
 import PageHeader from '../components/PageHeader';
 import localBlogsData from '../src/data/blogs.json';
+import SEO from '../components/SEO';
+import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 
 const formatTitle = (title: string, slug: string) => {
     if (title === "Urban College Blog | Urban College of Boston") {
@@ -32,6 +34,15 @@ const Blog: React.FC = () => {
 
     return (
         <div className="bg-gray-50 min-h-screen pb-20">
+            <SEO
+                title={PAGE_META.blog.title}
+                description={PAGE_META.blog.description}
+                canonicalPath={PAGE_META.blog.path}
+                jsonLd={buildBreadcrumbJsonLd([
+                    { name: 'Home', path: '/' },
+                    { name: 'Blog', path: PAGE_META.blog.path },
+                ])}
+            />
             <PageHeader
                 title="Urban College Blog"
                 subtitle="Stories, news, and insights from the Urban College community."

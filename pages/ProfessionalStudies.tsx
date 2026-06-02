@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { BookOpen, Clock, Globe, Briefcase, CheckCircle, Users, DollarSign, Calendar, Award, GraduationCap } from 'lucide-react';
 import ProgramPageLayout, { ProgramBenefit, ProgramStat } from '../components/ProgramPageLayout';
+import SEO from '../components/SEO';
+import { buildCourseJsonLd, buildBreadcrumbJsonLd } from '../components/seo-data';
 
 // ─── Icon helper for bilingual ────────────────────────────────────────────────
 const MessageCircleIcon: React.ElementType = (props: any) => (
@@ -67,11 +69,30 @@ const ProfessionalStudies: React.FC = () => {
     useEffect(() => { window.scrollTo(0, 0); }, []);
 
     return (
+        <>
+            <SEO
+                title="Professional Studies Program"
+                description="Build career-ready skills through Professional Studies at Urban College of Boston. Flexible, affordable, multilingual."
+                canonicalPath="/programs/professional-studies"
+                jsonLd={[
+                    buildCourseJsonLd({
+                        name: "Professional Studies",
+                        description: "Build career-ready skills through Professional Studies at Urban College of Boston. Flexible, affordable, multilingual.",
+                        path: '/programs/professional-studies',
+                        credentialCategory: 'certificate',
+                    }),
+                    buildBreadcrumbJsonLd([
+                        { name: 'Home', path: '/' },
+                        { name: 'Programs', path: '/programs' },
+                        { name: "Professional Studies", path: '/programs/professional-studies' },
+                    ]),
+                ]}
+            />
         <ProgramPageLayout
             badge="Professional Studies & Single Courses"
             title={<>Take College Courses <span style={{ color: '#E68325' }}>Without Committing to a Degree</span></>}
             subtitle="Learn Something New. Grow Your Career. Follow Your Curiosity."
-            headerImageSrc="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2940&auto=format&fit=crop"
+            headerImageSrc="/Program%20Images%20for%20Website/Professional%20Studies%201.jpg"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },
                 { label: 'Professional Studies' }
@@ -146,6 +167,7 @@ const ProfessionalStudies: React.FC = () => {
             faqs={faqs}
             programName="Professional Studies"
         />
+        </>
     );
 };
 

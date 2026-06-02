@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import ScrollAnimation from '../components/ScrollAnimation';
+import SEO from '../components/SEO';
+import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 import { 
     Globe, BookOpen, Users, Calendar, Award, MessageCircle, ChevronRight, 
     ArrowRight, CheckCircle, ShieldAlert, Sparkles, Quote, HelpCircle, 
@@ -89,6 +91,15 @@ const Mandarin: React.FC = () => {
 
     return (
         <div className="pt-24 lg:pt-32">
+            <SEO
+                title={PAGE_META.mandarin.title}
+                description={PAGE_META.mandarin.description}
+                canonicalPath={PAGE_META.mandarin.path}
+                jsonLd={buildBreadcrumbJsonLd([
+                    { name: 'Home', path: '/' },
+                    { name: '中文', path: PAGE_META.mandarin.path },
+                ])}
+            />
             <PageHeader
                 title="一边学习英语一边获得学位"
                 subtitle="以普通话开始学习，毕业时英语水平将得到提升。"

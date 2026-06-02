@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Menu, X, Phone, Globe, MessageCircle, ChevronDown, Search } from 'lucide-react';
+import { Menu, X, Phone, Globe, ChevronDown, Search } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Logo from './Logo';
 
@@ -150,7 +150,7 @@ const Navigation: React.FC = () => {
       {bannerOpen && (
         <div className="bg-ucb-orange text-white text-xs md:text-sm font-medium py-2 px-4 flex justify-between items-center relative z-50">
           <div className="container mx-auto text-center flex-1">
-            Now enrolling for Fall 2026. Classes start September 8th. <Link to="/admissions" className="underline ml-2 hover:text-ucb-blue transition-colors">Apply Today</Link>
+            Now enrolling for Fall 2026. Classes Start September 1st. <a href="https://urbancollege-28708.app451.sites.451.io/" target="_blank" rel="noopener noreferrer" className="underline ml-2 hover:text-ucb-blue transition-colors">Apply Today</a>
           </div>
           <button onClick={() => setBannerOpen(false)} className="hover:text-ucb-blue transition-colors p-1" aria-label="Close banner">
             <X className="w-4 h-4" />
@@ -171,31 +171,19 @@ const Navigation: React.FC = () => {
             <Globe className="w-3 h-3" /> 中文
           </Link>
           <button
-            onClick={() => {
-              const el451 = (window as any).Element451;
-              if (el451 && el451.Messenger) {
-                el451.Messenger.open();
-              } else {
-                const launcher = document.querySelector('.el451-messenger-launcher, #el451-messenger-launcher, [class*="messenger"] button') as HTMLElement;
-                if (launcher) launcher.click();
-              }
-            }}
-            className="flex items-center gap-1 text-ucb-gold hover:text-white transition-colors min-h-[44px]"
-          >
-            <MessageCircle className="w-3 h-3" /> Live Chat
-          </button>
-          <button
             onClick={() => window.dispatchEvent(new CustomEvent('open-rfi-sidebar'))}
             className="border border-white/40 text-white px-4 py-2 rounded-full hover:bg-white hover:text-ucb-blue transition-colors ml-2 font-bold tracking-wide text-[10px] uppercase min-h-[44px] flex items-center justify-center cursor-pointer"
           >
             Request Info
           </button>
-          <Link
-            to="/admissions"
+          <a
+            href="https://urbancollege-28708.app451.sites.451.io/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-ucb-orange text-white px-4 py-2 rounded-full hover:bg-ucb-orange-glow transition-colors font-bold tracking-wide text-[10px] uppercase min-h-[44px] flex items-center justify-center"
           >
             Apply Now
-          </Link>
+          </a>
         </div>
       </div>
 
@@ -465,13 +453,15 @@ const Navigation: React.FC = () => {
 
            <div className="mt-auto space-y-4">
             <div className="h-px bg-gray-100 my-4"></div>
-            <Link
-              to="/admissions"
+            <a
+              href="https://urbancollege-28708.app451.sites.451.io/"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}
               className="w-full bg-ucb-orange text-white py-4 rounded-xl font-bold text-lg shadow-lg active:scale-95 transition-transform min-h-[44px] flex items-center justify-center"
             >
               Apply Now
-            </Link>
+            </a>
             <button
               onClick={() => {
                 setMobileMenuOpen(false);

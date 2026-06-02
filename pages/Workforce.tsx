@@ -6,6 +6,8 @@ import {
 } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 import ScrollAnimation from '../components/ScrollAnimation';
+import SEO from '../components/SEO';
+import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 
 interface CouncilMember {
     name: string;
@@ -51,6 +53,15 @@ const Workforce: React.FC = () => {
 
     return (
         <div className="pt-24 lg:pt-32 bg-gray-50/30">
+            <SEO
+                title={PAGE_META.workforce.title}
+                description={PAGE_META.workforce.description}
+                canonicalPath={PAGE_META.workforce.path}
+                jsonLd={buildBreadcrumbJsonLd([
+                    { name: 'Home', path: '/' },
+                    { name: 'Workforce Development', path: PAGE_META.workforce.path },
+                ])}
+            />
             <PageHeader
                 title="Workforce & Community"
                 subtitle="Preparing A Multilingual, Skilled, and Digitally-Ready Workforce."

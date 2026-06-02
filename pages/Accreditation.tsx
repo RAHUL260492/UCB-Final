@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import PageHeader from '../components/PageHeader';
 import ScrollAnimation from '../components/ScrollAnimation';
+import SEO from '../components/SEO';
+import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 import { 
     Award, Shield, CheckCircle, Calendar, Mail, Phone, 
     MapPin, Globe, ExternalLink, ShieldCheck, FileText, HelpCircle 
@@ -46,6 +48,15 @@ const Accreditation: React.FC = () => {
 
     return (
         <div className="pt-24 lg:pt-32">
+            <SEO
+                title={PAGE_META.accreditation.title}
+                description={PAGE_META.accreditation.description}
+                canonicalPath={PAGE_META.accreditation.path}
+                jsonLd={buildBreadcrumbJsonLd([
+                    { name: 'Home', path: '/' },
+                    { name: 'Accreditation', path: PAGE_META.accreditation.path },
+                ])}
+            />
             <PageHeader
                 title="Accreditation"
                 subtitle="Accredited Excellence in Higher Education"

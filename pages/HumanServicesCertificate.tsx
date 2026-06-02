@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { BookOpen, Clock, Globe, Briefcase, CheckCircle, TrendingUp, Users, DollarSign, Calendar, Award, GraduationCap } from 'lucide-react';
 import ProgramPageLayout, { ProgramBenefit, ProgramStat } from '../components/ProgramPageLayout';
+import SEO from '../components/SEO';
+import { buildCourseJsonLd, buildBreadcrumbJsonLd } from '../components/seo-data';
 
 // ─── Icon helper for bilingual ────────────────────────────────────────────────
 const MessageCircleIcon: React.ElementType = (props: any) => (
@@ -66,6 +68,25 @@ const HumanServicesCertificate: React.FC = () => {
     useEffect(() => { window.scrollTo(0, 0); }, []);
 
     return (
+        <>
+            <SEO
+                title="Human Services Certificate Program"
+                description="Start a career in human services with a certificate from Urban College of Boston. Hands-on training in case management, advocacy, and community support."
+                canonicalPath="/programs/human-services-certificate"
+                jsonLd={[
+                    buildCourseJsonLd({
+                        name: "Human Services Certificate",
+                        description: "Start a career in human services with a certificate from Urban College of Boston. Hands-on training in case management, advocacy, and community support.",
+                        path: '/programs/human-services-certificate',
+                        credentialCategory: 'certificate',
+                    }),
+                    buildBreadcrumbJsonLd([
+                        { name: 'Home', path: '/' },
+                        { name: 'Programs', path: '/programs' },
+                        { name: "Human Services Certificate", path: '/programs/human-services-certificate' },
+                    ]),
+                ]}
+            />
         <ProgramPageLayout
             badge="Human Services Certificate"
             title={<>Launch Your Career <span style={{ color: '#E68325' }}>Helping Others—While You Work</span></>}
@@ -146,6 +167,7 @@ const HumanServicesCertificate: React.FC = () => {
             ctaRequirements={['High School Diploma / GED / HiSET', 'Photo ID', 'Online Application']}
             programName="Human Services Certificate"
         />
+        </>
     );
 };
 

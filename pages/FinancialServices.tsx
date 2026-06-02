@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import ScrollAnimation from '../components/ScrollAnimation';
+import SEO from '../components/SEO';
+import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 import { 
     Coins, GraduationCap, Briefcase, Award, CheckCircle, 
     ArrowRight, Globe, Info, HelpCircle, ChevronRight, 
@@ -71,6 +73,15 @@ const FinancialServices: React.FC = () => {
 
     return (
         <div className="pt-24 lg:pt-32">
+            <SEO
+                title={PAGE_META.financialServices.title}
+                description={PAGE_META.financialServices.description}
+                canonicalPath={PAGE_META.financialServices.path}
+                jsonLd={buildBreadcrumbJsonLd([
+                    { name: 'Home', path: '/' },
+                    { name: 'Financial Services', path: PAGE_META.financialServices.path },
+                ])}
+            />
             <PageHeader 
                 title="Financial Services & Funding" 
                 subtitle="Discover the options and resources available to fund your education. Our Financial Aid Office helps keep your out-of-pocket costs minimal."

@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { Clock, Globe, DollarSign, TrendingUp, BookOpen, Briefcase, Award, GraduationCap, Calendar, CheckCircle } from 'lucide-react';
 import ProgramPageLayout, { ProgramBenefit, ProgramStat } from '../components/ProgramPageLayout';
+import SEO from '../components/SEO';
+import { buildCourseJsonLd, buildBreadcrumbJsonLd } from '../components/seo-data';
 
 // ─── Icon helper for bilingual ────────────────────────────────────────────────
 const MessageCircleIcon: React.ElementType = (props: any) => (
@@ -61,11 +63,30 @@ const DigitalMarketing: React.FC = () => {
     useEffect(() => { window.scrollTo(0, 0); }, []);
 
     return (
+        <>
+            <SEO
+                title="Digital Marketing Certificate Program"
+                description="Launch your digital marketing career with a certificate from Urban College of Boston. SEO, content, social media, and analytics — fully online."
+                canonicalPath="/programs/digital-marketing-certificate"
+                jsonLd={[
+                    buildCourseJsonLd({
+                        name: "Digital Marketing Certificate",
+                        description: "Launch your digital marketing career with a certificate from Urban College of Boston. SEO, content, social media, and analytics — fully online.",
+                        path: '/programs/digital-marketing-certificate',
+                        credentialCategory: 'certificate',
+                    }),
+                    buildBreadcrumbJsonLd([
+                        { name: 'Home', path: '/' },
+                        { name: 'Programs', path: '/programs' },
+                        { name: "Digital Marketing Certificate", path: '/programs/digital-marketing-certificate' },
+                    ]),
+                ]}
+            />
         <ProgramPageLayout
             badge="Digital Marketing Certificate"
             title={<>Master In-Demand Digital Skills & <span style={{ color: '#E68325' }}>Launch Your Marketing Career</span></>}
             subtitle="In as little as one year. Accessible, high-quality education designed for working adults."
-            headerImageSrc="https://images.unsplash.com/photo-1533750349088-cd871a92f312?q=80&w=2940&auto=format&fit=crop"
+            headerImageSrc="/Program%20Images%20for%20Website/Marketing%20Cert%201.jpg"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },
                 { label: 'Digital Marketing' }
@@ -139,6 +160,7 @@ const DigitalMarketing: React.FC = () => {
             ctaRequirements={['High School Diploma / GED / HiSET', 'Photo ID', 'Online Application']}
             programName="Digital Marketing"
         />
+        </>
     );
 };
 

@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import ScrollAnimation from '../components/ScrollAnimation';
+import SEO from '../components/SEO';
+import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 import { 
     Award, BookOpen, Clock, Globe, Users, DollarSign, GraduationCap, 
     CheckCircle, Calendar, ChevronRight, Heart, ArrowRight, Quote, ShieldCheck 
@@ -86,6 +88,15 @@ const About: React.FC = () => {
 
     return (
         <div className="pt-24 lg:pt-32 bg-gray-50/50">
+            <SEO
+                title={PAGE_META.about.title}
+                description={PAGE_META.about.description}
+                canonicalPath={PAGE_META.about.path}
+                jsonLd={buildBreadcrumbJsonLd([
+                    { name: 'Home', path: '/' },
+                    { name: 'About', path: PAGE_META.about.path },
+                ])}
+            />
             <PageHeader 
                 title="About Urban College"
                 subtitle="Opening New Pathways to Opportunity Since 1993"

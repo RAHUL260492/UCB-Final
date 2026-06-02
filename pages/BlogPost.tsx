@@ -3,6 +3,8 @@ import { useParams, Link, useLocation } from 'react-router-dom';
 import { ChevronLeft, Calendar, Share2, Facebook, Twitter, Linkedin, Copy } from 'lucide-react';
 import blogsData from '../src/data/blogs.json';
 import PageHeader from '../components/PageHeader';
+import SEO from '../components/SEO';
+import { buildBreadcrumbJsonLd } from '../components/seo-data';
 
 const formatTitle = (title: string, slug: string) => {
     if (title === "Urban College Blog | Urban College of Boston") {
@@ -44,8 +46,37 @@ const BlogPost: React.FC = () => {
         setTimeout(() => setCopied(false), 2000);
     };
 
+    const sectionPath = isNews ? '/news' : '/blog';
+    const sectionName = isNews ? 'News' : 'Blog';
+    const articleJsonLd = {
+        '@context': 'https://schema.org',
+        '@type': isNews ? 'NewsArticle' : 'BlogPosting',
+        headline: displayTitle,
+        description: blog.description,
+        image: blog.image,
+        datePublished: blog.date,
+        author: { '@type': 'Organization', name: 'Urban College of Boston' },
+        publisher: { '@type': 'Organization', name: 'Urban College of Boston' },
+        mainEntityOfPage: `https://www.urbancollege.edu${sectionPath}/${blog.slug}`,
+    };
+
     return (
         <div className="bg-white min-h-screen">
+            <SEO
+                title={displayTitle}
+                description={blog.description || `Read "${displayTitle}" on Urban College of Boston.`}
+                canonicalPath={`${sectionPath}/${blog.slug}`}
+                type="article"
+                image={blog.image}
+                jsonLd={[
+                    articleJsonLd,
+                    buildBreadcrumbJsonLd([
+                        { name: 'Home', path: '/' },
+                        { name: sectionName, path: sectionPath },
+                        { name: displayTitle, path: `${sectionPath}/${blog.slug}` },
+                    ]),
+                ]}
+            />
             {/* Header / Hero Area */}
             <div className="relative pt-12 pb-16 md:pt-20 md:pb-24 overflow-hidden bg-ucb-blue flex flex-col items-center justify-center text-center">
                 <div className="absolute inset-0 z-0">

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BookOpen, Monitor, Users, Calendar, Clock, MapPin, Mail, Phone, ExternalLink, MessageCircle, ChevronDown, ChevronUp, CheckCircle } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
+import SEO from '../components/SEO';
+import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 
 const faqs = [
     { q: "What services does the LRC offer?", a: "The LRC provides tutoring (in-person and remote), academic workshops, technology assistance, and computer/printing access." },
@@ -21,6 +23,15 @@ const LearningResourceCenter: React.FC = () => {
 
     return (
         <div className="pt-24 lg:pt-32">
+            <SEO
+                title={PAGE_META.learningResourceCenter.title}
+                description={PAGE_META.learningResourceCenter.description}
+                canonicalPath={PAGE_META.learningResourceCenter.path}
+                jsonLd={buildBreadcrumbJsonLd([
+                    { name: 'Home', path: '/' },
+                    { name: 'Learning Resource Center', path: PAGE_META.learningResourceCenter.path },
+                ])}
+            />
             <PageHeader
                 title="Learning Resource Center"
                 subtitle="Empowering your academic journey at Urban College with tutoring, language support, and technology assistance."

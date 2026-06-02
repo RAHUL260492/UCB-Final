@@ -3,6 +3,7 @@ import { useLocation, Link } from 'react-router-dom';
 import Logo from '../components/Logo';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { CheckCircle, Award, BookOpen, Clock, Heart, ShieldCheck } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const RFILandingPage: React.FC = () => {
     const location = useLocation();
@@ -95,6 +96,11 @@ const RFILandingPage: React.FC = () => {
 
     return (
         <div className="min-h-screen bg-gray-50/50 flex flex-col justify-between selection:bg-ucb-orange selection:text-white pt-6 pb-12">
+            <SEO
+                title={`${campaignName} | Request Information`}
+                description={campaignDesc}
+                noindex
+            />
             {/* Simple centered header for maximum conversion (reduces landing page drop-offs) */}
             <header className="container mx-auto px-6 py-4 flex justify-between items-center border-b border-gray-150/50 bg-white/50 backdrop-blur-md rounded-2xl mb-8">
                 <Link to="/" className="flex items-center gap-2 group">

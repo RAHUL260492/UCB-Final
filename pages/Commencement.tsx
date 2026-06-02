@@ -6,6 +6,8 @@ import {
     CheckCircle, Camera, AlertTriangle, ArrowRight, BookOpen
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
+import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 
 const Commencement: React.FC = () => {
     useEffect(() => {
@@ -38,6 +40,15 @@ const Commencement: React.FC = () => {
 
     return (
         <div className="pt-24 lg:pt-32 bg-gray-50/30">
+            <SEO
+                title={PAGE_META.commencement.title}
+                description={PAGE_META.commencement.description}
+                canonicalPath={PAGE_META.commencement.path}
+                jsonLd={buildBreadcrumbJsonLd([
+                    { name: 'Home', path: '/' },
+                    { name: 'Commencement', path: PAGE_META.commencement.path },
+                ])}
+            />
             <PageHeader
                 title="Commencement Ceremony"
                 subtitle="Mark your calendars! Celebrate the achievements of our graduates and community leaders."

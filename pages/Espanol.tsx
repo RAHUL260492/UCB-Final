@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import ScrollAnimation from '../components/ScrollAnimation';
+import SEO from '../components/SEO';
+import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 import { 
     Globe, BookOpen, Users, Calendar, Award, MessageCircle, ChevronRight, 
     ArrowRight, CheckCircle, ShieldAlert, Sparkles, Quote, HelpCircle, 
@@ -97,6 +99,15 @@ const Espanol: React.FC = () => {
 
     return (
         <div className="pt-24 lg:pt-32">
+            <SEO
+                title={PAGE_META.espanol.title}
+                description={PAGE_META.espanol.description}
+                canonicalPath={PAGE_META.espanol.path}
+                jsonLd={buildBreadcrumbJsonLd([
+                    { name: 'Home', path: '/' },
+                    { name: 'Español', path: PAGE_META.espanol.path },
+                ])}
+            />
             <PageHeader
                 title="Aprende en Español"
                 subtitle="Obtén tu título universitario en tu idioma mientras fortaleces tus habilidades en inglés."

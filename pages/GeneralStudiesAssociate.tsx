@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { BookOpen, Clock, Globe, Briefcase, CheckCircle, TrendingUp, Users, DollarSign, Calendar, Award, Compass, GraduationCap, ArrowRight } from 'lucide-react';
 import ProgramPageLayout, { ProgramBenefit, ProgramStat } from '../components/ProgramPageLayout';
+import SEO from '../components/SEO';
+import { buildCourseJsonLd, buildBreadcrumbJsonLd } from '../components/seo-data';
 
 // ─── Icon helper for bilingual ────────────────────────────────────────────────
 const MessageCircleIcon: React.ElementType = (props: any) => (
@@ -64,6 +66,26 @@ const GeneralStudiesAssociate: React.FC = () => {
     useEffect(() => { window.scrollTo(0, 0); }, []);
 
     return (
+        <>
+            <SEO
+                title="General Studies Associate Degree"
+                description="Customize your associate degree with the General Studies program at Urban College of Boston. Flexible electives, transferable credits, and multilingual support."
+                canonicalPath="/programs/general-studies-associate"
+                jsonLd={[
+                    buildCourseJsonLd({
+                        name: "General Studies Associate Degree",
+                        description: "Customize your associate degree with the General Studies program at Urban College of Boston. Flexible electives, transferable credits, and multilingual support.",
+                        path: '/programs/general-studies-associate',
+                        credentialCategory: 'degree',
+                        educationLevel: 'Associate',
+                    }),
+                    buildBreadcrumbJsonLd([
+                        { name: 'Home', path: '/' },
+                        { name: 'Programs', path: '/programs' },
+                        { name: "General Studies Associate Degree", path: '/programs/general-studies-associate' },
+                    ]),
+                ]}
+            />
         <ProgramPageLayout
             badge="General Studies Associate Degree"
             title={<>Explore Your Possibilities & <span style={{ color: '#E68325' }}>Build Your Future</span></>}
@@ -142,6 +164,7 @@ const GeneralStudiesAssociate: React.FC = () => {
             ctaRequirements={['High School Diploma / GED / HiSET', 'Photo ID', 'Online Application']}
             programName="General Studies Associate"
         />
+        </>
     );
 };
 

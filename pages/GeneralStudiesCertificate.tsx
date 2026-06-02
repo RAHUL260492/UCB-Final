@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { BookOpen, Clock, Globe, Briefcase, CheckCircle, TrendingUp, Users, DollarSign, Calendar, Award, GraduationCap, ArrowRight } from 'lucide-react';
 import ProgramPageLayout, { ProgramBenefit, ProgramStat } from '../components/ProgramPageLayout';
+import SEO from '../components/SEO';
+import { buildCourseJsonLd, buildBreadcrumbJsonLd } from '../components/seo-data';
 
 // ─── Icon helper for bilingual ────────────────────────────────────────────────
 const MessageCircleIcon: React.ElementType = (props: any) => (
@@ -63,6 +65,25 @@ const GeneralStudiesCertificate: React.FC = () => {
     useEffect(() => { window.scrollTo(0, 0); }, []);
 
     return (
+        <>
+            <SEO
+                title="General Studies Certificate Program"
+                description="Build a foundation in college-level learning with the General Studies Certificate from Urban College of Boston."
+                canonicalPath="/programs/general-studies-certificate"
+                jsonLd={[
+                    buildCourseJsonLd({
+                        name: "General Studies Certificate",
+                        description: "Build a foundation in college-level learning with the General Studies Certificate from Urban College of Boston.",
+                        path: '/programs/general-studies-certificate',
+                        credentialCategory: 'certificate',
+                    }),
+                    buildBreadcrumbJsonLd([
+                        { name: 'Home', path: '/' },
+                        { name: 'Programs', path: '/programs' },
+                        { name: "General Studies Certificate", path: '/programs/general-studies-certificate' },
+                    ]),
+                ]}
+            />
         <ProgramPageLayout
             badge="General Studies Certificate"
             title={<>Explore Your Possibilities & <span style={{ color: '#E68325' }}>Build Your Future</span></>}
@@ -141,6 +162,7 @@ const GeneralStudiesCertificate: React.FC = () => {
             ctaRequirements={['High School Diploma / GED / HiSET', 'Photo ID', 'Online Application']}
             programName="General Studies Certificate"
         />
+        </>
     );
 };
 

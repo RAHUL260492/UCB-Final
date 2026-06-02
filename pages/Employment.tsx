@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import PageHeader from '../components/PageHeader';
 import ScrollAnimation from '../components/ScrollAnimation';
+import SEO from '../components/SEO';
+import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 import { 
     Sparkles, Users, Globe, GraduationCap, Briefcase, Heart, Award, 
     ArrowRight, CheckCircle, Mail, Phone, MapPin, ExternalLink, ShieldCheck 
@@ -100,6 +102,15 @@ const Employment: React.FC = () => {
 
     return (
         <div className="pt-24 lg:pt-32 bg-gray-50/50">
+            <SEO
+                title={PAGE_META.employment.title}
+                description={PAGE_META.employment.description}
+                canonicalPath={PAGE_META.employment.path}
+                jsonLd={buildBreadcrumbJsonLd([
+                    { name: 'Home', path: '/' },
+                    { name: 'Employment', path: PAGE_META.employment.path },
+                ])}
+            />
             <PageHeader
                 title="Join Our Team"
                 subtitle="Build a Career That Transforms Lives"

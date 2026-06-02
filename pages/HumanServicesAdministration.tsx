@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { Clock, Globe, DollarSign, TrendingUp, Award, Briefcase, CheckCircle, Users, Calendar, GraduationCap } from 'lucide-react';
 import ProgramPageLayout, { ProgramBenefit, ProgramStat } from '../components/ProgramPageLayout';
+import SEO from '../components/SEO';
+import { buildCourseJsonLd, buildBreadcrumbJsonLd } from '../components/seo-data';
 
 // ─── Icon helper for bilingual ────────────────────────────────────────────────
 const MessageCircleIcon: React.ElementType = (props: any) => (
@@ -69,6 +71,26 @@ const HumanServicesAdministration: React.FC = () => {
     useEffect(() => { window.scrollTo(0, 0); }, []);
 
     return (
+        <>
+            <SEO
+                title="Human Services Administration Associate Degree"
+                description="Lead in social services and community organizations with a Human Services Administration Associate Degree from Urban College of Boston."
+                canonicalPath="/programs/human-services-administration"
+                jsonLd={[
+                    buildCourseJsonLd({
+                        name: "Human Services Administration Associate Degree",
+                        description: "Lead in social services and community organizations with a Human Services Administration Associate Degree from Urban College of Boston.",
+                        path: '/programs/human-services-administration',
+                        credentialCategory: 'degree',
+                        educationLevel: 'Associate',
+                    }),
+                    buildBreadcrumbJsonLd([
+                        { name: 'Home', path: '/' },
+                        { name: 'Programs', path: '/programs' },
+                        { name: "Human Services Administration Associate Degree", path: '/programs/human-services-administration' },
+                    ]),
+                ]}
+            />
         <ProgramPageLayout
             badge="Human Services Administration"
             title={<>Transform Lives & <span style={{ color: '#E68325' }}>Build Your Career in Social Services</span></>}
@@ -148,6 +170,7 @@ const HumanServicesAdministration: React.FC = () => {
             faqs={faqs}
             programName="Human Services Administration"
         />
+        </>
     );
 };
 

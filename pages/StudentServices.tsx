@@ -8,6 +8,8 @@ import {
     Coins, Laptop, BookOpen, ArrowRight, ShieldCheck, HelpCircle
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
+import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 
 const StudentServices: React.FC = () => {
     useEffect(() => {
@@ -114,6 +116,15 @@ const StudentServices: React.FC = () => {
 
     return (
         <div className="pt-24 lg:pt-32 bg-gray-50/40 min-h-screen">
+            <SEO
+                title={PAGE_META.studentServices.title}
+                description={PAGE_META.studentServices.description}
+                canonicalPath={PAGE_META.studentServices.path}
+                jsonLd={buildBreadcrumbJsonLd([
+                    { name: 'Home', path: '/' },
+                    { name: 'Student Services', path: PAGE_META.studentServices.path },
+                ])}
+            />
             <PageHeader
                 title="Student Services Overview"
                 subtitle="You've got a whole team in your corner. Here's everything Urban College offers to help you thrive."

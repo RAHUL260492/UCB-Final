@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import ScrollAnimation from '../components/ScrollAnimation';
+import SEO from '../components/SEO';
+import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 import { 
     DollarSign, Calendar, Calculator, FileText, CheckCircle, 
     ArrowRight, MapPin, Phone, Mail, Clock, ShieldAlert,
@@ -37,6 +39,15 @@ const FinancialAid: React.FC = () => {
 
     return (
         <div className="pt-24 lg:pt-32">
+            <SEO
+                title={PAGE_META.financialAid.title}
+                description={PAGE_META.financialAid.description}
+                canonicalPath={PAGE_META.financialAid.path}
+                jsonLd={buildBreadcrumbJsonLd([
+                    { name: 'Home', path: '/' },
+                    { name: 'Financial Aid', path: PAGE_META.financialAid.path },
+                ])}
+            />
             <PageHeader 
                 title="Tuition & Financial Aid" 
                 subtitle="2026-2027 Academic Year cost structures, tuition rates, course fees, and Cost of Attendance (COA) estimates."

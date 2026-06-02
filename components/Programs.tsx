@@ -172,22 +172,6 @@ const Programs: React.FC = () => {
             </div>
           )}
 
-          {/* Callout Tile — spans full row */}
-          <ScrollAnimation delay="0.4s" variant="scale-in" className="sm:col-span-2 lg:col-span-4">
-            <div className="bg-gradient-to-r from-ucb-orange to-orange-600 text-white p-4 md:p-6 flex flex-col md:flex-row items-center justify-between gap-3 relative overflow-hidden shadow-lg rounded h-full shimmer-overlay">
-              <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-              <div className="absolute -left-10 -bottom-10 w-40 h-40 bg-white opacity-10 rounded-full blur-3xl"></div>
-              <div className="absolute -right-10 -top-10 w-40 h-40 bg-white opacity-10 rounded-full blur-3xl"></div>
-
-              <div className="relative z-10 max-w-2xl text-center md:text-left">
-                <h3 className="font-display font-bold text-xl md:text-2xl mb-1">Unsure which path is right for you?</h3>
-                <p className="opacity-95 text-sm text-white/90 leading-relaxed">Take our 2-minute assessment to discover your perfect program match.</p>
-              </div>
-              <button className="relative z-10 bg-white text-ucb-orange hover:bg-ucb-blue-glow hover:text-white font-bold py-3 px-4 md:px-6 rounded-full transition-all shadow-xl whitespace-nowrap hover:scale-105 transform duration-300 text-sm min-h-[44px]">
-                Start Finder
-              </button>
-            </div>
-          </ScrollAnimation>
         </div>
       </div>
     </section>

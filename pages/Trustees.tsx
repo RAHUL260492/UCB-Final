@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import ScrollAnimation from '../components/ScrollAnimation';
+import SEO from '../components/SEO';
+import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 import { 
     Users, ShieldCheck, DollarSign, Globe, Award, GraduationCap, 
     Briefcase, CheckCircle, ChevronRight, Heart, ArrowRight, BookOpen, Clock
@@ -184,6 +186,15 @@ const Trustees: React.FC = () => {
 
     return (
         <div className="pt-24 lg:pt-32">
+            <SEO
+                title={PAGE_META.trustees.title}
+                description={PAGE_META.trustees.description}
+                canonicalPath={PAGE_META.trustees.path}
+                jsonLd={buildBreadcrumbJsonLd([
+                    { name: 'Home', path: '/' },
+                    { name: 'Board of Trustees', path: PAGE_META.trustees.path },
+                ])}
+            />
             <PageHeader 
                 title="Board of Trustees" 
                 subtitle="Guiding our mission and shaping a future where education opens doors for everyone."

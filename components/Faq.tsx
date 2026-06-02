@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
 
-const FAQS = [
-  { q: "Can I work while studying?", a: "Absolutely. 85% of our students work while attending. We offer evening, weekend, and asynchronous online classes to fit your schedule." },
+export const FAQS = [
+  { q: "Can I work while studying?", a: "Absolutely. Many Urban College students work while attending. We offer online evening, weekend, and asynchronous classes to fit your schedule." },
   { q: "Is financial aid available?", a: "Yes. As an accredited institution, we accept federal financial aid (FAFSA). We also offer institutional scholarships, and our advisors work one-on-one with students to minimize out-of-pocket costs." },
-  { q: "Do you offer classes in Spanish?", a: "Yes. Our Early Childhood Education and General Studies programs have specific tracks taught entirely or partially in Spanish, allowing you to learn while improving your English." },
-  { q: "Are credits transferable?", a: "Yes. We have articulation agreements with Lesley University, Regis College, and other local institutions, making it easy to transfer your Associate degree into a Bachelor's program." }
+  { q: "Do you offer classes in Spanish?", a: "Yes. Several programs have specific tracks taught entirely or partially in Spanish, allowing you to learn while improving your English." },
+  { q: "Are credits transferable?", a: "Yes. We have articulation agreements with several 4-year institutions, making it easy to transfer your Associate degree into a Bachelor's program. Certificates transfer directly into Urban College Associate degree programs." }
 ];
 
 const Faq: React.FC = () => {

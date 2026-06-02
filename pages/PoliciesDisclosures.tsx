@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import PageHeader from '../components/PageHeader';
 import ScrollAnimation from '../components/ScrollAnimation';
+import SEO from '../components/SEO';
+import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 import { 
     Search, Mail, ExternalLink, FileText, ChevronDown, ChevronUp,
     Lock, BookOpen, UserCheck, DollarSign, Shield, Building, 
@@ -223,6 +225,15 @@ const PoliciesDisclosures: React.FC = () => {
 
     return (
         <div className="pt-24 lg:pt-32 bg-gray-50/30">
+            <SEO
+                title={PAGE_META.policies.title}
+                description={PAGE_META.policies.description}
+                canonicalPath={PAGE_META.policies.path}
+                jsonLd={buildBreadcrumbJsonLd([
+                    { name: 'Home', path: '/' },
+                    { name: 'Policies & Disclosures', path: PAGE_META.policies.path },
+                ])}
+            />
             <PageHeader
                 title="Policies & Disclosures"
                 subtitle="Access institutional documents, student guidelines, safety reports, and regulatory disclosures in one place."

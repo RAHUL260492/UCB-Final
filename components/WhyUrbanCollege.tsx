@@ -7,7 +7,7 @@ const FEATURES = [
   {
     icon: Globe,
     title: 'Multilingual Education',
-    desc: 'Courses in English, Spanish, and Mandarin (with others in contract courses).',
+    desc: 'Courses in English, Spanish, and Mandarin.',
     gradient: 'from-ucb-blue to-ucb-teal',
     bg: 'bg-blue-50',
     iconColor: 'text-ucb-blue',
@@ -27,7 +27,7 @@ const FEATURES = [
   {
     icon: Clock,
     title: 'Flexible Scheduling',
-    desc: '8-week fast track, weekend, and evening options for working adults.',
+    desc: '8-week fast track, weekend, and evening options for working students.',
     gradient: 'from-ucb-orange to-orange-400',
     bg: 'bg-orange-50',
     iconColor: 'text-ucb-orange',
@@ -47,7 +47,7 @@ const FEATURES = [
   {
     icon: GraduationCap,
     title: 'Start Here, Go Anywhere',
-    desc: 'Direct transfer agreements to top 4-year universities in Boston.',
+    desc: 'Direct transfer agreements to top 4-year universities.',
     gradient: 'from-ucb-periwinkle to-ucb-blue',
     bg: 'bg-ucb-periwinkle/10',
     iconColor: 'text-ucb-periwinkle',
@@ -89,7 +89,7 @@ const WhyUrbanCollege: React.FC = () => {
             />
           </div>
           <p className="text-base text-gray-600 leading-relaxed font-light max-w-xl mx-auto">
-            A college community dedicated to your success.
+            An online college community dedicated to your success.
           </p>
         </ScrollAnimation>
 

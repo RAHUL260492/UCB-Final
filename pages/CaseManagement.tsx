@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { Clock, Globe, DollarSign, TrendingUp, BookOpen, Briefcase, Award, CheckCircle } from 'lucide-react';
 import ProgramPageLayout, { ProgramBenefit, ProgramStat } from '../components/ProgramPageLayout';
+import SEO from '../components/SEO';
+import { buildCourseJsonLd, buildBreadcrumbJsonLd } from '../components/seo-data';
 
 // ─── Icon helper for bilingual ────────────────────────────────────────────────
 const MessageCircleIcon: React.ElementType = (props: any) => (
@@ -62,6 +64,25 @@ const CaseManagement: React.FC = () => {
     useEffect(() => { window.scrollTo(0, 0); }, []);
 
     return (
+        <>
+            <SEO
+                title="Case Management Certificate Program"
+                description="Train as a case manager with Urban College of Boston. Practical skills in client advocacy, assessment, and human services delivery — online and affordable."
+                canonicalPath="/programs/case-management"
+                jsonLd={[
+                    buildCourseJsonLd({
+                        name: "Case Management Certificate",
+                        description: "Train as a case manager with Urban College of Boston. Practical skills in client advocacy, assessment, and human services delivery — online and affordable.",
+                        path: '/programs/case-management',
+                        credentialCategory: 'certificate',
+                    }),
+                    buildBreadcrumbJsonLd([
+                        { name: 'Home', path: '/' },
+                        { name: 'Programs', path: '/programs' },
+                        { name: "Case Management Certificate", path: '/programs/case-management' },
+                    ]),
+                ]}
+            />
         <ProgramPageLayout
             // Header
             badge="Case Management Certificate"
@@ -155,6 +176,7 @@ const CaseManagement: React.FC = () => {
             ctaRequirements={['High School Diploma / GED / HiSET', 'Photo ID', 'Online Application']}
             programName="Case Management"
         />
+        </>
     );
 };
 

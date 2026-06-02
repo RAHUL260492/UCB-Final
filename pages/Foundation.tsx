@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import ScrollAnimation from '../components/ScrollAnimation';
+import SEO from '../components/SEO';
+import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 import { 
     Heart, GraduationCap, Users, Briefcase, Award, DollarSign, 
     CheckCircle, Globe, Calendar, ChevronRight, ArrowRight, 
@@ -137,6 +139,15 @@ const Foundation: React.FC = () => {
 
     return (
         <div className="pt-24 lg:pt-32">
+            <SEO
+                title={PAGE_META.foundation.title}
+                description={PAGE_META.foundation.description}
+                canonicalPath={PAGE_META.foundation.path}
+                jsonLd={buildBreadcrumbJsonLd([
+                    { name: 'Home', path: '/' },
+                    { name: 'Foundation', path: PAGE_META.foundation.path },
+                ])}
+            />
             <PageHeader 
                 title="Urban College Foundation" 
                 subtitle="Building students' futures through philanthropy, community support, and strategic investments."

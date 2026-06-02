@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Block paid-campaign landing pages from search indexing
+Disallow: /getstarted
+Disallow: /your-future
+Disallow: /say-yes-a
+Disallow: /say-yes-b
+Disallow: /whav
+Disallow: /WHAV
+
+# Block search results pages
+Disallow: /search
+
+Sitemap: https://www.urbancollege.edu/sitemap.xml

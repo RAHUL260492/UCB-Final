@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import PageHeader from '../components/PageHeader';
 import ScrollAnimation from '../components/ScrollAnimation';
+import SEO from '../components/SEO';
+import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 import { 
     Calendar, Clock, MapPin, Laptop, ChevronDown, Plus, Minus,
     CheckCircle, MessageSquare, Phone, Mail, Play, Globe,
@@ -198,6 +200,15 @@ const InfoSessions: React.FC = () => {
 
     return (
         <div className="pt-24 lg:pt-32">
+            <SEO
+                title={PAGE_META.infoSessions.title}
+                description={PAGE_META.infoSessions.description}
+                canonicalPath={PAGE_META.infoSessions.path}
+                jsonLd={buildBreadcrumbJsonLd([
+                    { name: 'Home', path: '/' },
+                    { name: 'Info Sessions', path: PAGE_META.infoSessions.path },
+                ])}
+            />
             <PageHeader 
                 title="Information Sessions" 
                 subtitle="Your Questions. Real Answers. Your Future Starts Here."

@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { Clock, Globe, DollarSign, TrendingUp, Award, Briefcase, CheckCircle } from 'lucide-react';
 import ProgramPageLayout, { ProgramBenefit, ProgramStat } from '../components/ProgramPageLayout';
+import SEO from '../components/SEO';
+import { buildCourseJsonLd, buildBreadcrumbJsonLd } from '../components/seo-data';
 
 const MessageCircleIcon: React.ElementType = (props: any) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -57,6 +59,25 @@ const ChildrensBehavioralHealth: React.FC = () => {
     useEffect(() => { window.scrollTo(0, 0); }, []);
 
     return (
+        <>
+            <SEO
+                title="Children's Behavioral Health Certificate Program"
+                description="Support children's mental health and behavioral needs with a Children's Behavioral Health Certificate from Urban College of Boston."
+                canonicalPath="/programs/childrens-behavioral-health-certificate"
+                jsonLd={[
+                    buildCourseJsonLd({
+                        name: "Children's Behavioral Health Certificate",
+                        description: "Support children's mental health and behavioral needs with a Children's Behavioral Health Certificate from Urban College of Boston.",
+                        path: '/programs/childrens-behavioral-health-certificate',
+                        credentialCategory: 'certificate',
+                    }),
+                    buildBreadcrumbJsonLd([
+                        { name: 'Home', path: '/' },
+                        { name: 'Programs', path: '/programs' },
+                        { name: "Children's Behavioral Health Certificate", path: '/programs/childrens-behavioral-health-certificate' },
+                    ]),
+                ]}
+            />
         <ProgramPageLayout
             badge="Children's Behavioral Health Certificate"
             title={<>Launch Your Career & <span style={{ color: '#E68325' }}>Help Children Thrive</span></>}
@@ -134,6 +155,7 @@ const ChildrensBehavioralHealth: React.FC = () => {
             faqs={faqs}
             programName="Children's Behavioral Health"
         />
+        </>
     );
 };
 

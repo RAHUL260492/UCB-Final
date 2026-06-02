@@ -6,7 +6,9 @@ import Programs from '../components/Programs';
 import Stats from '../components/Stats';
 import WhyUrbanCollege from '../components/WhyUrbanCollege';
 import RecentBlogPosts from '../components/RecentBlogPosts';
-import Faq from '../components/Faq';
+import Faq, { FAQS } from '../components/Faq';
+import SEO from '../components/SEO';
+import { organizationJsonLd, websiteJsonLd, buildFaqJsonLd } from '../components/seo-data';
 
 const Home: React.FC = () => {
     // Ensure we scroll to top on mount
@@ -16,6 +18,12 @@ const Home: React.FC = () => {
 
     return (
         <>
+            <SEO
+                title="Urban College of Boston | Affordable Associate Degrees & Certificates"
+                description="Urban College of Boston offers affordable online associate degrees and certificates with multilingual instruction in English, Spanish, and Mandarin. Flexible evening, weekend, and asynchronous classes for working students."
+                canonicalPath="/"
+                jsonLd={[organizationJsonLd, websiteJsonLd, buildFaqJsonLd(FAQS)]}
+            />
             <Hero />
             <Stats />
             <StickySubNav />

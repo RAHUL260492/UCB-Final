@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { BookOpen, Clock, Globe, Briefcase, CheckCircle, TrendingUp, Users, DollarSign, Calendar, Award, GraduationCap } from 'lucide-react';
 import ProgramPageLayout, { ProgramBenefit, ProgramStat } from '../components/ProgramPageLayout';
+import SEO from '../components/SEO';
+import { buildCourseJsonLd, buildBreadcrumbJsonLd } from '../components/seo-data';
 
 // ─── Icon helper for bilingual ────────────────────────────────────────────────
 const MessageCircleIcon: React.ElementType = (props: any) => (
@@ -70,6 +72,25 @@ const ParaprofessionalEducator: React.FC = () => {
     useEffect(() => { window.scrollTo(0, 0); }, []);
 
     return (
+        <>
+            <SEO
+                title="Paraprofessional Educator Certificate Program"
+                description="Become a classroom paraprofessional with a certificate from Urban College of Boston. Aligned with Massachusetts ESE standards."
+                canonicalPath="/programs/paraprofessional-educator-certificate"
+                jsonLd={[
+                    buildCourseJsonLd({
+                        name: "Paraprofessional Educator Certificate",
+                        description: "Become a classroom paraprofessional with a certificate from Urban College of Boston. Aligned with Massachusetts ESE standards.",
+                        path: '/programs/paraprofessional-educator-certificate',
+                        credentialCategory: 'certificate',
+                    }),
+                    buildBreadcrumbJsonLd([
+                        { name: 'Home', path: '/' },
+                        { name: 'Programs', path: '/programs' },
+                        { name: "Paraprofessional Educator Certificate", path: '/programs/paraprofessional-educator-certificate' },
+                    ]),
+                ]}
+            />
         <ProgramPageLayout
             badge="Paraprofessional Educator Certificate"
             title={<>Shape Young Minds and <span style={{ color: '#E68325' }}>Launch Your Teaching Career</span></>}
@@ -150,6 +171,7 @@ const ParaprofessionalEducator: React.FC = () => {
             ctaRequirements={['High School Diploma / GED / HiSET', 'Photo ID', 'Online Application']}
             programName="Paraprofessional Educator Certificate"
         />
+        </>
     );
 };
 

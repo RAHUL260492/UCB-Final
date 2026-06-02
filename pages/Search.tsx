@@ -4,6 +4,8 @@ import { Search as SearchIcon, BookOpen, FileText, Globe, ArrowRight } from 'luc
 import PageHeader from '../components/PageHeader';
 import { client, urlFor } from '../src/lib/sanityClient';
 import localBlogsData from '../src/data/blogs.json';
+import SEO from '../components/SEO';
+import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 
 const staticPages = [
     { _type: 'page', title: 'Learning Resource Center', slug: '/learning-resource-center', description: 'Tutoring, language support, and tech assistance.' },
@@ -169,6 +171,15 @@ const Search: React.FC = () => {
 
     return (
         <div className="bg-gray-50 min-h-screen pb-20">
+            <SEO
+                title={PAGE_META.search.title}
+                description={PAGE_META.search.description}
+                canonicalPath={PAGE_META.search.path}
+                jsonLd={buildBreadcrumbJsonLd([
+                    { name: 'Home', path: '/' },
+                    { name: 'Search', path: PAGE_META.search.path },
+                ])}
+            />
             <PageHeader
                 title="Search Results"
                 subtitle={`Showing results for "${query}"`}

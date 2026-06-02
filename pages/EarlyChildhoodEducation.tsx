@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { Clock, Globe, DollarSign, TrendingUp, BookOpen, Briefcase, Award, GraduationCap, Calendar, CheckCircle } from 'lucide-react';
 import ProgramPageLayout, { ProgramBenefit, ProgramStat } from '../components/ProgramPageLayout';
+import SEO from '../components/SEO';
+import { buildCourseJsonLd, buildBreadcrumbJsonLd } from '../components/seo-data';
 
 // ─── Icon helper for bilingual ────────────────────────────────────────────────
 const MessageCircleIcon: React.ElementType = (props: any) => (
@@ -65,6 +67,26 @@ const EarlyChildhoodEducation: React.FC = () => {
     useEffect(() => { window.scrollTo(0, 0); }, []);
 
     return (
+        <>
+            <SEO
+                title="Early Childhood Education Associate Degree"
+                description="Earn an Associate Degree in Early Childhood Education at Urban College of Boston. EEC-aligned, multilingual instruction in English, Spanish, and Mandarin. Transferable credits."
+                canonicalPath="/programs/early-childhood-education"
+                jsonLd={[
+                    buildCourseJsonLd({
+                        name: "Early Childhood Education Associate Degree",
+                        description: "Earn an Associate Degree in Early Childhood Education at Urban College of Boston. EEC-aligned, multilingual instruction in English, Spanish, and Mandarin. Transferable credits.",
+                        path: '/programs/early-childhood-education',
+                        credentialCategory: 'degree',
+                        educationLevel: 'Associate',
+                    }),
+                    buildBreadcrumbJsonLd([
+                        { name: 'Home', path: '/' },
+                        { name: 'Programs', path: '/programs' },
+                        { name: "Early Childhood Education Associate Degree", path: '/programs/early-childhood-education' },
+                    ]),
+                ]}
+            />
         <ProgramPageLayout
             badge="Early Childhood Education Associate"
             title={<>Inspire Young Minds & <span style={{ color: '#E68325' }}>Build Your Future</span></>}
@@ -144,6 +166,7 @@ const EarlyChildhoodEducation: React.FC = () => {
             ctaRequirements={['High School Diploma / GED / HiSET', 'Photo ID', 'Online Application']}
             programName="Early Childhood Education"
         />
+        </>
     );
 };
 

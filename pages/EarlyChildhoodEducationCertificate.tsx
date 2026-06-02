@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { BookOpen, Clock, Globe, Briefcase, CheckCircle, TrendingUp, Users, DollarSign, Calendar, Award, GraduationCap, ArrowRight } from 'lucide-react';
 import ProgramPageLayout, { ProgramBenefit, ProgramStat } from '../components/ProgramPageLayout';
+import SEO from '../components/SEO';
+import { buildCourseJsonLd, buildBreadcrumbJsonLd } from '../components/seo-data';
 
 // ─── Icon helper for bilingual ────────────────────────────────────────────────
 const MessageCircleIcon: React.ElementType = (props: any) => (
@@ -64,6 +66,25 @@ const EarlyChildhoodEducationCertificate: React.FC = () => {
     useEffect(() => { window.scrollTo(0, 0); }, []);
 
     return (
+        <>
+            <SEO
+                title="Foundations in Early Childhood Education Certificate"
+                description="Start your early childhood education career with a Foundations Certificate from Urban College of Boston. Bilingual English/Spanish options, EEC-aligned curriculum."
+                canonicalPath="/programs/early-childhood-education-certificate"
+                jsonLd={[
+                    buildCourseJsonLd({
+                        name: "Foundations in Early Childhood Education Certificate",
+                        description: "Start your early childhood education career with a Foundations Certificate from Urban College of Boston. Bilingual English/Spanish options, EEC-aligned curriculum.",
+                        path: '/programs/early-childhood-education-certificate',
+                        credentialCategory: 'certificate',
+                    }),
+                    buildBreadcrumbJsonLd([
+                        { name: 'Home', path: '/' },
+                        { name: 'Programs', path: '/programs' },
+                        { name: "Foundations in Early Childhood Education Certificate", path: '/programs/early-childhood-education-certificate' },
+                    ]),
+                ]}
+            />
         <ProgramPageLayout
             badge="Early Childhood Education Certificate"
             title={<>Shape Young Minds & <span style={{ color: '#E68325' }}>Launch Your Career</span></>}
@@ -142,6 +163,7 @@ const EarlyChildhoodEducationCertificate: React.FC = () => {
             ctaRequirements={['High School Diploma / GED / HiSET', 'Photo ID', 'Online Application']}
             programName="ECE Certificate"
         />
+        </>
     );
 };
 

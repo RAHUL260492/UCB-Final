@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import PageHeader from '../components/PageHeader';
 import ScrollAnimation from '../components/ScrollAnimation';
+import SEO from '../components/SEO';
+import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 import { 
     Cpu, Mail, ExternalLink, Download, Key, Laptop,
     Smartphone, Phone, HelpCircle, FileText
@@ -52,6 +54,15 @@ const TechnologyAccountGuide: React.FC = () => {
 
     return (
         <div className="pt-24 lg:pt-32 bg-gray-50/30">
+            <SEO
+                title={PAGE_META.technology.title}
+                description={PAGE_META.technology.description}
+                canonicalPath={PAGE_META.technology.path}
+                jsonLd={buildBreadcrumbJsonLd([
+                    { name: 'Home', path: '/' },
+                    { name: 'Technology Guide', path: PAGE_META.technology.path },
+                ])}
+            />
             <PageHeader
                 title="Technology Account Guide"
                 subtitle="Access your student email, course portal, LMS software, and technology support resources."
