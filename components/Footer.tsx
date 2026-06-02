@@ -97,10 +97,20 @@ const Footer: React.FC = () => {
             <h4 className="font-display font-bold text-lg text-white mb-4">Programs</h4>
             <ul className="space-y-3">
               {[
+                { name: 'Early Childhood Education', path: '/programs/early-childhood-education' },
+                { name: 'Human Services Administration', path: '/programs/human-services-administration' },
+                { name: 'General Studies', path: '/programs/general-studies-associate' },
                 { name: 'Business Certificate', path: '/programs/business-certificate' },
-                { name: 'Early Childhood Ed', path: '/programs/early-childhood-education' },
-                { name: 'Human Services', path: '/programs/human-services-administration' },
-                { name: 'General Studies', path: '/programs/general-studies-associate' }
+                { name: 'Case Management Certificate', path: '/programs/case-management' },
+                { name: "Children's Behavioral Health Certificate", path: '/programs/childrens-behavioral-health-certificate' },
+                { name: 'Digital Marketing Certificate', path: '/programs/digital-marketing-certificate' },
+                { name: 'Elder Care Certificate', path: '/programs/elder-care' },
+                { name: 'Early Childhood Education Certificate', path: '/programs/early-childhood-education-certificate' },
+                { name: 'General Studies Certificate', path: '/programs/general-studies-certificate' },
+                { name: 'Human Services Certificate', path: '/programs/human-services-certificate' },
+                { name: 'Paraprofessional Educator Certificate', path: '/programs/paraprofessional-educator-certificate' },
+                { name: 'Project Management Certificate', path: '/programs/project-management-certificate' },
+                { name: 'All Programs', path: '/programs' }
               ].map((item) => (
                 <li key={item.name}>
                   <Link to={item.path} className="text-blue-100 hover:text-ucb-orange transition-colors flex items-center group">
