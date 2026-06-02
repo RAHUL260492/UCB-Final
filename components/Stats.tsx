@@ -2,8 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import { GraduationCap, DollarSign, Globe, TrendingUp } from 'lucide-react';
 
 const STATS = [
-  { id: '1', value: 0, suffix: '', label: 'Graduate Debt-Free', prefix: '', display: 'Coming Soon', isComingSoon: true },
-  { id: '2', value: 0, suffix: '', label: 'Avg Out-of-Pocket Cost', prefix: '', display: 'Coming Soon', isComingSoon: true },
+  { id: '1', value: 99, suffix: '%', label: 'Graduate Debt-Free', prefix: '', display: '99%' },
+  { id: '2', value: 11, suffix: '%', label: 'Of Students Have Out-of-Pocket Cost', prefix: '', display: '11%' },
   { id: '3', value: 3, suffix: '', label: 'Languages Offered', prefix: '', display: '3' },
   { id: '4', value: 30, suffix: '+', label: 'Years of Impact', prefix: '', display: '30+' },
 ];
