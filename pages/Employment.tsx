@@ -147,8 +147,10 @@ const Employment: React.FC = () => {
                                 </button>
                             </ScrollAnimation>
                             <ScrollAnimation variant="slide-left" delay="0.1s" className="w-full">
-                                <a 
-                                    href="mailto:hr@urbancollege.edu?subject=Inquiry%20Regarding%20Employment%20Opportunities"
+                                <a
+                                    href="https://urbancollege-28708.app451.sites.451.io/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="w-full bg-ucb-orange text-white px-8 py-4 rounded-2xl font-bold hover:bg-ucb-orange-glow hover:scale-[1.02] active:scale-[0.98] transition-all shadow-md text-center inline-flex justify-center items-center gap-2 min-h-[48px]"
                                 >
                                     Apply Now

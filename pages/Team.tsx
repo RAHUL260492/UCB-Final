@@ -410,7 +410,7 @@ const Team: React.FC = () => {
 
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                         {[
-                            { name: "Apply Now (Free)", path: "/admissions" as const, type: "link" as const },
+                            { name: "Apply Now (Free)", href: "https://urbancollege-28708.app451.sites.451.io/", type: "external" as const },
                             { name: "Request Info", type: "rfi" as const },
                             { name: "View Careers", path: "/employment" as const, type: "link" as const },
                             { name: "Contact Us", path: "#" as const, type: "link" as const }
@@ -428,6 +428,19 @@ const Team: React.FC = () => {
                                     >
                                         {btn.name}
                                     </button>
+                                );
+                            }
+                            if (btn.type === "external") {
+                                return (
+                                    <a
+                                        key={idx}
+                                        href={btn.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={className}
+                                    >
+                                        {btn.name}
+                                    </a>
                                 );
                             }
                             return (

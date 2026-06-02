@@ -15,12 +15,14 @@ const Footer: React.FC = () => {
             <p className="text-blue-100 text-sm mt-1">Apply for free or request info to learn more.</p>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-3">
-            <Link
-              to="/admissions"
+            <a
+              href="https://urbancollege-28708.app451.sites.451.io/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-ucb-orange hover:bg-ucb-orange-glow text-white font-bold py-2.5 px-5 rounded-full text-xs uppercase tracking-wider transition-colors min-h-[44px] inline-flex items-center justify-center"
             >
               Apply Now
-            </Link>
+            </a>
             <button
               onClick={() => window.dispatchEvent(new CustomEvent('open-rfi-sidebar'))}
               className="border-2 border-white/60 hover:bg-white hover:text-ucb-blue text-white font-bold py-2.5 px-5 rounded-full text-xs uppercase tracking-wider transition-colors min-h-[44px] inline-flex items-center justify-center cursor-pointer"

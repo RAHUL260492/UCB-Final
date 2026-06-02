@@ -194,9 +194,9 @@ const Mission: React.FC = () => {
                                 Discover how our supportive community, flexible online schedule, and multilingual programs can help you reach your goals.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                                <Link to="/admissions" className="inline-flex justify-center items-center bg-ucb-orange hover:bg-ucb-orange-glow text-white font-bold py-3 px-6 rounded-full text-xs uppercase tracking-wider transition-colors shadow-md min-h-[44px]">
+                                <a href="https://urbancollege-28708.app451.sites.451.io/" target="_blank" rel="noopener noreferrer" className="inline-flex justify-center items-center bg-ucb-orange hover:bg-ucb-orange-glow text-white font-bold py-3 px-6 rounded-full text-xs uppercase tracking-wider transition-colors shadow-md min-h-[44px]">
                                     Apply Now (Free) <ArrowRight className="w-4 h-4 ml-2" />
-                                </Link>
+                                </a>
                                 <Link to="/programs" className="inline-flex justify-center items-center bg-white hover:bg-gray-100 text-ucb-blue font-bold py-3 px-6 rounded-full text-xs uppercase tracking-wider transition-colors shadow-md min-h-[44px]">
                                     Explore Programs
                                 </Link>

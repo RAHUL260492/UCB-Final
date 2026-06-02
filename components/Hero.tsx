@@ -199,9 +199,9 @@ const Hero: React.FC = () => {
               </span>
               <div className="absolute inset-0 bg-ucb-blue-glow transform -translate-x-full group-hover:translate-x-0 transition-transform duration-400 ease-out"></div>
             </Link>
-            <Link to="/admissions" className="px-6 py-3 border-2 border-ucb-blue text-ucb-blue font-bold text-sm bg-transparent hover:bg-ucb-blue/5 transition-all duration-300 hover:-translate-y-0.5 min-h-[44px] inline-flex items-center justify-center">
+            <a href="https://urbancollege-28708.app451.sites.451.io/" target="_blank" rel="noopener noreferrer" className="px-6 py-3 border-2 border-ucb-blue text-ucb-blue font-bold text-sm bg-transparent hover:bg-ucb-blue/5 transition-all duration-300 hover:-translate-y-0.5 min-h-[44px] inline-flex items-center justify-center">
               Apply Free
-            </Link>
+            </a>
           </div>
         </div>
 

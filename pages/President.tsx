@@ -414,12 +414,14 @@ const President: React.FC = () => {
                                 >
                                     Explore Programs <ArrowRight className="w-4 h-4 ml-2" />
                                 </Link>
-                                <Link 
-                                    to="/admissions" 
+                                <a
+                                    href="https://urbancollege-28708.app451.sites.451.io/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="bg-ucb-orange text-white hover:bg-ucb-orange-glow font-bold py-3 px-8 rounded-full text-xs uppercase tracking-wider transition-colors shadow-md min-h-[44px] flex items-center"
                                 >
                                     Apply Now - Free Application
-                                </Link>
+                                </a>
                                 <button
                                     onClick={() => window.dispatchEvent(new CustomEvent('open-rfi-sidebar'))}
                                     className="border-2 border-white/60 hover:border-white hover:bg-white/10 text-white font-bold py-3 px-8 rounded-full text-xs uppercase tracking-wider transition-all min-h-[44px] flex items-center cursor-pointer"

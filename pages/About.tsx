@@ -396,9 +396,9 @@ const About: React.FC = () => {
                                 Whether you're looking to advance your career, explore a new path, or start your college journey—we're here to help you succeed.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-3">
-                                <Link to="/admissions" className="inline-flex justify-center items-center bg-ucb-orange hover:bg-ucb-orange-glow text-white font-bold py-2.5 px-6 rounded-full text-xs uppercase tracking-wider transition-colors min-h-[44px]">
+                                <a href="https://urbancollege-28708.app451.sites.451.io/" target="_blank" rel="noopener noreferrer" className="inline-flex justify-center items-center bg-ucb-orange hover:bg-ucb-orange-glow text-white font-bold py-2.5 px-6 rounded-full text-xs uppercase tracking-wider transition-colors min-h-[44px]">
                                     Apply Now (Free) <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
-                                </Link>
+                                </a>
                                 <Link to="/programs" className="inline-flex justify-center items-center bg-white hover:bg-gray-100 text-ucb-blue font-bold py-2.5 px-6 rounded-full text-xs uppercase tracking-wider transition-colors min-h-[44px]">
                                     Explore Programs
                                 </Link>

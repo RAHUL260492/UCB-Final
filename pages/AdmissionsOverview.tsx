@@ -89,12 +89,14 @@ const AdmissionsOverview: React.FC = () => {
                             Our application is completely free and takes only 15 minutes!
                         </p>
                     </div>
-                    <button
-                        onClick={() => window.dispatchEvent(new CustomEvent('open-rfi-sidebar'))}
+                    <a
+                        href="https://urbancollege-28708.app451.sites.451.io/"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="bg-ucb-orange hover:bg-ucb-orange-glow text-white font-bold py-2.5 px-6 rounded-full text-xs uppercase tracking-wider transition-all shadow-md min-h-[44px] flex items-center cursor-pointer"
                     >
                         Apply Now - Free <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
-                    </button>
+                    </a>
                 </div>
             </section>
 
@@ -504,12 +506,14 @@ const AdmissionsOverview: React.FC = () => {
                                 Your journey to a better career starts today. Apply now—it's free, fast, and your first step toward a brighter, affordable education and career future.
                             </p>
                             <div className="pt-4 flex flex-wrap gap-4 justify-center lg:justify-start">
-                                <button
-                                    onClick={() => window.dispatchEvent(new CustomEvent('open-rfi-sidebar'))}
+                                <a
+                                    href="https://urbancollege-28708.app451.sites.451.io/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="bg-ucb-orange hover:bg-ucb-orange-glow text-white font-bold py-3 px-8 rounded-full text-xs uppercase tracking-wider transition-colors shadow-md min-h-[44px] flex items-center cursor-pointer"
                                 >
                                     Apply Now - Free Application
-                                </button>
+                                </a>
                                 <Link 
                                     to="/programs" 
                                     className="bg-white text-ucb-blue hover:bg-ucb-orange hover:text-white font-bold py-3 px-8 rounded-full text-xs uppercase tracking-wider transition-all shadow-md min-h-[44px] flex items-center"

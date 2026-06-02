@@ -174,9 +174,9 @@ const BlogPost: React.FC = () => {
                             <div className="not-prose mt-12 mb-8 bg-blue-50 border border-ucb-blue/10 rounded-3xl p-8 shadow-sm flex flex-col items-center text-center">
                                 <h4 className="text-2xl font-display font-bold text-ucb-blue mb-3">Ready to start your own story?</h4>
                                 <p className="text-gray-600 mb-6 max-w-md">Join a community dedicated to your success and discover how an Urban College degree can change your trajectory.</p>
-                                <Link to="/admissions" className="bg-ucb-orange text-white px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform shadow-lg">
+                                <a href="https://urbancollege-28708.app451.sites.451.io/" target="_blank" rel="noopener noreferrer" className="bg-ucb-orange text-white px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform shadow-lg">
                                     Apply Today
-                                </Link>
+                                </a>
                             </div>
                         </>
                     )}

@@ -519,9 +519,9 @@ const AcademicPrograms: React.FC = () => {
                     </div>
 
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
-                        <Link to="/admissions" className="bg-white text-ucb-orange hover:bg-ucb-blue hover:text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all text-sm min-h-[44px] inline-flex items-center justify-center">
+                        <a href="https://urbancollege-28708.app451.sites.451.io/" target="_blank" rel="noopener noreferrer" className="bg-white text-ucb-orange hover:bg-ucb-blue hover:text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all text-sm min-h-[44px] inline-flex items-center justify-center">
                             Apply Online Now
-                        </Link>
+                        </a>
                         <a href="/admissions#advisor-meeting" className="bg-transparent text-white border-2 border-white hover:bg-white hover:text-ucb-orange font-bold py-3 px-8 rounded-full transition-all text-sm min-h-[44px] inline-flex items-center justify-center">
                             Schedule Advisor Meeting
                         </a>
