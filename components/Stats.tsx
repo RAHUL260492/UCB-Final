@@ -36,7 +36,7 @@ const StatItem: React.FC<{ stat: typeof STATS[0]; icon: React.FC<any>; idx: numb
 
   return (
     <div
-      className="flex items-center gap-3 px-6 py-4 group hover:bg-white/8 transition-all duration-300 cursor-default relative border-b border-white/15 lg:border-b-0 lg:border-r lg:border-white/15"
+      className="flex items-center gap-3 min-w-0 px-4 lg:px-5 xl:px-6 py-4 group hover:bg-white/8 transition-all duration-300 cursor-default relative border-b border-white/15 lg:border-b-0 lg:border-r lg:border-white/15"
       style={{
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? 'translateY(0)' : 'translateY(16px)',
@@ -47,11 +47,11 @@ const StatItem: React.FC<{ stat: typeof STATS[0]; icon: React.FC<any>; idx: numb
       <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0 group-hover:bg-white/20 group-hover:scale-110 transition-all duration-300">
         <Icon className="w-4 h-4 text-ucb-gold" />
       </div>
-      <div>
+      <div className="min-w-0">
         <div className={`font-display font-black text-ucb-gold leading-none tabular-nums ${stat.isComingSoon ? 'text-xs md:text-sm uppercase tracking-wider' : 'text-xl md:text-2xl'}`}>
           {display}
         </div>
-        <div className="text-white/70 tracking-wider uppercase text-[10px] font-bold mt-0.5 whitespace-nowrap">
+        <div className="text-white/70 tracking-wider uppercase text-[10px] font-bold mt-0.5 leading-tight">
           {stat.label}
         </div>
       </div>
