@@ -39,7 +39,7 @@ const benefits: ProgramBenefit[] = [
     { title: "Financial Aid", desc: "Personalized aid plans & options", icon: DollarSign },
     { title: "Ready for Transfer", desc: "Credits transfer to a 4-year degree", icon: TrendingUp },
     { title: "Wide Variety of Careers", desc: "Your options are wide open", icon: Briefcase },
-    { title: "Bilingual Options", desc: "ESL support available", icon: MessageCircleIcon },
+    { title: "ESL Support", desc: "English language support available", icon: MessageCircleIcon },
 ];
 
 const stats: ProgramStat[] = [
@@ -49,7 +49,7 @@ const stats: ProgramStat[] = [
     { label: 'Cost', value: '$317', icon: DollarSign, sub: 'Per Credit' },
     { label: 'Start', value: 'Rolling', icon: Calendar, sub: 'Start Date' },
     { label: 'Aid', value: 'Yes', icon: GraduationCap, sub: 'Financial Aid' },
-    { label: 'Language', value: 'Bilingual', icon: Globe, sub: 'English & Spanish' },
+    { label: 'Language', value: 'English', icon: Globe, sub: 'English only' },
     { label: 'Outcome', value: 'Job Ready', icon: CheckCircle, sub: 'Career Focused' },
 ];
 

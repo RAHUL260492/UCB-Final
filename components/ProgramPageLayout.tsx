@@ -553,7 +553,7 @@ const ProgramPageLayout: React.FC<ProgramLayoutProps> = ({
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mb-4 md:mb-6">
                         {[
                             { title: "Flexible & Affordable", desc: "Study online on your schedule. Most students graduate debt-free.", icon: Clock, color: "from-ucb-blue to-ucb-blue-glow" },
-                            { title: "Multilingual Support", desc: "Courses in English and Spanish, with ESL pathways.", icon: Globe, color: "from-ucb-green to-ucb-green-glow" },
+                            { title: "Multilingual Support", desc: "Courses in English, Spanish, and Mandarin, with ESL pathways.", icon: Globe, color: "from-ucb-green to-ucb-green-glow" },
                             { title: "Career-Focused", desc: "Gain job-ready skills. Apply what you learn immediately.", icon: Briefcase, color: "from-ucb-orange to-ucb-orange-glow" },
                             { title: "Student-Centered", desc: "1-on-1 advising, free tutoring, career services, and counseling.", icon: Users, color: "from-ucb-teal to-[#1C8A7C]" }
                         ].map((item, i) => (

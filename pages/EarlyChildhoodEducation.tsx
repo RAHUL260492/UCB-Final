@@ -35,7 +35,7 @@ const benefits: ProgramBenefit[] = [
     { title: "Fast Track", desc: "Finish in as little as one year (only 18 credits!)", icon: Clock },
     { title: "100% Online", desc: "Learn on a schedule that fits into your busy life", icon: Globe },
     { title: "Financial Aid", desc: "Personalized aid plans & options", icon: DollarSign },
-    { title: "Bilingual Options", desc: "Study in English and/or Spanish", icon: MessageCircleIcon },
+    { title: "Learn in Your Language", desc: "Courses in English, Spanish, and Mandarin", icon: MessageCircleIcon },
     { title: "Transfer Credits", desc: "Credits transfer toward an associate or bachelor's degree", icon: TrendingUp },
     { title: "ESL Support", desc: "Tailored to each student's needs", icon: BookOpen },
     { title: "Career Growth", desc: "Build skills for career advancement and financial security", icon: Briefcase },
@@ -48,14 +48,14 @@ const stats: ProgramStat[] = [
     { label: 'Cost', value: '$317', icon: DollarSign, sub: 'Per Credit' },
     { label: 'Start', value: 'Rolling', icon: Calendar, sub: 'Start Date' },
     { label: 'Aid', value: 'Yes', icon: GraduationCap, sub: 'Financial Aid' },
-    { label: 'Language', value: 'Bilingual', icon: Globe, sub: 'English & Spanish' },
+    { label: 'Language', value: 'Multilingual', icon: Globe, sub: 'EN, ES, Mandarin' },
     { label: 'Outcome', value: 'Job Ready', icon: CheckCircle, sub: 'Career Focused' },
 ];
 
 const faqs = [
     { q: "What is the duration of the program?", a: "As little as one year." },
     { q: "Is it fully online?", a: "Yes, entirely online with various formats." },
-    { q: "What languages?", a: "English and Spanish." },
+    { q: "What languages?", a: "English, Spanish, and Mandarin." },
     { q: "Accredited?", a: "Yes, a fully accredited non-profit college and Hispanic-Serving Institution." },
     { q: "Will it help my career?", a: "Yes, for new jobs, promotions, or further studies." },
     { q: "Financial aid?", a: "Yes, federal, state, and institutional aid options are available for eligible students." },

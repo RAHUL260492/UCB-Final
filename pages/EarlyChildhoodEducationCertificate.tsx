@@ -69,12 +69,12 @@ const EarlyChildhoodEducationCertificate: React.FC = () => {
         <>
             <SEO
                 title="Foundations in Early Childhood Education Certificate"
-                description="Start your early childhood education career with a Foundations Certificate from Urban College of Boston. Bilingual English/Spanish options, EEC-aligned curriculum."
+                description="Start your early childhood education career with a Foundations Certificate from Urban College of Boston. Multilingual English, Spanish & Mandarin options, EEC-aligned curriculum."
                 canonicalPath="/programs/early-childhood-education-certificate"
                 jsonLd={[
                     buildCourseJsonLd({
                         name: "Foundations in Early Childhood Education Certificate",
-                        description: "Start your early childhood education career with a Foundations Certificate from Urban College of Boston. Bilingual English/Spanish options, EEC-aligned curriculum.",
+                        description: "Start your early childhood education career with a Foundations Certificate from Urban College of Boston. Multilingual English, Spanish & Mandarin options, EEC-aligned curriculum.",
                         path: '/programs/early-childhood-education-certificate',
                         credentialCategory: 'certificate',
                     }),

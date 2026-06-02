@@ -55,7 +55,7 @@ const Espanol: React.FC = () => {
         { name: "Early Childhood Education Associate Degree", path: "/programs/early-childhood-education", type: "Grado Asociado" },
         { name: "Human Services Associate Degree", path: "/programs/human-services-administration", type: "Grado Asociado" },
         { name: "Business Certificate", path: "/programs/business-certificate", type: "Certificado" },
-        { name: "Case Management Certificate", path: "/programs/case-management", type: "Certificado" },
+        { name: "Elder Care Certificate", path: "/programs/elder-care", type: "Certificado" },
         { name: "Children’s Behavioral Health Certificate", path: "/programs/childrens-behavioral-health-certificate", type: "Certificado" },
         { name: "Digital Marketing Certificate", path: "/programs/digital-marketing-certificate", type: "Certificado" },
         { name: "Foundations of Early Childhood Education Certificate", path: "/programs/early-childhood-education-certificate", type: "Certificado" },
