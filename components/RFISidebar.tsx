@@ -39,6 +39,7 @@ const RFISidebar: React.FC = () => {
     const path = pathname.toLowerCase();
     
     if (path.includes('business-certificate')) return 'urbancollege.forms.23671';
+    if (path.includes('case-management')) return 'urbancollege.forms.27760';
     if (path.includes('childrens-behavioral-health-certificate')) return 'urbancollege.forms.23674';
     if (path.includes('mandarin') || path.includes('zh') || path.includes('chinese')) return 'urbancollege.forms.26517';
     if (path.includes('digital-marketing-certificate')) return 'urbancollege.forms.23672';
