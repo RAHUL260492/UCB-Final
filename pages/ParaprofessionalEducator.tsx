@@ -60,9 +60,9 @@ const faqs = [
     { q: "How long does the program take?", a: "In as little as one year! Complete your 21 credits full-time, or take it at your own pace—the program fits into your busy life." },
     { q: "Do I need prior experience in education?", a: "No! No prior experience is required. The program covers all foundational knowledge—whether you're starting fresh or transitioning from another career, you'll graduate classroom-ready." },
     { q: "Will I learn special education skills?", a: "Yes! Special education is one of the most in-demand areas in education, and this program gives you foundational skills to work with students who have diverse learning needs. You'll stand out in the job market." },
-    { q: "Can I study in Spanish?", a: "Absolutely! Courses are available in English and Spanish—choose the language that works for you. ESL support is also available and tailored to each student." },
+    { q: "Can I study in Spanish?", a: "Yes! We offer courses in both English and Spanish." },
     { q: "What's the job outlook for paraprofessional educators?", a: "Excellent! Massachusetts schools are actively seeking qualified paraprofessional educators, especially those with special education training. Job growth is 7%—faster than average—and salaries are among the highest in the nation ($55,547/year average)." },
-    { q: "Am I eligible for financial aid?", a: "Yes! Most students are eligible for financial aid, scholarships, and grants. Contact our financial aid office at (617) 449-7070 for personalized guidance. Our financial aid advisors work one-on-one with students to find grants and scholarships." }
+    { q: "Am I eligible for financial aid?", a: "Most students are eligible for financial aid. Contact our financial aid office at (617) 449-7070-our team works with you one-on-one to identify grants, scholarships, and funding options that fit your situation and make your education as affordable as possible." }
 ];
 
 

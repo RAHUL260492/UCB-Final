@@ -150,7 +150,7 @@ const faqs = [
     { q: "Can I study in a language other than English?", a: "Absolutely! Many programs offer courses in English, Spanish, and Mandarin. ESL support is available for all students." },
     { q: "Do certificate credits transfer to an associate degree?", a: "Yes! Every certificate credit transfers directly into the corresponding associate degree at Urban College. You can continue your education whenever you're ready." },
     { q: "Can I transfer to a bachelor's program?", a: "Yes! Our transfer agreements with partner colleges make it easy to continue toward a bachelor's degree. Check out our College Transfer Pathways page for details." },
-    { q: "Am I eligible for financial aid?", a: "Yes! Most degree-seeking students are eligible for financial aid, scholarships, and grants. Contact our financial aid office at (617) 449-7070 for personalized guidance. Our financial aid advisors work with each student to find pathways toward affordable education." }
+    { q: "Am I eligible for financial aid?", a: "Most students are eligible for financial aid. Contact our financial aid office at (617) 449-7070-our team works with you one-on-one to identify grants, scholarships, and funding options that fit your situation and make your education as affordable as possible." }
 ];
 
 const AcademicPrograms: React.FC = () => {

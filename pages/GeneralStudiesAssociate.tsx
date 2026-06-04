@@ -56,7 +56,7 @@ const stats: ProgramStat[] = [
 const faqs = [
     { q: "Can I transfer my credits?", a: "Yes! The program is designed to be transferable to 4-year colleges and universities." },
     { q: "How much does it cost?", a: "$11,100 for the full degree. However, most students qualify for financial aid to offset tuition costs." },
-    { q: "Am I eligible for financial aid?", a: "Yes! Most of our students receive financial aid that covers the full cost of tuition." },
+    { q: "Am I eligible for financial aid?", a: "The General Studies programs are not eligible for federal financial aid, but our team helps you keep costs low-and most students graduate debt-free." },
     { q: "What do I need to apply?", a: "You'll need a copy of your high school diploma, GED, or HISET, a photo ID, and a completed application." },
 ];
 

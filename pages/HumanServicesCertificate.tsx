@@ -58,8 +58,8 @@ const faqs = [
     { q: "How long does the program take?", a: "In as little as 9 months! Complete your 21 credits full-time, or take it at your own pace—the program fits into your busy life." },
     { q: "Do I need prior experience in human services?", a: "No! No prior experience is required. The program covers all foundational knowledge. Whether you're starting fresh or advancing in your current role, you'll get the skills you need." },
     { q: "Will my credits transfer to an associate's degree?", a: "Yes! All 21 credits transfer directly into the Human Services Administration Associate Degree at Urban College. Continue your education whenever you're ready." },
-    { q: "Can I study in Spanish?", a: "Yes! Courses are available in English and Spanish—choose the language that works for you. ESL support is also available and tailored to each student." },
-    { q: "Am I eligible for financial aid?", a: "Yes! Most students are eligible for financial aid, scholarships, and grants. Contact our financial aid office at (617) 449-7070 for personalized guidance. Our financial aid advisors work with each student to minimize out-of-pocket costs." }
+    { q: "Can I study in Spanish?", a: "Yes! We offer courses in both English and Spanish." },
+    { q: "Am I eligible for financial aid?", a: "Most students are eligible for financial aid. Contact our financial aid office at (617) 449-7070-our team works with you one-on-one to identify grants, scholarships, and funding options that fit your situation and make your education as affordable as possible." }
 ];
 
 // ─── Component ────────────────────────────────────────────────────────────────

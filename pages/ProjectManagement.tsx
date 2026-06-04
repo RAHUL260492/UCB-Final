@@ -58,8 +58,8 @@ const faqs = [
     { q: "How long does the program take?", a: "In as little as one year! Complete your 18 credits full-time, or take it at your own pace—the program fits into your busy life." },
     { q: "Do I need prior project management experience?", a: "No! No prior experience is required. The program covers all foundational knowledge—whether you're starting fresh or looking to formalize your skills, you'll graduate ready to succeed." },
     { q: "What industries can I work in with this certificate?", a: "Project management skills are needed across every industry—healthcare, technology, construction, finance, nonprofit, government, and more. This certificate opens doors to a wide variety of career paths." },
-    { q: "Can I study in Spanish?", a: "Yes! Courses are available in English and Spanish—choose the language that works for you. ESL support is also available." },
-    { q: "Am I eligible for financial aid?", a: "Yes! Most students are eligible for financial aid, scholarships, and grants. Contact our financial aid office at (617) 449-7070 for personalized guidance. Our financial aid advisors work one-on-one with students to find grants and scholarships." }
+    { q: "Can I study in Spanish?", a: "Yes! We offer courses in both English and Spanish." },
+    { q: "Am I eligible for financial aid?", a: "Most students are eligible for financial aid. Contact our financial aid office at (617) 449-7070-our team works with you one-on-one to identify grants, scholarships, and funding options that fit your situation and make your education as affordable as possible." }
 ];
 
 // ─── Component ────────────────────────────────────────────────────────────────

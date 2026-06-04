@@ -60,9 +60,9 @@ const faqs = [
     { q: "Is the program entirely online?", a: "Yes! The program is 100% online with both synchronous and asynchronous options. Learn on your schedule—early mornings, late nights, or weekends." },
     { q: "Will I get hands-on experience?", a: "Yes! The program includes internship placements through our network of human service agencies, childcare programs, mental health sites, and other organizations. You'll graduate with real experience." },
     { q: "What is the LSWA and can I apply for it?", a: "The Licensed Social Work Associate (LSWA) is a Massachusetts credential that demonstrates professional qualifications in social work. With your Human Services Associate Degree, you can apply for this credential and enhance your career opportunities." },
-    { q: "Can I study in Spanish?", a: "Yes! Courses are available in English and Spanish. ESL support is also available and tailored to each student's needs." },
+    { q: "Can I study in Spanish?", a: "Yes! We offer courses in both English and Spanish." },
     { q: "Can I continue toward a bachelor's degree?", a: "Absolutely! Our transfer agreements with partner colleges make it easy to continue toward a Bachelor of Social Work (BSW)—the gold standard credential in the field." },
-    { q: "Am I eligible for financial aid?", a: "Yes! Most students are eligible for financial aid, scholarships, and grants. Contact our financial aid office at (617) 449-7070 for personalized guidance. Our advisors help you find pathways to minimize out-of-pocket costs." }
+    { q: "Am I eligible for financial aid?", a: "Most students are eligible for financial aid. Contact our financial aid office at (617) 449-7070-our team works with you one-on-one to identify grants, scholarships, and funding options that fit your situation and make your education as affordable as possible." }
 ];
 
 // ─── Component ────────────────────────────────────────────────────────────────

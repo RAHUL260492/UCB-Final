@@ -101,7 +101,7 @@ const faqs = [
     { q: "How long does the program take?", a: "In as little as one year! Complete your 21 credits full-time, or take it at your own pace—the program fits into your busy life." },
     { q: "What is the Community Health Worker (CHW) certification?", a: "Urban College is a Board-Certified CHW Education and Training Site. Students who complete our training need only 2,000 hours of work experience instead of 4,000 to apply for Massachusetts CHW certification!" },
     { q: "Do I need prior experience?", a: "No! No prior experience is required. If you do have experience, we offer credit for prior learning!" },
-    { q: "Am I eligible for financial aid?", a: "Yes! Most students are eligible for financial aid. Contact our financial aid office at (617) 449-7070. Our financial aid team will work with you one-on-one to identify grants, scholarships, and funding options that fit your situation, making your education as affordable as possible." },
+    { q: "Am I eligible for financial aid?", a: "Most students are eligible for financial aid. Contact our financial aid office at (617) 449-7070-our team works with you one-on-one to identify grants, scholarships, and funding options that fit your situation and make your education as affordable as possible." },
 ];
 
 const ctaRequirements = ['High School Diploma / GED / HiSET', 'Photo ID', 'Online Application'];

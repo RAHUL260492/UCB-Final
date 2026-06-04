@@ -56,7 +56,7 @@ const faqs = [
     { q: "Is the program entirely online?", a: "Yes! 100% online with synchronous and asynchronous options." },
     { q: "How long does the program take?", a: "In as little as one year! Complete 21 credits at your own pace." },
     { q: "Can I transfer my credits?", a: "Yes! The program is designed to be transferable to 4-year colleges." },
-    { q: "Am I eligible for financial aid?", a: "Yes! Most students receive financial aid. Contact our advisors to find options that work for you." },
+    { q: "Am I eligible for financial aid?", a: "The General Studies programs are not eligible for federal financial aid, but our team helps you keep costs low-and most students graduate debt-free." },
 ];
 
 // ─── Component ────────────────────────────────────────────────────────────────

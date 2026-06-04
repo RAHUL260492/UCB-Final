@@ -54,7 +54,7 @@ const faqs = [
     { q: "Do I need prior experience?", a: "No! The program covers all foundational knowledge." },
     { q: "What is RBT® certification?", a: "A nationally recognized credential for providing behavioral therapy to children. Our program prepares you for the exam." },
     { q: "What is CHW certification?", a: "A credential for connecting families with resources. We are a Board-Certified training site, cutting your path to certification in half." },
-    { q: "Am I eligible for financial aid?", a: "Yes! Federal, state, and institutional aid options are available for eligible students." },
+    { q: "Am I eligible for financial aid?", a: "Most students are eligible for financial aid. Contact our financial aid office at (617) 449-7070-our team works with you one-on-one to identify grants, scholarships, and funding options that fit your situation and make your education as affordable as possible." },
 ];
 
 const ChildrensBehavioralHealth: React.FC = () => {

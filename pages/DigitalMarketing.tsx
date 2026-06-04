@@ -53,8 +53,8 @@ const stats: ProgramStat[] = [
 const faqs = [
     { q: "How long does the program take?", a: "In as little as one year! Complete your 18 credits full-time in two semesters or part-time at your own pace." },
     { q: "Do I need prior marketing experience?", a: "No! This program is designed for beginners. We provide the foundational skills." },
-    { q: "Can I study in Spanish?", a: "Yes! We offer the program in both English and Spanish." },
-    { q: "Am I eligible for financial aid?", a: "Yes! Most Urban College students receive financial aid, and our advisors work with you to leverage federal, state, and private grants." },
+    { q: "Can I study in Spanish?", a: "Yes! We offer courses in both English and Spanish." },
+    { q: "Am I eligible for financial aid?", a: "Most students are eligible for financial aid. Contact our financial aid office at (617) 449-7070-our team works with you one-on-one to identify grants, scholarships, and funding options that fit your situation and make your education as affordable as possible." },
 ];
 
 // ─── Component ────────────────────────────────────────────────────────────────

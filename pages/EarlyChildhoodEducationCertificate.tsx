@@ -57,7 +57,7 @@ const faqs = [
     { q: "How long does it take?", a: "As little as one year (flexible pace)." },
     { q: "Do I need prior experience?", a: "No prior experience required." },
     { q: "What languages are available?", a: "Native language tracks in Spanish and Mandarin, plus ESL support." },
-    { q: "Am I eligible for financial aid?", a: "Available for most students; contact our team to explore grants and scholarships." },
+    { q: "Am I eligible for financial aid?", a: "Most students are eligible for financial aid. Contact our financial aid office at (617) 449-7070-our team works with you one-on-one to identify grants, scholarships, and funding options that fit your situation and make your education as affordable as possible." },
 ];
 
 // ─── Component ────────────────────────────────────────────────────────────────

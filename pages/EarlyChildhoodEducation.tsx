@@ -58,7 +58,7 @@ const faqs = [
     { q: "What languages?", a: "English, Spanish, and Mandarin." },
     { q: "Accredited?", a: "Yes, a fully accredited non-profit college and Hispanic-Serving Institution." },
     { q: "Will it help my career?", a: "Yes, for new jobs, promotions, or further studies." },
-    { q: "Financial aid?", a: "Yes, federal, state, and institutional aid options are available for eligible students." },
+    { q: "Am I eligible for financial aid?", a: "Most students are eligible for financial aid. Contact our financial aid office at (617) 449-7070-our team works with you one-on-one to identify grants, scholarships, and funding options that fit your situation and make your education as affordable as possible." },
 ];
 
 // ─── Component ────────────────────────────────────────────────────────────────

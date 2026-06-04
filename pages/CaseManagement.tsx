@@ -47,7 +47,7 @@ const faqs = [
     { q: "How long does the program take?", a: "Finish in 9–12 months if you study full-time. Take one or two classes at a time and finish in 18–24 months. You set the pace to fit your life." },
     { q: "Do I need prior experience in social work or case management?", a: "No! No prior experience is needed. We cover all foundational knowledge. Start fresh or advance in your role—you'll build the skills you need." },
     { q: "How is this certificate different from the CCM certification?", a: "This certificate is your first step. The CCM (Certified Case Manager) requires years of experience. Our program gives you 21 credits and skills to get hired now. Gain experience and qualify for CCM certification later." },
-    { q: "Am I eligible for financial aid?", a: "Yes! Most students qualify for financial aid. Contact financial aid at (617) 449-7070. Most students graduate debt-free!" },
+    { q: "Am I eligible for financial aid?", a: "Most students are eligible for financial aid. Contact our financial aid office at (617) 449-7070-our team works with you one-on-one to identify grants, scholarships, and funding options that fit your situation and make your education as affordable as possible." },
     { q: "Is Urban College accredited?", a: "Yes, Urban College is a fully accredited non-profit college and Hispanic-Serving Institution." },
 ];
 

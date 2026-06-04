@@ -608,7 +608,7 @@ const ProgramPageLayout: React.FC<ProgramLayoutProps> = ({
                                 <div className="grid sm:grid-cols-2 gap-x-4 gap-y-3">
                                     {[
                                         "1-on-1 academic advising",
-                                        "Career services & Resume help",
+                                        "Career services & resume help",
                                         "Free tutoring in any subject",
                                         "ESL support for learners",
                                         "Financial aid guidance",
