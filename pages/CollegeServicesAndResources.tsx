@@ -5,7 +5,7 @@ import SEO from '../components/SEO';
 import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 import { 
     GraduationCap, BookOpen, Accessibility, Briefcase, 
-    Laptop, Users, Library, CreditCard, Mail, Phone, ExternalLink, Download 
+    Laptop, Users, Library, CreditCard, Mail, Phone, ExternalLink
 } from 'lucide-react';
 
 const sections = [
@@ -97,7 +97,7 @@ const CollegeServicesAndResources: React.FC = () => {
                         {/* ─── Sticky Sidebar Table of Contents ─── */}
                         <div className="lg:col-span-4 sticky top-28 hidden lg:block bg-gray-50 p-6 rounded-2xl border border-gray-150 shadow-sm">
                             <h3 className="font-display font-bold text-lg text-ucb-blue mb-4 pb-2 border-b border-gray-200">
-                                Handbook Sections
+                                Student Handbook
                             </h3>
                             <nav className="space-y-1">
                                 {sections.map((sec) => {
@@ -123,13 +123,13 @@ const CollegeServicesAndResources: React.FC = () => {
                             {/* Download full handbook PDF */}
                             <div className="mt-8 pt-6 border-t border-gray-200">
                                 <a
-                                    href="/s/2025-2026-URBAN-COLLEGE-OF-BOSTON-STUDENT-HANDBOOK_Final.pdf"
+                                    href="https://catalog.urbancollege.edu/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="w-full flex items-center justify-center gap-2 bg-ucb-orange hover:bg-ucb-orange-glow text-white text-xs font-bold py-3 rounded-xl transition-all shadow shadow-ucb-orange/20 cursor-pointer"
                                 >
-                                    <Download className="w-4 h-4" />
-                                    <span>Download Full Student Handbook</span>
+                                    <ExternalLink className="w-4 h-4" />
+                                    <span>Explore the full student handbook</span>
                                 </a>
                             </div>
                         </div>

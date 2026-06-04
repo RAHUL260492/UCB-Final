@@ -331,7 +331,7 @@ const Workforce: React.FC = () => {
                             </div>
                             <div className="pt-6 mt-6 border-t border-gray-50">
                                 <a href="/programs/elder-care" className="inline-flex items-center gap-1 font-bold text-sm text-ucb-blue hover:text-ucb-orange transition-colors">
-                                    Learn About Elder Care Cert <ChevronRight className="w-4 h-4" />
+                                    Learn About Elder Care Certificate <ChevronRight className="w-4 h-4" />
                                 </a>
                             </div>
                         </ScrollAnimation>
@@ -347,7 +347,7 @@ const Workforce: React.FC = () => {
                                     Prepare for direct certification as a Registered Behavior Technician. Gain core training in behavioral support, crisis intervention, and specialized autism services for schools and health agencies.
                                 </p>
                                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-gray-600 font-semibold pt-2">
-                                    <li className="flex items-center gap-1.5"><Check className="w-4 h-4 text-ucb-blue shrink-0" /> Children's Behavioral Cert</li>
+                                    <li className="flex items-center gap-1.5"><Check className="w-4 h-4 text-ucb-blue shrink-0" /> Children's Behavioral Health Certificate</li>
                                     <li className="flex items-center gap-1.5"><Check className="w-4 h-4 text-ucb-blue shrink-0" /> Behavior Support Skills</li>
                                     <li className="flex items-center gap-1.5"><Check className="w-4 h-4 text-ucb-blue shrink-0" /> Clinical Preparation</li>
                                     <li className="flex items-center gap-1.5"><Check className="w-4 h-4 text-ucb-blue shrink-0" /> Direct Job Placement</li>
@@ -355,7 +355,7 @@ const Workforce: React.FC = () => {
                             </div>
                             <div className="pt-6 mt-6 border-t border-gray-50">
                                 <a href="/programs/childrens-behavioral-health-certificate" className="inline-flex items-center gap-1 font-bold text-sm text-ucb-blue hover:text-ucb-orange transition-colors">
-                                    Learn About Behavioral Cert <ChevronRight className="w-4 h-4" />
+                                    Learn About Children's Behavioral Health Certificate <ChevronRight className="w-4 h-4" />
                                 </a>
                             </div>
                         </ScrollAnimation>

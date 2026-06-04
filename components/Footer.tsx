@@ -71,7 +71,7 @@ const Footer: React.FC = () => {
                 { name: 'Academic Calendar', path: '/policies-disclosures#academic-affairs' },
                 { name: 'Library Services', path: '#' },
                 { name: 'Career Center', path: '#' },
-                { name: 'Student Portal', path: '#' },
+                { name: 'Student Portal', path: 'https://portal.urbancollege.edu/' },
                 { name: 'Urban College Blog', path: '/blog' },
                 { name: 'In the News', path: '/news' },
                 { name: 'Join Our Team', path: '/employment' }

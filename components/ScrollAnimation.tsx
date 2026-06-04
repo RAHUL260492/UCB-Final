@@ -9,6 +9,7 @@ interface ScrollAnimationProps {
     variant?: AnimationVariant;
     duration?: string;
     threshold?: number;
+    id?: string;
 }
 
 const variantStyles: Record<AnimationVariant, { hidden: string; visible: string }> = {
@@ -27,6 +28,7 @@ const ScrollAnimation: React.FC<ScrollAnimationProps> = ({
     variant = 'fade-up',
     duration = '700ms',
     threshold = 0.08,
+    id,
 }) => {
     const [isVisible, setIsVisible] = useState(false);
     const ref = useRef<HTMLDivElement>(null);
@@ -53,6 +55,7 @@ const ScrollAnimation: React.FC<ScrollAnimationProps> = ({
     return (
         <div
             ref={ref}
+            id={id}
             className={`transition-all ease-out transform ${isVisible ? visible : hidden} ${className}`}
             style={{ transitionDuration: duration, transitionDelay: isVisible ? delay : '0s' }}
         >

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { BookOpen, Monitor, Users, Calendar, Clock, MapPin, Mail, Phone, ExternalLink, MessageCircle, ChevronDown, ChevronUp, CheckCircle } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 import SEO from '../components/SEO';
@@ -7,7 +6,7 @@ import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 
 const faqs = [
     { q: "What services does the LRC offer?", a: "The LRC provides tutoring (in-person and remote), academic workshops, technology assistance, and computer/printing access." },
-    { q: "Where is the LRC located?", a: "The LRC is on the second floor of the China Trade Center (2 Boylston Street, Boston). In-person hours are Wednesdays and Thursdays (11:00 AM–6:00 PM)." },
+    { q: "Where is the LRC located?", a: "The LRC is on the second floor of the China Trade Center (2 Boylston Street, Boston). In-person hours are Wednesdays and Thursdays (11:00 AM–6:00 PM). All services are also available virtually." },
     { q: "What subjects does the LRC tutor?", a: "Tutors assist with math, English, writing, professional skills (e.g., resume writing), and technology literacy. Support is available in English, Spanish, and Mandarin." },
     { q: "How do I schedule a tutoring session?", a: "Book appointments via Bookings or by phone (617-449-7070). Remote tutoring is available Monday–Saturday (by appointment)." },
     { q: "Are there group study sessions?", a: "Yes! The LRC can host workshops on time management, research skills, and software tutorials (e.g., Microsoft Office), and Free English conversation classes." },
@@ -84,20 +83,9 @@ const LearningResourceCenter: React.FC = () => {
                                     <GlobeIcon className="w-64 h-64" />
                                 </div>
                                 <div className="relative z-10">
-                                    <h3 className="font-display font-bold text-2xl mb-6">LRC Resources by Language</h3>
-                                    <div className="flex flex-wrap gap-4">
-                                        <Link to="/lrc-english" className="bg-white text-ucb-blue px-6 py-3 rounded-full font-bold hover:bg-ucb-gold hover:text-white transition-colors">
-                                            LRC Resources (English)
-                                        </Link>
-                                        <Link to="/lrc-spanish" className="bg-white text-ucb-blue px-6 py-3 rounded-full font-bold hover:bg-ucb-gold hover:text-white transition-colors">
-                                            Recursos Académicos (Español)
-                                        </Link>
-                                        <Link to="/lrc-mandarin" className="bg-white text-ucb-blue px-6 py-3 rounded-full font-bold hover:bg-ucb-gold hover:text-white transition-colors">
-                                            学术资源 (Mandarin)
-                                        </Link>
-                                    </div>
-                                    <div className="flex flex-wrap gap-6 mt-6">
-                                        <a href="/s/Outlook-Tools-Guide_LRC-July-2023.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-white hover:text-ucb-gold transition-colors font-medium">
+                                    <h3 className="font-display font-bold text-2xl mb-6">Helpful Tools &amp; Resources</h3>
+                                    <div className="flex flex-wrap gap-6">
+                                        <a href="https://static1.squarespace.com/static/5be099a375f9eecbf2753e8d/t/64c97e8314a7761c737c9a21/1690926723483/Outlook+Tools+Guide_LRC%2C+July+2023.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-white hover:text-ucb-gold transition-colors font-medium">
                                             <Monitor className="w-5 h-5" /> Download Microsoft Tools Guide (PDF)
                                         </a>
                                         <a href="/s/self-led-english-practice-2.html" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-white hover:text-ucb-gold transition-colors font-medium">

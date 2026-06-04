@@ -47,9 +47,9 @@ const TechnologyAccountGuide: React.FC = () => {
     ];
 
     const flyers = [
-        { label: "Login Guide Flyer (English)", path: "/s/Urban-College-Systems-Login.pdf" },
-        { label: "Folleto de Inicio de Sesión (Español)", path: "/s/Urban-College-Systems-Login-Spanish.pdf" },
-        { label: "登录帮助台传单 (普通话)", path: "/s/Urban-College-Systems-Login-Mandarin.pdf" }
+        { label: "Login Guide Flyer (English)", path: "https://static1.squarespace.com/static/5be099a375f9eecbf2753e8d/t/69bc4ca27bed6573575a49e1/1773948066126/Urban+College+Systems+Login.pdf" },
+        { label: "Folleto de Inicio de Sesión (Español)", path: "https://static1.squarespace.com/static/5be099a375f9eecbf2753e8d/t/69bc4f4c06ea8f44c7ea6ab0/1773948748601/Urban+College+Systems+Login+-+Spanish.pdf" },
+        { label: "登录帮助台传单 (普通话)", path: "https://static1.squarespace.com/static/5be099a375f9eecbf2753e8d/t/69bc4f9dfb27572d67b98fc0/1773948829687/Urban+College+Systems+Login+-+Mandarin.pdf" }
     ];
 
     return (

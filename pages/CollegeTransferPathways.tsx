@@ -339,9 +339,9 @@ const CollegeTransferPathways: React.FC = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                         <div className="lg:col-span-8 space-y-6">
                             <ScrollAnimation variant="fade-up">
-                                <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs mb-2 block font-display">Bachelor's Degree Alignments</span>
+                                <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs mb-2 block font-display">You're Halfway There! Continue Your Education</span>
                                 <h2 className="text-3xl font-display font-black text-ucb-blue leading-tight">
-                                    Transfer Your Credits Safely to Baccalaureate Partners
+                                    Easily Transfer Your Credits into a Bachelor's Program
                                 </h2>
                                 <p className="text-lg text-gray-600 leading-relaxed font-light mt-4">
                                     Urban College of Boston actively supports graduates exploring available transfer options. Articulation agreements describe when and how a student may transfer credits, outlining academic benchmarks, course mappings, and scholarship eligibility unique to each partner institution.

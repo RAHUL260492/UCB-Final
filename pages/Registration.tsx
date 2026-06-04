@@ -84,7 +84,7 @@ const Registration: React.FC = () => {
             />
             <PageHeader
                 title="Register for Courses"
-                subtitle="Your next chapter starts here — and it fits into your busy life."
+                subtitle="Every class is a step toward your goals! Keep your momentum, on your schedule."
                 breadcrumbs={breadcrumbs}
                 imageSrc="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2940&auto=format&fit=crop"
                 imagePosition="center"
@@ -158,7 +158,7 @@ const Registration: React.FC = () => {
                         <ScrollAnimation variant="slide-right" className="lg:col-span-7 space-y-6">
                             <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs block font-display font-black">Flexible Session Pacing</span>
                             <h3 className="text-2xl md:text-3xl font-display font-black text-ucb-blue">
-                                Accelerate Your Progress — 8-Week & 16-Week Options
+                                Accelerate Your Progress: 8-Week & 16-Week Options
                             </h3>
                             <p className="text-gray-600 leading-relaxed font-light text-sm">
                                 Want to move faster? Our 8-week accelerated sessions let you complete a course in half the time, so you can earn credits more quickly and reach your goals sooner. Prefer a steadier pace? Our 16-week full-semester format gives you space to absorb material deeply.

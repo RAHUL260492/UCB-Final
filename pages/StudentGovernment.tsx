@@ -83,7 +83,8 @@ const StudentGovernment: React.FC = () => {
                 imagePosition="center"
             />
 
-            {/* Meet the Current Team */}
+            {/* Meet the Current Team — hidden for now: awaiting current SGA member photos (several officers graduated; replacements being sourced). Flip to true to restore. */}
+            {false && (
             <section className="py-16 md:py-24 bg-white relative">
                 <div className="container mx-auto px-6 max-w-7xl">
                     <div className="text-center max-w-3xl mx-auto mb-16">
@@ -124,6 +125,7 @@ const StudentGovernment: React.FC = () => {
                     </div>
                 </div>
             </section>
+            )}
 
             {/* About Roles & Terms */}
             <section className="py-16 md:py-24 bg-gray-50 border-y border-gray-100">

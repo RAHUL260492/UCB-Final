@@ -106,7 +106,7 @@ const StudentServices: React.FC = () => {
         },
         {
             q: "Who do I contact if I'm struggling personally?",
-            a: "Reach out to Student Services at studentservices@urbancollege.edu or call 617-449-7380. We make referrals and maintain a list of community mental health resources at /mental-health—including crisis hotlines by county."
+            a: <>Reach out to Student Services at studentservices@urbancollege.edu or call 617-449-7380. We make referrals and maintain a <Link to="/mental-health" className="text-ucb-blue font-semibold hover:underline">list of community mental health resources</Link> including crisis hotlines by county.</>
         }
     ];
 
@@ -126,7 +126,7 @@ const StudentServices: React.FC = () => {
                 ])}
             />
             <PageHeader
-                title="Student Services Overview"
+                title="Student Services"
                 subtitle="You've got a whole team in your corner. Here's everything Urban College offers to help you thrive."
                 breadcrumbs={breadcrumbs}
                 imageSrc="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2940&auto=format&fit=crop"
@@ -141,12 +141,12 @@ const StudentServices: React.FC = () => {
                             <ScrollAnimation variant="fade-up">
                                 <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs mb-2 block">Always By Your Side</span>
                                 <h2 className="text-3xl md:text-4xl font-display font-black text-ucb-blue leading-tight">
-                                    Support Built For Your Educational Success
+                                    Support Built for Your Success
                                 </h2>
                                 <p className="text-lg text-gray-600 leading-relaxed font-light mt-4">
-                                    Urban College of Boston isn't just a place to take classes — it's a community built to help you succeed. From the moment you enroll to the day you cross the stage at graduation, we've got a team of advisors, tutors, and support specialists ready to walk alongside you.
+                                    Urban College is a community built to help you thrive. From the moment you enroll to the day you cross the stage at graduation, we've got a team of advisors, tutors, and support specialists ready to walk alongside you.
                                 </p>
-                                <p className="text-gray-500 leading-relaxed text-sm">
+                                <p className="text-lg text-gray-600 leading-relaxed font-light">
                                     Explore what's available, save the contact info you need, and never hesitate to reach out. We are here to help.
                                 </p>
                             </ScrollAnimation>
@@ -157,7 +157,7 @@ const StudentServices: React.FC = () => {
                                 <div className="inline-flex p-3 bg-white/10 rounded-xl text-ucb-gold border border-white/10">
                                     <AlertCircle className="w-6 h-6" />
                                 </div>
-                                <h3 className="text-xl font-display font-bold">Quick Sub-Pages</h3>
+                                <h3 className="text-xl font-display font-bold">Quick Reference Guide</h3>
                                 <p className="text-blue-100 text-xs leading-relaxed font-light">
                                     Explore specific campus support services, documents, and guides by clicking the links below:
                                 </p>

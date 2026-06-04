@@ -471,9 +471,15 @@ const Navigation: React.FC = () => {
             >
               Request Info
             </button>
-            <button className="w-full border-2 border-ucb-blue text-ucb-blue py-4 rounded-xl font-bold text-lg hover:bg-ucb-blue hover:text-white transition-colors min-h-[44px]">
+            <a
+              href="https://portal.urbancollege.edu/"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full border-2 border-ucb-blue text-ucb-blue py-4 rounded-xl font-bold text-lg hover:bg-ucb-blue hover:text-white transition-colors min-h-[44px] flex items-center justify-center"
+            >
               Student Portal
-            </button>
+            </a>
 
             <div className="flex justify-center gap-4 mt-6 text-ucb-blue items-center text-sm font-semibold">
               <Link to="/espanol" className="hover:text-ucb-orange flex items-center gap-1.5" onClick={() => setMobileMenuOpen(false)}>
