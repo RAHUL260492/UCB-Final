@@ -90,7 +90,7 @@ const EarlyChildhoodEducation: React.FC = () => {
         <ProgramPageLayout
             badge="Early Childhood Education Associate"
             title={<>Inspire Young Minds & <span style={{ color: '#E68325' }}>Build Your Future</span></>}
-            subtitle="A 60-credit Associate Degree. Accessible, high-quality education designed for working adults."
+            subtitle="A 60-credit Associate Degree. Accessible, high-quality education designed for working students."
             headerImageSrc="/Program%20Images%20for%20Website/ECE-AA-primary.jpg"
             secondaryImageSrc="/Program%20Images%20for%20Website/ECE-AA-secondary.jpg"
             breadcrumbs={[
@@ -103,7 +103,7 @@ const EarlyChildhoodEducation: React.FC = () => {
                 <p>
                     Develop the actual business skills that will enable you to get a job, increase your salary, or earn a promotion—all without interrupting your life.
                     <br className="hidden md:block" />
-                    <span className="text-ucb-blue font-semibold">Urban College of Boston's Early Childhood Education Associate</span> is a fully online, short-term program designed for modern working adults.
+                    <span className="text-ucb-blue font-semibold">Urban College of Boston's Early Childhood Education Associate</span> is a fully online, short-term program designed for modern working students.
                 </p>
             }
 

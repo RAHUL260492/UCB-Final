@@ -90,7 +90,7 @@ const ProjectManagement: React.FC = () => {
         <ProgramPageLayout
             badge="Project Management Certificate"
             title={<>Lead Projects, Build Your Career, & <span style={{ color: '#E68325' }}>Earn While You Learn</span></>}
-            subtitle="In As Little As One Year! Accessible, high-quality education designed for working adults."
+            subtitle="In as little as one year! Accessible, high-quality education designed for working students."
             headerImageSrc="/Program%20Images%20for%20Website/Project%20Management%20Cert%201.jpg"
             secondaryImageSrc="/Program%20Images%20for%20Website/Project%20Management%20Cert%202.jpg"
             breadcrumbs={[

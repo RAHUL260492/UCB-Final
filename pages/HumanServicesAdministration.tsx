@@ -94,7 +94,7 @@ const HumanServicesAdministration: React.FC = () => {
         <ProgramPageLayout
             badge="Human Services Administration"
             title={<>Transform Lives & <span style={{ color: '#E68325' }}>Build Your Career in Social Services</span></>}
-            subtitle="8% Job Growth—Faster Than Average! Accessible education designed for working adults."
+            subtitle="8% Job Growth—Faster Than Average! Accessible education designed for working students."
             headerImageSrc="/Program%20Images%20for%20Website/Human%20Services%20AA%201.jpg"
             secondaryImageSrc="/Program%20Images%20for%20Website/Human%20Services%20AA%202.jpg"
             breadcrumbs={[

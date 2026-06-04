@@ -94,7 +94,7 @@ const ParaprofessionalEducator: React.FC = () => {
         <ProgramPageLayout
             badge="Paraprofessional Educator Certificate"
             title={<>Shape Young Minds and <span style={{ color: '#E68325' }}>Launch Your Teaching Career</span></>}
-            subtitle="In As Little As One Year! Accessible, high-quality education designed for working adults."
+            subtitle="In as little as one year! Accessible, high-quality education designed for working students."
             headerImageSrc="/Program%20Images%20for%20Website/paraprofessional%20educator%20cert%201.jpg"
             secondaryImageSrc="/Program%20Images%20for%20Website/paraprofessional%20educator%20cert%202.jpg"
             breadcrumbs={[

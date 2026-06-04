@@ -85,7 +85,7 @@ const DigitalMarketing: React.FC = () => {
         <ProgramPageLayout
             badge="Digital Marketing Certificate"
             title={<>Master In-Demand Digital Skills & <span style={{ color: '#E68325' }}>Launch Your Marketing Career</span></>}
-            subtitle="In as little as one year. Accessible, high-quality education designed for working adults."
+            subtitle="In as little as one year. Accessible, high-quality education designed for working students."
             headerImageSrc="/Program%20Images%20for%20Website/Marketing%20Cert%201.jpg"
             secondaryImageSrc="/Program%20Images%20for%20Website/Marketing%20Cert%202.jpg"
             breadcrumbs={[

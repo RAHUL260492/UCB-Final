@@ -88,7 +88,7 @@ const EarlyChildhoodEducationCertificate: React.FC = () => {
         <ProgramPageLayout
             badge="Early Childhood Education Certificate"
             title={<>Shape Young Minds & <span style={{ color: '#E68325' }}>Launch Your Career</span></>}
-            subtitle="In as little as one year. Accessible, high-quality education designed for working adults."
+            subtitle="In as little as one year. Accessible, high-quality education designed for working students."
             headerImageSrc="/Program%20Images%20for%20Website/ECE-Cert-Primary.jpg"
             secondaryImageSrc="/Program%20Images%20for%20Website/ECE-Cert-secondary-image.jpg"
             breadcrumbs={[

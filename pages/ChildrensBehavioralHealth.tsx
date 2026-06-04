@@ -83,7 +83,7 @@ const ChildrensBehavioralHealth: React.FC = () => {
         <ProgramPageLayout
             badge="Children's Behavioral Health Certificate"
             title={<>Launch Your Career & <span style={{ color: '#E68325' }}>Help Children Thrive</span></>}
-            subtitle="In as little as 9 months. Accessible, high-quality education designed for working adults."
+            subtitle="In as little as 9 months. Accessible, high-quality education designed for working students."
             headerImageSrc="/Program%20Images%20for%20Website/CBH%20cert%20primary.jpg"
             secondaryImageSrc="/Program%20Images%20for%20Website/CBH%20cert%201.jpg"
             breadcrumbs={[

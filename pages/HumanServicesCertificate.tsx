@@ -53,7 +53,7 @@ const stats: ProgramStat[] = [
 ];
 
 const faqs = [
-    { q: "Can I work while completing this certificate?", a: "Absolutely! This program is designed for working adults. All courses are online with flexible scheduling, so you can balance work, family, and school. Many students work full-time while completing their certificate." },
+    { q: "Can I work while completing this certificate?", a: "Absolutely! This program is designed for working students. All courses are online with flexible scheduling, so you can balance work, family, and school. Many students work full-time while completing their certificate." },
     { q: "Is the program entirely online?", a: "Yes! The program is 100% online with both synchronous and asynchronous options. Learn on your schedule—early mornings, late nights, or weekends." },
     { q: "How long does the program take?", a: "In as little as 9 months! Complete your 21 credits full-time, or take it at your own pace—the program fits into your busy life." },
     { q: "Do I need prior experience in human services?", a: "No! No prior experience is required. The program covers all foundational knowledge. Whether you're starting fresh or advancing in your current role, you'll get the skills you need." },
@@ -90,7 +90,7 @@ const HumanServicesCertificate: React.FC = () => {
         <ProgramPageLayout
             badge="Human Services Certificate"
             title={<>Launch Your Career <span style={{ color: '#E68325' }}>Helping Others—While You Work</span></>}
-            subtitle="In As Little As 9 Months! Accessible, high-quality education designed for working adults."
+            subtitle="In as little as 9 months! Accessible, high-quality education designed for working students."
             headerImageSrc="/Program%20Images%20for%20Website/Human%20Services%20Cert%201.jpg"
             secondaryImageSrc="/Program%20Images%20for%20Website/Human%20Services%20Cert%202.jpg"
             breadcrumbs={[

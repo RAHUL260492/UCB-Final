@@ -134,7 +134,7 @@ const ElderCare: React.FC = () => {
         <ProgramPageLayout
             badge="Elder Care Certificate"
             title={<>Make a Difference in Seniors' Lives While <span style={{ color: '#E68325' }}>Building Your Career</span></>}
-            subtitle="In As Little As One Year! Accessible, high-quality education designed for working adults."
+            subtitle="In as little as one year! Accessible, high-quality education designed for working students."
             headerImageSrc="/Program%20Images%20for%20Website/Elder%20Care%20Cert%201.jpg"
             secondaryImageSrc="/Program%20Images%20for%20Website/Elder%20Care%20Cert%202.jpg"
             breadcrumbs={[
