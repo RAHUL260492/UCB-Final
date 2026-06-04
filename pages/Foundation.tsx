@@ -241,12 +241,12 @@ const Foundation: React.FC = () => {
                             <p className="text-gray-600 text-sm md:text-base leading-relaxed font-light">
                                 Supporting Urban College builds students' futures. Your gift helps support more than <strong>1,300 multilingual students</strong> pursuing degrees while working, parenting, and overcoming systemic barriers.
                             </p>
-                            <p className="text-sm font-semibold text-gray-800">
-                                When You Give, You Support:
-                            </p>
                         </ScrollAnimation>
 
                         <ScrollAnimation variant="slide-left" className="bg-gray-50 rounded-3xl p-8 border border-gray-100 space-y-4">
+                            <p className="text-sm font-semibold text-gray-800">
+                                When You Give, You Support:
+                            </p>
                             {supportItems.map((item, idx) => (
                                 <div key={idx} className="flex items-start gap-3 text-sm text-gray-700 font-light">
                                     <CheckCircle className="w-4 h-4 text-ucb-emerald mt-0.5 shrink-0" />
