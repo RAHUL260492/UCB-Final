@@ -41,7 +41,7 @@ const Mission: React.FC = () => {
         },
         {
             title: "Flexible Learning Formats",
-            desc: "We offer fully online schedules to fit the busy lives of working adults, parent-students, and community members.",
+            desc: "We offer fully online schedules to fit the busy lives of working students, parent-students, and community members.",
             icon: Clock,
             color: "text-ucb-periwinkle bg-ucb-periwinkle/10 border-ucb-periwinkle/20"
         },
