@@ -157,7 +157,7 @@ const ParaprofessionalEducator: React.FC = () => {
             pathwaySteps={[
                 { label: 'Certificate', credits: '21 Credits', active: false },
                 { label: 'Associate Degree', credits: '60 Credits', active: true },
-                { label: "Bachelor's & License", credits: 'Transfer Ready', active: false }
+                { label: "Bachelor's Degree", credits: 'Transfer Ready', active: false }
             ]}
 
             testimonial={{
