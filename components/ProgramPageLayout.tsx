@@ -571,7 +571,7 @@ const ProgramPageLayout: React.FC<ProgramLayoutProps> = ({
                             { title: "Flexible & Affordable", desc: "Study online on your schedule. Most students graduate debt-free.", icon: Clock, color: "from-ucb-blue to-ucb-blue-glow" },
                             { title: "Multilingual Support", desc: "Courses in English, Spanish, and Mandarin, with ESL pathways.", icon: Globe, color: "from-ucb-green to-ucb-green-glow" },
                             { title: "Career-Focused", desc: "Gain job-ready skills. Apply what you learn immediately.", icon: Briefcase, color: "from-ucb-orange to-ucb-orange-glow" },
-                            { title: "Student-Centered", desc: "1-on-1 advising, free tutoring, career services, and counseling.", icon: Users, color: "from-ucb-teal to-[#1C8A7C]" }
+                            { title: "Student-Centered", desc: "1-on-1 advising, free tutoring, career services, and financial aid guidance.", icon: Users, color: "from-ucb-teal to-[#1C8A7C]" }
                         ].map((item, i) => (
                             <FadeInSection key={i} delay={i * 80}>
                                 <div className="group bg-white p-6 rounded-2xl shadow-sm hover:shadow-[0_16px_40px_rgba(0,102,162,0.08)] transition-all duration-500 border border-gray-100/80 hover:border-transparent hover:-translate-y-1.5 h-full relative overflow-hidden">
@@ -611,7 +611,7 @@ const ProgramPageLayout: React.FC<ProgramLayoutProps> = ({
                                         "Career services & Resume help",
                                         "Free tutoring in any subject",
                                         "ESL support for learners",
-                                        "Counseling services",
+                                        "Financial aid guidance",
                                         "Technical support"
                                     ].map((item, i) => (
                                         <div key={i} className="flex items-center gap-3 group/banner">

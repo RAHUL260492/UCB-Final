@@ -144,7 +144,7 @@ export const PAGE_META: Record<string, PageMeta> = {
   },
   financialAid: {
     title: 'Financial Aid & Tuition',
-    description: 'Affordable tuition, FAFSA-eligible federal aid, institutional scholarships, and one-on-one financial counseling at Urban College of Boston.',
+    description: 'Affordable tuition, FAFSA-eligible federal aid, institutional scholarships, and one-on-one financial aid guidance at Urban College of Boston.',
     path: '/financial-aid',
   },
   tuitionPayment: {

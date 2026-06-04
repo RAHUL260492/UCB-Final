@@ -413,7 +413,7 @@ const FinancialServices: React.FC = () => {
                         <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs block">Video Resource</span>
                         <h2 className="text-3xl font-display font-bold text-ucb-blue">How to Attend Urban College for Low or No Cost</h2>
                         <p className="text-gray-500 text-sm font-light max-w-md mx-auto">
-                            Watch our brief walkthrough detailing state scholarships, federal pell grants, and financial services counseling.
+                            Watch our brief walkthrough detailing state scholarships, federal pell grants, and financial aid guidance.
                         </p>
                         
                         <div className="relative aspect-video max-w-2xl mx-auto rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-ucb-blue">

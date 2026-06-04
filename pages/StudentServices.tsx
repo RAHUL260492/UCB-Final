@@ -67,7 +67,7 @@ const StudentServices: React.FC = () => {
         },
         {
             title: "Mental Health Resources",
-            desc: "Access community resources, crisis support, and multilingual counseling services.",
+            desc: "Access community resources, crisis support, and multilingual counseling referrals.",
             icon: HeartHandshake,
             link: "/mental-health",
             badge: "Personal Wellness",

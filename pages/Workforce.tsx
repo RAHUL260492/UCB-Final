@@ -269,7 +269,7 @@ const Workforce: React.FC = () => {
                                 </div>
                                 <div className="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm space-y-1">
                                     <h4 className="font-bold text-gray-800 text-base">Wraparound Support</h4>
-                                    <p className="text-gray-600 text-sm font-light leading-relaxed">Access to personal financial counseling and dedicated career coaches throughout training.</p>
+                                    <p className="text-gray-600 text-sm font-light leading-relaxed">Access to financial aid guidance and dedicated career coaches throughout training.</p>
                                 </div>
                             </div>
                         </ScrollAnimation>
