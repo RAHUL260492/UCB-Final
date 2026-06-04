@@ -43,6 +43,7 @@ import CampusFacilities from './pages/CampusFacilities';
 import Compliance from './pages/Compliance';
 import HeerfReports from './pages/HeerfReports';
 import SafetyWellness from './pages/SafetyWellness';
+import Alumni from './pages/Alumni';
 import CollegeServicesAndResources from './pages/CollegeServicesAndResources';
 import Workforce from './pages/Workforce';
 import Donate from './pages/Donate';
@@ -133,6 +134,7 @@ function App() {
             <Route path="/compliance" element={<Compliance />} />
             <Route path="/heerf-reports" element={<HeerfReports />} />
             <Route path="/safety-and-wellness" element={<SafetyWellness />} />
+            <Route path="/alumni" element={<Alumni />} />
             <Route path="/college-services-and-resources" element={<CollegeServicesAndResources />} />
             <Route path="/college-services" element={<CollegeServicesAndResources />} />
             <Route path="/lrc-english" element={<LearningResourceCenter />} />
