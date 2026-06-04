@@ -33,7 +33,7 @@ const outcomes = [
 const benefits: ProgramBenefit[] = [
     { title: "High MA Salaries", desc: "Earn $46,340/year as a Social and Human Services Assistant in Massachusetts (ranked #3 nationwide!)", icon: DollarSign },
     { title: "Growing Field", desc: "8% job growth—faster than the national average!", icon: TrendingUp },
-    { title: "Fast Track", desc: "Finish in as little as one year (only 21 credits)", icon: Clock },
+    { title: "Fast Track", desc: "Finish in as little as 9 months (only 21 credits)", icon: Clock },
     { title: "100% Online", desc: "Learn on a schedule that fits into your busy life", icon: Globe },
     { title: "Financial Aid", desc: "Personalized aid plans & options", icon: CheckCircle },
     { title: "Bilingual Options", desc: "Study in English or Spanish: Choose the language that works for you", icon: MessageCircleIcon },
@@ -43,7 +43,7 @@ const benefits: ProgramBenefit[] = [
 
 const stats: ProgramStat[] = [
     { label: 'Credits', value: '21', icon: Award, sub: 'Credits' },
-    { label: 'Time', value: '1 Year', icon: Clock, sub: 'To Complete' },
+    { label: 'Time', value: '9 Months', icon: Clock, sub: 'To Complete' },
     { label: 'Format', value: 'Online', icon: Globe, sub: 'Fully Online' },
     { label: 'Cost', value: '$317', icon: DollarSign, sub: 'Per Credit' },
     { label: 'Start', value: 'Rolling', icon: Calendar, sub: 'Start Date' },
@@ -55,7 +55,7 @@ const stats: ProgramStat[] = [
 const faqs = [
     { q: "Can I work while completing this certificate?", a: "Absolutely! This program is designed for working adults. All courses are online with flexible scheduling, so you can balance work, family, and school. Many students work full-time while completing their certificate." },
     { q: "Is the program entirely online?", a: "Yes! The program is 100% online with both synchronous and asynchronous options. Learn on your schedule—early mornings, late nights, or weekends." },
-    { q: "How long does the program take?", a: "In as little as one year! Complete your 21 credits full-time, or take it at your own pace—the program fits into your busy life." },
+    { q: "How long does the program take?", a: "In as little as 9 months! Complete your 21 credits full-time, or take it at your own pace—the program fits into your busy life." },
     { q: "Do I need prior experience in human services?", a: "No! No prior experience is required. The program covers all foundational knowledge. Whether you're starting fresh or advancing in your current role, you'll get the skills you need." },
     { q: "Will my credits transfer to an associate's degree?", a: "Yes! All 21 credits transfer directly into the Human Services Administration Associate Degree at Urban College. Continue your education whenever you're ready." },
     { q: "Can I study in Spanish?", a: "Yes! Courses are available in English and Spanish—choose the language that works for you. ESL support is also available and tailored to each student." },
@@ -90,7 +90,7 @@ const HumanServicesCertificate: React.FC = () => {
         <ProgramPageLayout
             badge="Human Services Certificate"
             title={<>Launch Your Career <span style={{ color: '#E68325' }}>Helping Others—While You Work</span></>}
-            subtitle="In As Little As One Year! Accessible, high-quality education designed for working adults."
+            subtitle="In As Little As 9 Months! Accessible, high-quality education designed for working adults."
             headerImageSrc="/Program%20Images%20for%20Website/Human%20Services%20Cert%201.jpg"
             secondaryImageSrc="/Program%20Images%20for%20Website/Human%20Services%20Cert%202.jpg"
             breadcrumbs={[

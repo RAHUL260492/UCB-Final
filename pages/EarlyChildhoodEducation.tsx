@@ -32,7 +32,7 @@ const outcomes = [
 ];
 
 const benefits: ProgramBenefit[] = [
-    { title: "Fast Track", desc: "Finish in as little as one year (only 18 credits!)", icon: Clock },
+    { title: "Flexible Pace", desc: "Complete your 60 credits over about two years", icon: Clock },
     { title: "100% Online", desc: "Learn on a schedule that fits into your busy life", icon: Globe },
     { title: "Financial Aid", desc: "Personalized aid plans & options", icon: DollarSign },
     { title: "Learn in Your Language", desc: "Courses in English, Spanish, and Mandarin", icon: MessageCircleIcon },
@@ -42,8 +42,8 @@ const benefits: ProgramBenefit[] = [
 ];
 
 const stats: ProgramStat[] = [
-    { label: 'Credits', value: '18', icon: Award, sub: 'Credits' },
-    { label: 'Time', value: '1 Year', icon: Clock, sub: 'To Complete' },
+    { label: 'Credits', value: '60', icon: Award, sub: 'Credits' },
+    { label: 'Time', value: '2 Years', icon: Clock, sub: 'To Complete' },
     { label: 'Format', value: 'Online', icon: Globe, sub: 'Fully Online' },
     { label: 'Cost', value: '$317', icon: DollarSign, sub: 'Per Credit' },
     { label: 'Start', value: 'Rolling', icon: Calendar, sub: 'Start Date' },
@@ -53,7 +53,7 @@ const stats: ProgramStat[] = [
 ];
 
 const faqs = [
-    { q: "What is the duration of the program?", a: "As little as one year." },
+    { q: "What is the duration of the program?", a: "About two years (60 credits)." },
     { q: "Is it fully online?", a: "Yes, entirely online with various formats." },
     { q: "What languages?", a: "English, Spanish, and Mandarin." },
     { q: "Accredited?", a: "Yes, a fully accredited non-profit college and Hispanic-Serving Institution." },

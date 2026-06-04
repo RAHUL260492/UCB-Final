@@ -32,7 +32,7 @@ const outcomes = [
 ];
 
 const benefits: ProgramBenefit[] = [
-    { title: "Fast Track", desc: "Finish in as little as one year (only 18 credits!)", icon: Clock },
+    { title: "Fast Track", desc: "Finish in as little as 9 months (only 21 credits)", icon: Clock },
     { title: "100% Online", desc: "Learn on a schedule that fits into your busy life", icon: Globe },
     { title: "Financial Aid", desc: "Personalized aid plans & options", icon: DollarSign },
     { title: "Transfer Credits", desc: "Credits transfer toward an associate or bachelor's degree", icon: TrendingUp },
@@ -41,8 +41,8 @@ const benefits: ProgramBenefit[] = [
 ];
 
 const stats: ProgramStat[] = [
-    { label: 'Credits', value: '18', icon: Award, sub: 'Credits' },
-    { label: 'Time', value: '1 Year', icon: Clock, sub: 'To Complete' },
+    { label: 'Credits', value: '21', icon: Award, sub: 'Credits' },
+    { label: 'Time', value: '9 Months', icon: Clock, sub: 'To Complete' },
     { label: 'Format', value: 'Online', icon: Globe, sub: 'Fully Online' },
     { label: 'Cost', value: '$317', icon: DollarSign, sub: 'Per Credit' },
     { label: 'Aid', value: 'Yes', icon: Award, sub: 'Financial Aid Available' },
@@ -50,7 +50,7 @@ const stats: ProgramStat[] = [
 ];
 
 const faqs = [
-    { q: "What is the duration of the program?", a: "As little as one year." },
+    { q: "What is the duration of the program?", a: "As little as 9 months." },
     { q: "Is it fully online?", a: "Yes, entirely online with various formats including asynchronous and live options." },
     { q: "What languages are courses available in?", a: "Courses are offered in English." },
     { q: "Is Urban College accredited?", a: "Yes, Urban College is a fully accredited non-profit college and Hispanic-Serving Institution." },
@@ -87,7 +87,7 @@ const CaseManagement: React.FC = () => {
             // Header
             badge="Case Management Certificate"
             title={<>Build a Career Connecting People & <span style={{ color: '#E68325' }}>Changing Lives</span></>}
-            subtitle="In as little as one year. Accessible, high-quality education designed for working adults."
+            subtitle="In as little as 9 months. Accessible, high-quality education designed for working adults."
             headerImageSrc="/Program%20Images%20for%20Website/Case%20Management%20Cert%201.jpg"
             secondaryImageSrc="/Program%20Images%20for%20Website/Case%20Management%20Cert%202.jpg"
             breadcrumbs={[
