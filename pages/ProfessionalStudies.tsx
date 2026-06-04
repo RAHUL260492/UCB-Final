@@ -93,6 +93,7 @@ const ProfessionalStudies: React.FC = () => {
             title={<>Take College Courses <span style={{ color: '#E68325' }}>Without Committing to a Degree</span></>}
             subtitle="Learn Something New. Grow Your Career. Follow Your Curiosity."
             headerImageSrc="/Program%20Images%20for%20Website/Professional%20Studies%201.jpg"
+            secondaryImageSrc="/Program%20Images%20for%20Website/Professional%20Studies%202.jpg"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },
                 { label: 'Professional Studies' }

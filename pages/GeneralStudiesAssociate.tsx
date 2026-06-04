@@ -91,6 +91,7 @@ const GeneralStudiesAssociate: React.FC = () => {
             title={<>Explore Your Possibilities & <span style={{ color: '#E68325' }}>Build Your Future</span></>}
             subtitle="Flexible. Affordable. Transferable. Accessible education designed for working adults."
             headerImageSrc="/Program%20Images%20for%20Website/General%20Studies%20AA%201.jpg"
+            secondaryImageSrc="/Program%20Images%20for%20Website/General%20Studies%20AA%202.jpg"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },
                 { label: 'General Studies Associate' }

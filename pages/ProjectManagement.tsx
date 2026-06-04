@@ -92,6 +92,7 @@ const ProjectManagement: React.FC = () => {
             title={<>Lead Projects, Build Your Career, & <span style={{ color: '#E68325' }}>Earn While You Learn</span></>}
             subtitle="In As Little As One Year! Accessible, high-quality education designed for working adults."
             headerImageSrc="/Program%20Images%20for%20Website/Project%20Management%20Cert%201.jpg"
+            secondaryImageSrc="/Program%20Images%20for%20Website/Project%20Management%20Cert%202.jpg"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },
                 { label: 'Project Management' }

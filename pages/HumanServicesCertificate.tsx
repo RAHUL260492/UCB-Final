@@ -92,6 +92,7 @@ const HumanServicesCertificate: React.FC = () => {
             title={<>Launch Your Career <span style={{ color: '#E68325' }}>Helping Others—While You Work</span></>}
             subtitle="In As Little As One Year! Accessible, high-quality education designed for working adults."
             headerImageSrc="/Program%20Images%20for%20Website/Human%20Services%20Cert%201.jpg"
+            secondaryImageSrc="/Program%20Images%20for%20Website/Human%20Services%20Cert%202.jpg"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },
                 { label: 'Human Services Certificate' }

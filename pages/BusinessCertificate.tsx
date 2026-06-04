@@ -91,6 +91,7 @@ const BusinessCertificate: React.FC = () => {
             title={<>Build Real Business Skills & <span style={{ color: '#E68325' }}>Advance Your Career</span></>}
             subtitle="In as little as one year. Accessible, high-quality education designed for working adults."
             headerImageSrc="/Program%20Images%20for%20Website/Business%20Cert%201.jpg"
+            secondaryImageSrc="/Program%20Images%20for%20Website/Business%20Cert%202.jpg"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },
                 { label: 'Business Certificate' }

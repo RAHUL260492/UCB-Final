@@ -92,6 +92,7 @@ const EarlyChildhoodEducation: React.FC = () => {
             title={<>Inspire Young Minds & <span style={{ color: '#E68325' }}>Build Your Future</span></>}
             subtitle="A 60-credit Associate Degree. Accessible, high-quality education designed for working adults."
             headerImageSrc="/Program%20Images%20for%20Website/ECE-AA-primary.jpg"
+            secondaryImageSrc="/Program%20Images%20for%20Website/ECE-AA-secondary.jpg"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },
                 { label: 'Early Childhood Education' }

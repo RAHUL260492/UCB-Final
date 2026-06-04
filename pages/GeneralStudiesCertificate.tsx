@@ -89,6 +89,7 @@ const GeneralStudiesCertificate: React.FC = () => {
             title={<>Explore Your Possibilities & <span style={{ color: '#E68325' }}>Build Your Future</span></>}
             subtitle="In as little as one year. Accessible, high-quality education designed for working adults."
             headerImageSrc="/Program%20Images%20for%20Website/General%20Studies%20Cert%201.jpg"
+            secondaryImageSrc="/Program%20Images%20for%20Website/General%20Studies%20Cert%202.jpg"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },
                 { label: 'General Studies Certificate' }

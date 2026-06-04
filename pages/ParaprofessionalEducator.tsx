@@ -96,6 +96,7 @@ const ParaprofessionalEducator: React.FC = () => {
             title={<>Shape Young Minds and <span style={{ color: '#E68325' }}>Launch Your Teaching Career</span></>}
             subtitle="In As Little As One Year! Accessible, high-quality education designed for working adults."
             headerImageSrc="/Program%20Images%20for%20Website/paraprofessional%20educator%20cert%201.jpg"
+            secondaryImageSrc="/Program%20Images%20for%20Website/paraprofessional%20educator%20cert%202.jpg"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },
                 { label: 'Paraprofessional Educator' }

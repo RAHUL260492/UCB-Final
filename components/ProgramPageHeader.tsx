@@ -36,10 +36,16 @@ const ProgramPageHeader: React.FC<ProgramPageHeaderProps> = ({
             className="relative flex flex-col justify-end overflow-hidden text-white pt-8 bg-ucb-blue"
             style={{ minHeight: '280px' }}
         >
-            {/* Background color block for fallback since image was removed */}
+            {/* Header image with brand gradient overlays for readability */}
             <div className="absolute inset-0 bg-ucb-blue" />
-            <div className="absolute inset-0 bg-gradient-to-r from-ucb-blue/85 via-ucb-blue/50 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+            {imageSrc && (
+                <div
+                    className="absolute inset-0 bg-cover bg-center"
+                    style={{ backgroundImage: `url("${imageSrc}")` }}
+                />
+            )}
+            <div className="absolute inset-0 bg-gradient-to-t from-ucb-blue via-ucb-blue/75 to-ucb-blue/30" />
+            <div className="absolute inset-0 bg-gradient-to-r from-ucb-blue/70 via-ucb-blue/30 to-transparent" />
 
             {/* Floating decorative orb */}
             <div

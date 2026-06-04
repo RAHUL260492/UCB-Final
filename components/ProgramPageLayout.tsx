@@ -55,6 +55,7 @@ export interface ProgramLayoutProps {
     title: React.ReactNode;
     subtitle: string;
     headerImageSrc: string;
+    secondaryImageSrc?: string;
     breadcrumbs: { label: string; path?: string }[];
 
     // Tagline section
@@ -258,7 +259,7 @@ const AccordionItem: React.FC<{ faq: ProgramFaq; index: number; isOpen: boolean;
 // ─── Main Layout Component ────────────────────────────────────────────────────
 
 const ProgramPageLayout: React.FC<ProgramLayoutProps> = ({
-    badge, title, subtitle, headerImageSrc, breadcrumbs,
+    badge, title, subtitle, headerImageSrc, secondaryImageSrc, breadcrumbs,
     tagline, taglineBody,
     benefits,
     achievements = [], achievementNote,
@@ -461,6 +462,21 @@ const ProgramPageLayout: React.FC<ProgramLayoutProps> = ({
                     </div>
                 </div>
             </section>
+
+            {/* ── Secondary Image ── */}
+            {secondaryImageSrc && (
+                <section className="py-6 md:py-10 bg-white">
+                    <div className="container mx-auto px-6 max-w-5xl">
+                        <div className="rounded-3xl overflow-hidden shadow-xl border border-gray-100">
+                            <img
+                                src={secondaryImageSrc}
+                                alt={badge}
+                                className="w-full h-auto max-h-[420px] object-cover"
+                            />
+                        </div>
+                    </div>
+                </section>
+            )}
 
             {/* ── Is This Right For You? ── */}
             {forWhom.length > 0 && (

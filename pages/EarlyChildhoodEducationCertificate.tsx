@@ -90,6 +90,7 @@ const EarlyChildhoodEducationCertificate: React.FC = () => {
             title={<>Shape Young Minds & <span style={{ color: '#E68325' }}>Launch Your Career</span></>}
             subtitle="In as little as one year. Accessible, high-quality education designed for working adults."
             headerImageSrc="/Program%20Images%20for%20Website/ECE-Cert-Primary.jpg"
+            secondaryImageSrc="/Program%20Images%20for%20Website/ECE-Cert-secondary-image.jpg"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },
                 { label: 'ECE Certificate' }
