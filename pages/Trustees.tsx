@@ -18,6 +18,7 @@ interface BoardMember {
     avatarInitials: string;
     boardService?: string;
     readMorePath?: string;
+    image?: string;
 }
 
 const Trustees: React.FC = () => {
@@ -74,7 +75,8 @@ const Trustees: React.FC = () => {
             expertise: "Higher Education Administration, Student Services, Academic Support",
             bio: "Dr. Joan Becker brings extensive higher education leadership experience, having served as Vice Provost for Academic Support Services and Undergraduate Studies at UMass Boston. She provided oversight for advising, career services, disability services, global programs, and pre-collegiate support programs. Joan currently consults for the Council for Opportunity in Education and UMass Boston.",
             education: "Ed.D. and Ed.M., Harvard Graduate School of Education; B.A., Wellesley College",
-            avatarInitials: "JB"
+            avatarInitials: "JB",
+            image: "/assets/images/board/joan-becker.webp"
         },
         {
             name: "Amelia Manning",
@@ -82,7 +84,8 @@ const Trustees: React.FC = () => {
             expertise: "Operations, Strategy Execution, Academic Affairs",
             bio: "Amelia Manning brings deep expertise in operations, scaling student-centered services, and strategic execution. She has served in senior leadership roles in higher education, including as Chief Operating Officer at Southern New Hampshire University, where she oversaw Academics, Student Advisement, and Business Strategy. She specializes in delivering organizational visions and designing efficient institutional services.",
             education: "M.A., University of New Hampshire; B.A., Saint Michael's College",
-            avatarInitials: "AM"
+            avatarInitials: "AM",
+            image: "/assets/images/board/amelia-manning.webp"
         },
         {
             name: "Kenneth Lee",
@@ -90,7 +93,8 @@ const Trustees: React.FC = () => {
             expertise: "Finance, Organizational Transformation, Nonprofit Management",
             bio: "Kenneth Lee serves as Chief Financial Officer of Southern New Hampshire University, overseeing finance, treasury, capital projects, and facilities. Previously, he was CFO of Big Brothers Big Sisters of Massachusetts Bay and VP of Global Business Services at Avery Dennison. Ken spent 17 years as a Partner at A.T. Kearney consulting firm.",
             education: "M.B.A., Harvard Business School; B.A. in Economics, Harvard University",
-            avatarInitials: "KL"
+            avatarInitials: "KL",
+            image: "/assets/images/board/kenneth-lee.jpg"
         },
         {
             name: "Barbara Brittingham, Ph.D.",
@@ -98,7 +102,8 @@ const Trustees: React.FC = () => {
             expertise: "Higher Education Accreditation, Institutional Quality, International Education",
             bio: "Dr. Barbara Brittingham is President Emerita of the New England Commission of Higher Education (NECHE), which accredits over 200 colleges and universities. She has worked with ministries and universities in over 25 countries on quality assurance. Barbara currently serves on the Boards of the National Student Clearinghouse and Wheaton College.",
             education: "Ph.D., University of Rhode Island",
-            avatarInitials: "BB"
+            avatarInitials: "BB",
+            image: "/assets/images/board/barbara-brittingham.webp"
         }
     ];
 
@@ -109,7 +114,8 @@ const Trustees: React.FC = () => {
             expertise: "Diversity, Equity & Inclusion, Organizational Leadership, Community Engagement",
             bio: "Dr. Constanza Cabello is a DEI leader passionate about developing equitable organizational cultures. She serves as Managing Director of Global Inclusion, Diversity, and Equity at State Street Corporation. Previously, she held senior diversity and community engagement roles in higher education and founded Cabello Consulting LLC.",
             education: "Ed.D. in Organizational Leadership, Northeastern University; M.S., Central Connecticut State University; B.S., University of Connecticut",
-            avatarInitials: "CC"
+            avatarInitials: "CC",
+            image: "/assets/images/board/constanza-cabello.webp"
         },
         {
             name: "Peter Ebb, Esq.",
@@ -117,7 +123,8 @@ const Trustees: React.FC = () => {
             expertise: "Labor & Employment Law, Education Law, Public Policy",
             bio: "Peter Ebb is a retired partner from Ropes & Gray, where he specialized in labor and employment litigation, education law, and public law. He served as practice group leader and chaired the firm's Conflict of Interest Committee. Peter previously worked as a law clerk for the Massachusetts Supreme Judicial Court and in the state legislature.",
             education: "J.D., Boston University School of Law; B.A., Harvard College",
-            avatarInitials: "PE"
+            avatarInitials: "PE",
+            image: "/assets/images/board/peter-ebb.png"
         },
         {
             name: "Mark A. Ouellette",
@@ -125,7 +132,8 @@ const Trustees: React.FC = () => {
             expertise: "Global Sales Operations, Technology, Community Service",
             bio: "Mark Ouellette consults at Pitney Bowes, where he previously served as Senior Vice President of Global Sales Operations. He has served on SNHU's Board since 1997 and with several years as Board Chair. Mark also serves on the boards of the United Way of Western Connecticut, Prosperi-Key, and the Center for Communities.",
             education: "Board Service: SNHU Board (since 1997); United Way of Western Connecticut",
-            avatarInitials: "MO"
+            avatarInitials: "MO",
+            image: "/assets/images/board/mark-ouellette.webp"
         },
         {
             name: "Megan Stevens",
@@ -133,7 +141,8 @@ const Trustees: React.FC = () => {
             expertise: "Workforce Development, Educational Equity, DEI Advocacy",
             bio: "Megan Stevens is Director of Leadership Advancement at AnitaB.org, leading apprenticeship and workforce development programs promoting gender equity in tech. She founded Always Making Progress (AMP), Inc., impacting over 350 students through academic enrichment and entrepreneurship programs. Megan co-founded SNHU's first Black employee resource group, BLAZE.",
             education: "M.B.A. in Leadership, SNHU; B.A., Ball State University",
-            avatarInitials: "MS"
+            avatarInitials: "MS",
+            image: "/assets/images/board/megan-stevens.webp"
         },
         {
             name: "Jan Wyatt, Ph.D.",
@@ -141,7 +150,8 @@ const Trustees: React.FC = () => {
             expertise: "Academic Programs, Accreditation, Curriculum Development",
             bio: "Dr. Jan Wyatt brings 18 years in higher education leadership. As Vice President of Academic Programs at SNHU, he leads teams delivering high-quality programs nationwide. He developed the award-winning Higher Education and Real-World Training (HEaRT) and Nursing Credentialing Center initiatives. Jan has held roles as Academic Dean, Vice Provost, and Department Chair.",
             education: "Ph.D. in Organization and Management, Capella University; M.B.A., SNHU; M.S. in Higher Ed Administration, Kaplan University; B.S. in Marketing, Florida International University",
-            avatarInitials: "JW"
+            avatarInitials: "JW",
+            image: "/assets/images/board/jan-wyatt.webp"
         }
     ];
 
@@ -153,6 +163,7 @@ const Trustees: React.FC = () => {
             bio: "Dr. Salomon-Fernández leads Urban College with a deep commitment to accessible, multilingual education. She brings both operational leadership at the executive level and college presidencies in Massachusetts and New Jersey. A graduate of Boston Latin School who emigrated from Haiti, she embodies the transformative power of education.",
             education: "Ph.D., Boston College; M.Sc., London School of Economics; B.A., UMass Boston",
             avatarInitials: "YS",
+            image: "/assets/images/staff/yves-salomon-fernandez.jpg",
             readMorePath: "/president"
         },
         {
@@ -161,7 +172,8 @@ const Trustees: React.FC = () => {
             expertise: "Nonprofit Leadership, Anti-Poverty Initiatives, Early Childhood Education",
             bio: "Sharon Scott-Chandler became President and CEO of Action for Boston Community Development (ABCD)—Urban College's founding organization—in 2022. She previously served as EVP/COO and VP of ABCD Head Start and Children's Services. Sharon also directed Child Care Choices of Boston and worked as an Assistant Attorney General for Massachusetts.",
             education: "J.D., Northeastern University School of Law; B.A., Tufts University",
-            avatarInitials: "SS"
+            avatarInitials: "SS",
+            image: "/assets/images/board/sharon-scott-chandler.jpg"
         }
     ];
 
@@ -172,7 +184,8 @@ const Trustees: React.FC = () => {
             expertise: "Social Work, Student Mentorship, Academic Instruction",
             bio: "Adzele has been a faculty member at Urban College since 2019. She is an Urban College alumna—a powerful testament to our mission. Her background includes work as a Project Coordinator, Youth Specialist, and in-home therapist.",
             education: "M.S.W. and B.S.W., Wheelock College; A.A., Urban College of Boston",
-            avatarInitials: "AB"
+            avatarInitials: "AB",
+            image: "/assets/images/board/adzele-benoit.webp"
         },
         {
             name: "Anneisha Thompson",
@@ -180,7 +193,8 @@ const Trustees: React.FC = () => {
             expertise: "Student Voices, Shared Governance, Campus Leadership",
             bio: "Anneisha represents the student voice on the Board of Trustees, ensuring that student perspectives inform governance decisions. Her participation reflects Urban College's commitment to student-centered leadership at every level of the institution.",
             education: "Student Leader, Urban College of Boston",
-            avatarInitials: "AT"
+            avatarInitials: "AT",
+            image: "/assets/images/board/anneisha-thompson.jpg"
         }
     ];
 
@@ -285,8 +299,12 @@ const Trustees: React.FC = () => {
                                     <div className="space-y-4">
                                         <div className="flex items-center gap-4">
                                             {/* Stylized Initial Avatar */}
-                                            <div className="w-12 h-12 rounded-xl bg-ucb-blue/10 text-ucb-blue font-display font-black text-lg flex items-center justify-center shrink-0">
-                                                {member.avatarInitials}
+                                            <div className="w-12 h-12 rounded-xl bg-ucb-blue/10 text-ucb-blue font-display font-black text-lg flex items-center justify-center shrink-0 overflow-hidden">
+                                                {member.image ? (
+                                                    <img src={member.image} alt={member.name} className="w-full h-full object-cover object-top" />
+                                                ) : (
+                                                    member.avatarInitials
+                                                )}
                                             </div>
                                             <div>
                                                 <h3 className="font-display font-bold text-base text-ucb-blue leading-snug">{member.name}</h3>
@@ -328,8 +346,12 @@ const Trustees: React.FC = () => {
                                     <div className="space-y-4">
                                         <div className="flex items-center gap-4">
                                             {/* Stylized Avatar */}
-                                            <div className="w-12 h-12 rounded-xl bg-ucb-teal/10 text-ucb-teal font-display font-black text-lg flex items-center justify-center shrink-0">
-                                                {member.avatarInitials}
+                                            <div className="w-12 h-12 rounded-xl bg-ucb-teal/10 text-ucb-teal font-display font-black text-lg flex items-center justify-center shrink-0 overflow-hidden">
+                                                {member.image ? (
+                                                    <img src={member.image} alt={member.name} className="w-full h-full object-cover object-top" />
+                                                ) : (
+                                                    member.avatarInitials
+                                                )}
                                             </div>
                                             <div>
                                                 <h3 className="font-display font-bold text-base text-ucb-blue leading-snug">{member.name}</h3>
@@ -370,8 +392,12 @@ const Trustees: React.FC = () => {
                                 <div className="bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-all p-6 flex flex-col justify-between w-full">
                                     <div className="space-y-4">
                                         <div className="flex items-center gap-4">
-                                            <div className="w-12 h-12 rounded-xl bg-ucb-blue/10 text-ucb-blue font-display font-black text-lg flex items-center justify-center shrink-0">
-                                                {member.avatarInitials}
+                                            <div className="w-12 h-12 rounded-xl bg-ucb-blue/10 text-ucb-blue font-display font-black text-lg flex items-center justify-center shrink-0 overflow-hidden">
+                                                {member.image ? (
+                                                    <img src={member.image} alt={member.name} className="w-full h-full object-cover object-top" />
+                                                ) : (
+                                                    member.avatarInitials
+                                                )}
                                             </div>
                                             <div>
                                                 <h3 className="font-display font-bold text-base text-ucb-blue leading-snug">{member.name}</h3>
@@ -423,8 +449,12 @@ const Trustees: React.FC = () => {
                                 <div className="bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-all p-6 flex flex-col justify-between w-full">
                                     <div className="space-y-4">
                                         <div className="flex items-center gap-4">
-                                            <div className="w-12 h-12 rounded-xl bg-ucb-teal/10 text-ucb-teal font-display font-black text-lg flex items-center justify-center shrink-0">
-                                                {member.avatarInitials}
+                                            <div className="w-12 h-12 rounded-xl bg-ucb-teal/10 text-ucb-teal font-display font-black text-lg flex items-center justify-center shrink-0 overflow-hidden">
+                                                {member.image ? (
+                                                    <img src={member.image} alt={member.name} className="w-full h-full object-cover object-top" />
+                                                ) : (
+                                                    member.avatarInitials
+                                                )}
                                             </div>
                                             <div>
                                                 <h3 className="font-display font-bold text-base text-ucb-blue leading-snug">{member.name}</h3>
