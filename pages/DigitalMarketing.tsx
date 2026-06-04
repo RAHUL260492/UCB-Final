@@ -36,7 +36,7 @@ const benefits: ProgramBenefit[] = [
     { title: "Financial Aid", desc: "Personalized aid plans & options", icon: DollarSign },
     { title: "Build a Portfolio", desc: "Graduate with professional marketing projects", icon: Briefcase },
     { title: "No Textbooks", desc: "No hidden fees, everything you need is included", icon: BookOpen },
-    { title: "Bilingual Options", desc: "Study in English or Spanish", icon: MessageCircleIcon },
+    { title: "Bilingual Options", desc: "Learn in English and/or Spanish", icon: MessageCircleIcon },
 ];
 
 const stats: ProgramStat[] = [

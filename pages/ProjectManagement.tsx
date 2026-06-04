@@ -36,7 +36,7 @@ const benefits: ProgramBenefit[] = [
     { title: "Fast Track", desc: "Finish in as little as one year (only 18 credits!)", icon: Clock },
     { title: "100% Online", desc: "Study 100% online: Learn on a schedule that fits into your busy life", icon: Globe },
     { title: "Financial Aid", desc: "Personalized aid plans & options", icon: CheckCircle },
-    { title: "Bilingual Options", desc: "Study in English or Spanish: Choose the language that works for you", icon: MessageCircleIcon },
+    { title: "Bilingual Options", desc: "Learn in English and/or Spanish", icon: MessageCircleIcon },
     { title: "No Textbooks", desc: "No textbooks or hidden fees: Everything you need is included", icon: BookOpen },
     { title: "ESL Support", desc: "ESL support available: Tailored to each student's needs", icon: Users },
     { title: "High Demand", desc: "A wide variety of career paths: Project management skills are in demand across every industry", icon: Award }

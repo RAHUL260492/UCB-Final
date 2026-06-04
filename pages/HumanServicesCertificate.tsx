@@ -36,7 +36,7 @@ const benefits: ProgramBenefit[] = [
     { title: "Fast Track", desc: "Finish in as little as 9 months (only 21 credits)", icon: Clock },
     { title: "100% Online", desc: "Learn on a schedule that fits into your busy life", icon: Globe },
     { title: "Financial Aid", desc: "Personalized aid plans & options", icon: CheckCircle },
-    { title: "Bilingual Options", desc: "Study in English or Spanish: Choose the language that works for you", icon: MessageCircleIcon },
+    { title: "Bilingual Options", desc: "Learn in English and/or Spanish", icon: MessageCircleIcon },
     { title: "ESL Support", desc: "ESL support available: Tailored to each student's needs", icon: Users },
     { title: "Access Internships", desc: "Access internships: Through our network of human service agencies, childcare programs, and mental health organizations", icon: BookOpen }
 ];

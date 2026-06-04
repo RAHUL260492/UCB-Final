@@ -35,7 +35,7 @@ const benefits: ProgramBenefit[] = [
     { title: "Fast Track", desc: "Finish in as little as one year (only 18 credits!)", icon: Clock },
     { title: "100% Online", desc: "Learn on a schedule that fits into your busy life", icon: Globe },
     { title: "Financial Aid", desc: "Personalized aid plans & options", icon: DollarSign },
-    { title: "Bilingual Options", desc: "Study in English and/or Spanish", icon: MessageCircleIcon },
+    { title: "Bilingual Options", desc: "Learn in English and/or Spanish", icon: MessageCircleIcon },
     { title: "Transfer Credits", desc: "Credits transfer toward an associate or bachelor's degree", icon: TrendingUp },
     { title: "ESL Support", desc: "Tailored to each student's needs", icon: BookOpen },
     { title: "Career Growth", desc: "Build skills for career advancement and financial security", icon: Briefcase },

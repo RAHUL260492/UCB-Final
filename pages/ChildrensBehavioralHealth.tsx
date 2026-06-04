@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Clock, Globe, DollarSign, TrendingUp, Award, Briefcase, CheckCircle } from 'lucide-react';
+import { Clock, Globe, DollarSign, TrendingUp, Award, Briefcase, CheckCircle, Calendar } from 'lucide-react';
 import ProgramPageLayout, { ProgramBenefit, ProgramStat } from '../components/ProgramPageLayout';
 import SEO from '../components/SEO';
 import { buildCourseJsonLd, buildBreadcrumbJsonLd } from '../components/seo-data';
@@ -33,8 +33,8 @@ const benefits: ProgramBenefit[] = [
     { title: "100% Online", desc: "Study 100% online at your own pace", icon: Globe },
     { title: "Financial Aid", desc: "Personalized aid plans & options", icon: DollarSign },
     { title: "RBT® Exam Prep", desc: "Prepare to pass the Registered Behavior Technician exam", icon: Award },
-    { title: "Accelerate CHW Cert.", desc: "Apply for MA CHW certification with only 2,000 hours of experience", icon: TrendingUp },
-    { title: "Bilingual Options", desc: "Learn in English or Spanish", icon: MessageCircleIcon },
+    { title: "Accelerated CHW Path", desc: "Apply for MA CHW certification with only 2,000 hours of experience", icon: TrendingUp },
+    { title: "Bilingual Options", desc: "Learn in English and/or Spanish", icon: MessageCircleIcon },
 ];
 
 const stats: ProgramStat[] = [
@@ -42,7 +42,9 @@ const stats: ProgramStat[] = [
     { label: 'Time', value: '9 Months', icon: Clock, sub: 'To Complete' },
     { label: 'Format', value: 'Online', icon: Globe, sub: 'Fully Online' },
     { label: 'Cost', value: '$317', icon: DollarSign, sub: 'Per Credit' },
+    { label: 'Start', value: 'Rolling', icon: Calendar, sub: 'Start Date' },
     { label: 'Aid', value: 'Yes', icon: Award, sub: 'Financial Aid Available' },
+    { label: 'Language', value: 'Bilingual', icon: Globe, sub: 'English & Spanish' },
     { label: 'Outcome', value: 'Job Ready', icon: CheckCircle, sub: 'Career Focused' },
 ];
 
@@ -132,6 +134,7 @@ const ChildrensBehavioralHealth: React.FC = () => {
 
             forWhom={[
                 "Wanting to launch a career in behavioral health",
+                "Passionate about working with and supporting children",
                 "Seeking to become an RBT or Community Health Worker",
                 "Looking for an online program that fits a busy schedule",
                 "Planning to earn an Associate Degree",

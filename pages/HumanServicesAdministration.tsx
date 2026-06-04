@@ -38,7 +38,7 @@ const benefits: ProgramBenefit[] = [
     { title: "Growing Field", desc: "8% job growth—faster than the national average!", icon: TrendingUp },
     { title: "100% Online", desc: "Study 100% online: Learn on a schedule that fits into your busy life", icon: Globe },
     { title: "Financial Aid", desc: "Personalized aid plans & options", icon: CheckCircle },
-    { title: "Bilingual Options", desc: "Study in English or Spanish: Choose the language that works for you", icon: MessageCircleIcon },
+    { title: "Bilingual Options", desc: "Learn in English and/or Spanish", icon: MessageCircleIcon },
     { title: "ESL Support", desc: "ESL support available: Tailored to each student's needs", icon: Users },
     { title: "Hands-On Internships", desc: "Hands-on internships: Gain real-world experience before you graduate", icon: Briefcase },
     { title: "Pathway to Licensure", desc: "Qualify to apply for Licensed Social Work Associate (LSWA) credential in Massachusetts", icon: Award }

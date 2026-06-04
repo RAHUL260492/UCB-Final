@@ -38,7 +38,7 @@ const benefits: ProgramBenefit[] = [
     { title: "Financial Aid", desc: "Personalized aid plans & options", icon: DollarSign },
     { title: "Built-In CHW Credential", desc: "Earn your Community Health Worker credential: Higher salary and career growth", icon: Award },
     { title: "Credit for Prior Learning", desc: "Your experience counts!", icon: TrendingUp },
-    { title: "Bilingual Options", desc: "ESL support available: Tailored to each student's needs", icon: MessageCircleIcon },
+    { title: "Bilingual Options", desc: "Learn in English and/or Spanish", icon: MessageCircleIcon },
     { title: "Booming Field", desc: "58% projected job growth in Massachusetts!", icon: TrendingUp },
     { title: "Accelerated CHW Path", desc: "Apply for Massachusetts CHW certification with only 2,000 hours of work experience instead of 4,000.", icon: Clock },
 ];
