@@ -20,8 +20,8 @@ const courses = [
 ];
 
 const outcomes = [
-    { title: "Registered Behavior Technician (RBT)", desc: "Provide behavioral therapy to children with autism. Avg. salary: $53,298" },
-    { title: "Community Health Worker", desc: "Connect families with vital behavioral health resources. Avg. salary: $44,057" },
+    { title: "Registered Behavior Technician (RBT)", desc: "Provide behavioral therapy to children with autism." },
+    { title: "Community Health Worker", desc: "Connect families with vital behavioral health resources. MA average: $55,090/year (BLS OEWS, May 2023)." },
     { title: "Residential Counselor", desc: "Support children in residential treatment and group home settings." },
     { title: "Youth Worker", desc: "Guide young people through behavioral and emotional challenges." },
     { title: "Behavioral Health Specialist", desc: "Work in schools, clinics, and community organizations." },
@@ -129,6 +129,10 @@ const ChildrensBehavioralHealth: React.FC = () => {
             outcomes={outcomes}
             outcomesIntro="This certificate prepares you for career-building roles in one of the fastest-growing fields. High demand across Massachusetts means opportunities are waiting for you!"
             outcomeTags={['Healthcare', 'Behavioral Health', 'Youth Worker', 'Education']}
+            outcomeSources={[
+                { label: 'BLS OEWS May 2023: Community Health Workers (21-1094)', url: 'https://www.bls.gov/oes/2023/may/oes211094.htm' },
+                { label: 'MA Health Policy Commission: Behavioral Health Workforce', url: 'https://masshpc.gov/bh-workforce' },
+            ]}
 
             stats={stats}
 

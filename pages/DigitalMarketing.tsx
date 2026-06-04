@@ -24,8 +24,8 @@ const courses = [
 ];
 
 const outcomes = [
-    { title: "Digital Marketing Coordinator", desc: "Manage online marketing campaigns. Average Salary: $51,000+" },
-    { title: "Social Media Specialist", desc: "Lead social media strategy. Projected Growth: 10% (faster than average)" },
+    { title: "Digital Marketing Coordinator", desc: "Manage online marketing campaigns. Entry-level MA marketing specialists earn $52,070+ (10th percentile); MA median $93,430 (BLS OEWS, May 2024)." },
+    { title: "Social Media Specialist", desc: "Lead social media strategy. Projected growth: 7% for marketing specialists, 2024–2034—faster than average (BLS)." },
     { title: "Content Creator", desc: "Design visuals and write copy that builds brand loyalty." },
     { title: "Marketing Assistant", desc: "Support digital marketing campaigns and business strategies." }
 ];
@@ -130,6 +130,10 @@ const DigitalMarketing: React.FC = () => {
             outcomes={outcomes}
             outcomesIntro="The digital marketing field is expanding rapidly as every business needs a strong online presence. This certificate prepares you for high-growth roles."
             outcomeTags={['Marketing', 'Social Media', 'Content Creation', 'SEO']}
+            outcomeSources={[
+                { label: 'O*NET MA wages (BLS OEWS May 2024), SOC 13-1161', url: 'https://www.onetonline.org/link/localwages/13-1161.00?st=MA' },
+                { label: 'BLS OOH: Market Research Analysts & Marketing Specialists', url: 'https://www.bls.gov/ooh/business-and-financial/market-research-analysts.htm' },
+            ]}
 
             stats={stats}
 

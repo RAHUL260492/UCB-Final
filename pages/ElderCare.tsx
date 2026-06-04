@@ -24,7 +24,7 @@ const courses = [
 ];
 
 const outcomes = [
-    { title: "Community Health Worker", desc: "Connect seniors with vital health resources. Average salary: $55,090/year in Massachusetts!" },
+    { title: "Community Health Worker", desc: "Connect seniors with vital health resources. MA average: $55,090/year (BLS OEWS, May 2023)." },
     { title: "Case Manager", desc: "Coordinate care and services for older adults." },
     { title: "Residential Support Specialist", desc: "Support seniors in assisted living and residential settings." },
     { title: "Home Health Aide", desc: "Provide compassionate in-home care." },
@@ -39,7 +39,7 @@ const benefits: ProgramBenefit[] = [
     { title: "Built-In CHW Credential", desc: "Earn your Community Health Worker credential: Higher salary and career growth", icon: Award },
     { title: "Credit for Prior Learning", desc: "Your experience counts!", icon: TrendingUp },
     { title: "Bilingual Options", desc: "Learn in English and/or Spanish", icon: MessageCircleIcon },
-    { title: "Booming Field", desc: "58% projected job growth in Massachusetts!", icon: TrendingUp },
+    { title: "Booming Field", desc: "Home health & personal care aide jobs are projected to grow 17% nationally (BLS, 2024–34)", icon: TrendingUp },
     { title: "Accelerated CHW Path", desc: "Apply for Massachusetts CHW certification with only 2,000 hours of work experience instead of 4,000.", icon: Clock },
 ];
 
@@ -147,7 +147,7 @@ const ElderCare: React.FC = () => {
                 <p>
                     Transform lives while building your own career. Urban College of Boston's Elder Care Certificate empowers you to master the skills that help older adults and their families thrive—all while fitting into your busy life.
                     <br className="hidden md:block" />
-                    <span className="text-ucb-blue font-semibold">With 58% projected job growth</span> in Massachusetts, you'll graduate ready to succeed in one of the state's fastest-growing fields!
+                    <span className="text-ucb-blue font-semibold">With 17% projected national job growth for home health and personal care aides</span> (BLS, 2024–34), you'll graduate ready to succeed in one of the fastest-growing fields!
                     <br className="hidden md:block" />
                     <span className="text-ucb-green font-semibold">BONUS:</span> This program uniquely prepares you to earn the Community Health Worker credential—higher starting salary and eligibility for insurance reimbursement!
                 </p>
@@ -162,6 +162,10 @@ const ElderCare: React.FC = () => {
             outcomes={outcomes}
             outcomesIntro="This certificate prepares you for career-building roles in one of Massachusetts' fastest-growing fields."
             outcomeTags={['Healthcare', 'Elder Care', 'Case Management', 'Community']}
+            outcomeSources={[
+                { label: 'BLS OEWS May 2023: Community Health Workers (21-1094)', url: 'https://www.bls.gov/oes/2023/may/oes211094.htm' },
+                { label: 'BLS OOH: Home Health & Personal Care Aides', url: 'https://www.bls.gov/ooh/healthcare/home-health-aides-and-personal-care-aides.htm' },
+            ]}
 
             stats={stats}
 
