@@ -7,7 +7,7 @@ import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 import { 
     Coins, GraduationCap, Briefcase, Award, CheckCircle, 
     ArrowRight, Globe, Info, HelpCircle, ChevronRight, 
-    Play, Calendar, Calculator, Sparkles, BookOpen, ShieldCheck
+    Calendar, Calculator, Sparkles, BookOpen, ShieldCheck
 } from 'lucide-react';
 
 interface MythCard {
@@ -136,6 +136,24 @@ const FinancialServices: React.FC = () => {
                                 </div>
                             </ScrollAnimation>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Financial Aid Outcomes */}
+            <section className="py-12 bg-ucb-blue text-white">
+                <div className="container mx-auto px-6 max-w-5xl">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+                        {[
+                            { value: '99%', label: 'Graduate Debt-Free' },
+                            { value: '11%', label: 'Of Students Have Out-of-Pocket Cost' },
+                            { value: '$1,680', label: 'Average Out-of-Pocket Cost' },
+                        ].map((stat, idx) => (
+                            <ScrollAnimation key={idx} variant="fade-up" delay={`${idx * 0.1}s`}>
+                                <span className="block text-4xl md:text-5xl font-display font-black text-ucb-gold">{stat.value}</span>
+                                <span className="block text-xs uppercase tracking-wider text-blue-100 font-bold mt-2 leading-relaxed">{stat.label}</span>
+                            </ScrollAnimation>
+                        ))}
                     </div>
                 </div>
             </section>
@@ -398,14 +416,15 @@ const FinancialServices: React.FC = () => {
                             Watch our brief walkthrough detailing state scholarships, federal pell grants, and financial services counseling.
                         </p>
                         
-                        <div className="relative aspect-video max-w-2xl mx-auto rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-ucb-blue group cursor-pointer">
-                            <div className="absolute inset-0 bg-black/45 group-hover:bg-black/30 transition-colors z-10 flex flex-col items-center justify-center gap-4 text-white">
-                                <div className="w-16 h-16 rounded-full bg-ucb-orange text-white flex items-center justify-center group-hover:scale-110 group-hover:bg-ucb-orange-glow transition-all shadow-xl">
-                                    <Play className="w-6 h-6 fill-current ml-1" />
-                                </div>
-                                <span className="font-display font-bold text-sm tracking-wide">Play Video Guide</span>
-                            </div>
-                            <div className="absolute inset-0 z-0 bg-cover bg-center opacity-40" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200")' }}></div>
+                        <div className="relative aspect-video max-w-2xl mx-auto rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-ucb-blue">
+                            <iframe
+                                className="absolute inset-0 w-full h-full"
+                                src="https://www.youtube.com/embed/G_TSdC53Gsk"
+                                title="How to Attend Urban College for Low or No Cost"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerPolicy="strict-origin-when-cross-origin"
+                                allowFullScreen
+                            ></iframe>
                         </div>
                     </ScrollAnimation>
                 </div>
@@ -504,8 +523,10 @@ const FinancialServices: React.FC = () => {
                                 Calculate your custom educational costs and view personalized eligibility summaries.
                             </p>
                             <div className="pt-2">
-                                <a 
-                                    href="#" 
+                                <a
+                                    href="https://calculator.studentaidprocess.com/calculator/(S(excftj5fpuzvraho1a4vufiv))/netpricecalculator?corpid=161"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="inline-flex items-center gap-1.5 text-xs font-bold text-ucb-gold hover:text-white transition-colors"
                                 >
                                     Calculate Your Cost <ChevronRight className="w-4 h-4" />
