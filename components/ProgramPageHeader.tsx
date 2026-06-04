@@ -34,7 +34,7 @@ const ProgramPageHeader: React.FC<ProgramPageHeaderProps> = ({
     return (
         <section
             className="relative flex flex-col justify-end overflow-hidden text-white pt-8 bg-ucb-blue"
-            style={{ minHeight: '280px' }}
+            style={{ minHeight: '340px' }}
         >
             {/* Header image with brand gradient overlays for readability */}
             <div className="absolute inset-0 bg-ucb-blue" />
@@ -44,8 +44,7 @@ const ProgramPageHeader: React.FC<ProgramPageHeaderProps> = ({
                     style={{ backgroundImage: `url("${imageSrc}")` }}
                 />
             )}
-            <div className="absolute inset-0 bg-gradient-to-t from-ucb-blue via-ucb-blue/75 to-ucb-blue/30" />
-            <div className="absolute inset-0 bg-gradient-to-r from-ucb-blue/70 via-ucb-blue/30 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-ucb-blue/90 via-ucb-blue/55 to-ucb-blue/25" />
 
             {/* Floating decorative orb */}
             <div
