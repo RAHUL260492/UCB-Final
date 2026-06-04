@@ -25,8 +25,8 @@ const courses = [
 
 const outcomes = [
     { title: "Administrative or Office Support", desc: "Manage schedules, communications, and daily operations. Competitive salary with strong demand." },
-    { title: "Operations and Management Support", desc: "Help teams run smoothly and efficiently." },
-    { title: "Bookkeeping or Business Assistant", desc: "Manage financial records and support business functions." },
+    { title: "Operations and Management Support", desc: "Help teams run smoothly and efficiently. 6% projected job growth for General Managers—higher than the national average!" },
+    { title: "Bookkeeping or Business Assistant", desc: "Manage financial records and support business functions. Average salary for a Bookkeeper in Massachusetts is $65,000!" },
     { title: "Entry-Level Leadership Roles", desc: "Take on supervisory responsibilities." },
     { title: "Entrepreneurship or Small Business Support", desc: "Start or support your own business." }
 ];
@@ -102,7 +102,7 @@ const BusinessCertificate: React.FC = () => {
                 <p>
                     Develop the actual business skills that will enable you to get a job, increase your salary, or earn a promotion—all without interrupting your life.
                     <br className="hidden md:block" />
-                    <span className="text-ucb-blue font-semibold">Urban College of Boston's Business Certificate Program</span> is a fully online, short-term program designed for modern working adults.
+                    <span className="text-ucb-blue font-semibold">Urban College of Boston's Business Certificate Program</span> is a fully online, short-term program designed for modern working students.
                 </p>
             }
 
