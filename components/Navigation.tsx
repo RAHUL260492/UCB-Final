@@ -116,7 +116,7 @@ const Navigation: React.FC = () => {
       ]
     },
     { name: 'Workforce', path: '/workforce', className: 'hidden lg:block' },
-    { name: 'Donate', path: '#', className: 'hidden xl:block' },
+    { name: 'Donate', path: '/donate', className: 'hidden xl:block' },
     { 
       name: 'News', 
       path: '/blog',
@@ -270,8 +270,8 @@ const Navigation: React.FC = () => {
                 )}
               </div>
             ))}
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className={`border-2 px-3 xl:px-4 2xl:px-6 py-1.5 xl:py-2 rounded-full transition-all duration-300 font-bold hover:shadow-lg whitespace-nowrap ${useWhiteNav
                 ? 'border-white text-white hover:bg-white hover:text-ucb-blue'
                 : isScrolled
@@ -280,7 +280,7 @@ const Navigation: React.FC = () => {
                 }`}
             >
               Contact
-            </a>
+            </Link>
             {/* Desktop Search */}
             <button
               onClick={() => { setSearchOpen(!searchOpen); if(mobileMenuOpen) setMobileMenuOpen(false); }}

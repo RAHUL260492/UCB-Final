@@ -41,6 +41,8 @@ import Commencement from './pages/Commencement';
 import CampusFacilities from './pages/CampusFacilities';
 import CollegeServicesAndResources from './pages/CollegeServicesAndResources';
 import Workforce from './pages/Workforce';
+import Donate from './pages/Donate';
+import Contact from './pages/Contact';
 
 // ScrollToTop component to handle scroll on route change
 const ScrollToTop = () => {
@@ -70,6 +72,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/donate" element={<Donate />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="/mission" element={<Mission />} />
             <Route path="/president" element={<President />} />
             <Route path="/office-of-the-president" element={<President />} />

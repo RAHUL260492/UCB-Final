@@ -102,6 +102,16 @@ export const PAGE_META: Record<string, PageMeta> = {
     description: 'Founded in 1993, Urban College of Boston is a private, nonprofit institution serving working students with affordable, multilingual associate degrees and certificates.',
     path: '/about',
   },
+  contact: {
+    title: 'Contact Us',
+    description: 'Get in touch with Urban College of Boston — campus address, administration hours, and department contacts for admissions, advising, registration, and financial aid.',
+    path: '/contact',
+  },
+  donate: {
+    title: 'Donate',
+    description: 'Support Urban College of Boston. Your gift empowers determined, working students with accessible, affordable, multilingual higher education.',
+    path: '/donate',
+  },
   mission: {
     title: 'Our Mission',
     description: "Urban College's mission is to provide accessible, affordable, multilingual higher education that empowers Boston's working students, parents, and immigrants.",
