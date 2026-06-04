@@ -5,7 +5,7 @@ import ScrollAnimation from '../components/ScrollAnimation';
 import SEO from '../components/SEO';
 import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 import { 
-    Users, Mail, Award, GraduationCap, Globe, Clock, CheckCircle, 
+    Mail, Award, GraduationCap, Globe, Clock, CheckCircle,
     ArrowRight, ChevronDown, ChevronRight, Briefcase, Building, ShieldCheck,
     Calendar, Heart, Quote
 } from 'lucide-react';
@@ -117,12 +117,6 @@ const DEPARTMENTS = [
         staff: [
             { name: "Rosana Perella", role: "Director of Student Services and Support" }
         ]
-    },
-    {
-        name: "Institutional Research",
-        staff: [
-            { name: "Judith Dutill", role: "Director of Institutional Research and Assessment" }
-        ]
     }
 ];
 
@@ -180,19 +174,22 @@ const Team: React.FC = () => {
                 <div className="container mx-auto px-6 max-w-5xl">
                     <div className="text-center mb-12">
                         <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs mb-2 block">Executive Office</span>
-                        <h2 className="text-3xl font-display font-bold text-ucb-blue">Office of the President</h2>
+                        <h2 className="text-3xl font-display font-bold text-ucb-blue">
+                            <Link to="/office-of-the-president" className="hover:text-ucb-orange transition-colors">Office of the President</Link>
+                        </h2>
                     </div>
 
                     <ScrollAnimation variant="fade-up">
                         <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-8 p-8 items-center">
-                            {/* President Headshot Placeholder */}
+                            {/* President Headshot */}
                             <div className="lg:col-span-4 flex justify-center">
                                 <div className="relative group">
                                     <div className="absolute inset-0 bg-gradient-to-tr from-ucb-blue to-ucb-teal opacity-10 rounded-2xl group-hover:opacity-20 transition-all duration-300" />
-                                    <div className="w-56 h-56 rounded-2xl bg-gradient-to-tr from-ucb-blue via-blue-900 to-ucb-teal text-white flex flex-col justify-center items-center font-display font-bold shadow-md relative overflow-hidden group-hover:scale-105 transition-transform duration-300">
-                                        <Users className="w-20 h-20 opacity-30 mb-2" />
-                                        <span className="text-xs uppercase tracking-widest text-ucb-gold font-black">Dr. Yves S.F.</span>
-                                    </div>
+                                    <img
+                                        src="/assets/images/staff/yves-salomon-fernandez.jpg"
+                                        alt="Dr. Yves Salomon-Fernández, President of Urban College of Boston"
+                                        className="w-56 h-56 rounded-2xl object-cover object-top shadow-md relative group-hover:scale-105 transition-transform duration-300"
+                                    />
                                 </div>
                             </div>
 
