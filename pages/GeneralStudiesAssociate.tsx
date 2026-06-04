@@ -49,7 +49,7 @@ const stats: ProgramStat[] = [
     { label: 'Cost', value: '$317', icon: DollarSign, sub: 'Per Credit' },
     { label: 'Start', value: 'Rolling', icon: Calendar, sub: 'Start Date' },
     { label: 'Aid', value: 'Yes', icon: GraduationCap, sub: 'Financial Aid' },
-    { label: 'Language', value: 'English', icon: Globe, sub: 'English only' },
+    { label: 'Language', value: 'English', icon: Globe, sub: 'English courses' },
     { label: 'Outcome', value: 'Job Ready', icon: CheckCircle, sub: 'Career Focused' },
 ];
 
@@ -152,7 +152,7 @@ const GeneralStudiesAssociate: React.FC = () => {
             pathwayTitle="Build Toward Your Future"
             pathwayDescription="The General Studies Associate is a stackable, for-credit program. Credits may transfer toward an associate or bachelor's degree."
             pathwaySteps={[
-                { label: 'Certificate', credits: 'varies', active: false },
+                { label: 'Certificate', credits: '21 Credits', active: false },
                 { label: 'AA in General Studies', credits: '60 Credits', active: true },
                 { label: "Bachelor's Degree", credits: 'Transfer Ready', active: false },
             ]}

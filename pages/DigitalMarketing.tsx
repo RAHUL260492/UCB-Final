@@ -146,7 +146,7 @@ const DigitalMarketing: React.FC = () => {
             ]}
 
             pathwayTitle="Build Toward Your Future"
-            pathwayDescription="Our 'stackable' for-credit program means your hard work counts toward more than just a certificate."
+            pathwayDescription="Our 'stackable' for-credit program means your hard work counts toward more than just a certificate. Your certificate is your first step—not your last!"
             pathwaySteps={[
                 { label: 'Certificate', credits: '18 Credits', active: false },
                 { label: 'Associate Degree', credits: '60 Credits', active: true },

@@ -127,7 +127,7 @@ const HumanServicesAdministration: React.FC = () => {
                     ]
                 },
                 {
-                    heading: "Ethical & Leadership",
+                    heading: "Ethics & Leadership",
                     icon: Award,
                     items: [
                         "Understand human behavior and apply it to help people",
