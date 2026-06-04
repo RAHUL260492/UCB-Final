@@ -22,7 +22,7 @@ const courses = [
 ];
 
 const outcomes = [
-    { title: "Case Manager", desc: "Coordinate care and connect clients to essential services. (Median salary: $46,340 in Massachusetts—ranked #3 nationwide! 8% projected job growth—faster than average!)" },
+    { title: "Case Manager", desc: "Coordinate care and connect clients to essential services. (MA average: $48,460/year—among the highest-paying states; 8% projected MA growth, 2022–2032.)" },
     { title: "Social Services Assistant", desc: "Support social workers in helping clients navigate services" },
     { title: "Behavior Technician", desc: "Apply intervention strategies to support individuals with behavioral needs" },
     { title: "Direct Support Professional", desc: "Provide hands-on support to individuals with disabilities or special needs" },
@@ -31,8 +31,8 @@ const outcomes = [
 ];
 
 const benefits: ProgramBenefit[] = [
-    { title: "High MA Salaries", desc: "Earn $46,340/year as a Social and Human Services Assistant in Massachusetts (ranked #3 nationwide!)", icon: DollarSign },
-    { title: "Growing Field", desc: "8% job growth—faster than the national average!", icon: TrendingUp },
+    { title: "High MA Salaries", desc: "Social and human service assistants in MA earn an average of $48,460/year—among the highest-paying states (BLS OEWS, May 2023)", icon: DollarSign },
+    { title: "Growing Field", desc: "8% projected job growth in Massachusetts (2022–2032)—faster than the national average", icon: TrendingUp },
     { title: "Fast Track", desc: "Finish in as little as 9 months (only 21 credits)", icon: Clock },
     { title: "100% Online", desc: "Learn on a schedule that fits into your busy life", icon: Globe },
     { title: "Financial Aid", desc: "Personalized aid plans & options", icon: CheckCircle },
@@ -137,6 +137,10 @@ const HumanServicesCertificate: React.FC = () => {
             outcomes={outcomes}
             outcomesIntro="Human services is one of the fastest-growing fields in Massachusetts. You'll graduate ready for meaningful, career-building roles where you help people every day. Work in hospitals, clinics, nonprofits, schools, government agencies, or community organizations. Your skills are in high demand."
             outcomeTags={['Social Services', 'Human Services', 'Case Management', 'Community']}
+            outcomeSources={[
+                { label: 'BLS OEWS May 2023: Social & Human Service Assistants (21-1093)', url: 'https://www.bls.gov/oes/2023/may/oes211093.htm' },
+                { label: 'Projections Central (MA, 2022–2032), via O*NET', url: 'https://www.onetonline.org/link/localtrends/21-1093.00?st=MA' },
+            ]}
 
             stats={stats}
 

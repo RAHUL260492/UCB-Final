@@ -24,8 +24,8 @@ const courses = [
 ];
 
 const outcomes = [
-    { title: "Customer Service Representative", desc: "Assist customers and solve problems." },
-    { title: "Administrative Assistant", desc: "Support office operations and management." },
+    { title: "Customer Service Representative", desc: "Assist customers and solve problems. MA median $48,060/year (BLS OEWS, May 2024)." },
+    { title: "Administrative Assistant", desc: "Support office operations and management. MA median $53,690/year (BLS OEWS, May 2024)." },
     { title: "Office Coordinator", desc: "Manage daily office activities and schedules." },
     { title: "Data Entry Specialist", desc: "Input and manage critical business information." },
     { title: "Bank Teller", desc: "Assist customers with financial transactions." },
@@ -132,6 +132,10 @@ const GeneralStudiesCertificate: React.FC = () => {
             outcomes={outcomes}
             outcomesIntro="The General Studies Certificate provides a solid foundation for a variety of entry-level careers and further education."
             outcomeTags={['General', 'Business', 'Administrative', 'Customer Service']}
+            outcomeSources={[
+                { label: 'BLS OOH: Customer Service Representatives', url: 'https://www.bls.gov/ooh/office-and-administrative-support/customer-service-representatives.htm' },
+                { label: 'BLS OOH: Secretaries & Administrative Assistants', url: 'https://www.bls.gov/ooh/office-and-administrative-support/secretaries-and-administrative-assistants.htm' },
+            ]}
 
             stats={stats}
 

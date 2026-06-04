@@ -24,7 +24,7 @@ const courses = [
 ];
 
 const outcomes = [
-    { title: "Preschool Teacher", desc: "Guide young children through their most critical developmental years. Average salary: $46,330 in MA." },
+    { title: "Preschool Teacher", desc: "Guide young children through their most critical developmental years. MA average: $46,330 (BLS OEWS, May 2023)." },
     { title: "Childcare Worker", desc: "Provide nurturing care and education in childcare centers." },
     { title: "Family Childcare Provider", desc: "Start your own home-based childcare business." },
     { title: "Teacher Assistant", desc: "Support lead teachers in early education classrooms." },
@@ -131,8 +131,12 @@ const EarlyChildhoodEducationCertificate: React.FC = () => {
 
             courses={courses}
             outcomes={outcomes}
-            outcomesIntro="Prepare for a rewarding career guiding young children through their most critical developmental years. (4% projected growth for Preschool Teachers!)"
+            outcomesIntro="Prepare for a rewarding career guiding young children through their most critical developmental years. (4% projected growth for Preschool Teachers, 2024–2034—BLS.)"
             outcomeTags={['Childcare', 'Teaching', 'Early Education', 'Development']}
+            outcomeSources={[
+                { label: 'BLS OEWS May 2023: Preschool Teachers (25-2011)', url: 'https://www.bls.gov/oes/2023/may/oes252011.htm' },
+                { label: 'BLS OOH: Preschool Teachers', url: 'https://www.bls.gov/ooh/education-training-and-library/preschool-teachers.htm' },
+            ]}
 
             stats={stats}
 

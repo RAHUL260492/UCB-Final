@@ -24,7 +24,7 @@ const courses = [
 ];
 
 const outcomes = [
-    { title: "Paraprofessional Educator", desc: "Support classroom instruction and help students thrive. (Average salary: $55,547/year in Massachusetts—one of the highest in the nation! 7% job growth—faster than average!)" },
+    { title: "Paraprofessional Educator", desc: "Support classroom instruction and help students thrive. (MA average: $43,620/year—among the highest in the nation; ~170,400 openings/year projected nationally, BLS 2024–34.)" },
     { title: "Teaching Assistant", desc: "Work alongside teachers to support student learning" },
     { title: "Special Education Aide", desc: "Support students with special needs in inclusive classrooms" },
     { title: "Instructional Aide", desc: "Provide one-on-one and small group support to students" },
@@ -33,7 +33,7 @@ const outcomes = [
 ];
 
 const benefits: ProgramBenefit[] = [
-    { title: "High MA Salaries", desc: "Earn up to $55,547/year in Massachusetts—one of the highest-paying states for paraprofessional educators!", icon: DollarSign },
+    { title: "High MA Salaries", desc: "Teaching assistants in MA earn an average of $43,620/year—among the highest in the nation (BLS OEWS, May 2023)", icon: DollarSign },
     { title: "Fast Track", desc: "Finish in as little as one year (only 21 credits)", icon: Clock },
     { title: "100% Online", desc: "Study 100% online: Learn on a schedule that fits into your busy life", icon: Globe },
     { title: "Financial Aid", desc: "Personalized aid plans & options", icon: CheckCircle },
@@ -61,7 +61,7 @@ const faqs = [
     { q: "Do I need prior experience in education?", a: "No! No prior experience is required. The program covers all foundational knowledge—whether you're starting fresh or transitioning from another career, you'll graduate classroom-ready." },
     { q: "Will I learn special education skills?", a: "Yes! Special education is one of the most in-demand areas in education, and this program gives you foundational skills to work with students who have diverse learning needs. You'll stand out in the job market." },
     { q: "Can I study in Spanish?", a: "Yes! We offer courses in both English and Spanish." },
-    { q: "What's the job outlook for paraprofessional educators?", a: "Excellent! Massachusetts schools are actively seeking qualified paraprofessional educators, especially those with special education training. Job growth is 7%—faster than average—and salaries are among the highest in the nation ($55,547/year average)." },
+    { q: "What's the job outlook for paraprofessional educators?", a: "Excellent! Massachusetts schools are actively seeking qualified paraprofessional educators, especially those with special education training. About 170,400 openings for teacher assistants are projected each year nationally (BLS, 2024–2034), and MA teaching-assistant pay is among the highest in the nation ($43,620/year average, BLS OEWS, May 2023)." },
     { q: "Am I eligible for financial aid?", a: "Most students are eligible for financial aid. Contact our financial aid office at (617) 449-7070-our team works with you one-on-one to identify grants, scholarships, and funding options that fit your situation and make your education as affordable as possible." }
 ];
 
@@ -141,6 +141,11 @@ const ParaprofessionalEducator: React.FC = () => {
             outcomes={outcomes}
             outcomesIntro="Education is one of the most rewarding fields—and one of the most stable. You'll graduate ready for meaningful, career-building roles where you help children succeed. Why Massachusetts? The state offers some of the highest salaries for paraprofessional educators in the country—and demand continues to grow."
             outcomeTags={['Education', 'Teaching', 'Special Education', 'Classroom Support']}
+            outcomeSources={[
+                { label: 'BLS OEWS May 2023: Teaching Assistants (25-9045)', url: 'https://www.bls.gov/oes/2023/may/oes259045.htm' },
+                { label: 'BLS OOH: Teacher Assistants', url: 'https://www.bls.gov/ooh/education-training-and-library/teacher-assistants.htm' },
+                { label: 'Mass.gov: Paraprofessional Teacher Preparation Grant', url: 'https://www.mass.gov/info-details/paraprofessional-teacher-preparation-grant-program' },
+            ]}
 
             stats={stats}
 
