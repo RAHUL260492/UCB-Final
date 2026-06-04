@@ -218,7 +218,7 @@ const TechnologyAccountGuide: React.FC = () => {
                         </div>
                         <div className="pt-4 border-t border-gray-100 flex justify-center">
                             <a 
-                                href="mailto:Timesha.Scott@urbancollege.edu?subject=UCB%20Student%2520IT%20Login%20Inquiry"
+                                href="mailto:Timesha.Scott@urbancollege.edu?subject=Urban%20College%20Student%2520IT%20Login%20Inquiry"
                                 className="bg-ucb-blue text-white px-6 py-2.5 rounded-xl font-bold hover:bg-ucb-blue-glow transition-all inline-flex items-center gap-2 shadow text-sm min-h-[40px] cursor-pointer"
                             >
                                 <Mail className="w-4 h-4" />

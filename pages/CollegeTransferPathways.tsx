@@ -100,7 +100,7 @@ const CollegeTransferPathways: React.FC = () => {
                 "Early Childhood Education A.A. transfers to B.A. in Education, Curriculum, and Instruction or B.A. in Early Childhood Education with Licensure.",
                 "Human Services A.A. transfers to B.S. in Psychology."
             ],
-            benefit: "Specific UCB Award of $2,000 per year (renewable if in good academic standing) when enrolling in a traditional Bachelor's degree program at LU, in addition to academic merit scholarships.",
+            benefit: "Specific Urban College Award of $2,000 per year (renewable if in good academic standing) when enrolling in a traditional Bachelor's degree program at LU, in addition to academic merit scholarships.",
             links: [
                 { label: "Lasell Education Program", url: "https://www.lasell.edu/academics/schools-and-programs/school-of-humanities-education-justice-and-social-sciences/programs/education/interdisciplinary-studies-education-curriculum-and-instruction.html" },
                 { label: "Early Childhood Licensure Info", url: "https://www.lasell.edu/academics/schools-and-programs/school-of-humanities-education-justice-and-social-sciences/programs/education/early-childhood-licensure-(pre-kindergarten---grade-2).html" },
@@ -142,7 +142,7 @@ const CollegeTransferPathways: React.FC = () => {
                 "General Studies A.A. transfers to B.S. Business Administration (Online).",
                 "Human Services Administration A.A. transfers to B.A. Human Services (Online)."
             ],
-            benefit: "10% tuition discount at SNHU for UCB graduates.",
+            benefit: "10% tuition discount at SNHU for Urban College graduates.",
             links: [
                 { label: "ECE to B.A. Psych Brochure", url: "https://www.snhu.edu/-/media/files/pdfs/community-college-partnership-pathways/urban-college-of-boston/ucb-aa-early-childhood-edu-to-ba-psych-online-ada-23-24.pdf" },
                 { label: "GS to B.A. Human Services Brochure", url: "https://www.snhu.edu/-/media/files/pdfs/community-college-partnership-pathways/urban-college-of-boston/ucb-aa-gen-studies-to-ba-human-services-online-ada-23-24.pdf" },
@@ -375,7 +375,7 @@ const CollegeTransferPathways: React.FC = () => {
                     <ScrollAnimation variant="fade-up" className="text-center max-w-2xl mx-auto space-y-2">
                         <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs block">Financial Incentives</span>
                         <h3 className="text-2xl font-display font-black text-gray-800">Featured Scholarship Highlights</h3>
-                        <p className="text-gray-500 text-sm font-light">Many of our articulation partners offer exclusive discounts and grants for UCB alumni.</p>
+                        <p className="text-gray-500 text-sm font-light">Many of our articulation partners offer exclusive discounts and grants for Urban College alumni.</p>
                     </ScrollAnimation>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

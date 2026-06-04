@@ -24,12 +24,12 @@ const Commencement: React.FC = () => {
         {
             time: "12:00 PM",
             title: "Graduates Arrive on Campus",
-            desc: "Arrive at Urban College's campus (2 Boylston Street, 2nd Floor, Boston, MA 02116). Use this time to check in, take photos in front of the UCB backdrop, share your story, and celebrate with fellow graduates. Children are welcome on campus temporarily, but should head to the theater at 12:30 with a guardian."
+            desc: "Arrive at Urban College's campus (2 Boylston Street, 2nd Floor, Boston, MA 02116). Use this time to check in, take photos in front of the Urban College backdrop, share your story, and celebrate with fellow graduates. Children are welcome on campus temporarily, but should head to the theater at 12:30 with a guardian."
         },
         {
             time: "12:40 PM",
             title: "Processional Procession Walk",
-            desc: "Graduates, staff, faculty, and Board members will walk in a formal processional from the UCB campus to the Emerson Majestic Theater. (Note: The road is uneven, so please select comfortable footwear!)"
+            desc: "Graduates, staff, faculty, and Board members will walk in a formal processional from the Urban College campus to the Emerson Majestic Theater. (Note: The road is uneven, so please select comfortable footwear!)"
         },
         {
             time: "1:00 PM – 3:00 PM",

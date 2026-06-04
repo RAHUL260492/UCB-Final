@@ -39,7 +39,7 @@ const members = [
         name: "Alecia Hunt",
         role: "Co-Ambassador of Student Success",
         img: "https://images.unsplash.com/photo-1531123897727-8f129e1bfa82?q=80&w=800&auto=format&fit=crop",
-        bio: "“Hello Everyone! My name is Alecia. I am studying at Urban College because of the flexibility of online courses and the affordability! I also work at UCB as a Learning Support Associate for the Learning Resource Center.”",
+        bio: "“Hello Everyone! My name is Alecia. I am studying at Urban College because of the flexibility of online courses and the affordability! I also work at Urban College as a Learning Support Associate for the Learning Resource Center.”",
         goals: "“As Ambassador of Student Success I want to help students reach their full potential! I will be able to assist students with their needs, questions, or concerns.”"
     },
     {

@@ -91,7 +91,7 @@ const CampusFacilities: React.FC = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                         <div className="lg:col-span-8 space-y-4">
                             <ScrollAnimation variant="fade-up">
-                                <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs mb-2 block font-display font-black">Welcome to UCB</span>
+                                <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs mb-2 block font-display font-black">Welcome to Urban College</span>
                                 <h2 className="text-3xl md:text-4xl font-display font-black text-ucb-blue leading-tight">
                                     A Welcoming Downtown Boston Campus
                                 </h2>

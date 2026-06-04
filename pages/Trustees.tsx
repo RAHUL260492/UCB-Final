@@ -239,7 +239,7 @@ const Trustees: React.FC = () => {
                 </div>
             </section>
 
-            {/* How Our Board Supports UCB */}
+            {/* How Our Board Supports Urban College */}
             <section className="py-16 bg-gray-50 border-y border-gray-100">
                 <div className="container mx-auto px-6 max-w-6xl">
                     <ScrollAnimation variant="fade-up" className="text-center mb-12">

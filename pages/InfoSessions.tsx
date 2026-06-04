@@ -59,7 +59,7 @@ const InfoSessions: React.FC = () => {
             time: '6:00 PM - 7:00 PM EST',
             format: 'Online',
             type: 'General Info Session',
-            focus: 'General UCB Overview',
+            focus: 'General Urban College Overview',
             programKey: 'Undecided'
         },
         {
@@ -79,7 +79,7 @@ const InfoSessions: React.FC = () => {
             time: '6:00 PM - 7:30 PM EST',
             format: 'In-Person & Online',
             type: 'General Info Session',
-            focus: 'General UCB Overview (Campus Tour & Virtual)',
+            focus: 'General Urban College Overview (Campus Tour & Virtual)',
             programKey: 'Undecided'
         },
         {
@@ -123,7 +123,7 @@ const InfoSessions: React.FC = () => {
 
     const whatToExpect = [
         {
-            title: "Meet UCB Support Staff",
+            title: "Meet Urban College Support Staff",
             desc: "Chat with admissions advisors, program coordinators, and faculty members who are dedicated to your success."
         },
         {
@@ -320,7 +320,7 @@ const InfoSessions: React.FC = () => {
                             </div>
                             <h2 className="text-3xl font-display font-extrabold text-ucb-blue leading-tight">Why Attend?</h2>
                             <p className="text-gray-600 text-sm md:text-base leading-relaxed font-light">
-                                Choosing a college is a big decision, but we make it easy. At Urban College, you're not just a student—you're family. Our info sessions are your first experience of the personalized, 1-on-1 support that defines the UCB experience.
+                                Choosing a college is a big decision, but we make it easy. At Urban College, you're not just a student—you're family. Our info sessions are your first experience of the personalized, 1-on-1 support that defines the Urban College experience.
                             </p>
                         </ScrollAnimation>
 
@@ -679,7 +679,7 @@ const InfoSessions: React.FC = () => {
                 </div>
             </section>
 
-            {/* Institutional Why UCB */}
+            {/* Institutional Why Urban College */}
             <section className="py-16 bg-gray-50 border-t border-gray-100">
                 <div className="container mx-auto px-6 max-w-5xl">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">

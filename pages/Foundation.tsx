@@ -202,7 +202,7 @@ const Foundation: React.FC = () => {
                                         </div>
                                         <div>
                                             <h4 className="font-display font-bold text-sm">Dr. Yves Salomon-Fernández</h4>
-                                            <p className="text-xs text-blue-200 uppercase tracking-wider font-bold">President, UCB</p>
+                                            <p className="text-xs text-blue-200 uppercase tracking-wider font-bold">President, Urban College</p>
                                         </div>
                                     </div>
                                     <p className="text-sm font-light leading-relaxed italic opacity-95">

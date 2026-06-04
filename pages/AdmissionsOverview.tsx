@@ -104,7 +104,7 @@ const AdmissionsOverview: React.FC = () => {
             <section className="py-16 bg-white">
                 <div className="container mx-auto px-6 max-w-5xl">
                     <ScrollAnimation variant="fade-up" className="text-center mb-12">
-                        <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs mb-2 block">Why UCB?</span>
+                        <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs mb-2 block">Why Urban College?</span>
                         <h2 className="text-3xl font-display font-extrabold text-ucb-blue leading-tight">
                             A Supportive & Affordable Path to Success
                         </h2>

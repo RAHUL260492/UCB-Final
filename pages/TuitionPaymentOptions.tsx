@@ -27,7 +27,7 @@ const TuitionPaymentOptions: React.FC = () => {
             title: "Federal Financial Aid",
             desc: "Submit a FAFSA to determine federal Pell grants, loans, and work-study eligibility.",
             details: [
-                "UCB FAFSA School Code: 031305",
+                "Urban College FAFSA School Code: 031305",
                 "Begin the process at StudentAid.gov",
                 "Complete the Online Financial Aid Process in the Student Portal."
             ],
@@ -59,7 +59,7 @@ const TuitionPaymentOptions: React.FC = () => {
             title: "Self-Pay Methods",
             desc: "Pay your balance directly via personal check, cashier's check, credit card, or debit card.",
             details: [
-                "Checks: Mail to UCB Business Office (2 Boylston St, 2nd Floor, Boston, MA 02116). *Include Student ID on check.",
+                "Checks: Mail to Urban College Business Office (2 Boylston St, 2nd Floor, Boston, MA 02116). *Include Student ID on check.",
                 "Credit/Debit: Contact our Business Office via phone or email."
             ],
             contact: {
@@ -297,10 +297,10 @@ const TuitionPaymentOptions: React.FC = () => {
                     </ScrollAnimation>
 
                     <div className="space-y-8">
-                        {/* UCB Institutional Grant */}
+                        {/* Urban College Institutional Grant */}
                         <ScrollAnimation variant="fade-up" className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm flex flex-col md:flex-row justify-between gap-6">
                             <div className="space-y-4 max-w-xl">
-                                <h3 className="font-display font-bold text-lg text-ucb-blue">Institutional UCB Grant</h3>
+                                <h3 className="font-display font-bold text-lg text-ucb-blue">Institutional Urban College Grant</h3>
                                 <p className="text-xs text-gray-500 leading-relaxed font-light">
                                     Urban College of Boston offers financial assistance up to <strong>$200 per course</strong> to eligible students who demonstrate funding gaps.
                                 </p>

@@ -167,7 +167,7 @@ const CollegeServicesAndResources: React.FC = () => {
                                 </div>
                                 <div className="text-gray-600 text-sm leading-relaxed font-light space-y-4">
                                     <p>
-                                        Students and their academic advisors should meet regularly to review and discuss students’ academic progress, professional, and personal goals and objectives. Advisors recommend course selection and sequence and remain key points of contact and sources of guidance throughout students’ academic career at UCB.
+                                        Students and their academic advisors should meet regularly to review and discuss students’ academic progress, professional, and personal goals and objectives. Advisors recommend course selection and sequence and remain key points of contact and sources of guidance throughout students’ academic career at Urban College.
                                     </p>
                                     <p>
                                         <strong>Registration Requirement:</strong> Students are expected to schedule an appointment and meet with their assigned academic advisor prior to registration every semester.
@@ -190,7 +190,7 @@ const CollegeServicesAndResources: React.FC = () => {
                                 </div>
                                 <div className="text-gray-600 text-sm leading-relaxed font-light space-y-4">
                                     <p>
-                                        The Learning Resource Center (LRC) offers a range of academic support including one-on-one tutoring, group study sessions, and academic workshops for UCB students. The LRC is staffed by the LRC Coordinator and a team of Learning Support Associates (LSAs).
+                                        The Learning Resource Center (LRC) offers a range of academic support including one-on-one tutoring, group study sessions, and academic workshops for Urban College students. The LRC is staffed by the LRC Coordinator and a team of Learning Support Associates (LSAs).
                                     </p>
                                     <p>
                                         <strong>Multilingual Support:</strong> LSAs provide tutoring services in <strong>English, Spanish, and Mandarin</strong>. Students can find several academic tip sheets, Quizlet sets, and technology assistance information on the LRC’s webpage.
@@ -254,7 +254,7 @@ const CollegeServicesAndResources: React.FC = () => {
                                         <strong>Workshops:</strong> Workshops are offered periodically on topics such as resume preparation, professional portfolios, mock interviewing techniques, and job hunting.
                                     </p>
                                     <p>
-                                        <strong>Job Postings:</strong> Professional opportunities are posted regularly on the UCB website and through the monthly newsletter.
+                                        <strong>Job Postings:</strong> Professional opportunities are posted regularly on the Urban College website and through the monthly newsletter.
                                     </p>
                                 </div>
                             </ScrollAnimation>
@@ -297,7 +297,7 @@ const CollegeServicesAndResources: React.FC = () => {
                                         The Urban College of Boston Alumni Association was established in the spring of 2004 with a generous grant from Hannah and Moses Malkin.
                                     </p>
                                     <p>
-                                        The UCB Alumni Association is open to all degree and certificate recipients. Those interested in more information or joining the Alumni Association may contact the Chief Advancement Officer.
+                                        The Urban College Alumni Association is open to all degree and certificate recipients. Those interested in more information or joining the Alumni Association may contact the Chief Advancement Officer.
                                     </p>
                                 </div>
                             </ScrollAnimation>
@@ -314,30 +314,30 @@ const CollegeServicesAndResources: React.FC = () => {
                                 </div>
                                 <div className="text-gray-600 text-sm leading-relaxed font-light space-y-6">
                                     <p>
-                                        Urban College of Boston is committed to ensuring that all students gain the information literacy skills they need to be successful students and engaged citizens. UCB students have access to a full array of print and non-print resources through the College’s dedicated suite of Gale Databases, an inter-library loan agreement with neighboring Emerson College, and library resources through the Boston Public Library (BPL).
+                                        Urban College of Boston is committed to ensuring that all students gain the information literacy skills they need to be successful students and engaged citizens. Urban College students have access to a full array of print and non-print resources through the College’s dedicated suite of Gale Databases, an inter-library loan agreement with neighboring Emerson College, and library resources through the Boston Public Library (BPL).
                                     </p>
                                     
                                     <div className="space-y-3">
                                         <h4 className="font-bold text-gray-800 text-sm">Gale Databases</h4>
                                         <p className="text-xs">
-                                            With the assistance of the Massachusetts Board of Library Commissioners and the Massachusetts Library System, UCB provides students with over thirty Gale databases covering virtually every academic discipline.
+                                            With the assistance of the Massachusetts Board of Library Commissioners and the Massachusetts Library System, Urban College provides students with over thirty Gale databases covering virtually every academic discipline.
                                         </p>
                                         <p className="text-xs">
-                                            Located at <a href="https://www.galepages.com/mlin_b_urbancb" target="_blank" rel="noopener noreferrer" className="text-ucb-blue hover:underline font-semibold">galepages.com/mlin_b_urbancb</a>, UCB’s customized e-resources page is available from computers in the LRC, as well as to remote users 24/7. It offers full-text access to academic journals, newspapers (including the Boston Globe and New York Times), encyclopedias, and e-books.
+                                            Located at <a href="https://www.galepages.com/mlin_b_urbancb" target="_blank" rel="noopener noreferrer" className="text-ucb-blue hover:underline font-semibold">galepages.com/mlin_b_urbancb</a>, Urban College’s customized e-resources page is available from computers in the LRC, as well as to remote users 24/7. It offers full-text access to academic journals, newspapers (including the Boston Globe and New York Times), encyclopedias, and e-books.
                                         </p>
                                     </div>
 
                                     <div className="space-y-3">
                                         <h4 className="font-bold text-gray-800 text-sm">Emerson College Inter-Library Loan</h4>
                                         <p className="text-xs">
-                                            As the result of our inter-library loan agreement with neighboring Emerson College, UCB students and staff can borrow physical library materials from Emerson College's library collections.
+                                            As the result of our inter-library loan agreement with neighboring Emerson College, Urban College students and staff can borrow physical library materials from Emerson College's library collections.
                                         </p>
                                     </div>
 
                                     <div className="space-y-3">
                                         <h4 className="font-bold text-gray-800 text-sm">Boston Public Library (BPL)</h4>
                                         <p className="text-xs">
-                                            UCB students have access to the Boston Regional Library System (BRLS) through the BPL, including its extensive databases. UCB students can use their personal BPL library card to gain access to BRLS online services, including ProQuest, EBSCO, Gale Group, OCLC, NewsBank, NetLibrary, and many more.
+                                            Urban College students have access to the Boston Regional Library System (BRLS) through the BPL, including its extensive databases. Urban College students can use their personal BPL library card to gain access to BRLS online services, including ProQuest, EBSCO, Gale Group, OCLC, NewsBank, NetLibrary, and many more.
                                         </p>
                                     </div>
                                 </div>
@@ -355,10 +355,10 @@ const CollegeServicesAndResources: React.FC = () => {
                                 </div>
                                 <div className="text-gray-600 text-sm leading-relaxed font-light space-y-4">
                                     <p>
-                                        UCB will issue identification cards to all students upon their enrollment.
+                                        Urban College will issue identification cards to all students upon their enrollment.
                                     </p>
                                     <p>
-                                        <strong>Card Requirement:</strong> All students are required to complete the process to have a card issued and carry it with them whenever they come to campus. Students may be asked to produce their identification card by UCB and building staff for security.
+                                        <strong>Card Requirement:</strong> All students are required to complete the process to have a card issued and carry it with them whenever they come to campus. Students may be asked to produce their identification card by Urban College and building staff for security.
                                     </p>
                                 </div>
                             </ScrollAnimation>

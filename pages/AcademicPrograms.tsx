@@ -388,7 +388,7 @@ const AcademicPrograms: React.FC = () => {
             <section className="py-16 bg-white border-t border-gray-100">
                 <div className="container mx-auto px-6 max-w-6xl">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                        {/* Is UCB Right for You */}
+                        {/* Is Urban College Right for You */}
                         <div>
                             <h2 className="text-3xl font-display font-bold text-ucb-blue mb-6">Is Urban College Right for You?</h2>
                             <p className="text-gray-500 mb-6 leading-relaxed">

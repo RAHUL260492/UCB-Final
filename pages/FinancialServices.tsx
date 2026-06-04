@@ -309,7 +309,7 @@ const FinancialServices: React.FC = () => {
                             <div className="bg-ucb-orange/5 border border-ucb-orange/15 rounded-2xl p-4 mt-6">
                                 <h5 className="text-xs font-bold text-ucb-blue uppercase tracking-wider mb-1">Explore Important Dates</h5>
                                 <p className="text-[11px] text-gray-500 font-light leading-relaxed mb-3">
-                                    Visit the UCB Catalog to view detailed scholarship policies and submission deadlines.
+                                    Visit the Urban College Catalog to view detailed scholarship policies and submission deadlines.
                                 </p>
                                 <a 
                                     href="https://catalog.urbancollege.edu/content.php?catoid=3&navoid=98" 
@@ -393,7 +393,7 @@ const FinancialServices: React.FC = () => {
                 <div className="container mx-auto px-6 max-w-4xl text-center">
                     <ScrollAnimation variant="fade-up" className="space-y-6">
                         <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs block">Video Resource</span>
-                        <h2 className="text-3xl font-display font-bold text-ucb-blue">How to Attend UCB for Low or No Cost</h2>
+                        <h2 className="text-3xl font-display font-bold text-ucb-blue">How to Attend Urban College for Low or No Cost</h2>
                         <p className="text-gray-500 text-sm font-light max-w-md mx-auto">
                             Watch our brief walkthrough detailing state scholarships, federal pell grants, and financial services counseling.
                         </p>
