@@ -66,7 +66,7 @@ const RFILandingPage: React.FC = () => {
             apiUrl: "https://urbancollege.api.451.io/v2/",
             accessToken: "WeJW3dZzCzD0RDuF04Sg2CMZQoJOmdjqYCzsE76e",
             featureToken: "sfdVcQug7oK8vr5G3uCr9QB1YZrqZapO2RBvSjzt",
-            analyticsToken: "MVrxFM5pwBJlDgZgXU4xULMKzv3mMKApUUcL1dMe",
+            analyticsToken: "MVrxFM5pWBJlDgZgXU4xULMKzv3mMKApUUcL1dMe",
             sourceUrl: encodeURIComponent(window.location.href)
         };
 
