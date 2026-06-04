@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, useLocation } from 'react-router-dom';
-import { ChevronLeft, Calendar, Share2, Facebook, Twitter, Linkedin, Copy } from 'lucide-react';
+import { ChevronLeft, Calendar, Share2, Facebook, Linkedin, Copy } from 'lucide-react';
 import blogsData from '../src/data/blogs.json';
 import PageHeader from '../components/PageHeader';
 import SEO from '../components/SEO';
@@ -126,9 +126,6 @@ const BlogPost: React.FC = () => {
                     <button className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:text-blue-600 hover:border-blue-600 hover:bg-blue-50 transition-all shadow-sm">
                         <Facebook className="w-4 h-4" />
                     </button>
-                    <button className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:text-sky-500 hover:border-sky-500 hover:bg-sky-50 transition-all shadow-sm">
-                        <Twitter className="w-4 h-4" />
-                    </button>
                     <button className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:text-blue-700 hover:border-blue-700 hover:bg-blue-50 transition-all shadow-sm">
                         <Linkedin className="w-4 h-4" />
                     </button>
@@ -188,7 +185,6 @@ const BlogPost: React.FC = () => {
             <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 shrink-0 flex items-center justify-center gap-6 z-40 shadow-[0_-10px_40px_rgba(0,0,0,0.05)]">
                 <span className="text-sm font-bold text-gray-500 uppercase tracking-widest mr-2">Share</span>
                 <button className="text-gray-400 hover:text-blue-600 transition-colors"><Facebook className="w-5 h-5" /></button>
-                <button className="text-gray-400 hover:text-sky-500 transition-colors"><Twitter className="w-5 h-5" /></button>
                 <button className="text-gray-400 hover:text-blue-700 transition-colors"><Linkedin className="w-5 h-5" /></button>
                 <button onClick={handleCopyLink} className="text-gray-400 hover:text-ucb-orange transition-colors"><Copy className="w-5 h-5" /></button>
             </div>

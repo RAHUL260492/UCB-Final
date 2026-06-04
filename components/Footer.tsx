@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Linkedin, MapPin, Mail, Phone } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Youtube, MapPin, Mail, Phone } from 'lucide-react';
 import Logo from './Logo';
 
 const Footer: React.FC = () => {
@@ -45,9 +45,10 @@ const Footer: React.FC = () => {
             <div className="space-y-3">
               <h5 className="font-display font-bold text-white">Stay Connected</h5>
               <div className="flex gap-3">
-                <a href="#" className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-ucb-orange-glow hover:text-white hover:scale-125 hover:-rotate-6 transition-all duration-300 group"><Facebook className="w-5 h-5 group-hover:scale-110" /></a>
-                <a href="#" className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-ucb-orange-glow hover:text-white hover:scale-125 hover:rotate-6 transition-all duration-300 group"><Instagram className="w-5 h-5 group-hover:scale-110" /></a>
-                <a href="#" className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-ucb-orange-glow hover:text-white hover:scale-125 hover:-rotate-6 transition-all duration-300 group"><Linkedin className="w-5 h-5 group-hover:scale-110" /></a>
+                <a href="https://www.facebook.com/UrbanCollegeBoston" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-ucb-orange-glow hover:text-white hover:scale-125 hover:-rotate-6 transition-all duration-300 group"><Facebook className="w-5 h-5 group-hover:scale-110" /></a>
+                <a href="https://www.instagram.com/urbancollegeofboston/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-ucb-orange-glow hover:text-white hover:scale-125 hover:rotate-6 transition-all duration-300 group"><Instagram className="w-5 h-5 group-hover:scale-110" /></a>
+                <a href="https://www.linkedin.com/company/urban-college-of-boston-a-two-year-college-inc" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-ucb-orange-glow hover:text-white hover:scale-125 hover:-rotate-6 transition-all duration-300 group"><Linkedin className="w-5 h-5 group-hover:scale-110" /></a>
+                <a href="https://www.youtube.com/@Urban_College" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-ucb-orange-glow hover:text-white hover:scale-125 hover:rotate-6 transition-all duration-300 group"><Youtube className="w-5 h-5 group-hover:scale-110" /></a>
               </div>
             </div>
           </div>
