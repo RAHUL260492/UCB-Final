@@ -47,8 +47,8 @@ const stats: ProgramStat[] = [
     { label: 'Format', value: 'Online', icon: Globe, sub: 'Fully Online' },
     { label: 'Cost', value: '$317', icon: DollarSign, sub: 'Per Credit' },
     { label: 'Start', value: 'Rolling', icon: Calendar, sub: 'Start Date' },
-    { label: 'Aid', value: 'Yes', icon: GraduationCap, sub: 'Financial Aid' },
-    { label: 'Language', value: 'English', icon: Globe, sub: 'English only' },
+    { label: 'Tuition', value: 'Low', icon: GraduationCap, sub: 'Most Graduate Debt-Free' },
+    { label: 'Language', value: 'English', icon: Globe, sub: 'English courses' },
     { label: 'Outcome', value: 'Job Ready', icon: CheckCircle, sub: 'Career Focused' },
 ];
 
@@ -100,7 +100,7 @@ const GeneralStudiesCertificate: React.FC = () => {
                 <p>
                     Not sure what you want to study? That's okay—this certificate is for you. The General Studies Certificate is perfect for students who want a college credential but aren't sure what career path to pursue.
                     <br className="hidden md:block" />
-                    <span className="text-ucb-blue font-semibold">This versatile program empowers you to explore different subjects</span> while earning accredited college credits—all online, all on your schedule.
+                    <span className="text-ucb-blue font-semibold">This versatile program empowers you to explore different subjects</span> while earning college credits—all online, all on your schedule.
                 </p>
             }
 

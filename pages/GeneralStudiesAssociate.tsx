@@ -48,14 +48,14 @@ const stats: ProgramStat[] = [
     { label: 'Format', value: 'Online', icon: Globe, sub: 'Fully Online' },
     { label: 'Cost', value: '$317', icon: DollarSign, sub: 'Per Credit' },
     { label: 'Start', value: 'Rolling', icon: Calendar, sub: 'Start Date' },
-    { label: 'Aid', value: 'Yes', icon: GraduationCap, sub: 'Financial Aid' },
+    { label: 'Tuition', value: 'Low', icon: GraduationCap, sub: 'Most Graduate Debt-Free' },
     { label: 'Language', value: 'English', icon: Globe, sub: 'English courses' },
     { label: 'Outcome', value: 'Job Ready', icon: CheckCircle, sub: 'Career Focused' },
 ];
 
 const faqs = [
     { q: "Can I transfer my credits?", a: "Yes! The program is designed to be transferable to 4-year colleges and universities." },
-    { q: "How much does it cost?", a: "$11,100 for the full degree. However, most students qualify for financial aid to offset tuition costs." },
+    { q: "How much does it cost?", a: "$11,100 for the full degree, and we offer payment plans to keep it manageable—most students graduate debt-free." },
     { q: "Am I eligible for financial aid?", a: "The General Studies programs are not eligible for federal financial aid, but our team helps you keep costs low-and most students graduate debt-free." },
     { q: "What do I need to apply?", a: "You'll need a copy of your high school diploma, GED, or HISET, a photo ID, and a completed application." },
 ];
