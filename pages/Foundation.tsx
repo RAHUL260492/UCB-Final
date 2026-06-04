@@ -16,6 +16,7 @@ interface FoundationMember {
     description: string;
     avatarInitials: string;
     quote?: string;
+    image?: string;
 }
 
 const Foundation: React.FC = () => {
@@ -42,26 +43,30 @@ const Foundation: React.FC = () => {
             name: "Tom O'Brien",
             role: "Chair | CEO, The HYM Investment Group",
             description: "Founding Partner and Managing Director of HYM, leading major development projects including Boston Landing, Bulfinch Crossing, and Suffolk Downs. Co-chaired the Massachusetts Business Immigration Coalition. Active in civic efforts supporting equity and opportunity for Boston's youth.",
-            avatarInitials: "TO"
+            avatarInitials: "TO",
+            image: "/assets/images/foundation/tom-obrien.png"
         },
         {
             name: "Nivia Piña-Medina",
             role: "Vice Chair | Owner, Tres Islas Restaurant Group",
             description: "Puerto Rican-born chemist, educator, and entrepreneur. Holds degrees from University of Puerto Rico, Brandeis, and UMass Boston. Former Boston Public Schools teacher. Howard Hughes Scholar and Girl Scout Gold Awardee.",
             quote: "It's invaluable to learn in an environment where you see role models who resemble you and understand your journey.",
-            avatarInitials: "NP"
+            avatarInitials: "NP",
+            image: "/assets/images/foundation/nivia-pina.jpg"
         },
         {
             name: "Darrell Byers",
             role: "Treasurer | CEO, Byers & Associates",
             description: "Nonprofit executive championing entrepreneurship, equity, and community development. Boston native with advancement leadership at UMass Boston, Harvard GSE, Georgetown Medical Center, and Habitat for Humanity SF. Vice Chair, Partnership for Financial Equity.",
-            avatarInitials: "DB"
+            avatarInitials: "DB",
+            image: "/assets/images/foundation/darrell-byers.jpg"
         },
         {
             name: "Peter Ebb, Esq.",
             role: "Secretary | Retired Partner, Ropes & Gray LLP",
             description: "Retired partner in Labor & Employment, Education Law, and Public Law. Former Board Chair (2012-2024) and current Board member. The Ebb family are long-standing major donors and advocates for the mission of Urban College.",
-            avatarInitials: "PE"
+            avatarInitials: "PE",
+            image: "/assets/images/foundation/peter-ebb.png"
         }
     ];
 
@@ -70,31 +75,36 @@ const Foundation: React.FC = () => {
             name: "Martin J. Walsh",
             role: "Former U.S. Secretary of Labor | Executive Director, NHLPA",
             description: "Lifelong champion for working people. Son of Irish immigrants from Dorchester. Served in the MA House (1997), as Mayor of Boston (2013), as U.S. Secretary of Labor (2021), and became Executive Director of the NHLPA in 2023. Long-time advocate for accessibility in education.",
-            avatarInitials: "MW"
+            avatarInitials: "MW",
+            image: "/assets/images/foundation/marty-walsh.png"
         },
         {
             name: "Dr. Connee Counts",
             role: "Professor Emerita, Lesley University",
             description: "Developmental Psychologist. Directed federal grant partnership between ABCD, Urban College, and Lesley for Early Childhood Educators. Former Urban College Board member. Serves Boston Children's Museum and Huntington Theatre advisory committees.",
-            avatarInitials: "CC"
+            avatarInitials: "CC",
+            image: "/assets/images/foundation/connee-counts.jpg"
         },
         {
             name: "Miriam Crispo",
             role: "Co-Owner, TMG Marketing",
             description: "Boutique consultancy leader known for high-impact strategies. Born to immigrant parents from Trinidad and Italy. Former NCAA swimmer; captain of the Bahamian National Team; and 2016 Olympic qualifier at Arizona State.",
-            avatarInitials: "MC"
+            avatarInitials: "MC",
+            image: "/assets/images/foundation/miriam-crispo.png"
         },
         {
             name: "Kristin McGurn, Esq.",
             role: "Partner, Labor & Employment, Seyfarth",
             description: "Partner advising employers in health care, life sciences, and financial services. Co-chairs Seyfarth's Health Care practice. J.D. Northeastern; B.A. UConn magna cum laude.",
-            avatarInitials: "KM"
+            avatarInitials: "KM",
+            image: "/assets/images/foundation/kristin-mcgurn.jpg"
         },
         {
             name: "Robert Clark Williams, Jr.",
             role: "Founder & CEO, Executive Strategies, LLC",
             description: "Leads outreach for diverse and small businesses across Massachusetts. Entrepreneur-in-Residence at Boston Public Library's Kirstein Business Library & Innovation Center. National Trustee of PAFA.",
-            avatarInitials: "RW"
+            avatarInitials: "RW",
+            image: "/assets/images/foundation/robert-clark-williams.png"
         }
     ];
 
@@ -285,8 +295,12 @@ const Foundation: React.FC = () => {
                                     <div className="bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-all p-6 flex flex-col justify-between w-full">
                                         <div className="space-y-4">
                                             <div className="flex items-center gap-4">
-                                                <div className="w-12 h-12 rounded-xl bg-ucb-blue/10 text-ucb-blue font-display font-black text-lg flex items-center justify-center shrink-0">
-                                                    {member.avatarInitials}
+                                                <div className="w-12 h-12 rounded-xl bg-ucb-blue/10 text-ucb-blue font-display font-black text-lg flex items-center justify-center shrink-0 overflow-hidden">
+                                                    {member.image ? (
+                                                        <img src={member.image} alt={member.name} className="w-full h-full object-cover object-top" />
+                                                    ) : (
+                                                        member.avatarInitials
+                                                    )}
                                                 </div>
                                                 <div>
                                                     <h3 className="font-display font-bold text-base text-ucb-blue leading-snug">{member.name}</h3>
@@ -319,8 +333,12 @@ const Foundation: React.FC = () => {
                                     <div className="bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-all p-6 flex flex-col justify-between w-full">
                                         <div className="space-y-4">
                                             <div className="flex items-center gap-4">
-                                                <div className="w-10 h-10 rounded-xl bg-ucb-teal/10 text-ucb-teal font-display font-black text-base flex items-center justify-center shrink-0">
-                                                    {member.avatarInitials}
+                                                <div className="w-10 h-10 rounded-xl bg-ucb-teal/10 text-ucb-teal font-display font-black text-base flex items-center justify-center shrink-0 overflow-hidden">
+                                                    {member.image ? (
+                                                        <img src={member.image} alt={member.name} className="w-full h-full object-cover object-top" />
+                                                    ) : (
+                                                        member.avatarInitials
+                                                    )}
                                                 </div>
                                                 <div>
                                                     <h3 className="font-display font-bold text-sm text-ucb-blue leading-snug">{member.name}</h3>
