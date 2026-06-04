@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import RFISidebar from './components/RFISidebar';
 import BackgroundShapes from './components/BackgroundShapes';
 import Home from './pages/Home';
+import StudentHome from './pages/StudentHome';
 import About from './pages/About';
 import Mission from './pages/Mission';
 import RFILandingPage from './pages/RFILandingPage';
@@ -39,6 +40,9 @@ import TechnologyAccountGuide from './pages/TechnologyAccountGuide';
 import TranscriptRequests from './pages/TranscriptRequests';
 import Commencement from './pages/Commencement';
 import CampusFacilities from './pages/CampusFacilities';
+import Compliance from './pages/Compliance';
+import HeerfReports from './pages/HeerfReports';
+import SafetyWellness from './pages/SafetyWellness';
 import CollegeServicesAndResources from './pages/CollegeServicesAndResources';
 import Workforce from './pages/Workforce';
 import Donate from './pages/Donate';
@@ -114,6 +118,8 @@ function App() {
             <Route path="/policies" element={<PoliciesDisclosures />} />
             <Route path="/disclosures" element={<PoliciesDisclosures />} />
             <Route path="/course-registration" element={<Registration />} />
+            <Route path="/students" element={<StudentHome />} />
+            <Route path="/current-students" element={<StudentHome />} />
             <Route path="/student-services-overview" element={<StudentServices />} />
             <Route path="/student-services" element={<StudentServices />} />
             <Route path="/academic-calendar-webpage" element={<AcademicCalendar />} />
@@ -124,6 +130,9 @@ function App() {
             <Route path="/commencement" element={<Commencement />} />
             <Route path="/commencement-ceremony" element={<Commencement />} />
             <Route path="/campus-facilities" element={<CampusFacilities />} />
+            <Route path="/compliance" element={<Compliance />} />
+            <Route path="/heerf-reports" element={<HeerfReports />} />
+            <Route path="/safety-and-wellness" element={<SafetyWellness />} />
             <Route path="/college-services-and-resources" element={<CollegeServicesAndResources />} />
             <Route path="/college-services" element={<CollegeServicesAndResources />} />
             <Route path="/lrc-english" element={<LearningResourceCenter />} />

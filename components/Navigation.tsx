@@ -50,7 +50,8 @@ const Navigation: React.FC = () => {
         { name: 'Leadership & Team', path: '/team' },
         { name: 'Accreditation', path: '/accreditation' },
         { name: 'Employment Opportunities', path: '/employment' },
-        { name: 'Policies & Disclosures', path: '/policies-disclosures' }
+        { name: 'Policies & Disclosures', path: '/policies-disclosures' },
+        { name: 'Compliance', path: '/compliance' }
       ]
     },
     {
@@ -100,8 +101,8 @@ const Navigation: React.FC = () => {
       ]
     },
     { 
-      name: 'Students', 
-      path: '/#students',
+      name: 'Students',
+      path: '/students',
       dropdown: [
         { name: 'Registration', path: '/course-registration' },
         { name: 'Student Services', path: '/student-services-overview' },
