@@ -3,7 +3,7 @@ import PageHeader from '../components/PageHeader';
 import ScrollAnimation from '../components/ScrollAnimation';
 import SEO from '../components/SEO';
 import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
-import { GraduationCap, Briefcase, Cpu, FileText, Landmark, TrendingUp, Phone } from 'lucide-react';
+import { GraduationCap, Briefcase, Cpu, FileText, Landmark, TrendingUp, Phone, Award } from 'lucide-react';
 
 const givingAreas = [
     { title: 'Access to Education', desc: 'Support emergency funds that keep financial barriers from stopping a student’s progress.', icon: GraduationCap, color: 'text-ucb-blue bg-blue-50' },
@@ -12,13 +12,25 @@ const givingAreas = [
 ];
 
 const otherWays = [
-    { title: 'Gifts by Check', desc: 'Mail a check to the Urban College Business Office, 2 Boylston Street, 2nd Floor, Boston, MA 02116.', icon: FileText },
+    { title: 'Gifts by Check', desc: 'Mail a check to Urban College of Boston, Attn: Caitlin Callahan, 2 Boylston Street, 2nd Floor, Boston, MA 02116.', icon: FileText },
     { title: 'Wire Transfers', desc: 'Make a direct wire transfer to support our students. Contact us for details.', icon: Landmark },
     { title: 'Gifts of Stock', desc: 'Transfer shares of stock to invest in our students while optimizing tax benefits.', icon: TrendingUp },
 ];
 
 const Donate: React.FC = () => {
-    useEffect(() => { window.scrollTo(0, 0); }, []);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        // GiveButter auto-resize helper for the embedded giving form iframe.
+        // Same script the live urbancollege.edu/donate page uses; it listens for
+        // postMessage from the iframe and adjusts its height to fit the form.
+        const SRC = 'https://givebutter.com/js/widget.js';
+        if (!document.querySelector(`script[src="${SRC}"]`)) {
+            const s = document.createElement('script');
+            s.src = SRC;
+            s.async = true;
+            document.body.appendChild(s);
+        }
+    }, []);
 
     return (
         <div className="pt-24 lg:pt-32 bg-gray-50/50">
@@ -70,10 +82,21 @@ const Donate: React.FC = () => {
                 <div className="container mx-auto px-6 max-w-3xl">
                     <ScrollAnimation variant="fade-up" className="bg-white rounded-3xl border border-gray-100 shadow-md p-6 md:p-8">
                         <h2 className="text-2xl font-display font-bold text-ucb-blue text-center mb-6">Make Your Gift</h2>
-                        {/* Givebutter widget — loader script injected in useEffect above.
-                            NOTE: the embed needs the specific Givebutter widget ID
-                            (<givebutter-widget id="XXXX">). Add it below once available. */}
-                        <div dangerouslySetInnerHTML={{ __html: '<givebutter-widget></givebutter-widget>' }} />
+                        {/* Givebutter giving form — embeds the live "UCB-Annual-Fund"
+                            campaign, the same form used on urbancollege.edu/donate.
+                            Height is auto-adjusted by widget.js (loaded in useEffect above). */}
+                        <iframe
+                            title="Donate to Urban College of Boston"
+                            src="https://givebutter.com/embed/c/UCB-Annual-Fund"
+                            name="givebutter"
+                            width="100%"
+                            height="615px"
+                            scrolling="no"
+                            frameBorder={0}
+                            allow="payment"
+                            className="mx-auto block w-full"
+                            style={{ maxWidth: '601px' }}
+                        />
                     </ScrollAnimation>
                 </div>
             </section>
@@ -84,6 +107,24 @@ const Donate: React.FC = () => {
                     <ScrollAnimation variant="fade-up">
                         <p className="text-lg text-gray-700 font-light leading-relaxed italic">
                             "Your gift doesn't just support a college. It empowers determined individuals to transform their lives—and, through them, their communities."
+                        </p>
+                    </ScrollAnimation>
+                </div>
+            </section>
+
+            {/* Robert M. Coard Legacy Society */}
+            <section className="py-16 bg-ucb-blue text-white">
+                <div className="container mx-auto px-6 max-w-4xl">
+                    <ScrollAnimation variant="fade-up" className="text-center">
+                        <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center mx-auto mb-5">
+                            <Award className="w-7 h-7 text-ucb-orange" />
+                        </div>
+                        <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs mb-2 block">Leadership Giving</span>
+                        <h2 className="text-3xl font-display font-bold mb-4">The Robert M. Coard Legacy Society</h2>
+                        <p className="text-blue-100 font-light leading-relaxed max-w-2xl mx-auto">
+                            Named in honor of our founding president, the Robert M. Coard Legacy Society recognizes
+                            donors who contribute $1,000 or more annually. These leadership gifts help expand access
+                            to education and advance academic excellence for the underserved communities we serve.
                         </p>
                     </ScrollAnimation>
                 </div>
@@ -111,8 +152,11 @@ const Donate: React.FC = () => {
                     </div>
                     <div className="mt-8 text-center text-sm text-gray-600 flex items-center justify-center gap-2">
                         <Phone className="w-4 h-4 text-ucb-orange" />
-                        <span>Questions about giving? Contact Madeleine Picher, Senior Manager of Development Operations, at <a href="tel:+16178613912" className="text-ucb-blue font-semibold hover:text-ucb-orange transition-colors">617-861-3912</a>.</span>
+                        <span>Questions about giving? Contact Madeleine Picher, Senior Manager of Development Operations, at <a href="tel:+16178613912" className="text-ucb-blue font-semibold hover:text-ucb-orange transition-colors">617-861-3912</a> or <a href="mailto:madeleine.picher@urbancollege.edu" className="text-ucb-blue font-semibold hover:text-ucb-orange transition-colors">madeleine.picher@urbancollege.edu</a>.</span>
                     </div>
+                    <p className="mt-4 text-center text-xs text-gray-500 font-light max-w-2xl mx-auto">
+                        Urban College of Boston is a 501(c)(3) tax-exempt organization (EIN 04-3403049). Your gift is tax-deductible to the fullest extent allowed by law.
+                    </p>
                 </div>
             </section>
         </div>

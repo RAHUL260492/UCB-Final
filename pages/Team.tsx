@@ -372,9 +372,9 @@ const Team: React.FC = () => {
                                     <Link to="/foundation" className="inline-flex items-center bg-white text-ucb-orange hover:bg-ucb-blue hover:text-white font-bold py-2.5 px-6 rounded-full text-xs uppercase tracking-wider transition-colors shadow-md min-h-[44px]">
                                         Learn About the Foundation &rarr;
                                     </Link>
-                                    <a href="#" className="inline-flex items-center bg-transparent border border-white text-white hover:bg-white hover:text-ucb-orange font-bold py-2.5 px-6 rounded-full text-xs uppercase tracking-wider transition-colors shadow-md min-h-[44px]">
+                                    <Link to="/donate" className="inline-flex items-center bg-transparent border border-white text-white hover:bg-white hover:text-ucb-orange font-bold py-2.5 px-6 rounded-full text-xs uppercase tracking-wider transition-colors shadow-md min-h-[44px]">
                                         Support Our Mission / Donate <Heart className="w-3.5 h-3.5 ml-1.5 text-red-500 fill-red-500" />
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

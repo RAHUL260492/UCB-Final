@@ -398,12 +398,12 @@ const Foundation: React.FC = () => {
                                 We invite you to be part of our continued journey. Together, we can ensure that every student has the opportunity to transform their life through education.
                             </p>
                             <div className="pt-4 flex flex-wrap gap-4 justify-center lg:justify-start">
-                                <a 
-                                    href="#" 
+                                <Link
+                                    to="/donate"
                                     className="bg-ucb-orange text-white hover:bg-ucb-orange-glow font-bold py-3 px-8 rounded-full text-xs uppercase tracking-wider transition-colors shadow-md min-h-[44px] flex items-center"
                                 >
                                     Donate Now <Heart className="w-3.5 h-3.5 ml-2 text-white fill-white" />
-                                </a>
+                                </Link>
                             </div>
                         </div>
 
