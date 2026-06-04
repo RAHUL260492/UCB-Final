@@ -144,13 +144,19 @@ const ElderCare: React.FC = () => {
 
             tagline="Transform Lives While Building Your Career"
             taglineBody={
-                <p>
-                    Transform lives while building your own career. Urban College of Boston's Elder Care Certificate empowers you to master the skills that help older adults and their families thrive—all while fitting into your busy life.
-                    <br className="hidden md:block" />
-                    <span className="text-ucb-blue font-semibold">With 17% projected national job growth for home health and personal care aides</span> (BLS, 2024–34), you'll graduate ready to succeed in one of the fastest-growing fields!
-                    <br className="hidden md:block" />
-                    <span className="text-ucb-green font-semibold">BONUS:</span> This program uniquely prepares you to earn the Community Health Worker credential—higher starting salary and eligibility for insurance reimbursement!
-                </p>
+                <>
+                    <p>
+                        Transform lives while building your own career. Urban College of Boston's Elder Care Certificate empowers you to master the skills that help older adults and their families thrive—all while fitting into your busy life.
+                    </p>
+                    <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                        <div className="rounded-2xl border border-ucb-blue/15 bg-ucb-blue/5 p-4 text-sm text-gray-700">
+                            <span className="text-ucb-blue font-semibold">17% projected national job growth</span> for home health and personal care aides (BLS, 2024–34)—you'll graduate ready for one of the fastest-growing fields.
+                        </div>
+                        <div className="rounded-2xl border border-ucb-green/20 bg-ucb-green/5 p-4 text-sm text-gray-700">
+                            <span className="text-ucb-green font-semibold">BONUS:</span> This program uniquely prepares you to earn the Community Health Worker credential—higher starting salary and eligibility for insurance reimbursement.
+                        </div>
+                    </div>
+                </>
             }
 
             benefits={benefits}
