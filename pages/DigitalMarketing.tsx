@@ -142,7 +142,8 @@ const DigitalMarketing: React.FC = () => {
                 "Are a busy adult who needs a 100% online, flexible schedule",
                 "Already work in marketing or social media and want a college credential",
                 "Want to build a professional portfolio while you earn credits",
-                "Prefer to study in English or Spanish"
+                "Prefer to study in English or Spanish",
+                "Looking for a flexible, 100% online program that fits a busy life"
             ]}
 
             pathwayTitle="Build Toward Your Future"

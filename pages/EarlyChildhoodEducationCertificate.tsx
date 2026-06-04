@@ -145,7 +145,8 @@ const EarlyChildhoodEducationCertificate: React.FC = () => {
                 "Looking to start your own childcare business",
                 "Seeking to upgrade your early education credentials",
                 "Preferring to study in English, Spanish, or Mandarin",
-                "Planning to earn an Associate or Bachelor's Degree"
+                "Planning to earn an Associate or Bachelor's Degree",
+                "Looking for a flexible, 100% online program that fits a busy life"
             ]}
 
             pathwayTitle="Build Toward Your Future"

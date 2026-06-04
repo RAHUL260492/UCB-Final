@@ -155,7 +155,8 @@ const HumanServicesAdministration: React.FC = () => {
                 "Want to earn an Associate degree and pursue a BSW",
                 "Looking for an online program with bilingual options",
                 "Seeking hands-on internships to build a resume",
-                "Want to build a career in social work with affordable tuition"
+                "Want to build a career in social work with affordable tuition",
+                "Passionate about helping people and strengthening communities"
             ]}
 
             pathwayTitle="Build Toward Your Future"

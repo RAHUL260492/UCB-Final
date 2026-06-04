@@ -146,7 +146,8 @@ const GeneralStudiesAssociate: React.FC = () => {
                 "Want to earn general education credits affordably",
                 "Need a flexible 100% online schedule",
                 "Planning to transfer to a Bachelor's program",
-                "Seeking to build foundational professional skills"
+                "Seeking to build foundational professional skills",
+                "Exploring your interests across business, psychology, and the humanities"
             ]}
 
             pathwayTitle="Build Toward Your Future"

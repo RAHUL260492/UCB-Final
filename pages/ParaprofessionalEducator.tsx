@@ -154,7 +154,8 @@ const ParaprofessionalEducator: React.FC = () => {
                 "Looking to work in K-12 classrooms in Massachusetts",
                 "Seeking to build special education expertise",
                 "Need a flexible online schedule for a busy life",
-                "Planning to earn an Associate or Bachelor's in Education"
+                "Planning to earn an Associate or Bachelor's in Education",
+                "Passionate about supporting students and classroom learning"
             ]}
 
             pathwayTitle="Build Toward Your Future"

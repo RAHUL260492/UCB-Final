@@ -149,7 +149,8 @@ const HumanServicesCertificate: React.FC = () => {
                 "Want to work while earning your credential",
                 "Looking for an online program with bilingual support",
                 "Planning to transfer into a Human Services Administration Associate degree",
-                "Want to build a strong understanding of key social issues"
+                "Want to build a strong understanding of key social issues",
+                "Passionate about helping people and strengthening communities"
             ]}
 
             pathwayTitle="Build Toward Your Future"

@@ -145,7 +145,8 @@ const CaseManagement: React.FC = () => {
                 "A working adult balancing school with life",
                 "Returning to school after a break",
                 "New to human services—no experience required",
-                "Planning to continue toward an associate or bachelor's degree"
+                "Planning to continue toward an associate or bachelor's degree",
+                "Looking for a flexible, 100% online program that fits a busy life"
             ]}
 
             // Pathway
