@@ -1,7 +1,7 @@
 [
   {
     "title": "Urban College Blog | Urban College of Boston",
-    "image": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop",
+    "image": "/assets/images/testimonials/charmaine-b.jpg",
     "description": "Urban College of Boston alumni often have one powerful thing in common: they are deeply mission-driven and as they rise, they lift others with them. That mission-driven spirit is central to the work o...",
     "date": "2026-01-26",
     "slug": "rising-together-how-education-fuels-service-leadership-and-uplifting-communities",
@@ -101,7 +101,7 @@
   },
   {
     "title": "Urban College Blog | Urban College of Boston",
-    "image": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop",
+    "image": "/assets/images/testimonials/elijah-w.png",
     "description": "Sometimes, the best journeys begin with a change of scenery.&amp;nbsp;  That was certainly the case for one of our remarkable graduates, Elijah Watts, who found his way to Urban College of Boston afte...",
     "date": "2025-06-27",
     "slug": "from-t-stops-to-tornadoes-how-one-student-found-his-path-at-urban-college",
@@ -241,7 +241,7 @@
   },
   {
     "title": "Urban College Blog | Urban College of Boston",
-    "image": "https://images.unsplash.com/photo-1513258496099-48162124560a?q=80&w=1200&auto=format&fit=crop",
+    "image": "/assets/images/board/joan-becker.webp",
     "description": "Joan Becker replaces Peter Ebb who served as Urban College’s Board Chair for nearly 15 years; Amelia Manning appointed Vice Chair &amp;nbsp;...",
     "date": "2024-10-08",
     "slug": "urban-college-of-boston-announces-board-chair-transition",
