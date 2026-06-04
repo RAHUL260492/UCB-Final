@@ -36,7 +36,7 @@ const benefits: ProgramBenefit[] = [
     { title: "100% Online", desc: "Learn on a schedule that fits into your busy life", icon: Globe },
     { title: "Financial Aid", desc: "Personalized aid plans & options", icon: DollarSign },
     { title: "Transfer Credits", desc: "Credits transfer toward an associate or bachelor's degree", icon: TrendingUp },
-    { title: "ESL Support", desc: "Tailored to each student's needs", icon: BookOpen },
+    { title: "No Application Fee", desc: "Start your journey today for free", icon: BookOpen },
     { title: "Career Growth", desc: "Build skills for career advancement and financial security", icon: Briefcase },
 ];
 
