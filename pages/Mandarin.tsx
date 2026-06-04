@@ -17,7 +17,7 @@ const Mandarin: React.FC = () => {
 
     const breadcrumbs = [
         { label: "首页", path: "/" },
-        { label: "中文版 / Aprende en Chino" }
+        { label: "中文版" }
     ];
 
     const stats = [

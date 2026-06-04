@@ -183,9 +183,8 @@ const Accreditation: React.FC = () => {
                                     <Shield className="w-6 h-6" />
                                 </div>
                                 <h3 className="text-xl font-display font-bold text-ucb-black mb-2">Accreditation Liaison Officer</h3>
-                                <p className="text-sm text-gray-500 mb-4">Urban College Representative</p>
                                 <p className="font-semibold text-lg text-ucb-black">Caitlin Callahan</p>
-                                <p className="text-gray-600 text-sm">Accreditation Liaison Officer</p>
+                                <p className="text-gray-600 text-sm">Urban College Representative</p>
                             </div>
                             <div className="space-y-3 pt-4 border-t border-gray-50">
                                 <a href="mailto:caitlin.callahan@urbancollege.edu" className="flex items-center gap-3 text-gray-600 hover:text-ucb-blue transition-colors text-sm">

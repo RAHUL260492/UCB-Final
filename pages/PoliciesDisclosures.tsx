@@ -107,9 +107,9 @@ const PoliciesDisclosures: React.FC = () => {
             email: "noemi.custodialora@urbancollege.edu"
         },
         admissions: {
-            name: "Anna Berry",
-            title: "Vice President of Student Success",
-            email: "anna.berry@urbancollege.edu"
+            name: "Calvin Conyers",
+            title: "Associate Vice President of Enrollment Management",
+            email: "calvin.conyers@urbancollege.edu"
         },
         financialAid: {
             name: "Stacy Broadus",
@@ -126,11 +126,6 @@ const PoliciesDisclosures: React.FC = () => {
             title: "Chief Financial Officer / Chief Operating Officer & ALO",
             email: "erline.tanice@urbancollege.edu",
             secondaryEmail: "caitlin.callahan@urbancollege.edu"
-        },
-        studentAccounts: {
-            name: "Karen Lucas",
-            title: "Business Manager",
-            email: "karen.lucas@urbancollege.edu"
         },
         it: {
             name: "Timesha Scott",
@@ -151,7 +146,6 @@ const PoliciesDisclosures: React.FC = () => {
         { id: 'financial-aid', label: 'Financial Aid', icon: DollarSign },
         { id: 'health-safety', label: 'Health & Safety', icon: Shield },
         { id: 'institutional-information', label: 'Institutional Information', icon: Building },
-        { id: 'student-accounts', label: 'Student Accounts', icon: CreditCard },
         { id: 'student-services', label: 'Student Services', icon: Users },
         { id: 'information-technology', label: 'Information Technology', icon: Cpu },
         { id: 'registration-services', label: 'Registration Services', icon: FileClock }
@@ -539,6 +533,7 @@ const PoliciesDisclosures: React.FC = () => {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 {renderDocLink("Financial Aid Information & Net Price Calculator", "/financial-aid")}
                                 {renderDocLink("Tuition, Fees & Cost of Attendance", "/financial-aid")}
+                                {renderDocLink("Tuition, Fees & Payment Portal Information", "/financial-aid")}
                                 {renderDocLink("Refund & R2T4 Policy (PDF)", "/s/UCB-Financial-Aid-R2T4-Policy-V2-0121.pdf")}
                                 {renderDocLink("Satisfactory Academic Progress Policy", "/s/2021-2022-course-catalogue", false, "Page 17 of the Course Catalogue")}
                                 {renderDocLink("Class Attendance and Withdrawal Policy", "/s/2021-2022-course-catalogue", false, "Page 23 of the Course Catalogue")}
@@ -647,22 +642,6 @@ const PoliciesDisclosures: React.FC = () => {
                                         ))}
                                     </div>
                                 </div>
-                            </div>
-                        </section>
-
-                        {/* Section: Student Accounts */}
-                        <section id="student-accounts" className="policy-section bg-white rounded-3xl p-8 border border-gray-100 shadow-sm space-y-6">
-                            <div className="flex items-center gap-3 border-b border-gray-100 pb-4">
-                                <div className="w-10 h-10 rounded-2xl bg-ucb-blue/10 flex items-center justify-center text-ucb-blue shrink-0">
-                                    <CreditCard className="w-5 h-5" />
-                                </div>
-                                <h2 className="text-2xl font-display font-black text-ucb-blue">Student Accounts</h2>
-                            </div>
-
-                            {renderContactCard(contacts.studentAccounts)}
-
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                {renderDocLink("Tuition, Fees & Payment Portal Information", "/financial-aid")}
                             </div>
                         </section>
 

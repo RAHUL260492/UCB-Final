@@ -413,10 +413,10 @@ const About: React.FC = () => {
                                     Urban College's mission is made possible through critical partnerships with employers, community organizations, and supporters who share our commitment to accessible education.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-3">
-                                    <Link to="#" className="inline-flex justify-center items-center border border-white hover:bg-white hover:text-ucb-blue font-bold py-2 px-4 rounded-full text-[10px] uppercase tracking-wider transition-colors min-h-[44px]">
+                                    <Link to="/workforce" className="inline-flex justify-center items-center border border-white hover:bg-white hover:text-ucb-blue font-bold py-2 px-4 rounded-full text-[10px] uppercase tracking-wider transition-colors min-h-[44px]">
                                         Learn About Partnerships
                                     </Link>
-                                    <Link to="#" className="inline-flex justify-center items-center bg-ucb-orange hover:bg-ucb-orange-glow text-white font-bold py-2 px-4 rounded-full text-[10px] uppercase tracking-wider transition-colors min-h-[44px]">
+                                    <Link to="/donate" className="inline-flex justify-center items-center bg-ucb-orange hover:bg-ucb-orange-glow text-white font-bold py-2 px-4 rounded-full text-[10px] uppercase tracking-wider transition-colors min-h-[44px]">
                                         Support Our Mission (Donate)
                                     </Link>
                                 </div>
@@ -454,7 +454,7 @@ const About: React.FC = () => {
                                 Urban College of Boston • 2 Boylston Street, 2nd Floor, Boston, MA 02116 • Phone: (617) 449-7070
                             </p>
                             <p className="text-xs text-gray-400 italic">
-                                Administration Hours: Monday - Friday, 10 am - 6 pm • Campus open Wednesdays & Thursdays (remote services available Mon, Tue, Fri)
+                                Administration Hours: Monday - Friday, 10 am - 6 pm • Campus open Wednesdays & Thursdays (remote services available Mon-Fri, 10am-6pm ET)
                             </p>
                         </div>
                     </ScrollAnimation>
