@@ -18,17 +18,7 @@ const otherWays = [
 ];
 
 const Donate: React.FC = () => {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-        // Load the Givebutter donation widget loader
-        const script = document.createElement('script');
-        script.async = true;
-        script.src = 'https://widgets.givebutter.com/latest.umd.cjs?acct=zaVo1d5KznUwPDV8&p=other';
-        document.body.appendChild(script);
-        return () => {
-            if (script.parentNode) script.parentNode.removeChild(script);
-        };
-    }, []);
+    useEffect(() => { window.scrollTo(0, 0); }, []);
 
     return (
         <div className="pt-24 lg:pt-32 bg-gray-50/50">
