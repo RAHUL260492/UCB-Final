@@ -41,10 +41,15 @@ const Home: React.FC = () => {
                                 Urban College is dedicated to keeping education accessible. Through federal aid (Pell Grants), state scholarships, and institutional support, we ensure money isn't a barrier to your future.
                             </p>
                             <div className="bg-blue-50 border-l-4 border-ucb-blue p-3 rounded-r-lg mb-4">
-                                <p className="text-ucb-blue font-medium text-sm leading-relaxed">
-                                    <span className="font-bold text-ucb-blue block text-base mb-0.5 leading-relaxed">Tuition & Financial Aid</span>
-                                    Our team works with every student one-on-one to create a customized payment plan. The average out-of-pocket cost is just $1,680—only 11% of students have any out-of-pocket cost, and 99% graduate debt-free.
+                                <span className="font-bold text-ucb-blue block text-base mb-1 leading-relaxed">Tuition & Financial Aid</span>
+                                <p className="text-ucb-blue font-medium text-sm leading-relaxed mb-2">
+                                    Our team works with every student one-on-one to create a customized payment plan.
                                 </p>
+                                <ul className="text-ucb-blue font-medium text-sm leading-relaxed space-y-1 list-disc pl-5">
+                                    <li>Average out-of-pocket cost: <span className="font-bold">$1,680</span></li>
+                                    <li>Only <span className="font-bold">11%</span> of students have out-of-pocket cost</li>
+                                    <li><span className="font-bold">99%</span> of students graduate debt-free</li>
+                                </ul>
                             </div>
                             <Link to="/admissions" className="bg-ucb-blue text-white font-bold py-2.5 px-7 rounded-full hover:bg-ucb-blue-glow transition-colors shadow-md hover:-translate-y-0.5 transform duration-300 text-sm min-h-[44px] inline-flex items-center justify-center">
                                 Admissions & Aid Options
