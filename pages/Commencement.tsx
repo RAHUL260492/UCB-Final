@@ -53,7 +53,7 @@ const Commencement: React.FC = () => {
                 title="Commencement Ceremony"
                 subtitle="Mark your calendars! Celebrate the achievements of our graduates and community leaders."
                 breadcrumbs={breadcrumbs}
-                imageSrc="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2940&auto=format&fit=crop"
+                imageSrc="/assets/images/commencement/commencement-hero.jpg"
                 imagePosition="center"
             />
 
@@ -205,6 +205,42 @@ const Commencement: React.FC = () => {
                                 </p>
                             </div>
                         </ScrollAnimation>
+                    </div>
+                </div>
+            </section>
+
+            {/* Photo Gallery */}
+            <section className="py-16 md:py-24 bg-white border-b border-gray-100">
+                <div className="container mx-auto px-6 max-w-6xl">
+                    <ScrollAnimation variant="fade-up" className="text-center max-w-2xl mx-auto mb-12 space-y-2">
+                        <div className="inline-flex p-3 bg-ucb-blue/10 text-ucb-blue rounded-full mb-2">
+                            <Camera className="w-6 h-6" />
+                        </div>
+                        <h2 className="text-3xl font-display font-black text-ucb-black">Moments from Commencement</h2>
+                        <p className="text-gray-500 text-sm font-light">
+                            A look back at the pride, joy, and celebration of our graduates and their families.
+                        </p>
+                    </ScrollAnimation>
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+                        {[
+                            'commencement-01.jpg', 'commencement-02.jpg', 'commencement-03.jpg', 'commencement-04.jpg',
+                            'commencement-05.jpg', 'commencement-06.jpg', 'commencement-07.jpg', 'commencement-08.jpg',
+                            'commencement-09.jpg', 'commencement-10.jpg', 'commencement-11.png', 'commencement-12.png',
+                        ].map((file, idx) => (
+                            <ScrollAnimation
+                                key={file}
+                                variant="fade-up"
+                                delay={`${(idx % 4) * 0.05}s`}
+                                className="overflow-hidden rounded-2xl shadow-sm border border-gray-100 aspect-[4/3] group"
+                            >
+                                <img
+                                    src={`/assets/images/commencement/${file}`}
+                                    alt={`Urban College of Boston commencement moment ${idx + 1}`}
+                                    loading="lazy"
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                />
+                            </ScrollAnimation>
+                        ))}
                     </div>
                 </div>
             </section>

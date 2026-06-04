@@ -13,20 +13,20 @@ interface CouncilMember {
     name: string;
     org: string;
     role: string;
+    img?: string;
 }
 
 const councilMembers: CouncilMember[] = [
-    { name: "Isabella Loboa-Velasquez", org: "Office of Senator Markey", role: "Congressional Aide" },
-    { name: "Peter Whaley", org: "Entrepreneurship for All", role: "Chief Operating Officer" },
-    { name: "Mark Coletta", org: "Citizens Bank", role: "Vice President, Community Development Market Manager" },
-    { name: "Ainsley Castro Charles", org: "YUPRO", role: "National Director, Strategic Partnerships" },
-    { name: "Meera Krisnan", org: "Support to Succeed", role: "Founder" },
-    { name: "Mim Minichiello", org: "Hub International", role: "Executive VP / Consultant" },
-    { name: "Raul Fernandez", org: "Boston University", role: "Professor and NFP Founder" },
-    { name: "Alanna Mallon", org: "Comm Corp Foundation", role: "Executive Director" },
-    { name: "Miguel De Los Santos", org: "Many", role: "Consultant, Professor, Tech Bro" },
+    { name: "Ainsley Castro Charles", org: "YUPRO Placement, Year Up United", role: "National Director of Strategic Partnerships" },
+    { name: "Alanna Mallon", org: "Commonwealth Corporation Foundation", role: "Executive Director" },
+    { name: "Mark Coletta", org: "Citizens Bank (MA, NH & VT)", role: "Community Development Market Manager & Vice President" },
+    { name: "Meera Krishnan", org: "Support to Succeed", role: "Founder & Executive Director" },
+    { name: "Peter Whaley", org: "Entrepreneurship for All (EforAll)", role: "Chief Operating Officer" },
+    { name: "Mim Minichiello", org: "Hub International", role: "Chief Performance Officer" },
+    { name: "Raul Fernandez", org: "Boston University", role: "Professor & Nonprofit Founder" },
+    { name: "Miguel De Los Santos", org: "Upwind Security · Hult · Urban College of Boston", role: "Solutions Architect, Adjunct Faculty & Instructor" },
     { name: "Jose Nino", org: "Boston Arts Academy Foundation", role: "Senior Director of Strategic Initiatives" },
-    { name: "Reginauld (Reggie) Williams", org: "JP Morgan Chase / Oak Lane Consulting", role: "VP, Sr. Business Consultant & Founder" }
+    { name: "Reginauld (Reggie) Williams", org: "JP Morgan Chase · Oak Lane Consulting", role: "VP, Senior Business Consultant & Founder" }
 ];
 
 const processSteps = [
@@ -383,9 +383,13 @@ const Workforce: React.FC = () => {
                                 className="bg-gray-50 p-6 md:p-8 rounded-3xl border border-gray-150 shadow-sm flex flex-col justify-between hover:border-ucb-orange/20 transition-all duration-300"
                             >
                                 <div className="space-y-3">
-                                    <div className="w-10 h-10 rounded-xl bg-ucb-blue/10 text-ucb-blue flex items-center justify-center border border-ucb-blue/5">
-                                        <UserCheck className="w-5 h-5" />
-                                    </div>
+                                    {member.img ? (
+                                        <img src={member.img} alt={member.name} className="w-16 h-16 rounded-full object-cover border-2 border-white shadow-sm" />
+                                    ) : (
+                                        <div className="w-10 h-10 rounded-xl bg-ucb-blue/10 text-ucb-blue flex items-center justify-center border border-ucb-blue/5">
+                                            <UserCheck className="w-5 h-5" />
+                                        </div>
+                                    )}
                                     <div>
                                         <h4 className="font-display font-black text-gray-800 text-base leading-tight mb-1">{member.name}</h4>
                                         <p className="text-xs font-bold text-ucb-orange uppercase tracking-wider font-display">{member.org}</p>
