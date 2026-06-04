@@ -76,6 +76,7 @@ export interface ProgramLayoutProps {
     outcomes: ProgramOutcome[];
     outcomesIntro?: string;
     outcomeTags?: string[];
+    outcomeSources?: { label: string; url: string }[];
 
     // Stats
     stats: ProgramStat[];
@@ -263,7 +264,7 @@ const ProgramPageLayout: React.FC<ProgramLayoutProps> = ({
     tagline, taglineBody,
     benefits,
     achievements = [], achievementNote,
-    courses, outcomes, outcomesIntro, outcomeTags = [],
+    courses, outcomes, outcomesIntro, outcomeTags = [], outcomeSources = [],
     stats,
     forWhom = [],
     pathwayTitle = 'Build Toward Your Future',
@@ -456,6 +457,17 @@ const ProgramPageLayout: React.FC<ProgramLayoutProps> = ({
                                             </span>
                                         ))}
                                     </div>
+                                )}
+                                {outcomeSources.length > 0 && (
+                                    <p className="mt-6 text-[11px] leading-relaxed text-blue-200/70 relative z-10">
+                                        <span className="font-bold uppercase tracking-wider">Sources:</span>{' '}
+                                        {outcomeSources.map((s, i) => (
+                                            <React.Fragment key={i}>
+                                                <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-white">{s.label}</a>
+                                                {i < outcomeSources.length - 1 ? ' · ' : ''}
+                                            </React.Fragment>
+                                        ))}
+                                    </p>
                                 )}
                             </div>
                         </FadeInSection>

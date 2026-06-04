@@ -23,7 +23,7 @@ const courses = [
 ];
 
 const outcomes = [
-    { title: "Project Coordinator", desc: "Support project managers and keep projects on track. (Entry-level average salary: $59,009/year in Massachusetts!)" },
+    { title: "Project Coordinator", desc: "Support project managers and keep projects on track. Even the lowest-paid 10% of MA project management specialists earn $65,180+/year (median $108,630)." },
     { title: "Operations Supervisor", desc: "Oversee daily operations and team performance" },
     { title: "Program Analyst", desc: "Analyze program effectiveness and recommend improvements" },
     { title: "Project Manager", desc: "Lead projects from planning through completion" },
@@ -32,7 +32,7 @@ const outcomes = [
 ];
 
 const benefits: ProgramBenefit[] = [
-    { title: "High Entry Salary", desc: "Earn $59,009+ as an entry-level Project Coordinator in Massachusetts!", icon: DollarSign },
+    { title: "Strong Earnings", desc: "Even the lowest-paid 10% of MA project management specialists earn $65,180+ (BLS, May 2024)", icon: DollarSign },
     { title: "Fast Track", desc: "Finish in as little as one year (only 18 credits!)", icon: Clock },
     { title: "100% Online", desc: "Study 100% online: Learn on a schedule that fits into your busy life", icon: Globe },
     { title: "Financial Aid", desc: "Personalized aid plans & options", icon: CheckCircle },
@@ -134,8 +134,12 @@ const ProjectManagement: React.FC = () => {
 
             courses={courses}
             outcomes={outcomes}
-            outcomesIntro="Project management skills open doors across every industry. You'll graduate ready for career-building roles with strong earning potential and growth opportunities. Project managers are needed in healthcare, technology, construction, finance, and more."
+            outcomesIntro="Project management skills open doors across every industry—healthcare, technology, construction, finance, and more. Employment of project management specialists is projected to grow 6% from 2024 to 2034, faster than the average for all occupations (BLS)."
             outcomeTags={['Management', 'Project Planning', 'Leadership', 'Operations']}
+            outcomeSources={[
+                { label: 'BLS OOH: Project Management Specialists', url: 'https://www.bls.gov/ooh/business-and-financial/project-management-specialists.htm' },
+                { label: 'O*NET MA wages (BLS OEWS May 2024), SOC 13-1082', url: 'https://www.onetonline.org/link/localwages/13-1082.00?st=MA' },
+            ]}
 
             stats={stats}
 
