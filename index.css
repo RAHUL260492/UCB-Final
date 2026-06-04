@@ -587,3 +587,46 @@
     box-shadow: 0 6px 28px rgba(230, 131, 37, 0.7);
   }
 }
+
+/* Migrated blog post content */
+.blog-content-rendered p {
+  margin: 0 0 1.25rem;
+  line-height: 1.8;
+  color: #374151;
+}
+.blog-content-rendered h2,
+.blog-content-rendered h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #13294b;
+  line-height: 1.3;
+  margin: 2rem 0 0.75rem;
+}
+.blog-content-rendered h2 { font-size: 1.6rem; }
+.blog-content-rendered h3 { font-size: 1.3rem; }
+.blog-content-rendered a {
+  color: #1d4ed8;
+  text-decoration: underline;
+  font-weight: 600;
+}
+.blog-content-rendered blockquote {
+  border-left: 4px solid #E68325;
+  background: #f8fafc;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: #1f2937;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+.blog-content-rendered ul {
+  margin: 0 0 1.25rem 1.25rem;
+  list-style: disc;
+}
+.blog-content-rendered li {
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+}
+.blog-content-rendered strong {
+  color: #13294b;
+  font-weight: 700;
+}
