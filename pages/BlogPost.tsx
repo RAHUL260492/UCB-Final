@@ -99,7 +99,7 @@ const BlogPost: React.FC = () => {
                             (e.target as HTMLImageElement).src = fallbacks[hash % fallbacks.length];
                         }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-ucb-blue via-ucb-blue/90 to-ucb-blue/60" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-ucb-blue/80 via-ucb-blue/55 to-ucb-blue/40" />
                 </div>
 
                 <div className="container mx-auto px-6 relative z-10 max-w-4xl">
