@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BookOpen, Clock, Globe, Briefcase, CheckCircle, TrendingUp, Users, DollarSign, Calendar, Award, GraduationCap, ArrowRight } from 'lucide-react';
+import { BookOpen, Clock, Globe, Briefcase, CheckCircle, TrendingUp, DollarSign, Calendar, Award, GraduationCap, ArrowRight } from 'lucide-react';
 import ProgramPageLayout, { ProgramBenefit, ProgramStat } from '../components/ProgramPageLayout';
 import SEO from '../components/SEO';
 import { buildCourseJsonLd, buildBreadcrumbJsonLd } from '../components/seo-data';
@@ -37,7 +37,7 @@ const benefits: ProgramBenefit[] = [
     { title: "100% Online", desc: "Learn completely online, anytime you want", icon: Globe },
     { title: "Financial Aid", desc: "Competitive tuition and generous financial aid", icon: DollarSign },
     { title: "Learn in Your Language", desc: "Courses in English, Spanish, and Mandarin", icon: MessageCircleIcon },
-    { title: "Unmatched Support", desc: "Dedicated advisors and free tutoring", icon: Users },
+    { title: "Transfer Credits", desc: "Credits transfer toward an associate or bachelor's degree", icon: TrendingUp },
     { title: "Career Growth", desc: "Apply what you learn immediately", icon: TrendingUp },
 ];
 
@@ -68,7 +68,7 @@ const EarlyChildhoodEducationCertificate: React.FC = () => {
     return (
         <>
             <SEO
-                title="Foundations in Early Childhood Education Certificate"
+                title="Foundations of Early Childhood Education Certificate"
                 description="Start your early childhood education career with a Foundations Certificate from Urban College of Boston. Multilingual English, Spanish & Mandarin options, EEC-aligned curriculum."
                 canonicalPath="/programs/early-childhood-education-certificate"
                 jsonLd={[
@@ -86,14 +86,14 @@ const EarlyChildhoodEducationCertificate: React.FC = () => {
                 ]}
             />
         <ProgramPageLayout
-            badge="Early Childhood Education Certificate"
+            badge="Foundations of Early Childhood Education Certificate"
             title={<>Shape Young Minds & <span style={{ color: '#E68325' }}>Launch Your Career</span></>}
-            subtitle="In as little as one year. Accessible, high-quality education designed for working students."
+            subtitle="In as little as one year, 100% online. Accessible, high-quality education designed for working students."
             headerImageSrc="/Program%20Images%20for%20Website/ECE-Cert-Primary.jpg"
             secondaryImageSrc="/Program%20Images%20for%20Website/ECE-Cert-secondary-image.jpg"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },
-                { label: 'ECE Certificate' }
+                { label: 'Foundations of Early Childhood Education Certificate' }
             ]}
 
             tagline="Turn Your Love for Children Into A Career"

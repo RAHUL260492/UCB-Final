@@ -35,10 +35,10 @@ const outcomes = [
 const benefits: ProgramBenefit[] = [
     { title: "Fast Track", desc: "Finish in as little as one year (21 credits)", icon: Clock },
     { title: "100% Online", desc: "Learn on a schedule that fits to your busy life", icon: Globe },
-    { title: "Financial Aid", desc: "Personalized aid plans & options", icon: DollarSign },
+    { title: "Affordable Tuition", desc: "Low tuition—most students graduate debt-free", icon: DollarSign },
     { title: "Stackable Credits", desc: "Credits transfer to an Associate or Bachelor's degree", icon: TrendingUp },
     { title: "No Application Fee", desc: "Start your journey today for free", icon: BookOpen },
-    { title: "ESL Support", desc: "English language support available", icon: MessageCircleIcon },
+    { title: "Discover Your Passion", desc: "Explore psychology, business, humanities, social sciences, and more", icon: MessageCircleIcon },
 ];
 
 const stats: ProgramStat[] = [
