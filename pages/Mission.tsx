@@ -161,6 +161,39 @@ const Mission: React.FC = () => {
                 </div>
             </section>
 
+            {/* Faces of Urban College */}
+            <section className="py-20 bg-white border-t border-gray-100">
+                <div className="container mx-auto px-6 max-w-6xl">
+                    <ScrollAnimation variant="fade-up" className="text-center mb-12">
+                        <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs mb-2 block">Our Community</span>
+                        <h2 className="text-3xl md:text-4xl font-display font-bold text-ucb-blue">The Faces of Urban College</h2>
+                        <p className="text-gray-600 mt-3 max-w-2xl mx-auto font-light">Real students and graduates who turned opportunity into impact for their families and communities.</p>
+                    </ScrollAnimation>
+                    <div className="grid grid-cols-3 md:grid-cols-6 gap-4 md:gap-6 mb-10">
+                        {[
+                            { img: 'charmaine-b.jpg', name: 'Charmaine Burrell' },
+                            { img: 'elijah-w.png', name: 'Elijah Watts' },
+                            { img: 'krystal-j.png', name: 'Krystal Jackson Ray' },
+                            { img: 'ayesha-w.jpg', name: 'Ayesha M. Wilson' },
+                            { img: 'mariely-m.jpg', name: 'Mariely Maldonado' },
+                            { img: 'seraphina-t.webp', name: 'Seraphina Taylor' },
+                        ].map((p) => (
+                            <ScrollAnimation key={p.name} variant="fade-up" className="text-center group">
+                                <div className="aspect-square rounded-2xl overflow-hidden shadow-sm border border-gray-100 mb-2">
+                                    <img src={`/assets/images/testimonials/${p.img}`} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                                </div>
+                                <p className="text-xs font-semibold text-gray-700 leading-tight">{p.name}</p>
+                            </ScrollAnimation>
+                        ))}
+                    </div>
+                    <div className="text-center">
+                        <Link to="/blog" className="inline-flex items-center justify-center gap-2 bg-ucb-blue hover:bg-ucb-blue-glow text-white font-bold py-3 px-8 rounded-full text-xs uppercase tracking-wider transition-colors shadow-md min-h-[44px]">
+                            Read Their Stories <ArrowRight className="w-4 h-4" />
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
             {/* Institutional Distinctions: HSI & MSI Card */}
             <section className="py-16 bg-gray-50 border-t border-gray-100">
                 <div className="container mx-auto px-6 max-w-4xl">
