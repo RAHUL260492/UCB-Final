@@ -155,8 +155,8 @@ const ParaprofessionalEducator: React.FC = () => {
             pathwayTitle="Build Toward Your Future"
             pathwayDescription="Every credit you earn counts toward an Associate Degree at Urban College. When you're ready, our transfer agreements make it easy to continue toward a bachelor's degree at partner institutions."
             pathwaySteps={[
-                { label: 'Certificate', credits: '21 Credits', active: true },
-                { label: 'Associate Degree', credits: '60 Credits', active: false },
+                { label: 'Certificate', credits: '21 Credits', active: false },
+                { label: 'Associate Degree', credits: '60 Credits', active: true },
                 { label: "Bachelor's & License", credits: 'Transfer Ready', active: false }
             ]}
 

@@ -151,8 +151,8 @@ const HumanServicesCertificate: React.FC = () => {
             pathwayTitle="Build Toward Your Future"
             pathwayDescription="Every credit you earn transfers directly into the Human Services Associate Degree at Urban College. From there, our transfer agreements make it easy to continue toward a bachelor's degree."
             pathwaySteps={[
-                { label: 'Certificate', credits: '21 Credits', active: true },
-                { label: 'Associate Degree', credits: '60 Credits', active: false },
+                { label: 'Certificate', credits: '21 Credits', active: false },
+                { label: 'Associate Degree', credits: '60 Credits', active: true },
                 { label: "Bachelor of Social Work (BSW)", credits: 'Transfer Ready', active: false },
             ]}
 

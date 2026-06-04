@@ -150,7 +150,7 @@ const EarlyChildhoodEducation: React.FC = () => {
             pathwayTitle="Build Toward Your Future"
             pathwayDescription="The Early Childhood Education Associate is a stackable, for-credit program. Credits may transfer toward an associate or bachelor's degree."
             pathwaySteps={[
-                { label: 'Certificate (18 Credits)', credits: '18 Credits', active: false },
+                { label: 'Certificate', credits: '18 Credits', active: false },
                 { label: 'Associate Degree', credits: '60 Credits', active: true },
                 { label: "Bachelor's Degree", credits: 'Transfer Ready', active: false },
             ]}

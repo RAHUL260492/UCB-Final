@@ -146,8 +146,8 @@ const GeneralStudiesCertificate: React.FC = () => {
             pathwayTitle="Build Toward Your Future"
             pathwayDescription="Earning your Certificate in General Studies is the first step toward a wide range of career and educational opportunities."
             pathwaySteps={[
-                { label: 'Certificate', credits: '21 Credits', active: true },
-                { label: 'Associate Degree', credits: '60 Credits', active: false },
+                { label: 'Certificate', credits: '21 Credits', active: false },
+                { label: 'Associate Degree', credits: '60 Credits', active: true },
                 { label: "Bachelor's Degree", credits: 'Transfer Ready', active: false },
             ]}
 

@@ -84,7 +84,7 @@ const forWhom = [
 ];
 
 const pathwaySteps = [
-    { label: 'Certificate (21 credits)', credits: '21 Credits', active: false },
+    { label: 'Certificate', credits: '21 Credits', active: false },
     { label: 'Associate Degree', credits: '60 Credits', active: true },
     { label: "Bachelor's Degree", credits: 'Transfer Agreements', active: false },
 ];
