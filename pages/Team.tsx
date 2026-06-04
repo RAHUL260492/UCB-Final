@@ -216,7 +216,7 @@ const Team: React.FC = () => {
                                 </p>
 
                                 <div className="pt-2 flex flex-col sm:flex-row gap-3">
-                                    <a href="mailto:yves.salomon-fernandez@urbancollege.edu" className="inline-flex justify-center items-center gap-2 bg-ucb-blue hover:bg-blue-900 text-white font-bold py-2.5 px-6 rounded-full text-xs uppercase tracking-wider transition-colors min-h-[44px]">
+                                    <a href="mailto:president@urbancollege.edu" className="inline-flex justify-center items-center gap-2 bg-ucb-blue hover:bg-blue-900 text-white font-bold py-2.5 px-6 rounded-full text-xs uppercase tracking-wider transition-colors min-h-[44px]">
                                         <Mail className="w-4 h-4" /> Contact President's Office
                                     </a>
                                 </div>

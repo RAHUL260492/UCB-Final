@@ -379,7 +379,7 @@ const President: React.FC = () => {
                             </a>
 
                             <a 
-                                href="mailto:yves.salomon-fernandez@urbancollege.edu" 
+                                href="mailto:president@urbancollege.edu"
                                 className="flex flex-col items-center justify-center bg-white border border-gray-100 hover:border-ucb-blue/30 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all group min-h-[120px]"
                             >
                                 <Mail className="w-6 h-6 text-ucb-orange mb-2 group-hover:scale-110 transition-transform" />
