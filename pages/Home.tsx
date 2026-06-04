@@ -43,7 +43,7 @@ const Home: React.FC = () => {
                             <div className="bg-blue-50 border-l-4 border-ucb-blue p-3 rounded-r-lg mb-4">
                                 <p className="text-ucb-blue font-medium text-sm leading-relaxed">
                                     <span className="font-bold text-ucb-blue block text-base mb-0.5 leading-relaxed">Tuition & Financial Aid</span>
-                                    Our team works with every student one-on-one to create a customized payment plan. (Specific out-of-pocket cost metrics coming soon—under research by the Financial Aid Office.)
+                                    Our team works with every student one-on-one to create a customized payment plan. The average out-of-pocket cost is just $1,680—only 11% of students have any out-of-pocket cost, and 99% graduate debt-free.
                                 </p>
                             </div>
                             <Link to="/admissions" className="bg-ucb-blue text-white font-bold py-2.5 px-7 rounded-full hover:bg-ucb-blue-glow transition-colors shadow-md hover:-translate-y-0.5 transform duration-300 text-sm min-h-[44px] inline-flex items-center justify-center">
@@ -51,11 +51,15 @@ const Home: React.FC = () => {
                             </Link>
                         </div>
                         <div className="grid grid-cols-1 gap-2">
-                            {['Scholarships', 'Financial Aid & Grants', 'Payment Plans'].map((item, i) => (
-                                <button key={i} className="bg-white p-4 rounded-lg shadow-sm border border-gray-100 flex items-center justify-between group hover:border-ucb-orange hover:shadow-md transition-all cursor-pointer min-h-[44px]">
-                                    <span className="font-bold text-base text-ucb-blue group-hover:text-ucb-blue transition-colors leading-relaxed">{item}</span>
+                            {[
+                                { name: 'Scholarships', to: '/financial-services-and-funding-options' },
+                                { name: 'Financial Aid & Grants', to: '/financial-services-and-funding-options' },
+                                { name: 'Payment Plans', to: '/tuition-payment-options' },
+                            ].map((item) => (
+                                <Link key={item.name} to={item.to} className="bg-white p-4 rounded-lg shadow-sm border border-gray-100 flex items-center justify-between group hover:border-ucb-orange hover:shadow-md transition-all cursor-pointer min-h-[44px]">
+                                    <span className="font-bold text-base text-ucb-blue group-hover:text-ucb-blue transition-colors leading-relaxed">{item.name}</span>
                                     <span className="text-ucb-orange text-xl group-hover:translate-x-2 transition-transform">→</span>
-                                </button>
+                                </Link>
                             ))}
                         </div>
                     </div>
