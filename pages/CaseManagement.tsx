@@ -4,40 +4,33 @@ import ProgramPageLayout, { ProgramBenefit, ProgramStat } from '../components/Pr
 import SEO from '../components/SEO';
 import { buildCourseJsonLd, buildBreadcrumbJsonLd } from '../components/seo-data';
 
-// ─── Icon helper for bilingual ────────────────────────────────────────────────
-const MessageCircleIcon: React.ElementType = (props: any) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-        fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-        <path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z" />
-    </svg>
-);
-
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
 const courses = [
-    { title: "Principles of Management", desc: "Lead teams and projects effectively" },
-    { title: "Business Communication", desc: "Write and speak professionally" },
-    { title: "Introduction to Computer Applications", desc: "Master essential technology" },
-    { title: "Introduction to Business", desc: "Understand how organizations work" },
-    { title: "Principles of Accounting", desc: "Build financial literacy" },
-    { title: "Business Ethics", desc: "Navigate professional responsibilities" },
+    { title: "Introduction to Human Services", desc: "Build your foundation" },
+    { title: "Case Management", desc: "Master the core skills employers want" },
+    { title: "Counseling & Interviewing Techniques", desc: "Connect with clients effectively" },
+    { title: "Human Behavior and Social Environment", desc: "Understand the people you'll serve" },
+    { title: "Ethics in Human Services", desc: "Maintain professional standards" },
+    { title: "Internship in Human Services", desc: "Gain real-world experience" },
 ];
 
 const outcomes = [
-    { title: "Administrative or Office Support", desc: "Manage schedules, communications, and daily operations." },
-    { title: "Operations and Management Support", desc: "Help teams run smoothly and efficiently." },
-    { title: "Bookkeeping or Business Assistant", desc: "Manage financial records and support business functions." },
-    { title: "Entry-Level Leadership Roles", desc: "Take on supervisory responsibilities." },
-    { title: "Entrepreneurship or Small Business Support", desc: "Start or support your own business." },
+    { title: "Case Manager", desc: "Support individuals with disabilities, chronic illnesses, or social service needs. Entry: $40,000–$50,000 | Experienced: $60,000+" },
+    { title: "Social Services Assistant", desc: "Manage appointments, records, and public assistance applications. Entry: $40,000–$47,000 | Experienced: $59,000" },
+    { title: "Community Health Worker", desc: "Connect underserved communities with health resources. Entry: $43,000–$57,000 | Experienced: $65,000" },
+    { title: "Behavioral Case Worker", desc: "Provide crisis intervention for mental health and substance recovery." },
+    { title: "Family Support Worker", desc: "Help families with childcare, housing, and financial support." },
+    { title: "Care Coordinator", desc: "Manage healthcare for seniors or individuals with complex medical needs." },
 ];
 
 const benefits: ProgramBenefit[] = [
     { title: "Fast Track", desc: "Finish in as little as 9 months (only 21 credits)", icon: Clock },
     { title: "100% Online", desc: "Learn on a schedule that fits into your busy life", icon: Globe },
-    { title: "Financial Aid", desc: "Personalized aid plans & options", icon: DollarSign },
-    { title: "Transfer Credits", desc: "Credits transfer toward an associate or bachelor's degree", icon: TrendingUp },
-    { title: "No Application Fee", desc: "Start your journey today for free", icon: BookOpen },
-    { title: "Career Growth", desc: "Build skills for career advancement and financial security", icon: Briefcase },
+    { title: "Graduate Debt-Free", desc: "Most students graduate debt-free", icon: DollarSign },
+    { title: "No Experience Needed", desc: "Start your career from scratch with full support", icon: CheckCircle },
+    { title: "No Application Fee", desc: "Apply for free—start your journey today", icon: BookOpen },
+    { title: "Growing Field", desc: "Build skills in one of Massachusetts' fastest-growing fields", icon: TrendingUp },
 ];
 
 const stats: ProgramStat[] = [
@@ -50,12 +43,12 @@ const stats: ProgramStat[] = [
 ];
 
 const faqs = [
-    { q: "What is the duration of the program?", a: "As little as 9 months." },
-    { q: "Is it fully online?", a: "Yes, entirely online with various formats including asynchronous and live options." },
-    { q: "What languages are courses available in?", a: "Courses are offered in English." },
+    { q: "Is the program entirely online?", a: "Yes! The program is fully online—all classes happen on our online platform. Learn whenever fits you: mornings, nights, or weekends. On-campus support is also available if you want in-person help." },
+    { q: "How long does the program take?", a: "Finish in 9–12 months if you study full-time. Take one or two classes at a time and finish in 18–24 months. You set the pace to fit your life." },
+    { q: "Do I need prior experience in social work or case management?", a: "No! No prior experience is needed. We cover all foundational knowledge—start fresh or advance in your current role and build the skills you need." },
+    { q: "How is this certificate different from the CCM certification?", a: "This certificate is your first step. The CCM (Certified Case Manager) requires years of experience. Our program gives you 21 credits and the skills to get hired now—then gain experience and qualify for CCM certification later." },
+    { q: "Am I eligible for financial aid?", a: "Yes! Most students qualify for financial aid. Contact financial aid at (617) 449-7070. Most students graduate debt-free!" },
     { q: "Is Urban College accredited?", a: "Yes, Urban College is a fully accredited non-profit college and Hispanic-Serving Institution." },
-    { q: "Will this program help my career?", a: "Absolutely — whether you're seeking a new job, a promotion, or planning to continue your education." },
-    { q: "Is financial aid available?", a: "Yes, federal, state, and institutional aid options are available for eligible students." },
 ];
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -67,12 +60,12 @@ const CaseManagement: React.FC = () => {
         <>
             <SEO
                 title="Case Management Certificate Program"
-                description="Train as a case manager with Urban College of Boston. Practical skills in client advocacy, assessment, and human services delivery — online and affordable."
+                description="Earn a Case Management Certificate from Urban College of Boston in as little as 9 months. Fully online and affordable, with job-ready skills for high-demand roles in healthcare, social services, and nonprofits."
                 canonicalPath="/programs/case-management"
                 jsonLd={[
                     buildCourseJsonLd({
                         name: "Case Management Certificate",
-                        description: "Train as a case manager with Urban College of Boston. Practical skills in client advocacy, assessment, and human services delivery — online and affordable.",
+                        description: "Earn a Case Management Certificate from Urban College of Boston in as little as 9 months. Fully online and affordable, with job-ready skills for high-demand roles in healthcare, social services, and nonprofits.",
                         path: '/programs/case-management',
                         credentialCategory: 'certificate',
                     }),
@@ -86,8 +79,8 @@ const CaseManagement: React.FC = () => {
         <ProgramPageLayout
             // Header
             badge="Case Management Certificate"
-            title={<>Build a Career Connecting People & <span style={{ color: '#E68325' }}>Changing Lives</span></>}
-            subtitle="In as little as 9 months. Accessible, high-quality education designed for working adults."
+            title={<>Launch Your Career <span style={{ color: '#E68325' }}>Helping Others</span></>}
+            subtitle="In as little as 9 months. Most students graduate debt-free."
             headerImageSrc="/Program%20Images%20for%20Website/Case%20Management%20Cert%201.jpg"
             secondaryImageSrc="/Program%20Images%20for%20Website/Case%20Management%20Cert%202.jpg"
             breadcrumbs={[
@@ -96,15 +89,14 @@ const CaseManagement: React.FC = () => {
             ]}
 
             // Tagline
-            tagline="Develop Skills That Get You Hired"
+            tagline="Transform Lives While You Build Your Career"
             taglineBody={
                 <p>
-                    Develop the actual business skills that will enable you to get a job, increase your salary,
-                    or earn a promotion — all without interrupting your life.{' '}
+                    Transform lives and build your career.{' '}
                     <span className="text-ucb-blue font-semibold">
-                        Urban College of Boston's Case Management Program
+                        Urban College of Boston's Case Management Certificate
                     </span>{' '}
-                    is a fully online, short-term program designed for modern working adults.
+                    teaches you how to help people—without interrupting your busy life. This fully online program is ideal for working students ready to make a difference, preparing you for high-demand roles in healthcare, social services, nonprofits, and community organizations.
                 </p>
             }
 
@@ -114,59 +106,57 @@ const CaseManagement: React.FC = () => {
             // Achievements
             achievements={[
                 {
-                    heading: "Professional Skills",
+                    heading: "Client Support Skills",
                     icon: Briefcase,
                     items: [
-                        "Support daily business and office operations",
-                        "Communicate professionally in writing, speaking, and digital tools",
-                        "Work confidently in teams or leadership support roles"
+                        "Assess client needs and connect them to essential services",
+                        "Manage crisis situations with confidence and professionalism",
+                        "Advocate for individuals who need your support"
                     ]
                 },
                 {
-                    heading: "Ethical & Practical",
+                    heading: "Professional Standards",
                     icon: Award,
                     items: [
-                        "Apply ethical and responsible business practices",
-                        "Use business skills in real workplace situations",
-                        "Master essential technology for modern workplaces"
+                        "Maintain accurate documentation and uphold ethical standards",
+                        "Understand trauma, culture, and human behavior to serve clients effectively"
                     ]
                 }
             ]}
-            achievementNote="Courses are practical and designed to help you apply skills immediately on the job, not just study theory."
+            achievementNote="Courses are practical and led by experienced professionals—apply these skills right away, not just study theory."
 
             // Courses & Outcomes
             courses={courses}
             outcomes={outcomes}
-            outcomesIntro="This certificate helps prepare you for career-building roles where you can earn promotions, increase pay, or change career paths."
-            outcomeTags={['Management', 'Administration', 'Bookkeeping', 'Entrepreneurship']}
+            outcomesIntro="This certificate prepares you for career-building roles in high-demand fields. High job demand in Massachusetts means opportunities are waiting—work in hospitals, clinics, nonprofits, schools, or government agencies."
+            outcomeTags={['Case Management', 'Social Services', 'Community Health', 'Human Services']}
 
             // Stats
             stats={stats}
 
             // Who is it for
             forWhom={[
-                "Starting your professional career",
-                "A working adult upgrading skills",
+                "Ready to start a career helping others",
+                "A working adult balancing school with life",
                 "Returning to school after a break",
-                "A multilingual learner seeking inclusive college programs",
-                "An immigrant student looking for a supportive college in the USA",
-                "Planning an associate's or bachelor's degree in the future"
+                "New to human services—no experience required",
+                "Planning to continue toward an associate or bachelor's degree"
             ]}
 
             // Pathway
             pathwayTitle="Build Toward Your Future"
-            pathwayDescription="The Case Management Program is a stackable, for-credit program. Credits may transfer toward an associate or bachelor's degree."
+            pathwayDescription="This certificate is your first step. Apply your credits to our Associate of Arts in Human Services Administration, then transfer to complete a Bachelor of Social Work (BSW)—the gold standard for case managers."
             pathwaySteps={[
-                { label: 'Certificate', credits: '18 Credits', active: false },
-                { label: 'Associate Degree', credits: '60 Credits', active: true },
-                { label: "Bachelor's Degree", credits: 'Transfer Ready', active: false },
+                { label: 'Certificate', credits: '21 Credits', active: false },
+                { label: 'AA in Human Services', credits: '60 Credits', active: true },
+                { label: "Bachelor of Social Work", credits: 'Transfer Ready', active: false },
             ]}
 
             // Testimonial
             testimonial={{
-                quote: "I wouldn't be able to do the work I do without my certificates and degree from Urban College. If you have any dreams, go forward. When I first came here, I didn't speak English, but I was pushed to continue to study and get my diploma.",
-                name: "Ramona S.",
-                role: "Alum",
+                quote: "I'm able to work in human services and work with people, which is what I like. I wouldn't be able to do the work I do without my certificates and degree from Urban College. If you have any dreams, go forward. When I first came here, I didn't speak English, but I was pushed to continue to study and get my diploma.",
+                name: "Ramona De Los Santos",
+                role: "Case Management Certificate Graduate",
                 imageSrc: "/assets/images/testimonials/ramona-s.webp"
             }}
 
