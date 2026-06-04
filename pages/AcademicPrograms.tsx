@@ -251,8 +251,8 @@ const AcademicPrograms: React.FC = () => {
                         <div className="grid md:grid-cols-3 gap-6 relative z-10">
                             {[
                                 { step: "1", label: "Certificate", desc: "16-21 credits to build core skills" },
-                                { step: "2", label: "Associate Degree", desc: "60 credits stackable block" },
-                                { step: "3", label: "Bachelor's Degree", desc: "Transfer ready to partner colleges" }
+                                { step: "2", label: "Associate Degree", desc: "60 credits for in-depth learning" },
+                                { step: "3", label: "Bachelor's Degree", desc: "Transfer easily to partner colleges" }
                             ].map((item, idx) => (
                                 <div key={idx} className="bg-white p-6 rounded-2xl border-2 border-ucb-blue/10 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all">
                                     <div className="w-8 h-8 rounded-full bg-ucb-orange text-white font-bold flex items-center justify-center mx-auto mb-3">
