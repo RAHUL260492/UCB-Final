@@ -24,8 +24,8 @@ const courses = [
 ];
 
 const outcomes = [
-    { title: "Administrative Assistant", desc: "Support office operations and management. Median national salary: $55,560!" },
-    { title: "General Manager", desc: "Lead teams and oversee operations. 6% projected job growth!" },
+    { title: "Administrative Assistant", desc: "Support office operations and management. MA median $53,690/year; national median $46,290 (BLS OEWS, May 2024)." },
+    { title: "General Manager", desc: "Lead teams and oversee operations. 4% projected growth for general & operations managers (BLS, 2024–34); MA median $123,850." },
     { title: "Sales Agent", desc: "Build client relationships and drive revenue." },
     { title: "Research Assistant", desc: "Support research projects across fields." },
     { title: "Executive Assistant", desc: "Provide high-level administrative support." },
@@ -134,6 +134,10 @@ const GeneralStudiesAssociate: React.FC = () => {
             outcomes={outcomes}
             outcomesIntro="You'll graduate ready to pursue many different career opportunities, from starting your own small business to becoming a general manager."
             outcomeTags={['General', 'Business', 'Administrative', 'Customer Service']}
+            outcomeSources={[
+                { label: 'BLS OOH: Secretaries & Administrative Assistants', url: 'https://www.bls.gov/ooh/office-and-administrative-support/secretaries-and-administrative-assistants.htm' },
+                { label: 'BLS OOH: Top Executives (general & operations managers)', url: 'https://www.bls.gov/ooh/management/top-executives.htm' },
+            ]}
 
             stats={stats}
 

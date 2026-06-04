@@ -24,7 +24,7 @@ const courses = [
 ];
 
 const outcomes = [
-    { title: "Social Work Assistant", desc: "Support social workers in helping clients. (Average salary: $48,460 in Massachusetts! 8% projected job growth—faster than average!)" },
+    { title: "Social Work Assistant", desc: "Support social workers in helping clients. (MA average: $48,460/year, BLS OEWS May 2023; 8% projected MA growth, 2022–2032.)" },
     { title: "Community Health Worker", desc: "Connect communities with vital health and social services" },
     { title: "Family Support Worker", desc: "Help families navigate housing, childcare, and financial assistance" },
     { title: "Human Services Coordinator", desc: "Manage programs and services for vulnerable populations" },
@@ -34,8 +34,8 @@ const outcomes = [
 ];
 
 const benefits: ProgramBenefit[] = [
-    { title: "High MA Salaries", desc: "Earn up to $73,510/year as a Community and Social Service Specialist in Massachusetts!", icon: DollarSign },
-    { title: "Growing Field", desc: "8% job growth—faster than the national average!", icon: TrendingUp },
+    { title: "High MA Salaries", desc: "Community and social service specialists in MA earn an average of $57,410/year (BLS OEWS, May 2023)", icon: DollarSign },
+    { title: "Growing Field", desc: "8% projected job growth in Massachusetts (2022–2032)—faster than the national average", icon: TrendingUp },
     { title: "100% Online", desc: "Study 100% online: Learn on a schedule that fits into your busy life", icon: Globe },
     { title: "Financial Aid", desc: "Personalized aid plans & options", icon: CheckCircle },
     { title: "Bilingual Options", desc: "Learn in English and/or Spanish", icon: MessageCircleIcon },
@@ -142,6 +142,11 @@ const HumanServicesAdministration: React.FC = () => {
             outcomes={outcomes}
             outcomesIntro="Human services is one of the fastest-growing fields in Massachusetts. You'll graduate ready for meaningful, career-building roles where you help people every day. Work in hospitals, clinics, nonprofits, schools, government agencies, or community organizations. Your skills are in high demand."
             outcomeTags={['Social Work', 'Advocacy', 'Case Management', 'Community Support']}
+            outcomeSources={[
+                { label: 'BLS OEWS May 2023: Community & Social Service Specialists (21-1099)', url: 'https://www.bls.gov/oes/2023/may/oes211099.htm' },
+                { label: 'BLS OEWS May 2023: Social & Human Service Assistants (21-1093)', url: 'https://www.bls.gov/oes/2023/may/oes211093.htm' },
+                { label: 'Projections Central (MA, 2022–2032), via O*NET', url: 'https://www.onetonline.org/link/localtrends/21-1093.00?st=MA' },
+            ]}
 
             stats={stats}
 

@@ -130,6 +130,11 @@ const CaseManagement: React.FC = () => {
             outcomes={outcomes}
             outcomesIntro="This certificate prepares you for career-building roles in high-demand fields. High job demand in Massachusetts means opportunities are waiting—work in hospitals, clinics, nonprofits, schools, or government agencies."
             outcomeTags={['Case Management', 'Social Services', 'Community Health', 'Human Services']}
+            outcomeSources={[
+                { label: 'BLS OEWS May 2023: Social & Human Service Assistants (21-1093, MA mean $48,460)', url: 'https://www.bls.gov/oes/2023/may/oes211093.htm' },
+                { label: 'BLS OEWS May 2023: Community Health Workers (21-1094, MA mean $55,090)', url: 'https://www.bls.gov/oes/2023/may/oes211094.htm' },
+                { label: 'MassHire/EOLWD Occupational Employment & Wages tool', url: 'https://lmi.dua.eol.mass.gov/LMI/OccupationalEmploymentandWageAllIndustries' },
+            ]}
 
             // Stats
             stats={stats}

@@ -25,8 +25,8 @@ const courses = [
 
 const outcomes = [
     { title: "Administrative or Office Support", desc: "Manage schedules, communications, and daily operations. Competitive salary with strong demand." },
-    { title: "Operations and Management Support", desc: "Help teams run smoothly and efficiently. 6% projected job growth for General Managers—higher than the national average!" },
-    { title: "Bookkeeping or Business Assistant", desc: "Manage financial records and support business functions. Average salary for a Bookkeeper in Massachusetts is $65,000!" },
+    { title: "Operations and Management Support", desc: "Help teams run smoothly and efficiently. General & operations managers in MA earn a median of $123,850/year; 4% projected growth (BLS, 2024–34)." },
+    { title: "Bookkeeping or Business Assistant", desc: "Manage financial records and support business functions. Bookkeeping clerks in MA earn a median of $57,120/year (BLS OEWS, May 2024)." },
     { title: "Entry-Level Leadership Roles", desc: "Take on supervisory responsibilities." },
     { title: "Entrepreneurship or Small Business Support", desc: "Start or support your own business." }
 ];
@@ -53,11 +53,11 @@ const stats: ProgramStat[] = [
 ];
 
 const faqs = [
-    { q: "What is the duration of the program?", a: "As little as one year." },
-    { q: "Is it fully online?", a: "Yes, entirely online with various formats." },
-    { q: "What languages?", a: "English and Spanish." },
-    { q: "Accredited?", a: "Yes, a fully accredited non-profit college and Hispanic-Serving Institution." },
-    { q: "Will it help my career?", a: "Yes, for new jobs, promotions, or further studies." },
+    { q: "How long does the Business Certificate take?", a: "As little as one year for all 18 credits—or take it at your own pace to fit work and family." },
+    { q: "Is the program fully online?", a: "Yes! The program is 100% online with flexible scheduling, so you can study on your own time." },
+    { q: "What languages is the program offered in?", a: "Courses are available in both English and Spanish, with ESL support tailored to each student." },
+    { q: "Is Urban College accredited?", a: "Yes—Urban College of Boston is a fully accredited non-profit college and a federally designated Hispanic-Serving Institution." },
+    { q: "Will this certificate help my career?", a: "Yes! It's built to help you land a new job, earn a promotion, or transfer credits toward an associate or bachelor's degree." },
     { q: "Am I eligible for financial aid?", a: "Most students are eligible for financial aid. Contact our financial aid office at (617) 449-7070-our team works with you one-on-one to identify grants, scholarships, and funding options that fit your situation and make your education as affordable as possible." },
 ];
 
@@ -134,6 +134,10 @@ const BusinessCertificate: React.FC = () => {
             outcomes={outcomes}
             outcomesIntro="This certificate helps prepare you for career-building roles where you can earn promotions, increase pay, or change career paths."
             outcomeTags={['Management', 'Administration', 'Bookkeeping', 'Entrepreneurship']}
+            outcomeSources={[
+                { label: 'BLS OOH: Bookkeeping, Accounting & Auditing Clerks', url: 'https://www.bls.gov/ooh/office-and-administrative-support/bookkeeping-accounting-and-auditing-clerks.htm' },
+                { label: 'BLS OOH: Top Executives (general & operations managers)', url: 'https://www.bls.gov/ooh/management/top-executives.htm' },
+            ]}
 
             stats={stats}
 
