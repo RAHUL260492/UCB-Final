@@ -4,7 +4,7 @@ import ProgramPageLayout, { ProgramBenefit, ProgramStat } from '../components/Pr
 import SEO from '../components/SEO';
 import { buildCourseJsonLd, buildBreadcrumbJsonLd } from '../components/seo-data';
 
-// ─── Icon helper for bilingual ────────────────────────────────────────────────
+// ─── Icon helper for multilingual ──────────────────────────────────────────────
 const MessageCircleIcon: React.ElementType = (props: any) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
         fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
@@ -15,30 +15,31 @@ const MessageCircleIcon: React.ElementType = (props: any) => (
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
 const courses = [
-    { title: "Principles of Management", desc: "Lead teams and projects effectively" },
-    { title: "Business Communication", desc: "Write and speak professionally" },
-    { title: "Introduction to Computer Applications", desc: "Master essential technology" },
-    { title: "Introduction to Business", desc: "Understand how organizations work" },
-    { title: "Principles of Accounting", desc: "Build financial literacy" },
-    { title: "Business Ethics", desc: "Navigate professional responsibilities" }
+    { title: "Child Growth and Development", desc: "Understand how children learn and grow from birth through age 8" },
+    { title: "Guidance and Discipline", desc: "Master positive behavior and classroom-management strategies" },
+    { title: "The Exceptional Child", desc: "Support children with special needs and diverse abilities" },
+    { title: "Early Childhood Curriculum", desc: "Design engaging, developmentally appropriate learning experiences" },
+    { title: "Infant/Toddler Curriculum", desc: "Specialize in care and learning for the earliest years" },
+    { title: "Early Childhood Professional Development", desc: "Build your professional identity and meet field standards" }
 ];
 
 const outcomes = [
-    { title: "Administrative or Office Support", desc: "Manage schedules, communications, and daily operations. Competitive salary with strong demand." },
-    { title: "Operations and Management Support", desc: "Help teams run smoothly and efficiently." },
-    { title: "Bookkeeping or Business Assistant", desc: "Manage financial records and support business functions." },
-    { title: "Entry-Level Leadership Roles", desc: "Take on supervisory responsibilities." },
-    { title: "Entrepreneurship or Small Business Support", desc: "Start or support your own business." }
+    { title: "Preschool Teacher", desc: "Guide young children through their most critical developmental years. MA average $46,330; 4% projected growth, 2024–2034 (BLS)." },
+    { title: "Preschool & Childcare Center Director", desc: "Lead and manage early-education programs. Median national salary $56,270 (BLS, May 2024)." },
+    { title: "Childcare Worker", desc: "Provide nurturing care and education in childcare centers." },
+    { title: "Family Childcare Provider", desc: "Start and run your own home-based childcare business." },
+    { title: "Teacher Assistant", desc: "Support lead teachers in early-education classrooms." },
+    { title: "Early Intervention Specialist", desc: "Work with children with special needs and diverse abilities." }
 ];
 
 const benefits: ProgramBenefit[] = [
     { title: "Flexible Pace", desc: "Complete your 60 credits over about two years", icon: Clock },
     { title: "100% Online", desc: "Learn on a schedule that fits into your busy life", icon: Globe },
-    { title: "Financial Aid", desc: "Personalized aid plans & options", icon: DollarSign },
+    { title: "Earn While You Learn", desc: "Start working in early education right away—no need to wait until graduation", icon: Briefcase },
     { title: "Learn in Your Language", desc: "Courses in English, Spanish, and Mandarin", icon: MessageCircleIcon },
-    { title: "Transfer Credits", desc: "Credits transfer toward an associate or bachelor's degree", icon: TrendingUp },
+    { title: "Transfer Ready", desc: "Credits transfer toward a bachelor's degree at partner colleges", icon: TrendingUp },
     { title: "ESL Support", desc: "Tailored to each student's needs", icon: BookOpen },
-    { title: "Career Growth", desc: "Build skills for career advancement and financial security", icon: Briefcase },
+    { title: "Most Graduate Debt-Free", desc: "Affordable tuition plus personalized financial-aid guidance", icon: DollarSign },
 ];
 
 const stats: ProgramStat[] = [
@@ -53,12 +54,12 @@ const stats: ProgramStat[] = [
 ];
 
 const faqs = [
-    { q: "What is the duration of the program?", a: "About two years (60 credits)." },
-    { q: "Is it fully online?", a: "Yes, entirely online with various formats." },
-    { q: "What languages?", a: "English, Spanish, and Mandarin." },
-    { q: "Accredited?", a: "Yes, a fully accredited non-profit college and Hispanic-Serving Institution." },
-    { q: "Will it help my career?", a: "Yes, for new jobs, promotions, or further studies." },
-    { q: "Am I eligible for financial aid?", a: "Most students are eligible for financial aid. Contact our financial aid office at (617) 449-7070-our team works with you one-on-one to identify grants, scholarships, and funding options that fit your situation and make your education as affordable as possible." },
+    { q: "Is the program entirely online?", a: "Yes! The Associate Degree is 100% online, with optional on-campus services. Learn on your schedule—mornings, evenings, or weekends." },
+    { q: "How long does the degree take?", a: "About two years for all 60 credits full-time—or take it at your own pace to fit work and family." },
+    { q: "Do I need prior experience working with children?", a: "No! No prior experience is required. The program covers all the foundational knowledge, so you'll graduate ready to succeed whether you're starting fresh or advancing in your current role." },
+    { q: "Can I study in my native language?", a: "Yes! Courses are available in English, Spanish, and Mandarin, with ESL support tailored to each student." },
+    { q: "Am I eligible for financial aid?", a: "Most students are eligible for financial aid. Contact our financial aid office at (617) 449-7070—our team works with you one-on-one to identify grants, scholarships, and funding options that fit your situation. Most students graduate debt-free!" },
+    { q: "Will my credits transfer?", a: "Absolutely! Our transfer agreements make it easy to continue toward a bachelor's degree at partner institutions when you're ready." },
 ];
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -70,12 +71,12 @@ const EarlyChildhoodEducation: React.FC = () => {
         <>
             <SEO
                 title="Early Childhood Education Associate Degree"
-                description="Earn an Associate Degree in Early Childhood Education at Urban College of Boston. EEC-aligned, multilingual instruction in English, Spanish, and Mandarin. Transferable credits."
+                description="Earn an Associate Degree in Early Childhood Education at Urban College of Boston. Multilingual instruction in English, Spanish, and Mandarin. 100% online, transferable credits."
                 canonicalPath="/programs/early-childhood-education"
                 jsonLd={[
                     buildCourseJsonLd({
                         name: "Early Childhood Education Associate Degree",
-                        description: "Earn an Associate Degree in Early Childhood Education at Urban College of Boston. EEC-aligned, multilingual instruction in English, Spanish, and Mandarin. Transferable credits.",
+                        description: "Earn an Associate Degree in Early Childhood Education at Urban College of Boston. Multilingual instruction in English, Spanish, and Mandarin. 100% online, transferable credits.",
                         path: '/programs/early-childhood-education',
                         credentialCategory: 'degree',
                         educationLevel: 'Associate',
@@ -88,22 +89,22 @@ const EarlyChildhoodEducation: React.FC = () => {
                 ]}
             />
         <ProgramPageLayout
-            badge="Early Childhood Education Associate"
+            badge="Early Childhood Education Associate Degree"
             title={<>Inspire Young Minds & <span style={{ color: '#E68325' }}>Build Your Future</span></>}
-            subtitle="A 60-credit Associate Degree. Accessible, high-quality education designed for working students."
+            subtitle="Earn While You Learn—Start Working Immediately! A 60-credit Associate Degree designed for working students."
             headerImageSrc="/Program%20Images%20for%20Website/ECE-AA-primary.jpg"
             secondaryImageSrc="/Program%20Images%20for%20Website/ECE-AA-secondary.jpg"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },
-                { label: 'Early Childhood Education' }
+                { label: 'Early Childhood Education Associate Degree' }
             ]}
 
-            tagline="Develop Skills That Get You Hired"
+            tagline="Turn Your Love for Children into a Rewarding Career"
             taglineBody={
                 <p>
-                    Develop the actual business skills that will enable you to get a job, increase your salary, or earn a promotion—all without interrupting your life.
+                    Urban College of Boston's Early Childhood Education Associate Degree empowers you to master the skills that shape young lives—all without interrupting your busy life.
                     <br className="hidden md:block" />
-                    <span className="text-ucb-blue font-semibold">Urban College of Boston's Early Childhood Education Associate</span> is a fully online, short-term program designed for modern working students.
+                    <span className="text-ucb-blue font-semibold">This fully online, career-building degree</span> fits into your schedule. Earn while you learn, start working in early education right away, and graduate ready to advance as a teacher, childcare provider, or program leader.
                 </p>
             }
 
@@ -111,46 +112,50 @@ const EarlyChildhoodEducation: React.FC = () => {
 
             achievements={[
                 {
-                    heading: "Professional Skills",
+                    heading: "Teaching & Curriculum",
                     icon: Briefcase,
                     items: [
-                        "Support daily business and office operations",
-                        "Communicate professionally in writing, speaking, and digital tools",
-                        "Work confidently in teams or leadership support roles"
+                        "Understand child development from birth through age 8",
+                        "Create developmentally appropriate, engaging curriculum",
+                        "Guide behavior with positive discipline strategies"
                     ]
                 },
                 {
-                    heading: "Ethical & Practical",
+                    heading: "Family & Inclusion",
                     icon: Award,
                     items: [
-                        "Apply ethical and responsible business practices",
-                        "Use business skills in real workplace situations",
-                        "Master essential technology for modern workplaces"
+                        "Support diverse learners, including children with special needs",
+                        "Build strong partnerships with families",
+                        "Apply professional standards and best practices in early education"
                     ]
                 }
             ]}
-            achievementNote="Courses are practical and designed to help you apply skills immediately on the job, not just study theory."
+            achievementNote="Your courses are practical and taught by experienced professionals—you'll apply these skills immediately, not just study theory."
 
             courses={courses}
             outcomes={outcomes}
-            outcomesIntro="This certificate helps prepare you for career-building roles where you can earn promotions, increase pay, or change career paths."
-            outcomeTags={['Management', 'Administration', 'Bookkeeping', 'Entrepreneurship']}
+            outcomesIntro="An Early Childhood Education degree opens doors to fulfilling, career-building roles where you make a difference every day. Employment of preschool teachers is projected to grow 4% from 2024 to 2034 (BLS)."
+            outcomeTags={['Early Education', 'Child Development', 'Teaching', 'Childcare']}
+            outcomeSources={[
+                { label: 'BLS OOH: Preschool Teachers', url: 'https://www.bls.gov/ooh/education-training-and-library/preschool-teachers.htm' },
+                { label: 'BLS OOH: Preschool & Childcare Center Directors', url: 'https://www.bls.gov/ooh/management/preschool-and-childcare-center-directors.htm' },
+            ]}
 
             stats={stats}
 
             forWhom={[
-                "Starting your professional career",
-                "A working adult upgrading skills",
+                "Passionate about working with and nurturing young children",
+                "A working student building a career in early education",
                 "Returning to school after a break",
                 "A multilingual learner seeking inclusive college programs",
                 "An immigrant student looking for a supportive college in the USA",
-                "Planning an associate's or bachelor's degree in the future"
+                "Looking for a 100% online degree that fits a busy life"
             ]}
 
             pathwayTitle="Build Toward Your Future"
-            pathwayDescription="The Early Childhood Education Associate is a stackable, for-credit program. Credits may transfer toward an associate or bachelor's degree."
+            pathwayDescription="Every credit you earn counts. When you're ready, our transfer agreements make it easy to continue toward a bachelor's degree at partner institutions."
             pathwaySteps={[
-                { label: 'Certificate', credits: '18 Credits', active: false },
+                { label: 'Certificate', credits: '19 Credits', active: false },
                 { label: 'Associate Degree', credits: '60 Credits', active: true },
                 { label: "Bachelor's Degree", credits: 'Transfer Ready', active: false },
             ]}
@@ -158,7 +163,7 @@ const EarlyChildhoodEducation: React.FC = () => {
             testimonial={{
                 quote: "The supportive environment and encouragement from faculty and peers instilled a sense of confidence that inspired me to take a bold step forward, allowing me to establish and operate my own family childcare center.",
                 name: "Mariely M.",
-                role: "Alum",
+                role: "Early Childhood Education Alum",
                 imageSrc: "/assets/images/testimonials/mariely-m.jpg"
             }}
 
