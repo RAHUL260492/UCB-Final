@@ -55,6 +55,8 @@ export interface ProgramLayoutProps {
     title: React.ReactNode;
     subtitle: string;
     headerImageSrc: string;
+    /** Optional CSS background-position override for the header image (e.g. 'center 40%'). */
+    headerImagePosition?: string;
     secondaryImageSrc?: string;
     breadcrumbs: { label: string; path?: string }[];
 
@@ -260,7 +262,7 @@ const AccordionItem: React.FC<{ faq: ProgramFaq; index: number; isOpen: boolean;
 // ─── Main Layout Component ────────────────────────────────────────────────────
 
 const ProgramPageLayout: React.FC<ProgramLayoutProps> = ({
-    badge, title, subtitle, headerImageSrc, secondaryImageSrc, breadcrumbs,
+    badge, title, subtitle, headerImageSrc, headerImagePosition, secondaryImageSrc, breadcrumbs,
     tagline, taglineBody,
     benefits,
     achievements = [], achievementNote,
@@ -301,6 +303,7 @@ const ProgramPageLayout: React.FC<ProgramLayoutProps> = ({
                 ctaPrimary="Apply for FREE Today"
                 ctaSecondary="Request Info"
                 imageSrc={headerImageSrc}
+                imagePosition={headerImagePosition}
                 breadcrumbs={breadcrumbs}
             />
 

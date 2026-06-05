@@ -11,22 +11,37 @@ import {
 
 const ALUMNI_EMAIL = 'alumni@urbancollege.edu';
 
-// Written alumni stories (the video story is featured separately below).
-const stories = [
+// Written alumni stories. Each links to the full story on the blog; some feature a video.
+type AlumniStory = { name: string; blurb: string; slug: string; video?: string };
+
+const stories: AlumniStory[] = [
     {
         name: 'Charmaine Burrell',
         blurb: "After enrolling in Urban College's Human Services program while balancing work and family, Charmaine found a flexible, supportive environment that launched her path forward. Today she's completing her Master of Social Work and continues to uplift communities through service, leadership, and advocacy—locally and internationally.",
-        href: undefined as string | undefined,
+        slug: 'rising-together-how-education-fuels-service-leadership-and-uplifting-communities',
+        video: 'RhrGmMrAwF8',
+    },
+    {
+        name: 'Krystal Jackson Ray',
+        blurb: "A first-generation student and single mother, Krystal nearly walked away from college twice. With support from Urban College's Student Success office and Learning Resource Center, she graduated with honors in Early Childhood Education—and is now headed to Lesley University, with a vision to open a community center for families and children with exceptional needs.",
+        slug: 'from-doubt-to-determination-krystal-jackson-rays-journey-to-graduation-and-beyond',
+        video: 'ZxF3_n2_bD0',
+    },
+    {
+        name: 'Ayesha M. Wilson',
+        blurb: "A self-described non-traditional learner, Ayesha found her passion for advocacy in Urban College's evening Human Services classes. She went on to earn her bachelor's and master's in social work, and today serves on the Cambridge City Council—championing affordable housing and universal preschool.",
+        slug: 'celebrating-the-journey-of-ayesha-m-wilson-urban-college-alumna-and-city-councilor',
+        video: 'uCpCTGQUens',
     },
     {
         name: 'Toy Burton',
         blurb: "Early Childhood Education alumna Toy Burton describes Urban College as a place where adult learners feel welcomed, supported, and understood—regardless of age, language, or background. Her message to current students is simple and powerful: keep going.",
-        href: 'https://www.urbancollege.edu/ucb-news-events/2025/5/9/sustaining-hope-alumna-toy-burton-and-the-power-of-mental-health-access?rq=toy%20burton',
+        slug: 'sustaining-hope-alumna-toy-burton-and-the-power-of-mental-health-access',
     },
     {
         name: 'Elijah Watts',
         blurb: 'Through flexible online learning, strong advising, and a sense of belonging, Elijah earned his degree, graduated with honors, and transferred to pursue a career in geography and atmospheric sciences. Urban College met him where he was and helped him reach where he wanted to go.',
-        href: 'https://www.urbancollege.edu/ucb-news-events/2025/6/27/from-t-stops-to-tornadoes-how-one-student-found-his-path-at-urban-college?rq=elijah%20watts',
+        slug: 'from-t-stops-to-tornadoes-how-one-student-found-his-path-at-urban-college',
     },
 ];
 
@@ -79,7 +94,7 @@ const Alumni: React.FC = () => {
                 ])}
             />
             <PageHeader
-                title={<>Once a student, always part of the <span className="text-ucb-gold">Urban College family.</span></>}
+                title={<>Once a student, always part of the <span className="text-ucb-gold">Urban College community.</span></>}
                 subtitle="Your connection to Urban College doesn't end at graduation. As alumni rise in their careers and communities, they continue to lift others alongside them."
                 breadcrumbs={[{ label: 'Home', path: '/' }, { label: 'Alumni' }]}
                 imageSrc="https://images.unsplash.com/photo-1627556704302-624286467c65?q=80&w=2940&auto=format&fit=crop"
@@ -127,16 +142,30 @@ const Alumni: React.FC = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {stories.map((s, idx) => (
                             <ScrollAnimation key={s.name} variant="fade-up" delay={`${idx * 0.08}s`} className="h-full">
-                                <div className="bg-white rounded-3xl p-7 border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col h-full">
-                                    <Quote className="w-8 h-8 text-ucb-orange/30 mb-3" />
-                                    <p className="text-sm text-gray-600 font-light leading-relaxed flex-1">{s.blurb}</p>
-                                    <div className="mt-5 pt-4 border-t border-gray-100">
-                                        <p className="font-display font-bold text-ucb-blue">{s.name}</p>
-                                        {s.href && (
-                                            <a href={s.href} target="_blank" rel="noopener noreferrer" className="mt-2 inline-flex items-center gap-1 text-ucb-orange font-bold text-sm hover:gap-2 transition-all">
-                                                Read the full story <ExternalLink className="w-3.5 h-3.5" />
-                                            </a>
-                                        )}
+                                <div className="bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col h-full overflow-hidden">
+                                    {s.video && (
+                                        <div className="relative aspect-video bg-ucb-blue">
+                                            <iframe
+                                                className="absolute inset-0 w-full h-full"
+                                                src={`https://www.youtube.com/embed/${s.video}`}
+                                                title={`${s.name} — Urban College alumni story`}
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                referrerPolicy="strict-origin-when-cross-origin"
+                                                allowFullScreen
+                                            ></iframe>
+                                        </div>
+                                    )}
+                                    <div className="p-7 flex flex-col flex-1">
+                                        <Quote className="w-8 h-8 text-ucb-orange/30 mb-3" />
+                                        <p className="text-sm text-gray-600 font-light leading-relaxed flex-1">{s.blurb}</p>
+                                        <div className="mt-5 pt-4 border-t border-gray-100">
+                                            <p className="font-display font-bold text-ucb-blue">{s.name}</p>
+                                            {s.slug && (
+                                                <Link to={`/blog/${s.slug}`} className="mt-2 inline-flex items-center gap-1 text-ucb-orange font-bold text-sm hover:gap-2 transition-all">
+                                                    Read the full story <ArrowRight className="w-3.5 h-3.5" />
+                                                </Link>
+                                            )}
+                                        </div>
                                     </div>
                                 </div>
                             </ScrollAnimation>

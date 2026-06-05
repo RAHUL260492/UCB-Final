@@ -15,6 +15,10 @@ interface ProgramPageHeaderProps {
     ctaSecondary?: string;
     breadcrumbs: BreadcrumbItem[];
     imageSrc?: string;
+    /** CSS background-position for the header image. Defaults to a face-friendly
+     *  'center 25%' so portraits aren't cropped through the face. Override per
+     *  program if a particular photo needs different framing (e.g. 'center 40%'). */
+    imagePosition?: string;
     accentColor?: string;
 }
 
@@ -26,6 +30,7 @@ const ProgramPageHeader: React.FC<ProgramPageHeaderProps> = ({
     ctaSecondary = 'Request Info',
     breadcrumbs,
     imageSrc = 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2940&auto=format&fit=crop',
+    imagePosition = 'center 25%',
     accentColor = '#E68325',
 }) => {
     const [mounted, setMounted] = useState(false);
@@ -34,14 +39,14 @@ const ProgramPageHeader: React.FC<ProgramPageHeaderProps> = ({
     return (
         <section
             className="relative flex flex-col justify-end overflow-hidden text-white pt-8 bg-ucb-blue"
-            style={{ minHeight: '340px' }}
+            style={{ minHeight: '400px' }}
         >
             {/* Header image with brand gradient overlays for readability */}
             <div className="absolute inset-0 bg-ucb-blue" />
             {imageSrc && (
                 <div
-                    className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: `url("${imageSrc}")` }}
+                    className="absolute inset-0"
+                    style={{ backgroundImage: `url("${imageSrc}")`, backgroundSize: 'cover', backgroundPosition: imagePosition }}
                 />
             )}
             <div className="absolute inset-0 bg-gradient-to-t from-ucb-blue/90 via-ucb-blue/55 to-ucb-blue/25" />
