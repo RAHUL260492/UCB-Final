@@ -105,7 +105,7 @@ const RFILandingPage: React.FC = () => {
     useEffect(() => { window.scrollTo(0, 0); }, [location.pathname]);
 
     return (
-        <div className="bg-white pt-24 lg:pt-28">
+        <div className="bg-white">
             <SEO
                 title={`${campaignName} | Urban College of Boston`}
                 description={campaignDesc}
