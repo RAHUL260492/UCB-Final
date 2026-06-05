@@ -17,16 +17,16 @@ interface CouncilMember {
 }
 
 const councilMembers: CouncilMember[] = [
-    { name: "Ainsley Castro Charles", org: "YUPRO Placement, Year Up United", role: "National Director of Strategic Partnerships" },
-    { name: "Alanna Mallon", org: "Commonwealth Corporation Foundation", role: "Executive Director" },
-    { name: "Mark Coletta", org: "Citizens Bank (MA, NH & VT)", role: "Community Development Market Manager & Vice President" },
-    { name: "Meera Krishnan", org: "Support to Succeed", role: "Founder & Executive Director" },
-    { name: "Peter Whaley", org: "Entrepreneurship for All (EforAll)", role: "Chief Operating Officer" },
-    { name: "Mim Minichiello", org: "Hub International", role: "Chief Performance Officer" },
-    { name: "Raul Fernandez", org: "Boston University", role: "Professor & Nonprofit Founder" },
-    { name: "Miguel De Los Santos", org: "Upwind Security · Hult · Urban College of Boston", role: "Solutions Architect, Adjunct Faculty & Instructor" },
-    { name: "Jose Nino", org: "Boston Arts Academy Foundation", role: "Senior Director of Strategic Initiatives" },
-    { name: "Reginauld (Reggie) Williams", org: "JP Morgan Chase · Oak Lane Consulting", role: "VP, Senior Business Consultant & Founder" }
+    { name: "Ainsley Castro Charles", org: "YUPRO Placement, Year Up United", role: "National Director of Strategic Partnerships", img: "/assets/images/council/ainsley-castro-charles.jpg" },
+    { name: "Alanna Mallon", org: "Commonwealth Corporation Foundation", role: "Executive Director", img: "/assets/images/council/alanna-mallon.jpg" },
+    { name: "Mark Coletta", org: "Citizens Bank (MA, NH & VT)", role: "Community Development Market Manager & Vice President", img: "/assets/images/council/mark-coletta.jpg" },
+    { name: "Meera Krishnan", org: "Support to Succeed", role: "Founder & Executive Director", img: "/assets/images/council/meera-krishnan.png" },
+    { name: "Peter Whaley", org: "Entrepreneurship for All (EforAll)", role: "Chief Operating Officer", img: "/assets/images/council/peter-whaley.jpg" },
+    { name: "Mim Minichiello", org: "Hub International", role: "Chief Performance Officer", img: "/assets/images/council/mim-minichiello.jpg" },
+    { name: "Raul Fernandez", org: "Boston University", role: "Professor & Nonprofit Founder", img: "/assets/images/council/raul-fernandez.jpg" },
+    { name: "Miguel De Los Santos", org: "Upwind Security · Hult · Urban College of Boston", role: "Solutions Architect, Adjunct Faculty & Instructor", img: "/assets/images/council/miguel-de-los-santos.jpg" },
+    { name: "Jose Nino", org: "Boston Arts Academy Foundation", role: "Senior Director of Strategic Initiatives", img: "/assets/images/council/jose-nino.jpg" },
+    { name: "Reginauld (Reggie) Williams", org: "JP Morgan Chase · Oak Lane Consulting", role: "VP, Senior Business Consultant & Founder", img: "/assets/images/council/reggie-williams.jpg" }
 ];
 
 const processSteps = [
