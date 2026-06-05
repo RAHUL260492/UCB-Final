@@ -4,7 +4,7 @@ import ScrollAnimation from '../components/ScrollAnimation';
 import SEO from '../components/SEO';
 import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 import { 
-    Calendar, Clock, MapPin, Laptop, ChevronDown, Plus, Minus,
+    Calendar, Clock, MapPin, Laptop, Plus, Minus,
     CheckCircle, MessageSquare, Phone, Mail, Play, Globe,
     Users, Award, HelpCircle, GraduationCap, ArrowRight, Languages
 } from 'lucide-react';
@@ -14,7 +14,7 @@ interface UpcomingSession {
     date: string;
     day: string;
     time: string;
-    format: 'Online' | 'In-Person' | 'In-Person & Online';
+    format: 'Online';
     type: 'General Info Session' | 'Program-Specific Info Session';
     focus: string;
     programKey: string;
@@ -33,22 +33,6 @@ const InfoSessions: React.FC = () => {
 
     // FAQ Accordion State
     const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
-
-    // RSVP Form State
-    const [formData, setFormData] = useState({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        preferredLanguage: 'English',
-        sessionType: 'General Info Session',
-        programOfInterest: 'Undecided',
-        preferredFormat: 'Online',
-        referralSource: '',
-        selectedSessionId: ''
-    });
-
-    const [formSubmitted, setFormSubmitted] = useState(false);
 
     // Mock Calendar Data
     const UPCOMING_SESSIONS: UpcomingSession[] = [
@@ -77,9 +61,9 @@ const InfoSessions: React.FC = () => {
             date: 'June 16, 2026',
             day: 'Tuesday',
             time: '6:00 PM - 7:30 PM EST',
-            format: 'In-Person & Online',
+            format: 'Online',
             type: 'General Info Session',
-            focus: 'General Urban College Overview (Campus Tour & Virtual)',
+            focus: 'General Urban College Overview',
             programKey: 'Undecided'
         },
         {
@@ -105,7 +89,7 @@ const InfoSessions: React.FC = () => {
         },
         {
             q: "Can I attend online?",
-            a: "Absolutely! We offer both in-person and online options so the session fits into your busy life. Select your preferred format when you register."
+            a: "Yes—all of our info sessions are held 100% online, so you can join from anywhere that fits your busy life. We'll send you a virtual link to join when you register."
         },
         {
             q: "What if I'm not ready to apply yet?",
@@ -123,12 +107,12 @@ const InfoSessions: React.FC = () => {
 
     const whatToExpect = [
         {
-            title: "Meet Urban College Support Staff",
+            title: "Meet Urban College Staff",
             desc: "Chat with admissions advisors, program coordinators, and faculty members who are dedicated to your success."
         },
         {
             title: "Get Questions Answered Live",
-            desc: "No pre-screened questions. Ask anything about academic courses, schedules, support tutoring, or student life."
+            desc: "Ask anything about academic courses, schedules, tutoring, or student life."
         },
         {
             title: "Learn About Tuition & Aid Options",
@@ -136,7 +120,7 @@ const InfoSessions: React.FC = () => {
         },
         {
             title: "Explore Program Options",
-            desc: "Learn about ECE, Human Services, Case Management, Digital Marketing, and General Studies to find your perfect fit."
+            desc: "Learn about Early Childhood Education, Human Services, Case Management, Digital Marketing, General Studies, and more to find your perfect fit."
         },
         {
             title: "Get Hands-on Application Help",
@@ -147,7 +131,7 @@ const InfoSessions: React.FC = () => {
     const whyAttendList = [
         "No pressure, no sales pitch: Just honest, helpful guidance from people who care about your success.",
         "Multilingual support available: Sessions and materials are available in English and Spanish.",
-        "Fits into your busy life: Sessions offered in-person and online—you choose what works.",
+        "Fits into your busy life: Sessions are 100% online—join from anywhere on any device.",
         "Walk away with a plan: Whether you're ready to apply today or just exploring, you'll leave with a clear next step."
     ];
 
@@ -156,46 +140,16 @@ const InfoSessions: React.FC = () => {
         "Highly affordable programs — generous federal/state financial aid and grants can help cover your tuition costs.",
         "100% online, career-building programs — study asynchronously or live on a schedule built for working adults.",
         "Multilingual support — courses and academic services offered in English, Spanish, and Mandarin.",
-        "1-on-1 advising, free tutoring, and career coaching — at Urban College, you're family, not a number.",
+        "1-on-1 advising, free tutoring, and career coaching — personalized support at every step of your journey.",
         "Accredited nonprofit, Hispanic-Serving Institution (HSI) — committed to diverse learners and long-term success."
     ];
 
-    // Scroll to form and prefill details when session clicked
-    const handleRsvpSelect = (session: UpcomingSession) => {
-        setFormData(prev => ({
-            ...prev,
-            sessionType: session.type,
-            programOfInterest: session.programKey,
-            preferredFormat: session.format === 'In-Person & Online' ? 'Online' : session.format,
-            selectedSessionId: session.id
-        }));
-        
-        // Scroll to form
+    // Scroll to the registration form (Element451 embed handles the actual RSVP/CRM capture)
+    const scrollToForm = () => {
         const formElement = document.getElementById('rsvp-form-section');
         if (formElement) {
             formElement.scrollIntoView({ behavior: 'smooth' });
         }
-    };
-
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-        const { name, value } = e.target;
-        setFormData(prev => ({
-            ...prev,
-            [name]: value
-        }));
-    };
-
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        setFormSubmitted(true);
-    };
-
-    const getSelectedSessionText = () => {
-        const selected = UPCOMING_SESSIONS.find(s => s.id === formData.selectedSessionId);
-        if (selected) {
-            return `${selected.type} (${selected.focus}) on ${selected.date} at ${selected.time}`;
-        }
-        return `${formData.sessionType} (Format: ${formData.preferredFormat})`;
     };
 
     return (
@@ -232,7 +186,7 @@ const InfoSessions: React.FC = () => {
 
                             <ScrollAnimation variant="fade-up" className="text-gray-600 text-sm md:text-base leading-relaxed font-light space-y-4">
                                 <p>
-                                    Ready to take the next step? Join us at a <strong>FREE online or in-person</strong> Urban College of Boston Information Session and discover how earning a certificate or degree can transform your career—in as little as one year.
+                                    Ready to take the next step? Join us at a <strong>FREE online</strong> Urban College of Boston Information Session and discover how earning a certificate or degree can transform your career—in as little as one year.
                                 </p>
                                 <p>
                                     Whether you're just starting to explore or ready to finalize your application, our info sessions are designed for you. Meet our admissions team, program staff, and faculty, get your questions answered in real time, and walk away with a clear plan for your future.
@@ -303,7 +257,7 @@ const InfoSessions: React.FC = () => {
                             </div>
                             <h3 className="font-display font-bold text-lg text-ucb-blue">General Information Sessions</h3>
                             <p className="text-xs text-gray-500 leading-relaxed font-light">
-                                Not sure which program is right for you? Perfect. Our general sessions give you the full picture of what Urban College of Boston has to offer—programs, support services, financial aid, and campus culture. Bring your questions and leave with clarity.
+                                Not sure which program is right for you? Perfect. Our general sessions give you the full picture of what Urban College of Boston has to offer—programs, support services, financial aid, and student life. Bring your questions and leave with clarity.
                             </p>
                         </ScrollAnimation>
                     </div>
@@ -320,7 +274,7 @@ const InfoSessions: React.FC = () => {
                             </div>
                             <h2 className="text-3xl font-display font-extrabold text-ucb-blue leading-tight">Why Attend?</h2>
                             <p className="text-gray-600 text-sm md:text-base leading-relaxed font-light">
-                                Choosing a college is a big decision, but we make it easy. At Urban College, you're not just a student—you're family. Our info sessions are your first experience of the personalized, 1-on-1 support that defines the Urban College experience.
+                                Choosing a college is a big decision, but we make it easy. Our flexible, affordable online programs make it possible to balance school with your busy life. Our info sessions are your first experience of the personalized, 1-on-1 support that defines the Urban College experience.
                             </p>
                         </ScrollAnimation>
 
@@ -343,7 +297,7 @@ const InfoSessions: React.FC = () => {
                         <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs mb-2 block">Schedule</span>
                         <h2 className="text-3xl font-display font-bold text-ucb-blue">Upcoming Sessions</h2>
                         <p className="text-gray-500 max-w-md mx-auto text-sm font-light mt-1">
-                            Sessions are held throughout the semester—both in person on campus and online. Check back often as new sessions are added.
+                            Sessions are held online throughout the semester. Check back often as new sessions are added.
                         </p>
                     </ScrollAnimation>
 
@@ -380,8 +334,8 @@ const InfoSessions: React.FC = () => {
                                     </div>
                                 </div>
                                 <div className="pt-6 mt-6 border-t border-gray-100 flex justify-end">
-                                    <button 
-                                        onClick={() => handleRsvpSelect(session)}
+                                    <button
+                                        onClick={scrollToForm}
                                         className="bg-ucb-blue text-white hover:bg-ucb-orange text-[10px] uppercase font-bold py-2 px-5 rounded-full transition-colors tracking-wide min-h-[38px] flex items-center"
                                     >
                                         RSVP Now
@@ -400,213 +354,19 @@ const InfoSessions: React.FC = () => {
                         <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs mb-2 block">Registration</span>
                         <h2 className="text-3xl font-display font-bold text-ucb-blue">Reserve Your Spot — It's Free!</h2>
                         <p className="text-gray-500 max-w-sm mx-auto text-sm font-light mt-1">
-                            Seats fill up quickly. Register below to secure your place at an upcoming session.
+                            Seats fill up quickly. Register below to secure your place at an upcoming online session.
                         </p>
                     </ScrollAnimation>
 
-                    <ScrollAnimation variant="fade-up" className="bg-gray-50 rounded-3xl p-8 border border-gray-100 shadow-md">
-                        {formSubmitted ? (
-                            <div className="text-center space-y-6 py-8">
-                                <div className="w-16 h-16 rounded-full bg-ucb-emerald/10 text-ucb-emerald flex items-center justify-center mx-auto">
-                                    <CheckCircle className="w-10 h-10" />
-                                </div>
-                                <div className="space-y-2">
-                                    <h3 className="font-display font-bold text-2xl text-ucb-blue">RSVP Confirmed!</h3>
-                                    <p className="text-sm text-gray-600 leading-relaxed font-light max-w-md mx-auto">
-                                        Thank you, <strong className="text-ucb-blue font-semibold">{formData.firstName}</strong>. We've registered you for the following information session:
-                                    </p>
-                                </div>
-                                <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm max-w-md mx-auto text-left space-y-3">
-                                    <p className="text-xs text-gray-700">
-                                        <strong className="block text-ucb-blue text-sm mb-1">Session Selected:</strong>
-                                        {getSelectedSessionText()}
-                                    </p>
-                                    <p className="text-xs text-gray-500">
-                                        We have sent a confirmation email to <strong className="text-ucb-blue font-medium">{formData.email}</strong> with details on how to join (including virtual links if online).
-                                    </p>
-                                </div>
-                                <div className="pt-4">
-                                    <button 
-                                        onClick={() => { setFormSubmitted(false); setFormData({ firstName: '', lastName: '', email: '', phone: '', preferredLanguage: 'English', sessionType: 'General Info Session', programOfInterest: 'Undecided', preferredFormat: 'Online', referralSource: '', selectedSessionId: '' }) }}
-                                        className="text-xs font-bold text-ucb-blue hover:text-ucb-orange uppercase tracking-wider"
-                                    >
-                                        Register another person &rarr;
-                                    </button>
-                                </div>
-                            </div>
-                        ) : (
-                            <form onSubmit={handleSubmit} className="space-y-6">
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                    {/* First Name */}
-                                    <div className="flex flex-col gap-1.5">
-                                        <label htmlFor="firstName" className="text-xs font-bold text-ucb-blue uppercase">First Name *</label>
-                                        <input 
-                                            type="text" 
-                                            id="firstName" 
-                                            name="firstName" 
-                                            value={formData.firstName} 
-                                            onChange={handleInputChange} 
-                                            required 
-                                            className="bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-ucb-blue transition-colors w-full"
-                                            placeholder="John"
-                                        />
-                                    </div>
-
-                                    {/* Last Name */}
-                                    <div className="flex flex-col gap-1.5">
-                                        <label htmlFor="lastName" className="text-xs font-bold text-ucb-blue uppercase">Last Name *</label>
-                                        <input 
-                                            type="text" 
-                                            id="lastName" 
-                                            name="lastName" 
-                                            value={formData.lastName} 
-                                            onChange={handleInputChange} 
-                                            required 
-                                            className="bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-ucb-blue transition-colors w-full"
-                                            placeholder="Doe"
-                                        />
-                                    </div>
-                                </div>
-
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                    {/* Email */}
-                                    <div className="flex flex-col gap-1.5">
-                                        <label htmlFor="email" className="text-xs font-bold text-ucb-blue uppercase">Email Address *</label>
-                                        <input 
-                                            type="email" 
-                                            id="email" 
-                                            name="email" 
-                                            value={formData.email} 
-                                            onChange={handleInputChange} 
-                                            required 
-                                            className="bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-ucb-blue transition-colors w-full"
-                                            placeholder="john.doe@example.com"
-                                        />
-                                    </div>
-
-                                    {/* Phone */}
-                                    <div className="flex flex-col gap-1.5">
-                                        <label htmlFor="phone" className="text-xs font-bold text-ucb-blue uppercase">Phone Number *</label>
-                                        <input 
-                                            type="tel" 
-                                            id="phone" 
-                                            name="phone" 
-                                            value={formData.phone} 
-                                            onChange={handleInputChange} 
-                                            required 
-                                            className="bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-ucb-blue transition-colors w-full"
-                                            placeholder="(617) 555-0123"
-                                        />
-                                    </div>
-                                </div>
-
-                                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                                    {/* Language */}
-                                    <div className="flex flex-col gap-1.5">
-                                        <label htmlFor="preferredLanguage" className="text-xs font-bold text-ucb-blue uppercase">Preferred Language</label>
-                                        <div className="relative">
-                                            <select 
-                                                id="preferredLanguage" 
-                                                name="preferredLanguage" 
-                                                value={formData.preferredLanguage} 
-                                                onChange={handleInputChange}
-                                                className="bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-ucb-blue transition-colors appearance-none w-full pr-10 cursor-pointer font-medium text-gray-700"
-                                            >
-                                                <option value="English">English</option>
-                                                <option value="Spanish">Español</option>
-                                                <option value="Mandarin">Mandarin (普通话)</option>
-                                            </select>
-                                            <ChevronDown className="w-4 h-4 text-gray-400 absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
-                                        </div>
-                                    </div>
-
-                                    {/* Session Type */}
-                                    <div className="flex flex-col gap-1.5">
-                                        <label htmlFor="sessionType" className="text-xs font-bold text-ucb-blue uppercase">Session Type</label>
-                                        <div className="relative">
-                                            <select 
-                                                id="sessionType" 
-                                                name="sessionType" 
-                                                value={formData.sessionType} 
-                                                onChange={handleInputChange}
-                                                className="bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-ucb-blue transition-colors appearance-none w-full pr-10 cursor-pointer font-medium text-gray-700"
-                                            >
-                                                <option value="General Info Session">General Info Session</option>
-                                                <option value="Program-Specific Info Session">Program-Specific Session</option>
-                                            </select>
-                                            <ChevronDown className="w-4 h-4 text-gray-400 absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
-                                        </div>
-                                    </div>
-
-                                    {/* Format */}
-                                    <div className="flex flex-col gap-1.5">
-                                        <label htmlFor="preferredFormat" className="text-xs font-bold text-ucb-blue uppercase">Format Choice</label>
-                                        <div className="relative">
-                                            <select 
-                                                id="preferredFormat" 
-                                                name="preferredFormat" 
-                                                value={formData.preferredFormat} 
-                                                onChange={handleInputChange}
-                                                className="bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-ucb-blue transition-colors appearance-none w-full pr-10 cursor-pointer font-medium text-gray-700"
-                                            >
-                                                <option value="Online">Online (Zoom)</option>
-                                                <option value="In-Person">In-Person (Campus)</option>
-                                            </select>
-                                            <ChevronDown className="w-4 h-4 text-gray-400 absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                    {/* Program of Interest */}
-                                    <div className="flex flex-col gap-1.5">
-                                        <label htmlFor="programOfInterest" className="text-xs font-bold text-ucb-blue uppercase">Program of Interest</label>
-                                        <div className="relative">
-                                            <select 
-                                                id="programOfInterest" 
-                                                name="programOfInterest" 
-                                                value={formData.programOfInterest} 
-                                                onChange={handleInputChange}
-                                                className="bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-ucb-blue transition-colors appearance-none w-full pr-10 cursor-pointer font-medium text-gray-700"
-                                            >
-                                                <option value="Undecided">Undecided / Not Sure</option>
-                                                <option value="Early Childhood Education">Early Childhood Education</option>
-                                                <option value="Human Services">Human Services</option>
-                                                <option value="Case Management">Case Management</option>
-                                                <option value="Business">Business Administration</option>
-                                                <option value="Digital Marketing">Digital Marketing</option>
-                                                <option value="Elder Care">Elder Care</option>
-                                                <option value="Other">Other Certificate / Degree</option>
-                                            </select>
-                                            <ChevronDown className="w-4 h-4 text-gray-400 absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
-                                        </div>
-                                    </div>
-
-                                    {/* Referral Source */}
-                                    <div className="flex flex-col gap-1.5">
-                                        <label htmlFor="referralSource" className="text-xs font-bold text-ucb-blue uppercase">How did you hear about us?</label>
-                                        <input 
-                                            type="text" 
-                                            id="referralSource" 
-                                            name="referralSource" 
-                                            value={formData.referralSource} 
-                                            onChange={handleInputChange} 
-                                            className="bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-ucb-blue transition-colors w-full"
-                                            placeholder="Google, friend, employer, flyer, etc."
-                                        />
-                                    </div>
-                                </div>
-
-                                <div className="pt-4 flex justify-center">
-                                    <button 
-                                        type="submit" 
-                                        className="bg-ucb-orange hover:bg-ucb-orange-glow text-white font-bold py-3 px-10 rounded-full text-xs uppercase tracking-wider transition-colors shadow-md min-h-[44px]"
-                                    >
-                                        Reserve My Spot
-                                    </button>
-                                </div>
-                            </form>
-                        )}
+                    <ScrollAnimation variant="fade-up" className="bg-gray-50 rounded-3xl p-4 sm:p-6 border border-gray-100 shadow-md">
+                        {/* Element451 registration form — submissions flow directly into the Urban College CRM */}
+                        <iframe
+                            src={`${import.meta.env.BASE_URL}rfi-form.html?formId=urbancollege.forms.25231`}
+                            title="Reserve Your Info Session Spot"
+                            className="w-full border-0 bg-transparent rounded-2xl"
+                            style={{ minHeight: '640px' }}
+                            loading="lazy"
+                        />
                     </ScrollAnimation>
                 </div>
             </section>
@@ -664,8 +424,8 @@ const InfoSessions: React.FC = () => {
                                 <Languages className="w-64 h-64 text-ucb-orange" />
                             </div>
                             <div className="flex justify-center">
-                                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-ucb-blue to-blue-900 text-white font-display font-black text-lg flex items-center justify-center shadow-md">
-                                    RD
+                                <div className="w-14 h-14 rounded-2xl overflow-hidden shadow-md">
+                                    <img src="/assets/images/testimonials/ramona-de-los-santos.webp" alt="Ramona De Los Santos" className="w-full h-full object-cover" loading="lazy" />
                                 </div>
                             </div>
                             <h4 className="font-display font-bold text-base text-ucb-blue">Ramona De Los Santos</h4>
@@ -723,11 +483,11 @@ const InfoSessions: React.FC = () => {
                                 >
                                     Reserve My Free Spot
                                 </a>
-                                <a 
-                                    href="tel:+16174497070" 
+                                <a
+                                    href="tel:+16176658530"
                                     className="bg-white/10 hover:bg-white/20 text-white font-bold py-3 px-8 rounded-full text-xs uppercase tracking-wider transition-colors min-h-[44px] flex items-center justify-center gap-1.5"
                                 >
-                                    <Phone className="w-4 h-4" /> (617) 449-7070 (Press 2)
+                                    <Phone className="w-4 h-4" /> (617) 665-8530
                                 </a>
                             </div>
                         </div>
@@ -747,7 +507,7 @@ const InfoSessions: React.FC = () => {
                                 </a>
                                 <div className="flex items-center gap-2">
                                     <Phone className="w-4 h-4 text-ucb-gold" />
-                                    (617) 449-7070, ext. 2
+                                    (617) 665-8530
                                 </div>
                             </div>
                         </div>

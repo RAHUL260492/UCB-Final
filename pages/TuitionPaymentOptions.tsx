@@ -91,8 +91,18 @@ const TuitionPaymentOptions: React.FC = () => {
                 "Applies to associate, bachelor, or master's degrees in ECE or related fields.",
                 "Requirements: Must complete the FAFSA and the official ECE Application by the deadline to be considered."
             ],
-            link: "https://www.mass.edu/osfa/programs/ece.asp",
+            link: "https://www.mass.edu/osfa/programs/earlychildhooded.asp",
             linkLabel: "Office of Financial Assistance website"
+        },
+        {
+            title: "Massachusetts High Demand Scholarship",
+            desc: "State scholarship for Massachusetts residents pursuing degrees in designated high-demand fields, such as education, health professions, social work, and business.",
+            criteria: [
+                "Eligibility: Massachusetts resident enrolled in a qualifying high-demand major with a minimum 3.0 GPA.",
+                "Requirements: Students must complete the FAFSA and apply through the MASSAid Student Portal to be considered."
+            ],
+            link: "https://www.mass.edu/osfa/programs/highdemand.asp",
+            linkLabel: "High Demand Scholarship website"
         },
         {
             title: "Tuition Free Community College (TFCC) Plan",
@@ -102,7 +112,7 @@ const TuitionPaymentOptions: React.FC = () => {
                 "Requirements: If eligible, students must complete the FAFSA and remain continuously enrolled.",
                 "Undocumented Students: The TFCC will provide last-dollar funding up to $2,500 per semester for up to 3 years."
             ],
-            link: "https://www.boston.gov/tuition-free-community-college",
+            link: "https://www.boston.gov/departments/workforce-development/tuition-free-community-college-plan",
             linkLabel: "City of Boston TFCC website"
         }
     ];
@@ -273,8 +283,10 @@ const TuitionPaymentOptions: React.FC = () => {
                                 </p>
                             </div>
                             <div className="pt-6 mt-6 border-t border-gray-200">
-                                <a 
-                                    href="#" 
+                                <a
+                                    href="https://forms.office.com/Pages/ResponsePage.aspx?id=HnCdJ2cNiUupTrgmGCPjKyySsSnWljpEnQadnkdsUOVUMTMzWk1WNjU5VFEwS0VMWkVST0U4UVJYUy4u"
+                                    target="_blank"
+                                    rel="noreferrer"
                                     className="bg-ucb-blue text-white hover:bg-ucb-orange text-[10px] uppercase font-bold py-2 px-5 rounded-full transition-colors tracking-wide min-h-[38px] flex items-center justify-center w-full shadow-sm"
                                 >
                                     Employer Tuition Support Form
@@ -315,7 +327,7 @@ const TuitionPaymentOptions: React.FC = () => {
                                 <span className="block text-[10px] uppercase font-bold text-gray-400 tracking-wider">Contact & Forms</span>
                                 <div className="flex items-center gap-2"><Phone className="w-3.5 h-3.5 text-ucb-blue" /> (617) 449-7429</div>
                                 <div className="flex items-center gap-2"><Mail className="w-3.5 h-3.5 text-ucb-blue" /> <a href="mailto:financialservices@urbancollege.edu" className="hover:underline">financialservices@urbancollege.edu</a></div>
-                                <a href="#" className="text-ucb-orange hover:underline font-bold text-[10px] uppercase tracking-wider pt-2 block">Institutional Aid Form &rarr;</a>
+                                <a href="https://forms.office.com/pages/responsepage.aspx?id=HnCdJ2cNiUupTrgmGCPjKyySsSnWljpEnQadnkdsUOVUMjBRUVdPVDhTN0daWDFJOElLWlRNQUpYVC4u&route=shorturl" target="_blank" rel="noreferrer" className="text-ucb-orange hover:underline font-bold text-[10px] uppercase tracking-wider pt-2 block">Institutional Aid Form &rarr;</a>
                             </div>
                         </ScrollAnimation>
 
@@ -393,8 +405,10 @@ const TuitionPaymentOptions: React.FC = () => {
                                 Estimate your tuition costs, grants, and scholarships before classes begin.
                             </p>
                             <div className="pt-2">
-                                <a 
-                                    href="#" 
+                                <a
+                                    href="https://calculator.studentaidprocess.com/calculator/netpricecalculator?corpid=161"
+                                    target="_blank"
+                                    rel="noreferrer"
                                     className="inline-flex items-center gap-1.5 text-xs font-bold text-ucb-gold hover:text-white transition-colors"
                                 >
                                     Calculate Your Cost <ChevronRight className="w-4 h-4" />

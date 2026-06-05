@@ -4,6 +4,7 @@ import PageHeader from '../components/PageHeader';
 import ScrollAnimation from '../components/ScrollAnimation';
 import SEO from '../components/SEO';
 import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
+import { openChat } from '../src/lib/chat';
 import { 
     Heart, GraduationCap, Laptop, Globe, Languages, 
     MessageSquare, Briefcase, Award, CheckCircle, 
@@ -296,7 +297,7 @@ const AdmissionsOverview: React.FC = () => {
                                             <h4 className="font-display font-bold text-base">A Note on Placement Assessments</h4>
                                         </div>
                                         <p className="text-sm font-light leading-relaxed opacity-90">
-                                            We require simple English language and course placement assessments, but they <strong className="text-ucb-gold font-bold">never prevent you from enrolling</strong>.
+                                            We may require simple English language and course placement assessments, but they <strong className="text-ucb-gold font-bold">never prevent you from enrolling</strong>.
                                         </p>
                                         <p className="text-xs font-light leading-relaxed opacity-80">
                                             These check-ins are designed solely to identify your baseline skills and guide you to the right starting level—specifically helping multilingual students build foundational English proficiency.
@@ -390,8 +391,8 @@ const AdmissionsOverview: React.FC = () => {
                             <div className="bg-gray-50 rounded-3xl border border-gray-100 p-8 flex flex-col justify-between w-full shadow-sm hover:shadow-md transition-all">
                                 <div className="space-y-6">
                                     <div className="flex items-center gap-4">
-                                        <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-ucb-blue to-blue-800 text-white font-display font-black text-base flex items-center justify-center shrink-0 shadow-md">
-                                            RS
+                                        <div className="w-12 h-12 rounded-2xl overflow-hidden shrink-0 shadow-md">
+                                            <img src="/assets/images/testimonials/ramona-s.webp" alt="Ramona S." className="w-full h-full object-cover" loading="lazy" />
                                         </div>
                                         <div>
                                             <h3 className="font-display font-bold text-sm text-ucb-blue leading-tight">Ramona S.</h3>
@@ -410,8 +411,8 @@ const AdmissionsOverview: React.FC = () => {
                             <div className="bg-gray-50 rounded-3xl border border-gray-100 p-8 flex flex-col justify-between w-full shadow-sm hover:shadow-md transition-all">
                                 <div className="space-y-6">
                                     <div className="flex items-center gap-4">
-                                        <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-ucb-orange to-orange-600 text-white font-display font-black text-base flex items-center justify-center shrink-0 shadow-md">
-                                            DV
+                                        <div className="w-12 h-12 rounded-2xl overflow-hidden shrink-0 shadow-md">
+                                            <img src="/assets/images/testimonials/dominga-v.png" alt="Dominga V." className="w-full h-full object-cover" loading="lazy" />
                                         </div>
                                         <div>
                                             <h3 className="font-display font-bold text-sm text-ucb-blue leading-tight">Dominga V.</h3>
@@ -446,31 +447,23 @@ const AdmissionsOverview: React.FC = () => {
                             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2 text-left">
                                 <a href="mailto:admissions@urbancollege.edu" className="bg-gray-50 hover:bg-ucb-blue/5 border border-gray-100 p-4 rounded-2xl flex items-center gap-3 transition-colors group">
                                     <Mail className="w-4 h-4 text-ucb-blue shrink-0 group-hover:scale-110 transition-transform" />
-                                    <div className="overflow-hidden">
+                                    <div className="min-w-0">
                                         <span className="block text-[10px] font-bold uppercase tracking-wider text-gray-400">Email Us</span>
-                                        <span className="block text-[11px] text-ucb-blue font-semibold truncate">admissions@urbancollege.edu</span>
+                                        <span className="block text-[11px] text-ucb-blue font-semibold break-all leading-tight">admissions@urbancollege.edu</span>
                                     </div>
                                 </a>
 
-                                <a href="tel:+16174497070" className="bg-gray-50 hover:bg-ucb-blue/5 border border-gray-100 p-4 rounded-2xl flex items-center gap-3 transition-colors group">
+                                <a href="tel:+16176658530" className="bg-gray-50 hover:bg-ucb-blue/5 border border-gray-100 p-4 rounded-2xl flex items-center gap-3 transition-colors group">
                                     <Phone className="w-4 h-4 text-ucb-blue shrink-0 group-hover:scale-110 transition-transform" />
                                     <div>
                                         <span className="block text-[10px] font-bold uppercase tracking-wider text-gray-400">Call Us</span>
-                                        <span className="block text-[11px] text-ucb-blue font-semibold">(617) 449-7070</span>
-                                        <span className="block text-[8px] text-gray-400">Press 2 for Admissions</span>
+                                        <span className="block text-[11px] text-ucb-blue font-semibold">(617) 665-8530</span>
+                                        <span className="block text-[8px] text-gray-400">Direct Admissions Line</span>
                                     </div>
                                 </a>
 
                                 <button
-                                    onClick={() => {
-                                        const el = (window as any).Element451;
-                                        if (el && el.Messenger) {
-                                            el.Messenger.open();
-                                        } else {
-                                            const launcher = document.querySelector('.el451-messenger-launcher, #el451-messenger-launcher, [class*="messenger"] button') as HTMLElement;
-                                            if (launcher) launcher.click();
-                                        }
-                                    }}
+                                    onClick={openChat}
                                     className="bg-gray-50 hover:bg-ucb-blue/5 border border-gray-100 p-4 rounded-2xl flex items-center gap-3 transition-colors group text-left cursor-pointer min-h-[44px] w-full"
                                 >
                                     <MessageSquare className="w-4 h-4 text-ucb-blue shrink-0 group-hover:scale-110 transition-transform" />

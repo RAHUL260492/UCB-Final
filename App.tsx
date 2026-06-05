@@ -4,6 +4,7 @@ import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import RFISidebar from './components/RFISidebar';
 import BackgroundShapes from './components/BackgroundShapes';
+import { openChat } from './src/lib/chat';
 import Home from './pages/Home';
 import StudentHome from './pages/StudentHome';
 import About from './pages/About';
@@ -176,15 +177,7 @@ function App() {
 
         {/* Floating Chat Button for Mobile/General */}
         <button
-          onClick={() => {
-            const el451 = (window as any).Element451;
-            if (el451 && el451.Messenger) {
-              el451.Messenger.open();
-            } else {
-              const launcher = document.querySelector('.el451-messenger-launcher, #el451-messenger-launcher, [class*="messenger"] button') as HTMLElement;
-              if (launcher) launcher.click();
-            }
-          }}
+          onClick={openChat}
           className="fixed bottom-6 right-6 md:right-10 bg-ucb-emerald text-white p-4 rounded-full shadow-2xl z-40 hover:scale-110 transition-transform lg:hidden"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg>

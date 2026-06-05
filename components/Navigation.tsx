@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Menu, X, Phone, Globe, ChevronDown, Search } from 'lucide-react';
+import { Menu, X, Phone, Globe, ChevronDown, Search, MessageCircle } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Logo from './Logo';
+import { openChat } from '../src/lib/chat';
 
 const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -283,6 +284,15 @@ const Navigation: React.FC = () => {
             >
               Contact
             </Link>
+            {/* Desktop Live Chat */}
+            <button
+              onClick={openChat}
+              className={`p-2 rounded-full transition-all duration-300 ${useWhiteNav ? 'text-white hover:bg-white/20' : 'text-ucb-blue hover:bg-ucb-blue/10'}`}
+              aria-label="Open live chat"
+              title="Live chat"
+            >
+              <MessageCircle className="w-5 h-5" />
+            </button>
             {/* Desktop Search */}
             <button
               onClick={() => { setSearchOpen(!searchOpen); if(mobileMenuOpen) setMobileMenuOpen(false); }}
