@@ -156,10 +156,11 @@ function App() {
             <Route path="/join-urban-college" element={<RFILandingPage />} />
 
             {/* Post-conversion thank-you pages (set as Element451 / app451 redirect targets) */}
-            <Route path="/thank-you-program" element={<ThankYouProgram />} />
+            <Route path="/thank-you" element={<ThankYouProgram />} />
             <Route path="/thank-you-application" element={<ThankYouApplication />} />
-            {/* Aliases matching the legacy live URLs */}
-            <Route path="/thank-you-program-urban-college" element={<Navigate to="/thank-you-program" replace />} />
+            {/* Aliases / legacy redirects */}
+            <Route path="/thank-you-program" element={<Navigate to="/thank-you" replace />} />
+            <Route path="/thank-you-program-urban-college" element={<Navigate to="/thank-you" replace />} />
             <Route path="/thank-you-application-urban-college" element={<Navigate to="/thank-you-application" replace />} />
 
             {/* Language Path Aliases / Redirects */}
