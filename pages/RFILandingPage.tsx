@@ -2,8 +2,31 @@ import React, { useEffect, useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import Logo from '../components/Logo';
 import ScrollAnimation from '../components/ScrollAnimation';
-import { CheckCircle, Award, BookOpen, Clock, Heart, ShieldCheck } from 'lucide-react';
+import { CheckCircle, Award, BookOpen, Clock, Heart, ShieldCheck, ArrowRight } from 'lucide-react';
 import SEO from '../components/SEO';
+
+const APPLY_URL = 'https://urbancollege-28708.app451.sites.451.io/';
+
+// Shared content for the marketing landing template (sourced from the live pages).
+const LANDING_PROGRAMS = [
+    { name: 'Early Childhood Education', slug: 'early-childhood-education', desc: 'Become a preschool teacher, childcare worker, or family childcare provider.' },
+    { name: 'Human Services', slug: 'human-services-certificate', desc: 'Step into case management, social services, or direct support roles.' },
+    { name: 'Case Management', slug: 'case-management', desc: 'Support clients as a case manager or behavioral case worker.' },
+    { name: 'Elder Care', slug: 'elder-care', desc: 'Pursue community health worker, home health aide, and care roles.' },
+    { name: 'Digital Marketing', slug: 'digital-marketing-certificate', desc: 'Launch a career as a social media or content marketing specialist.' },
+    { name: 'General Studies', slug: 'general-studies-certificate', desc: 'Explore your options and build a flexible foundation for any path.' },
+];
+
+const LANDING_PARTNERS = [
+    'Fitchburg State University', 'Southern New Hampshire University', 'Lasell University',
+    'William James College', 'Lesley University', 'Franklin Cummings Tech',
+    'UMass Boston', 'Boston College: Woods College',
+];
+
+const LANDING_TESTIMONIALS = [
+    { quote: 'Urban College opened up a new pathway for me to start a real career with real advancement and more support for my family.', name: 'Drake', role: 'Class of 2024' },
+    { quote: "I wouldn't be able to do the work I do without my certificates and degree from Urban College. If you have any dreams, go forward.", name: 'Ramona S.', role: 'Alum' },
+];
 
 const RFILandingPage: React.FC = () => {
     const location = useLocation();
@@ -36,11 +59,19 @@ const RFILandingPage: React.FC = () => {
                 desc: 'We make college accessible. Discover supportive pathways, scholarship programs, and individualized guidance to help you cross the graduation stage.'
             };
         }
+        if (path.includes('join-urban-college')) {
+            return {
+                id: 'urbancollege.forms.23262',
+                name: 'Join Urban College',
+                desc: 'Your online community college. Accredited, affordable, and multilingual—start a career-building certificate or degree designed to fit your busy life.'
+            };
+        }
         if (path.includes('whav')) {
+            // WHAV radio landing page — mirrors the "Your Future" page; keeps the WHAV form ID for attribution.
             return {
                 id: 'urbancollege.forms.23676',
-                name: 'Opportunity Awaits',
-                desc: 'Special campaign program in association with WHAV. Request information to learn about available scholarship funds, online courses, and free support services.'
+                name: 'Build Your Future',
+                desc: 'Invest in yourself and create long-term financial security for your family. Start your journey with classes designed to fit your busy lifestyle.'
             };
         }
 
@@ -109,7 +140,7 @@ const RFILandingPage: React.FC = () => {
                 <div className="flex items-center gap-4 text-xs font-semibold text-gray-500">
                     <span>NECHE Accredited</span>
                     <span className="text-gray-300">|</span>
-                    <a href="tel:617-449-7070" className="hover:text-ucb-blue transition-colors">617-449-7070</a>
+                    <a href="tel:617-665-8530" className="hover:text-ucb-blue transition-colors">617-665-8530</a>
                 </div>
             </header>
 
@@ -174,13 +205,94 @@ const RFILandingPage: React.FC = () => {
                 </div>
             </main>
 
+            {/* Online programs showcase */}
+            <section className="container mx-auto px-6 max-w-6xl mt-20">
+                <ScrollAnimation variant="fade-up" className="text-center mb-10">
+                    <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs mb-2 block">Online Programs</span>
+                    <h2 className="text-2xl md:text-3xl font-display font-bold text-ucb-blue">Career-Building Certificates &amp; Degrees</h2>
+                    <p className="text-gray-500 font-light mt-2 max-w-2xl mx-auto text-sm">
+                        Finish in as little as one year—100% online, in English, Spanish, and Mandarin.
+                    </p>
+                </ScrollAnimation>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                    {LANDING_PROGRAMS.map((p, idx) => (
+                        <ScrollAnimation key={p.slug} variant="fade-up" delay={`${(idx % 3) * 0.06}s`} className="h-full">
+                            <Link to={`/programs/${p.slug}`} className="group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all flex flex-col h-full">
+                                <h3 className="font-display font-bold text-ucb-blue group-hover:text-ucb-orange transition-colors">{p.name}</h3>
+                                <p className="text-xs text-gray-500 font-light leading-relaxed mt-2 flex-1">{p.desc}</p>
+                                <span className="mt-3 inline-flex items-center gap-1 text-ucb-orange font-bold text-xs">
+                                    Learn more <ArrowRight className="w-3.5 h-3.5" />
+                                </span>
+                            </Link>
+                        </ScrollAnimation>
+                    ))}
+                </div>
+                <div className="text-center mt-8">
+                    <Link to="/programs" className="inline-flex items-center gap-1.5 text-ucb-blue font-bold text-sm hover:text-ucb-orange transition-colors">
+                        Explore all programs <ArrowRight className="w-4 h-4" />
+                    </Link>
+                </div>
+            </section>
+
+            {/* Transfer pathways */}
+            <section className="container mx-auto px-6 max-w-6xl mt-20">
+                <ScrollAnimation variant="fade-up" className="bg-ucb-blue rounded-3xl p-8 md:p-10 text-white">
+                    <div className="text-center mb-6">
+                        <h2 className="text-2xl font-display font-bold">Transfer &amp; Keep Going</h2>
+                        <p className="text-blue-100 font-light text-sm mt-2 max-w-2xl mx-auto">
+                            Articulation agreements help our graduates step into bachelor's programs at partner universities.
+                        </p>
+                    </div>
+                    <div className="flex flex-wrap justify-center gap-2.5">
+                        {LANDING_PARTNERS.map((p) => (
+                            <span key={p} className="bg-white/10 border border-white/15 rounded-full px-4 py-1.5 text-xs font-medium">{p}</span>
+                        ))}
+                    </div>
+                </ScrollAnimation>
+            </section>
+
+            {/* Testimonials */}
+            <section className="container mx-auto px-6 max-w-5xl mt-20">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {LANDING_TESTIMONIALS.map((t, idx) => (
+                        <ScrollAnimation key={t.name} variant="fade-up" delay={`${idx * 0.08}s`} className="h-full">
+                            <div className="bg-white rounded-3xl p-7 border border-gray-100 shadow-sm h-full flex flex-col">
+                                <p className="text-sm text-gray-600 font-light italic leading-relaxed flex-1">"{t.quote}"</p>
+                                <div className="mt-4 pt-4 border-t border-gray-100">
+                                    <p className="font-display font-bold text-ucb-blue text-sm">{t.name}</p>
+                                    <p className="text-[10px] font-bold text-ucb-orange uppercase tracking-wider">{t.role}</p>
+                                </div>
+                            </div>
+                        </ScrollAnimation>
+                    ))}
+                </div>
+            </section>
+
+            {/* Closing CTA */}
+            <section className="container mx-auto px-6 max-w-5xl mt-20">
+                <ScrollAnimation variant="fade-up" className="bg-gradient-to-r from-ucb-orange to-orange-500 rounded-3xl p-8 md:p-10 text-center text-white">
+                    <h2 className="text-2xl md:text-3xl font-display font-black">Your Future Starts With One Step</h2>
+                    <p className="text-white/90 font-light text-sm mt-2 max-w-xl mx-auto">
+                        Free application. No SAT/ACT required. Most Urban College students graduate debt-free.
+                    </p>
+                    <div className="mt-6 flex flex-wrap justify-center gap-3">
+                        <a href={APPLY_URL} target="_blank" rel="noopener noreferrer" className="bg-white text-ucb-orange font-bold py-3 px-7 rounded-full text-sm uppercase tracking-wider hover:bg-ucb-blue hover:text-white transition-colors min-h-[44px] inline-flex items-center">
+                            Apply Free
+                        </a>
+                        <a href="tel:617-665-8530" className="bg-white/15 border border-white/30 text-white font-bold py-3 px-7 rounded-full text-sm uppercase tracking-wider hover:bg-white/25 transition-colors min-h-[44px] inline-flex items-center gap-1.5">
+                            Call (617) 665-8530
+                        </a>
+                    </div>
+                </ScrollAnimation>
+            </section>
+
             {/* Simple footer for landing page */}
             <footer className="container mx-auto px-6 pt-12 text-center border-t border-gray-150/40 mt-12 space-y-4">
                 <p className="text-[11px] text-gray-400 font-light">
                     Urban College of Boston is a private, nonprofit institution accredited by the New England Commission of Higher Education (NECHE).
                 </p>
                 <p className="text-[10px] text-gray-400 font-light">
-                    © {new Date().getFullYear()} Urban College of Boston • 2 Boylston Street, 2nd Floor, Boston, MA 02116 • Phone: (617) 449-7070
+                    © {new Date().getFullYear()} Urban College of Boston • 2 Boylston Street, 2nd Floor, Boston, MA 02116 • Phone: (617) 665-8530
                 </p>
                 <div className="flex justify-center gap-4 text-[10px] font-semibold text-gray-400">
                     <Link to="/about" className="hover:text-ucb-blue transition-colors">About Us</Link>

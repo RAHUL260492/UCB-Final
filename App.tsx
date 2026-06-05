@@ -49,6 +49,8 @@ import CollegeServicesAndResources from './pages/CollegeServicesAndResources';
 import Workforce from './pages/Workforce';
 import Donate from './pages/Donate';
 import Contact from './pages/Contact';
+import ThankYouProgram from './pages/ThankYouProgram';
+import ThankYouApplication from './pages/ThankYouApplication';
 
 // ScrollToTop component to handle scroll on route change
 const ScrollToTop = () => {
@@ -151,6 +153,14 @@ function App() {
             <Route path="/say-yes-b" element={<RFILandingPage />} />
             <Route path="/whav" element={<RFILandingPage />} />
             <Route path="/WHAV" element={<RFILandingPage />} />
+            <Route path="/join-urban-college" element={<RFILandingPage />} />
+
+            {/* Post-conversion thank-you pages (set as Element451 / app451 redirect targets) */}
+            <Route path="/thank-you-program" element={<ThankYouProgram />} />
+            <Route path="/thank-you-application" element={<ThankYouApplication />} />
+            {/* Aliases matching the legacy live URLs */}
+            <Route path="/thank-you-program-urban-college" element={<Navigate to="/thank-you-program" replace />} />
+            <Route path="/thank-you-application-urban-college" element={<Navigate to="/thank-you-application" replace />} />
 
             {/* Language Path Aliases / Redirects */}
             <Route path="/chinese" element={<Navigate to="/mandarin" replace />} />
