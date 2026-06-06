@@ -47,9 +47,9 @@ const TechnologyAccountGuide: React.FC = () => {
     ];
 
     const flyers = [
-        { label: "Login Guide Flyer (English)", path: "https://static1.squarespace.com/static/5be099a375f9eecbf2753e8d/t/69bc4ca27bed6573575a49e1/1773948066126/Urban+College+Systems+Login.pdf" },
-        { label: "Folleto de Inicio de Sesión (Español)", path: "https://static1.squarespace.com/static/5be099a375f9eecbf2753e8d/t/69bc4f4c06ea8f44c7ea6ab0/1773948748601/Urban+College+Systems+Login+-+Spanish.pdf" },
-        { label: "登录帮助台传单 (普通话)", path: "https://static1.squarespace.com/static/5be099a375f9eecbf2753e8d/t/69bc4f9dfb27572d67b98fc0/1773948829687/Urban+College+Systems+Login+-+Mandarin.pdf" }
+        { label: "Login Guide Flyer (English)", path: "https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:6afa380e-71c6-4e5f-853c-55654f623baa?x_api_client_id=edge_extension_viewer&x_api_client_location=share" },
+        { label: "Folleto de Inicio de Sesión (Español)", path: "https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:c987a522-95aa-4043-b5b1-aafd65fef7d6?x_api_client_id=edge_extension_viewer&x_api_client_location=share" },
+        { label: "登录帮助台传单 (普通话)", path: "https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:9a796f59-4c2c-4de8-bcda-2ad1822d94cf?x_api_client_id=edge_extension_viewer&x_api_client_location=share" }
     ];
 
     return (
