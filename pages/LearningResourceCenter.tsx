@@ -85,7 +85,7 @@ const LearningResourceCenter: React.FC = () => {
                                 <div className="relative z-10">
                                     <h3 className="font-display font-bold text-2xl mb-6">Helpful Tools &amp; Resources</h3>
                                     <div className="flex flex-wrap gap-6">
-                                        <a href="https://static1.squarespace.com/static/5be099a375f9eecbf2753e8d/t/64c97e8314a7761c737c9a21/1690926723483/Outlook+Tools+Guide_LRC%2C+July+2023.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-white hover:text-ucb-gold transition-colors font-medium">
+                                        <a href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:97c1d491-6368-4651-ad20-1b22f890932b?x_api_client_id=edge_extension_viewer&x_api_client_location=share" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-white hover:text-ucb-gold transition-colors font-medium">
                                             <Monitor className="w-5 h-5" /> Download Microsoft Tools Guide (PDF)
                                         </a>
                                         <a href="/s/self-led-english-practice-2.html" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-white hover:text-ucb-gold transition-colors font-medium">
