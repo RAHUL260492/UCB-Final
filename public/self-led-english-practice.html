@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Self-Led English Practice Place | Urban College of Boston LRC</title>
+  <meta name="description" content="An interactive, self-paced English learning hub for multilingual and adult learners at Urban College of Boston, powered by AI tools." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;1,9..144,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ===== DESIGN TOKENS ===== */
+    :root {
+      --gold:       #F7B731;
+      --gold-light: #FDE99A;
+      --teal:       #1A7F74;
+      --teal-light: #C7EDE9;
+      --coral:      #E8553E;
+      --coral-light:#FDDDD7;
+      --plum:       #5B2D8E;
+      --plum-light: #EAE0F5;
+      --sky:        #2F86C4;
+      --sky-light:  #D6EDFB;
+      --cream:      #FFFBF2;
+      --ink:        #1C1C1E;
+      --ink-soft:   #4A4A55;
+      --border:     #E2DCCE;
+      --radius:     14px;
+      --shadow:     0 4px 20px rgba(0,0,0,0.09);
+    }
+
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+
+    /* Skip-to-content for screen readers */
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 0;
+      background: var(--teal);
+      color: #fff;
+      padding: 10px 20px;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 0 0 var(--radius) 0;
+      z-index: 9999;
+      transition: top 0.2s;
+    }
+    .skip-link:focus { top: 0; }
+
+    /* ===== HEADER ===== */
+    header {
+      background: var(--teal);
+      color: #fff;
+      padding: 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .site-title {
+      font-family: 'Fraunces', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #fff;
+    }
+    .site-title span {
+      display: block;
+      font-size: 0.78rem;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 400;
+      opacity: 0.85;
+      margin-top: 2px;
+      letter-spacing: 0.04em;
+    }
+
+    /* Main nav */
+    nav[aria-label="Main navigation"] ul {
+      list-style: none;
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    nav[aria-label="Main navigation"] a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+      padding: 6px 13px;
+      border-radius: 99px;
+      border: 1.5px solid rgba(255,255,255,0.35);
+      transition: background 0.18s, border-color 0.18s;
+      white-space: nowrap;
+    }
+    nav[aria-label="Main navigation"] a:hover,
+    nav[aria-label="Main navigation"] a:focus {
+      background: rgba(255,255,255,0.2);
+      border-color: rgba(255,255,255,0.7);
+      outline: none;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: linear-gradient(135deg, var(--teal) 0%, #0e5c52 55%, #0a3d36 100%);
+      color: #fff;
+      padding: 72px 24px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--ink);
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 16px;
+      border-radius: 99px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      font-weight: 700;
+      line-height: 1.15;
+      max-width: 760px;
+      margin: 0 auto 20px;
+    }
+    .hero-sub {
+      font-size: clamp(1rem, 2vw, 1.18rem);
+      max-width: 620px;
+      margin: 0 auto 36px;
+      opacity: 0.88;
+      line-height: 1.7;
+    }
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gold);
+      color: var(--ink);
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 14px 32px;
+      border-radius: 99px;
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s;
+      box-shadow: 0 4px 18px rgba(247,183,49,0.45);
+    }
+    .hero-cta:hover, .hero-cta:focus {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(247,183,49,0.55);
+      outline: 3px solid #fff;
+      outline-offset: 3px;
+    }
+    .hero-emoji { font-size: 1.3em; }
+
+    /* ===== MAIN LAYOUT ===== */
+    main { max-width: 1200px; margin: 0 auto; padding: 48px 24px 80px; }
+
+    /* ===== SECTION TITLES ===== */
+    .section-header {
+      margin-bottom: 32px;
+    }
+    .section-header h2 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      color: var(--teal);
+      line-height: 1.2;
+    }
+    .section-header p {
+      color: var(--ink-soft);
+      margin-top: 8px;
+      max-width: 680px;
+      font-size: 1.03rem;
+    }
+
+    /* ===== CARDS GRID ===== */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 22px;
+    }
+    .card {
+      background: #fff;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 26px 26px;
+      box-shadow: var(--shadow);
+      transition: transform 0.18s, box-shadow 0.18s;
+      position: relative;
+      overflow: hidden;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 10px 32px rgba(0,0,0,0.12); }
+
+    .card-accent {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 5px;
+      border-radius: var(--radius) var(--radius) 0 0;
+    }
+    .accent-gold   { background: var(--gold); }
+    .accent-teal   { background: var(--teal); }
+    .accent-coral  { background: var(--coral); }
+    .accent-plum   { background: var(--plum); }
+    .accent-sky    { background: var(--sky); }
+
+    .card-icon {
+      font-size: 2.4rem;
+      margin-bottom: 14px;
+      display: block;
+      line-height: 1;
+    }
+    .card h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+    .card p {
+      font-size: 0.93rem;
+      color: var(--ink-soft);
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    /* ===== ACTIVITY ACCORDION ===== */
+    .accordion { margin-bottom: 12px; }
+    .accordion-btn {
+      width: 100%;
+      background: #fff;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--ink);
+      cursor: pointer;
+      text-align: left;
+      transition: background 0.15s, border-color 0.15s;
+      box-shadow: var(--shadow);
+    }
+    .accordion-btn:hover, .accordion-btn:focus {
+      background: var(--teal-light);
+      border-color: var(--teal);
+      outline: 3px solid var(--teal);
+      outline-offset: 2px;
+    }
+    .accordion-btn[aria-expanded="true"] {
+      background: var(--teal);
+      color: #fff;
+      border-color: var(--teal);
+      border-radius: var(--radius) var(--radius) 0 0;
+    }
+    .accordion-icon {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .accordion-chevron {
+      transition: transform 0.25s;
+      flex-shrink: 0;
+      font-size: 1.1rem;
+    }
+    .accordion-btn[aria-expanded="true"] .accordion-chevron { transform: rotate(180deg); }
+
+    .accordion-panel {
+      display: none;
+      background: #fff;
+      border: 1.5px solid var(--teal);
+      border-top: none;
+      border-radius: 0 0 var(--radius) var(--radius);
+      padding: 28px 28px 24px;
+      box-shadow: var(--shadow);
+    }
+    .accordion-panel.open { display: block; }
+
+    /* ===== STEPS ===== */
+    .steps { list-style: none; counter-reset: step; margin: 0 0 20px; }
+    .steps li {
+      counter-increment: step;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      margin-bottom: 18px;
+    }
+    .steps li::before {
+      content: counter(step);
+      flex-shrink: 0;
+      width: 32px; height: 32px;
+      background: var(--teal);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.9rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+    .steps li p { font-size: 0.94rem; color: var(--ink-soft); margin: 0; }
+    .steps li strong { color: var(--ink); display: block; margin-bottom: 3px; }
+
+    /* ===== PROMPT EXAMPLE BOX ===== */
+    .prompt-box {
+      background: var(--teal-light);
+      border-left: 4px solid var(--teal);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 16px 20px;
+      margin: 16px 0;
+      font-size: 0.92rem;
+    }
+    .prompt-box strong {
+      display: block;
+      color: var(--teal);
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .prompt-box p { margin: 0; color: var(--ink); font-style: italic; }
+
+    .tip-box {
+      background: var(--gold-light);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 14px 20px;
+      margin: 16px 0;
+      font-size: 0.92rem;
+    }
+    .tip-box strong {
+      display: block;
+      color: #7A5900;
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+    .tip-box p { margin: 0; color: var(--ink-soft); }
+
+    /* ===== TOOL BADGES ===== */
+    .tool-badges { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 99px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+    .badge-chatgpt  { background: #d1f7e3; color: #1a5c38; }
+    .badge-claude   { background: var(--coral-light); color: #7a2512; }
+    .badge-perplexity { background: var(--plum-light); color: var(--plum); }
+    .badge-copilot  { background: var(--sky-light); color: #0d3e65; }
+
+    /* ===== AFFIRMATION BANNER ===== */
+    .affirmation {
+      background: linear-gradient(135deg, var(--gold) 0%, #f9c94e 100%);
+      color: var(--ink);
+      border-radius: var(--radius);
+      padding: 32px 36px;
+      text-align: center;
+      margin: 48px 0;
+    }
+    .affirmation p {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      font-style: italic;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    /* ===== AI PHILOSOPHY SECTION ===== */
+    .philosophy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 24px;
+    }
+    .philosophy-card {
+      padding: 24px;
+      border-radius: var(--radius);
+      border: 1.5px solid var(--border);
+    }
+    .philosophy-card h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.05rem;
+      margin: 12px 0 8px;
+    }
+    .philosophy-card p { font-size: 0.91rem; color: var(--ink-soft); }
+    .do-card   { background: #e8faf3; border-color: #7fcfaa; }
+    .dont-card { background: #fef2ef; border-color: #f4a88e; }
+    .why-card  { background: var(--teal-light); border-color: var(--teal); }
+
+    /* ===== WEBSITE TABLE ===== */
+    .web-table-wrap { overflow-x: auto; margin-top: 16px; border-radius: var(--radius); box-shadow: var(--shadow); }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      background: #fff;
+    }
+    thead th {
+      background: var(--teal);
+      color: #fff;
+      padding: 14px 16px;
+      text-align: left;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    tbody tr:nth-child(even) { background: var(--teal-light); }
+    tbody td { padding: 12px 16px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    tbody tr:hover { background: var(--gold-light); }
+    table a { color: var(--teal); font-weight: 600; text-decoration: underline; }
+    table a:hover, table a:focus { color: var(--coral); }
+
+    /* ===== CAREER SECTION ===== */
+    .career-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .career-card {
+      background: #fff;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+    .career-card h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.08rem;
+      margin: 12px 0 8px;
+      color: var(--plum);
+    }
+    .career-card p { font-size: 0.9rem; color: var(--ink-soft); }
+    .career-card ul {
+      margin: 10px 0 0 16px;
+      font-size: 0.88rem;
+      color: var(--ink-soft);
+    }
+    .career-card ul li { margin-bottom: 4px; }
+
+    /* ===== INTERACTIVE PROMPT BUILDER ===== */
+    .prompt-builder {
+      background: #fff;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      box-shadow: var(--shadow);
+      margin-top: 24px;
+    }
+    .prompt-builder h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.25rem;
+      margin-bottom: 6px;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 16px;
+    }
+    @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+    label {
+      display: block;
+      font-weight: 700;
+      font-size: 0.88rem;
+      margin-bottom: 5px;
+      color: var(--ink);
+    }
+    select, input[type="text"] {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.93rem;
+      color: var(--ink);
+      background: var(--cream);
+      transition: border-color 0.15s;
+      appearance: auto;
+    }
+    select:focus, input[type="text"]:focus {
+      outline: 3px solid var(--teal);
+      outline-offset: 1px;
+      border-color: var(--teal);
+    }
+    .build-btn {
+      margin-top: 20px;
+      background: var(--teal);
+      color: #fff;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 99px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.12s;
+    }
+    .build-btn:hover, .build-btn:focus {
+      background: #0e5c52;
+      transform: translateY(-1px);
+      outline: 3px solid var(--teal);
+      outline-offset: 3px;
+    }
+    .generated-prompt {
+      margin-top: 20px;
+      background: var(--teal-light);
+      border: 1.5px solid var(--teal);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      font-size: 0.97rem;
+      display: none;
+    }
+    .generated-prompt strong { display: block; color: var(--teal); margin-bottom: 8px; font-size: 0.82rem; letter-spacing: 0.06em; text-transform: uppercase; }
+    .generated-prompt p { margin: 0; font-style: italic; color: var(--ink); line-height: 1.7; }
+    .copy-btn {
+      margin-top: 12px;
+      background: var(--gold);
+      color: var(--ink);
+      border: none;
+      padding: 8px 20px;
+      border-radius: 99px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .copy-btn:hover, .copy-btn:focus {
+      background: #e0a41c;
+      outline: 3px solid var(--gold);
+      outline-offset: 2px;
+    }
+
+    /* ===== PROGRESS TRACKER ===== */
+    .tracker {
+      background: #fff;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      margin-top: 24px;
+    }
+    .tracker h3 { font-family: 'Fraunces', serif; font-size: 1.2rem; margin-bottom: 16px; }
+    .check-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+    .check-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.15s, border-color 0.15s;
+      font-size: 0.9rem;
+      background: var(--cream);
+    }
+    .check-item:has(input:checked) { background: var(--teal-light); border-color: var(--teal); }
+    .check-item input[type="checkbox"] { width: 18px; height: 18px; accent-color: var(--teal); cursor: pointer; flex-shrink: 0; }
+    .check-item label { cursor: pointer; margin: 0; font-weight: 400; font-size: 0.9rem; }
+    .progress-bar-wrap { margin-top: 20px; }
+    .progress-label { font-size: 0.88rem; font-weight: 700; color: var(--ink-soft); margin-bottom: 6px; }
+    .progress-bar { height: 12px; background: var(--border); border-radius: 99px; overflow: hidden; }
+    .progress-fill { height: 100%; background: linear-gradient(90deg, var(--teal), var(--gold)); border-radius: 99px; transition: width 0.3s ease; width: 0%; }
+    .progress-count { font-size: 0.85rem; color: var(--teal); font-weight: 700; margin-top: 6px; }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--ink);
+      color: rgba(255,255,255,0.75);
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 0.85rem;
+      line-height: 1.8;
+    }
+    footer strong { color: #fff; }
+    footer a { color: var(--gold); text-decoration: underline; }
+    footer a:hover, footer a:focus { color: #fff; }
+
+    /* ===== FOCUS VISIBLE ===== */
+    :focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 2px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 700px) {
+      .header-inner { flex-direction: column; align-items: flex-start; }
+      .hero { padding: 48px 20px 56px; }
+      .accordion-btn { padding: 14px 16px; font-size: 0.92rem; }
+      main { padding: 32px 16px 60px; }
+    }
+
+    /* ===== SECTION SPACING ===== */
+    section { margin-bottom: 64px; }
+    section:last-of-type { margin-bottom: 0; }
+
+    /* Divider */
+    .divider { border: none; border-top: 2px dashed var(--border); margin: 48px 0; }
+
+    /* Language note */
+    .language-note {
+      background: var(--plum-light);
+      border: 1.5px solid var(--plum);
+      border-radius: var(--radius);
+      padding: 18px 22px;
+      font-size: 0.92rem;
+      color: var(--plum);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .language-note span { font-size: 1.4rem; }
+
+    /* Intro welcome box */
+    .welcome-box {
+      background: linear-gradient(135deg, #e6faf7 0%, var(--teal-light) 100%);
+      border: 1.5px solid var(--teal);
+      border-radius: var(--radius);
+      padding: 32px 36px;
+      margin-bottom: 48px;
+    }
+    .welcome-box h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.6rem;
+      color: var(--teal);
+      margin-bottom: 10px;
+    }
+    .welcome-box p { font-size: 1rem; color: var(--ink-soft); max-width: 700px; margin-bottom: 10px; }
+    .welcome-box p:last-child { margin-bottom: 0; }
+  </style>
+</head>
+<body>
+
+  <!-- Skip Navigation for Screen Readers -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ===== HEADER ===== -->
+  <header role="banner">
+    <div class="header-inner">
+      <div class="site-title" aria-label="Urban College of Boston Learning Resource Center">
+        📚 UCB Learning Resource Center
+        <span>Self-Led English Practice Place</span>
+      </div>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#welcome">Welcome</a></li>
+          <li><a href="#how-ai-works">Using AI</a></li>
+          <li><a href="#activities">Activities</a></li>
+          <li><a href="#prompt-builder">Build a Prompt</a></li>
+          <li><a href="#career">Career Skills</a></li>
+          <li><a href="#websites">Free Websites</a></li>
+          <li><a href="#tracker">My Progress</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <div role="banner" aria-labelledby="hero-heading">
+    <div class="hero">
+      <div class="hero-badge" aria-hidden="true">Urban College of Boston · LRC</div>
+      <h1 id="hero-heading">Your English Journey Starts Here — <em>You've Got This!</em></h1>
+      <p class="hero-sub">A self-paced, AI-powered learning space designed just for you. Practice English on your own schedule, at your own pace, with tools that grow with you.</p>
+      <a href="#welcome" class="hero-cta">
+        <span class="hero-emoji" aria-hidden="true">🚀</span>
+        Start Learning Now
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="main-content" tabindex="-1">
+
+    <!-- LANGUAGE WELCOME NOTE -->
+    <div class="language-note" role="note" aria-label="Multilingual welcome">
+      <span aria-hidden="true">🌍</span>
+      <div>
+        <strong>Welcome in every language!</strong> &nbsp;
+        ¡Bienvenido a tu espacio de aprendizaje! &nbsp;·&nbsp; 欢迎来到你的学习空间！ &nbsp;·&nbsp;
+        This space is for <em>everyone</em> — no matter where you are in your English journey.
+      </div>
+    </div>
+
+    <!-- ===== WELCOME ===== -->
+    <section id="welcome" aria-labelledby="welcome-heading">
+      <div class="welcome-box">
+        <h2 id="welcome-heading">👋 Welcome, Learner!</h2>
+        <p>You are amazing for being here. Whether you are balancing work, family, or are brand new to English — this space is built for <strong>you</strong>. You bring a lifetime of knowledge, experience, and strengths. This practice place helps you add English skills to everything you already know.</p>
+        <p>Here you will use <strong>AI tools as your thought partner</strong> — not to do your thinking for you, but to help you practice, get feedback, and grow. AI is like a patient tutor available 24 hours a day, 7 days a week, completely free of judgment.</p>
+        <p>Every activity is self-paced. Start anywhere. Come back anytime. Your progress belongs to you. 💪</p>
+      </div>
+
+      <div class="section-header">
+        <h2>What You Will Learn</h2>
+        <p>Each activity builds real skills you can use in college, at work, and in your daily life.</p>
+      </div>
+      <div class="cards-grid" role="list">
+        <div class="card" role="listitem">
+          <div class="card-accent accent-teal" aria-hidden="true"></div>
+          <span class="card-icon" aria-hidden="true">💬</span>
+          <h3>Conversation &amp; Speaking</h3>
+          <p>Practice real conversations, role-plays, and everyday situations. Build confidence to speak up in class, at work, and in your community.</p>
+        </div>
+        <div class="card" role="listitem">
+          <div class="card-accent accent-gold" aria-hidden="true"></div>
+          <span class="card-icon" aria-hidden="true">✍️</span>
+          <h3>Writing &amp; Grammar</h3>
+          <p>Learn grammar rules, write sentences and paragraphs, and get immediate, kind feedback. Fix errors and understand why — not just what.</p>
+        </div>
+        <div class="card" role="listitem">
+          <div class="card-accent accent-coral" aria-hidden="true"></div>
+          <span class="card-icon" aria-hidden="true">📖</span>
+          <h3>Reading &amp; Vocabulary</h3>
+          <p>Read stories, build word lists, learn pronunciation, and answer comprehension questions at your own level.</p>
+        </div>
+        <div class="card" role="listitem">
+          <div class="card-accent accent-plum" aria-hidden="true"></div>
+          <span class="card-icon" aria-hidden="true">🎯</span>
+          <h3>Goal Setting &amp; Study Plans</h3>
+          <p>Use AI to create a personalized weekly study plan, set goals, and quiz yourself to measure your real progress.</p>
+        </div>
+        <div class="card" role="listitem">
+          <div class="card-accent accent-sky" aria-hidden="true"></div>
+          <span class="card-icon" aria-hidden="true">🤖</span>
+          <h3>AI Fluency</h3>
+          <p>Learn how to use AI tools confidently and critically — a skill that will help you in every class and every career field.</p>
+        </div>
+        <div class="card" role="listitem">
+          <div class="card-accent accent-gold" aria-hidden="true"></div>
+          <span class="card-icon" aria-hidden="true">💼</span>
+          <h3>Career Readiness</h3>
+          <p>See how English and AI skills connect to real jobs. Practice writing emails, preparing for interviews, and professional communication.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" aria-hidden="true" />
+
+    <!-- ===== HOW TO USE AI ===== -->
+    <section id="how-ai-works" aria-labelledby="ai-heading">
+      <div class="section-header">
+        <h2 id="ai-heading">🤝 How to Use AI as a Thought Partner</h2>
+        <p>AI is a powerful tool — but YOU are the thinker. Here is the key difference between using AI to learn vs. using AI to skip learning.</p>
+      </div>
+
+      <div class="philosophy-grid" role="list">
+        <div class="philosophy-card do-card" role="listitem">
+          <div style="font-size:2rem" aria-hidden="true">✅</div>
+          <h3>DO: Use AI to Learn</h3>
+          <p>Ask AI to explain grammar rules, give you feedback on YOUR writing, suggest vocabulary, correct mistakes and explain WHY, quiz you, and give you practice prompts.</p>
+        </div>
+        <div class="philosophy-card dont-card" role="listitem">
+          <div style="font-size:2rem" aria-hidden="true">🚫</div>
+          <h3>DON'T: Use AI to Replace Your Thinking</h3>
+          <p>Don't ask AI to write your essays for you, do your homework, or think through problems without your effort first. This skips the learning — and your professors will notice.</p>
+        </div>
+        <div class="philosophy-card why-card" role="listitem">
+          <div style="font-size:2rem" aria-hidden="true">💡</div>
+          <h3>WHY It Matters</h3>
+          <p>When you use AI to think WITH you, you build real skills that stay with you. When AI does the work for you, you miss the growth. Your brain needs exercise just like your body.</p>
+        </div>
+      </div>
+
+      <div class="prompt-box" style="margin-top:28px" role="complementary" aria-label="Good AI prompt examples">
+        <strong>✨ Examples of Great AI Prompts</strong>
+        <p>"I wrote this sentence: 'She go to school every day.' Can you explain what is wrong and help me fix it?"</p>
+      </div>
+      <div class="prompt-box">
+        <strong>✨ Another Great Prompt</strong>
+        <p>"I am a Spanish speaker learning English. Can you give me 10 vocabulary words about healthcare with the definition, pronunciation, and an example sentence?"</p>
+      </div>
+      <div class="prompt-box">
+        <strong>✨ For Conversation Practice</strong>
+        <p>"Let's practice a conversation. You are a store manager and I am applying for a job. Ask me interview questions and correct my grammar after each answer."</p>
+      </div>
+      <div class="tip-box" role="note">
+        <strong>📌 Remember</strong>
+        <p>AI makes mistakes too! Always read AI responses carefully. If something seems wrong, ask again or check with your instructor. Your critical thinking is always the most important tool.</p>
+      </div>
+
+      <!-- AI in College -->
+      <div class="section-header" style="margin-top:40px;margin-bottom:16px">
+        <h2 id="ai-college-heading">🎓 Using AI in College — What You Need to Know</h2>
+      </div>
+      <div class="cards-grid" role="list">
+        <div class="card" role="listitem">
+          <div class="card-accent accent-teal" aria-hidden="true"></div>
+          <span class="card-icon" aria-hidden="true">📋</span>
+          <h3>Always Check Your Syllabus</h3>
+          <p>Every professor has different rules about AI use. Before using AI for an assignment, read your syllabus or ask your professor directly. Honesty always builds trust.</p>
+        </div>
+        <div class="card" role="listitem">
+          <div class="card-accent accent-gold" aria-hidden="true"></div>
+          <span class="card-icon" aria-hidden="true">🔍</span>
+          <h3>Verify AI Information</h3>
+          <p>AI can give wrong facts. For research papers, always verify AI information with a real source — a book, a website, a database at the library. Cite real sources, not AI.</p>
+        </div>
+        <div class="card" role="listitem">
+          <div class="card-accent accent-coral" aria-hidden="true"></div>
+          <span class="card-icon" aria-hidden="true">✍️</span>
+          <h3>Use AI to Improve YOUR Work</h3>
+          <p>A great workflow: write a draft yourself first — ask AI for feedback — revise your own writing based on the feedback. This is exactly how professional writers work.</p>
+        </div>
+        <div class="card" role="listitem">
+          <div class="card-accent accent-plum" aria-hidden="true"></div>
+          <span class="card-icon" aria-hidden="true">🧠</span>
+          <h3>AI as a Study Partner</h3>
+          <p>Ask AI to quiz you before a test, explain a confusing concept in simpler language, or summarize a chapter so you can check your own understanding.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="affirmation" role="note" aria-label="Motivational message">
+      <p>"Every language you speak is a superpower. English is one more tool in your powerful toolkit — and you are already on your way." 🌟</p>
+    </div>
+
+    <!-- ===== ACTIVITIES ===== -->
+    <section id="activities" aria-labelledby="activities-heading">
+      <div class="section-header">
+        <h2 id="activities-heading">📚 Independent Learning Activities</h2>
+        <p>Click any activity below to expand it. Follow the step-by-step instructions and use the example prompts to get started. Each activity uses a specific AI tool — all are free!</p>
+      </div>
+
+      <!-- CHATGPT ACTIVITIES -->
+      <h3 style="font-family:'Fraunces',serif;font-size:1.4rem;color:var(--teal);margin-bottom:16px;margin-top:8px">
+        <span aria-hidden="true">💬</span> ChatGPT Activities
+      </h3>
+      <div class="tool-badges" aria-label="Tool used: ChatGPT">
+        <span class="badge badge-chatgpt">🟢 ChatGPT — chat.openai.com</span>
+      </div>
+
+      <!-- Activity 1 -->
+      <div class="accordion">
+        <button class="accordion-btn" aria-expanded="false" aria-controls="act1-panel" id="act1-btn">
+          <span>
+            <span class="accordion-icon" aria-hidden="true">💬</span>
+            Activity 1: Basic Conversation &amp; Fluency Practice
+          </span>
+          <span class="accordion-chevron" aria-hidden="true">▼</span>
+        </button>
+        <div class="accordion-panel" id="act1-panel" role="region" aria-labelledby="act1-btn">
+          <p style="margin-bottom:16px;color:var(--ink-soft)">Build confidence by having a real conversation with AI! This activity helps you practice speaking naturally, learn from your mistakes, and feel more comfortable in English conversations.</p>
+          <ol class="steps">
+            <li><p><strong>Open ChatGPT</strong> Go to <a href="https://chat.openai.com" target="_blank" rel="noopener noreferrer">chat.openai.com</a> and create a free account if you do not have one.</p></li>
+            <li><p><strong>Start your conversation</strong> Use the prompt below to begin. Tell ChatGPT who you are and what you want to practice.</p></li>
+            <li><p><strong>Keep talking for 10–15 minutes</strong> Answer its questions. Ask follow-up questions. Try to write at least 5–8 complete sentences.</p></li>
+            <li><p><strong>Ask for error correction</strong> After your conversation, ask: "Can you list all the grammar mistakes I made and explain how to fix them?"</p></li>
+            <li><p><strong>Write in your journal</strong> Copy 3 corrections you received and write a new sentence using the correct grammar.</p></li>
+          </ol>
+          <div class="prompt-box">
+            <strong>📋 Copy This Starting Prompt</strong>
+            <p>"Hi! I am an English language learner at Urban College of Boston. I want to practice conversation. Please talk with me like a friendly tutor. Correct my grammar after each message I send and explain the correction in simple terms. Let's talk about [choose a topic: my daily life / my job / my home country / my goals]."</p>
+          </div>
+          <div class="tip-box">
+            <strong>🎉 You've Got This!</strong>
+            <p>Do not worry about making mistakes — that is how you learn! Every mistake is a step forward. ChatGPT will never judge you.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Activity 2 -->
+      <div class="accordion">
+        <button class="accordion-btn" aria-expanded="false" aria-controls="act2-panel" id="act2-btn">
+          <span>
+            <span class="accordion-icon" aria-hidden="true">📚</span>
+            Activity 2: Vocabulary Building
+          </span>
+          <span class="accordion-chevron" aria-hidden="true">▼</span>
+        </button>
+        <div class="accordion-panel" id="act2-panel" role="region" aria-labelledby="act2-btn">
+          <p style="margin-bottom:16px;color:var(--ink-soft)">Build a personal vocabulary list around topics that matter to YOU — your job, your health, your studies. Learning words in context makes them stick!</p>
+          <ol class="steps">
+            <li><p><strong>Pick a topic</strong> Choose something relevant to your life: healthcare, cooking, business, education, parenting, technology.</p></li>
+            <li><p><strong>Request your word list</strong> Use the prompt below to get a customized list.</p></li>
+            <li><p><strong>Write sentences</strong> For each word, write your OWN example sentence about your real life.</p></li>
+            <li><p><strong>Ask ChatGPT to check</strong> Paste your sentences and ask for feedback.</p></li>
+            <li><p><strong>Practice pronunciation</strong> Ask: "How do I pronounce [word]? Describe it phonetically."</p></li>
+          </ol>
+          <div class="prompt-box">
+            <strong>📋 Starting Prompt</strong>
+            <p>"I am learning English and I work in [your field, e.g., healthcare / retail / childcare / construction]. Please give me a vocabulary list of 10 important English words for my job. For each word, include: the definition in simple English, phonetic pronunciation, and an example sentence."</p>
+          </div>
+          <div class="tip-box">
+            <strong>💡 Pro Tip!</strong>
+            <p>Keep a vocabulary notebook or document. Add 5–10 new words each week. Review old words too — repetition is the secret to remembering!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Activity 3 -->
+      <div class="accordion">
+        <button class="accordion-btn" aria-expanded="false" aria-controls="act3-panel" id="act3-btn">
+          <span>
+            <span class="accordion-icon" aria-hidden="true">📝</span>
+            Activity 3: Grammar &amp; Sentence Writing
+          </span>
+          <span class="accordion-chevron" aria-hidden="true">▼</span>
+        </button>
+        <div class="accordion-panel" id="act3-panel" role="region" aria-labelledby="act3-btn">
+          <ol class="steps">
+            <li><p><strong>Choose a grammar topic</strong> Options: verb tenses, articles (a/an/the), prepositions, subject-verb agreement, pronouns, adjectives.</p></li>
+            <li><p><strong>Ask for an explanation</strong> Use the prompt below.</p></li>
+            <li><p><strong>Write 5 sentences</strong> Use the grammar rule you just learned.</p></li>
+            <li><p><strong>Submit for feedback</strong> Paste your sentences and ask: "Please correct these sentences and explain any mistakes."</p></li>
+            <li><p><strong>Rewrite corrected sentences</strong> Writing the correct version yourself helps it stick in your memory.</p></li>
+          </ol>
+          <div class="prompt-box">
+            <strong>📋 Starting Prompt</strong>
+            <p>"Please teach me about [grammar topic, e.g., the present perfect tense]. Explain the rule simply, give me 3 examples, then give me 5 practice sentences with blanks for me to fill in. After I fill them in, correct my answers."</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Activity 4 -->
+      <div class="accordion">
+        <button class="accordion-btn" aria-expanded="false" aria-controls="act4-panel" id="act4-btn">
+          <span>
+            <span class="accordion-icon" aria-hidden="true">✍️</span>
+            Activity 4: Paragraph &amp; Essay Writing
+          </span>
+          <span class="accordion-chevron" aria-hidden="true">▼</span>
+        </button>
+        <div class="accordion-panel" id="act4-panel" role="region" aria-labelledby="act4-btn">
+          <p style="margin-bottom:16px;color:var(--ink-soft)">This is exactly how college writing works. Write first, use AI for feedback, then revise. This is also how professional writers in every field work!</p>
+          <ol class="steps">
+            <li><p><strong>Brainstorm with AI</strong> Ask: "Help me brainstorm 5 ideas for a paragraph about [topic]."</p></li>
+            <li><p><strong>Choose your idea and make an outline</strong> Ask AI to help you create a simple outline with a topic sentence, 3 supporting details, and a concluding sentence.</p></li>
+            <li><p><strong>Write the paragraph yourself</strong> Use your outline. Write every word yourself — this is YOUR paragraph!</p></li>
+            <li><p><strong>Get AI feedback</strong> Paste your paragraph and use the prompt below.</p></li>
+            <li><p><strong>Revise</strong> Make changes based on the feedback. Compare your original and revised versions — that is your learning!</p></li>
+          </ol>
+          <div class="prompt-box">
+            <strong>📋 Feedback Prompt</strong>
+            <p>"I wrote this paragraph for English class. Please give me feedback on: (1) grammar errors with explanations, (2) sentence variety, (3) paragraph organization. Do NOT rewrite it for me — just give me specific suggestions so I can improve it myself. Here is my paragraph: [paste your paragraph]"</p>
+          </div>
+          <div class="tip-box">
+            <strong>⚠️ Important!</strong>
+            <p>Always write YOUR OWN first draft before asking AI. AI feedback on your own writing teaches you much more than AI-written text ever could.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Activity 5: Goal Setting -->
+      <div class="accordion">
+        <button class="accordion-btn" aria-expanded="false" aria-controls="act5-panel" id="act5-btn">
+          <span>
+            <span class="accordion-icon" aria-hidden="true">🎯</span>
+            Activity 5: Goal Setting &amp; Personalized Study Plan
+          </span>
+          <span class="accordion-chevron" aria-hidden="true">▼</span>
+        </button>
+        <div class="accordion-panel" id="act5-panel" role="region" aria-labelledby="act5-btn">
+          <ol class="steps">
+            <li><p><strong>Think about your goals</strong> What do you want to improve most? Speaking? Writing? Grammar? Vocabulary? Why does it matter to you?</p></li>
+            <li><p><strong>Use the prompt below</strong> Tell AI about your schedule and goals.</p></li>
+            <li><p><strong>Follow the plan for one week</strong> Check off activities as you complete them.</p></li>
+            <li><p><strong>End-of-week reflection</strong> Ask AI: "Quiz me on what I practiced this week. Give me 5 questions."</p></li>
+            <li><p><strong>Adjust for next week</strong> What was easy? What was hard? Update your plan!</p></li>
+          </ol>
+          <div class="prompt-box">
+            <strong>📋 Study Plan Prompt</strong>
+            <p>"I am an English language learner. I have [X] hours per week to study. My goals are: [list 1–3 specific goals, e.g., improve writing, learn vocabulary for healthcare, practice speaking]. Please create a week-by-week study plan for me with specific activities, the AI tools I should use, and estimated time for each activity."</p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" aria-hidden="true" />
+
+      <!-- CLAUDE ACTIVITIES -->
+      <h3 style="font-family:'Fraunces',serif;font-size:1.4rem;color:var(--teal);margin-bottom:16px">
+        <span aria-hidden="true">🤖</span> Claude AI Activities
+      </h3>
+      <div class="tool-badges" aria-label="Tool used: Claude">
+        <span class="badge badge-claude">🟠 Claude — claude.ai</span>
+      </div>
+
+      <!-- Claude 1 -->
+      <div class="accordion">
+        <button class="accordion-btn" aria-expanded="false" aria-controls="cla1-panel" id="cla1-btn">
+          <span>
+            <span class="accordion-icon" aria-hidden="true">💡</span>
+            Activity 6: Parts of a Sentence
+          </span>
+          <span class="accordion-chevron" aria-hidden="true">▼</span>
+        </button>
+        <div class="accordion-panel" id="cla1-panel" role="region" aria-labelledby="cla1-btn">
+          <p style="margin-bottom:14px;color:var(--ink-soft)">Understanding subject, verb, and object is the foundation of all English sentences. Once you see this pattern, English writing becomes much clearer!</p>
+          <ol class="steps">
+            <li><p><strong>Ask Claude to explain</strong> Use the prompt below to get a clear, simple explanation.</p></li>
+            <li><p><strong>Identify parts in 5 sentences</strong> Ask Claude to give you sentences to label.</p></li>
+            <li><p><strong>Write your own</strong> Write 5 sentences about your daily life. Ask Claude to identify and confirm the parts.</p></li>
+            <li><p><strong>Challenge yourself</strong> Ask for sentences with direct and indirect objects!</p></li>
+          </ol>
+          <div class="prompt-box">
+            <strong>📋 Claude Prompt</strong>
+            <p>"Please explain subject, verb, and object in English sentences using very simple language. Give me 5 example sentences and label the subject (S), verb (V), and object (O) in each one. Then give me 5 sentences for me to label myself."</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Claude 2 -->
+      <div class="accordion">
+        <button class="accordion-btn" aria-expanded="false" aria-controls="cla2-panel" id="cla2-btn">
+          <span>
+            <span class="accordion-icon" aria-hidden="true">🔤</span>
+            Activity 7: Capitalization &amp; Punctuation
+          </span>
+          <span class="accordion-chevron" aria-hidden="true">▼</span>
+        </button>
+        <div class="accordion-panel" id="cla2-panel" role="region" aria-labelledby="cla2-btn">
+          <ol class="steps">
+            <li><p><strong>Learn the rules</strong> Ask Claude to explain capitalization rules (MINTS: Months, I, Names, Titles, Start of sentences) and punctuation marks.</p></li>
+            <li><p><strong>Practice correction</strong> Ask for a paragraph with capitalization and punctuation errors to correct.</p></li>
+            <li><p><strong>Compare answers</strong> Submit your corrected version and ask Claude to check it.</p></li>
+            <li><p><strong>Apply to your own writing</strong> Paste a paragraph you wrote for class and ask Claude to check only capitalization and punctuation.</p></li>
+          </ol>
+          <div class="prompt-box">
+            <strong>📋 Claude Prompt</strong>
+            <p>"Explain the MINTS capitalization rules to me with examples. Then give me a paragraph of 5–8 sentences with 8 capitalization and punctuation errors (no commas, missing periods, wrong capital letters). I will correct it, then you check my work."</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Claude 3 -->
+      <div class="accordion">
+        <button class="accordion-btn" aria-expanded="false" aria-controls="cla3-panel" id="cla3-btn">
+          <span>
+            <span class="accordion-icon" aria-hidden="true">❓</span>
+            Activity 8: Writing Questions &amp; Comma Use
+          </span>
+          <span class="accordion-chevron" aria-hidden="true">▼</span>
+        </button>
+        <div class="accordion-panel" id="cla3-panel" role="region" aria-labelledby="cla3-btn">
+          <ol class="steps">
+            <li><p><strong>Question types</strong> Ask Claude to explain yes/no questions, wh- questions (who, what, where, when, why, how), and tag questions.</p></li>
+            <li><p><strong>Practice converting</strong> Ask Claude to give you statements to convert into questions.</p></li>
+            <li><p><strong>Comma rules</strong> Ask Claude to explain 5 major comma rules with examples.</p></li>
+            <li><p><strong>Comma practice</strong> Ask for sentences where you insert commas correctly.</p></li>
+          </ol>
+          <div class="prompt-box">
+            <strong>📋 Claude Prompt</strong>
+            <p>"Teach me how to write questions in English. Show me yes/no questions and wh- questions (who, what, where, when, why, how). Give me 5 statements and I will change them into questions. Then correct my work and explain any mistakes."</p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" aria-hidden="true" />
+
+      <!-- PERPLEXITY ACTIVITIES -->
+      <h3 style="font-family:'Fraunces',serif;font-size:1.4rem;color:var(--teal);margin-bottom:16px">
+        <span aria-hidden="true">🔍</span> Perplexity AI Activities
+      </h3>
+      <div class="tool-badges" aria-label="Tool used: Perplexity">
+        <span class="badge badge-perplexity">🟣 Perplexity — perplexity.ai</span>
+      </div>
+
+      <!-- Perplexity 1 -->
+      <div class="accordion">
+        <button class="accordion-btn" aria-expanded="false" aria-controls="per1-panel" id="per1-btn">
+          <span>
+            <span class="accordion-icon" aria-hidden="true">⏰</span>
+            Activity 9: Verb Tenses (Past, Present, Future)
+          </span>
+          <span class="accordion-chevron" aria-hidden="true">▼</span>
+        </button>
+        <div class="accordion-panel" id="per1-panel" role="region" aria-labelledby="per1-btn">
+          <p style="margin-bottom:14px;color:var(--ink-soft)">Perplexity is great for learning because it shows you real web sources alongside explanations. You can see where information comes from — a great skill for college research too!</p>
+          <ol class="steps">
+            <li><p><strong>Open Perplexity</strong> Go to <a href="https://perplexity.ai" target="_blank" rel="noopener noreferrer">perplexity.ai</a>.</p></li>
+            <li><p><strong>Learn one tense at a time</strong> Ask about simple present, simple past, and simple future separately.</p></li>
+            <li><p><strong>Write your own sentences</strong> Write 3 sentences in each tense about your own life story.</p></li>
+            <li><p><strong>Get feedback</strong> Paste your sentences and ask for corrections.</p></li>
+          </ol>
+          <div class="prompt-box">
+            <strong>📋 Perplexity Prompt</strong>
+            <p>"Explain the difference between simple present, simple past, and simple future tenses in English. Give me a table with the verb 'to work' in all three tenses — positive, negative, and question forms. Then give me 6 fill-in-the-blank sentences to practice."</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Perplexity 2 -->
+      <div class="accordion">
+        <button class="accordion-btn" aria-expanded="false" aria-controls="per2-panel" id="per2-btn">
+          <span>
+            <span class="accordion-icon" aria-hidden="true">🔢</span>
+            Activity 10: Singular/Plural &amp; Count/Non-Count Nouns
+          </span>
+          <span class="accordion-chevron" aria-hidden="true">▼</span>
+        </button>
+        <div class="accordion-panel" id="per2-panel" role="region" aria-labelledby="per2-btn">
+          <ol class="steps">
+            <li><p><strong>Learn the rules</strong> Singular vs. plural, regular (-s/-es) vs. irregular (child/children), count (apple/apples) vs. non-count (water, information).</p></li>
+            <li><p><strong>Practice categorizing</strong> Ask for a list of 20 nouns and categorize them as count or non-count.</p></li>
+            <li><p><strong>Error correction</strong> Ask Perplexity to give you sentences with noun errors to fix.</p></li>
+          </ol>
+          <div class="prompt-box">
+            <strong>📋 Perplexity Prompt</strong>
+            <p>"Teach me about count and non-count nouns in English with examples related to daily life. Then give me 10 sentences with errors in noun use (wrong plural form, using a number with a non-count noun). I will correct them, then you check my answers."</p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" aria-hidden="true" />
+
+      <!-- COPILOT ACTIVITIES -->
+      <h3 style="font-family:'Fraunces',serif;font-size:1.4rem;color:var(--teal);margin-bottom:16px">
+        <span aria-hidden="true">💡</span> Microsoft Copilot Activities
+      </h3>
+      <div class="tool-badges" aria-label="Tool used: Microsoft Copilot">
+        <span class="badge badge-copilot">🔵 Copilot — copilot.microsoft.com</span>
+      </div>
+
+      <!-- Copilot 1 -->
+      <div class="accordion">
+        <button class="accordion-btn" aria-expanded="false" aria-controls="cop1-panel" id="cop1-btn">
+          <span>
+            <span class="accordion-icon" aria-hidden="true">🔗</span>
+            Activity 11: Prepositions, Transitions &amp; Sentence Types
+          </span>
+          <span class="accordion-chevron" aria-hidden="true">▼</span>
+        </button>
+        <div class="accordion-panel" id="cop1-panel" role="region" aria-labelledby="cop1-btn">
+          <p style="margin-bottom:14px;color:var(--ink-soft)">These three topics are often skipped but they make a HUGE difference in how natural your English sounds. Transitions especially will improve your writing immediately!</p>
+          <ol class="steps">
+            <li><p><strong>Prepositions of time, place, direction</strong> Ask Copilot to explain in/on/at for time, and location prepositions with a chart.</p></li>
+            <li><p><strong>Transitions</strong> Ask for a list of transition words grouped by function (adding, contrasting, sequencing, concluding).</p></li>
+            <li><p><strong>Sentence types</strong> Learn declarative, interrogative, imperative, and exclamatory sentences. Write one of each.</p></li>
+            <li><p><strong>Build a paragraph</strong> Write a short paragraph using at least 3 prepositions and 3 transition words. Ask for feedback.</p></li>
+          </ol>
+          <div class="prompt-box">
+            <strong>📋 Copilot Prompt</strong>
+            <p>"I am learning English. Please teach me: (1) prepositions of time (in/on/at) with examples, (2) a list of transition words grouped by type (adding, contrasting, sequencing, concluding), (3) the 4 types of sentences with examples. Then give me a short paragraph topic so I can practice using all three!"</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copilot 2 -->
+      <div class="accordion">
+        <button class="accordion-btn" aria-expanded="false" aria-controls="cop2-panel" id="cop2-btn">
+          <span>
+            <span class="accordion-icon" aria-hidden="true">🔧</span>
+            Activity 12: Fixing Fragments &amp; Run-On Sentences
+          </span>
+          <span class="accordion-chevron" aria-hidden="true">▼</span>
+        </button>
+        <div class="accordion-panel" id="cop2-panel" role="region" aria-labelledby="cop2-btn">
+          <ol class="steps">
+            <li><p><strong>Understand the errors</strong> A fragment is an incomplete sentence. A run-on joins two sentences incorrectly.</p></li>
+            <li><p><strong>Ask for examples</strong> See clear examples of each error and the corrected version.</p></li>
+            <li><p><strong>Fix practice sentences</strong> Ask Copilot for 5 fragments and 5 run-ons to fix.</p></li>
+            <li><p><strong>Check your own writing</strong> Paste a paragraph you wrote and ask specifically: "Are there any fragments or run-on sentences? If so, where?"</p></li>
+          </ol>
+          <div class="prompt-box">
+            <strong>📋 Copilot Prompt</strong>
+            <p>"Explain sentence fragments and run-on sentences to me with 3 examples of each and the corrected version. Then give me 10 sentences — a mix of fragments, run-ons, and correct sentences — for me to identify and fix."</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <hr class="divider" aria-hidden="true" />
+
+    <!-- ===== PROMPT BUILDER ===== -->
+    <section id="prompt-builder" aria-labelledby="builder-heading">
+      <div class="section-header">
+        <h2 id="builder-heading">🛠️ Build Your Own AI Prompt</h2>
+        <p>Not sure how to ask AI for help? Use this tool to create a great starting prompt for any English topic!</p>
+      </div>
+      <div class="prompt-builder">
+        <h3>Prompt Builder</h3>
+        <p style="font-size:0.92rem;color:var(--ink-soft);margin-bottom:4px">Fill in your information and click the button to generate a personalized learning prompt.</p>
+        <div class="form-row">
+          <div>
+            <label for="pb-tool">Which AI tool?</label>
+            <select id="pb-tool" name="tool">
+              <option value="ChatGPT">ChatGPT (chat.openai.com)</option>
+              <option value="Claude">Claude (claude.ai)</option>
+              <option value="Perplexity">Perplexity (perplexity.ai)</option>
+              <option value="Copilot">Microsoft Copilot</option>
+            </select>
+          </div>
+          <div>
+            <label for="pb-topic">What do you want to practice?</label>
+            <select id="pb-topic" name="topic">
+              <option value="grammar (verb tenses)">Grammar — Verb Tenses</option>
+              <option value="grammar (punctuation and capitalization)">Grammar — Punctuation &amp; Capitalization</option>
+              <option value="vocabulary for my job or field of study">Vocabulary for My Job/Field</option>
+              <option value="writing a paragraph">Writing a Paragraph</option>
+              <option value="speaking and conversation">Speaking &amp; Conversation</option>
+              <option value="reading comprehension">Reading Comprehension</option>
+              <option value="pronunciation">Pronunciation</option>
+              <option value="prepositions and transitions">Prepositions &amp; Transitions</option>
+            </select>
+          </div>
+          <div>
+            <label for="pb-level">Your English level</label>
+            <select id="pb-level" name="level">
+              <option value="beginner">Beginner</option>
+              <option value="intermediate">Intermediate</option>
+              <option value="advanced">Advanced</option>
+            </select>
+          </div>
+          <div>
+            <label for="pb-goal">Your goal (optional)</label>
+            <input type="text" id="pb-goal" name="goal" placeholder="e.g., pass my English class, get a job interview" />
+          </div>
+        </div>
+        <button class="build-btn" onclick="buildPrompt()" aria-describedby="builder-output">✨ Generate My Prompt</button>
+        <div class="generated-prompt" id="builder-output" role="region" aria-live="polite" aria-label="Generated prompt">
+          <strong>📋 Your Personalized Prompt — Copy and paste this into your AI tool!</strong>
+          <p id="prompt-text"></p>
+          <button class="copy-btn" onclick="copyPrompt()" aria-label="Copy prompt to clipboard">📋 Copy to Clipboard</button>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" aria-hidden="true" />
+
+    <!-- ===== CAREER ===== -->
+    <section id="career" aria-labelledby="career-heading">
+      <div class="section-header">
+        <h2 id="career-heading">💼 English + AI Skills = Career Power</h2>
+        <p>The skills you are building right now — English proficiency AND AI fluency — are among the most valued in today's workplace. Here is how they connect to real careers.</p>
+      </div>
+
+      <div class="career-grid" role="list">
+        <div class="career-card" role="listitem">
+          <span style="font-size:2rem" aria-hidden="true">🏥</span>
+          <h3>Healthcare &amp; Human Services</h3>
+          <p>Use your English skills to communicate clearly with patients and colleagues.</p>
+          <ul aria-label="Career applications for healthcare">
+            <li>Write patient notes and reports</li>
+            <li>Use AI to draft professional emails</li>
+            <li>Practice medical vocabulary</li>
+            <li>Role-play patient conversations</li>
+          </ul>
+        </div>
+        <div class="career-card" role="listitem">
+          <span style="font-size:2rem" aria-hidden="true">💻</span>
+          <h3>Business &amp; Technology</h3>
+          <p>Professional writing and AI skills open doors in every business field.</p>
+          <ul aria-label="Career applications for business">
+            <li>Write professional emails and memos</li>
+            <li>Use AI tools for research and analysis</li>
+            <li>Present ideas clearly in meetings</li>
+            <li>Create documents and reports</li>
+          </ul>
+        </div>
+        <div class="career-card" role="listitem">
+          <span style="font-size:2rem" aria-hidden="true">📚</span>
+          <h3>Education &amp; Social Work</h3>
+          <p>Strong communication skills are the foundation of every helping profession.</p>
+          <ul aria-label="Career applications for education">
+            <li>Write lesson plans and reports</li>
+            <li>Communicate with families in English</li>
+            <li>Use AI for lesson research and prep</li>
+            <li>Document case notes professionally</li>
+          </ul>
+        </div>
+        <div class="career-card" role="listitem">
+          <span style="font-size:2rem" aria-hidden="true">🔨</span>
+          <h3>Trades &amp; Construction</h3>
+          <p>English skills help you advance from worker to supervisor to owner.</p>
+          <ul aria-label="Career applications for trades">
+            <li>Read contracts and safety documents</li>
+            <li>Write professional estimates</li>
+            <li>Communicate with clients and managers</li>
+            <li>Use AI to draft bids and proposals</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="prompt-box" style="margin-top:28px">
+        <strong>💼 Career Prompt: Practice a Job Interview</strong>
+        <p>"I am applying for a job as a [job title] in [industry]. Please act as the interviewer and ask me 5 common interview questions one at a time. After each answer, give me feedback on my grammar, vocabulary, and communication clarity. Help me sound professional and confident."</p>
+      </div>
+      <div class="prompt-box">
+        <strong>📧 Career Prompt: Write a Professional Email</strong>
+        <p>"I need to write a professional email to my supervisor to request time off. I am not confident in my English writing. Please teach me the format of a professional email (greeting, body, closing), then I will write a draft and you give me feedback."</p>
+      </div>
+    </section>
+
+    <hr class="divider" aria-hidden="true" />
+
+    <!-- ===== WEBSITES ===== -->
+    <section id="websites" aria-labelledby="websites-heading">
+      <div class="section-header">
+        <h2 id="websites-heading">🌐 Free Websites to Practice English</h2>
+        <p>These websites are available 24/7, completely free, and wonderful supplements to your AI practice. Many support Spanish and Mandarin.</p>
+      </div>
+      <div class="web-table-wrap" role="region" aria-label="Free English practice websites">
+        <table>
+          <caption class="sr-only">Free websites for English language practice, with descriptions in English, Spanish, and Mandarin Chinese</caption>
+          <thead>
+            <tr>
+              <th scope="col">Website</th>
+              <th scope="col">Best For</th>
+              <th scope="col">Skills</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><a href="https://www.duolingo.com" target="_blank" rel="noopener noreferrer">Duolingo</a></td><td>All levels, gamified daily practice</td><td>Vocabulary, Grammar, Pronunciation</td></tr>
+            <tr><td><a href="https://www.bbc.co.uk/learningenglish" target="_blank" rel="noopener noreferrer">BBC Learning English</a></td><td>Real-world English with news and video</td><td>Listening, Speaking, Vocabulary</td></tr>
+            <tr><td><a href="https://learningenglish.voanews.com" target="_blank" rel="noopener noreferrer">VOA Learning English</a></td><td>American English, current events</td><td>Listening, Reading, News English</td></tr>
+            <tr><td><a href="https://learnenglish.britishcouncil.org" target="_blank" rel="noopener noreferrer">British Council Learn English</a></td><td>All skills, structured lessons</td><td>Grammar, Writing, Speaking</td></tr>
+            <tr><td><a href="https://www.usalearns.org" target="_blank" rel="noopener noreferrer">USA Learns</a></td><td>Beginners &amp; immigrants, American life</td><td>All skills, Life situations</td></tr>
+            <tr><td><a href="https://quizlet.com" target="_blank" rel="noopener noreferrer">Quizlet</a></td><td>Vocabulary memorization with flashcards</td><td>Vocabulary, Study Skills</td></tr>
+            <tr><td><a href="https://www.englishclub.com" target="_blank" rel="noopener noreferrer">English Club</a></td><td>Wide range of grammar and vocabulary</td><td>Grammar, Listening, Reading</td></tr>
+            <tr><td><a href="https://www.newsinlevels.com" target="_blank" rel="noopener noreferrer">News in Levels</a></td><td>Real news at 3 difficulty levels</td><td>Reading, Vocabulary, Current Events</td></tr>
+            <tr><td><a href="https://www.lyricstraining.com" target="_blank" rel="noopener noreferrer">LyricsTraining</a></td><td>Learning through music you love</td><td>Listening, Vocabulary</td></tr>
+            <tr><td><a href="https://www.cambridgeenglish.org/learning-english/" target="_blank" rel="noopener noreferrer">Cambridge English</a></td><td>Test prep, all levels</td><td>All Skills, Grammar</td></tr>
+            <tr><td><a href="https://www.memrise.com" target="_blank" rel="noopener noreferrer">Memrise</a></td><td>Spaced repetition for long-term memory</td><td>Vocabulary</td></tr>
+            <tr><td><a href="https://www.breakingnewsenglish.com" target="_blank" rel="noopener noreferrer">Breaking News English</a></td><td>Current events with exercises</td><td>Reading, Listening, Writing</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip-box" style="margin-top:20px">
+        <strong>🌎 For Spanish &amp; Mandarin Speakers</strong>
+        <p>Duolingo, USA Learns, BBC Learning English, and Open English (openenglish.com) offer support in Spanish. Many sites offer subtitles or translations in Mandarin. You can also ask any AI: "Explain this in Spanish / Chinese first, then in English."</p>
+      </div>
+    </section>
+
+    <hr class="divider" aria-hidden="true" />
+
+    <!-- ===== PROGRESS TRACKER ===== -->
+    <section id="tracker" aria-labelledby="tracker-heading">
+      <div class="section-header">
+        <h2 id="tracker-heading">✅ My Progress Tracker</h2>
+        <p>Check off activities as you complete them! Celebrate every step — every activity you finish is real growth.</p>
+      </div>
+      <div class="tracker">
+        <h3>Activities Completed</h3>
+        <div class="check-grid" role="group" aria-label="Activity completion checklist">
+          <div class="check-item"><input type="checkbox" id="chk1" onchange="updateProgress()" /><label for="chk1">Conversation Practice</label></div>
+          <div class="check-item"><input type="checkbox" id="chk2" onchange="updateProgress()" /><label for="chk2">Vocabulary Building</label></div>
+          <div class="check-item"><input type="checkbox" id="chk3" onchange="updateProgress()" /><label for="chk3">Grammar &amp; Sentences</label></div>
+          <div class="check-item"><input type="checkbox" id="chk4" onchange="updateProgress()" /><label for="chk4">Paragraph Writing</label></div>
+          <div class="check-item"><input type="checkbox" id="chk5" onchange="updateProgress()" /><label for="chk5">Goal Setting &amp; Study Plan</label></div>
+          <div class="check-item"><input type="checkbox" id="chk6" onchange="updateProgress()" /><label for="chk6">Parts of a Sentence</label></div>
+          <div class="check-item"><input type="checkbox" id="chk7" onchange="updateProgress()" /><label for="chk7">Capitalization &amp; Punctuation</label></div>
+          <div class="check-item"><input type="checkbox" id="chk8" onchange="updateProgress()" /><label for="chk8">Writing Questions</label></div>
+          <div class="check-item"><input type="checkbox" id="chk9" onchange="updateProgress()" /><label for="chk9">Verb Tenses</label></div>
+          <div class="check-item"><input type="checkbox" id="chk10" onchange="updateProgress()" /><label for="chk10">Count/Non-Count Nouns</label></div>
+          <div class="check-item"><input type="checkbox" id="chk11" onchange="updateProgress()" /><label for="chk11">Prepositions &amp; Transitions</label></div>
+          <div class="check-item"><input type="checkbox" id="chk12" onchange="updateProgress()" /><label for="chk12">Fragments &amp; Run-Ons</label></div>
+        </div>
+        <div class="progress-bar-wrap">
+          <div class="progress-label">Your Progress</div>
+          <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="12" aria-valuenow="0" id="progress-bar-el">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+          <div class="progress-count" id="progress-count" aria-live="polite">0 of 12 activities completed</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="affirmation" role="note" aria-label="Final encouragement">
+      <p>"You are not just learning English. You are building the future you deserve — one sentence, one word, one conversation at a time. Keep going. The LRC is proud of you." 🌟</p>
+    </div>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer role="contentinfo">
+    <p><strong>Self-Led English Practice Place</strong></p>
+    <p>Urban College of Boston · Learning Resource Center</p>
+    <p style="margin-top:8px">
+      &copy; 2025 <strong>Jennifer Burke Grehan</strong>, M.Ed. · Learning Resource Center Manager &amp; General Studies Chair · Urban College of Boston<br />
+      All lesson plans, activity designs, and instructional frameworks are original works and may not be reproduced without written permission.
+    </p>
+    <p style="margin-top:12px;font-size:0.8rem;opacity:0.7">
+      AI tools referenced: ChatGPT (OpenAI), Claude (Anthropic), Perplexity AI, Microsoft Copilot ·
+      This resource is for educational use at Urban College of Boston LRC.
+    </p>
+    <p style="margin-top:8px">
+      <a href="mailto:jgrehan@urbancollege.edu">Contact the LRC</a>
+    </p>
+  </footer>
+
+  <!-- Screen-reader only utility class -->
+  <style>
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+
+  <script>
+    // ===== ACCORDION =====
+    document.querySelectorAll('.accordion-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        const panelId = btn.getAttribute('aria-controls');
+        const panel = document.getElementById(panelId);
+
+        // Close all
+        document.querySelectorAll('.accordion-btn').forEach(b => {
+          b.setAttribute('aria-expanded', 'false');
+        });
+        document.querySelectorAll('.accordion-panel').forEach(p => {
+          p.classList.remove('open');
+        });
+
+        // Open clicked if was closed
+        if (!expanded) {
+          btn.setAttribute('aria-expanded', 'true');
+          panel.classList.add('open');
+          // Smooth scroll into view
+          setTimeout(() => {
+            panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }, 50);
+        }
+      });
+
+      // Keyboard: Enter/Space
+      btn.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          btn.click();
+        }
+      });
+    });
+
+    // ===== PROMPT BUILDER =====
+    function buildPrompt() {
+      const tool   = document.getElementById('pb-tool').value;
+      const topic  = document.getElementById('pb-topic').value;
+      const level  = document.getElementById('pb-level').value;
+      const goal   = document.getElementById('pb-goal').value.trim();
+
+      const goalPart = goal ? ` My goal is to ${goal}.` : '';
+      const prompt = `Hi! I am a ${level} English language learner at Urban College of Boston.${goalPart} I want to practice ${topic}. Please act as a friendly, encouraging tutor. Explain the topic simply using clear examples, then give me practice activities. After I complete each activity, give me kind and specific feedback — correct my mistakes and explain WHY so I can learn from them.`;
+
+      const output = document.getElementById('builder-output');
+      const text = document.getElementById('prompt-text');
+      text.textContent = prompt;
+      output.style.display = 'block';
+      output.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function copyPrompt() {
+      const text = document.getElementById('prompt-text').textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.querySelector('.copy-btn');
+        const orig = btn.textContent;
+        btn.textContent = '✓ Copied!';
+        setTimeout(() => { btn.textContent = orig; }, 2000);
+      }).catch(() => {
+        // Fallback
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      });
+    }
+
+    // ===== PROGRESS TRACKER =====
+    function updateProgress() {
+      const checkboxes = document.querySelectorAll('.check-grid input[type="checkbox"]');
+      const total = checkboxes.length;
+      let checked = 0;
+      checkboxes.forEach(cb => { if (cb.checked) checked++; });
+      const pct = Math.round((checked / total) * 100);
+      document.getElementById('progress-fill').style.width = pct + '%';
+      document.getElementById('progress-count').textContent = `${checked} of ${total} activities completed${checked === total ? ' — Amazing work! 🎉' : checked >= 6 ? ' — Fantastic progress! 🌟' : ''}`;
+      document.getElementById('progress-bar-el').setAttribute('aria-valuenow', checked);
+    }
+  </script>
+
+</body>
+</html>
