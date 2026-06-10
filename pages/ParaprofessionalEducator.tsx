@@ -40,7 +40,7 @@ const benefits: ProgramBenefit[] = [
     { title: "Bilingual Options", desc: "Learn in English and/or Spanish", icon: MessageCircleIcon },
     { title: "No Textbooks", desc: "No textbooks or hidden fees: Everything you need is included", icon: BookOpen },
     { title: "ESL Support", desc: "ESL support available: Tailored to each student's needs", icon: Users },
-    { title: "Special Education", desc: "Special education expertise: Master one of the most in-demand skills in education today", icon: Award }
+    { title: "Special Education", desc: "Master one of the most in-demand skills in education today", icon: Award }
 ];
 
 const stats: ProgramStat[] = [
