@@ -7,7 +7,7 @@ import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 import { 
     Coins, GraduationCap, Briefcase, Award, CheckCircle, 
     ArrowRight, Globe, Info, HelpCircle, ChevronRight, 
-    Calendar, Calculator, Sparkles, BookOpen, ShieldCheck
+    Calendar, Calculator, Sparkles, BookOpen, ShieldCheck, ExternalLink
 } from 'lucide-react';
 
 interface MythCard {
@@ -50,6 +50,16 @@ const FinancialServices: React.FC = () => {
             icon: Briefcase,
             color: "text-ucb-teal bg-teal-50 border-teal-100"
         }
+    ];
+
+    // Free, trusted external scholarship search tools (mirrors the live
+    // "Other Scholarship Opportunities" section).
+    const externalScholarships = [
+        { name: "Fastweb", desc: "One of the largest free scholarship search databases.", url: "https://www.fastweb.com/" },
+        { name: "Scholarships.com", desc: "Search thousands of scholarships by category and profile.", url: "https://www.scholarships.com/" },
+        { name: "Scholarships by State", desc: "Find scholarships available to students in your state.", url: "https://www.scholarships.com/financial-aid/college-scholarships/scholarships-by-state/" },
+        { name: "Federal Student Aid: Finding Scholarships", desc: "The U.S. Department of Education's guide to finding scholarships.", url: "https://studentaid.gov/understand-aid/types/scholarships" },
+        { name: "Unigo", desc: "Scholarship search and reviews for college students.", url: "https://www.unigo.com/" }
     ];
 
     const myths: MythCard[] = [
@@ -283,6 +293,13 @@ const FinancialServices: React.FC = () => {
                                 <li className="flex items-start gap-3 text-xs text-gray-600 font-light">
                                     <CheckCircle className="w-4 h-4 text-ucb-emerald mt-0.5 shrink-0" />
                                     <div>
+                                        <strong className="block text-gray-800 font-semibold text-sm">Federal Supplemental Educational Opportunity Grant (FSEOG)</strong>
+                                        A grant of <strong>$100–$300 per semester</strong> for undergraduates with exceptional financial need. Funds are limited, so apply early. No repayment required.
+                                    </div>
+                                </li>
+                                <li className="flex items-start gap-3 text-xs text-gray-600 font-light">
+                                    <CheckCircle className="w-4 h-4 text-ucb-emerald mt-0.5 shrink-0" />
+                                    <div>
                                         <strong className="block text-gray-800 font-semibold text-sm">Federal Student Loans</strong>
                                         Low-interest educational loans (direct subsidized/unsubsidized) if you choose to borrow. Repayment begins after graduation.
                                     </div>
@@ -319,6 +336,20 @@ const FinancialServices: React.FC = () => {
                                         <div>
                                             <strong className="block text-gray-800 font-semibold text-sm">ECE Scholarship</strong>
                                             Specialized state scholarship for currently employed Early Childhood Educators taking eligible courses.
+                                        </div>
+                                    </li>
+                                    <li className="flex items-start gap-3 text-xs text-gray-600 font-light">
+                                        <CheckCircle className="w-4 h-4 text-ucb-emerald mt-0.5 shrink-0" />
+                                        <div>
+                                            <strong className="block text-gray-800 font-semibold text-sm">MA High Demand Scholarship</strong>
+                                            State scholarship for residents pursuing degrees in designated high-demand fields such as education, health, social work, and business.
+                                        </div>
+                                    </li>
+                                    <li className="flex items-start gap-3 text-xs text-gray-600 font-light">
+                                        <CheckCircle className="w-4 h-4 text-ucb-emerald mt-0.5 shrink-0" />
+                                        <div>
+                                            <strong className="block text-gray-800 font-semibold text-sm">Tuition Free Community College (TFCC)</strong>
+                                            The City of Boston covers up to three years of tuition and fees for eligible Boston residents in approved programs.
                                         </div>
                                     </li>
                                 </ul>
@@ -358,6 +389,9 @@ const FinancialServices: React.FC = () => {
                             <ScrollAnimation variant="slide-right" className="text-gray-600 text-sm leading-relaxed font-light space-y-4">
                                 <p>
                                     Beyond government programs, Urban College of Boston offers institutional scholarship funds to close funding gaps for our students.
+                                </p>
+                                <p>
+                                    Eligible students may receive up to <strong className="text-ucb-blue">$200 per course</strong> through the Institutional Grant — <a href="https://forms.office.com/pages/responsepage.aspx?id=HnCdJ2cNiUupTrgmGCPjKyySsSnWljpEnQadnkdsUOVUMjBRUVdPVDhTN0daWDFJOElLWlRNQUpYVC4u&route=shorturl" target="_blank" rel="noreferrer" className="text-ucb-orange hover:underline font-semibold">apply with the Institutional Aid form</a>.
                                 </p>
                                 <p>
                                     These awards are designed to support students who qualify and demonstrate:
@@ -402,6 +436,38 @@ const FinancialServices: React.FC = () => {
                                 </div>
                             </ScrollAnimation>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Other Scholarship Opportunities */}
+            <section className="py-16 bg-gray-50 border-t border-gray-100">
+                <div className="container mx-auto px-6 max-w-5xl">
+                    <ScrollAnimation variant="fade-up" className="text-center mb-12">
+                        <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs mb-2 block">Keep Searching</span>
+                        <h2 className="text-3xl font-display font-bold text-ucb-blue">Other Scholarship Opportunities</h2>
+                        <p className="text-gray-500 max-w-xl mx-auto text-sm font-light mt-1">
+                            Beyond Urban College, state, and federal aid, these free and trusted scholarship search tools can help you find additional funding:
+                        </p>
+                    </ScrollAnimation>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {externalScholarships.map((s, idx) => (
+                            <ScrollAnimation key={s.name} variant="fade-up" delay={`${(idx % 3) * 0.08}s`} className="h-full">
+                                <a
+                                    href={s.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group bg-white rounded-2xl p-5 border border-gray-100 hover:border-ucb-orange/40 hover:shadow-md transition-all flex items-start justify-between gap-3 h-full"
+                                >
+                                    <div>
+                                        <h3 className="font-display font-bold text-sm text-ucb-blue">{s.name}</h3>
+                                        <p className="text-xs text-gray-500 font-light leading-relaxed mt-1">{s.desc}</p>
+                                    </div>
+                                    <ExternalLink className="w-4 h-4 text-ucb-orange shrink-0 mt-0.5 group-hover:translate-x-0.5 transition-transform" />
+                                </a>
+                            </ScrollAnimation>
+                        ))}
                     </div>
                 </div>
             </section>
