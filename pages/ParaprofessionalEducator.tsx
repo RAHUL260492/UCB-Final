@@ -108,8 +108,6 @@ const ParaprofessionalEducator: React.FC = () => {
                     With a growing teacher shortage and increasing demand for special education support, there's never been a better time to launch your career in education.
                     <br className="hidden md:block" />
                     <span className="text-ucb-blue font-semibold">Urban College of Boston's Paraprofessional Educator Certificate empowers you to master the classroom skills</span> that help K-12 students succeed—all without interrupting your busy life.
-                    <br className="hidden md:block" />
-                    This fully online, career-building program fits into your busy life. You'll graduate ready to step into classrooms across Massachusetts and make a real difference in children's lives every single day.
                 </p>
             }
 
@@ -135,6 +133,7 @@ const ParaprofessionalEducator: React.FC = () => {
                     ]
                 }
             ]}
+            achievementsIntro="This fully online, career-building program fits into your busy life. You'll graduate ready to step into classrooms across Massachusetts and make a real difference in children's lives every single day."
             achievementNote="This isn't just theory—you'll learn practical skills you can use immediately in real classrooms."
 
             courses={courses}

@@ -69,6 +69,7 @@ export interface ProgramLayoutProps {
 
     // What You'll Achieve
     achievements: ProgramAchievement[];
+    achievementsIntro?: string;
     achievementNote?: string;
 
     // Courses
@@ -265,7 +266,7 @@ const ProgramPageLayout: React.FC<ProgramLayoutProps> = ({
     badge, title, subtitle, headerImageSrc, headerImagePosition, secondaryImageSrc, breadcrumbs,
     tagline, taglineBody,
     benefits,
-    achievements = [], achievementNote,
+    achievements = [], achievementsIntro, achievementNote,
     courses, outcomes, outcomesIntro, outcomeTags = [], outcomeSources = [],
     stats,
     forWhom = [],
@@ -340,6 +341,9 @@ const ProgramPageLayout: React.FC<ProgramLayoutProps> = ({
                         <FadeInSection className="text-center mb-8 md:mb-10">
                             <span className="inline-block px-4 py-1.5 bg-ucb-orange/10 text-ucb-orange text-xs font-bold uppercase tracking-widest rounded-full mb-4 border border-ucb-orange/20">Learning Outcomes</span>
                             <h2 className="text-3xl md:text-4xl font-display font-bold text-ucb-blue">What You'll Achieve</h2>
+                            {achievementsIntro && (
+                                <p className="text-gray-600 text-base md:text-lg max-w-3xl mx-auto mt-4 leading-relaxed">{achievementsIntro}</p>
+                            )}
                         </FadeInSection>
 
                         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
