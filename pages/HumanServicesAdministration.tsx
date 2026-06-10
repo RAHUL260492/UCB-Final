@@ -161,9 +161,9 @@ const HumanServicesAdministration: React.FC = () => {
             pathwayTitle="Build Toward Your Future"
             pathwayDescription="Our transfer agreements with partner colleges make it easy to continue your education toward a Bachelor's Degree—the gold standard credential for the field."
             pathwaySteps={[
+                { label: 'Certificate', credits: '21 Credits', active: false },
                 { label: 'Associate Degree', credits: '60 Credits', active: true },
-                { label: "Bachelor's Degree", credits: 'Transfer Ready', active: false },
-                { label: 'Licensed Social Worker', credits: 'LCSW Path', active: false }
+                { label: "Bachelor's Degree", credits: 'Transfer Ready', active: false }
             ]}
 
             testimonial={{
