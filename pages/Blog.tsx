@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Search, Calendar, ChevronRight, Facebook, Instagram, Youtube } from 'lucide-react';
+import { Search, Calendar, ChevronRight, Facebook, Instagram, Youtube, Linkedin } from 'lucide-react';
 // Sanity CMS fetching removed for static site setup
 import PageHeader from '../components/PageHeader';
 import localBlogsData from '../src/data/blogs.json';
@@ -166,6 +166,7 @@ const Blog: React.FC = () => {
                             { label: 'Facebook', href: 'https://www.facebook.com/UrbanCollegeBoston', Icon: Facebook },
                             { label: 'Instagram', href: 'https://www.instagram.com/urbancollegeofboston/', Icon: Instagram },
                             { label: 'YouTube', href: 'https://www.youtube.com/@Urban_College', Icon: Youtube },
+                            { label: 'LinkedIn', href: 'https://www.linkedin.com/company/urban-college-of-boston-a-two-year-college-inc', Icon: Linkedin },
                         ].map(({ label, href, Icon }) => (
                             <a
                                 key={label}

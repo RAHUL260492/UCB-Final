@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, useLocation } from 'react-router-dom';
-import { ChevronLeft, Calendar, Facebook, Instagram, Youtube, Copy } from 'lucide-react';
+import { ChevronLeft, Calendar, Facebook, Instagram, Youtube, Linkedin, Copy } from 'lucide-react';
 import blogsData from '../src/data/blogs.json';
 import PageHeader from '../components/PageHeader';
 import SEO from '../components/SEO';
@@ -11,6 +11,7 @@ const SOCIALS = [
     { label: 'Facebook', href: 'https://www.facebook.com/UrbanCollegeBoston', Icon: Facebook },
     { label: 'Instagram', href: 'https://www.instagram.com/urbancollegeofboston/', Icon: Instagram },
     { label: 'YouTube', href: 'https://www.youtube.com/@Urban_College', Icon: Youtube },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/company/urban-college-of-boston-a-two-year-college-inc', Icon: Linkedin },
 ];
 
 const formatTitle = (title: string, slug: string) => {
