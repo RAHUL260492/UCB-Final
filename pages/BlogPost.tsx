@@ -91,7 +91,7 @@ const BlogPost: React.FC = () => {
                     <img 
                         src={blog.image} 
                         alt={displayTitle} 
-                        className="w-full h-full object-cover opacity-20 transform scale-105"
+                        className="w-full h-full object-cover transform scale-105"
                         onError={(e) => {
                             const fallbacks = [
                                 "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop",
@@ -107,7 +107,7 @@ const BlogPost: React.FC = () => {
                             (e.target as HTMLImageElement).src = fallbacks[hash % fallbacks.length];
                         }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-ucb-blue/80 via-ucb-blue/55 to-ucb-blue/40" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-ucb-blue/85 via-ucb-blue/45 to-ucb-blue/30" />
                 </div>
 
                 <div className="container mx-auto px-6 relative z-10 max-w-4xl">
