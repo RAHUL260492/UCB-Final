@@ -151,7 +151,7 @@ const GeneralStudiesAssociate: React.FC = () => {
             ]}
 
             pathwayTitle="Build Toward Your Future"
-            pathwayDescription="The General Studies Associate Degree is a stackable, for-credit program. Credits may transfer toward an associate or bachelor's degree."
+            pathwayDescription="The General Studies Associate Degree is a stackable, for-credit program. Credits may transfer toward an associate degree or bachelor's degree."
             pathwaySteps={[
                 { label: 'Certificate', credits: '21 Credits', active: false },
                 { label: 'AA in General Studies', credits: '60 Credits', active: true },
