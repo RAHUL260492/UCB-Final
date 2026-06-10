@@ -7,7 +7,7 @@ import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 import { 
     CreditCard, Calendar, Briefcase, FileText, CheckCircle, 
     ArrowRight, MapPin, Phone, Mail, Clock, HelpCircle, 
-    DollarSign, Percent, ShieldCheck, ChevronRight, Calculator
+    DollarSign, Percent, ShieldCheck, ChevronRight, Calculator, ExternalLink
 } from 'lucide-react';
 
 const TuitionPaymentOptions: React.FC = () => {
@@ -28,6 +28,7 @@ const TuitionPaymentOptions: React.FC = () => {
             desc: "Submit a FAFSA to determine federal Pell grants, loans, and work-study eligibility.",
             details: [
                 "Urban College FAFSA School Code: 031305",
+                "Determines eligibility for the Federal Pell Grant, FSEOG, subsidized & unsubsidized loans, and Federal Work-Study.",
                 "Begin the process at StudentAid.gov",
                 "Complete the Online Financial Aid Process in the Student Portal."
             ],
@@ -115,6 +116,16 @@ const TuitionPaymentOptions: React.FC = () => {
             link: "https://www.boston.gov/departments/workforce-development/tuition-free-community-college-plan",
             linkLabel: "City of Boston TFCC website"
         }
+    ];
+
+    // Free, trusted external scholarship search tools (mirrors the live
+    // "Other Scholarship Opportunities" section on Financial Services).
+    const externalScholarships = [
+        { name: "Fastweb", desc: "One of the largest free scholarship search databases.", url: "https://www.fastweb.com/" },
+        { name: "Scholarships.com", desc: "Search thousands of scholarships by category and profile.", url: "https://www.scholarships.com/" },
+        { name: "Scholarships by State", desc: "Find scholarships available to students in your state.", url: "https://www.scholarships.com/financial-aid/college-scholarships/scholarships-by-state/" },
+        { name: "Federal Student Aid: Finding Scholarships", desc: "The U.S. Department of Education's guide to finding scholarships.", url: "https://studentaid.gov/understand-aid/types/scholarships" },
+        { name: "Unigo", desc: "Scholarship search and reviews for college students.", url: "https://www.unigo.com/" }
     ];
 
     return (
@@ -360,6 +371,38 @@ const TuitionPaymentOptions: React.FC = () => {
                                         Visit {grant.linkLabel} <ChevronRight className="w-3.5 h-3.5" />
                                     </a>
                                 </div>
+                            </ScrollAnimation>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Other Scholarship Opportunities */}
+            <section className="py-16 bg-white border-t border-gray-100">
+                <div className="container mx-auto px-6 max-w-5xl">
+                    <ScrollAnimation variant="fade-up" className="text-center mb-12">
+                        <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs mb-2 block">Keep Searching</span>
+                        <h2 className="text-3xl font-display font-bold text-ucb-blue">Other Scholarship Opportunities</h2>
+                        <p className="text-gray-500 max-w-xl mx-auto text-sm font-light mt-1">
+                            Beyond Urban College, state, and federal aid, these free and trusted scholarship search tools can help you find additional funding:
+                        </p>
+                    </ScrollAnimation>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {externalScholarships.map((s, idx) => (
+                            <ScrollAnimation key={s.name} variant="fade-up" delay={`${(idx % 3) * 0.08}s`} className="h-full">
+                                <a
+                                    href={s.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group bg-gray-50 rounded-2xl p-5 border border-gray-100 hover:border-ucb-orange/40 hover:shadow-md transition-all flex items-start justify-between gap-3 h-full"
+                                >
+                                    <div>
+                                        <h3 className="font-display font-bold text-sm text-ucb-blue">{s.name}</h3>
+                                        <p className="text-xs text-gray-500 font-light leading-relaxed mt-1">{s.desc}</p>
+                                    </div>
+                                    <ExternalLink className="w-4 h-4 text-ucb-orange shrink-0 mt-0.5 group-hover:translate-x-0.5 transition-transform" />
+                                </a>
                             </ScrollAnimation>
                         ))}
                     </div>
