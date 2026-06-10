@@ -5,9 +5,9 @@ import ScrollAnimation from '../components/ScrollAnimation';
 import SEO from '../components/SEO';
 import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
 import { 
-    Mail, Globe, Award, BookOpen, Users, CheckCircle, Heart, 
-    Calendar, ChevronRight, GraduationCap, Building, Sparkles, 
-    MapPin, ExternalLink, Briefcase, Info, ArrowRight, Quote
+    Mail, Globe, Award, BookOpen, Users, CheckCircle, Heart,
+    Calendar, ChevronRight, GraduationCap, Building, Sparkles,
+    MapPin, ExternalLink, Briefcase, Info, ArrowRight, Quote, Instagram
 } from 'lucide-react';
 
 const President: React.FC = () => {
@@ -365,15 +365,13 @@ const President: React.FC = () => {
                                 <span className="text-xs font-bold text-ucb-blue mt-1 truncate max-w-full">prezyves.org</span>
                             </a>
                             
-                            <a 
-                                href="https://twitter.com/PrezYves" 
-                                target="_blank" 
-                                rel="noopener noreferrer" 
+                            <a
+                                href="https://www.instagram.com/prezyves/"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="flex flex-col items-center justify-center bg-white border border-gray-100 hover:border-ucb-blue/30 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all group min-h-[120px]"
                             >
-                                <svg className="w-6 h-6 text-gray-800 mb-2 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                                </svg>
+                                <Instagram className="w-6 h-6 text-gray-800 mb-2 group-hover:scale-110 transition-transform" />
                                 <span className="text-[10px] text-gray-400 font-bold uppercase tracking-wider">Social Media</span>
                                 <span className="text-xs font-bold text-ucb-blue mt-1">@PrezYves</span>
                             </a>
