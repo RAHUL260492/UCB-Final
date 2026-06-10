@@ -155,7 +155,7 @@ const CollegeTransferPathways: React.FC = () => {
         {
             partner: "Salem State University",
             pathways: [
-                "Human Services Administration A.A. transfers to Bachelor of Social Work (BSW) program."
+                "Human Services Administration A.A. transfers to a Bachelor's Degree program."
             ]
         },
         {

@@ -61,7 +61,7 @@ const faqs = [
     { q: "Will I get hands-on experience?", a: "Yes! The program includes internship placements through our network of human service agencies, childcare programs, mental health sites, and other organizations. You'll graduate with real experience." },
     { q: "What is the LSWA and can I apply for it?", a: "The Licensed Social Work Associate (LSWA) is a Massachusetts credential that demonstrates professional qualifications in social work. With your Human Services Associate Degree, you can apply for this credential and enhance your career opportunities." },
     { q: "Can I study in Spanish?", a: "Yes! We offer courses in both English and Spanish." },
-    { q: "Can I continue toward a bachelor's degree?", a: "Absolutely! Our transfer agreements with partner colleges make it easy to continue toward a Bachelor of Social Work (BSW)—the gold standard credential in the field." },
+    { q: "Can I continue toward a bachelor's degree?", a: "Absolutely! Our transfer agreements with partner colleges make it easy to continue toward a Bachelor's Degree—the gold standard credential in the field." },
     { q: "Am I eligible for financial aid?", a: "Most students are eligible for financial aid. Contact our financial aid office at (617) 449-7070-our team works with you one-on-one to identify grants, scholarships, and funding options that fit your situation and make your education as affordable as possible." }
 ];
 
@@ -152,7 +152,7 @@ const HumanServicesAdministration: React.FC = () => {
 
             forWhom={[
                 "Passionate about helping people and community advocacy",
-                "Want to earn an Associate degree and pursue a BSW",
+                "Want to earn an Associate degree and pursue a Bachelor's Degree",
                 "Looking for an online program with bilingual options",
                 "Seeking hands-on internships to build a resume",
                 "Want to build a career in social work with affordable tuition",
@@ -160,10 +160,10 @@ const HumanServicesAdministration: React.FC = () => {
             ]}
 
             pathwayTitle="Build Toward Your Future"
-            pathwayDescription="Our transfer agreements with partner colleges make it easy to continue your education toward a Bachelor's in Social Work (BSW)—the gold standard credential for the field."
+            pathwayDescription="Our transfer agreements with partner colleges make it easy to continue your education toward a Bachelor's Degree—the gold standard credential for the field."
             pathwaySteps={[
                 { label: 'Associate Degree', credits: '60 Credits', active: true },
-                { label: 'Bachelor of Social Work (BSW)', credits: 'Transfer Ready', active: false },
+                { label: "Bachelor's Degree", credits: 'Transfer Ready', active: false },
                 { label: 'Licensed Social Worker', credits: 'LCSW Path', active: false }
             ]}
 

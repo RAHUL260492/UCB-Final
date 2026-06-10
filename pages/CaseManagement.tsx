@@ -151,7 +151,7 @@ const CaseManagement: React.FC = () => {
 
             // Pathway
             pathwayTitle="Build Toward Your Future"
-            pathwayDescription="This certificate is your first step. Apply your credits to our Associate of Arts in Human Services Administration, then transfer to complete a Bachelor of Social Work (BSW)—the gold standard for case managers."
+            pathwayDescription="This certificate is your first step. Apply your credits to our Associate of Arts in Human Services Administration, then transfer to complete a Bachelor's Degree—the gold standard for case managers."
             pathwaySteps={[
                 { label: 'Certificate', credits: '21 Credits', active: false },
                 { label: 'AA in Human Services', credits: '60 Credits', active: true },
