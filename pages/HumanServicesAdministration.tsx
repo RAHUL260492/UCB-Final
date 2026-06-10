@@ -108,8 +108,6 @@ const HumanServicesAdministration: React.FC = () => {
                     The Human Services Associate Degree is the perfect program for those who love to help others and want a successful career in social work, psychology, or family support.
                     <br className="hidden md:block" />
                     <span className="text-ucb-blue font-semibold">This degree empowers you to make a real difference in your community</span> while building the skills and credentials for a rewarding career. You'll gain hands-on experience through internships and graduate ready to step into high-demand roles.
-                    <br className="hidden md:block" />
-                    You can pursue many different career opportunities, including becoming a Social Work Assistant, Community Health Worker, Family Support Worker, Human Services Coordinator, or Case Manager—and even qualify to apply for a Licensed Social Work Associate (LSWA) credential.
                 </p>
             }
 
@@ -136,6 +134,7 @@ const HumanServicesAdministration: React.FC = () => {
                     ]
                 }
             ]}
+            achievementsIntro="You can pursue many different career opportunities, including becoming a Social Work Assistant, Community Health Worker, Family Support Worker, Human Services Coordinator, or Case Manager—and even qualify to apply for a Licensed Social Work Associate (LSWA) credential."
             achievementNote="Your courses include real-world internships—you'll graduate with experience on your resume, not just a degree."
 
             courses={courses}
