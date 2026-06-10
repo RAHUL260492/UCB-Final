@@ -115,7 +115,7 @@ const GeneralStudiesAssociate: React.FC = () => {
                     items: [
                         "Communicate effectively speaking and in writing.",
                         "Think critically and solve complex problems.",
-                        "Develop a broad foundation of knowledge in humanities and sciences."
+                        "Develop a broad foundational knowledge in humanities and sciences."
                     ]
                 },
                 {
