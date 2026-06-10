@@ -94,7 +94,7 @@ const GeneralStudiesAssociate: React.FC = () => {
             secondaryImageSrc="/Program%20Images%20for%20Website/General%20Studies%20AA%202.jpg"
             breadcrumbs={[
                 { label: 'Programs', path: '/programs' },
-                { label: 'General Studies Associate' }
+                { label: 'General Studies Associate Degree' }
             ]}
 
             tagline="Explore Your Possibilities—Build Your Future on Your Terms"
@@ -113,7 +113,7 @@ const GeneralStudiesAssociate: React.FC = () => {
                     heading: "Professional Skills",
                     icon: Briefcase,
                     items: [
-                        "Communicate effectively in written and oral forms.",
+                        "Communicate effectively speaking and in writing.",
                         "Think critically and solve complex problems.",
                         "Develop a broad foundation of knowledge in humanities and sciences."
                     ]
@@ -151,7 +151,7 @@ const GeneralStudiesAssociate: React.FC = () => {
             ]}
 
             pathwayTitle="Build Toward Your Future"
-            pathwayDescription="The General Studies Associate is a stackable, for-credit program. Credits may transfer toward an associate or bachelor's degree."
+            pathwayDescription="The General Studies Associate Degree is a stackable, for-credit program. Credits may transfer toward an associate or bachelor's degree."
             pathwaySteps={[
                 { label: 'Certificate', credits: '21 Credits', active: false },
                 { label: 'AA in General Studies', credits: '60 Credits', active: true },
@@ -168,7 +168,7 @@ const GeneralStudiesAssociate: React.FC = () => {
             faqs={faqs}
 
             ctaRequirements={['High School Diploma / GED / HiSET', 'Photo ID', 'Online Application']}
-            programName="General Studies Associate"
+            programName="General Studies Associate Degree"
         />
         </>
     );
