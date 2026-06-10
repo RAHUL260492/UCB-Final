@@ -277,8 +277,8 @@ const Registration: React.FC = () => {
                                 <a href="mailto:admissions@urbancollege.edu" className="text-xs font-semibold text-ucb-blue hover:text-ucb-orange transition-colors inline-flex items-center gap-1">
                                     <Mail className="w-3.5 h-3.5" /> admissions@urbancollege.edu
                                 </a>
-                                <a href="tel:617-449-7067" className="text-xs font-semibold text-ucb-blue hover:text-ucb-orange transition-colors inline-flex items-center gap-1">
-                                    <Phone className="w-3.5 h-3.5" /> (617) 449-7067
+                                <a href="tel:617-665-8530" className="text-xs font-semibold text-ucb-blue hover:text-ucb-orange transition-colors inline-flex items-center gap-1">
+                                    <Phone className="w-3.5 h-3.5" /> (617) 665-8530
                                 </a>
                             </div>
                         </ScrollAnimation>

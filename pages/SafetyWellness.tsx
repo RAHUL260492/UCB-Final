@@ -34,7 +34,7 @@ const daappDocs = [
 const csaContacts = [
     { role: 'President', phone: '617-449-7068' },
     { role: 'Vice President of Academic Affairs', phone: '617-960-0257' },
-    { role: 'Admissions', phone: '617-449-7067' },
+    { role: 'Admissions', phone: '617-665-8530' },
     { role: 'Director of Student Services', phone: '617-449-7380' },
     { role: 'Learning Resource Center', phone: '617-449-7044' },
     { role: 'Financial Services', phone: '617-449-7428' },
