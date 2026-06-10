@@ -1,10 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, useLocation } from 'react-router-dom';
-import { ChevronLeft, Calendar, Share2, Facebook, Linkedin, Copy } from 'lucide-react';
+import { ChevronLeft, Calendar, Facebook, Instagram, Youtube, Copy } from 'lucide-react';
 import blogsData from '../src/data/blogs.json';
 import PageHeader from '../components/PageHeader';
 import SEO from '../components/SEO';
 import { buildBreadcrumbJsonLd } from '../components/seo-data';
+
+// Urban College social accounts (follow links shown alongside blog posts)
+const SOCIALS = [
+    { label: 'Facebook', href: 'https://www.facebook.com/UrbanCollegeBoston', Icon: Facebook },
+    { label: 'Instagram', href: 'https://www.instagram.com/urbancollegeofboston/', Icon: Instagram },
+    { label: 'YouTube', href: 'https://www.youtube.com/@Urban_College', Icon: Youtube },
+];
 
 const formatTitle = (title: string, slug: string) => {
     if (title === "Urban College Blog | Urban College of Boston") {
@@ -123,13 +130,19 @@ const BlogPost: React.FC = () => {
                 {/* Social Share Sidebar (Desktop) */}
                 <div className="hidden lg:flex flex-col gap-4 w-12 sticky top-32 shrink-0 h-max items-center">
                     <div className="w-px h-12 bg-gray-200 mb-2" />
-                    <button className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:text-blue-600 hover:border-blue-600 hover:bg-blue-50 transition-all shadow-sm">
-                        <Facebook className="w-4 h-4" />
-                    </button>
-                    <button className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:text-blue-700 hover:border-blue-700 hover:bg-blue-50 transition-all shadow-sm">
-                        <Linkedin className="w-4 h-4" />
-                    </button>
-                    <button onClick={handleCopyLink} className="relative w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:text-ucb-orange hover:border-ucb-orange hover:bg-orange-50 transition-all shadow-sm">
+                    {SOCIALS.map(({ label, href, Icon }) => (
+                        <a
+                            key={label}
+                            href={href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`Urban College of Boston on ${label}`}
+                            className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:text-ucb-blue hover:border-ucb-blue hover:bg-blue-50 transition-all shadow-sm"
+                        >
+                            <Icon className="w-4 h-4" />
+                        </a>
+                    ))}
+                    <button onClick={handleCopyLink} aria-label="Copy link to this post" className="relative w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:text-ucb-orange hover:border-ucb-orange hover:bg-orange-50 transition-all shadow-sm">
                         <Copy className="w-4 h-4" />
                         {copied && (
                             <span className="absolute left-full ml-3 bg-gray-900 text-white text-xs px-2 py-1 rounded shadow-lg whitespace-nowrap">
@@ -183,10 +196,11 @@ const BlogPost: React.FC = () => {
             
             {/* Mobile Share */}
             <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 shrink-0 flex items-center justify-center gap-6 z-40 shadow-[0_-10px_40px_rgba(0,0,0,0.05)]">
-                <span className="text-sm font-bold text-gray-500 uppercase tracking-widest mr-2">Share</span>
-                <button className="text-gray-400 hover:text-blue-600 transition-colors"><Facebook className="w-5 h-5" /></button>
-                <button className="text-gray-400 hover:text-blue-700 transition-colors"><Linkedin className="w-5 h-5" /></button>
-                <button onClick={handleCopyLink} className="text-gray-400 hover:text-ucb-orange transition-colors"><Copy className="w-5 h-5" /></button>
+                <span className="text-sm font-bold text-gray-500 uppercase tracking-widest mr-2">Follow Us</span>
+                {SOCIALS.map(({ label, href, Icon }) => (
+                    <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={`Urban College of Boston on ${label}`} className="text-gray-400 hover:text-ucb-blue transition-colors"><Icon className="w-5 h-5" /></a>
+                ))}
+                <button onClick={handleCopyLink} aria-label="Copy link to this post" className="text-gray-400 hover:text-ucb-orange transition-colors"><Copy className="w-5 h-5" /></button>
             </div>
         </div>
     );

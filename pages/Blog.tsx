@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Search, Calendar, ChevronRight } from 'lucide-react';
+import { Search, Calendar, ChevronRight, Facebook, Instagram, Youtube } from 'lucide-react';
 // Sanity CMS fetching removed for static site setup
 import PageHeader from '../components/PageHeader';
 import localBlogsData from '../src/data/blogs.json';
@@ -157,6 +157,29 @@ const Blog: React.FC = () => {
                         </button>
                     </div>
                 ) : null}
+
+                {/* Follow Us */}
+                <div className="mt-16 pt-10 border-t border-gray-200 text-center">
+                    <p className="text-xs font-bold text-ucb-orange uppercase tracking-widest mb-4">Follow Urban College</p>
+                    <div className="flex items-center justify-center gap-4">
+                        {[
+                            { label: 'Facebook', href: 'https://www.facebook.com/UrbanCollegeBoston', Icon: Facebook },
+                            { label: 'Instagram', href: 'https://www.instagram.com/urbancollegeofboston/', Icon: Instagram },
+                            { label: 'YouTube', href: 'https://www.youtube.com/@Urban_College', Icon: Youtube },
+                        ].map(({ label, href, Icon }) => (
+                            <a
+                                key={label}
+                                href={href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={`Urban College of Boston on ${label}`}
+                                className="w-11 h-11 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:text-ucb-blue hover:border-ucb-blue hover:bg-blue-50 transition-all shadow-sm"
+                            >
+                                <Icon className="w-5 h-5" />
+                            </a>
+                        ))}
+                    </div>
+                </div>
             </div>
         </div>
     );
