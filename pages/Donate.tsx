@@ -3,7 +3,7 @@ import PageHeader from '../components/PageHeader';
 import ScrollAnimation from '../components/ScrollAnimation';
 import SEO from '../components/SEO';
 import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
-import { GraduationCap, Briefcase, Cpu, FileText, Landmark, TrendingUp, Phone, Award } from 'lucide-react';
+import { GraduationCap, Briefcase, Cpu, FileText, Landmark, TrendingUp, Phone, Award, Mail } from 'lucide-react';
 
 const givingAreas = [
     { title: 'Access to Education', desc: 'Support emergency funds that keep financial barriers from stopping a student’s progress.', icon: GraduationCap, color: 'text-ucb-blue bg-blue-50' },
@@ -74,6 +74,20 @@ const Donate: React.FC = () => {
                             );
                         })}
                     </div>
+
+                    <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {[
+                            "With my heart full of happiness, gratitude, and humility, I thank you immensely for this help you gave me. I trust that you, as an organization, will always have the resources to help people who want to prepare themselves but, despite having the desire and enthusiasm, sometimes lack the financial means.",
+                            "I am thankful to have been awarded with the scholarship funds to pursue my professional development in Early Education and wanted to express my gratitude for your support.",
+                            "Receiving this scholarship brings me peace and motivation. It eases the financial pressure of being a student and reminds me that there are people who believe in my goals and in the power of education.",
+                            "The scholarship money will make a difference in my future because it will help me continue my studies without the worry of how I will be able to pay. As a mother of three, my focus is being able to provide for them, and I know without the scholarship money it would be difficult to continue my studies."
+                        ].map((quote, idx) => (
+                            <ScrollAnimation key={idx} variant="fade-up" delay={`${idx * 0.05}s`} className="bg-gray-50 rounded-3xl p-6 border border-gray-100">
+                                <p className="text-sm text-gray-600 font-light italic leading-relaxed">"{quote}"</p>
+                                <p className="mt-3 text-xs font-bold text-ucb-orange uppercase tracking-wider">— Urban College Student</p>
+                            </ScrollAnimation>
+                        ))}
+                    </div>
                 </div>
             </section>
 
@@ -130,6 +144,20 @@ const Donate: React.FC = () => {
                 </div>
             </section>
 
+            {/* Foundation video */}
+            <section className="py-12 bg-white">
+                <div className="container mx-auto px-6 max-w-3xl">
+                    <ScrollAnimation variant="fade-up" className="space-y-5">
+                        <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: '16px' }} className="shadow-md border border-gray-100">
+                            <iframe src="https://www.youtube.com/embed/SOvVdrR_FrI" title="Urban College of Boston" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
+                        </div>
+                        <div className="text-center">
+                            <a href="/foundation" className="inline-flex items-center gap-2 text-ucb-blue font-bold text-sm hover:text-ucb-orange transition-colors">Learn about the Urban College Foundation →</a>
+                        </div>
+                    </ScrollAnimation>
+                </div>
+            </section>
+
             {/* Other ways to give */}
             <section className="py-16 bg-gray-50 border-t border-gray-100">
                 <div className="container mx-auto px-6 max-w-5xl">
@@ -151,8 +179,8 @@ const Donate: React.FC = () => {
                         })}
                     </div>
                     <div className="mt-8 text-center text-sm text-gray-600 flex items-center justify-center gap-2">
-                        <Phone className="w-4 h-4 text-ucb-orange" />
-                        <span>Questions about giving? Contact Madeleine Picher, Senior Manager of Development Operations, at <a href="tel:+16178613912" className="text-ucb-blue font-semibold hover:text-ucb-orange transition-colors">617-861-3912</a> or <a href="mailto:madeleine.picher@urbancollege.edu" className="text-ucb-blue font-semibold hover:text-ucb-orange transition-colors">madeleine.picher@urbancollege.edu</a>.</span>
+                        <Mail className="w-4 h-4 text-ucb-orange" />
+                        <span>Questions about giving? Contact our Advancement team at <a href="mailto:advancement@urbancollege.edu" className="text-ucb-blue font-semibold hover:text-ucb-orange transition-colors">advancement@urbancollege.edu</a>.</span>
                     </div>
                     <p className="mt-4 text-center text-xs text-gray-500 font-light max-w-2xl mx-auto">
                         Urban College of Boston is a 501(c)(3) tax-exempt organization (EIN 04-3403049). Your gift is tax-deductible to the fullest extent allowed by law.
