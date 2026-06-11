@@ -33,7 +33,7 @@ const outcomes = [
 ];
 
 const benefits: ProgramBenefit[] = [
-    { title: "Fast Track", desc: "Finish in as little as one year (19 credits)", icon: Clock },
+    { title: "Fast Track", desc: "Finish in as little as one year (16 credits)", icon: Clock },
     { title: "100% Online", desc: "Learn completely online, anytime you want", icon: Globe },
     { title: "Financial Aid", desc: "Competitive tuition and generous financial aid", icon: DollarSign },
     { title: "Learn in Your Language", desc: "Courses in English, Spanish, and Mandarin", icon: MessageCircleIcon },
@@ -42,7 +42,7 @@ const benefits: ProgramBenefit[] = [
 ];
 
 const stats: ProgramStat[] = [
-    { label: 'Credits', value: '19', icon: Award, sub: 'Credits' },
+    { label: 'Credits', value: '16', icon: Award, sub: 'Credits' },
     { label: 'Time', value: '1 Year', icon: Clock, sub: 'To Complete' },
     { label: 'Format', value: 'Online', icon: Globe, sub: 'Fully Online' },
     { label: 'Cost', value: '$317', icon: DollarSign, sub: 'Per Credit' },
@@ -112,9 +112,9 @@ const EarlyChildhoodEducationCertificate: React.FC = () => {
                     heading: "Professional Skills",
                     icon: Briefcase,
                     items: [
-                        "Understand child development from birth through age 8",
-                        "Create engaging curriculum that's developmentally appropriate",
-                        "Guide behavior with positive discipline strategies"
+                        "High-Quality Practice – Grounded in evidence-based early childhood education.",
+                        "Professional Leadership – Prepared to lead with confidence and competence.",
+                        "Meaningful Impact – Ready to support children, families, and communities."
                     ]
                 },
                 {
@@ -152,8 +152,8 @@ const EarlyChildhoodEducationCertificate: React.FC = () => {
             pathwayTitle="Build Toward Your Future"
             pathwayDescription="The Early Childhood Education Certificate is a stackable, for-credit program. Credits may transfer toward an associate or bachelor's degree."
             pathwaySteps={[
-                { label: 'Certificate', credits: '19 Credits', active: false },
-                { label: 'Associate Degree', credits: '60 Credits', active: true },
+                { label: 'Certificate', credits: '16 Credits', active: false },
+                { label: 'Associate Degree', credits: '61 Credits', active: true },
                 { label: "Bachelor's Degree", credits: 'Transfer Ready', active: false },
             ]}
 

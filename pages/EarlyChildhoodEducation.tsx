@@ -33,7 +33,7 @@ const outcomes = [
 ];
 
 const benefits: ProgramBenefit[] = [
-    { title: "Flexible Pace", desc: "Complete your 60 credits over about two years", icon: Clock },
+    { title: "Flexible Pace", desc: "Complete your 61 credits over about two years", icon: Clock },
     { title: "100% Online", desc: "Learn on a schedule that fits into your busy life", icon: Globe },
     { title: "Earn While You Learn", desc: "Start working in early education right away—no need to wait until graduation", icon: Briefcase },
     { title: "Learn in Your Language", desc: "Courses in English, Spanish, and Mandarin", icon: MessageCircleIcon },
@@ -43,7 +43,7 @@ const benefits: ProgramBenefit[] = [
 ];
 
 const stats: ProgramStat[] = [
-    { label: 'Credits', value: '60', icon: Award, sub: 'Credits' },
+    { label: 'Credits', value: '61', icon: Award, sub: 'Credits' },
     { label: 'Time', value: '2 Years', icon: Clock, sub: 'To Complete' },
     { label: 'Format', value: 'Online', icon: Globe, sub: 'Fully Online' },
     { label: 'Cost', value: '$317', icon: DollarSign, sub: 'Per Credit' },
@@ -55,7 +55,7 @@ const stats: ProgramStat[] = [
 
 const faqs = [
     { q: "Is the program entirely online?", a: "Yes! The Associate Degree is 100% online, with optional on-campus services. Learn on your schedule—mornings, evenings, or weekends." },
-    { q: "How long does the degree take?", a: "About two years for all 60 credits full-time—or take it at your own pace to fit work and family." },
+    { q: "How long does the degree take?", a: "About two years for all 61 credits full-time—or take it at your own pace to fit work and family." },
     { q: "Do I need prior experience working with children?", a: "No! No prior experience is required. The program covers all the foundational knowledge, so you'll graduate ready to succeed whether you're starting fresh or advancing in your current role." },
     { q: "Can I study in my native language?", a: "Yes! Courses are available in English, Spanish, and Mandarin, with ESL support tailored to each student." },
     { q: "Am I eligible for financial aid?", a: "Most students are eligible for financial aid. Contact our financial aid office at (617) 449-7070—our team works with you one-on-one to identify grants, scholarships, and funding options that fit your situation. Most students graduate debt-free!" },
@@ -91,7 +91,7 @@ const EarlyChildhoodEducation: React.FC = () => {
         <ProgramPageLayout
             badge="Early Childhood Education Associate Degree"
             title={<>Inspire Young Minds & <span style={{ color: '#E68325' }}>Build Your Future</span></>}
-            subtitle="Earn While You Learn—Start Working Immediately! A 60-credit Associate Degree designed for working students."
+            subtitle="Earn While You Learn—Start Working Immediately! A 61-credit Associate Degree designed for working students."
             headerImageSrc="/Program%20Images%20for%20Website/ECE-AA-primary.jpg"
             secondaryImageSrc="/Program%20Images%20for%20Website/ECE-AA-secondary.jpg"
             breadcrumbs={[
@@ -102,9 +102,7 @@ const EarlyChildhoodEducation: React.FC = () => {
             tagline="Turn Your Love for Children into a Rewarding Career"
             taglineBody={
                 <p>
-                    Urban College of Boston's Early Childhood Education Associate Degree empowers you to master the skills that shape young lives—all without interrupting your busy life.
-                    <br className="hidden md:block" />
-                    <span className="text-ucb-blue font-semibold">This fully online, career-building degree</span> fits into your schedule. Earn while you learn, start working in early education right away, and graduate ready to advance as a teacher, childcare provider, or program leader.
+                    Join a growing community of early childhood professionals committed to excellence. Through a <span className="text-ucb-blue font-semibold">flexible online format</span>, you'll gain the knowledge, leadership skills, and professional preparation needed to <span className="text-ucb-blue font-semibold">advance in the field and make a meaningful impact on children, families, and communities</span>.
                 </p>
             }
 
@@ -155,8 +153,8 @@ const EarlyChildhoodEducation: React.FC = () => {
             pathwayTitle="Build Toward Your Future"
             pathwayDescription="Every credit you earn counts. When you're ready, our transfer agreements make it easy to continue toward a bachelor's degree at partner institutions."
             pathwaySteps={[
-                { label: 'Certificate', credits: '19 Credits', active: false },
-                { label: 'Associate Degree', credits: '60 Credits', active: true },
+                { label: 'Certificate', credits: '16 Credits', active: false },
+                { label: 'Associate Degree', credits: '61 Credits', active: true },
                 { label: "Bachelor's Degree", credits: 'Transfer Ready', active: false },
             ]}
 

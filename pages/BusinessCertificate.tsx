@@ -25,7 +25,7 @@ const courses = [
 
 const outcomes = [
     { title: "Administrative or Office Support", desc: "Manage schedules, communications, and daily operations. Competitive salary with strong demand." },
-    { title: "Operations and Management Support", desc: "Help teams run smoothly and efficiently. General & operations managers in MA earn a median of $123,850/year; 4% projected growth (BLS, 2024–34)." },
+    { title: "Operations and Management Support", desc: "Help teams run smoothly and efficiently. Management is a growing field with strong demand across Massachusetts industries." },
     { title: "Bookkeeping or Business Assistant", desc: "Manage financial records and support business functions. Bookkeeping clerks in MA earn a median of $57,120/year (BLS OEWS, May 2024)." },
     { title: "Entry-Level Leadership Roles", desc: "Take on supervisory responsibilities." },
     { title: "Entrepreneurship or Small Business Support", desc: "Start or support your own business." }
@@ -136,7 +136,7 @@ const BusinessCertificate: React.FC = () => {
             outcomeTags={['Management', 'Administration', 'Bookkeeping', 'Entrepreneurship']}
             outcomeSources={[
                 { label: 'BLS OOH: Bookkeeping, Accounting & Auditing Clerks', url: 'https://www.bls.gov/ooh/office-and-administrative-support/bookkeeping-accounting-and-auditing-clerks.htm' },
-                { label: 'BLS OOH: Top Executives (general & operations managers)', url: 'https://www.bls.gov/ooh/management/top-executives.htm' },
+                { label: 'BLS OOH: Management Occupations', url: 'https://www.bls.gov/ooh/management/' },
             ]}
 
             stats={stats}
