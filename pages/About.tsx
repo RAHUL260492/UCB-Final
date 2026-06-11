@@ -24,28 +24,28 @@ const About: React.FC = () => {
 
     const milestones = [
         { year: "1993", title: "Urban College Founded", desc: "Established by ABCD to serve Boston's diverse, low-income communities and create an accessible pathway to higher education." },
-        { year: "1996", title: "First Commencement", desc: "Held our first graduation ceremony with 4 proud graduates, establishing a legacy of success." },
+        { year: "1996", title: "First Commencement", desc: "Held our first graduation ceremony with 4 proud Associate Degree graduates, establishing a legacy of success." },
         { year: "2000s", title: "Multilingual Expansion", desc: "Significantly expanded curriculum to offer courses in Spanish and Mandarin, validating students' native languages." },
         { year: "2010s", title: "Hispanic-Serving Institution (HSI) Federal Designation", desc: "Designated as a minority-serving institution and Hispanic-Serving Institution (HSI), demonstrating our commitment to students who have historically been excluded from higher education in the U.S." },
-        { year: "2020s", title: "Fully Online Transition", desc: "Transitioned to 100% online instruction to offer maximum flexibility for working adults and parent students." },
-        { year: "2023", title: "Celebrating 30 Years", desc: "Celebrated three decades of transformation, graduating 72 students at our annual Commencement ceremony." }
+        { year: "2020s", title: "Fully Online Transition", desc: "Transitioned to 100% online instruction to offer maximum flexibility for working adults and parent-students." },
+        { year: "2026", title: "Celebrating 30 Years", desc: "Celebrated three decades of transformation, graduating 114 certificate and associate degree students in 2026." }
     ];
 
     const stats = [
-        { value: "1,100+", label: "Students Enrolled", icon: Users, color: "text-ucb-blue bg-blue-50" },
+        { value: "1,600+", label: "Students Enrolled", icon: Users, color: "text-ucb-blue bg-blue-50" },
         { value: "30+", label: "Years of Service", icon: Calendar, color: "text-ucb-orange bg-orange-50" },
-        { value: "70%+", label: "Speak English as a Second Language", icon: Globe, color: "text-ucb-teal bg-teal-50" },
-        { value: "37", label: "Average Student Age", icon: Clock, color: "text-ucb-blue bg-blue-50" },
-        { value: "92%", label: "Women Students", icon: Heart, color: "text-red-500 bg-red-50" },
+        { value: "70%+", label: "Speak English as a Second or Subsequent Language", icon: Globe, color: "text-ucb-teal bg-teal-50" },
+        { value: "38", label: "Average Student Age", icon: Clock, color: "text-ucb-blue bg-blue-50" },
+        { value: "94%", label: "Women Students", icon: Heart, color: "text-red-500 bg-red-50" },
         { value: "3", label: "Languages Offered", icon: GraduationCap, color: "text-ucb-emerald bg-emerald-50", sub: "English, Spanish, Mandarin" }
     ];
 
     const demographics = [
         { name: "Hispanic or Latinx", percentage: 59, color: "bg-ucb-orange" },
-        { name: "Black or African American", percentage: 14, color: "bg-ucb-blue" },
-        { name: "Asian", percentage: 10, color: "bg-ucb-teal" },
+        { name: "Black or African American", percentage: 15, color: "bg-ucb-blue" },
+        { name: "Asian", percentage: 6, color: "bg-ucb-teal" },
         { name: "White", percentage: 6, color: "bg-gray-400" },
-        { name: "Other or Not Indicated", percentage: 11, color: "bg-gray-300" }
+        { name: "Other or Not Indicated", percentage: 14, color: "bg-gray-300" }
     ];
 
     const diffFeatures = [
@@ -63,7 +63,7 @@ const About: React.FC = () => {
         },
         {
             title: "Radical Affordability",
-            desc: "Low-cost tuition combined with state, federal, and private grants. Specific out-of-pocket cost and debt-free graduation rates are currently under research by our Financial Aid Office — coming soon!",
+            desc: "Low-cost tuition combined with state, federal, and private grants. 99% of students graduate debt-free, only 11% have any out-of-pocket cost, and the average out-of-pocket cost is just $1,680.",
             icon: DollarSign,
             color: "text-ucb-emerald bg-emerald-50/50"
         },
@@ -155,7 +155,7 @@ const About: React.FC = () => {
                                     </span>
                                     <h3 className="text-2xl font-display font-bold text-ucb-orange mb-4">Our Vision</h3>
                                     <p className="text-gray-600 leading-relaxed font-light">
-                                        Urban College of Boston graduates are gainfully employed (well-paying jobs), leading in their communities, and on the path to building financial security for themselves and their families.
+                                        Urban College of Boston graduates are gainfully employed, leading in their communities, and on the path to building financial security for themselves and their families.
                                     </p>
                                 </div>
                             </div>
@@ -319,18 +319,23 @@ const About: React.FC = () => {
                     </ScrollAnimation>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                         {[
-                            { title: "NECHE Accredited", desc: "Accredited by the New England Commission of Higher Education" },
+                            { title: "NECHE Accredited", desc: "Accredited by the New England Commission of Higher Education", path: "/accreditation" },
                             { title: "Designated Hispanic-Serving Institution (HSI)", desc: "Federally Designated Hispanic-Serving Institution" },
-                            { title: "501(c)(3) Nonprofit", desc: "Private, nonprofit community-focused institution" }
-                        ].map((item, idx) => (
-                            <ScrollAnimation key={idx} variant="fade-up" delay={`${idx * 0.1}s`} className="flex">
-                                <div className="p-5 rounded-2xl border border-gray-100 bg-gray-50/50 flex flex-col justify-center items-center w-full">
+                            { title: "501(c)(3) Nonprofit", desc: "Private, non-profit, community-focused institution" }
+                        ].map((item, idx) => {
+                            const card = (
+                                <div className="p-5 rounded-2xl border border-gray-100 bg-gray-50/50 flex flex-col justify-center items-center w-full h-full hover:shadow-md transition-shadow">
                                     <ShieldCheck className="w-8 h-8 text-ucb-orange mb-2" />
                                     <h4 className="font-bold text-sm text-gray-900 mb-1">{item.title}</h4>
                                     <p className="text-xs text-gray-500 leading-relaxed font-light">{item.desc}</p>
                                 </div>
-                            </ScrollAnimation>
-                        ))}
+                            );
+                            return (
+                                <ScrollAnimation key={idx} variant="fade-up" delay={`${idx * 0.1}s`} className="flex">
+                                    {item.path ? <Link to={item.path} className="w-full flex">{card}</Link> : card}
+                                </ScrollAnimation>
+                            );
+                        })}
                     </div>
                 </div>
             </section>
@@ -435,11 +440,10 @@ const About: React.FC = () => {
                             {[
                                 { name: "Academic Programs", path: "/programs" },
                                 { name: "Office of the President", path: "/president" },
-                                { name: "Administration & Leadership", path: "/team" },
-                                { name: "Accreditation", path: "#" },
+                                { name: "Leadership & Administration", path: "/team" },
+                                { name: "Accreditation", path: "/accreditation" },
                                 { name: "Board of Trustees", path: "/trustees" },
-                                { name: "Urban College Foundation", path: "/foundation" },
-                                { name: "Contact Us", path: "#" }
+                                { name: "Urban College Foundation", path: "/foundation" }
                             ].map((link, idx) => (
                                 <Link key={idx} to={link.path} className="px-4 py-3 bg-white hover:bg-ucb-blue hover:text-white border border-gray-100 rounded-xl shadow-sm text-xs font-semibold text-gray-700 transition-all flex items-center justify-center gap-1 group">
                                     {link.name} <ChevronRight className="w-3.5 h-3.5 text-gray-400 group-hover:text-white group-hover:translate-x-0.5 transition-all" />

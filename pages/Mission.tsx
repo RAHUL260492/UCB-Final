@@ -47,7 +47,7 @@ const Mission: React.FC = () => {
         },
         {
             title: "Community Leadership",
-            desc: "We nurture graduates who return to lead, serve, and inspire within their own communities and neighborhoods.",
+            desc: "We nurture graduates who lead, serve, and inspire within their own communities and neighborhoods.",
             icon: Users,
             color: "text-ucb-gold bg-ucb-gold/10 border-ucb-gold/20"
         }
@@ -136,7 +136,7 @@ const Mission: React.FC = () => {
                 <div className="container mx-auto px-6 max-w-5xl">
                     <ScrollAnimation variant="fade-up" className="text-center mb-16">
                         <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs mb-2 block">Our Foundations</span>
-                        <h2 className="text-3xl md:text-4xl font-display font-bold text-ucb-blue">Our Core Values</h2>
+                        <h2 className="text-3xl md:text-4xl font-display font-bold text-ucb-blue">Our Core Commitments</h2>
                         <p className="text-gray-500 max-w-xl mx-auto leading-relaxed font-light mt-2">
                             These core principles guide our faculty, staff, and leadership as we support our students' educational journeys.
                         </p>
@@ -167,20 +167,20 @@ const Mission: React.FC = () => {
                     <ScrollAnimation variant="fade-up" className="text-center mb-12">
                         <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs mb-2 block">Our Community</span>
                         <h2 className="text-3xl md:text-4xl font-display font-bold text-ucb-blue">The Faces of Urban College</h2>
-                        <p className="text-gray-600 mt-3 max-w-2xl mx-auto font-light">Real students and graduates who turned opportunity into impact for their families and communities.</p>
+                        <p className="text-gray-600 mt-3 max-w-2xl mx-auto font-light">Meet some of our remarkable students and graduates…</p>
                     </ScrollAnimation>
                     <div className="grid grid-cols-3 md:grid-cols-6 gap-4 md:gap-6 mb-10">
                         {[
-                            { img: 'charmaine-b.jpg', name: 'Charmaine Burrell' },
-                            { img: 'elijah-w.png', name: 'Elijah Watts' },
-                            { img: 'krystal-j.png', name: 'Krystal Jackson Ray' },
-                            { img: 'ayesha-w.jpg', name: 'Ayesha M. Wilson' },
-                            { img: 'mariely-m.jpg', name: 'Mariely Maldonado' },
-                            { img: 'seraphina-t.webp', name: 'Seraphina Taylor' },
+                            { img: 'charmaine-b.jpg', name: 'Charmaine Burrell', pos: '' },
+                            { img: 'elijah-w.png', name: 'Elijah Watts', pos: 'object-top' },
+                            { img: 'krystal-j.png', name: 'Krystal Jackson Ray', pos: '' },
+                            { img: 'ayesha-w.jpg', name: 'Ayesha M. Wilson', pos: '' },
+                            { img: 'mariely-m.jpg', name: 'Mariely Maldonado', pos: '' },
+                            { img: 'seraphina-t.webp', name: 'Seraphina Taylor', pos: '' },
                         ].map((p) => (
                             <ScrollAnimation key={p.name} variant="fade-up" className="text-center group">
                                 <div className="aspect-square rounded-2xl overflow-hidden shadow-sm border border-gray-100 mb-2">
-                                    <img src={`/assets/images/testimonials/${p.img}`} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                                    <img src={`/assets/images/testimonials/${p.img}`} alt={p.name} className={`w-full h-full object-cover ${p.pos} group-hover:scale-105 transition-transform duration-500`} loading="lazy" />
                                 </div>
                                 <p className="text-xs font-semibold text-gray-700 leading-tight">{p.name}</p>
                             </ScrollAnimation>

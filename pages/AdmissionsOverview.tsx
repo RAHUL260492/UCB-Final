@@ -9,7 +9,7 @@ import {
     Heart, GraduationCap, Laptop, Globe, Languages, 
     MessageSquare, Briefcase, Award, CheckCircle, 
     ChevronRight, ArrowRight, Mail, Phone, 
-    MessageCircle, Play, FileText, UserCheck, HelpCircle
+    MessageCircle, FileText, UserCheck, HelpCircle
 } from 'lucide-react';
 
 const AdmissionsOverview: React.FC = () => {
@@ -77,7 +77,7 @@ const AdmissionsOverview: React.FC = () => {
             />
             <PageHeader 
                 title="Admissions Overview" 
-                subtitle="Your Future Begins with One Simple Step. FREE Application | No SAT/ACT Required | Open Enrollment"
+                subtitle="Your Future Begins with One Simple Step. FREE Application | Open Enrollment"
                 breadcrumbs={breadcrumbs}
             />
 
@@ -254,7 +254,7 @@ const AdmissionsOverview: React.FC = () => {
                         <div className="lg:col-span-6 space-y-6">
                             <ScrollAnimation variant="slide-right">
                                 <span className="inline-block px-3 py-1 bg-ucb-blue/10 text-ucb-blue text-[10px] font-bold uppercase tracking-wider rounded-full">
-                                    Open Admission
+                                    Open Enrollment
                                 </span>
                                 <h2 className="text-3xl md:text-4xl font-display font-extrabold text-ucb-blue mt-2 leading-tight">
                                     Everyone Belongs Here
@@ -264,7 +264,7 @@ const AdmissionsOverview: React.FC = () => {
 
                             <ScrollAnimation variant="slide-right" className="text-gray-600 text-sm md:text-base leading-relaxed font-light space-y-4">
                                 <p>
-                                    Urban College is an open-admission institution. If you have a high school diploma, GED, or HiSET certificate, you can enroll. No SAT, ACT, or entrance exams are required.
+                                    Urban College is an open-enrollment institution. If you have a high school diploma, GED, or HiSET certificate, you can enroll. No entrance exams are required.
                                 </p>
                                 <p>
                                     We welcome students of all backgrounds and situations to help them transform their careers:
@@ -297,7 +297,7 @@ const AdmissionsOverview: React.FC = () => {
                                             <h4 className="font-display font-bold text-base">A Note on Placement Assessments</h4>
                                         </div>
                                         <p className="text-sm font-light leading-relaxed opacity-90">
-                                            We may require simple English language and course placement assessments, but they <strong className="text-ucb-gold font-bold">never prevent you from enrolling</strong>.
+                                            We may require simple English language and course placement assessments, but they <strong className="text-ucb-gold font-bold">won't prevent you from enrolling</strong>.
                                         </p>
                                         <p className="text-xs font-light leading-relaxed opacity-80">
                                             These check-ins are designed solely to identify your baseline skills and guide you to the right starting level—specifically helping multilingual students build foundational English proficiency.
@@ -342,7 +342,7 @@ const AdmissionsOverview: React.FC = () => {
                                     You don't have to wait to start your education! We accept applications year-round and operate on a rolling basis.
                                 </p>
                                 <p>
-                                    We offer <strong className="text-ucb-blue font-bold">six entry points a year</strong>. Each of our three core semesters is broken down into two accelerated 8-week sessions. 
+                                    We offer <strong className="text-ucb-blue font-bold">5 starts a year</strong>. The Fall and Spring semesters each include a standard 16-week session and an accelerated 8-week session, and the Summer offers one accelerated session. <Link to="/academic-calendar-webpage" className="text-ucb-blue font-semibold hover:underline">View the academic calendar</Link> to see detailed start dates.
                                 </p>
                                 <p className="text-xs bg-white border border-gray-100 rounded-2xl p-4 shadow-sm">
                                     <strong className="text-ucb-blue font-semibold block mb-1">Accelerated or Standard Options:</strong>
@@ -519,14 +519,6 @@ const AdmissionsOverview: React.FC = () => {
                                 >
                                     Request Information
                                 </button>
-                            </div>
-                            <div className="pt-2 flex justify-center lg:justify-start">
-                                <a 
-                                    href="#" 
-                                    className="inline-flex items-center gap-2 text-xs font-semibold text-ucb-gold hover:text-white transition-colors"
-                                >
-                                    <Play className="w-3.5 h-3.5 fill-current" /> Mira el video en español
-                                </a>
                             </div>
                         </div>
 

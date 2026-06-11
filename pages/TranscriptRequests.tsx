@@ -90,10 +90,6 @@ const TranscriptRequests: React.FC = () => {
                                         <ChevronRight className="w-4 h-4 text-ucb-orange shrink-0 mt-0.5" />
                                         <span>No rush processing or express shipping/expedited dispatch is available.</span>
                                     </li>
-                                    <li className="flex gap-2">
-                                        <ChevronRight className="w-4 h-4 text-ucb-orange shrink-0 mt-0.5" />
-                                        <span>Processing fees are collected directly by the Clearinghouse. Even if you are eligible for transcripts without charge from Urban College, Clearinghouse fees will still apply.</span>
-                                    </li>
                                 </ul>
                             </ScrollAnimation>
                         )}
@@ -116,10 +112,6 @@ const TranscriptRequests: React.FC = () => {
                                         <ChevronRight className="w-4 h-4 text-ucb-orange shrink-0 mt-0.5" />
                                         <span>El servicio de entrega express o de emergencia no está disponible.</span>
                                     </li>
-                                    <li className="flex gap-2">
-                                        <ChevronRight className="w-4 h-4 text-ucb-orange shrink-0 mt-0.5" />
-                                        <span>Por favor tome nota que las tarifas de procesamiento serán cobradas por el Clearinghouse, incluso en caso de que usted califique para un transcript sin cargo de Urban College.</span>
-                                    </li>
                                 </ul>
                             </ScrollAnimation>
                         )}
@@ -141,10 +133,6 @@ const TranscriptRequests: React.FC = () => {
                                     <li className="flex gap-2">
                                         <ChevronRight className="w-4 h-4 text-ucb-orange shrink-0 mt-0.5" />
                                         <span>不提供紧急加急处理或特快专递服务。</span>
-                                    </li>
-                                    <li className="flex gap-2">
-                                        <ChevronRight className="w-4 h-4 text-ucb-orange shrink-0 mt-0.5" />
-                                        <span>请注意：即使您符合免收城市学院成绩单费用的条件，国家学生信息交换所（Clearinghouse）仍会收取处理手续费。</span>
                                     </li>
                                 </ul>
                             </ScrollAnimation>

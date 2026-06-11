@@ -358,16 +358,14 @@ const Registration: React.FC = () => {
                                 Ready to Build Your Schedule?
                             </h2>
                             <p className="text-blue-100 font-light text-sm md:text-base leading-relaxed">
-                                Log in to the student portal to select your sections, or review the course schedule online.
+                                Review the course schedule online and contact your advisor to complete registration.
                             </p>
                         </div>
 
                         {/* CTA Buttons */}
                         <div className="relative z-10 flex flex-col sm:flex-row gap-4 justify-center items-center pt-2">
                             <a 
-                                href="https://portal.urbancollege.edu/studsect.cfm"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                                href="mailto:registration@urbancollege.edu?subject=Course%20Registration"
                                 className="w-full sm:w-auto bg-ucb-orange hover:bg-ucb-orange-glow text-white px-8 py-3.5 rounded-full font-bold text-sm tracking-wider transition-transform hover:scale-105 active:scale-95 shadow-lg shadow-ucb-orange/20 uppercase inline-flex items-center justify-center gap-1.5 min-h-[48px]"
                             >
                                 Register Now <ArrowUpRight className="w-4 h-4" />
