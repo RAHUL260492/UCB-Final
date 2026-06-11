@@ -21,8 +21,8 @@ const Accreditation: React.FC = () => {
 
     const milestones = [
         {
-            title: "Full Accreditation Continued",
-            desc: "Continued Urban College of Boston in full accreditation, affirming our adherence to NECHE standards.",
+            title: "Accreditation Continued",
+            desc: "Continued Urban College of Boston in accreditation, affirming our adherence to NECHE standards.",
             icon: ShieldCheck,
             color: "text-ucb-emerald bg-ucb-emerald/10 border-ucb-emerald/20"
         },
@@ -98,24 +98,6 @@ const Accreditation: React.FC = () => {
                             </ScrollAnimation>
                         </div>
 
-                        {/* Informational Callout */}
-                        <div className="lg:col-span-4">
-                            <ScrollAnimation variant="slide-left" className="bg-gray-50 border border-gray-100 rounded-3xl p-6 shadow-sm">
-                                <FileText className="w-8 h-8 text-ucb-orange mb-4" />
-                                <h4 className="font-bold text-ucb-black mb-2">NECHE Public Statement</h4>
-                                <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                                    As part of NECHE's public disclosure guidelines, colleges are required to provide official statements detailing institutional accreditation in their entirety.
-                                </p>
-                                <a 
-                                    href="https://www.neche.org/wp-content/uploads/2026/03/Pp44-Public-Disclosure-of-Information-About-Affiliated-Institutions-March-2026.pdf" 
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
-                                    className="text-ucb-blue font-bold text-sm inline-flex items-center gap-1.5 hover:underline group"
-                                >
-                                    View Disclosure Policy <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-                                </a>
-                            </ScrollAnimation>
-                        </div>
                     </div>
                 </div>
             </section>
@@ -187,11 +169,8 @@ const Accreditation: React.FC = () => {
                                 <p className="text-gray-600 text-sm">Urban College Representative</p>
                             </div>
                             <div className="space-y-3 pt-4 border-t border-gray-50">
-                                <a href="mailto:caitlin.callahan@urbancollege.edu" className="flex items-center gap-3 text-gray-600 hover:text-ucb-blue transition-colors text-sm">
-                                    <div className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center shrink-0">
-                                        <Mail className="w-4 h-4" />
-                                    </div>
-                                    caitlin.callahan@urbancollege.edu
+                                <a href="mailto:caitlin.callahan@urbancollege.edu" className="inline-flex items-center gap-2 bg-ucb-blue hover:bg-ucb-blue-glow text-white font-bold text-sm px-5 py-2.5 rounded-full transition-colors">
+                                    <Mail className="w-4 h-4" /> Email Caitlin
                                 </a>
                                 <a href="tel:617-449-7038" className="flex items-center gap-3 text-gray-600 hover:text-ucb-blue transition-colors text-sm">
                                     <div className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center shrink-0">
