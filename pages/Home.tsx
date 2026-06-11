@@ -43,7 +43,7 @@ const Home: React.FC = () => {
                             <div className="bg-blue-50 border-l-4 border-ucb-blue p-3 rounded-r-lg mb-4">
                                 <span className="font-bold text-ucb-blue block text-base mb-1 leading-relaxed">Tuition & Financial Aid</span>
                                 <p className="text-ucb-blue font-medium text-sm leading-relaxed mb-2">
-                                    Our team works with every student one-on-one to create a customized payment plan.
+                                    Our team works with every student one-on-one to help build a personalized financial plan.
                                 </p>
                                 <ul className="text-ucb-blue font-medium text-sm leading-relaxed space-y-1 list-disc pl-5">
                                     <li>Average out-of-pocket cost: <span className="font-bold">$1,680</span></li>
@@ -59,7 +59,7 @@ const Home: React.FC = () => {
                             {[
                                 { name: 'Scholarships', to: '/financial-services-and-funding-options' },
                                 { name: 'Financial Aid & Grants', to: '/financial-services-and-funding-options' },
-                                { name: 'Payment Plans', to: '/tuition-payment-options' },
+                                { name: 'Payment Options', to: '/tuition-payment-options' },
                             ].map((item) => (
                                 <Link key={item.name} to={item.to} className="bg-white p-4 rounded-lg shadow-sm border border-gray-100 flex items-center justify-between group hover:border-ucb-orange hover:shadow-md transition-all cursor-pointer min-h-[44px]">
                                     <span className="font-bold text-base text-ucb-blue group-hover:text-ucb-blue transition-colors leading-relaxed">{item.name}</span>

@@ -31,19 +31,19 @@ const TILE_COLORS = [
 ];
 
 const PROGRAMS: Program[] = [
-  { id: '1', title: 'Early Childhood Education', type: 'Associate Degree', tags: ['English, Spanish & Mandarin', '2 Years'], description: 'Prepare for a career nurturing the next generation.', link: '/programs/early-childhood-education' },
-  { id: '2', title: 'Human Services Administration', type: 'Associate Degree', tags: ['English & Spanish', '2 Years'], description: 'Do you want to help people? Make a real difference in your community while building the skills and credentials for a rewarding career in social services.', link: '/programs/human-services-administration' },
-  { id: '3', title: 'General Studies', type: 'Associate Degree', tags: ['English', '2 Years'], description: 'Build a solid foundation for your bachelor\'s degree.', link: '/programs/general-studies-associate' },
   { id: '7', title: 'Business', type: 'Certificate', tags: ['English & Spanish', '1 Year'], description: 'Build foundational business skills and advance your career.', link: '/programs/business-certificate' },
   { id: '8', title: 'Case Management', type: 'Certificate', tags: ['English', '9 Months'], description: 'Make a difference with specialized case management skills.', link: '/programs/case-management' },
   { id: '9', title: "Children's Behavioral Health", type: 'Certificate', tags: ['English & Spanish', '9 Months'], description: 'Support the behavioral health needs of children.', link: '/programs/childrens-behavioral-health-certificate' },
   { id: '10', title: 'Digital Marketing', type: 'Certificate', tags: ['English & Spanish', '1 Year'], description: 'Master the tools to succeed in the digital economy.', link: '/programs/digital-marketing-certificate' },
-  { id: '11', title: 'Elder Care', type: 'Certificate', tags: ['English & Spanish', '1 Year'], description: 'Transform lives while building your own career. Master the skills that help older adults and their families thrive.', link: '/programs/elder-care' },
   { id: '12', title: 'Early Childhood Education', type: 'Certificate', tags: ['English, Spanish & Mandarin', '1 Year'], description: 'Begin your journey in early childhood education.', link: '/programs/early-childhood-education-certificate' },
+  { id: '11', title: 'Elder Care', type: 'Certificate', tags: ['English & Spanish', '1 Year'], description: 'Transform lives while building your own career. Master the skills that help older adults and their families thrive.', link: '/programs/elder-care' },
   { id: '13', title: 'General Studies', type: 'Certificate', tags: ['English', '1 Year'], description: 'Explore subjects and build foundational knowledge.', link: '/programs/general-studies-certificate' },
   { id: '14', title: 'Human Services', type: 'Certificate', tags: ['English & Spanish', '9 Months'], description: 'Launch your career helping others while you work. Build the credentials to advance your career in social services.', link: '/programs/human-services-certificate' },
   { id: '15', title: 'Paraprofessional Educator', type: 'Certificate', tags: ['English & Spanish', '1 Year'], description: 'Shape young minds and launch your teaching career. Support teachers and help students of all abilities succeed.', link: '/programs/paraprofessional-educator-certificate' },
   { id: '16', title: 'Project Management', type: 'Certificate', tags: ['English & Spanish', '1 Year'], description: 'Lead projects, build your career, and earn while you learn. Master project planning, scheduling, budgeting, and leadership.', link: '/programs/project-management-certificate' },
+  { id: '1', title: 'Early Childhood Education', type: 'Associate Degree', tags: ['English, Spanish & Mandarin', '2 Years'], description: 'Prepare for a career nurturing the next generation.', link: '/programs/early-childhood-education' },
+  { id: '3', title: 'General Studies', type: 'Associate Degree', tags: ['English', '2 Years'], description: 'Build a solid foundation for your bachelor\'s degree.', link: '/programs/general-studies-associate' },
+  { id: '2', title: 'Human Services Administration', type: 'Associate Degree', tags: ['English & Spanish', '2 Years'], description: 'Do you want to help people? Make a real difference in your community while building the skills and credentials for a rewarding career in social services.', link: '/programs/human-services-administration' },
 ];
 
 const Programs: React.FC = () => {
