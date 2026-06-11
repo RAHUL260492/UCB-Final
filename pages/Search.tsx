@@ -57,6 +57,26 @@ const resolveLink = (item: any) => {
     return '#';
 };
 
+// Build-time full-text index (public/search-index.json): attach body text to
+// curated items by resolved path, and surface pages not in the curated lists.
+const mergeSearchIndex = (items: any[], pageIndex: any[]) => {
+    const byPath = new Map(pageIndex.map((e: any) => [e.path, e]));
+    const covered = new Set(items.map(resolveLink));
+    const merged = items.map((it) => ({ ...it, text: it.text || byPath.get(resolveLink(it))?.text || '' }));
+    pageIndex.forEach((e: any) => {
+        if (!covered.has(e.path)) merged.push({ _type: 'page', title: e.title, slug: e.path, description: '', text: e.text });
+    });
+    return merged;
+};
+
+const matchesQuery = (item: any, lowerQuery: string) => {
+    const t = formatTitle(item.title || '', item.slug || '').toLowerCase();
+    const d = (item.description || '').toLowerCase();
+    const tag = (item.tagline || '').toLowerCase();
+    const tx = (item.text || '').toLowerCase();
+    return t.includes(lowerQuery) || d.includes(lowerQuery) || tag.includes(lowerQuery) || tx.includes(lowerQuery);
+};
+
 const getIcon = (type: string) => {
     if (type === 'program') return <BookOpen className="w-5 h-5 text-ucb-orange" />;
     if (type === 'post') return <FileText className="w-5 h-5 text-ucb-green" />;
@@ -90,6 +110,8 @@ const Search: React.FC = () => {
 
         const fetchResults = async () => {
             setLoading(true);
+            // Build-time full-text index (falls back to [] if unavailable)
+            const pageIndex = await fetch('/search-index.json').then(r => r.json()).catch(() => []);
             try {
                 // Fetch dynamic data from Sanity with a 2.5 second timeout
                 const sanityData = await fetchWithTimeout(
@@ -130,30 +152,20 @@ const Search: React.FC = () => {
                     });
                 }
 
-                const allItems = Array.from(allDataMap.values());
+                const allItems = mergeSearchIndex(Array.from(allDataMap.values()), pageIndex);
 
-                // Perform JavaScript-based unified text search
+                // Unified full-text search (title, description, tagline, page/blog body)
                 const lowerQuery = query.toLowerCase();
-                const filtered = allItems.filter(item => {
-                    const t = formatTitle(item.title || '', item.slug || '').toLowerCase();
-                    const d = (item.description || '').toLowerCase();
-                    const tag = (item.tagline || '').toLowerCase();
-                    return t.includes(lowerQuery) || d.includes(lowerQuery) || tag.includes(lowerQuery);
-                });
+                const filtered = allItems.filter(item => matchesQuery(item, lowerQuery));
 
                 setResults(filtered);
             } catch (err) {
                 console.error("Search dynamic fetch failed, using local fallback database:", err);
                 // Fallback to static pages + static programs + local JSON blogs if sanity fails or times out
                 const localDataMapped = localBlogsData.map((b: any) => ({ ...b, _type: 'post' }));
-                const allItems = [...staticPages, ...staticPrograms, ...localDataMapped];
+                const allItems = mergeSearchIndex([...staticPages, ...staticPrograms, ...localDataMapped], pageIndex);
                 const lowerQuery = query.toLowerCase();
-                const filtered = allItems.filter(item => {
-                    const t = formatTitle(item.title || '', item.slug || '').toLowerCase();
-                    const d = (item.description || '').toLowerCase();
-                    const tag = (item.tagline || '').toLowerCase();
-                    return t.includes(lowerQuery) || d.includes(lowerQuery) || tag.includes(lowerQuery);
-                });
+                const filtered = allItems.filter(item => matchesQuery(item, lowerQuery));
                 setResults(filtered);
             }
             setLoading(false);
