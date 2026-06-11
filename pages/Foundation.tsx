@@ -181,11 +181,17 @@ const Foundation: React.FC = () => {
 
                             <ScrollAnimation variant="fade-up" className="text-gray-600 text-sm md:text-base leading-relaxed font-light space-y-4">
                                 <p>
-                                    The Urban College Foundation supports Urban College's fundraising efforts and overall mission. Launched in September 2025, the Foundation represents a new era of philanthropy and community engagement for Urban College of Boston.
+                                    Launched in September 2025, the Urban College Foundation represents a new era of philanthropy and community engagement for Urban College of Boston. As part of the College's established governance structure, the Urban College Foundation supports Urban College's fundraising efforts and overall mission.
                                 </p>
                                 <p>
-                                    Comprised of longtime changemakers and business leaders from the Greater Boston community, Foundation members are entrusted to advise the College on its philanthropic activities and expand its network to meet its goals.
+                                    Longtime changemakers and business leaders from the Greater Boston community, Foundation members are entrusted to advise the College on its philanthropic activities and expand its network to meet its goals.
                                 </p>
+                            </ScrollAnimation>
+
+                            <ScrollAnimation variant="fade-up" className="pt-2">
+                                <Link to="/donate" className="inline-flex items-center gap-2 bg-ucb-orange text-white hover:bg-ucb-orange-glow font-bold py-3 px-8 rounded-full text-xs uppercase tracking-wider transition-colors shadow-md min-h-[44px]">
+                                    Support the Foundation <Heart className="w-3.5 h-3.5 fill-white" />
+                                </Link>
                             </ScrollAnimation>
                         </div>
 
@@ -206,7 +212,7 @@ const Foundation: React.FC = () => {
                                         </div>
                                     </div>
                                     <p className="text-sm font-light leading-relaxed italic opacity-95">
-                                        "Unlike many four-year institutions, two-year colleges like ours that serve non-traditional students don't benefit from wealthy alumni or legacy networks. That's why we created the Foundation—to close the historic funding gap and ensure our students have the financial support they need to fully commit to their education."
+                                        "Unlike many four-year institutions, two-year colleges like ours that serve non-traditional students don't benefit from wealthy alumni or legacy networks. That's why we created the Foundation—to fund the support services our students need to succeed. Your support goes a long way."
                                     </p>
                                 </div>
                             </ScrollAnimation>
@@ -215,19 +221,6 @@ const Foundation: React.FC = () => {
                 </div>
             </section>
 
-            {/* Demographics Summary Card */}
-            <section className="py-12 bg-gray-50 border-y border-gray-100">
-                <div className="container mx-auto px-6 max-w-4xl text-center">
-                    <ScrollAnimation variant="fade-up">
-                        <div className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm max-w-3xl mx-auto space-y-4">
-                            <h3 className="font-display font-bold text-xl text-ucb-blue">Closing the Funding Gap</h3>
-                            <p className="text-sm text-gray-600 leading-relaxed font-light">
-                                Urban College serves over <strong>1,100 students</strong>—<strong>92%</strong> of whom identify as people of color and more than <strong>70%</strong> of whom speak a language other than English at home. The Foundation seeks to ensure financial barriers never stand between our students and their dreams.
-                            </p>
-                        </div>
-                    </ScrollAnimation>
-                </div>
-            </section>
 
             {/* Your Impact Section */}
             <section className="py-16 bg-white">
@@ -239,7 +232,7 @@ const Foundation: React.FC = () => {
                             </div>
                             <h2 className="text-3xl font-display font-extrabold text-ucb-blue leading-tight">Your Impact</h2>
                             <p className="text-gray-600 text-sm md:text-base leading-relaxed font-light">
-                                Supporting Urban College builds students' futures. Your gift helps support more than <strong>1,300 multilingual students</strong> pursuing degrees while working, parenting, and overcoming systemic barriers.
+                                Supporting Urban College builds students' futures. Your gift helps support more than <strong>1,300 students</strong> pursuing degrees while working, parenting, and overcoming systemic barriers.
                             </p>
                         </ScrollAnimation>
 
@@ -258,32 +251,13 @@ const Foundation: React.FC = () => {
                 </div>
             </section>
 
-            {/* Chair Callout Block */}
-            <section className="py-12 bg-white">
-                <div className="container mx-auto px-6 max-w-4xl">
-                    <ScrollAnimation variant="fade-up">
-                        <div className="bg-ucb-orange/5 border border-ucb-orange/20 rounded-3xl p-8 max-w-2xl mx-auto text-center space-y-4 relative overflow-hidden">
-                            <div className="absolute right-0 top-0 translate-y-1/2 translate-x-1/2 opacity-10">
-                                <Award className="w-64 h-64 text-ucb-orange" />
-                            </div>
-                            <div className="w-12 h-12 rounded-xl bg-ucb-orange/10 flex items-center justify-center mx-auto shrink-0">
-                                <Briefcase className="w-6 h-6 text-ucb-orange" />
-                            </div>
-                            <h4 className="font-display font-bold text-lg text-ucb-blue">Tom O'Brien, Foundation Chair</h4>
-                            <p className="text-sm text-gray-600 leading-relaxed font-light italic">
-                                "Our goal is to strengthen the College's financial stability and broad network, ensuring we meet the diverse needs of our students. This effort is not just about financial support; it's about creating pathways and opportunities for success."
-                            </p>
-                        </div>
-                    </ScrollAnimation>
-                </div>
-            </section>
 
             {/* Officers and Members Grid */}
             <section className="py-16 bg-gray-50 border-t border-gray-100">
                 <div className="container mx-auto px-6 max-w-5xl">
                     <ScrollAnimation variant="fade-up" className="text-center mb-12">
-                        <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs mb-2 block">Foundation Directors</span>
-                        <h2 className="text-3xl font-display font-bold text-ucb-blue">Meet the Inaugural Foundation Members</h2>
+                        <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs mb-2 block">Foundation Committee</span>
+                        <h2 className="text-3xl font-display font-bold text-ucb-blue">Meet the Foundation Members</h2>
                     </ScrollAnimation>
 
                     {/* Foundation Officers */}
@@ -358,30 +332,32 @@ const Foundation: React.FC = () => {
                 </div>
             </section>
 
-            {/* Ways to Give Section */}
+            {/* Foundation Videos */}
             <section className="py-16 bg-white border-t border-gray-100">
                 <div className="container mx-auto px-6 max-w-5xl">
-                    <ScrollAnimation variant="fade-up" className="text-center mb-12">
-                        <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs mb-2 block">Giving Opportunities</span>
-                        <h2 className="text-3xl font-display font-bold text-ucb-blue">Ways to Give</h2>
-                        <p className="text-gray-500 max-w-md mx-auto text-sm font-light mt-1">Select the giving pathway that fits your financial preferences.</p>
+                    <ScrollAnimation variant="fade-up" className="text-center mb-10">
+                        <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs mb-2 block">Our Story</span>
+                        <h2 className="text-3xl font-display font-bold text-ucb-blue">The Urban College Foundation</h2>
                     </ScrollAnimation>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {waysToGive.map((method, idx) => {
-                            const Icon = method.icon;
-                            return (
-                                <ScrollAnimation key={idx} variant="fade-up" delay={`${idx * 0.05}s`} className="bg-gray-50 rounded-3xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
-                                    <div>
-                                        <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-4 ${method.color}`}>
-                                            <Icon className="w-5 h-5" />
-                                        </div>
-                                        <h3 className="font-display font-bold text-sm text-ucb-blue mb-2">{method.title}</h3>
-                                        <p className="text-xs text-gray-500 leading-relaxed font-light">{method.desc}</p>
-                                    </div>
-                                </ScrollAnimation>
-                            );
-                        })}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        {['d-zrwZLB4oQ', 'VLgQwqU0bq0', '0ZJ-ijoKnqU'].map((id) => (
+                            <div key={id} style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: '16px' }} className="shadow-md border border-gray-100">
+                                <iframe
+                                    src={`https://www.youtube.com/embed/${id}`}
+                                    title="Urban College Foundation video"
+                                    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowFullScreen
+                                />
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="text-center mt-10">
+                        <Link to="/donate" className="inline-flex items-center gap-2 bg-ucb-orange text-white hover:bg-ucb-orange-glow font-bold py-3 px-8 rounded-full text-xs uppercase tracking-wider transition-colors shadow-md min-h-[44px]">
+                            Learn more about donation options <ChevronRight className="w-4 h-4" />
+                        </Link>
                     </div>
                 </div>
             </section>
