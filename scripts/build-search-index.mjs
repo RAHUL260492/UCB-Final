@@ -84,6 +84,7 @@ for (const file of fs.readdirSync(PAGES_DIR)) {
   const component = file.replace(/\.tsx$/, '');
   const routePath = componentToPath[component];
   if (!routePath) continue; // not routed (or only via redirect)
+  if (routePath === '/admin') continue; // internal editor — keep out of public search
   const src = fs.readFileSync(path.join(PAGES_DIR, file), 'utf8');
   const text = extractText(src);
   if (!text) continue;

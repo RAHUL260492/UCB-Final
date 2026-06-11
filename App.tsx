@@ -47,6 +47,7 @@ import SafetyWellness from './pages/SafetyWellness';
 import Alumni from './pages/Alumni';
 import CollegeServicesAndResources from './pages/CollegeServicesAndResources';
 import Workforce from './pages/Workforce';
+import Admin from './pages/Admin';
 import Donate from './pages/Donate';
 import Contact from './pages/Contact';
 import ThankYouProgram from './pages/ThankYouProgram';
@@ -81,6 +82,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/donate" element={<Donate />} />
+            <Route path="/admin" element={<Admin />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/mission" element={<Mission />} />
             <Route path="/president" element={<President />} />
