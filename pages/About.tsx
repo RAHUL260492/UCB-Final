@@ -26,7 +26,7 @@ const About: React.FC = () => {
         { year: "1993", title: "Urban College Founded", desc: "Established by ABCD to serve Boston's diverse, low-income communities and create an accessible pathway to higher education." },
         { year: "1996", title: "First Commencement", desc: "Held our first graduation ceremony with 4 proud graduates, establishing a legacy of success." },
         { year: "2000s", title: "Multilingual Expansion", desc: "Significantly expanded curriculum to offer courses in Spanish and Mandarin, validating students' native languages." },
-        { year: "2010s", title: "HSI Federal Designation", desc: "Designated as a Hispanic-Serving Institution (HSI), strengthening our support infrastructure for diverse learners." },
+        { year: "2010s", title: "Hispanic-Serving Institution (HSI) Federal Designation", desc: "Designated as a minority-serving institution and Hispanic-Serving Institution (HSI), demonstrating our commitment to students who have historically been excluded from higher education in the U.S." },
         { year: "2020s", title: "Fully Online Transition", desc: "Transitioned to 100% online instruction to offer maximum flexibility for working adults and parent students." },
         { year: "2023", title: "Celebrating 30 Years", desc: "Celebrated three decades of transformation, graduating 72 students at our annual Commencement ceremony." }
     ];
@@ -320,7 +320,7 @@ const About: React.FC = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                         {[
                             { title: "NECHE Accredited", desc: "Accredited by the New England Commission of Higher Education" },
-                            { title: "Designated HSI", desc: "Federally Designated Hispanic-Serving Institution" },
+                            { title: "Designated Hispanic-Serving Institution (HSI)", desc: "Federally Designated Hispanic-Serving Institution" },
                             { title: "501(c)(3) Nonprofit", desc: "Private, nonprofit community-focused institution" }
                         ].map((item, idx) => (
                             <ScrollAnimation key={idx} variant="fade-up" delay={`${idx * 0.1}s`} className="flex">

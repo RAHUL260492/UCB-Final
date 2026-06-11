@@ -44,16 +44,16 @@ const Navigation: React.FC = () => {
       path: '/about',
       dropdown: [
         { name: 'About Us', path: '/about' },
-        { name: 'Our Mission & Vision', path: '/mission' },
-        { name: 'Office of the President', path: '/president' },
-        { name: 'Board of Trustees', path: '/trustees' },
-        { name: 'Urban College Foundation', path: '/foundation' },
-        { name: 'Leadership & Team', path: '/team' },
-        { name: 'Alumni', path: '/alumni' },
         { name: 'Accreditation', path: '/accreditation' },
+        { name: 'Alumni', path: '/alumni' },
+        { name: 'Board of Trustees', path: '/trustees' },
+        { name: 'Compliance', path: '/compliance' },
         { name: 'Employment Opportunities', path: '/employment' },
+        { name: 'Leadership & Administration', path: '/team' },
+        { name: 'Office of the President', path: '/president' },
+        { name: 'Our Mission & Vision', path: '/mission' },
         { name: 'Policies & Disclosures', path: '/policies-disclosures' },
-        { name: 'Compliance', path: '/compliance' }
+        { name: 'Urban College Foundation', path: '/foundation' }
       ]
     },
     {
@@ -75,8 +75,8 @@ const Navigation: React.FC = () => {
             { name: 'Case Management', path: '/programs/case-management' },
             { name: "Children's Behavioral Health", path: '/programs/childrens-behavioral-health-certificate' },
             { name: 'Digital Marketing', path: '/programs/digital-marketing-certificate' },
-            { name: 'Elder Care', path: '/programs/elder-care' },
             { name: 'Early Childhood Education', path: '/programs/early-childhood-education-certificate' },
+            { name: 'Elder Care', path: '/programs/elder-care' },
             { name: 'General Studies', path: '/programs/general-studies-certificate' },
             { name: 'Human Services', path: '/programs/human-services-certificate' },
             { name: 'Paraprofessional Educator', path: '/programs/paraprofessional-educator-certificate' },
@@ -96,8 +96,8 @@ const Navigation: React.FC = () => {
       path: '/admissions',
       dropdown: [
         { name: 'Admissions Overview', path: '/admissions' },
-        { name: 'Information Sessions', path: '/info-sessions' },
         { name: 'Financial Aid & Funding', path: '/financial-services-and-funding-options' },
+        { name: 'Information Sessions', path: '/info-sessions' },
         { name: 'Tuition & Cost of Attendance', path: '/financial-aid' },
         { name: 'Tuition Payment Options', path: '/tuition-payment-options' }
       ]
@@ -106,29 +106,29 @@ const Navigation: React.FC = () => {
       name: 'Students',
       path: '/students',
       dropdown: [
-        { name: 'Registration', path: '/course-registration' },
-        { name: 'Student Services', path: '/student-services-overview' },
         { name: 'Academic Calendar', path: '/academic-calendar-webpage' },
         { name: 'College Catalog', path: 'https://catalog.urbancollege.edu/' },
         { name: 'College Transfer Pathways', path: '/college-transfer-pathways' },
+        { name: 'Commencement Ceremony', path: '/commencement' },
         { name: 'Learning Resource Center', path: '/learning-resource-center' },
+        { name: 'Registration', path: '/course-registration' },
         { name: 'Student Government Association', path: '/student-government' },
+        { name: 'Student Services', path: '/student-services-overview' },
         { name: 'Technology Account Guide', path: '/technology-account-guide' },
-        { name: 'Transcript Requests', path: '/transcript-requests' },
-        { name: 'Commencement Ceremony', path: '/commencement' }
+        { name: 'Transcript Requests', path: '/transcript-requests' }
       ]
     },
     { name: 'Workforce', path: '/workforce', className: 'hidden lg:block' },
-    { name: 'Donate', path: '/donate', className: 'hidden xl:block' },
-    { 
-      name: 'News', 
+    {
+      name: 'News',
       path: '/blog',
       className: 'hidden lg:block',
       dropdown: [
-        { name: 'Urban College Blog', path: '/blog' },
-        { name: 'In the News', path: '/news' }
+        { name: 'In the News', path: '/news' },
+        { name: 'Urban College Blog', path: '/blog' }
       ]
-    }
+    },
+    { name: 'Donate', path: '/donate', className: 'hidden lg:block' }
   ];
 
   const [initialHeight, setInitialHeight] = useState<number | 'auto'>('auto');
@@ -164,8 +164,8 @@ const Navigation: React.FC = () => {
       {/* Utility Bar */}
       <div className={`bg-ucb-blue text-white text-xs transition-all duration-500 overflow-hidden ${isScrolled ? 'h-0 py-0' : 'h-12 py-1'} hidden md:block border-b border-white/10`}>
         <div className="container mx-auto px-6 flex justify-end items-center gap-6 font-medium h-full">
-          <a href="tel:+16175550123" className="flex items-center gap-1 hover:text-ucb-gold transition-colors">
-            <Phone className="w-3 h-3" /> 617-555-0123
+          <a href="tel:+16174497070" className="flex items-center gap-1 hover:text-ucb-gold transition-colors">
+            <Phone className="w-3 h-3" /> 617-449-7070
           </a>
           <Link to="/espanol" className="flex items-center gap-1 hover:text-ucb-gold transition-colors min-h-[44px]">
             <Globe className="w-3 h-3" /> Español
@@ -216,7 +216,7 @@ const Navigation: React.FC = () => {
                   className={`hover:text-ucb-blue transition-colors relative group py-2 flex items-center gap-1 ${location.pathname === item.path ? 'text-ucb-blue' : ''} ${useWhiteNav && location.pathname !== item.path ? 'hover:text-ucb-gold' : ''}`}
                 >
                   {item.name}
-                  {item.dropdown && <ChevronDown className="w-4 h-4 mt-0.5 group-hover/item:rotate-180 transition-transform duration-300" />}
+                  {(item.dropdown || item.groups) && <ChevronDown className="w-4 h-4 mt-0.5 group-hover/item:rotate-180 transition-transform duration-300" />}
                   <span className={`absolute bottom-0 left-0 h-0.5 bg-ucb-blue transition-all duration-300 ${location.pathname === item.path ? 'w-full' : 'w-0 group-hover:w-full'} ${useWhiteNav ? 'bg-white' : ''}`}></span>
                 </Link>
 
@@ -502,7 +502,7 @@ const Navigation: React.FC = () => {
                 <Globe className="w-5 h-5" /> 中文
               </Link>
               <span className="text-gray-300">|</span>
-              <a href="tel:+16175550123" className="hover:text-ucb-orange flex items-center gap-1.5">
+              <a href="tel:+16174497070" className="hover:text-ucb-orange flex items-center gap-1.5">
                 <Phone className="w-5 h-5" /> Call
               </a>
             </div>

@@ -59,27 +59,20 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               {[
                 { name: 'About Us', path: '/about' },
-                { name: 'Office of the President', path: '/president' },
-                { name: 'Board of Trustees', path: '/trustees' },
-                { name: 'Urban College Foundation', path: '/foundation' },
-                { name: 'Leadership & Team', path: '/team' },
-                { name: 'Alumni', path: '/alumni' },
+                { name: 'Academic Calendar', path: '/academic-calendar-webpage' },
                 { name: 'Admissions Overview', path: '/admissions' },
-                { name: 'Information Sessions', path: '/info-sessions' },
-                { name: 'Financial Aid & Funding', path: '/financial-services-and-funding-options' },
-                { name: 'Tuition & Cost of Attendance', path: '/financial-aid' },
-                { name: 'Tuition Payment Options', path: '/tuition-payment-options' },
-                { name: 'Academic Calendar', path: '/policies-disclosures#academic-affairs' },
-                { name: 'Library Services', path: '#' },
-                { name: 'Career Center', path: '#' },
-                { name: 'Student Portal', path: 'https://portal.urbancollege.edu/' },
+                { name: 'Alumni', path: '/alumni' },
+                { name: 'Board of Trustees', path: '/trustees' },
                 { name: 'Compliance', path: '/compliance' },
-                { name: 'Campus Facilities', path: '/campus-facilities' },
+                { name: 'Financial Aid & Funding', path: '/financial-services-and-funding-options' },
+                { name: 'Information Sessions', path: '/info-sessions' },
+                { name: 'Join Our Team', path: '/employment' },
+                { name: 'Leadership & Administration', path: '/team' },
                 { name: 'Safety & Wellness', path: '/safety-and-wellness' },
-                { name: 'HEERF Reports', path: '/heerf-reports' },
+                { name: 'Student Portal', path: 'https://portal.urbancollege.edu/' },
+                { name: 'Tuition & Cost of Attendance', path: '/financial-aid' },
                 { name: 'Urban College Blog', path: '/blog' },
-                { name: 'In the News', path: '/news' },
-                { name: 'Join Our Team', path: '/employment' }
+                { name: 'Urban College Foundation', path: '/foundation' }
               ].map((item) => (
                 <li key={item.name}>
                   {item.path.startsWith('/') ? (
@@ -100,12 +93,12 @@ const Footer: React.FC = () => {
 
           {/* Programs */}
           <div className="lg:col-span-2">
-            <h4 className="font-display font-bold text-lg text-white mb-4">Programs</h4>
+            <h4 className="font-display font-bold text-lg text-white mb-4"><Link to="/programs" className="hover:text-ucb-orange transition-colors">Programs</Link></h4>
             <ul className="space-y-3">
               {[
-                { name: 'Early Childhood Education', path: '/programs/early-childhood-education' },
-                { name: 'Human Services Administration', path: '/programs/human-services-administration' },
-                { name: 'General Studies', path: '/programs/general-studies-associate' },
+                { name: 'Early Childhood Education Associate Degree', path: '/programs/early-childhood-education' },
+                { name: 'Human Services Administration Associate Degree', path: '/programs/human-services-administration' },
+                { name: 'General Studies Associate Degree', path: '/programs/general-studies-associate' },
                 { name: 'Business Certificate', path: '/programs/business-certificate' },
                 { name: 'Case Management Certificate', path: '/programs/case-management' },
                 { name: "Children's Behavioral Health Certificate", path: '/programs/childrens-behavioral-health-certificate' },
@@ -115,8 +108,7 @@ const Footer: React.FC = () => {
                 { name: 'General Studies Certificate', path: '/programs/general-studies-certificate' },
                 { name: 'Human Services Certificate', path: '/programs/human-services-certificate' },
                 { name: 'Paraprofessional Educator Certificate', path: '/programs/paraprofessional-educator-certificate' },
-                { name: 'Project Management Certificate', path: '/programs/project-management-certificate' },
-                { name: 'All Programs', path: '/programs' }
+                { name: 'Project Management Certificate', path: '/programs/project-management-certificate' }
               ].map((item) => (
                 <li key={item.name}>
                   <Link to={item.path} className="text-blue-100 hover:text-ucb-orange transition-colors flex items-center group">
@@ -142,7 +134,7 @@ const Footer: React.FC = () => {
                 <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0 group-hover:bg-ucb-green-glow/20 transition-colors">
                   <Phone className="w-5 h-5 text-ucb-copper" />
                 </div>
-                <span>617-555-0123</span>
+                <a href="tel:+16174497070" className="hover:text-white transition-colors">617-449-7070</a>
               </li>
               <li className="flex items-center gap-4 text-blue-100 group">
                 <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0 group-hover:bg-ucb-green-glow/20 transition-colors">

@@ -37,7 +37,7 @@ const FEATURES = [
   {
     icon: Users,
     title: 'Community-Rooted',
-    desc: 'Founded by ABCD. Proud HSI designated institution.',
+    desc: 'Founded by ABCD. Proudly designated a Hispanic-Serving Institution (HSI).',
     gradient: 'from-ucb-teal to-ucb-blue',
     bg: 'bg-teal-50',
     iconColor: 'text-ucb-teal',
