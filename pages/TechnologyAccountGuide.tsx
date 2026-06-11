@@ -31,7 +31,7 @@ const TechnologyAccountGuide: React.FC = () => {
         {
             title: "Brightspace LMS Portal",
             desc: "Access your online and hybrid courses, download syllabus documents, complete assignments, and track class grades.",
-            path: "https://urbancollege.instructure.com", // Wait, LMS can be Brightspace or Canvas, let's match the standard login links or the domain.
+            path: "http://learn.urbancollege.edu",
             actionText: "Login to Brightspace",
             icon: Laptop,
             accent: "border-ucb-orange/20 bg-ucb-orange/[0.02]"

@@ -38,14 +38,14 @@ const FinancialServices: React.FC = () => {
         },
         {
             type: "Scholarships",
-            desc: "Need-based awards allocated by program. We do not offer merit-based scholarships.",
+            desc: "Need-based awards allocated by program and student success.",
             repay: "No Repayment Needed",
             icon: Award,
             color: "text-ucb-orange bg-orange-50 border-orange-100"
         },
         {
             type: "Work-Study",
-            desc: "Earn money through part-time jobs on campus that help you gain work experience while learning.",
+            desc: "Earn money through part-time jobs that help you gain work experience while learning.",
             repay: "Earn Money (No Repayment)",
             icon: Briefcase,
             color: "text-ucb-teal bg-teal-50 border-teal-100"
@@ -228,9 +228,9 @@ const FinancialServices: React.FC = () => {
                             <span className="w-10 h-10 rounded-xl bg-ucb-blue text-white font-display font-black text-lg flex items-center justify-center mx-auto shadow-sm">
                                 1
                             </span>
-                            <h4 className="font-display font-bold text-sm text-ucb-blue">Fill Out FAFSA</h4>
+                            <h4 className="font-display font-bold text-sm text-ucb-blue">Complete Portal</h4>
                             <p className="text-xs text-gray-500 leading-relaxed font-light">
-                                Submit the Free Application for Federal Student Aid at <a href="https://studentaid.gov" target="_blank" rel="noreferrer" className="text-ucb-orange hover:underline font-medium">studentaid.gov</a>. Use school code <strong className="text-ucb-blue">031305</strong>.
+                                Set up and complete your profile on Urban College's financial aid portal (completely free!).
                             </p>
                         </ScrollAnimation>
 
@@ -239,9 +239,9 @@ const FinancialServices: React.FC = () => {
                             <span className="w-10 h-10 rounded-xl bg-ucb-blue text-white font-display font-black text-lg flex items-center justify-center mx-auto shadow-sm">
                                 2
                             </span>
-                            <h4 className="font-display font-bold text-sm text-ucb-blue">Complete Portal</h4>
+                            <h4 className="font-display font-bold text-sm text-ucb-blue">Fill Out FAFSA</h4>
                             <p className="text-xs text-gray-500 leading-relaxed font-light">
-                                Set up and complete your profile on Urban College's financial aid portal (completely free!).
+                                Submit the Free Application for Federal Student Aid at <a href="https://studentaid.gov" target="_blank" rel="noreferrer" className="text-ucb-orange hover:underline font-medium">studentaid.gov</a>. Use school code <strong className="text-ucb-blue">031305</strong>.
                             </p>
                         </ScrollAnimation>
 
@@ -308,7 +308,7 @@ const FinancialServices: React.FC = () => {
                                     <CheckCircle className="w-4 h-4 text-ucb-emerald mt-0.5 shrink-0" />
                                     <div>
                                         <strong className="block text-gray-800 font-semibold text-sm">Federal Work-Study</strong>
-                                        Paid, part-time campus employment options allowing you to earn cash to help cover living expenses.
+                                        Paid, part-time employment options allowing you to earn cash to help cover living expenses.
                                     </div>
                                 </li>
                             </ul>
@@ -356,17 +356,17 @@ const FinancialServices: React.FC = () => {
                             </div>
                             
                             <div className="bg-ucb-orange/5 border border-ucb-orange/15 rounded-2xl p-4 mt-6">
-                                <h5 className="text-xs font-bold text-ucb-blue uppercase tracking-wider mb-1">Explore Important Dates</h5>
+                                <h5 className="text-xs font-bold text-ucb-blue uppercase tracking-wider mb-1">Scholarship Policies</h5>
                                 <p className="text-[11px] text-gray-500 font-light leading-relaxed mb-3">
-                                    Visit the Urban College Catalog to view detailed scholarship policies and submission deadlines.
+                                    Visit the Mass Office of Student Financial Aid to view detailed scholarship policies.
                                 </p>
-                                <a 
-                                    href="https://catalog.urbancollege.edu/content.php?catoid=3&navoid=98" 
-                                    target="_blank" 
-                                    rel="noreferrer" 
+                                <a
+                                    href="https://www.mass.edu/osfa/programs/massgrant.asp"
+                                    target="_blank"
+                                    rel="noreferrer"
                                     className="inline-flex items-center text-[10px] font-bold text-ucb-orange uppercase tracking-wider hover:underline"
                                 >
-                                    Explore Academic Catalog <ChevronRight className="w-3.5 h-3.5" />
+                                    Visit Mass OSFA <ChevronRight className="w-3.5 h-3.5" />
                                 </a>
                             </div>
                         </ScrollAnimation>
@@ -388,29 +388,11 @@ const FinancialServices: React.FC = () => {
 
                             <ScrollAnimation variant="slide-right" className="text-gray-600 text-sm leading-relaxed font-light space-y-4">
                                 <p>
-                                    Beyond government programs, Urban College of Boston offers institutional scholarship funds to close funding gaps for our students.
+                                    Beyond government programs, Urban College of Boston offers institutional scholarship funds to close funding gaps for our students. These awards are designed to support students who qualify and demonstrate financial need.
                                 </p>
                                 <p>
                                     Eligible students may receive up to <strong className="text-ucb-blue">$200 per course</strong> through the Institutional Grant — <a href="https://forms.office.com/pages/responsepage.aspx?id=HnCdJ2cNiUupTrgmGCPjKyySsSnWljpEnQadnkdsUOVUMjBRUVdPVDhTN0daWDFJOElLWlRNQUpYVC4u&route=shorturl" target="_blank" rel="noreferrer" className="text-ucb-orange hover:underline font-semibold">apply with the Institutional Aid form</a>.
                                 </p>
-                                <p>
-                                    These awards are designed to support students who qualify and demonstrate:
-                                </p>
-                            </ScrollAnimation>
-
-                            <ScrollAnimation variant="slide-right" className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-gray-700 font-medium pt-2">
-                                <div className="flex items-center gap-2">
-                                    <CheckCircle className="w-4 h-4 text-ucb-emerald shrink-0" /> Academic Achievement & Potential
-                                </div>
-                                <div className="flex items-center gap-2">
-                                    <CheckCircle className="w-4 h-4 text-ucb-emerald shrink-0" /> Multilingual Ability
-                                </div>
-                                <div className="flex items-center gap-2">
-                                    <CheckCircle className="w-4 h-4 text-ucb-emerald shrink-0" /> Demonstrated Financial Need
-                                </div>
-                                <div className="flex items-center gap-2">
-                                    <CheckCircle className="w-4 h-4 text-ucb-emerald shrink-0" /> Returning Adult, Parent, or Caregiver
-                                </div>
                             </ScrollAnimation>
                         </div>
 

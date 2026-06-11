@@ -113,7 +113,7 @@ const LearningResourceCenter: React.FC = () => {
                                     <div className="flex gap-4">
                                         <MapPin className="w-6 h-6 text-ucb-orange shrink-0" />
                                         <div>
-                                            <h4 className="font-bold text-ucb-black">In-Person (Walk-ins)</h4>
+                                            <h4 className="font-bold text-ucb-black">In-Person (By Appointment)</h4>
                                             <p className="text-gray-600 text-sm mt-1">Wednesdays & Thursdays<br />11:00 AM - 6:00 PM<br />2 Boylston Street, 2nd Floor</p>
                                         </div>
                                     </div>

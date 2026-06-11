@@ -50,7 +50,7 @@ const TuitionPaymentOptions: React.FC = () => {
             ],
             contact: {
                 phone: "(617) 449-7430 or (617) 449-7429",
-                email: "studentpayment@urbancollege.edu",
+                email: "financialservices@urbancollege.edu",
                 hours: "Monday – Friday 10:00am – 6:00pm (ET)"
             },
             icon: Calendar,
@@ -65,7 +65,7 @@ const TuitionPaymentOptions: React.FC = () => {
             ],
             contact: {
                 phone: "(617) 449-7430",
-                email: "studentpayment@urbancollege.edu",
+                email: "financialservices@urbancollege.edu",
                 hours: "Business Office Hours"
             },
             icon: CreditCard,
@@ -106,15 +106,11 @@ const TuitionPaymentOptions: React.FC = () => {
             linkLabel: "High Demand Scholarship website"
         },
         {
-            title: "Tuition Free Community College (TFCC) Plan",
-            desc: "The City of Boston covers up to three years of tuition and fees for eligible Boston residents.",
-            criteria: [
-                "Eligibility: Boston resident, age 18-24, High School diploma or equivalency.",
-                "Requirements: If eligible, students must complete the FAFSA and remain continuously enrolled.",
-                "Undocumented Students: The TFCC will provide last-dollar funding up to $2,500 per semester for up to 3 years."
-            ],
-            link: "https://www.boston.gov/departments/workforce-development/tuition-free-community-college-plan",
-            linkLabel: "City of Boston TFCC website"
+            title: "Private Scholarship and Donations",
+            desc: "Urban College receives private scholarships and donations from several state and local community partners. To see if you are eligible for one of these opportunities, contact your financial services advisor to discuss what options are available.",
+            criteria: [],
+            link: "mailto:financialservices@urbancollege.edu",
+            linkLabel: "Contact Financial Services"
         }
     ];
 

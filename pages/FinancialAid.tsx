@@ -268,14 +268,22 @@ const FinancialAid: React.FC = () => {
                                     Review the critical federal updates and financial policy shifts for the 2026-2027 Award Year.
                                 </p>
                             </div>
-                            <div className="pt-6">
-                                <a 
-                                    href="https://www.urbancollege.edu/s/Federal-Policy-Changes-26-27.pdf" 
-                                    target="_blank" 
-                                    rel="noreferrer" 
+                            <div className="pt-6 flex flex-col gap-2">
+                                <a
+                                    href="https://www.urbancollege.edu/s/Federal-Policy-Changes-26-27.pdf"
+                                    target="_blank"
+                                    rel="noreferrer"
                                     className="inline-flex items-center gap-1.5 text-xs font-bold text-ucb-orange uppercase tracking-wider hover:underline"
                                 >
                                     Download PDF <Download className="w-4.5 h-4.5" />
+                                </a>
+                                <a
+                                    href="https://catalog.urbancollege.edu/content.php?catoid=3&navoid=98"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="inline-flex items-center gap-1.5 text-xs font-bold text-ucb-orange uppercase tracking-wider hover:underline"
+                                >
+                                    Federal Funding Policies (Catalog) <ChevronRight className="w-4.5 h-4.5" />
                                 </a>
                             </div>
                         </ScrollAnimation>

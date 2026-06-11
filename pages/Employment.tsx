@@ -62,7 +62,7 @@ const Employment: React.FC = () => {
             title: "Adjunct Faculty - Early Childhood Education (English/Spanish/Mandarin)",
             dept: "Academic Affairs",
             type: "Part-Time",
-            location: "Hybrid (China Trade Center)",
+            location: "Hybrid (2 Days On-Campus)",
             desc: "Instruct adult learners in early childhood development, curriculum design, and assessment methodologies. Ability to teach in Spanish or Mandarin is highly preferred.",
             requirements: ["Master's degree in ECE, Child Development, or related education field", "Experience teaching adult learners or non-traditional students", "Bilingual proficiency preferred"]
         },
@@ -290,18 +290,6 @@ const Employment: React.FC = () => {
                             </a>
                         </ScrollAnimation>
 
-                        <ScrollAnimation variant="slide-left" className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm space-y-6 flex flex-col justify-between text-center items-center">
-                            <div className="w-12 h-12 rounded-full bg-ucb-blue/10 flex items-center justify-center text-ucb-blue">
-                                <Phone className="w-6 h-6" />
-                            </div>
-                            <div className="space-y-2">
-                                <h3 className="font-display font-bold text-lg text-ucb-black">Inquiries by Phone</h3>
-                                <p className="text-gray-500 text-sm max-w-xs font-light">Have questions about the application or requirements? Contact HR office directly.</p>
-                            </div>
-                            <a href="tel:617-449-7070" className="font-bold text-ucb-blue hover:text-ucb-blue-glow transition-colors text-base select-all">
-                                (617) 449-7070
-                            </a>
-                        </ScrollAnimation>
                     </div>
                 </div>
             </section>
