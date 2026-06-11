@@ -102,7 +102,7 @@ const StudentServices: React.FC = () => {
         },
         {
             q: "What if I have a disability or need an accommodation?",
-            a: "Contact Rosana Perella at rosana.perella@urbancollege.edu or 617-449-7380 to start the accommodation process. You can also download the Accommodation Request Form and Medical Provider Form directly from this page."
+            a: "Contact Student Services at studentservices@urbancollege.edu or 617-449-7380 to start the accommodation process. You can also download the Accommodation Request Form and Medical Provider Form directly from this page."
         },
         {
             q: "Who do I contact if I'm struggling personally?",
@@ -275,7 +275,7 @@ const StudentServices: React.FC = () => {
                         <ScrollAnimation variant="slide-left" className="lg:col-span-5 bg-gray-50 border border-gray-100 rounded-3xl p-8 space-y-4">
                             <h4 className="font-display font-bold text-gray-800 text-base">Get in Touch</h4>
                             <p className="text-gray-500 text-xs font-light leading-relaxed">
-                                When it's time to register, schedule an appointment with your advisor to build your course plan and enroll.
+                                When it's time to register, contact your advisor to schedule an appointment. Together, you'll build your course plan and enroll.
                             </p>
                             <div className="space-y-3 pt-2">
                                 <a href="mailto:registration@urbancollege.edu" className="flex items-center gap-3 p-3 bg-white rounded-xl border border-gray-150 text-gray-700 hover:text-ucb-blue transition-all font-semibold text-xs shadow-sm">
@@ -301,9 +301,9 @@ const StudentServices: React.FC = () => {
                                 <p className="text-gray-500 text-xs">Director of Student Services and Support</p>
                             </div>
                             <div className="space-y-3">
-                                <a href="mailto:rosana.perella@urbancollege.edu" className="flex items-center gap-3 p-3 bg-white rounded-xl border border-gray-150 text-gray-700 hover:text-ucb-blue transition-all font-semibold text-xs shadow-sm">
+                                <a href="mailto:studentservices@urbancollege.edu" className="flex items-center gap-3 p-3 bg-white rounded-xl border border-gray-150 text-gray-700 hover:text-ucb-blue transition-all font-semibold text-xs shadow-sm">
                                     <Mail className="w-4.5 h-4.5 text-ucb-orange" />
-                                    <span>rosana.perella@urbancollege.edu</span>
+                                    <span>studentservices@urbancollege.edu</span>
                                 </a>
                                 <a href="tel:617-449-7380" className="flex items-center gap-3 p-3 bg-white rounded-xl border border-gray-150 text-gray-700 hover:text-ucb-blue transition-all font-semibold text-xs shadow-sm">
                                     <Phone className="w-4.5 h-4.5 text-ucb-blue" />
@@ -311,7 +311,7 @@ const StudentServices: React.FC = () => {
                                 </a>
                             </div>
                             <div className="space-y-2 border-t border-gray-200/50 pt-4">
-                                <a href="/s/Accommodation-and-Accessibility-Process-ytyr.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between text-xs font-bold text-gray-600 hover:text-ucb-blue transition-colors">
+                                <a href="https://static1.squarespace.com/static/5be099a375f9eecbf2753e8d/t/67b7b8be2b7701335d368846/1740093630453/Accommodation+and+Accessibility+Process.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between text-xs font-bold text-gray-600 hover:text-ucb-blue transition-colors">
                                     <span>Accommodation Guide (PDF)</span>
                                     <Download className="w-4 h-4" />
                                 </a>
@@ -423,6 +423,52 @@ const StudentServices: React.FC = () => {
                             <a href="mailto:lrc@urbancollege.edu" className="bg-white border border-gray-250 text-gray-700 hover:text-ucb-blue text-xs px-4 py-2 rounded-xl transition-all shadow-sm font-bold inline-block w-fit">Ask About Workshops</a>
                         </ScrollAnimation>
                     </div>
+
+                    <hr className="border-gray-100" />
+
+                    {/* Phi Theta Kappa Honor Society */}
+                    <ScrollAnimation variant="fade-up" id="phi-theta-kappa" className="bg-gray-50 border border-gray-100 rounded-3xl p-8 md:p-12 space-y-8 scroll-mt-32">
+                        <div className="space-y-2 text-center max-w-3xl mx-auto">
+                            <span className="text-[10px] font-bold text-ucb-orange uppercase tracking-wider block font-display">Phi Theta Kappa Honor Society</span>
+                            <h3 className="text-2xl md:text-3xl font-display font-black text-ucb-black">Beta Omega Sigma Chapter</h3>
+                            <p className="text-gray-600 text-sm font-light leading-relaxed">
+                                Welcome to one of the most prestigious academic honor societies for two-year college students in the world.
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                            <div className="bg-white rounded-2xl border border-gray-100 p-6 space-y-3 shadow-sm">
+                                <h4 className="font-display font-bold text-ucb-blue">Membership Eligibility</h4>
+                                <p className="text-gray-500 text-xs font-light">To qualify for membership in the Beta Omega Sigma Chapter, students must meet the following criteria:</p>
+                                <ul className="space-y-2 text-xs text-gray-600 font-light">
+                                    <li className="flex items-start gap-2"><CheckCircleIcon className="w-4 h-4 text-ucb-emerald shrink-0 mt-0.5" /><span><strong>Enrollment</strong> — Currently enrolled at an accredited two-year college (Urban College qualifies).</span></li>
+                                    <li className="flex items-start gap-2"><CheckCircleIcon className="w-4 h-4 text-ucb-emerald shrink-0 mt-0.5" /><span><strong>Credit Hours</strong> — Completion of at least 12 credit hours of associate degree coursework.</span></li>
+                                    <li className="flex items-start gap-2"><CheckCircleIcon className="w-4 h-4 text-ucb-emerald shrink-0 mt-0.5" /><span><strong>GPA</strong> — A cumulative GPA of 3.5 or higher.</span></li>
+                                    <li className="flex items-start gap-2"><CheckCircleIcon className="w-4 h-4 text-ucb-emerald shrink-0 mt-0.5" /><span><strong>Good Standing</strong> — Students must adhere to Urban College's student conduct code and demonstrate qualities of citizenship and academic integrity.</span></li>
+                                    <li className="flex items-start gap-2"><CheckCircleIcon className="w-4 h-4 text-ucb-emerald shrink-0 mt-0.5" /><span><strong>One-Time Membership Fee</strong> — A one-time fee is required to join at the national level. If cost is a barrier, speak with an advisor — financial assistance options may be available.</span></li>
+                                </ul>
+                            </div>
+                            <div className="bg-white rounded-2xl border border-gray-100 p-6 space-y-4 shadow-sm">
+                                <h4 className="font-display font-bold text-ucb-blue">Benefits of Membership</h4>
+                                <div className="space-y-1">
+                                    <p className="text-xs font-bold text-ucb-orange uppercase tracking-wider">Scholarships</p>
+                                    <p className="text-gray-500 text-xs font-light leading-relaxed">PTK offers three powerful types of scholarships. Most notably, PTK has partnered with four-year universities to provide exclusive scholarships for members who transfer — awards worth millions nationwide, and most are guaranteed for members who choose to attend partner institutions. PTK partners with over 800 four-year colleges and universities, and for members pursuing a bachelor's degree the average scholarship is over $4,500 annually.</p>
+                                </div>
+                                <div className="space-y-1">
+                                    <p className="text-xs font-bold text-ucb-orange uppercase tracking-wider">Transfer Support</p>
+                                    <p className="text-gray-500 text-xs font-light leading-relaxed">Once a member, you can access PTK Connect, a comprehensive database to explore colleges, review what scholarships they offer, and discover other supports available for transfer students. The PTK Transfer Honor Roll identifies four-year institutions that excel in supporting transfer students — evaluated on success rates, financial aid, admissions practices, campus life, and cost.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="text-center space-y-3">
+                            <p className="text-gray-600 text-xs font-light max-w-2xl mx-auto">Have questions about eligibility, membership fees, or upcoming chapter activities? Reach out to us — we're here to support you every step of the way.</p>
+                            <div className="flex flex-wrap justify-center gap-3">
+                                <a href="mailto:learningresourcecenter@urbancollege.edu" className="bg-white border border-gray-250 text-gray-700 hover:text-ucb-blue text-xs px-4 py-2 rounded-xl transition-all shadow-sm font-bold">learningresourcecenter@urbancollege.edu</a>
+                                <a href="mailto:studentservices@urbancollege.edu" className="bg-white border border-gray-250 text-gray-700 hover:text-ucb-blue text-xs px-4 py-2 rounded-xl transition-all shadow-sm font-bold">studentservices@urbancollege.edu</a>
+                            </div>
+                        </div>
+                    </ScrollAnimation>
 
                     <hr className="border-gray-100" />
 
