@@ -264,12 +264,12 @@ const Trustees: React.FC = () => {
             <section className="py-16 bg-gray-50 border-t border-gray-100">
                 <div className="container mx-auto px-6 max-w-5xl">
                     <ScrollAnimation variant="fade-up" className="text-center mb-12">
-                        <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs mb-2 block">Governance Leadership</span>
-                        <h2 className="text-3xl font-display font-bold text-ucb-blue">Board Officers</h2>
+                        <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs mb-2 block">Our Board</span>
+                        <h2 className="text-3xl font-display font-bold text-ucb-blue">Meet the Board</h2>
                     </ScrollAnimation>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {OFFICERS.map((member, idx) => (
+                        {[...OFFICERS, ...TRUSTEES, ...EX_OFFICIO, ...REPRESENTATIVES].map((member, idx) => (
                             <ScrollAnimation key={idx} variant="slide-left" delay={`${(idx % 2) * 0.1}s`} className="flex">
                                 <div className="bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-all p-6 flex flex-col justify-between w-full">
                                     <div className="space-y-4">
@@ -297,105 +297,16 @@ const Trustees: React.FC = () => {
                                         </p>
                                     </div>
 
-                                    <div className="mt-6 pt-4 border-t border-gray-50 text-[10px] font-bold uppercase tracking-wider text-gray-400 flex items-center gap-1.5">
-                                        <GraduationCap className="w-3.5 h-3.5 text-ucb-blue" /> {member.education}
-                                    </div>
-                                </div>
-                            </ScrollAnimation>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Trustees Section */}
-            <section className="py-16 bg-white border-t border-gray-100">
-                <div className="container mx-auto px-6 max-w-5xl">
-                    <ScrollAnimation variant="fade-up" className="text-center mb-12">
-                        <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs mb-2 block">Institutional Guardians</span>
-                        <h2 className="text-3xl font-display font-bold text-ucb-blue">Trustees</h2>
-                    </ScrollAnimation>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {TRUSTEES.map((member, idx) => (
-                            <ScrollAnimation key={idx} variant="slide-left" delay={`${(idx % 2) * 0.1}s`} className="flex">
-                                <div className="bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-all p-6 flex flex-col justify-between w-full">
-                                    <div className="space-y-4">
-                                        <div className="flex items-center gap-4">
-                                            {/* Stylized Avatar */}
-                                            <div className="w-12 h-12 rounded-xl bg-ucb-teal/10 text-ucb-teal font-display font-black text-lg flex items-center justify-center shrink-0 overflow-hidden">
-                                                {member.image ? (
-                                                    <img src={member.image} alt={member.name} className="w-full h-full object-cover object-top" />
-                                                ) : (
-                                                    member.avatarInitials
-                                                )}
-                                            </div>
-                                            <div>
-                                                <h3 className="font-display font-bold text-base text-ucb-blue leading-snug">{member.name}</h3>
-                                                <p className="text-xs font-bold text-gray-400 leading-tight">{member.role}</p>
-                                            </div>
-                                        </div>
-
-                                        <p className="text-xs font-bold text-ucb-orange uppercase tracking-wide flex items-center gap-1.5 bg-ucb-orange/5 px-2.5 py-1 rounded-lg">
-                                            <Briefcase className="w-3.5 h-3.5" /> {member.expertise}
-                                        </p>
-
-                                        <p className="text-xs text-gray-500 leading-relaxed font-light">
-                                            {member.bio}
-                                        </p>
-                                    </div>
-
-                                    <div className="mt-6 pt-4 border-t border-gray-50 text-[10px] font-bold uppercase tracking-wider text-gray-400 flex items-center gap-1.5">
-                                        <GraduationCap className="w-3.5 h-3.5 text-ucb-blue" /> {member.education}
-                                    </div>
-                                </div>
-                            </ScrollAnimation>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Ex Officio Members */}
-            <section className="py-16 bg-gray-50 border-t border-gray-100">
-                <div className="container mx-auto px-6 max-w-5xl">
-                    <ScrollAnimation variant="fade-up" className="text-center mb-12">
-                        <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs mb-2 block">Institutional Representatives</span>
-                        <h2 className="text-3xl font-display font-bold text-ucb-blue">Ex Officio Members</h2>
-                    </ScrollAnimation>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {EX_OFFICIO.map((member, idx) => (
-                            <ScrollAnimation key={idx} variant="slide-left" delay={`${(idx % 2) * 0.1}s`} className="flex">
-                                <div className="bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-all p-6 flex flex-col justify-between w-full">
-                                    <div className="space-y-4">
-                                        <div className="flex items-center gap-4">
-                                            <div className="w-12 h-12 rounded-xl bg-ucb-blue/10 text-ucb-blue font-display font-black text-lg flex items-center justify-center shrink-0 overflow-hidden">
-                                                {member.image ? (
-                                                    <img src={member.image} alt={member.name} className="w-full h-full object-cover object-top" />
-                                                ) : (
-                                                    member.avatarInitials
-                                                )}
-                                            </div>
-                                            <div>
-                                                <h3 className="font-display font-bold text-base text-ucb-blue leading-snug">{member.name}</h3>
-                                                <p className="text-xs font-bold text-ucb-teal leading-tight">{member.role}</p>
-                                            </div>
-                                        </div>
-
-                                        <p className="text-xs text-gray-500 leading-relaxed font-light">
-                                            {member.bio}
-                                        </p>
-                                    </div>
-
                                     <div className="mt-6 pt-4 border-t border-gray-50 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                                         <span className="text-[10px] font-bold uppercase tracking-wider text-gray-400 flex items-center gap-1.5">
                                             <GraduationCap className="w-3.5 h-3.5 text-ucb-blue" /> {member.education}
                                         </span>
                                         {member.readMorePath && (
-                                            <Link 
+                                            <Link
                                                 to={member.readMorePath}
                                                 className="text-xs font-bold text-ucb-orange hover:text-ucb-orange-glow transition-colors flex items-center gap-1 shrink-0"
                                             >
-                                                Read More About President Salomon-Fernández &rarr;
+                                                Read More &rarr;
                                             </Link>
                                         )}
                                     </div>
@@ -406,52 +317,6 @@ const Trustees: React.FC = () => {
                 </div>
             </section>
 
-            {/* Non-Voting Representatives */}
-            <section className="py-16 bg-white border-t border-gray-100">
-                <div className="container mx-auto px-6 max-w-5xl">
-                    <div className="text-center mb-12">
-                        <ScrollAnimation variant="fade-up">
-                            <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs mb-2 block">Shared Governance</span>
-                            <h2 className="text-3xl font-display font-bold text-ucb-blue">Non-Voting Representatives</h2>
-                            <p className="text-gray-500 mt-2 font-light max-w-xl mx-auto text-sm leading-relaxed">
-                                Urban College values the voice of our faculty and students in governance. These representatives bring essential perspectives to board discussions.
-                            </p>
-                        </ScrollAnimation>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {REPRESENTATIVES.map((member, idx) => (
-                            <ScrollAnimation key={idx} variant="slide-left" delay={`${(idx % 2) * 0.1}s`} className="flex">
-                                <div className="bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-all p-6 flex flex-col justify-between w-full">
-                                    <div className="space-y-4">
-                                        <div className="flex items-center gap-4">
-                                            <div className="w-12 h-12 rounded-xl bg-ucb-teal/10 text-ucb-teal font-display font-black text-lg flex items-center justify-center shrink-0 overflow-hidden">
-                                                {member.image ? (
-                                                    <img src={member.image} alt={member.name} className="w-full h-full object-cover object-top" />
-                                                ) : (
-                                                    member.avatarInitials
-                                                )}
-                                            </div>
-                                            <div>
-                                                <h3 className="font-display font-bold text-base text-ucb-blue leading-snug">{member.name}</h3>
-                                                <p className="text-xs font-bold text-ucb-teal leading-tight">{member.role}</p>
-                                            </div>
-                                        </div>
-
-                                        <p className="text-xs text-gray-500 leading-relaxed font-light">
-                                            {member.bio}
-                                        </p>
-                                    </div>
-
-                                    <div className="mt-6 pt-4 border-t border-gray-50 text-[10px] font-bold uppercase tracking-wider text-gray-400 flex items-center gap-1.5">
-                                        <GraduationCap className="w-3.5 h-3.5 text-ucb-blue" /> {member.education}
-                                    </div>
-                                </div>
-                            </ScrollAnimation>
-                        ))}
-                    </div>
-                </div>
-            </section>
 
             {/* Mission Callout */}
             <section className="py-12 bg-white">
