@@ -60,12 +60,12 @@ const Trustees: React.FC = () => {
     ];
 
     const expertiseAreas = [
-        "Higher Education Leadership (University administration, academic affairs, accreditation)",
-        "Workforce Development (Career pathways, employer partnerships, economic mobility)",
-        "Finance & Operations (Institutional sustainability, strategic planning)",
-        "Diversity, Equity & Inclusion (Equitable access, inclusive culture, community engagement)",
-        "Law & Public Policy (Governance, compliance, advocacy)",
-        "Nonprofit & Community Service (Anti-poverty initiatives, social services, community development)"
+        "Higher Education Leadership (university administration, academic affairs, accreditation)",
+        "Workforce Development (career pathways, employer partnerships, economic mobility)",
+        "Finance & Operations (institutional sustainability, strategic planning)",
+        "Diversity, Equity & Inclusion (equitable access, inclusive culture, community engagement)",
+        "Law & Public Policy (governance, compliance, advocacy)",
+        "Nonprofit & Community Service (anti-poverty initiatives, social services, community development)"
     ];
 
     const OFFICERS: BoardMember[] = [
@@ -82,7 +82,7 @@ const Trustees: React.FC = () => {
             name: "Amelia Manning",
             role: "Vice Chair",
             expertise: "Operations, Strategy Execution, Academic Affairs",
-            bio: "Amelia Manning brings deep expertise in operations, scaling student-centered services, and strategic execution. She has served in senior leadership roles in higher education, including as Chief Operating Officer at Southern New Hampshire University, where she oversaw Academics, Student Advisement, and Business Strategy. She specializes in delivering organizational visions and designing efficient institutional services.",
+            bio: "Amelia Manning serves as President of Chamberlain University, the largest school of nursing in the United States. She has previously served in senior leadership roles in higher education, including as Chief Operating Officer at Southern New Hampshire University, where she oversaw Academics, Student Advisement, and Business Strategy. She specializes in delivering organizational visions, scaling student-centered services, and designing efficient institutional services.",
             education: "M.A., University of New Hampshire; B.A., Saint Michael's College",
             avatarInitials: "AM",
             image: "/assets/images/board/amelia-manning.webp"
@@ -91,7 +91,7 @@ const Trustees: React.FC = () => {
             name: "Kenneth Lee",
             role: "Treasurer",
             expertise: "Finance, Organizational Transformation, Nonprofit Management",
-            bio: "Kenneth Lee serves as Chief Financial Officer of Southern New Hampshire University, overseeing finance, treasury, capital projects, and facilities. Previously, he was CFO of Big Brothers Big Sisters of Massachusetts Bay and VP of Global Business Services at Avery Dennison. Ken spent 17 years as a Partner at A.T. Kearney consulting firm.",
+            bio: "Kenneth Lee serves as Chief Financial Officer of Southern New Hampshire University, overseeing finance, treasury, capital projects, and facilities. Previously, he was CFO of Big Brothers Big Sisters of Massachusetts Bay and VP of Global Business Services at Avery Dennison. Ken spent 17 years as a Partner at A.T. Kearney, a strategic management consulting firm.",
             education: "M.B.A., Harvard Business School; B.A. in Economics, Harvard University",
             avatarInitials: "KL",
             image: "/assets/images/board/kenneth-lee.jpg"
@@ -130,8 +130,8 @@ const Trustees: React.FC = () => {
             name: "Mark A. Ouellette",
             role: "Trustee",
             expertise: "Global Sales Operations, Technology, Community Service",
-            bio: "Mark Ouellette consults at Pitney Bowes, where he previously served as Senior Vice President of Global Sales Operations. He has served on SNHU's Board since 1997 and with several years as Board Chair. Mark also serves on the boards of the United Way of Western Connecticut, Prosperi-Key, and the Center for Communities.",
-            education: "Board Service: SNHU Board (since 1997); United Way of Western Connecticut",
+            bio: "Mark Ouellette consults at Pitney Bowes, where he previously served as Senior Vice President of Global Sales Operations. He served on SNHU's Board from 1997 to 2022, including nine years as Board Chair. Mark also serves on the boards of the United Way of Western Connecticut, Prosperi-Key, and the Center for Communities.",
+            education: "B.S. in Business Management, Southern New Hampshire University",
             avatarInitials: "MO",
             image: "/assets/images/board/mark-ouellette.webp"
         },
@@ -140,7 +140,7 @@ const Trustees: React.FC = () => {
             role: "Trustee",
             expertise: "Workforce Development, Educational Equity, DEI Advocacy",
             bio: "Megan Stevens is Director of Leadership Advancement at AnitaB.org, leading apprenticeship and workforce development programs promoting gender equity in tech. She founded Always Making Progress (AMP), Inc., impacting over 350 students through academic enrichment and entrepreneurship programs. Megan co-founded SNHU's first Black employee resource group, BLAZE.",
-            education: "M.B.A. in Leadership, SNHU; B.A., Ball State University",
+            education: "M.B.A. in Leadership, Southern New Hampshire University; B.A., Ball State University",
             avatarInitials: "MS",
             image: "/assets/images/board/megan-stevens.webp"
         },
@@ -191,8 +191,8 @@ const Trustees: React.FC = () => {
             name: "Anneisha Thompson",
             role: "Student Representative",
             expertise: "Student Voices, Shared Governance, Campus Leadership",
-            bio: "Anneisha represents the student voice on the Board of Trustees, ensuring that student perspectives inform governance decisions. Her participation reflects Urban College's commitment to student-centered leadership at every level of the institution.",
-            education: "Student Leader, Urban College of Boston",
+            bio: "Anneisha represents the student and alumni voice on the Board of Trustees, ensuring that student perspectives inform governance decisions. Her participation reflects Urban College's commitment to student-centered leadership at every level of the institution.",
+            education: "A.A. in Early Childhood Education, Urban College of Boston; M.S. in Counseling Psychology, Cambridge College; B.Sc. in Social Psychology, Suffolk University",
             avatarInitials: "AT",
             image: "/assets/images/board/anneisha-thompson.jpg"
         }
@@ -239,30 +239,6 @@ const Trustees: React.FC = () => {
                 </div>
             </section>
 
-            {/* How Our Board Supports Urban College */}
-            <section className="py-16 bg-gray-50 border-y border-gray-100">
-                <div className="container mx-auto px-6 max-w-6xl">
-                    <ScrollAnimation variant="fade-up" className="text-center mb-12">
-                        <h2 className="text-2xl font-display font-bold text-ucb-blue">How Our Board Supports Urban College</h2>
-                        <p className="text-gray-500 font-light text-sm mt-1">Four core pillars of trustee governance and stewardship.</p>
-                    </ScrollAnimation>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {supportCards.map((card, i) => {
-                            const Icon = card.icon;
-                            return (
-                                <ScrollAnimation key={i} variant="fade-up" delay={`${i * 0.08}s`} className="bg-white rounded-3xl p-6 border border-gray-100/80 shadow-sm">
-                                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-4 ${card.color}`}>
-                                        <Icon className="w-5 h-5" />
-                                    </div>
-                                    <h3 className="font-display font-bold text-sm text-ucb-blue mb-2">{card.title}</h3>
-                                    <p className="text-xs text-gray-500 leading-relaxed font-light">{card.desc}</p>
-                                </ScrollAnimation>
-                            );
-                        })}
-                    </div>
-                </div>
-            </section>
 
             {/* Collective Expertise Tag Box */}
             <section className="py-16 bg-white">
@@ -518,11 +494,11 @@ const Trustees: React.FC = () => {
                                 >
                                     Explore Our Leadership
                                 </Link>
-                                <Link 
-                                    to="/team" 
+                                <Link
+                                    to="/donate"
                                     className="bg-white/20 hover:bg-white/30 text-white font-bold py-3 px-8 rounded-full text-xs uppercase tracking-wider transition-colors min-h-[44px] flex items-center"
                                 >
-                                    Support Our Mission <Heart className="w-3.5 h-3.5 ml-2 text-red-400 fill-red-400" />
+                                    Support Our Mission
                                 </Link>
                                 <Link 
                                     to="/foundation" 
@@ -548,7 +524,7 @@ const Trustees: React.FC = () => {
                                 <li>
                                     <Link to="/team" className="flex items-center gap-2 hover:text-ucb-orange transition-colors py-1">
                                         <ChevronRight className="w-4 h-4 text-ucb-gold" />
-                                        Administration & Leadership
+                                        Leadership & Administration
                                     </Link>
                                 </li>
                                 <li>
@@ -564,7 +540,7 @@ const Trustees: React.FC = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/about" className="flex items-center gap-2 hover:text-ucb-orange transition-colors py-1">
+                                    <Link to="/accreditation" className="flex items-center gap-2 hover:text-ucb-orange transition-colors py-1">
                                         <ChevronRight className="w-4 h-4 text-ucb-gold" />
                                         Accreditation
                                     </Link>
