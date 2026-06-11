@@ -106,9 +106,6 @@ const President: React.FC = () => {
                                         <span className="bg-ucb-blue/10 text-ucb-blue text-xs font-semibold px-2.5 py-1 rounded-full">
                                             President since 2023
                                         </span>
-                                        <span className="bg-ucb-orange/10 text-ucb-orange text-xs font-semibold px-2.5 py-1 rounded-full">
-                                            Haitian-American Leader
-                                        </span>
                                     </div>
                                 </div>
                             </ScrollAnimation>
@@ -237,13 +234,19 @@ const President: React.FC = () => {
                                 
                                 <div className="text-gray-600 text-sm leading-relaxed font-light space-y-4">
                                     <p>
-                                        Dr. Yves Salomon-Fernández became the President of Urban College of Boston in August 2023. She brings extensive experience in higher education leadership, having previously served as Senior Vice President for Operations Planning at Southern New Hampshire University and as president of community colleges in Massachusetts and New Jersey.
+                                        Dr. Yves (Eve) Salomon-Fernández became the President of Urban College of Boston in August 2023. Like many of our students, she is an immigrant and a former bilingual education student. Higher education transformed her life, took her all over the world to study and work, and put her on the path to becoming our President. Yves is committed to ensuring that every student at Urban College is put on a path to achieve at the highest level in their career.
                                     </p>
                                     <p>
-                                        A passionate advocate for accessible education, Dr. Salomon-Fernández has dedicated her career to serving students from underrepresented backgrounds. In January 2021, she received the American Association of Colleges and Universities (AAC&U)-Cengage Inclusion Scholarship, recognizing her accomplishments as an inclusive leader whose efforts have reduced equity gaps and promoted diversity in higher education. In 2018, Diverse Issues in Higher Education named her one of the Top 25 Women in Higher Education.
+                                        Yves is a <a href="https://www.youtube.com/watch?v=Ha4mtT8oSZc" target="_blank" rel="noreferrer" className="text-ucb-orange hover:underline font-medium">TEDx speaker</a>, a survivor of domestic violence, a mom, and a strong believer in the power of community. In 2026, she was named an Aspen Institute Presidents Fellow. That same year, she was inducted into the Boston YWCA's Academy of Women Achievers. In 2024, the Boston Business Journal named her a Power 50 Leader.
                                     </p>
                                     <p>
-                                        Dr. Salomon-Fernández understands the challenges of college students firsthand. As an adjunct faculty member, she has taught at the undergraduate and graduate levels at Boston College, William and Mary, UMass Amherst, and Salem State University, among others.
+                                        Dr. Salomon-Fernández is a scholar-practitioner who speaks and publishes on topics related to innovation in higher education, women's career mobility, access and equity, and the future of work. She serves as a peer reviewer for Johns Hopkins University Press and is a member of the Editorial Board of Wiley Publishing's New Directions for Community Colleges. She previously served on the Federal Reserve Bank of Boston's Community Development Advisory Committee and currently serves on the boards of Immigrant Family Services Institute, ALL IN Campus Democracy Challenge, College Unbound, and co-chairs the board of Double Edge Theater.
+                                    </p>
+                                    <p>
+                                        Yves previously served as President of Greenfield Community College, Cumberland County College, and Senior Vice President of Operations Planning at Southern New Hampshire University. Her international work includes serving as a consultant for the Bermuda Ministry of Education and the United Nations in Mexico.
+                                    </p>
+                                    <p>
+                                        Dr. Salomon-Fernández earned her Ph.D. from Boston College, an MSc from the London School of Economics, and a B.A. from the University of Massachusetts Boston. Learn more on her website <a href="https://prezyves.org/" target="_blank" rel="noreferrer" className="text-ucb-orange hover:underline font-medium">prezyves.org</a>.
                                     </p>
                                 </div>
                             </ScrollAnimation>

@@ -42,8 +42,8 @@ const CABINET: CabinetMember[] = [
     {
         name: "Caitlin Callahan",
         role: "Chief Operating Officer",
-        bio: "Caitlin Callahan has been a member of the leadership team since 2018, bringing experience from the higher education and non-profit sectors. She leads Urban College's fundraising efforts, manages the implementation of the strategic plan, supports the Board of Trustees, oversees IT, and serves as Accreditation Liaison Officer to NECHE.",
-        education: "M.P.P. from Harvard Kennedy School; B.A. from Bowdoin College; MBA in progress at SNHU",
+        bio: "Caitlin Callahan has been a member of the leadership team since 2018, bringing experience from the higher education and non-profit sectors. She leads Urban College's fundraising efforts, manages the implementation of the strategic plan, supports the Board of Trustees, oversees IT and institutional research, and serves as Accreditation Liaison Officer to NECHE.",
+        education: "M.B.A., Southern New Hampshire University; M.P.P., Harvard Kennedy School; B.A., Bowdoin College",
         email: "Caitlin.Callahan@urbancollege.edu",
         avatarInitials: "CC",
         image: "/assets/images/staff/caitlin-callahan.webp"
@@ -61,22 +61,14 @@ const CABINET: CabinetMember[] = [
 
 const DEPARTMENTS = [
     {
-        name: "Workforce Development & Academic Leadership",
-        staff: [
-            { name: "Daliza Nova", role: "Associate Vice President of Workforce Development" },
-            { name: "Dr. Caleb Sabatka", role: "Assistant Professor & Program Chair, Human Services Administration" },
-            { name: "Jennifer Burke Grehan", role: "Assistant Professor of English & General Studies Program Chair" },
-            { name: "Alessia Da Cruz", role: "Assistant Professor & Program Chair, Early Childhood Education" }
-        ]
-    },
-    {
         name: "Administration & Finance",
         staff: [
-            { name: "Sergio Mendoza", role: "Bilingual Staff Accountant" },
-            { name: "Timesha Scott", role: "IT Lead" },
             { name: "Arianna Valle", role: "Marketing & Communications Director" },
+            { name: "Erik Robles", role: "LMS System Administrator" },
             { name: "Malcolm Dyer", role: "HR" },
-            { name: "Erik Robles", role: "LMS System Administrator" }
+            { name: "Miguel De Los Santos", role: "IT Innovation and Cybersecurity Project Coordinator" },
+            { name: "Sergio Mendoza", role: "Bilingual Staff Accountant" },
+            { name: "Timesha Scott", role: "IT Lead" }
         ]
     },
     {
@@ -84,38 +76,47 @@ const DEPARTMENTS = [
         staff: [
             { name: "Calvin Conyers", role: "Associate Vice President of Enrollment Management" },
             { name: "Daniella Sanchez", role: "Senior Admissions Advisor" },
-            { name: "Roystone Martinez", role: "Admissions Advisor" },
-            { name: "Leandra Rivera", role: "Admissions Advisor" }
-        ]
-    },
-    {
-        name: "Student Financial Services",
-        staff: [
-            { name: "Stacy Broadus", role: "Director of Student Financial Services" },
-            { name: "Carla Desisto", role: "Assistant Director of Financial Services" },
-            { name: "Nancy Morales", role: "Bilingual Financial Services & Funding Specialist" }
+            { name: "Leandra Rivera", role: "Admissions Advisor" },
+            { name: "Roystone Martinez", role: "Admissions Advisor" }
         ]
     },
     {
         name: "Learning Resource Center",
         staff: [
-            { name: "Jennifer Burke Grehan", role: "Learning Resource Center Manager and English Program Lead" },
             { name: "Ellie Wolf", role: "Learning Support Associate" },
-            { name: "Pamela Peralta", role: "Learning Support Associate" },
-            { name: "Maudeline Clervoix-Frank", role: "Learning Support Associate" }
+            { name: "Jennifer Burke Grehan", role: "Learning Resource Center Manager and English Program Lead" },
+            { name: "Maudeline Clervoix-Frank", role: "Learning Support Associate" },
+            { name: "Pamela Peralta", role: "Learning Support Associate" }
         ]
     },
     {
         name: "Registration Services",
         staff: [
-            { name: "Waqas Mirza", role: "Director of Registration Services and Registrar" },
-            { name: "Daniel Borges", role: "Registration Coordinator" }
+            { name: "Daniel Borges", role: "Registration Coordinator" },
+            { name: "Waqas Mirza", role: "Director of Registration Services and Registrar" }
+        ]
+    },
+    {
+        name: "Student Financial Services",
+        staff: [
+            { name: "Carla Desisto", role: "Assistant Director of Financial Services" },
+            { name: "Nancy Morales", role: "Bilingual Financial Services & Funding Specialist" },
+            { name: "Stacy Broadus", role: "Director of Student Financial Services" }
         ]
     },
     {
         name: "Student Services & Supports",
         staff: [
             { name: "Rosana Perella", role: "Director of Student Services and Support" }
+        ]
+    },
+    {
+        name: "Workforce Development & Academic Leadership",
+        staff: [
+            { name: "Dr. Caleb Sabatka", role: "Assistant Professor & Program Chair, Human Services Administration" },
+            { name: "Daliza Nova", role: "Associate Vice President of Workforce Development" },
+            { name: "Jennifer Burke Grehan", role: "Assistant Professor of English & General Studies Program Chair" },
+            { name: "Rachelle Hannoush", role: "Assistant Professor & Interim Program Chair, Early Childhood Education" }
         ]
     }
 ];
@@ -162,9 +163,6 @@ const Team: React.FC = () => {
                         <p className="text-lg text-gray-600 leading-relaxed font-light mb-6">
                             At Urban College of Boston, every member of our team—from the President to our faculty—is dedicated to one thing: your success.
                         </p>
-                        <p className="text-gray-500 leading-relaxed font-light">
-                            Our leadership brings decades of experience in higher education, workforce development, and community service. But what unites us is a shared commitment to opening new pathways to opportunity for the diverse learners we serve. When you join Urban College, you become part of a community that believes in you and values your unique journey.
-                        </p>
                     </ScrollAnimation>
                 </div>
             </section>
@@ -209,10 +207,10 @@ const Team: React.FC = () => {
                                 </div>
 
                                 <p className="text-sm text-gray-500 leading-relaxed font-light">
-                                    Dr. Yves Salomon-Fernández assumed the presidency of Urban College in August 2023, bringing extensive experience leading community colleges and a deep commitment to accessible education. A graduate of Boston Latin School who emigrated from Haiti with her family, Dr. Salomon-Fernández understands firsthand the transformative power of education.
+                                    Dr. Yves (Eve) Salomon-Fernández became the President of Urban College of Boston in August 2023. Like many of our students, she is an immigrant and a former bilingual education student. Higher education transformed her life, took her all over the world to study and work, and put her on the path to becoming our President. Yves is committed to ensuring that every student at Urban College is put on a path to achieve at the highest level in their career.
                                 </p>
                                 <p className="text-sm text-gray-500 leading-relaxed font-light">
-                                    Previously, she served as Senior Vice President at Southern New Hampshire University and as president of community colleges in Massachusetts and New Jersey. In 2021, she received the AAC&U-Cengage Inclusion Scholarship, recognizing her work as an inclusive leader in higher education.
+                                    Yves is a <a href="https://www.youtube.com/watch?v=Ha4mtT8oSZc" target="_blank" rel="noreferrer" className="text-ucb-orange hover:underline font-medium">TEDx speaker</a>, a survivor of domestic violence, a mom, and a strong believer in the power of community. In 2026, she was named an Aspen Institute Presidents Fellow. That same year, she was inducted into the Boston YWCA's Academy of Women Achievers. In 2024, the Boston Business Journal named her a Power 50 Leader.
                                 </p>
 
                                 <div className="pt-2 flex flex-col sm:flex-row gap-3">
@@ -266,9 +264,6 @@ const Team: React.FC = () => {
                                         <p className="text-[10px] font-bold uppercase tracking-wider text-gray-400 flex items-center gap-1.5">
                                             <GraduationCap className="w-3.5 h-3.5 text-ucb-teal" /> {member.education}
                                         </p>
-                                        <a href={`mailto:${member.email}`} className="text-[10px] font-bold text-ucb-blue hover:text-ucb-orange transition-colors flex items-center gap-1.5 group">
-                                            <Mail className="w-3.5 h-3.5 text-gray-400 group-hover:text-ucb-orange transition-colors" /> {member.email}
-                                        </a>
                                     </div>
                                 </div>
                             </ScrollAnimation>
