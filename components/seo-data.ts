@@ -263,9 +263,9 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/college-services-and-resources',
   },
   workforce: {
-    title: 'Workforce Development',
-    description: 'Urban College partners with employers to deliver customized workforce training in English, Spanish, Portuguese, and Haitian Creole — in person, remote, or hybrid.',
-    path: '/workforce',
+    title: 'Corporate and Non-Profit Training',
+    description: 'Urban College partners with employers and non-profits to deliver customized training in English, Spanish, Portuguese, and Haitian Creole — in person, remote, or hybrid.',
+    path: '/training',
   },
   search: {
     title: 'Search',

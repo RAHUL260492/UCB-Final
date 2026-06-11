@@ -11,7 +11,7 @@ const staticPages = [
     { _type: 'page', title: 'Learning Resource Center', slug: '/learning-resource-center', description: 'Tutoring, language support, and tech assistance.' },
     { _type: 'page', title: 'Student Government', slug: '/student-government', description: 'Meet SGA members and learn how to get involved.' },
     { _type: 'page', title: 'Mental Health', slug: '/mental-health', description: 'Boston Public Health Commission and emergency helplines.' },
-    { _type: 'page', title: 'Workforce & Community', slug: '/workforce', description: 'Workforce development and community programs.' },
+    { _type: 'page', title: 'Corporate and Non-Profit Training', slug: '/training', description: 'Customized corporate and non-profit training programs.' },
     { _type: 'page', title: 'About Urban College', slug: '/#why-urban-college', description: 'Learn about Urban College of Boston.' },
     { _type: 'page', title: 'Blog', slug: '/blog', description: 'Stories, news, and insights from the Urban College community.' }
 ];

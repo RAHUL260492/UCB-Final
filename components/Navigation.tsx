@@ -118,7 +118,7 @@ const Navigation: React.FC = () => {
         { name: 'Transcript Requests', path: '/transcript-requests' }
       ]
     },
-    { name: 'Workforce', path: '/workforce', className: 'hidden lg:block' },
+    { name: 'Training', path: '/training', className: 'hidden lg:block' },
     {
       name: 'News',
       path: '/blog',

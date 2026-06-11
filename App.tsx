@@ -141,8 +141,9 @@ function App() {
             <Route path="/college-services-and-resources" element={<CollegeServicesAndResources />} />
             <Route path="/college-services" element={<CollegeServicesAndResources />} />
             <Route path="/lrc-english" element={<LearningResourceCenter />} />
-            <Route path="/workforce" element={<Workforce />} />
-            <Route path="/workforce-development" element={<Workforce />} />
+            <Route path="/training" element={<Workforce />} />
+            <Route path="/workforce" element={<Navigate to="/training" replace />} />
+            <Route path="/workforce-development" element={<Navigate to="/training" replace />} />
             <Route path="/lrc-spanish" element={<Espanol />} />
             <Route path="/lrc-mandarin" element={<Mandarin />} />
 

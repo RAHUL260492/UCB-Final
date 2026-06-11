@@ -59,13 +59,13 @@ const Workforce: React.FC = () => {
                 canonicalPath={PAGE_META.workforce.path}
                 jsonLd={buildBreadcrumbJsonLd([
                     { name: 'Home', path: '/' },
-                    { name: 'Workforce Development', path: PAGE_META.workforce.path },
+                    { name: 'Corporate and Non-Profit Training', path: PAGE_META.workforce.path },
                 ])}
             />
             <PageHeader
-                title="Workforce & Community"
+                title="Corporate and Non-Profit Training"
                 subtitle="Preparing A Multilingual, Skilled, and Digitally-Ready Workforce."
-                breadcrumbs={[{ label: 'Home', path: '/' }, { label: 'Workforce & Community' }]}
+                breadcrumbs={[{ label: 'Home', path: '/' }, { label: 'Corporate and Non-Profit Training' }]}
                 imageSrc="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2940&auto=format&fit=crop"
                 imagePosition="center"
             />
@@ -87,7 +87,7 @@ const Workforce: React.FC = () => {
                                 We work with native English speakers and those who speak English as a second or third language. Our workforce training is available in **English, Spanish, Portuguese, and Haitian Creole**, and can be delivered in person, remotely, or in a hybrid format.
                             </p>
                             <p className="text-gray-600 leading-relaxed font-light text-base">
-                                The Urban College workforce team works with individual employers, employer groups within a single industry, and multi-sector employers across industries for specific management and skills training. We co-design custom training and create talent pipelines aligned with your business goals. We deliver our training in person, remotely, and in a hybrid format.
+                                The Urban College workforce training team works with individual employers, employer groups within a single industry, and multi-sector employers across industries for specific management and skills training. We co-design custom training and create talent pipelines aligned with your business goals. We deliver our training in person, remotely, and in a hybrid format.
                             </p>
                             <div className="bg-ucb-blue/5 rounded-3xl p-6 md:p-8 border border-ucb-blue/10 flex items-start gap-4">
                                 <Sparkles className="w-8 h-8 text-ucb-orange shrink-0 mt-1" />
@@ -370,7 +370,7 @@ const Workforce: React.FC = () => {
                         <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs block font-display">Advisory Board</span>
                         <h2 className="text-3xl font-display font-black text-ucb-black">Meet Our Strategic Counsel</h2>
                         <p className="text-gray-500 text-sm leading-relaxed">
-                            The Workforce Development Strategic Council is a small group of trusted advisors convened to help guide the development, alignment, and growth of workforce initiatives at Urban College of Boston.
+                            The Training Strategic Council is a small group of trusted advisors convened to help guide the development, alignment, and growth of workforce training initiatives at Urban College of Boston.
                         </p>
                     </ScrollAnimation>
 
@@ -416,15 +416,15 @@ const Workforce: React.FC = () => {
                             <div className="space-y-2 max-w-2xl mx-auto">
                                 <h3 className="text-2xl md:text-3xl font-display font-black leading-tight">Explore Partnering With Us Today</h3>
                                 <p className="text-blue-100 text-sm md:text-base leading-relaxed font-light">
-                                    Get in touch with our workforce team to explore customized cohorts, apprenticeships, or digital-skills sponsorships.
+                                    Get in touch with our workforce training team to explore customized cohorts, apprenticeships, or digital-skills sponsorships.
                                 </p>
                             </div>
                             <div className="pt-2">
                                 <a 
-                                    href="mailto:workforce@urbancollege.edu?subject=Workforce%20Development%20Partnership%20Inquiry"
+                                    href="mailto:training@urbancollege.edu?subject=Training%20Partnership%20Inquiry"
                                     className="bg-ucb-orange text-white hover:bg-ucb-orange-glow px-8 py-4 rounded-xl font-bold shadow-lg transition-transform active:scale-95 inline-flex items-center gap-2 text-base min-h-[44px] cursor-pointer"
                                 >
-                                    Email workforce@urbancollege.edu <ArrowRight className="w-5 h-5" />
+                                    Email training@urbancollege.edu <ArrowRight className="w-5 h-5" />
                                 </a>
                             </div>
                         </div>
