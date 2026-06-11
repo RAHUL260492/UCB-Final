@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Lock, Send, LogOut, ExternalLink, Loader2, Paperclip, X, History, FileText, Image as ImageIcon, RefreshCw } from 'lucide-react';
+import { Lock, Send, LogOut, ExternalLink, Loader2, Paperclip, X, History, FileText, Image as ImageIcon, RefreshCw, Undo2 } from 'lucide-react';
 
 // Invite-only AI content editor.
 //   Left  — chat: describe a change (and optionally attach images / PDF / DOCX);
@@ -81,6 +81,19 @@ const Admin: React.FC = () => {
       const data = await res.json();
       if (res.ok) setLog(data.entries || []);
     } catch { /* ignore */ } finally { setLogLoading(false); }
+  };
+
+  const undoLast = async () => {
+    if (!window.confirm('Undo the most recent change made through this editor?')) return;
+    setBusy(true);
+    try {
+      const res = await fetch('/.netlify/functions/undo-last', { method: 'POST', headers: { Authorization: `Bearer ${await token()}` } });
+      const data = await res.json();
+      if (!res.ok) setMessages((m) => [...m, { role: 'assistant', text: data.error || 'Could not undo.', error: true }]);
+      else { setMessages((m) => [...m, { role: 'assistant', text: data.message || 'Reverted.' }]); loadLog(); }
+    } catch (err: any) {
+      setMessages((m) => [...m, { role: 'assistant', text: err?.message || 'Undo failed.', error: true }]);
+    } finally { setBusy(false); }
   };
 
   const onPickFiles = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -213,7 +226,10 @@ const Admin: React.FC = () => {
             <div className="bg-white rounded-3xl border border-gray-100 shadow-sm flex flex-col h-[70vh]">
               <div className="flex items-center justify-between px-5 py-3 border-b border-gray-100">
                 <h2 className="font-display font-bold text-ucb-blue text-sm inline-flex items-center gap-2"><History className="w-4 h-4" /> Change Log</h2>
-                <button onClick={loadLog} title="Refresh" className="text-gray-400 hover:text-ucb-blue transition-colors"><RefreshCw className={`w-4 h-4 ${logLoading ? 'animate-spin' : ''}`} /></button>
+                <div className="flex items-center gap-3">
+                  <button onClick={undoLast} disabled={busy} title="Undo the most recent editor change" className="text-[11px] font-semibold text-gray-500 hover:text-ucb-orange disabled:opacity-50 transition-colors inline-flex items-center gap-1"><Undo2 className="w-3.5 h-3.5" /> Undo last</button>
+                  <button onClick={loadLog} title="Refresh" className="text-gray-400 hover:text-ucb-blue transition-colors"><RefreshCw className={`w-4 h-4 ${logLoading ? 'animate-spin' : ''}`} /></button>
+                </div>
               </div>
               <div className="flex-1 overflow-y-auto p-4 space-y-3">
                 {log.length === 0 && !logLoading && <p className="text-gray-400 text-xs text-center py-10">No edits yet.</p>}
