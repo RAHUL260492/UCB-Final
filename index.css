@@ -4,7 +4,7 @@
   /* New Exact Palette */
   --color-ucb-blue: #0066A2;
   --color-ucb-green: #006A3C;
-  --color-ucb-orange: #E68325;
+  --color-ucb-orange: #CC6A14;
 
   --color-ucb-sage: #A3B48C;
   --color-ucb-periwinkle: #6487B0;
@@ -610,7 +610,7 @@
   font-weight: 600;
 }
 .blog-content-rendered blockquote {
-  border-left: 4px solid #E68325;
+  border-left: 4px solid #CC6A14;
   background: #f8fafc;
   padding: 1rem 1.25rem;
   margin: 1.5rem 0;
