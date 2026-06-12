@@ -122,7 +122,7 @@ const Mission: React.FC = () => {
                                     <h3 className="text-2xl md:text-3xl font-display font-bold text-ucb-orange">Our Vision</h3>
                                     <div className="h-0.5 w-12 bg-ucb-orange rounded-full"></div>
                                     <p className="text-gray-600 leading-relaxed font-light text-base md:text-lg">
-                                        Urban College of Boston graduates are gainfully employed (well-paying jobs), leading in their communities, and on the path to building financial security for themselves and their families.
+                                        Urban College of Boston graduates are gainfully employed, leading in their communities, and on the path to building financial security for themselves and their families.
                                     </p>
                                 </div>
                             </div>

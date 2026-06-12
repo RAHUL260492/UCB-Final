@@ -251,9 +251,9 @@ const RFILandingPage: React.FC = () => {
                     <ScrollAnimation variant="fade-up">
                         <h2 className="text-2xl md:text-3xl font-display font-bold text-ucb-blue text-center mb-5">Admissions Requirements</h2>
                         <p className="text-gray-600 font-light leading-relaxed text-sm md:text-base">
-                            Urban College of Boston is an open-admission college. Any student who has a high school diploma or has
+                            Urban College of Boston is an open-enrollment college. Any student who has a high school diploma or has
                             successfully completed a GED or HiSET can apply and enroll—all associate degrees and certificate programs
-                            are open admission. During the application process, you'll be asked to provide:
+                            are open enrollment. During the application process, you'll be asked to provide:
                         </p>
                         <ul className="mt-5 space-y-2.5 max-w-md mx-auto">
                             <li className="flex items-start gap-2.5 text-sm text-gray-700 font-light">

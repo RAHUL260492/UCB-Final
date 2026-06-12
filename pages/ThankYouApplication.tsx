@@ -40,7 +40,7 @@ const faqs = [
     },
     {
         q: 'When can I start classes?',
-        a: "Urban College offers rolling enrollment with six entry points a year, plus accelerated 8-week sessions. Your advisor will help you pick the start date that works best for you.",
+        a: "Urban College offers rolling enrollment with five start dates a year, including accelerated 8-week sessions. Your advisor will help you pick the start date that works best for you.",
     },
 ];
 

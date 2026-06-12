@@ -78,7 +78,7 @@ const Employment: React.FC = () => {
             title: "Admissions Counselor",
             dept: "Enrollment Management",
             type: "Full-Time",
-            location: "On-Campus (China Trade Center)",
+            location: "Hybrid (2 Days On-Campus)",
             desc: "Manage prospect outreach, guide applicants through financial aid and enrollment processes, and participate in community recruiting events across Greater Boston.",
             requirements: ["Bachelor's degree or equivalent professional experience", "Strong communication and relationship-building skills", "Valid driver's license for local travel"]
         }
