@@ -128,7 +128,7 @@ const Navigation: React.FC = () => {
         { name: 'Urban College Blog', path: '/blog' }
       ]
     },
-    { name: 'Donate', path: '/donate', className: 'hidden lg:block' }
+    { name: 'Donate', path: '/donate' }
   ];
 
   const [initialHeight, setInitialHeight] = useState<number | 'auto'>('auto');

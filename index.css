@@ -630,3 +630,8 @@
   color: #13294b;
   font-weight: 700;
 }
+
+/* Legibility drop-shadow for white text on orange/brand-color callout boxes (accessibility) */
+.text-shadow-legible {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+}

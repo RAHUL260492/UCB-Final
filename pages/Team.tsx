@@ -359,8 +359,8 @@ const Team: React.FC = () => {
                                 <span className="inline-block px-3 py-1 bg-white/20 text-white text-[10px] font-bold uppercase tracking-wider rounded-full">
                                     Philanthropy & Support
                                 </span>
-                                <h3 className="text-2xl font-bold font-display">Urban College Foundation</h3>
-                                <p className="opacity-90 text-sm leading-relaxed font-light">
+                                <h3 className="text-2xl font-bold font-display text-shadow-legible">Urban College Foundation</h3>
+                                <p className="text-sm leading-relaxed font-light text-shadow-legible">
                                     The Urban College Foundation supports our mission by raising funds for scholarships, program development, and student support services. Through the generosity of donors and partners, the Foundation helps ensure that financial barriers never stand in the way of our students' dreams.
                                 </p>
                                 <div className="pt-4 flex flex-wrap justify-center gap-4">

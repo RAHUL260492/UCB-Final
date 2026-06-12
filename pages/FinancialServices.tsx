@@ -403,8 +403,8 @@ const FinancialServices: React.FC = () => {
                                     <div className="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center">
                                         <Sparkles className="w-5 h-5 text-white" />
                                     </div>
-                                    <h4 className="font-display font-bold text-lg leading-tight">Need a Payment Plan or Employer Reimbursement?</h4>
-                                    <p className="text-xs font-light opacity-90 leading-relaxed">
+                                    <h4 className="font-display font-bold text-lg leading-tight text-shadow-legible">Need a Payment Plan or Employer Reimbursement?</h4>
+                                    <p className="text-xs font-light leading-relaxed text-shadow-legible">
                                         If you aren't eligible for full financial aid or need to check self-pay payment methods, explore our payment guidelines.
                                     </p>
                                 </div>
