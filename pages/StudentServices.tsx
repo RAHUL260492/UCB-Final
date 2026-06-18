@@ -162,7 +162,7 @@ const StudentServices: React.FC = () => {
                                     Explore specific campus support services, documents, and guides by clicking the links below:
                                 </p>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-semibold">
-                                    <Link to="/academic-calendar-webpage" className="flex items-center gap-2 text-white hover:text-ucb-gold transition-colors">
+                                    <Link to="/academic-calendar" className="flex items-center gap-2 text-white hover:text-ucb-gold transition-colors">
                                         <ArrowRight className="w-3.5 h-3.5" /> Academic Calendar
                                     </Link>
                                     <Link to="/college-transfer-pathways" className="flex items-center gap-2 text-white hover:text-ucb-gold transition-colors">

@@ -402,7 +402,7 @@ const Foundation: React.FC = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/trustees" className="flex items-center gap-2 hover:text-ucb-orange transition-colors py-1">
+                                    <Link to="/board-of-trustees" className="flex items-center gap-2 hover:text-ucb-orange transition-colors py-1">
                                         <ChevronRight className="w-4 h-4 text-ucb-gold" />
                                         Board of Trustees
                                     </Link>

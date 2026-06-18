@@ -276,8 +276,8 @@ const Employment: React.FC = () => {
                         </p>
                     </ScrollAnimation>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-                        <ScrollAnimation variant="slide-right" className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm space-y-6 flex flex-col justify-between text-center items-center">
+                    <div className="flex justify-center max-w-3xl mx-auto">
+                        <ScrollAnimation variant="slide-right" className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm space-y-6 flex flex-col justify-between text-center items-center max-w-sm w-full">
                             <div className="w-12 h-12 rounded-full bg-ucb-orange/10 flex items-center justify-center text-ucb-orange">
                                 <Mail className="w-6 h-6" />
                             </div>

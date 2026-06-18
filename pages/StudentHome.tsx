@@ -21,7 +21,7 @@ interface Resource {
 const resources: Resource[] = [
     { title: 'Course Registration', desc: 'Register for classes, connect with your advisor, and plan your schedule.', to: '/course-registration', icon: ClipboardCheck },
     { title: 'Student Services', desc: 'Advising, tutoring, accessibility, and a whole team in your corner.', to: '/student-services-overview', icon: LifeBuoy },
-    { title: 'Academic Calendar', desc: 'Key dates, deadlines, holidays, and term start and end dates.', to: '/academic-calendar-webpage', icon: CalendarDays },
+    { title: 'Academic Calendar', desc: 'Key dates, deadlines, holidays, and term start and end dates.', to: '/academic-calendar', icon: CalendarDays },
     { title: 'College Catalog', desc: 'Programs, courses, policies, and the full student handbook.', to: 'https://catalog.urbancollege.edu/', external: true, icon: BookOpen },
     { title: 'College Transfer Pathways', desc: "You're halfway there — transfer your credits into a bachelor's program.", to: '/college-transfer-pathways', icon: ArrowUpRight },
     { title: 'Learning Resource Center', desc: 'Free tutoring, academic workshops, and technology help.', to: '/learning-resource-center', icon: Library },

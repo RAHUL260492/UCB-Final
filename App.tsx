@@ -87,7 +87,7 @@ function App() {
             <Route path="/mission" element={<Mission />} />
             <Route path="/president" element={<President />} />
             <Route path="/office-of-the-president" element={<President />} />
-            <Route path="/trustees" element={<Trustees />} />
+            <Route path="/trustees" element={<Navigate to="/board-of-trustees" replace />} />
             <Route path="/board-of-trustees" element={<Trustees />} />
             <Route path="/foundation" element={<Foundation />} />
             <Route path="/urban-college-foundation" element={<Foundation />} />
@@ -128,7 +128,7 @@ function App() {
             <Route path="/current-students" element={<StudentHome />} />
             <Route path="/student-services-overview" element={<StudentServices />} />
             <Route path="/student-services" element={<StudentServices />} />
-            <Route path="/academic-calendar-webpage" element={<AcademicCalendar />} />
+            <Route path="/academic-calendar-webpage" element={<Navigate to="/academic-calendar" replace />} />
             <Route path="/academic-calendar" element={<AcademicCalendar />} />
             <Route path="/college-transfer-pathways" element={<CollegeTransferPathways />} />
             <Route path="/technology-account-guide" element={<TechnologyAccountGuide />} />
@@ -173,12 +173,12 @@ function App() {
             {/* Legacy Program Page Redirects */}
             <Route path="/business-certificate" element={<Navigate to="/programs/business-certificate" replace />} />
             <Route path="/childrens-behavioral-health-certificate" element={<Navigate to="/programs/childrens-behavioral-health-certificate" replace />} />
-            <Route path="/early-childhood-education-associate-degree" element={<Navigate to="/programs/early-childhood-education" replace />} />
-            <Route path="/foundations-early-childhood-education-certificate" element={<Navigate to="/programs/early-childhood-education-certificate" replace />} />
-            <Route path="/elder-care" element={<Navigate to="/programs/elder-care" replace />} />
-            <Route path="/general-studies-associate-degree" element={<Navigate to="/programs/general-studies-associate" replace />} />
+            <Route path="/early-childhood-education-associate-degree" element={<Navigate to="/programs/early-childhood-education-associate-degree" replace />} />
+            <Route path="/foundations-early-childhood-education-certificate" element={<Navigate to="/programs/foundations-early-childhood-education-certificate" replace />} />
+            <Route path="/elder-care" element={<Navigate to="/programs/elder-care-certificate" replace />} />
+            <Route path="/general-studies-associate-degree" element={<Navigate to="/programs/general-studies-associate-degree" replace />} />
             <Route path="/general-studies-certificate" element={<Navigate to="/programs/general-studies-certificate" replace />} />
-            <Route path="/human-services-administration-associate-degree" element={<Navigate to="/programs/human-services-administration" replace />} />
+            <Route path="/human-services-administration-associate-degree" element={<Navigate to="/programs/human-services-administration-associate-degree" replace />} />
             <Route path="/human-services-administration-certificate" element={<Navigate to="/programs/human-services-certificate" replace />} />
             <Route path="/paraprofessional-educator-certificate" element={<Navigate to="/programs/paraprofessional-educator-certificate" replace />} />
             <Route path="/professional-studies" element={<Navigate to="/programs/professional-studies" replace />} />

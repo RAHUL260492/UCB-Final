@@ -61,18 +61,18 @@ const CaseManagement: React.FC = () => {
             <SEO
                 title="Case Management Certificate Program"
                 description="Earn a Case Management Certificate from Urban College of Boston in as little as 9 months. Fully online and affordable, with job-ready skills for high-demand roles in healthcare, social services, and nonprofits."
-                canonicalPath="/programs/case-management"
+                canonicalPath="/programs/case-management-certificate"
                 jsonLd={[
                     buildCourseJsonLd({
                         name: "Case Management Certificate",
                         description: "Earn a Case Management Certificate from Urban College of Boston in as little as 9 months. Fully online and affordable, with job-ready skills for high-demand roles in healthcare, social services, and nonprofits.",
-                        path: '/programs/case-management',
+                        path: '/programs/case-management-certificate',
                         credentialCategory: 'certificate',
                     }),
                     buildBreadcrumbJsonLd([
                         { name: 'Home', path: '/' },
                         { name: 'Programs', path: '/programs' },
-                        { name: "Case Management Certificate", path: '/programs/case-management' },
+                        { name: "Case Management Certificate", path: '/programs/case-management-certificate' },
                     ]),
                 ]}
             />

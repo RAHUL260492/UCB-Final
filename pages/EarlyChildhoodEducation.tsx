@@ -72,19 +72,19 @@ const EarlyChildhoodEducation: React.FC = () => {
             <SEO
                 title="Early Childhood Education Associate Degree"
                 description="Earn an Associate Degree in Early Childhood Education at Urban College of Boston. Multilingual instruction in English, Spanish, and Mandarin. 100% online, transferable credits."
-                canonicalPath="/programs/early-childhood-education"
+                canonicalPath="/programs/early-childhood-education-associate-degree"
                 jsonLd={[
                     buildCourseJsonLd({
                         name: "Early Childhood Education Associate Degree",
                         description: "Earn an Associate Degree in Early Childhood Education at Urban College of Boston. Multilingual instruction in English, Spanish, and Mandarin. 100% online, transferable credits.",
-                        path: '/programs/early-childhood-education',
+                        path: '/programs/early-childhood-education-associate-degree',
                         credentialCategory: 'degree',
                         educationLevel: 'Associate',
                     }),
                     buildBreadcrumbJsonLd([
                         { name: 'Home', path: '/' },
                         { name: 'Programs', path: '/programs' },
-                        { name: "Early Childhood Education Associate Degree", path: '/programs/early-childhood-education' },
+                        { name: "Early Childhood Education Associate Degree", path: '/programs/early-childhood-education-associate-degree' },
                     ]),
                 ]}
             />
@@ -125,6 +125,13 @@ const EarlyChildhoodEducation: React.FC = () => {
                         "Support diverse learners, including children with special needs",
                         "Build strong partnerships with families",
                         "Apply professional standards and best practices in early education"
+                    ]
+                },
+                {
+                    heading: "Director Certification Pathway",
+                    icon: GraduationCap,
+                    items: [
+                        "Students interested in leadership and administrative roles can pursue Director Certification by completing the Associate Degree and selecting Child Care Administration as an elective. This pathway prepares graduates for childcare management and program leadership positions."
                     ]
                 }
             ]}

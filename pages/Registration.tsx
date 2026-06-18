@@ -226,7 +226,7 @@ const Registration: React.FC = () => {
                                 </div>
                                 <h3 className="font-display font-bold text-base text-gray-800">Complete your registration</h3>
                                 <p className="text-gray-500 text-xs leading-relaxed font-light">
-                                    Meet with your advisor, select your courses, and you're in! Be sure to review the <Link to="/academic-calendar-webpage" className="text-ucb-blue hover:underline font-semibold">Academic Calendar</Link> for important registration deadlines.
+                                    Meet with your advisor, select your courses, and you're in! Be sure to review the <Link to="/academic-calendar" className="text-ucb-blue hover:underline font-semibold">Academic Calendar</Link> for important registration deadlines.
                                 </p>
                             </div>
                         </ScrollAnimation>
@@ -295,7 +295,7 @@ const Registration: React.FC = () => {
                                 </p>
                             </div>
                             <div className="pt-2 border-t border-gray-200/50">
-                                <Link to="/academic-calendar-webpage" className="text-xs font-semibold text-ucb-blue hover:text-ucb-orange transition-colors inline-flex items-center gap-1">
+                                <Link to="/academic-calendar" className="text-xs font-semibold text-ucb-blue hover:text-ucb-orange transition-colors inline-flex items-center gap-1">
                                     <Calendar className="w-3.5 h-3.5 text-ucb-orange" /> View Academic Calendar
                                 </Link>
                             </div>

@@ -167,7 +167,7 @@ const Mission: React.FC = () => {
                     <ScrollAnimation variant="fade-up" className="text-center mb-12">
                         <span className="text-ucb-orange font-bold tracking-widest uppercase text-xs mb-2 block">Our Community</span>
                         <h2 className="text-3xl md:text-4xl font-display font-bold text-ucb-blue">The Faces of Urban College</h2>
-                        <p className="text-gray-600 mt-3 max-w-2xl mx-auto font-light">Meet some of our remarkable students and graduates…</p>
+                        <p className="text-gray-600 mt-3 max-w-2xl mx-auto font-light">Meet some of our remarkable students and graduates who turned opportunity into impact for their families and communities.</p>
                     </ScrollAnimation>
                     <div className="grid grid-cols-3 md:grid-cols-6 gap-4 md:gap-6 mb-10">
                         {[
@@ -254,7 +254,7 @@ const Mission: React.FC = () => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/trustees" className="flex items-center gap-2 hover:text-ucb-orange transition-colors py-1">
+                                    <Link to="/board-of-trustees" className="flex items-center gap-2 hover:text-ucb-orange transition-colors py-1">
                                         <ChevronRight className="w-4 h-4 text-ucb-gold" />
                                         Board of Trustees
                                     </Link>

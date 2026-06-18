@@ -65,7 +65,7 @@ const TuitionPaymentOptions: React.FC = () => {
             ],
             contact: {
                 phone: "(617) 449-7430",
-                email: "financialservices@urbancollege.edu",
+                email: "studentaccounts@urbancollege.edu",
                 hours: "Business Office Hours"
             },
             icon: CreditCard,
@@ -364,7 +364,7 @@ const TuitionPaymentOptions: React.FC = () => {
                                         rel="noreferrer" 
                                         className="inline-flex items-center text-[10px] font-bold text-ucb-orange uppercase tracking-wider hover:underline"
                                     >
-                                        Visit {grant.linkLabel} <ChevronRight className="w-3.5 h-3.5" />
+                                        {grant.linkLabel.startsWith("Contact") ? "" : "Visit "}{grant.linkLabel} <ChevronRight className="w-3.5 h-3.5" />
                                     </a>
                                 </div>
                             </ScrollAnimation>

@@ -114,7 +114,7 @@ const DEPARTMENTS = [
         name: "Workforce Development & Academic Leadership",
         staff: [
             { name: "Dr. Caleb Sabatka", role: "Assistant Professor & Program Chair, Human Services Administration" },
-            { name: "Daliza Nova", role: "Associate Vice President of Workforce Development" },
+            { name: "Daliza Nova", role: "Associate Vice President of Corporate and Non-Profit Training" },
             { name: "Jennifer Burke Grehan", role: "Assistant Professor of English & General Studies Program Chair" },
             { name: "Rachelle Hannoush", role: "Assistant Professor & Interim Program Chair, Early Childhood Education" }
         ]
@@ -339,7 +339,7 @@ const Team: React.FC = () => {
                             </p>
                             <div className="pt-2">
                                 <Link 
-                                    to="/trustees" 
+                                    to="/board-of-trustees" 
                                     className="inline-flex items-center gap-2 bg-ucb-blue hover:bg-blue-900 text-white font-bold py-3 px-8 rounded-full text-xs uppercase tracking-wider transition-all shadow-md min-h-[44px]"
                                 >
                                     Meet Our Trustees & Officers <ArrowRight className="w-4 h-4" />

@@ -125,7 +125,7 @@ export const PAGE_META: Record<string, PageMeta> = {
   trustees: {
     title: 'Board of Trustees',
     description: "Urban College's Board of Trustees provides governance and strategic direction in support of our mission to deliver accessible, affordable higher education.",
-    path: '/trustees',
+    path: '/board-of-trustees',
   },
   foundation: {
     title: 'Urban College Foundation',

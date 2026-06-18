@@ -70,19 +70,19 @@ const GeneralStudiesAssociate: React.FC = () => {
             <SEO
                 title="General Studies Associate Degree"
                 description="Customize your associate degree with the General Studies program at Urban College of Boston. Flexible electives, transferable credits, and multilingual support."
-                canonicalPath="/programs/general-studies-associate"
+                canonicalPath="/programs/general-studies-associate-degree"
                 jsonLd={[
                     buildCourseJsonLd({
                         name: "General Studies Associate Degree",
                         description: "Customize your associate degree with the General Studies program at Urban College of Boston. Flexible electives, transferable credits, and multilingual support.",
-                        path: '/programs/general-studies-associate',
+                        path: '/programs/general-studies-associate-degree',
                         credentialCategory: 'degree',
                         educationLevel: 'Associate',
                     }),
                     buildBreadcrumbJsonLd([
                         { name: 'Home', path: '/' },
                         { name: 'Programs', path: '/programs' },
-                        { name: "General Studies Associate Degree", path: '/programs/general-studies-associate' },
+                        { name: "General Studies Associate Degree", path: '/programs/general-studies-associate-degree' },
                     ]),
                 ]}
             />

@@ -75,19 +75,19 @@ const HumanServicesAdministration: React.FC = () => {
             <SEO
                 title="Human Services Administration Associate Degree"
                 description="Lead in social services and community organizations with a Human Services Administration Associate Degree from Urban College of Boston."
-                canonicalPath="/programs/human-services-administration"
+                canonicalPath="/programs/human-services-administration-associate-degree"
                 jsonLd={[
                     buildCourseJsonLd({
                         name: "Human Services Administration Associate Degree",
                         description: "Lead in social services and community organizations with a Human Services Administration Associate Degree from Urban College of Boston.",
-                        path: '/programs/human-services-administration',
+                        path: '/programs/human-services-administration-associate-degree',
                         credentialCategory: 'degree',
                         educationLevel: 'Associate',
                     }),
                     buildBreadcrumbJsonLd([
                         { name: 'Home', path: '/' },
                         { name: 'Programs', path: '/programs' },
-                        { name: "Human Services Administration Associate Degree", path: '/programs/human-services-administration' },
+                        { name: "Human Services Administration Associate Degree", path: '/programs/human-services-administration-associate-degree' },
                     ]),
                 ]}
             />

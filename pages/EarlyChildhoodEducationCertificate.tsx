@@ -27,7 +27,7 @@ const outcomes = [
     { title: "Preschool Teacher", desc: "Guide young children through their most critical developmental years. MA average: $46,330 (BLS OEWS, May 2023)." },
     { title: "Childcare Worker", desc: "Provide nurturing care and education in childcare centers." },
     { title: "Family Childcare Provider", desc: "Start your own home-based childcare business." },
-    { title: "Teacher Assistant", desc: "Support lead teachers in early education classrooms." },
+    { title: "Lead Teacher", desc: "Gain course qualifications for Lead Teacher under EEC's Guidelines." },
     { title: "Early Intervention Specialist", desc: "Work with children with special needs." },
     { title: "Program Coordinator", desc: "Oversee early childhood education programs." }
 ];
@@ -70,18 +70,18 @@ const EarlyChildhoodEducationCertificate: React.FC = () => {
             <SEO
                 title="Foundations of Early Childhood Education Certificate"
                 description="Start your early childhood education career with a Foundations Certificate from Urban College of Boston. Multilingual English, Spanish & Mandarin options, EEC-aligned curriculum."
-                canonicalPath="/programs/early-childhood-education-certificate"
+                canonicalPath="/programs/foundations-early-childhood-education-certificate"
                 jsonLd={[
                     buildCourseJsonLd({
                         name: "Foundations in Early Childhood Education Certificate",
                         description: "Start your early childhood education career with a Foundations Certificate from Urban College of Boston. Multilingual English, Spanish & Mandarin options, EEC-aligned curriculum.",
-                        path: '/programs/early-childhood-education-certificate',
+                        path: '/programs/foundations-early-childhood-education-certificate',
                         credentialCategory: 'certificate',
                     }),
                     buildBreadcrumbJsonLd([
                         { name: 'Home', path: '/' },
                         { name: 'Programs', path: '/programs' },
-                        { name: "Foundations in Early Childhood Education Certificate", path: '/programs/early-childhood-education-certificate' },
+                        { name: "Foundations in Early Childhood Education Certificate", path: '/programs/foundations-early-childhood-education-certificate' },
                     ]),
                 ]}
             />

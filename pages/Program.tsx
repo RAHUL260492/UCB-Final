@@ -20,19 +20,29 @@ import ProfessionalStudies from './ProfessionalStudies';
 
 const PROGRAM_COMPONENTS: Record<string, React.FC> = {
     'business-certificate': BusinessCertificate,
-    'case-management': CaseManagement,
+    'case-management-certificate': CaseManagement,
     'childrens-behavioral-health-certificate': ChildrensBehavioralHealth,
     'digital-marketing-certificate': DigitalMarketing,
-    'early-childhood-education': EarlyChildhoodEducation,
-    'early-childhood-education-certificate': EarlyChildhoodEducationCertificate,
-    'elder-care': ElderCare,
-    'general-studies-associate': GeneralStudiesAssociate,
+    'early-childhood-education-associate-degree': EarlyChildhoodEducation,
+    'foundations-early-childhood-education-certificate': EarlyChildhoodEducationCertificate,
+    'elder-care-certificate': ElderCare,
+    'general-studies-associate-degree': GeneralStudiesAssociate,
     'general-studies-certificate': GeneralStudiesCertificate,
-    'human-services-administration': HumanServicesAdministration,
+    'human-services-administration-associate-degree': HumanServicesAdministration,
     'human-services-certificate': HumanServicesCertificate,
     'paraprofessional-educator-certificate': ParaprofessionalEducator,
     'project-management-certificate': ProjectManagement,
     'professional-studies': ProfessionalStudies,
+};
+
+// Old program slugs 301-redirect to their new canonical slug
+const PROGRAM_REDIRECTS: Record<string, string> = {
+    'case-management': 'case-management-certificate',
+    'elder-care': 'elder-care-certificate',
+    'early-childhood-education': 'early-childhood-education-associate-degree',
+    'early-childhood-education-certificate': 'foundations-early-childhood-education-certificate',
+    'general-studies-associate': 'general-studies-associate-degree',
+    'human-services-administration': 'human-services-administration-associate-degree',
 };
 
 const Program: React.FC = () => {
@@ -41,7 +51,12 @@ const Program: React.FC = () => {
     if (!slug) {
         return <Navigate to="/" replace />;
     }
-    
+
+    const redirectSlug = PROGRAM_REDIRECTS[slug];
+    if (redirectSlug) {
+        return <Navigate to={`/programs/${redirectSlug}`} replace />;
+    }
+
     const Component = PROGRAM_COMPONENTS[slug];
     
     if (!Component) {

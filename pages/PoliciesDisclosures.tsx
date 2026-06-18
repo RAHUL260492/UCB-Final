@@ -370,7 +370,7 @@ const PoliciesDisclosures: React.FC = () => {
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 {renderDocLink("Description of Educational Program", "/program-overview")}
-                                {renderDocLink("2024-2025 Academic Calendar", "/academic-calendar-webpage")}
+                                {renderDocLink("2024-2025 Academic Calendar", "/academic-calendar")}
                                 {renderDocLink("2024-2025 Course Catalogue", "/s/College-Catalog-V112025.pdf")}
                                 {renderDocLink("Adding/Dropping/Withdrawing from Courses", "https://catalog.urbancollege.edu/content.php?catoid=1&navoid=21", true)}
                                 {renderDocLink("Course Repeat Policy", "https://catalog.urbancollege.edu/content.php?catoid=1&navoid=21", true)}
@@ -401,8 +401,8 @@ const PoliciesDisclosures: React.FC = () => {
                                     
                                     {openAcademicArchives.calendars && (
                                         <div className="p-4 bg-white grid grid-cols-1 sm:grid-cols-2 gap-3 border-t border-gray-100">
-                                            {renderDocLink("2024-2025 Calendar", "/academic-calendar-webpage")}
-                                            {renderDocLink("2023-2024 Calendar", "/academic-calendar-webpage")}
+                                            {renderDocLink("2024-2025 Calendar", "/academic-calendar")}
+                                            {renderDocLink("2023-2024 Calendar", "/academic-calendar")}
                                             {renderDocLink("2022-2023 Calendar", "/academic-calendar")}
                                             {renderDocLink("2021-2022 Calendar (PDF)", "/s/2021-2022-Academic-Calendar.pdf")}
                                             {renderDocLink("2020-2021 Calendar (PDF)", "/s/2020-2021-UCB-Academic-Calendar.pdf")}

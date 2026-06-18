@@ -37,7 +37,7 @@ const DEGREES: ProgramItem[] = [
         languages: "English, Spanish & Mandarin",
         extra: "Start working immediately!",
         description: "Turn your love for children into a rewarding career. Start working after completing ECE104—earn while you learn! Become a childcare center director, preschool teacher, or start your own childcare business.",
-        link: "/programs/early-childhood-education"
+        link: "/programs/early-childhood-education-associate-degree"
     },
     {
         title: "General Studies Associate Degree",
@@ -46,7 +46,7 @@ const DEGREES: ProgramItem[] = [
         languages: "English",
         extra: "Fully transferable",
         description: "Don't see the program you are interested in? Know you want to pursue a bachelor's degree? Keep your costs low, get started at Urban College, and prepare to transfer to the bachelor's degree of your choosing.",
-        link: "/programs/general-studies-associate"
+        link: "/programs/general-studies-associate-degree"
     },
     {
         title: "Human Services Administration Associate Degree",
@@ -55,7 +55,7 @@ const DEGREES: ProgramItem[] = [
         languages: "English & Spanish",
         extra: "Internships + LSWA eligibility",
         description: "Transform lives while building your career in social services. Includes hands-on internships and qualifies you to apply for Licensed Social Work Associate (LSWA) credentials.",
-        link: "/programs/human-services-administration"
+        link: "/programs/human-services-administration-associate-degree"
     }
 ];
 
@@ -74,7 +74,7 @@ const CERTIFICATES: ProgramItem[] = [
         credits: "21 credits",
         languages: "English",
         description: "Master the skills to support individuals and families navigating life's challenges. Become a case manager, social services assistant, or behavioral case worker.",
-        link: "/programs/case-management"
+        link: "/programs/case-management-certificate"
     },
     {
         title: "Children's Behavioral Health Certificate",
@@ -98,7 +98,7 @@ const CERTIFICATES: ProgramItem[] = [
         credits: "19 credits",
         languages: "English, Spanish & Mandarin",
         description: "Turn your love for children into a career. This certificate meets the Massachusetts Department of Early Education and Care requirements for a lead teacher credential. Become a preschool teacher, childcare worker, or start your own family childcare business.",
-        link: "/programs/early-childhood-education-certificate"
+        link: "/programs/foundations-early-childhood-education-certificate"
     },
     {
         title: "Elder Care Certificate",
@@ -107,7 +107,7 @@ const CERTIFICATES: ProgramItem[] = [
         languages: "English & Spanish",
         extra: "58% Job Growth!",
         description: "Enter Massachusetts' fastest-growing field. Earn Community Health Worker Certification and support older adults and their families.",
-        link: "/programs/elder-care"
+        link: "/programs/elder-care-certificate"
     },
     {
         title: "General Studies Certificate",

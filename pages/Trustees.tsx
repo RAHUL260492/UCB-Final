@@ -59,15 +59,6 @@ const Trustees: React.FC = () => {
         }
     ];
 
-    const expertiseAreas = [
-        "Higher Education Leadership (university administration, academic affairs, accreditation)",
-        "Workforce Development (career pathways, employer partnerships, economic mobility)",
-        "Finance & Operations (institutional sustainability, strategic planning)",
-        "Diversity, Equity & Inclusion (equitable access, inclusive culture, community engagement)",
-        "Law & Public Policy (governance, compliance, advocacy)",
-        "Nonprofit & Community Service (anti-poverty initiatives, social services, community development)"
-    ];
-
     const OFFICERS: BoardMember[] = [
         {
             name: "Joan Becker, Ed.D.",
@@ -235,27 +226,6 @@ const Trustees: React.FC = () => {
                         <p>
                             Our trustees bring exceptional expertise from higher education, law, business, nonprofit leadership, and public service. Together, they shape the culture, mission, and vision of Urban College—ensuring that every decision we make centers on student success.
                         </p>
-                    </ScrollAnimation>
-                </div>
-            </section>
-
-
-            {/* Collective Expertise Tag Box */}
-            <section className="py-16 bg-white">
-                <div className="container mx-auto px-6 max-w-4xl">
-                    <ScrollAnimation variant="fade-up" className="bg-gradient-to-r from-ucb-blue/5 to-ucb-teal/5 border border-ucb-blue/10 rounded-3xl p-8 space-y-6">
-                        <h3 className="text-xl font-display font-bold text-ucb-blue text-center">Collective Expertise</h3>
-                        <p className="text-gray-600 text-sm font-light text-center leading-relaxed">
-                            Our board members bring decades of leadership experience across sectors that directly support our students' success:
-                        </p>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
-                            {expertiseAreas.map((area, idx) => (
-                                <div key={idx} className="flex items-start gap-2 text-sm text-gray-700 font-light">
-                                    <CheckCircle className="w-4 h-4 text-ucb-emerald mt-0.5 shrink-0" />
-                                    <span>{area}</span>
-                                </div>
-                            ))}
-                        </div>
                     </ScrollAnimation>
                 </div>
             </section>

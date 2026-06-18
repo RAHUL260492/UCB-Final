@@ -52,8 +52,8 @@ const Mandarin: React.FC = () => {
     ];
 
     const programs = [
-        { name: "Foundations of Early Childhood Education Certificate", path: "/programs/early-childhood-education-certificate", type: "证书课程" },
-        { name: "Early Childhood Education Associate Degree", path: "/programs/early-childhood-education", type: "副学士学位" }
+        { name: "Foundations of Early Childhood Education Certificate", path: "/programs/foundations-early-childhood-education-certificate", type: "证书课程" },
+        { name: "Early Childhood Education Associate Degree", path: "/programs/early-childhood-education-associate-degree", type: "副学士学位" }
     ];
 
     const testimonials = [

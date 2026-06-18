@@ -116,18 +116,18 @@ const ElderCare: React.FC = () => {
             <SEO
                 title="Elder Care Certificate Program"
                 description="Prepare for a meaningful career supporting older adults with an Elder Care Certificate from Urban College of Boston. Affordable, online, and multilingual."
-                canonicalPath="/programs/elder-care"
+                canonicalPath="/programs/elder-care-certificate"
                 jsonLd={[
                     buildCourseJsonLd({
                         name: "Elder Care Certificate",
                         description: "Prepare for a meaningful career supporting older adults with an Elder Care Certificate from Urban College of Boston. Affordable, online, and multilingual.",
-                        path: '/programs/elder-care',
+                        path: '/programs/elder-care-certificate',
                         credentialCategory: 'certificate',
                     }),
                     buildBreadcrumbJsonLd([
                         { name: 'Home', path: '/' },
                         { name: 'Programs', path: '/programs' },
-                        { name: "Elder Care Certificate", path: '/programs/elder-care' },
+                        { name: "Elder Care Certificate", path: '/programs/elder-care-certificate' },
                     ]),
                 ]}
             />

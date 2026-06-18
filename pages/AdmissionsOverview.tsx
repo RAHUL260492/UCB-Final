@@ -342,7 +342,7 @@ const AdmissionsOverview: React.FC = () => {
                                     You don't have to wait to start your education! We accept applications year-round and operate on a rolling basis.
                                 </p>
                                 <p>
-                                    We offer <strong className="text-ucb-blue font-bold">5 starts a year</strong>. The Fall and Spring semesters each include a standard 16-week session and an accelerated 8-week session, and the Summer offers one accelerated session. <Link to="/academic-calendar-webpage" className="text-ucb-blue font-semibold hover:underline">View the academic calendar</Link> to see detailed start dates.
+                                    We offer <strong className="text-ucb-blue font-bold">5 starts a year</strong>. The Fall and Spring semesters each include a standard 16-week session and an accelerated 8-week session, and the Summer offers one accelerated session. <Link to="/academic-calendar" className="text-ucb-blue font-semibold hover:underline">View the academic calendar</Link> to see detailed start dates.
                                 </p>
                                 <p className="text-xs bg-white border border-gray-100 rounded-2xl p-4 shadow-sm">
                                     <strong className="text-ucb-blue font-semibold block mb-1">Accelerated or Standard Options:</strong>

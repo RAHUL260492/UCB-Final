@@ -78,16 +78,13 @@ const Workforce: React.FC = () => {
                         <ScrollAnimation variant="slide-right" className="space-y-6">
                             <span className="text-xs font-bold text-ucb-orange uppercase tracking-wider block font-display">Corporate & Community Training</span>
                             <h2 className="text-3xl md:text-4xl font-display font-black text-ucb-black leading-tight">
-                                Customized Professional Development for Your Team
+                                Nonprofit Partnerships: Workforce Training in Service of Your Mission
                             </h2>
                             <p className="text-gray-600 leading-relaxed font-light text-base md:text-lg">
-                                Urban College of Boston delivers custom training for front-line, middle management, and high-potential employees. We work directly with employers to design and equip their teams with skills tailored to specific roles, alongside durable skills like communication, critical thinking, problem-solving, and collaboration that any modern workplace needs.
+                                We partner with nonprofit organizations in two ways: building skills-based training programs for the populations you serve, turning your mission into measurable workforce outcomes, and providing professional development for your own staff, from front-line case workers to program leadership.
                             </p>
                             <p className="text-gray-600 leading-relaxed font-light text-base">
-                                We work with native English speakers and those who speak English as a second or third language. Our workforce training is available in **English, Spanish, Portuguese, and Haitian Creole**, and can be delivered in person, remotely, or in a hybrid format.
-                            </p>
-                            <p className="text-gray-600 leading-relaxed font-light text-base">
-                                The Urban College workforce training team works with individual employers, employer groups within a single industry, and multi-sector employers across industries for specific management and skills training. We co-design custom training and create talent pipelines aligned with your business goals. We deliver our training in person, remotely, and in a hybrid format.
+                                Whether you need durable skills training for program participants entering the workforce, technical upskilling for your team, or a custom curriculum aligned with your organization's goals, Urban College of Boston designs and delivers training that fits your community and your capacity. Available in English, Spanish, Portuguese, and Haitian Creole, in person, remote, or hybrid.
                             </p>
                             <div className="bg-ucb-blue/5 rounded-3xl p-6 md:p-8 border border-ucb-blue/10 flex items-start gap-4">
                                 <Sparkles className="w-8 h-8 text-ucb-orange shrink-0 mt-1" />
@@ -330,7 +327,7 @@ const Workforce: React.FC = () => {
                                 </ul>
                             </div>
                             <div className="pt-6 mt-6 border-t border-gray-50">
-                                <a href="/programs/elder-care" className="inline-flex items-center gap-1 font-bold text-sm text-ucb-blue hover:text-ucb-orange transition-colors">
+                                <a href="/programs/elder-care-certificate" className="inline-flex items-center gap-1 font-bold text-sm text-ucb-blue hover:text-ucb-orange transition-colors">
                                     Learn About Elder Care Certificate <ChevronRight className="w-4 h-4" />
                                 </a>
                             </div>

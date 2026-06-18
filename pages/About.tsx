@@ -442,7 +442,8 @@ const About: React.FC = () => {
                                 { name: "Office of the President", path: "/president" },
                                 { name: "Leadership & Administration", path: "/team" },
                                 { name: "Accreditation", path: "/accreditation" },
-                                { name: "Board of Trustees", path: "/trustees" },
+                                { name: "Board of Trustees", path: "/board-of-trustees" },
+                                { name: "Campus & Facilities", path: "/campus-facilities" },
                                 { name: "Urban College Foundation", path: "/foundation" }
                             ].map((link, idx) => (
                                 <Link key={idx} to={link.path} className="px-4 py-3 bg-white hover:bg-ucb-blue hover:text-white border border-gray-100 rounded-xl shadow-sm text-xs font-semibold text-gray-700 transition-all flex items-center justify-center gap-1 group">

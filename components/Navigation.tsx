@@ -46,13 +46,11 @@ const Navigation: React.FC = () => {
         { name: 'About Us', path: '/about' },
         { name: 'Accreditation', path: '/accreditation' },
         { name: 'Alumni', path: '/alumni' },
-        { name: 'Board of Trustees', path: '/trustees' },
-        { name: 'Compliance', path: '/compliance' },
+        { name: 'Board of Trustees', path: '/board-of-trustees' },
         { name: 'Employment Opportunities', path: '/employment' },
         { name: 'Leadership & Administration', path: '/team' },
         { name: 'Office of the President', path: '/president' },
         { name: 'Our Mission & Vision', path: '/mission' },
-        { name: 'Policies & Disclosures', path: '/policies-disclosures' },
         { name: 'Urban College Foundation', path: '/foundation' }
       ]
     },
@@ -63,20 +61,20 @@ const Navigation: React.FC = () => {
         {
           title: 'Associate Degrees',
           items: [
-            { name: 'Early Childhood Education', path: '/programs/early-childhood-education' },
-            { name: 'General Studies', path: '/programs/general-studies-associate' },
-            { name: 'Human Services Administration', path: '/programs/human-services-administration' },
+            { name: 'Early Childhood Education', path: '/programs/early-childhood-education-associate-degree' },
+            { name: 'General Studies', path: '/programs/general-studies-associate-degree' },
+            { name: 'Human Services Administration', path: '/programs/human-services-administration-associate-degree' },
           ]
         },
         {
           title: 'Certificates',
           items: [
             { name: 'Business', path: '/programs/business-certificate' },
-            { name: 'Case Management', path: '/programs/case-management' },
+            { name: 'Case Management', path: '/programs/case-management-certificate' },
             { name: "Children's Behavioral Health", path: '/programs/childrens-behavioral-health-certificate' },
             { name: 'Digital Marketing', path: '/programs/digital-marketing-certificate' },
-            { name: 'Early Childhood Education', path: '/programs/early-childhood-education-certificate' },
-            { name: 'Elder Care', path: '/programs/elder-care' },
+            { name: 'Early Childhood Education', path: '/programs/foundations-early-childhood-education-certificate' },
+            { name: 'Elder Care', path: '/programs/elder-care-certificate' },
             { name: 'General Studies', path: '/programs/general-studies-certificate' },
             { name: 'Human Services', path: '/programs/human-services-certificate' },
             { name: 'Paraprofessional Educator', path: '/programs/paraprofessional-educator-certificate' },
@@ -106,7 +104,7 @@ const Navigation: React.FC = () => {
       name: 'Students',
       path: '/students',
       dropdown: [
-        { name: 'Academic Calendar', path: '/academic-calendar-webpage' },
+        { name: 'Academic Calendar', path: '/academic-calendar' },
         { name: 'College Catalog', path: 'https://catalog.urbancollege.edu/' },
         { name: 'College Transfer Pathways', path: '/college-transfer-pathways' },
         { name: 'Commencement Ceremony', path: '/commencement' },
@@ -120,7 +118,7 @@ const Navigation: React.FC = () => {
     },
     { name: 'Training', path: '/training', className: 'hidden lg:block' },
     {
-      name: 'News',
+      name: 'Blog',
       path: '/blog',
       className: 'hidden lg:block',
       dropdown: [

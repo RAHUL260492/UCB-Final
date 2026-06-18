@@ -52,13 +52,13 @@ const Espanol: React.FC = () => {
     ];
 
     const programs = [
-        { name: "Early Childhood Education Associate Degree", path: "/programs/early-childhood-education", type: "Grado Asociado" },
-        { name: "Human Services Associate Degree", path: "/programs/human-services-administration", type: "Grado Asociado" },
+        { name: "Early Childhood Education Associate Degree", path: "/programs/early-childhood-education-associate-degree", type: "Grado Asociado" },
+        { name: "Human Services Associate Degree", path: "/programs/human-services-administration-associate-degree", type: "Grado Asociado" },
         { name: "Business Certificate", path: "/programs/business-certificate", type: "Certificado" },
-        { name: "Elder Care Certificate", path: "/programs/elder-care", type: "Certificado" },
+        { name: "Elder Care Certificate", path: "/programs/elder-care-certificate", type: "Certificado" },
         { name: "Children’s Behavioral Health Certificate", path: "/programs/childrens-behavioral-health-certificate", type: "Certificado" },
         { name: "Digital Marketing Certificate", path: "/programs/digital-marketing-certificate", type: "Certificado" },
-        { name: "Foundations of Early Childhood Education Certificate", path: "/programs/early-childhood-education-certificate", type: "Certificado" },
+        { name: "Foundations of Early Childhood Education Certificate", path: "/programs/foundations-early-childhood-education-certificate", type: "Certificado" },
         { name: "Human Services Certificate", path: "/programs/human-services-certificate", type: "Certificado" },
         { name: "Paraprofessional Educator Certificate", path: "/programs/paraprofessional-educator-certificate", type: "Certificado" },
         { name: "Project Management Certificate", path: "/programs/project-management-certificate", type: "Certificado" }
