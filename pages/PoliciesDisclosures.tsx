@@ -666,11 +666,11 @@ const PoliciesDisclosures: React.FC = () => {
                                     {renderDocLink("Acceptable Use Policy", "/policies-disclosures/acceptable-use-policy")}
                                     {renderDocLink("Accreditation", "/accreditation")}
                                     {renderDocLink("Articulation Agreements", "/policies-disclosures/articulation-agreements")}
-                                    {renderDocLink("Grievance Procedure", "https://catalog.urbancollege.edu/content.php?catoid=3&navoid=105&hl=%22health%22&returnto=search#students-disciplinary-and-grievance-procedures", true)}
+                                    {renderDocLink("Grievance Procedure", "/policies-disclosures/grievance-procedure")}
                                     {renderDocLink("Constitution Day", "https://static1.squarespace.com/static/5be099a375f9eecbf2753e8d/t/68cc36e79b373b2133946a69/1758213863832/Constitution+and+Cookies+2025.pdf", true)}
                                     {renderFlag("Copyright Infringement & Peer-to-Peer File Sharing Policy", "Link pending — covered within the Acceptable Use Policy; confirm a destination")}
                                     {renderDocLink("Disability and Accessibility Services", "/policies-disclosures/disability-accessibility-services")}
-                                    {renderDocLink("Family Educational Rights and Privacy Act (FERPA)", "https://catalog.urbancollege.edu/content.php?catoid=3&navoid=105#educational-records-and-privacy", true)}
+                                    {renderDocLink("Family Educational Rights and Privacy Act (FERPA)", "/policies-disclosures/ferpa")}
                                     {renderDocLink("Faculty, Administration and Staff", "https://catalog.urbancollege.edu/content.php?catoid=3&navoid=106", true)}
                                     {renderDocLink("Campus Location and Services", "/policies-disclosures/campus-location-services")}
                                     {renderDocLink("Non-Discrimination, Equal Access and Equal Opportunity Statement", "/policies-disclosures/diversity-equity-inclusion")}
@@ -680,7 +680,7 @@ const PoliciesDisclosures: React.FC = () => {
                                     {renderDocLink("Title IX / Sexual Misconduct", "https://catalog.urbancollege.edu/content.php?catoid=3&navoid=105&hl=%22health%22&returnto=search#students-disciplinary-and-grievance-procedures", true)}
                                     {renderDocLink("Transfer Credit Policy", "/policies-disclosures/transfer-credit-policy")}
                                     {renderDocLink("Credit for Prior Learning", "https://catalog.urbancollege.edu/content.php?catoid=3&navoid=103#credit-for-prior-learning-cpl-also-known-as-prior-learning-assessment-pla-or-life-experience-credit-policy", true)}
-                                    {renderDocLink("Voter Registration", "https://catalog.urbancollege.edu/content.php?catoid=3&navoid=105&hl=%22health%22&returnto=search#voter-registration", true)}
+                                    {renderDocLink("Voter Registration", "/policies-disclosures/voter-registration")}
                                 </div>
 
                                 <div className="space-y-3 pt-4 border-t border-gray-50">

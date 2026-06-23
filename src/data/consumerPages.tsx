@@ -333,4 +333,111 @@ export const CONSUMER_PAGES: Record<string, ConsumerPage> = {
 <li>Continue Your Career Strong</li>
 </ul>`,
   },
+
+  'ferpa': {
+    title: 'Family Educational Rights and Privacy Act (FERPA)',
+    description: "Urban College of Boston's FERPA policy — students' rights, access to education records, directory information, and release of records.",
+    sourceUrl: 'https://catalog.urbancollege.edu/content.php?catoid=3&navoid=105#educational-records-and-privacy',
+    html: `
+<p>Privacy rights, regarding access to information, are observed in accordance with the Family Educational Rights and Privacy Act, commonly known as the Buckley Amendment.</p>
+<p>In accordance with the provisions of the Family Educational Rights and Privacy Act (FERPA) (Section 438 of the General Education Provisions Act 20 USC 1232), below are the regulations that Urban College has adopted to protect the privacy rights of its students. Revisions and clarifications will be published as experience with the law and the institution's policy warrants.</p>
+<p>Students are informed of their rights under this act through the College Catalog and Student Handbook. In compliance with this federal law, the college has established a policy to protect students from misuse of information in their education records and to allow students access to their own education records.</p>
+<h3>Student's Rights: FERPA</h3>
+<p>The Family Educational Rights and Privacy Act (FERPA) affords students certain rights with respect to their educational records. These rights include:</p>
+<ul>
+<li>The right to inspect and review the student's education records within 45 days of the day the college receives a request for access. Students should submit to the Registrar written requests that identify the record(s) that they wish to inspect. The Registrar will arrange for access and notify the student of the time and place where the record may be inspected.</li>
+<li>The right to request the amendment of the student's education records that the student believes is inaccurate. A student may ask the College to amend a record that they believe is inaccurate. They should write to the college official that is responsible for the record, clearly identify the part of the record that they want changed, and specify why they believe that it is inaccurate. If the college decides not to amend the record as requested, the college will notify the student of the decision and advise the student of their right to a hearing regarding the request for amendment.</li>
+<li>The right to consent to disclosures of personally identifiable information contained in the student's education records, except to the extent that FERPA authorizes disclosure without consent. One exception, which permits disclosure without consent, is disclosure to school officials with legitimate educational interests. A school official is a person employed by the college in an administrative, supervisory, academic or research, or support staff position (including law enforcement unit personnel and health staff); a person or company with whom the college has contracted (such as an attorney, auditor, or collection agent); a person serving on the Board of Trustees; or a student serving on an official committee. A school official has a legitimate educational interest if the official needs to review an education record to fulfill their professional responsibility.</li>
+<li>The right to file a complaint with the U.S. Department of Education concerning alleged failures by Urban College of Boston to comply with the requirements of FERPA. The office that administers FERPA is: Family Policy Compliance Office, U.S. Department of Education, 400 Maryland Avenue, SW, Washington, DC 20202-4605.</li>
+</ul>
+<p>Our FERPA waiver form is available <a href="https://forms.office.com/r/p7dr1aCTx5" target="_blank" rel="noopener noreferrer">here</a>.</p>
+<h3>Access to Education Records</h3>
+<p>Access to records is limited to school officials with a legitimate educational interest. A school official is defined as follows:</p>
+<ul>
+<li>a person employed by the College in an administrative, counseling, supervisory, or academic, student support services position, or a support person to these positions; or</li>
+<li>a person employed by or under contract to the College to perform a special task.</li>
+</ul>
+<p>Legitimate educational interest needed for a school official to access a record includes:</p>
+<ul>
+<li>The information requested is necessary for that official to perform appropriate tasks that are specified in their position description or by a contract agreement.</li>
+<li>The information is to be used within the context of official agency or school business and not for purposes extraneous to the official's areas of responsibility or to the College.</li>
+<li>The information is relevant to the accomplishment of some task or to a determination about the student.</li>
+<li>The information is to be used consistently with the purposes for which the data are maintained.</li>
+</ul>
+<p>Those with access to education records are required to maintain confidentiality of the contents of those records.</p>
+<h3>Directory Information</h3>
+<p>The following pieces of information are considered Directory Information and may be released with or without notice by the college except in cases where they have been specifically protected by written request from a student:</p>
+<ul>
+<li>Name as it appears in the College's records</li>
+<li>Degrees or Certificates enrolled or conferred and Date of Graduation</li>
+<li>Dates of Attendance</li>
+<li>Enrollment status</li>
+<li>Urban College Email address</li>
+<li>College Honors, including Dean's List</li>
+</ul>`,
+  },
+
+  'grievance-procedure': {
+    title: 'Student Disciplinary and Grievance Procedures',
+    description: "Urban College of Boston's Code of Student Conduct, sanctions, and financial aid grievances.",
+    sourceUrl: 'https://catalog.urbancollege.edu/content.php?catoid=3&navoid=105#students-disciplinary-and-grievance-procedures',
+    html: `
+<h3>Code of Student Conduct</h3>
+<p>Urban College of Boston is committed to promoting student learning in a stable and peaceful environment. Therefore, students are responsible for conducting themselves in a manner that is appropriate and non-threatening to others. Specifically, students should refrain from disruptive behavior, theft, falsification of records, possession of weapons, destruction of property, hazing, physical and verbal abuse, and acts of harassment towards anyone. Students who violate this code of conduct are subject to expulsion, suspension, or other penalties. Conduct subject to disciplinary action includes, but is not limited to, the following:</p>
+<h4>Unprofessional Conduct</h4>
+<ul>
+<li>Dishonesty, including, but not limited to, forgery, knowingly furnishing false information to the college, and alteration and/or use of college documents, financial instruments, or identification cards with intent to defraud.</li>
+<li>Dishonesty involving academic integrity, including, but not limited to, cheating or plagiarism, will be addressed under the Academic Honesty Policy.</li>
+<li>Disrespect of or insubordination to college personnel.</li>
+<li>Use of oral or written profanity.</li>
+<li>Sexual harassment of other students, faculty, or staff.</li>
+</ul>
+<h4>Misuse of College Property</h4>
+<ul>
+<li>Littering, destroying, or damaging property of the college or property under its jurisdiction.</li>
+<li>Violation of the college computer facilities and network use policy.</li>
+</ul>
+<h4>Alcohol and Drug Violations</h4>
+<ul>
+<li>Use of alcoholic beverages, including the purchase, consumption, possession, or sale of such items, except where specifically authorized in the policies and guidelines of the College.</li>
+<li>Possession, use, sale, or distribution of any type of drugs for illegal purposes.</li>
+<li>Appearing at any College premises while intoxicated or while under the influence of an illegal substance.</li>
+<li>Violation of the college Non-Smoking policy.</li>
+</ul>
+<h4>Criminal Activity and Violent or Dangerous Behavior</h4>
+<ul>
+<li>Violation of any local, state, or federal law.</li>
+<li>Possession on college property of weapons, such as knives, firearms, or any dangerous chemical or explosive elements or their component parts.</li>
+<li>Threatening of any member of the Urban College community.</li>
+</ul>
+<h3>Sanctions</h3>
+<p>The following sanctions may be imposed, separately or in conjunction with other sanctions:</p>
+<ol>
+<li>A written statement to a student that he/she is violating or has violated College policies and may be subject to more severe disciplinary action.</li>
+<li>Required reimbursement for damage to or misappropriation of property. This may take the form of appropriate services or other compensation.</li>
+<li>Interim Suspension: If, in the opinion of the Vice President of Student Success or designee, the presence of a student poses a serious threat to others, the Vice President of Student Success or designee may suspend the student immediately. If the student requests an appeal of the decision, a hearing shall be held at the earliest reasonable time.</li>
+<li>Termination of student status with the college for an indefinite, or permanent, period of time.</li>
+<li>Withdrawal without refund. A student may be administratively withdrawn from the current or future semesters at the College, and the course withdrawal refund policies described in the College Catalog will be followed.</li>
+</ol>
+<h3>Financial Aid Grievances</h3>
+<p>Business Office<br>2 Boylston St. 2nd Floor, Boston, MA 02116<br>617-449-7030</p>
+<p>Students with concerns about financial aid issues should first contact the Business Office to discuss any concerns that they have. Many issues can be resolved via a conversation. In the event that the student is not satisfied after contacting the Business Office, the student should follow the Non-Academic or Financial Aid Grievance Procedures as outlined in the College Catalog.</p>`,
+  },
+
+  'voter-registration': {
+    title: 'Voter Registration',
+    description: 'Voter registration information for Urban College of Boston students.',
+    sourceUrl: 'https://catalog.urbancollege.edu/content.php?catoid=3&navoid=105#voter-registration',
+    html: `
+<p>The Higher Education Amendment requires Massachusetts colleges and universities to provide students with information on how to register to vote. You may submit an application to register or pre-register to vote in Massachusetts if:</p>
+<ul>
+<li>You are a citizen of the United States; and</li>
+<li>You are 16 years old; and</li>
+<li>You are not currently incarcerated by reason of a felony conviction.</li>
+</ul>
+<p>If you meet the above requirements, you may apply online, by mail, or in person.</p>
+<p>The deadline to register to vote in any election or regular town meeting is twenty (20) days prior to the date of the election or meeting. The deadline to register to vote in a special town meeting is ten (10) days prior to the special town meeting.</p>
+<p>If you are a new citizen who was naturalized after the last day to register to vote, you may register to vote in person at your local election office until 4 p.m. on the day before the election. You should bring documentation to show that your naturalization ceremony occurred after the voter registration deadline.</p>
+<p>Additional information can be found at this link: <a href="https://www.sec.state.ma.us/divisions/elections/elections-and-voting.htm" target="_blank" rel="noopener noreferrer">sec.state.ma.us — Elections and Voting</a>.</p>`,
+  },
 };
