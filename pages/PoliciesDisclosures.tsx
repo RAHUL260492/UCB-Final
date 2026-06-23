@@ -622,9 +622,9 @@ const PoliciesDisclosures: React.FC = () => {
                             {renderContactCard(contacts.registration)}
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                {renderDocLink("Course Withdrawal", "https://catalog.urbancollege.edu/content.php?catoid=1&navoid=21", true)}
-                                {renderDocLink("Semester Withdrawal", "https://catalog.urbancollege.edu/content.php?catoid=1&navoid=21", true)}
-                                {renderDocLink("Withdrawal, Drop and Refund", "/s/UCB-Withdrawal-Appeal-and-Tuition-Refund-Process.pdf")}
+                                {renderDocLink("Course Withdrawal", "/policies-disclosures/academic-policies#course-withdrawal")}
+                                {renderDocLink("Semester Withdrawal", "/policies-disclosures/academic-policies#semester-withdrawal")}
+                                {renderDocLink("Withdrawal, Drop and Refund", "/policies-disclosures/financing-resources#withdrawal-drops-refunds")}
                             </div>
                         </section>
 
@@ -641,11 +641,11 @@ const PoliciesDisclosures: React.FC = () => {
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 {renderDocLink("Annual Security and Fire Safety Report", "/s/Final-2025-Clery-Report-to-be-emailed-1.pdf", false, "Clery Act report")}
-                                {renderDocLink("Campus Hazing", "/s/UCB-HazingPolicy-2025.pdf", false, "Hazing policy")}
-                                {renderDocLink("Campus Security", "/safety-and-wellness")}
-                                {renderDocLink("Drug and Alcohol Prevention Program", "/safety-and-wellness")}
+                                {renderDocLink("Campus Hazing", "/policies-disclosures/student-rights#hazing-policy")}
+                                {renderDocLink("Campus Security", "/policies-disclosures/student-rights#safety-and-security")}
+                                {renderDocLink("Drug and Alcohol Prevention Program", "/policies-disclosures/student-rights#drug-and-alcohol-policy")}
                                 {renderDocLink("Emergency Preparedness", "/s/2025-Emergency-Handbook-1.pdf")}
-                                {renderDocLink("Public Safety", "/safety-and-wellness")}
+                                {renderDocLink("Public Safety", "/policies-disclosures/student-rights#safety-and-security")}
                             </div>
                         </section>
 
@@ -771,9 +771,9 @@ const PoliciesDisclosures: React.FC = () => {
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                {renderDocLink("Cohort Default Rate", "https://collegescorecard.ed.gov/school/?429128-Urban-College-of-Boston", true, "U.S. Dept. of Education")}
+                                {renderDocLink("Cohort Default Rate", "https://nces.ed.gov/collegenavigator/?q=urban+college+of+boston&s=all&id=429128", true, "College Navigator")}
                                 {renderDocLink("Financial Aid & Debt — College Scorecard", "https://collegescorecard.ed.gov/school/?429128-Urban-College-of-Boston", true)}
-                                {renderDocLink("Retention & Graduation Rates", "https://nces.ed.gov/collegenavigator/?id=429128&q=urban%20college%20of%20boston&s=all", true, "College Navigator")}
+                                {renderDocLink("Retention & Graduation Rates", "https://nces.ed.gov/collegenavigator/?q=urban+college+of+boston&s=all&id=429128", true, "College Navigator")}
                             </div>
                         </section>
                     </div>

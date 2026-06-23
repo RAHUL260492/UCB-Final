@@ -743,6 +743,75 @@ export const CONSUMER_PAGES: Record<string, ConsumerPage> = {
       { id: 'ferpa', title: 'Family Educational Rights and Privacy Act (FERPA)', ref: 'ferpa' },
       { id: 'title-ix', title: 'Title IX / Sexual Misconduct', ref: 'title-ix-sexual-misconduct' },
       { id: 'voter-registration', title: 'Voter Registration', ref: 'voter-registration' },
+      {
+        id: 'drug-and-alcohol-policy',
+        title: 'Drug and Alcohol Policy',
+        html: `
+<p>Urban College of Boston strives to achieve a healthy living, learning, and working environment. As part of this commitment and pursuant to the Federal Drug-Free Workplace Act of 1988 and the Drug-Free Schools and Communities Act Amendments of 1989, the College complies with all local, state, and federal regulations pertaining to alcohol and illicit drugs. The unlawful manufacture, dispensing, possession, use, or distribution of alcohol or illicit drugs by students or employees on Urban College's property is prohibited.</p>
+<p>All members of the Urban College community are responsible for knowing and acting in accordance with applicable laws and college policy concerning the purchase, possession, consumption, and sale of alcoholic beverages. Urban College distributes materials and provides educational workshops as prevention, and Student Affairs personnel can provide referrals to other agencies and organizations.</p>
+<h4>Legal Sanctions for Unlawful Possession of Alcohol and Drugs</h4>
+<p>Violation of the alcohol and drugs policy will result in actions ranging from mandated participation in drug counselling and rehabilitation programs to dismissal.</p>
+<h4>Drug-Related Crimes and Federal Financial Aid</h4>
+<p>Under the Higher Education Amendments of 1998, effective July 1, 2000, a student is ineligible for federal student aid if convicted, under federal or state law, of any offense involving the possession or sale of a controlled substance (generally illegal drugs, not including alcohol or tobacco). The period of ineligibility begins on the date of conviction and lasts until the end of the statutorily specified period. The student may regain eligibility early by completing a qualifying drug rehabilitation program (including two unannounced drug tests) or if the conviction is overturned.</p>
+<h4>Health Risk of Alcohol and Drug Use</h4>
+<p>The negative physical and mental effects of the use of alcohol and other drugs are well-documented and may include blackouts, poisoning, overdose, physical and psychological dependence, damage to vital organs, and an inability to learn and remember information. For more information, visit <a href="https://nida.nih.gov/research-topics/commonly-used-drugs-charts" target="_blank" rel="noopener noreferrer">drugabuse.gov</a>.</p>
+<h4>Drug and Alcohol Abuse Prevention Program</h4>
+<p>As required under the Drug-Free Schools and Communities Act of 1989, Urban College uses multiple strategies to provide comprehensive education regarding alcohol and other drugs, distributes materials, and provides educational workshops as prevention. Student Affairs personnel can provide referrals to other agencies and organizations for individuals experiencing or affected by substance abuse issues.</p>
+<h4>Free Alcohol, Drug, and Other Rehab Sources</h4>
+<ul>
+<li>Whittier Street Health Center — 1290 Tremont Street, Boston, MA 02120 — (617) 427-1000</li>
+<li>Center After Care Services Inc. — 2 Lexington Street, Boston, MA 02128 — (617) 569-4561</li>
+<li>Fenway Community Health Center, Substance Abuse Treatment Program — 142 Berkeley Street, Boston, MA 02116 — (617) 247-7555</li>
+<li>Boston Rescue Mission, OP Counselling — 39 Kingston Street, Boston, MA 02111 — (617) 482-8819</li>
+<li>Boston Children's Hospital Services — 300 Longwood Avenue, Boston, MA 02115 — (617) 355-2727</li>
+<li>Bay Cove Human Services — 66 Canal Street, Boston, MA 02114 — (617) 371-3030</li>
+</ul>`,
+      },
+      {
+        id: 'safety-and-security',
+        title: 'Safety and Security',
+        html: `
+<p>Student safety is of the utmost importance at Urban College, and we all must work together to maintain a safe and secure campus community. Students should maintain awareness of campus safety and immediately report issues and circumstances that may reduce safety and security.</p>
+<h4>Preparing the Annual Disclosure of Crime Statistics</h4>
+<p>Urban College prepares an annual report to comply with the Jeanne Clery Disclosure of Campus Security Policy and Crime Statistics Act, in cooperation with local law enforcement. The <a href="https://static1.squarespace.com/static/5be099a375f9eecbf2753e8d/t/68cc33956c34e1374ca797e7/1758213013180/Final+2025+Clery+Report+to+be+emailed+%281%29.pdf" target="_blank" rel="noopener noreferrer">full report</a> is accessible online; an annual email notification is sent to all enrolled students, faculty, and staff. Copies may be requested from the Office of Enrollment Services, and prospective employees may obtain a copy from Human Resources.</p>
+<h4>Notification of a Missing Student</h4>
+<p>If a member of the college community has reason to believe a student is missing, they should immediately notify the Boston Police Department by calling 911 and notify the President at (617) 449-7037. If the Boston Police Department confirms the student is missing, the college will notify the student's emergency contact no later than 24 hours after the determination. If the missing student is under 18 and not emancipated, the college must also notify the parent or legal guardian within 24 hours. Students may confidentially identify an individual to be contacted if they are determined to be missing; that information is confidential and accessible only by authorized campus officials and law enforcement during an investigation.</p>
+<h4>Reporting a Crime and Other Emergencies</h4>
+<p>Members of the community — visitors, students, faculty, and staff — are encouraged to report all crimes and emergencies in a timely manner. A crime is "reported" when brought to the attention of a Campus Security Authority (CSA) or law enforcement by a victim, witness, third party, or offender. Suspicious activities or individuals seen within the campus vicinity should also be reported.</p>
+<h4>Accurate Prompt Reporting</h4>
+<p>To report a crime or emergency on campus, call 911. To report a non-emergency security or public safety matter, call 617-449-7070. When a potentially dangerous threat arises, timely reports or warnings will be issued through email announcements, posted notices, in-class announcements, or other appropriate means.</p>
+<h4>To Report a Crime</h4>
+<p>Anyone can report a crime or emergency by dialing 911 or contacting the President at (617) 449-7037. To report suspicious activity or non-emergencies, contact an Urban College Campus Security Authority:</p>
+<table><tbody>
+<tr><td>Report emergencies or suspicious activities</td><td>Dial 911</td></tr>
+<tr><td>College President</td><td>617-449-7068</td></tr>
+<tr><td>Vice President of Academic Affairs</td><td>617-960-0257</td></tr>
+<tr><td>Director of Student Services and Support</td><td>617-449-7380</td></tr>
+<tr><td>AVP of Enrollment Management and Financial Services</td><td>617-449-7041</td></tr>
+<tr><td>Learning Resource Center staff</td><td>617-449-7044</td></tr>
+<tr><td>Financial Services</td><td>617-449-7429</td></tr>
+<tr><td>Business Office</td><td>617-449-7430</td></tr>
+<tr><td>Registration Services</td><td>617-449-7039</td></tr>
+<tr><td>Boston Municipal Police</td><td>617-338-9134</td></tr>
+</tbody></table>
+<p>You can also report a crime online via the <a href="https://docs.google.com/forms/d/e/1FAIpQLSdXquj_mxIOOEjAKWJcwzU7VFVeB26n6MPGcnk1pNSXtnTGkA/viewform" target="_blank" rel="noopener noreferrer">reporting form</a> or by email to <a href="mailto:Rosana.perella@urbancollege.edu">Rosana.perella@urbancollege.edu</a>.</p>
+<h4>Response to a Reported Crime</h4>
+<p>The Boston Police Department will work with individuals reporting a crime to obtain information and conduct a thorough investigation. When appropriate, crime suspects may be adjudicated through the criminal justice system and/or the college.</p>
+<h4>Campus Law Enforcement</h4>
+<p>The Boston Police Department and respective law enforcement for alternative learning sites have full law enforcement authority, including the authority to make arrests, on campus and at alternative learning sites. The main campus has a municipal building officer on site who is a sworn officer of the Boston Police Department. Although there is no formal memorandum of understanding, Urban College maintains a healthy working relationship with the Boston Police Department and other local and state law enforcement and emergency response agencies.</p>`,
+      },
+      {
+        id: 'hazing-policy',
+        title: 'Hazing Policy',
+        html: `
+<p>All Urban College of Boston students are subject to the following act of the Massachusetts Legislature, which makes hazing a crime. Action will be initiated for alleged violation(s) under applicable sections of the Code of Student Conduct, and students may also be subject to lawsuits by victims of hazing. Chapter 269 of the General Laws provides the following three sections:</p>
+<h4>Section 17: Penalty</h4>
+<p>Whoever is a principal organizer or participant in the crime of hazing shall be punished by a fine of not more than three thousand dollars or by imprisonment in a house of correction for not more than one year, or both. "Hazing" means any conduct or method of initiation into any student organization, whether on public or private property, which willfully or recklessly endangers the physical or mental health of any student or other person. Such conduct includes whipping, beating, branding, forced calisthenics, exposure to the weather, forced consumption of any food, liquor, beverage, drug, or other substance, or any other brutal treatment or forced physical activity which is likely to adversely affect the physical health or safety of any such student or person, or which subjects such student or person to extreme mental stress, including extended deprivation of sleep or rest or extended isolation. Consent shall not be available as a defense to any prosecution under this action.</p>
+<h4>Section 18: Duty to Report</h4>
+<p>Whoever knows that another person is the victim of hazing and is at the scene of such crime shall, to the extent that they can do so without danger or peril to themselves or others, report such crime to an appropriate law enforcement official as soon as reasonably practicable. Whoever fails to report such crime shall be punished by a fine of not more than one thousand dollars.</p>
+<h4>Section 19: Notice</h4>
+<p>Each institution of postsecondary education shall issue to every student group, team, or organization a copy of sections 17, 18, and 19. Each such group shall distribute a copy to each of its members, plebes, pledges, or applicants for membership, and deliver annually an attested acknowledgment that it has received and agrees to comply with these sections. Each institution shall, at least annually before or at the start of enrollment, deliver to each full-time student a copy of these sections, and shall file an annual report certifying compliance and that it has adopted a disciplinary policy regarding the organizers and participants of hazing.</p>`,
+      },
     ],
   },
 
@@ -876,6 +945,36 @@ export const CONSUMER_PAGES: Record<string, ConsumerPage> = {
 <li>Never attended any classes, or for whom Urban College cannot document academic engagement in at least one class — in which case the student did not establish Title IV eligibility and all funds must be returned.</li>
 </ul>`,
       },
+      {
+        id: 'withdrawal-drops-refunds',
+        title: 'Withdrawal, Drops, and Refunds',
+        html: `
+<p>Students may drop courses during the first two weeks of the semester (the drop period) and not incur tuition charges. Courses dropped after the drop period are considered withdrawn and full tuition charges are assessed. Students with financial aid who withdraw from the semester are treated as withdrawn students for financial aid purposes; tuition owed and refunds are reviewed on a case-by-case basis (see <a href="/policies-disclosures/financing-resources#return-of-title-iv-funds">Return of Title IV Funds</a>).</p>
+<h3>Tuition Refund</h3>
+<p><strong>Course Drops and Administrative Course Drops:</strong></p>
+<ul>
+<li><strong>During Week 1</strong> (add/drop period): No tuition charged, or 100% refund if full payment was made.</li>
+<li><strong>During Week 2</strong> (drop period): No tuition charged, or 100% refund if full payment was made.</li>
+<li><strong>After Week 2</strong> (withdrawal period): 100% tuition charged, or no refund if payment was submitted.</li>
+</ul>
+<p><strong>Course Withdrawals and Administrative Course Withdrawals:</strong> Students are not eligible for any tuition refunds for course withdrawal(s) at any point in the semester.</p>
+<p><strong>Semester Withdrawals and Administrative Semester Withdrawals:</strong></p>
+<ul>
+<li><strong>During Week 1</strong> (add/drop period): No tuition charged, or 100% refund if full payment was made.</li>
+<li><strong>During Week 2</strong> (drop period): No tuition charged, or 100% refund if full payment was made.</li>
+<li><strong>After Week 2</strong> (withdrawal period): 100% tuition charged, or no refund if payment was submitted.</li>
+</ul>
+<h4>Military Semester Withdrawal</h4>
+<p>Enrolled active-duty military personnel may withdraw from a semester if they are deployed to a location that has no civilian internet access. A tuition refund requires a copy of military orders and a letter from the superior officer confirming the lack of civilian internet access. In appropriately documented cases, a student may withdraw with a full tuition refund if the withdrawal is predicated on an injury or illness directly related to military service (supporting medical documentation required).</p>
+<h4>Registration and Tuition Refund Appeal Process</h4>
+<p>Students may appeal for relief from a process, deadline, payment, or ruling in unusual circumstances such as the death of a student or an immediate family member, serious injury/accident, hospitalization, unexpected job loss, or homelessness. All appeals should begin with a conversation with the Director of Student Services and Support. The appeal process is limited to 15 days from the posting of the withdrawal from the course, and appeals are limited to one per student per semester. Students must complete their own appeal in English. The Committee's decisions are final.</p>
+<h4>Refund Schedule</h4>
+<ul>
+<li><strong>Fall 2025</strong> (Sept 2 – Dec 22): courses starting Sept 2 — 100% refund on or before Sept 16, 2025, 0% after; courses starting Oct 28 — 100% on or before Nov 11, 2025, 0% after.</li>
+<li><strong>Spring 2026</strong> (Jan 20 – May 18): courses starting Jan 20 — 100% on or before Feb 3, 2026, 0% after; courses starting Mar 24 — 100% on or before Apr 7, 2026, 0% after.</li>
+<li><strong>Summer 2026</strong> (June 2 – July 27): courses starting June 2 — 100% on or before June 16, 2026, 0% after.</li>
+</ul>`,
+      },
     ],
   },
 
@@ -998,6 +1097,23 @@ export const CONSUMER_PAGES: Record<string, ConsumerPage> = {
 <li>General Education courses (science, math, humanities, social sciences) are generally not eligible for CPL except through national exams such as CLEP.</li>
 <li>The College cannot evaluate subject areas where it has no matching courses or subject areas offered.</li>
 </ul>`,
+      },
+      {
+        id: 'course-withdrawal',
+        title: 'Course Withdrawal and Administrative Course Withdrawal',
+        html: `
+<p>After the drop deadline, any course(s) that remain on a student's schedule is considered their final selection for that semester and will appear on their transcript as credits attempted and/or completed. Students who wish to drop their classes after the drop deadline may do so by withdrawing from a course and receiving a grade of "W" on the transcript. Withdrawn courses appear as credits attempted but no credits earned. Students continue to be financially responsible for withdrawn courses and are not eligible for a tuition refund.</p>
+<p>Course withdrawals could have adverse implications for a student's <a href="/policies-disclosures/academic-policies#satisfactory-academic-progress">Satisfactory Academic Progress</a>. Students who do not maintain Satisfactory Academic Progress will experience an impact on financial aid eligibility.</p>
+<p>If a student fails to post attendance for one class lesson week, they are at risk of an administrative course withdrawal. Immediately following the second consecutive missed attendance reporting deadline, the student will be administratively withdrawn from that course. Students who are administratively withdrawn receive a grade of "W" and are responsible for all tuition charges for that course.</p>`,
+      },
+      {
+        id: 'semester-withdrawal',
+        title: 'Withdrawal from the Semester and Administrative Withdrawal from the Semester',
+        html: `
+<p>If a leave of absence is scheduled to begin in a semester in which the student is currently enrolled, they will be withdrawn from that semester. After the start of the semester, students may only drop or withdraw from individual courses, but not all registered courses. If a registered student no longer wishes to continue after the start of the semester, they must withdraw from the semester. Students who cease to attend all their registered courses will be administratively withdrawn from the semester.</p>
+<p>Students who withdraw from the semester will receive grades of "W" in all registered courses. A semester withdrawal may impact the student's <a href="/policies-disclosures/academic-policies#satisfactory-academic-progress">Satisfactory Academic Progress</a> and/or financial aid eligibility.</p>
+<p>Students who wish to withdraw from a semester in the first week of classes and have not posted attendance in any registered courses may be eligible for a leave of absence beginning at the start of that semester. A final determination is made by the Registrar, based on the student's attendance record.</p>
+<p>The deadline to withdraw from the semester is published in the Academic Calendar. Students may withdraw from the semester by submitting the Request a Leave of Absence or Withdrawal form.</p>`,
       },
     ],
   },
