@@ -251,12 +251,16 @@ const RFILandingPage: React.FC = () => {
             <section className="py-16 bg-ucb-blue text-white">
                 <div className="container mx-auto px-6 max-w-3xl text-center">
                     <ScrollAnimation variant="fade-up">
-                        <h2 className="text-2xl md:text-3xl font-display font-bold">Admissions</h2>
+                        <h2 className="text-2xl md:text-3xl font-display font-bold">You Belong in College</h2>
                         <p className="text-blue-100 font-light leading-relaxed mt-4 text-sm md:text-base">
-                            Thank you for your interest in attending Urban College! We're eager to help you identify the program
-                            best aligned with your academic and career goals, and to understand the financial resources available
-                            to help you pay for college. We invite interested individuals at any stage of life or career to apply to
-                            our degree and certificate programs. Ready to apply? Get started below—or call for more information.
+                            Thank you for your interest in attending Urban College!
+                        </p>
+                        <p className="text-blue-100 font-light leading-relaxed mt-4 text-sm md:text-base">
+                            Urban College is different. We understand that most modern students are working while earning their
+                            college degree. That's why our programs are all online, flexible, and affordable—so they fit into your busy life.
+                        </p>
+                        <p className="text-white font-semibold leading-relaxed mt-4 text-base md:text-lg">
+                            Start your future today.
                         </p>
                         <div className="mt-7 flex flex-wrap justify-center gap-3">
                             <a href={APPLY_URL} target="_blank" rel="noopener noreferrer" className="bg-ucb-orange hover:bg-ucb-orange-glow text-white font-bold py-3 px-7 rounded-full text-sm uppercase tracking-wider transition-colors shadow-md min-h-[44px] inline-flex items-center">
