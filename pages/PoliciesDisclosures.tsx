@@ -674,6 +674,7 @@ const PoliciesDisclosures: React.FC = () => {
                                     {renderDocLink("Faculty, Administration and Staff", "/policies-disclosures/faculty-administration-staff")}
                                     {renderDocLink("Campus Location and Services", "/policies-disclosures/about-ucb#campus-location")}
                                     {renderDocLink("Non-Discrimination, Equal Access and Equal Opportunity Statement", "/policies-disclosures/about-ucb#diversity-equity-inclusion")}
+                                    {renderDocLink("Privacy Policy", "/policies-disclosures/privacy-policy")}
                                     {renderDocLink("State Authorization and NC-SARA Information", "/policies-disclosures/about-ucb#nc-sara")}
                                     {renderDocLink("Student Activities", "/policies-disclosures/student-supports#student-activities")}
                                     {renderDocLink("Student Body Diversity", "/policies-disclosures/about-ucb#diversity-equity-inclusion")}

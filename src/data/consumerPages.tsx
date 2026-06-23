@@ -320,6 +320,176 @@ export const CONSUMER_PAGES: Record<string, ConsumerPage> = {
 </ol>`,
   },
 
+  'privacy-policy': {
+    title: 'Privacy Policy',
+    description: 'How Urban College of Boston collects, uses, and safeguards your information, including SMS/text messaging and phone call communications.',
+    html: `
+<p>Urban College is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information, including information collected in connection with our SMS (text messaging) communications.</p>
+
+<h3>Information We Collect</h3>
+<p>We may collect personal information that you voluntarily provide to us, including but not limited to:</p>
+<ul>
+<li>Name</li>
+<li>Email address</li>
+<li>Mailing address</li>
+<li>Mobile phone number</li>
+</ul>
+<p>This information may be collected when you:</p>
+<ul>
+<li>Complete forms on our website</li>
+<li>Submit inquiries or applications</li>
+<li>Register for events</li>
+<li>Communicate with us directly</li>
+</ul>
+
+<h2>SMS / Text Messaging</h2>
+
+<h3>Consent to Receive Text Messages</h3>
+<p>By providing your mobile phone number and explicitly opting in (for example, by checking a consent box on a form), you agree to receive SMS messages from Urban College. Message and data rates may apply.</p>
+<p>Consent to receive text messages is not a condition of enrollment or purchase.</p>
+
+<h3>Types of Messages You May Receive</h3>
+<p>Messages may include both informational and promotional content, such as:</p>
+<ul>
+<li>Admissions updates and application status notifications</li>
+<li>Event reminders and campus information</li>
+<li>Enrollment-related communications</li>
+<li>Promotional messages about programs, opportunities, or events</li>
+</ul>
+<p>Message frequency may vary. You may receive multiple messages per week depending on your engagement with us.</p>
+
+<h3>How You Opt In</h3>
+<p>You may opt in to receive SMS messages by:</p>
+<ul>
+<li>Submitting forms on our website and selecting the SMS consent option</li>
+<li>Registering for events and opting into text communications</li>
+<li>Providing consent during the application or inquiry process</li>
+<li>Communicating with us and agreeing to receive follow-up messages</li>
+</ul>
+
+<h3>Information Collected for SMS Communications</h3>
+<p>When you opt in to receive SMS messages, we may collect:</p>
+<ul>
+<li>Your mobile phone number</li>
+<li>Your name</li>
+<li>Information related to your inquiry, application, or engagement with us</li>
+</ul>
+
+<h3>How We Use SMS Information</h3>
+<p>We use your information to:</p>
+<ul>
+<li>Send admissions and enrollment communications</li>
+<li>Provide application updates and reminders</li>
+<li>Share event information</li>
+<li>Send promotional and marketing messages (where consent has been provided)</li>
+<li>Respond to inquiries and provide support</li>
+</ul>
+
+<h3>Sharing of SMS Information</h3>
+<p>We do not sell, rent, or share your mobile phone number or SMS consent information with third parties for their marketing purposes.</p>
+<p>We may share your information with trusted service providers (such as messaging platforms) solely for the purpose of delivering SMS communications.</p>
+
+<h3>Opt-Out of SMS Communications</h3>
+<p>You may opt out of receiving text messages at any time by replying:</p>
+<ul>
+<li><strong>STOP</strong> to unsubscribe</li>
+<li><strong>HELP</strong> for assistance</li>
+</ul>
+<p>Message and data rates may apply. Carriers are not liable for delayed or undelivered messages.</p>
+
+<h3>Retention of SMS Data</h3>
+<p>We retain SMS-related information only for as long as necessary to fulfill the purposes described in this policy or as required by applicable law. When no longer needed, we securely delete or anonymize the information.</p>
+
+<h2>General Privacy Provisions</h2>
+
+<h3>How We Use Your Information</h3>
+<p>We may use your information to:</p>
+<ul>
+<li>Provide and improve our services</li>
+<li>Communicate with you</li>
+<li>Process applications and registrations</li>
+<li>Respond to inquiries</li>
+<li>Comply with legal obligations</li>
+</ul>
+
+<h3>Your Privacy Rights</h3>
+<p>You may request to:</p>
+<ul>
+<li>Access your personal information</li>
+<li>Correct inaccurate information</li>
+<li>Request deletion of your data</li>
+</ul>
+<p>To make a request, please contact us using the information below. You may also opt out of SMS communications at any time by replying STOP.</p>
+
+<h3>Data Security</h3>
+<p>We implement reasonable administrative, technical, and physical safeguards to protect your information.</p>
+
+<h3>Contact Us</h3>
+<p>If you have questions about this Privacy Policy or your data, contact us at:</p>
+<ul>
+<li>Email: <a href="mailto:helpdesk@urbancollege.edu">helpdesk@urbancollege.edu</a></li>
+</ul>
+
+<h2>Phone Call Communications</h2>
+
+<h3>Consent to Receive Phone Calls</h3>
+<p>By providing your phone number to Urban College, you consent to receive phone calls from us, which may include calls made using automated technology, artificial intelligence (AI)-assisted systems, and/or prerecorded or artificial voice messages.</p>
+<p>These calls may be made for informational or promotional purposes related to:</p>
+<ul>
+<li>Admissions and enrollment</li>
+<li>Application status and follow-ups</li>
+<li>Event reminders and participation</li>
+<li>Programs, offerings, and other opportunities</li>
+</ul>
+<p>Consent to receive phone calls is not a condition of enrollment or purchase.</p>
+
+<h3>AI-Assisted Calling</h3>
+<p>Some calls may be conducted or supported by automated systems or AI-assisted technology. These technologies may be used to:</p>
+<ul>
+<li>Provide information</li>
+<li>Route calls or assist representatives</li>
+<li>Deliver prerecorded or partially automated messages</li>
+</ul>
+<p>You may request to speak with a live representative at any time during a call, where applicable.</p>
+
+<h3>Call Recording and Monitoring</h3>
+<p>Phone calls with Urban College may be recorded and/or monitored for purposes such as:</p>
+<ul>
+<li>Quality assurance</li>
+<li>Training and evaluation</li>
+<li>Record-keeping and compliance</li>
+</ul>
+<p>By engaging in a call with us, you acknowledge and agree that the call may be recorded, where permitted by applicable law.</p>
+
+<h3>How We Use Call Information</h3>
+<p>Information collected during phone communications may be used to:</p>
+<ul>
+<li>Respond to inquiries and provide support</li>
+<li>Assist with admissions and enrollment processes</li>
+<li>Improve our services and communication practices</li>
+<li>Maintain records of interactions</li>
+</ul>
+
+<h3>Opt-Out of Phone Calls</h3>
+<p>You may opt out of receiving phone calls at any time by:</p>
+<ul>
+<li>Informing the caller during any call</li>
+<li>Contacting us using the information provided below</li>
+<li>Following any opt-out instructions provided during the call</li>
+</ul>
+<p>We will process opt-out requests in accordance with applicable law.</p>
+
+<h3>Sharing of Call Information</h3>
+<p>We do not sell or share your phone number with third parties for their marketing purposes.</p>
+<p>We may share information with trusted service providers solely for the purpose of facilitating communications and services on our behalf.</p>
+
+<h3>Call Frequency</h3>
+<p>The frequency of phone calls may vary depending on your interaction with us, including your inquiry status, application progress, or engagement with our programs.</p>
+
+<h3>Compliance with Applicable Laws</h3>
+<p>We strive to comply with all applicable laws and regulations related to phone communications, including the Telephone Consumer Protection Act (TCPA) and other relevant regulations governing automated calls, prerecorded messages, and call recording.</p>`,
+  },
+
   'student-activities': {
     title: 'Student Activities',
     description: 'Urban College of Boston student activities, success workshops, and the Student Strong Pathway.',
