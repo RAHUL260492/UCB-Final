@@ -1,17 +1,30 @@
 import React, { useEffect } from 'react';
-import { useParams, Navigate, Link } from 'react-router-dom';
+import { useParams, Navigate, Link, useLocation } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import SEO from '../components/SEO';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { CONSUMER_PAGES } from '../src/data/consumerPages';
 
 // Renders an internal Consumer Information sub-page (migrated catalog content)
-// at /policies-disclosures/<slug>. Unknown slugs redirect back to the hub.
+// at /policies-disclosures/<slug>. Some pages are "consolidated" (sections[]) and
+// gather several entries under anchor ids; links deep-link via page#anchor.
 const ConsumerInfoPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
+  const location = useLocation();
   const page = slug ? CONSUMER_PAGES[slug] : undefined;
 
-  useEffect(() => { window.scrollTo(0, 0); }, [slug]);
+  // Scroll to the #anchor when present (SPA navigation doesn't do this on its own),
+  // otherwise scroll to the top.
+  useEffect(() => {
+    const id = location.hash.replace('#', '');
+    if (id) {
+      const t = setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 120);
+      return () => clearTimeout(t);
+    }
+    window.scrollTo(0, 0);
+  }, [slug, location.hash]);
 
   if (!page) return <Navigate to="/policies-disclosures" replace />;
 
@@ -40,9 +53,21 @@ const ConsumerInfoPage: React.FC = () => {
         </Link>
 
         <div className="bg-white rounded-3xl p-6 md:p-9 border border-gray-100 shadow-sm">
-          {page.html
-            ? <div className="consumer-prose" dangerouslySetInnerHTML={{ __html: page.html }} />
-            : page.content}
+          {page.sections
+            ? page.sections.map((s) => {
+                const ref = CONSUMER_PAGES[s.ref];
+                return (
+                  <section key={s.id} id={s.id} className="scroll-mt-28 mb-12 last:mb-0">
+                    <h2 className="text-xl md:text-2xl font-display font-black text-ucb-blue border-b-2 border-ucb-orange/30 pb-2 mb-4">{s.title}</h2>
+                    {ref?.html
+                      ? <div className="consumer-prose" dangerouslySetInnerHTML={{ __html: ref.html }} />
+                      : ref?.content}
+                  </section>
+                );
+              })
+            : page.html
+              ? <div className="consumer-prose" dangerouslySetInnerHTML={{ __html: page.html }} />
+              : page.content}
 
           {page.sourceUrl && (
             <div className="mt-8 pt-5 border-t border-gray-100">

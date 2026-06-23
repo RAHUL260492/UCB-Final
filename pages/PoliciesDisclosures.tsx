@@ -663,24 +663,24 @@ const PoliciesDisclosures: React.FC = () => {
                             <div className="space-y-6">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     {renderDocLink("Academic Programs", "/policies-disclosures/academic-programs")}
-                                    {renderDocLink("Acceptable Use Policy", "/policies-disclosures/acceptable-use-policy")}
+                                    {renderDocLink("Acceptable Use Policy", "/policies-disclosures/student-rights#computer-and-network-usage")}
                                     {renderDocLink("Accreditation", "/accreditation")}
-                                    {renderDocLink("Articulation Agreements", "/policies-disclosures/articulation-agreements")}
-                                    {renderDocLink("Grievance Procedure", "/policies-disclosures/grievance-procedure")}
+                                    {renderDocLink("Articulation Agreements", "/policies-disclosures/about-ucb#articulation-agreements")}
+                                    {renderDocLink("Grievance Procedure", "/policies-disclosures/student-rights#grievance-procedures")}
                                     {renderDocLink("Constitution Day", "https://static1.squarespace.com/static/5be099a375f9eecbf2753e8d/t/68cc36e79b373b2133946a69/1758213863832/Constitution+and+Cookies+2025.pdf", true)}
                                     {renderFlag("Copyright Infringement & Peer-to-Peer File Sharing Policy", "Link pending — covered within the Acceptable Use Policy; confirm a destination")}
-                                    {renderDocLink("Disability and Accessibility Services", "/policies-disclosures/disability-accessibility-services")}
-                                    {renderDocLink("Family Educational Rights and Privacy Act (FERPA)", "/policies-disclosures/ferpa")}
+                                    {renderDocLink("Disability and Accessibility Services", "/policies-disclosures/student-supports#disability-accessibility")}
+                                    {renderDocLink("Family Educational Rights and Privacy Act (FERPA)", "/policies-disclosures/student-rights#ferpa")}
                                     {renderDocLink("Faculty, Administration and Staff", "/policies-disclosures/faculty-administration-staff")}
-                                    {renderDocLink("Campus Location and Services", "/policies-disclosures/campus-location-services")}
-                                    {renderDocLink("Non-Discrimination, Equal Access and Equal Opportunity Statement", "/policies-disclosures/diversity-equity-inclusion")}
-                                    {renderDocLink("State Authorization and NC-SARA Information", "/policies-disclosures/nc-sara")}
-                                    {renderDocLink("Student Activities", "/policies-disclosures/student-activities")}
-                                    {renderDocLink("Student Body Diversity", "/policies-disclosures/diversity-equity-inclusion")}
-                                    {renderDocLink("Title IX / Sexual Misconduct", "/policies-disclosures/title-ix-sexual-misconduct")}
+                                    {renderDocLink("Campus Location and Services", "/policies-disclosures/about-ucb#campus-location")}
+                                    {renderDocLink("Non-Discrimination, Equal Access and Equal Opportunity Statement", "/policies-disclosures/about-ucb#diversity-equity-inclusion")}
+                                    {renderDocLink("State Authorization and NC-SARA Information", "/policies-disclosures/about-ucb#nc-sara")}
+                                    {renderDocLink("Student Activities", "/policies-disclosures/student-supports#student-activities")}
+                                    {renderDocLink("Student Body Diversity", "/policies-disclosures/about-ucb#diversity-equity-inclusion")}
+                                    {renderDocLink("Title IX / Sexual Misconduct", "/policies-disclosures/student-rights#title-ix")}
                                     {renderDocLink("Transfer Credit Policy", "/policies-disclosures/transfer-credit-policy")}
                                     {renderDocLink("Credit for Prior Learning", "https://catalog.urbancollege.edu/content.php?catoid=3&navoid=103#credit-for-prior-learning-cpl-also-known-as-prior-learning-assessment-pla-or-life-experience-credit-policy", true)}
-                                    {renderDocLink("Voter Registration", "/policies-disclosures/voter-registration")}
+                                    {renderDocLink("Voter Registration", "/policies-disclosures/student-rights#voter-registration")}
                                 </div>
 
                                 <div className="space-y-3 pt-4 border-t border-gray-50">

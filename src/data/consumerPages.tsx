@@ -5,12 +5,22 @@ import React from 'react';
 // /policies-disclosures/<slug>. Keep prose faithful to the source; `sourceUrl`
 // links back to the authoritative catalog page.
 
+// A consolidated page that gathers several existing section entries (by slug) and
+// renders each under an anchor id, so multiple Consumer Information links can deep-link
+// (page#anchor) into one shared page.
+export interface ConsumerSection {
+  id: string;   // in-page anchor id
+  title: string;
+  ref: string;  // key of another CONSUMER_PAGES entry to pull content from
+}
+
 export interface ConsumerPage {
   title: string;
   description: string;
   sourceUrl?: string;
   content?: React.ReactNode;
   html?: string;
+  sections?: ConsumerSection[];
 }
 
 // Lightweight typography helpers so content reads cleanly and stays consistent.
@@ -719,5 +729,41 @@ export const CONSUMER_PAGES: Record<string, ConsumerPage> = {
 <tr><td>Zhu</td><td>Junxian</td><td>CIS</td><td>Shanghai University, BS</td></tr>
 </tbody>
 </table>`,
+  },
+
+  // ---- Consolidated pages (one per source catalog page; deep-linked via #anchor) ----
+  'student-rights': {
+    title: 'Student Rights and Responsibilities',
+    description: "Urban College of Boston student rights and responsibilities — acceptable use, disciplinary and grievance procedures, FERPA, Title IX, and voter registration.",
+    sourceUrl: 'https://catalog.urbancollege.edu/content.php?catoid=3&navoid=105',
+    sections: [
+      { id: 'computer-and-network-usage', title: 'Acceptable Use Policy (Computer and Network Usage)', ref: 'acceptable-use-policy' },
+      { id: 'grievance-procedures', title: 'Student Disciplinary and Grievance Procedures', ref: 'grievance-procedure' },
+      { id: 'ferpa', title: 'Family Educational Rights and Privacy Act (FERPA)', ref: 'ferpa' },
+      { id: 'title-ix', title: 'Title IX / Sexual Misconduct', ref: 'title-ix-sexual-misconduct' },
+      { id: 'voter-registration', title: 'Voter Registration', ref: 'voter-registration' },
+    ],
+  },
+
+  'about-ucb': {
+    title: 'About Urban College of Boston',
+    description: "General college information — articulation agreements, diversity/equity/inclusion, state authorization and NC-SARA, and campus location and services.",
+    sourceUrl: 'https://catalog.urbancollege.edu/content.php?catoid=3&navoid=95',
+    sections: [
+      { id: 'articulation-agreements', title: 'Articulation Agreements', ref: 'articulation-agreements' },
+      { id: 'diversity-equity-inclusion', title: 'Diversity, Equity, and Inclusion', ref: 'diversity-equity-inclusion' },
+      { id: 'nc-sara', title: 'State Authorization and NC-SARA Information', ref: 'nc-sara' },
+      { id: 'campus-location', title: 'Campus Location and Services', ref: 'campus-location-services' },
+    ],
+  },
+
+  'student-supports': {
+    title: 'Academic and Student Supports',
+    description: 'Academic and student supports — disability and accessibility services and student activities.',
+    sourceUrl: 'https://catalog.urbancollege.edu/content.php?catoid=3&navoid=101',
+    sections: [
+      { id: 'disability-accessibility', title: 'Disability and Accessibility Services', ref: 'disability-accessibility-services' },
+      { id: 'student-activities', title: 'Student Activities', ref: 'student-activities' },
+    ],
   },
 };
