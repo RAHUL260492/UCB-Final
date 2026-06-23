@@ -213,7 +213,7 @@ export const PAGE_META: Record<string, PageMeta> = {
     path: '/employment',
   },
   policies: {
-    title: 'Policies & Disclosures',
+    title: 'Consumer Information',
     description: 'Urban College of Boston institutional policies, consumer information, and regulatory disclosures.',
     path: '/policies-disclosures',
   },

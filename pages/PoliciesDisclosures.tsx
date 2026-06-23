@@ -89,7 +89,7 @@ const PoliciesDisclosures: React.FC = () => {
     const breadcrumbs = [
         { label: "Home", path: "/" },
         { label: "About Urban College", path: "/about" },
-        { label: "Policies & Disclosures" }
+        { label: "Consumer Information" }
     ];
 
     const toggleArchive = (key: string) => {
@@ -225,11 +225,11 @@ const PoliciesDisclosures: React.FC = () => {
                 canonicalPath={PAGE_META.policies.path}
                 jsonLd={buildBreadcrumbJsonLd([
                     { name: 'Home', path: '/' },
-                    { name: 'Policies & Disclosures', path: PAGE_META.policies.path },
+                    { name: 'Consumer Information', path: PAGE_META.policies.path },
                 ])}
             />
             <PageHeader
-                title="Policies & Disclosures"
+                title="Consumer Information"
                 subtitle="Access institutional documents, student guidelines, safety reports, and regulatory disclosures in one place."
                 breadcrumbs={breadcrumbs}
                 imageSrc="https://images.unsplash.com/photo-1450133064473-71024230f91b?q=80&w=2940&auto=format&fit=crop"

@@ -15,7 +15,7 @@ interface Item {
 }
 
 const items: Item[] = [
-    { title: 'Policies & Disclosures', desc: 'Required consumer information, academic policies, calendars, catalogs, and audited financials.', to: '/policies-disclosures', icon: Scale },
+    { title: 'Consumer Information', desc: 'Required consumer information, academic policies, calendars, catalogs, and audited financials.', to: '/policies-disclosures', icon: Scale },
     { title: 'Safety & Wellness', desc: 'Emergency preparedness, annual security (Clery) reports, Title IX, and how to report a crime.', to: '/safety-and-wellness', icon: ShieldCheck },
     { title: 'Campus Facilities', desc: 'Information about our campus, accessibility, and on-site resources.', to: '/campus-facilities', icon: Building2 },
     { title: 'HEERF Reports', desc: 'Higher Education Emergency Relief Fund public disclosures and quarterly reports.', to: '/heerf-reports', icon: ClipboardList },
