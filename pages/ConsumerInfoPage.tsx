@@ -40,7 +40,9 @@ const ConsumerInfoPage: React.FC = () => {
         </Link>
 
         <div className="bg-white rounded-3xl p-6 md:p-9 border border-gray-100 shadow-sm">
-          {page.content}
+          {page.html
+            ? <div className="consumer-prose" dangerouslySetInnerHTML={{ __html: page.html }} />
+            : page.content}
 
           {page.sourceUrl && (
             <div className="mt-8 pt-5 border-t border-gray-100">

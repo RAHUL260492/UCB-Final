@@ -9,7 +9,8 @@ export interface ConsumerPage {
   title: string;
   description: string;
   sourceUrl?: string;
-  content: React.ReactNode;
+  content?: React.ReactNode;
+  html?: string;
 }
 
 // Lightweight typography helpers so content reads cleanly and stays consistent.
@@ -167,5 +168,169 @@ export const CONSUMER_PAGES: Record<string, ConsumerPage> = {
         <P>Violators are subject to disciplinary action as prescribed in student and employee policies, handbooks, or contracts.</P>
       </>
     ),
+  },
+
+  'articulation-agreements': {
+    title: 'Articulation Agreements',
+    description: "Urban College of Boston articulation agreements and bachelor's completion partnerships.",
+    sourceUrl: 'https://catalog.urbancollege.edu/content.php?catoid=3&navoid=95#articulation-agreements',
+    html: `
+<p>Articulation agreements facilitate Urban College graduates' entrance into bachelor's degree programs. An articulation agreement describes when and how a student may be able to transfer to a specific bachelor's degree program and often includes the entrance and program requirements, which are unique to the partner institution, as well as the expected transfer of courses and credits.</p>
+<p>Urban College currently offers bachelor's completion programs with American College of Education, Boston College - Woods College, Endicott College, Franklin Cummings Tech, Fisher College, Fitchburg State University, Lasell University, Lesley University, Quincy College, Regis College, Salem State University, Southern New Hampshire University, UMass Boston, and William James College. For additional information regarding articulation agreements, please contact the Admissions offices at each institution or visit our <a href="/college-transfer-pathways">College Transfer Pathways</a> page.</p>`,
+  },
+
+  'nc-sara': {
+    title: 'State Authorization and NC-SARA Information',
+    description: "Urban College of Boston's NC-SARA participation, distance-education state authorization, student complaint process, and professional licensure disclosure.",
+    sourceUrl: 'https://catalog.urbancollege.edu/content.php?catoid=3&navoid=95#nc-sara-participation-statement',
+    html: `
+<p>Urban College of Boston participates in the National Council for State Authorization Reciprocity Agreements (NC-SARA). NC-SARA is an agreement among member states, districts, and territories that establishes comparable national standards for the interstate offering of postsecondary distance education courses and programs.</p>
+<p>As a participating institution, Urban College of Boston is authorized to offer distance education to students residing in other SARA member states, consistent with the terms and conditions of NC-SARA.</p>
+<h3>Student Complaint Process</h3>
+<p>Students enrolled in distance education courses who reside outside of Massachusetts and wish to file a complaint should first follow the Urban College of Boston Student Complaint Procedure.</p>
+<p>If the complaint is not resolved at the institutional level, the student may file a complaint with the Massachusetts Department of Higher Education, the state portal entity for NC-SARA. Information on the NC-SARA Student Complaint Process is available at: <a href="https://www.nc-sara.org/student-complaints" target="_blank" rel="noopener noreferrer">nc-sara.org/student-complaints</a>.</p>
+<h3>Professional Licensure Disclosure</h3>
+<p>Programs that lead to professional licensure or certification may not meet educational requirements in all states. Students are responsible for confirming licensure requirements in the state where they intend to work prior to enrollment.</p>`,
+  },
+
+  'campus-location-services': {
+    title: 'Campus Location and Services',
+    description: 'Urban College of Boston campus location, services, and transportation options.',
+    sourceUrl: 'https://catalog.urbancollege.edu/content.php?catoid=3&navoid=95#campus-location-and-services',
+    html: `
+<p>2 Boylston Street, 2nd Floor<br>Boston, MA 02116<br>Phone: (617) 449-7070<br>Email: <a href="mailto:contact@urbancollege.edu">contact@urbancollege.edu</a><br>Fax: (617) 830-3137</p>
+<p>Urban College of Boston's downtown Boston campus is located within a convenient walking distance from several Massachusetts Bay Transportation Authority (MBTA) T stations on the 1st and 2nd floors of a building known as the China Trade Center.</p>
+<p>The College's main entrance is on the 2nd floor and accessible via stairs and elevators near the building's entrance. The College's administrative offices, student support services, and meeting rooms are located on the 2nd floor of this building, including Enrollment Services, Academic Advising, Financial Aid, Student Services, the Business Office, Advancement, the Student Lounge, and the Learning Resource Center. Classrooms are on the first and second floors. All classrooms and meeting rooms are equipped with an instructor station and standard educational technology.</p>
+<h3>Transportation Options</h3>
+<p>For individuals intending to drive to and from the campus, limited public parking spaces may be available across the campus for a parking fee. Parking in downtown Boston can be expensive. Students and campus visitors are strongly encouraged to take advantage of alternate and sustainable commuting solutions, including buses and trains. The College is located across from the Chinatown Orange Line Massachusetts Bay Transportation Authority (MBTA or "T") station in Boston. The College is easily accessible via the Orange, Red, Green, and Silver T Lines, and numerous bus routes. The MBTA offers an <a href="https://www.mbta.com/fares/reduced/income-eligible" target="_blank" rel="noopener noreferrer">Income-Eligible Reduced Fare Program</a> and a <a href="https://www.mbta.com/fares/reduced/senior-charliecard" target="_blank" rel="noopener noreferrer">Senior CharlieCard</a>; visit the <a href="https://www.mbta.com/" target="_blank" rel="noopener noreferrer">MBTA</a> website to learn more.</p>`,
+  },
+
+  'diversity-equity-inclusion': {
+    title: 'Diversity, Equity, and Inclusion',
+    description: "Urban College of Boston's non-discrimination, equal access and equal opportunity statement, and student body diversity.",
+    sourceUrl: 'https://catalog.urbancollege.edu/content.php?catoid=3&navoid=95#diversity-equity-and-inclusion',
+    html: `
+<p>Urban College of Boston is an affirmative action/equal opportunity institution and does not discriminate on the basis of gender, age, religion, race, color, disability, sexual orientation, or national and ethnic origin in the administration of its educational policies, employment policies, and other programs and activities. Our students include recent high school graduates, parents, working adults, transfer students, international students, and individuals interested in changing careers or completing their degree.</p>
+<p>Chartered in 1993, the College has long served an ethnically- and racially-diverse student body. Of the over 1,138 students enrolled during the 2023-2024 academic year, 51% identified as Hispanic or Latinx, 15% as Black or African American, 9% as Asian, 5% as white, 2% as two or more races, and 18% did not indicate their race or ethnicity. Additionally, 88% of students were women, the average age was 36, and students came from over 120 cities and towns across Massachusetts.</p>`,
+  },
+
+  'transfer-credit-policy': {
+    title: 'Transfer Credit Policy',
+    description: "Urban College of Boston transfer credit evaluation policy — eligibility, maximum transfer credits, procedure, and residency requirements.",
+    sourceUrl: 'https://catalog.urbancollege.edu/content.php?catoid=3&navoid=97#transfer-credit-evaluation',
+    html: `
+<h3>Eligibility and Restrictions</h3>
+<ul>
+<li>Transfer credits are accepted only from regionally accredited U.S. institutions or their recognized international equivalents.</li>
+<li>Courses must be undergraduate-level, with a minimum grade of C (2.0) or higher.</li>
+<li>Transfer credit will not be awarded for:
+  <ul><li>Courses in disciplines not offered by Urban College.</li><li>Courses not applicable to the student's declared program of study.</li></ul></li>
+<li><strong>Credit for Prior Learning</strong> counts toward the total number of transfer credits accepted.</li>
+<li>Transcripts and course descriptions from non-regionally accredited institutions must be evaluated by an approved external agency (e.g., Scholaro, CED, WES, ECE).</li>
+</ul>
+<h3>Maximum Transfer Credits</h3>
+<ul>
+<li><strong>Associate of Arts Degree:</strong> Up to 30 credits may be transferred. Students must complete a minimum of 30 credits at Urban College to meet residency requirements.</li>
+<li><strong>Certificate Programs:</strong> Students must complete at least 50% of the total certificate credits at Urban College. Maximum transferrable credits for each certificate program:
+  <ul>
+    <li>Foundations of Early Childhood Education: 8 credits</li>
+    <li>Paraprofessional Educators: 10 credits</li>
+    <li>Children's Behavioral Health: 8 credits</li>
+    <li>Case Management: 10 credits</li>
+    <li>Human Services: 10 credits</li>
+    <li>Elder Care: 10 credits</li>
+    <li>General Studies: 10 credits</li>
+    <li>Digital Marketing: 9 credits</li>
+    <li>Project Management: 9 credits</li>
+    <li>Business: 9 credits</li>
+  </ul></li>
+</ul>
+<h3>Procedure</h3>
+<ul>
+<li><strong>At the time of application:</strong> Students seeking transfer credits must submit official transcripts and/or evaluations to the Admissions Office.</li>
+<li><strong>After admission:</strong> Transcripts/evaluations not submitted during application should be sent directly to the Office of Registration Services at <a href="mailto:registration@urbancollege.edu">registration@urbancollege.edu</a>.</li>
+</ul>
+<h3>Residency Requirements</h3>
+<ul>
+<li><strong>Associate Degrees:</strong> Students must complete a minimum of 30 credits at Urban College. These credits should include core program requirements and discipline-specific courses to ensure depth and rigor.</li>
+<li><strong>Certificate Programs:</strong> Students must complete a meaningful portion of the program at Urban College — at least 50% of the total credits, including any capstone, internship, or culminating experiences if applicable. Residency requirements for each certificate program:
+  <ul>
+    <li>Foundations of Early Childhood Education: 8 credits</li>
+    <li>Paraprofessional Educators: 11 credits</li>
+    <li>Children's Behavioral Health: 8 credits</li>
+    <li>Case Management: 11 credits</li>
+    <li>Human Services: 11 credits</li>
+    <li>Elder Care: 11 credits</li>
+    <li>General Studies: 11 credits</li>
+    <li>Digital Marketing: 9 credits</li>
+    <li>Project Management: 9 credits</li>
+    <li>Business: 9 credits</li>
+  </ul></li>
+</ul>`,
+  },
+
+  'disability-accessibility-services': {
+    title: 'Disability and Accessibility Services',
+    description: 'Urban College of Boston accessibility and academic accommodations, ADA services, and the accommodation request process.',
+    sourceUrl: 'https://catalog.urbancollege.edu/content.php?catoid=3&navoid=101#accessibility-academic-accommodations',
+    html: `
+<p>The Director of Student Services and Support at Urban College of Boston provides services to students who qualify as having a disability under the Americans with Disabilities Act (ADA). The Director of Student Services and Support is responsible for accommodations in accordance with the Americans with Disabilities Act, Section 504 of the Rehabilitation Act, and applicable state law. The ADA defines a person with a disability as someone who "has a physical or mental impairment that substantially limits one or more major life activities, has a history or record of such an impairment (such as cancer that is in remission), or is perceived by others as having such an impairment (such as a person who has scars from a severe burn)."</p>
+<p>The services provided to registered students with disabilities may include, but are not limited to:</p>
+<ul>
+<li>Providing advocacy support for students with documented disabilities,</li>
+<li>Coordinating services for students with disabilities, which includes verifying eligibility for academic accommodations based on documentation,</li>
+<li>Providing assistance to members of the campus community in responding to disability-related issues and concerns,</li>
+<li>Working with the larger campus community to overcome architectural, attitudinal, and administrative barriers,</li>
+<li>Educating and training students on assistive technology resources,</li>
+<li>Coordinating peer note-taking services,</li>
+<li>Providing exam accommodations,</li>
+<li>Assisting students with academic strategies,</li>
+<li>Assisting with the diagnostic evaluation referral process.</li>
+</ul>
+<p>Questions and Contact Information: The Director of Student Services and Support may be reached by email at <a href="mailto:studentservices@urbancollege.edu">studentservices@urbancollege.edu</a> or by phone at 617-449-7380.</p>
+<ul>
+<li><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=HnCdJ2cNiUupTrgmGCPjKzt0agm94stErG3OXo8chiNUQjlIRkpXVks5MEU2UU5QUUFMV0Y5Vk1LSy4u" target="_blank" rel="noopener noreferrer">Accommodation Request Form</a></li>
+<li><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=HnCdJ2cNiUupTrgmGCPjKzt0agm94stErG3OXo8chiNUMjNJMk41V040S0czMURXVzBERlRYU0tNMC4u" target="_blank" rel="noopener noreferrer">Medical Provider Form</a></li>
+</ul>
+<h3>Accommodation and Accessibility Process</h3>
+<p>Urban College of Boston is committed to the success of its students. This includes providing equal access to all members of the student body. If a student discloses a disability and is interested in an accommodation, please encourage the student to contact the Director of Student Services and Support, Rosana Perella.</p>
+<ol>
+<li>Student looking for accommodations initiates communication with the Director of Student Services and Support directly.</li>
+<li>The Director provides the Accommodation Request Form (ARF) and the process begins.</li>
+<li>If the student does not contact the Director, the process cannot begin.</li>
+<li>The student is responsible for completing and submitting the Accommodation Request Form (ARF).</li>
+<li>If the ARF is not submitted, the process is on hold until it is submitted.</li>
+<li>The ARF will be reviewed.</li>
+<li>The student will need to submit appropriate disability documentation (e.g., Medical Provider Form (MPF), IEP, 504, Neuropsychological evaluation, Psychoeducational evaluation, etc.).</li>
+<li>If documentation is not submitted, the process is on hold until it is submitted.</li>
+<li>An intake meeting will be scheduled to discuss the student's experience with their disability and review documentation.</li>
+<li>After the intake meeting, either additional information may be requested (and the student informed), or the information provided was sufficient to make a determination.</li>
+<li>An official communication with an accommodation decision will be sent to the student via email.</li>
+</ol>`,
+  },
+
+  'student-activities': {
+    title: 'Student Activities',
+    description: 'Urban College of Boston student activities, success workshops, and the Student Strong Pathway.',
+    sourceUrl: 'https://catalog.urbancollege.edu/content.php?catoid=3&navoid=101#student-activities-success-workshops',
+    html: `
+<p>The Student Services Department and the Learning Resource Center (LRC) offer workshops in multiple languages throughout the year. These sessions are designed to address students' common questions, concerns, and areas of interest. Whether you're interested in better understanding your syllabus, seeking help tackling a research paper, or looking to improve your technology skills, there is a workshop for you. Student Services holds monthly events for networking and building our student community (such as Winter Celebration, Lunar New Year, and What's My Story). Student Services posts a "Wellness Wednesday" email to all students, staff, and faculty to promote self-care and well-being. Please check the monthly newsletter for current events.</p>
+<p><a href="https://www.canva.com/design/DAGwDSodNxU/O5HvNUSoS-gUBDY8RbVEeA/view" target="_blank" rel="noopener noreferrer">View the Student Activities Calendar for the current semester</a></p>
+<h3>Student Strong Pathway</h3>
+<p>The Student Strong Pathway focuses on support and engagement of students from the day they enroll to when they become Urban College alumni. The data has shown that students who attend events within the Student Strong Pathway are more likely to persist through their first semester and continue their studies. The workshops involved in the Student Strong Pathway include:</p>
+<ul>
+<li>First Steps to Success</li>
+<li>Accepted Student's Day</li>
+<li>New Student Orientation</li>
+<li>Asynchronous New Student Orientation</li>
+<li>Learn Computer Skills Strong</li>
+<li>Start Strong</li>
+<li>Continue Strong</li>
+<li>You Started Strong, Let's Finish Strong</li>
+<li>Develop Your Career Strong</li>
+<li>Transfer Strong</li>
+<li>Graduate Strong</li>
+<li>Continue Your Career Strong</li>
+</ul>`,
   },
 };

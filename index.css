@@ -635,3 +635,22 @@
 .text-shadow-legible {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
 }
+
+/* Consumer Information sub-pages (migrated catalog content) */
+.consumer-prose { color: #4B5563; font-weight: 300; font-size: 0.95rem; line-height: 1.7; }
+.consumer-prose h2 { font-family: 'Inter', sans-serif; font-weight: 700; color: #0066A2; font-size: 1.25rem; margin: 2rem 0 0.75rem; }
+.consumer-prose h2:first-child { margin-top: 0; }
+.consumer-prose h3 { font-weight: 700; color: #1F2937; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; margin: 1.5rem 0 0.5rem; }
+.consumer-prose h4 { font-weight: 700; color: #374151; font-size: 0.9rem; margin: 1.25rem 0 0.4rem; }
+.consumer-prose p { margin: 0 0 1rem; }
+.consumer-prose a { color: #CC6A14; font-weight: 500; text-decoration: none; }
+.consumer-prose a:hover { text-decoration: underline; }
+.consumer-prose ul { list-style: disc; margin: 0 0 1rem 1.25rem; }
+.consumer-prose ol { list-style: decimal; margin: 0 0 1rem 1.25rem; }
+.consumer-prose li { margin-bottom: 0.4rem; }
+.consumer-prose ul ul, .consumer-prose ul ol, .consumer-prose ol ul { margin-top: 0.4rem; margin-bottom: 0.4rem; }
+.consumer-prose strong { color: #1F2937; font-weight: 700; }
+.consumer-prose table { width: 100%; border-collapse: collapse; margin: 0 0 1rem; font-size: 0.8rem; }
+.consumer-prose th, .consumer-prose td { border: 1px solid #E5E7EB; padding: 0.4rem 0.6rem; text-align: left; vertical-align: top; }
+.consumer-prose th { background: #F9FAFB; font-weight: 700; color: #374151; }
+.consumer-prose hr { border: 0; border-top: 1px solid #F3F4F6; margin: 1.5rem 0; }
