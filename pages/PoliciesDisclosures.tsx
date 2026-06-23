@@ -646,7 +646,7 @@ const PoliciesDisclosures: React.FC = () => {
                         <section id="institutional-information" className="policy-section bg-white rounded-3xl p-8 border border-gray-100 shadow-sm space-y-6">
                             <div className="flex items-center gap-3 border-b border-gray-100 pb-4">
                                 <div className="w-10 h-10 rounded-2xl bg-ucb-blue/10 flex items-center justify-center text-ucb-blue shrink-0">
-                                    <Building className="w-5 h-5" />
+                                    <Info className="w-5 h-5" />
                                 </div>
                                 <h2 className="text-2xl font-display font-black text-ucb-blue">General College Information</h2>
                             </div>
@@ -654,8 +654,30 @@ const PoliciesDisclosures: React.FC = () => {
                             {renderContactCard(contacts.institutional)}
 
                             <div className="space-y-6">
-                                <div className="space-y-3">
-                                    <h4 className="text-sm font-bold text-gray-800 uppercase tracking-wide">Strategic Plans & Bylaws</h4>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    {renderDocLink("Academic Programs", "/programs")}
+                                    {renderDocLink("Acceptable Use Policy", "/s/Computer-and-Network-Use-Policy_FINAL.pdf")}
+                                    {renderDocLink("Accreditation", "/accreditation")}
+                                    {renderDocLink("Articulation Agreements", "/college-transfer-pathways")}
+                                    {renderDocLink("Grievance Procedure", "/s/Student-Grievance-Procedure.pdf")}
+                                    {renderDocLink("Constitution Day", "/s/Constitution-and-Cookies-2025.pdf")}
+                                    {renderDocLink("Copyright Infringement & Peer-to-Peer File Sharing Policy", "/s/2025-2026-URBAN-COLLEGE-OF-BOSTON-STUDENT-HANDBOOK_Final.pdf", false, "See Student Handbook")}
+                                    {renderDocLink("Disability & Accessibility Services", "/student-services")}
+                                    {renderDocLink("Family Educational Rights & Privacy Act (FERPA)", "/s/2025-2026-URBAN-COLLEGE-OF-BOSTON-STUDENT-HANDBOOK_Final.pdf", false, "See Student Handbook")}
+                                    {renderDocLink("Faculty, Administration & Staff", "/team")}
+                                    {renderDocLink("Campus Location & Services", "/campus-facilities")}
+                                    {renderDocLink("Non-Discrimination, Equal Access & Equal Opportunity Statement", "/s/2025-2026-URBAN-COLLEGE-OF-BOSTON-STUDENT-HANDBOOK_Final.pdf", false, "See Student Handbook")}
+                                    {renderDocLink("State Authorization & NC-SARA Information", "/s/2025-2026-URBAN-COLLEGE-OF-BOSTON-STUDENT-HANDBOOK_Final.pdf", false, "See Student Handbook")}
+                                    {renderDocLink("Student Activities", "/student-services")}
+                                    {renderDocLink("Student Body Diversity", "https://nces.ed.gov/collegenavigator/?id=429128&q=urban%20college%20of%20boston&s=all", true, "Federal enrollment demographics")}
+                                    {renderDocLink("Title IX / Sexual Misconduct", "/s/Title-IX.pdf")}
+                                    {renderDocLink("Transfer Credit Policy", "/s/2021-2022-course-catalogue", false, "Page 10 of the Course Catalogue")}
+                                    {renderDocLink("Credit for Prior Learning", "/s/2021-2022-course-catalogue", false, "Page 56 of the Course Catalogue")}
+                                    {renderDocLink("Voter Registration", "https://www.sec.state.ma.us/ele/eleifv/howreg.htm", true)}
+                                </div>
+
+                                <div className="space-y-3 pt-4 border-t border-gray-50">
+                                    <h4 className="text-sm font-bold text-gray-800 uppercase tracking-wide">Institutional Plans & Reports</h4>
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                         {renderDocLink("2025-2030 Strategic Plan", "/s/Strategic-Plan-2025-2030-Urban-College-of-Boston_public-version.pdf", false, "Public Version")}
                                         {renderDocLink("2019-2024 Strategic Plan", "/s/2019-2024-Strategic-Plan.pdf")}
@@ -664,7 +686,6 @@ const PoliciesDisclosures: React.FC = () => {
                                         {renderDocLink("HEERF Reporting & COVID-19 Response", "/heerf-reports")}
                                     </div>
                                 </div>
-
                             </div>
                         </section>
 
