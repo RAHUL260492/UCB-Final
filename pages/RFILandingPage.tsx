@@ -126,7 +126,7 @@ const RFILandingPage: React.FC = () => {
             />
 
             {/* Tagline bar */}
-            <div className="bg-ucb-orange text-white text-center text-[11px] md:text-xs font-bold uppercase tracking-[0.2em] py-2">
+            <div className="bg-ucb-orange text-white text-center text-base md:text-xl font-extrabold uppercase tracking-[0.18em] py-3.5 md:py-4 text-shadow-legible">
                 Your online community college
             </div>
 
