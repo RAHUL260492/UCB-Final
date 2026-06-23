@@ -440,4 +440,284 @@ export const CONSUMER_PAGES: Record<string, ConsumerPage> = {
 <p>If you are a new citizen who was naturalized after the last day to register to vote, you may register to vote in person at your local election office until 4 p.m. on the day before the election. You should bring documentation to show that your naturalization ceremony occurred after the voter registration deadline.</p>
 <p>Additional information can be found at this link: <a href="https://www.sec.state.ma.us/divisions/elections/elections-and-voting.htm" target="_blank" rel="noopener noreferrer">sec.state.ma.us — Elections and Voting</a>.</p>`,
   },
+
+  'title-ix-sexual-misconduct': {
+    title: 'Title IX / Sexual Misconduct',
+    description: "Urban College of Boston's Title IX policy, non-discrimination statement, sexual harassment and sexual misconduct policies, reporting procedures, victim protections, and resources.",
+    sourceUrl: 'https://catalog.urbancollege.edu/content.php?catoid=3&navoid=105#title-ix',
+    html: `
+<p>Title IX of the Education Amendments of 1972 ("Title IX"), 20 U.S.C. &sect;1681 et seq., is a Federal civil rights law that prohibits discrimination on the basis of sex—including pregnancy and parental status—in any educational programs and activities. It ensures equal opportunity in academics, addressing issues such as sexual harassment, pregnancy discrimination, and gender equity for students and employees. Urban College of Boston must comply with this law because we are a college that receives federal funding.</p>
+<p><a href="https://www.canva.com/design/DAGtWztuhDQ/yUk2r0FJ7M61KHh6s6mJ6g/view" target="_blank" rel="noopener noreferrer">Results from our 2025 Climate Survey can be found here.</a></p>
+<h3>Non-Discrimination, Affirmative Action, Equal Opportunity, and Diversity</h3>
+<p>Urban College of Boston is an affirmative action and equal opportunity employer and does not discriminate on the basis of race, sex, color, age, religion, sexual orientation, political affiliation, national origin, marital status, veteran status, or disability in any of its policies, practices, or procedures, as required by Title VI and Title VII of the Civil Rights Act of 1964; Title IX of the Education Amendments of 1972; Section 504 of the Rehabilitation Act of 1973, as amended; the Age Discrimination Act of 1975; the Americans with Disabilities Act of 1990; and other applicable federal and state civil rights laws. This includes, but is not limited to, admission, employment, financial aid, and educational services. The college prohibits sexual harassment, including sexual violence. Inquiries and complaints should be referred to the Title IX Coordinator, Affirmative Action Officer, and the Massachusetts Commission Against Discrimination.</p>
+<h3>Pregnancy</h3>
+<p>Under Title IX, Urban College pregnant students are entitled to the following if needed:</p>
+<ul>
+<li>Participate in all classes and extracurricular activities.</li>
+<li>Have absences excused due to pregnancy or childbirth for as long as your doctor says it is necessary.</li>
+<li>Be allowed to return to the same academic and extracurricular status as before their medical leave began, which should include giving the opportunity to make up any work missed while they were out.</li>
+<li>Be provided with the same special services the college provides to students with temporary medical conditions. This includes homebound instruction / at-home tutoring / independent study.</li>
+</ul>
+<h3>Sexual Harassment Policy</h3>
+<p>Urban College prohibits sexual harassment of students, faculty, or staff. Sexual harassment is defined as unwelcome sexual advances; requests for sexual favors; or other physical conduct, verbal, non-verbal, or written communication of a sexual nature when the conduct of such is sufficiently severe, persistent, or pervasive that it denies or limits a student's ability to participate in or benefit from the education program or that it creates a hostile or abusive educational environment.</p>
+<p>Sexual harassment violates Urban College policy as well as state and federal law. Any incidents of sexual harassment should be reported to the Director of Student Services and Support so that prompt and effective actions can be taken. Urban College's Title IX Coordinator is Rosana Perella. Students may contact the office by email at <a href="mailto:titleix@urbancollege.edu">titleix@urbancollege.edu</a> or by phone at 617-449-7380.</p>
+<p>It is unlawful to retaliate or discriminate in any way against any person who has expressed concern or made any complaint regarding sexual harassment, and Urban College of Boston will not retaliate or discriminate against any person who expresses concern or files a complaint alleging sexual harassment or discrimination.</p>
+<h3>Sexual Assault, Domestic Violence, Dating Violence, or Stalking</h3>
+<p>The College is obligated to investigate all allegations of sexual violence, even if the alleged victim chooses not to file a formal complaint and/or participate in the investigation. Additionally, a complaint filed in another forum, including a criminal or civil complaint, shall not delay the college's investigation of a complaint of sexual violence. The college shall promptly and thoroughly investigate all such allegations in accordance with the Policy on Affirmative Action's Complaint Procedure and shall provide the victim with periodic updates on the status of the investigation.</p>
+<h4>Procedures to Follow for Victims</h4>
+<p><strong>Ensure Safety:</strong> Call the Boston Police Department by dialing 911. It is imperative to ensure your safety and avoid remaining in a dangerous situation.</p>
+<p><strong>Seek Medical Care:</strong> Seek immediate medical treatment, even if you feel you were not physically hurt. The survivor has the right to accept or reject any part of the medical exam. Sexual assault nurse examiners (SANEs) are specially trained to care for survivors of sexual violence and to perform sexual assault evidence collection kits. The SANE program serves seven hospitals in the greater Boston area:</p>
+<ul>
+<li>Beth Israel Deaconess Medical Center</li>
+<li>Brigham and Women's Hospital</li>
+<li>Boston Medical Center</li>
+<li>Cambridge Hospital</li>
+<li>Children's Hospital</li>
+<li>Massachusetts General Hospital</li>
+<li>Newton-Wellesley Hospital</li>
+</ul>
+<p><strong>Preserve Evidence:</strong> It is important to preserve evidence in cases of sexual assault, dating violence, domestic violence, or stalking, if possible. Victims should take certain actions promptly to preserve evidence for criminal prosecution and/or to obtain a protective order.</p>
+<p><strong>Victim Identification:</strong> Personal identifiable information about a victim will be treated as confidential and only shared with persons with a specific need to know and/or who are investigating and/or adjudicating the complaint, delivering resources or support services to the victim, or as public safety requires. The College does not publish the names or other identifiable information of victims. In accordance with FERPA, a victim may request that no directory information maintained by the college be released without their prior written consent.</p>
+<p><strong>Report the Incident:</strong> In addition to contacting local law enforcement, you may also file a complaint with the college. A college complaint (Sexual Misconduct Complaint) may be submitted by contacting the Title IX Coordinator at 617-449-7380 or <a href="mailto:titleix@urbancollege.edu">titleix@urbancollege.edu</a>. Ultimately, it is the student's choice whether or not to make a report.</p>
+<p><strong>Written Notification:</strong> Urban College will provide written notification to students and employees who report sexual assault, dating violence, domestic violence, or stalking about existing counseling, health, mental health, victim advocacy, legal assistance, visa and immigration assistance, student financial aid, and other services available on and off campus. Urban College will further provide written notification about options for requesting changes to academic or working situations, as well as how to request protective measures.</p>
+<p><strong>Disciplinary Actions:</strong> After a final determination has been made, Urban College is authorized to impose a sanction. In determining the appropriate sanction, Urban College shall consider the severity of the violation, the safety of the complainant and the community, and the education or changes needed from the respondent. Possible sanctions for students include a disciplinary warning, disciplinary probation, disciplinary suspension, disciplinary expulsion, required participation in educational seminars or programs, domestic violence education or treatment programs, restitution, directed study of a related topic, and no-contact orders, as well as criminal prosecution. Possible sanctions for employees include a disciplinary warning, disciplinary probation, suspension from employment, termination of employment, required participation in educational seminars or programs, domestic violence education or treatment programs, restitution, directed study of a related topic, and no-contact orders, as well as criminal prosecution.</p>
+<h4>Protections for Victims of Sexual Violence</h4>
+<p>A person subjected to sexual violence shall:</p>
+<ul>
+<li>Be provided with a copy of the college's Sexual Violence — Victim's Rights and Information Advisory, which shall include information concerning counseling, health, and mental health services, victim advocacy and support, law enforcement assistance, and other services available on and off campus;</li>
+<li>Have the right to pursue, or not pursue, assistance from campus administration officials or campus law enforcement;</li>
+<li>Not be discouraged by college officials from reporting an incident to both on-campus and off-campus authorities;</li>
+<li>Be provided assistance in contacting local law enforcement if requested and have the full and prompt assistance and cooperation of campus personnel should a civil and/or criminal complaint be pursued;</li>
+<li>Be free from any suggestion that they somehow contributed to or had a shared responsibility in the violent act;</li>
+<li>Receive the same level of support at any proceeding before college officials as is permitted to the accused party, including the presence of a personal advisor during any disciplinary proceeding and the right to be notified in a timely manner of the outcome of such proceedings and any appeal right available;</li>
+<li>Receive full and prompt cooperation from college personnel in obtaining and securing evidence (including medical evidence) necessary for any potential criminal proceedings;</li>
+<li>Have access to existing college advising, support services, and obtain referrals to off-campus counseling and support services if desired;</li>
+<li>Be permitted to attend classes, work, and participate in college activities free from unwanted contact or proximity to the respondent insofar as the College is permitted and able;</li>
+<li>Be permitted to request changes to an academic schedule if such changes are requested by the alleged victim and are reasonably available; and</li>
+<li>Be informed of any no-contact or no-trespass orders issued to the respondent by the college and the college's commitment to honor any court-issued restraining or protective orders, to the extent permitted by law.</li>
+</ul>
+<h4>Interim Protective Measures</h4>
+<p>Title IX requires the college to take reasonable steps to ensure equal access to its education programs and activities and protect individuals from Prohibited Conduct, including taking interim protective measures before the final outcome of an investigation. Examples include, but are not limited to:</p>
+<ul>
+<li>access to counseling services and assistance in scheduling an appointment, on or off campus;</li>
+<li>imposition of an interim suspension or on-campus "no-contact" order;</li>
+<li>rescheduling of exams and assignments;</li>
+<li>providing alternative course completion options;</li>
+<li>changing class schedules, including withdrawing from a course without penalty;</li>
+<li>changing work schedules or job assignments;</li>
+<li>limiting access to certain college facilities or activities pending resolution of the matter;</li>
+<li>voluntary leave of absence;</li>
+<li>providing an escort to ensure safe movement between classes and activities; and/or</li>
+<li>providing academic support services, such as tutoring.</li>
+</ul>
+<h4>Amnesty</h4>
+<p>Students may be hesitant to report sexual violence out of concern that they, or witnesses, might be charged with violations of the college's drug/alcohol policies. While the college does not condone such behavior, it places a priority on addressing allegations of sexual violence. Accordingly, the college may elect not to pursue discipline against a student who, in good faith, reports, witnesses, or possesses personal knowledge of an incident of sexual violence.</p>
+<h4>Retaliation</h4>
+<p>Urban College of Boston prohibits retaliation against any person who presents a formal or informal complaint of sexual violence or who testifies or offers evidence connected with a complaint. Retaliation is a violation of this policy whether or not the underlying claim of sexual violence is confirmed.</p>
+<h3>Programs &amp; Prevention — Resources for Survivors</h3>
+<p>Current contact information on rape crisis centers in Massachusetts can be found at the Commonwealth's <a href="https://www.mass.gov/orgs/executive-office-of-health-and-human-services" target="_blank" rel="noopener noreferrer">Executive Office of Health and Human Services</a> website under Consumer Information.</p>
+<h4>Greater Boston Area</h4>
+<ul>
+<li>Boston Area Rape Crisis Center, Cambridge — 617-492-7273 Hotline, 617-492-6434 TTY</li>
+<li>Reach Beyond Domestic Violence, Waltham — 800-899-4000 Hotline</li>
+</ul>
+<h4>Northeastern Massachusetts</h4>
+<ul>
+<li>North Shore Rape Crisis Center, Beverly — 800-922-8772 Hotline, 978-921-8729 TTY</li>
+<li>Rape Crisis Services of Greater Lowell — 800-542-5212 Hotline, 978-452-8723 TTY</li>
+<li>YWCA of Greater Lawrence — 877-509-9922 SA Hotline, 978-686-8840 TTY</li>
+</ul>
+<h4>Central Massachusetts</h4>
+<ul>
+<li>Rape Crisis Center of Central Mass., Worcester — 800-870-5905 Hotline, 508-852-7600 TTY</li>
+<li>Rape Crisis Center of Central Mass., Fitchburg — 800-870-5905</li>
+<li>Wayside Victim Services, Milford — 800-511-5070 Hotline, 508-478-4205 TTY</li>
+<li>Voices Against Violence, Framingham — 800-593-1125 Hotline, 508-626-8686 TTY</li>
+</ul>
+<h4>Southeastern Massachusetts</h4>
+<ul>
+<li>A Safe Place, Nantucket — 508-228-2111 Hotline, 508-228-0561 TTY</li>
+<li>Independence House, Hyannis — 800-439-6507 Hotline, 508-778-6782 TTY</li>
+<li>Women Support Services, Vineyard Haven — 508-696-7233</li>
+<li>Greater New Bedford Women Center, New Bedford — 888-839-6636 Hotline, 508-996-1177 TTY</li>
+<li>New Hope, Attleboro — 800-323-4673 Hotline/TTY</li>
+<li>Stanley Street Women Center, Fall River — 508-675-0087 Hotline, 508-673-3328 TTY</li>
+<li>Woman's Place Crisis Center, Brockton — 508-588-8255 SA Hotline, 508-894-2869 TTY</li>
+</ul>
+<h4>Western Massachusetts</h4>
+<ul>
+<li>Elizabeth Freeman Center, Pittsfield — 413-443-0089 Hotline, 413-499-2425 TTY</li>
+<li>Everywoman Center, Amherst — 413-545-0800 Hotline, 888-337-0800 TTY</li>
+<li>NELCWIT, Greenfield — 413-772-0806 Hotline/TTY</li>
+<li>YWCA, Springfield — 800-796-8711</li>
+<li>YWCA of Western Mass, Westfield — 800-479-6245 Hotline/TTY</li>
+</ul>
+<h4>Transition House</h4>
+<p><a href="http://www.transitionhouse.org/" target="_blank" rel="noopener noreferrer">www.transitionhouse.org</a> — Call 617-661-7203 for emergency shelter and transitional and supported housing. Casa Myrna Vazquez, support for survivors: 617-521-0116, <a href="http://www.casamyrna.org/" target="_blank" rel="noopener noreferrer">www.casamyrna.org</a>.</p>`,
+  },
+
+  'faculty-administration-staff': {
+    title: 'Faculty, Administration and Staff',
+    description: 'Urban College of Boston Board of Trustees, administration, staff, and faculty.',
+    sourceUrl: 'https://catalog.urbancollege.edu/content.php?catoid=3&navoid=106',
+    html: `
+<h3>Board of Trustees</h3>
+<ul>
+<li><strong>Joan Becker, Ed.D.</strong>, Chair — Consultant, Council for Opportunity in Education and University of Massachusetts Boston</li>
+<li><strong>Adzele Benoit</strong>, Faculty Representative — Urban College Alumna (2010) and Adjunct Faculty Member; Public Health Specialist/Technical Assistant Liaison, Baystate Community Services</li>
+<li><strong>Barbara Brittingham, Ph.D.</strong>, Secretary — President Emerita, New England Commission of Higher Education (NECHE)</li>
+<li><strong>Constanza Cabello, Ed.D.</strong> — Managing Director, Global Inclusion, Diversity, and Equity Team, State Street</li>
+<li><strong>Peter Ebb, Esq.</strong> — Retired Partner, Ropes &amp; Gray</li>
+<li><strong>Kenneth Lee</strong>, Treasurer — Chief Financial Officer, Southern New Hampshire University</li>
+<li><strong>Amelia Manning</strong>, Vice Chair — Dean, Tulane University's School of Professional Advancement</li>
+<li><strong>Mark Ouellette</strong> — Consultant, Pitney Bowes</li>
+<li><strong>Sharon Scott-Chandler, Esq.</strong> — President and CEO, Action for Boston Community Development (ABCD)</li>
+<li><strong>Megan Stevens</strong> — Director, Leadership Advancement, AnitaB.org</li>
+<li><strong>Anneisha Thompson</strong>, Student Representative — Urban College Alumna (2022) and Adjunct Faculty Member; Family &amp; Community Engagement Supervisor, ABCD</li>
+<li><strong>Jan Wyatt, Ph.D.</strong> — Vice President of Academic Programs, Southern New Hampshire University</li>
+</ul>
+<h3>Office of the President</h3>
+<ul>
+<li><strong>Yves Salomon-Fern&aacute;ndez</strong> — President</li>
+<li><strong>Julianna Poupard</strong> — Administrative Coordinator</li>
+</ul>
+<h3>President's Cabinet</h3>
+<ul>
+<li><strong>Caitlin Callahan</strong> — Chief Operating Officer</li>
+<li><strong>Erline Louis Tanice</strong> — Chief Financial Officer</li>
+<li><strong>Anna Berry</strong> — Vice President of Student Success</li>
+<li><strong>Noem&iacute; Custodia-Lora</strong> — Vice President of Academic Affairs and Workforce Development</li>
+<li><strong>Daliza Nova</strong> — Associate Vice President of Workforce Development</li>
+</ul>
+<h3>Staff</h3>
+<h4>Academic Affairs</h4>
+<ul>
+<li><strong>Rachelle Hannoush</strong> — Interim Early Childhood Education Department Chair</li>
+<li><strong>Caleb Sabatka</strong> — Program Chair &amp; Assistant Professor of Human Services Administration</li>
+<li><strong>Jennifer Grehan</strong> — Program Chair &amp; Assistant Professor of General Studies</li>
+</ul>
+<h4>Administration and Finance</h4>
+<ul>
+<li><strong>Timesha Scott</strong> — IT Lead</li>
+<li><strong>Erik Robles</strong> — LMS System Administrator</li>
+<li><strong>Miguel De Los Santos</strong> — IT Innovation &amp; Cybersecurity Project Coordinator</li>
+<li><strong>Madeleine Pitcher</strong> — Senior Manager of Development Operations</li>
+<li><strong>Sara Wendell</strong> — Accounting Operations Manager</li>
+<li><strong>Sergio Mendoza</strong> — Bilingual Staff Accountant</li>
+<li><strong>Malcolm Dyer</strong> — Human Resource Coordinator</li>
+</ul>
+<h4>Admission and Financial Services</h4>
+<ul>
+<li><strong>Calvin Conyers</strong> — Associate Vice President of Enrollment Management</li>
+<li><strong>Stacy Broadus</strong> — Director of Student Financial Services</li>
+<li><strong>Carla Desisto</strong> — Assistant Director of Financial Services</li>
+<li><strong>Nancy Morales</strong> — Bilingual Financial Services Specialist</li>
+<li><strong>Daniella Sanchez</strong> — Senior Admissions Advisor</li>
+<li><strong>Leandra Rivera</strong> — Admissions Advisor</li>
+<li><strong>Roystone Martinez</strong> — Admissions Advisor</li>
+</ul>
+<h4>Learning Resource Center</h4>
+<ul>
+<li><strong>Ellie Wolf</strong> — Learning Support Associate</li>
+<li><strong>Maudeline Clervoix-Frank</strong> — Learning Support Associate</li>
+<li><strong>Pamela Peralta</strong> — Learning Support Associate</li>
+</ul>
+<h4>Institutional Research</h4>
+<ul><li><strong>TBD</strong> — Director of Institutional Research and Assessment</li></ul>
+<h4>Communications and Marketing</h4>
+<ul><li><strong>Arianna Valle</strong> — Director of Marketing and Communications</li></ul>
+<h4>Registration</h4>
+<ul>
+<li><strong>Waqas Mirza</strong> — Director of Registration Services and Registrar</li>
+<li><strong>Daniel Borges</strong> — Registration Coordinator</li>
+</ul>
+<h4>Student Success</h4>
+<ul>
+<li><strong>Rosana Perella</strong> — Director of Student Services and Support</li>
+<li><strong>Kendall Driscoll</strong> — Academic Success Coach and Advisor</li>
+<li><strong>Yessenia Guglielmi</strong> — Early Childhood Education Academic Success Coach and Advisor</li>
+<li><strong>Catherine Kerr</strong> — AmeriCorps VISTA</li>
+</ul>
+<h3>Faculty</h3>
+<table>
+<thead><tr><th>Last Name</th><th>First Name</th><th>Department</th><th>Highest Degree</th></tr></thead>
+<tbody>
+<tr><td>Amy-Cordero</td><td>Alberto</td><td>ECE</td><td>Cambridge College, M.Ed.</td></tr>
+<tr><td>Aparicio</td><td>Sasha</td><td>PRO/SOC</td><td>Universidad de San Carlos de Guatemala, M.S.</td></tr>
+<tr><td>Bamford</td><td>Chelsea</td><td>HUS</td><td></td></tr>
+<tr><td>Barnes</td><td>Andrea</td><td>HUS/PRO</td><td>New York Institute of Technology, MSCN</td></tr>
+<tr><td>Benoit</td><td>Adzele</td><td>HUS/PSY</td><td>Wheelock College, MSW</td></tr>
+<tr><td>Bernecer</td><td>Vanessa</td><td>ECE</td><td></td></tr>
+<tr><td>Buskey</td><td>Jamie</td><td>ECE</td><td>Wheelock College, M.Ed.</td></tr>
+<tr><td>Carles</td><td>Maria</td><td>NTS</td><td>University of Panama, Ph.D</td></tr>
+<tr><td>Carter</td><td>Sonia</td><td>NTS</td><td>Eastern Nazarene College, MSM</td></tr>
+<tr><td>Chukwuanu</td><td>Olive</td><td>ECE</td><td>Eastern Nazarene College, M.Ed.</td></tr>
+<tr><td>Clark</td><td>Eric</td><td>MAT</td><td>Eastern Nazarene College, M.Ed.</td></tr>
+<tr><td>Clervoix-Frank</td><td>Maudeline</td><td>COM/PSY/SOC</td><td>North Carolina A&amp;T State University, M.S.</td></tr>
+<tr><td>Cordero</td><td>Ana</td><td>ECE</td><td>Boston State College, M.Ed.</td></tr>
+<tr><td>Cruz</td><td>Idalsy</td><td></td><td></td></tr>
+<tr><td>Davidson</td><td>Bernadette</td><td>ECE</td><td>Lesley University, MA</td></tr>
+<tr><td>Davidson</td><td>Rebecca</td><td>ART</td><td>University of Pennsylvania, MFA</td></tr>
+<tr><td>De Los Santos</td><td>Miguel</td><td>CIS</td><td>Wentworth Institute of Technology, M.S.</td></tr>
+<tr><td>Deon</td><td>Jane</td><td>COM/ENG</td><td>Florida International University, MFA</td></tr>
+<tr><td>Deschenes</td><td>Amber</td><td>MGT</td><td>Fitchburg State University, MBA</td></tr>
+<tr><td>Driscoll</td><td>Kendall</td><td>HUM</td><td>Boston University, M.M.</td></tr>
+<tr><td>Farias</td><td>Ana Teresa</td><td>ECE</td><td>Worcester State University, M.Ed.</td></tr>
+<tr><td>Finkelstein</td><td>Deborah</td><td>COM</td><td>Goddard College, MFA</td></tr>
+<tr><td>Giraldo-Wonders</td><td>Daniel</td><td>HUM/ENG</td><td>University of Pittsburgh, Ph.D.</td></tr>
+<tr><td>Grehan</td><td>Jennifer</td><td>COM/ENG</td><td>Cambridge College, M.Ed.</td></tr>
+<tr><td>Grenier</td><td>J.M.</td><td>HUM</td><td>Northeastern University, M.Ed.</td></tr>
+<tr><td>Grout</td><td>Kenneth</td><td>COM</td><td>Emerson College, M.Ed.</td></tr>
+<tr><td>Guevara Alvarez</td><td>Yasmin</td><td>ECE</td><td>Lesley University, M.Ed.</td></tr>
+<tr><td>Guglielmi</td><td>Yessenia</td><td>HUM</td><td>Drew University, D.Litt.</td></tr>
+<tr><td>Hannoush</td><td>Rachelle</td><td>ECE</td><td>Bay Path University, M.Ed.</td></tr>
+<tr><td>Hernandez</td><td>Rosemary</td><td>ECE</td><td>Southern New Hampshire University, MS</td></tr>
+<tr><td>Huang</td><td>Jiaying</td><td>ECE</td><td>Wheelock College, M.Ed.</td></tr>
+<tr><td>Jeanty-Bazile</td><td>Ruth-Fiona</td><td>ECE</td><td></td></tr>
+<tr><td>King</td><td>Christina</td><td>HUS</td><td>Simmons University, Ph.D.</td></tr>
+<tr><td>Laskey</td><td>Robin</td><td>PRO/PSY</td><td></td></tr>
+<tr><td>Lauziere</td><td>Patricia</td><td>HUS/PRO</td><td>University of Phoenix Online, M.Ed.</td></tr>
+<tr><td>Lazo</td><td>Oscar</td><td>ENG/MAT/NTS</td><td>Catholic University of Chile, PhD</td></tr>
+<tr><td>Lazo</td><td>Riola</td><td>ECE</td><td>University of Concepcion, M.Ed.</td></tr>
+<tr><td>Liu</td><td>Yanying</td><td>ECE</td><td>Cambridge College, M.Ed.</td></tr>
+<tr><td>Lopez</td><td>Odette</td><td>ECE</td><td>Inter American University, M.Ed.</td></tr>
+<tr><td>McKay</td><td>Glen</td><td>ECE</td><td></td></tr>
+<tr><td>Maglio</td><td>Elizabeth</td><td>HUS/PRO</td><td>Catholic University, MSW</td></tr>
+<tr><td>Marte</td><td>Joselyn</td><td>ECE</td><td>Hunter College, MSW</td></tr>
+<tr><td>Matthews</td><td>Allison</td><td>ECE/HUM</td><td>Nova Southeastern University, Ed.D</td></tr>
+<tr><td>Meyerson</td><td>Anne</td><td>PRO</td><td>Clark University, BA</td></tr>
+<tr><td>Miller</td><td>Aisha</td><td>PRO</td><td>University of Phoenix, DBA</td></tr>
+<tr><td>Munoz-Benavides</td><td>Sonia</td><td>ECE</td><td>Lesley University, M.SPEd.</td></tr>
+<tr><td>Newman</td><td>Peter</td><td>HUM/SOC</td><td>Loyola University School of Law, LLM</td></tr>
+<tr><td>Osarenkhoe</td><td>Karen</td><td>ECE</td><td>Springfield College, MS OML</td></tr>
+<tr><td>Paciulli</td><td>Melissa</td><td>MAT</td><td>University of Massachusetts Amherst, Ph.D</td></tr>
+<tr><td>Perdomo</td><td>Maridel</td><td>ECE</td><td>Framingham State University, MPA</td></tr>
+<tr><td>Perella</td><td>Rosana</td><td>ENG</td><td>Massachusetts School of Law, JD</td></tr>
+<tr><td>Quiceno</td><td>Leidy</td><td>HUS</td><td>UMass Boston, MS</td></tr>
+<tr><td>Ramos</td><td>Arlene</td><td>ECE</td><td>Cambridge College, MS</td></tr>
+<tr><td>Reilly</td><td>Matthew</td><td>MKT</td><td>Northeastern University, Ed.D</td></tr>
+<tr><td>Rich</td><td>Taylor</td><td>HUS</td><td></td></tr>
+<tr><td>Rivera-Garcia</td><td>Lilliam</td><td>ECE</td><td>Cambridge College, MA</td></tr>
+<tr><td>Rogers</td><td>Zoe</td><td>ENG/MAT</td><td>Rhode Island College, MA</td></tr>
+<tr><td>Russo</td><td>Kristin</td><td>COM/PRO</td><td></td></tr>
+<tr><td>Sabatka</td><td>Caleb</td><td>COM/HUS/PRO/SOC</td><td>Vermont Law School, MARJ</td></tr>
+<tr><td>Schultz</td><td>Robert</td><td>MGT</td><td>University of Massachusetts Boston, MBA</td></tr>
+<tr><td>Stec</td><td>Amy</td><td>ECE</td><td></td></tr>
+<tr><td>Sullivan</td><td>Aracelis</td><td>ECE/PRO</td><td>University of Massachusetts, M.Ed.</td></tr>
+<tr><td>Tabora</td><td>Ilyitch Nahiely</td><td>HUS</td><td>UMass Boston, Ph.D.</td></tr>
+<tr><td>Tambio</td><td>Jennine</td><td>ECE</td><td>Northeastern University, Ed.D</td></tr>
+<tr><td>Thompson</td><td>Anneisha</td><td>ECE</td><td>Cambridge College, M.Ed.</td></tr>
+<tr><td>Tineo</td><td>Paola</td><td>ECE</td><td>Simmons College, MA</td></tr>
+<tr><td>Todisco</td><td>Amanda</td><td>ENG</td><td>Lesley University, MFA</td></tr>
+<tr><td>Vasquez</td><td>Geovanni</td><td>HUS</td><td>Northcentral University, Ph.D.</td></tr>
+<tr><td>Whittinghill</td><td>Angela</td><td>HUS/PSY</td><td>Capella University, M.S.</td></tr>
+<tr><td>Wong</td><td>Kevin</td><td>PSY</td><td>Northeastern University, MS</td></tr>
+<tr><td>Yahya Al-Arashi</td><td>Lamis</td><td>ENG</td><td>Cambridge College, PhD in Education</td></tr>
+<tr><td>Zarrella</td><td>Christy</td><td>ECE</td><td>Boston College, M.Ed.</td></tr>
+<tr><td>Zayas</td><td>Carmen</td><td>ECE</td><td></td></tr>
+<tr><td>Zayas</td><td>Myrna</td><td>ECE</td><td>Springfield College, MS</td></tr>
+<tr><td>Zhu</td><td>Junxian</td><td>CIS</td><td>Shanghai University, BS</td></tr>
+</tbody>
+</table>`,
+  },
 };

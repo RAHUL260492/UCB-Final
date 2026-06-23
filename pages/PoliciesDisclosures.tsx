@@ -671,13 +671,13 @@ const PoliciesDisclosures: React.FC = () => {
                                     {renderFlag("Copyright Infringement & Peer-to-Peer File Sharing Policy", "Link pending — covered within the Acceptable Use Policy; confirm a destination")}
                                     {renderDocLink("Disability and Accessibility Services", "/policies-disclosures/disability-accessibility-services")}
                                     {renderDocLink("Family Educational Rights and Privacy Act (FERPA)", "/policies-disclosures/ferpa")}
-                                    {renderDocLink("Faculty, Administration and Staff", "https://catalog.urbancollege.edu/content.php?catoid=3&navoid=106", true)}
+                                    {renderDocLink("Faculty, Administration and Staff", "/policies-disclosures/faculty-administration-staff")}
                                     {renderDocLink("Campus Location and Services", "/policies-disclosures/campus-location-services")}
                                     {renderDocLink("Non-Discrimination, Equal Access and Equal Opportunity Statement", "/policies-disclosures/diversity-equity-inclusion")}
                                     {renderDocLink("State Authorization and NC-SARA Information", "/policies-disclosures/nc-sara")}
                                     {renderDocLink("Student Activities", "/policies-disclosures/student-activities")}
                                     {renderDocLink("Student Body Diversity", "/policies-disclosures/diversity-equity-inclusion")}
-                                    {renderDocLink("Title IX / Sexual Misconduct", "https://catalog.urbancollege.edu/content.php?catoid=3&navoid=105&hl=%22health%22&returnto=search#students-disciplinary-and-grievance-procedures", true)}
+                                    {renderDocLink("Title IX / Sexual Misconduct", "/policies-disclosures/title-ix-sexual-misconduct")}
                                     {renderDocLink("Transfer Credit Policy", "/policies-disclosures/transfer-credit-policy")}
                                     {renderDocLink("Credit for Prior Learning", "https://catalog.urbancollege.edu/content.php?catoid=3&navoid=103#credit-for-prior-learning-cpl-also-known-as-prior-learning-assessment-pla-or-life-experience-credit-policy", true)}
                                     {renderDocLink("Voter Registration", "/policies-disclosures/voter-registration")}
