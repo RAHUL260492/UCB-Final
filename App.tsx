@@ -43,7 +43,6 @@ import TechnologyAccountGuide from './pages/TechnologyAccountGuide';
 import TranscriptRequests from './pages/TranscriptRequests';
 import Commencement from './pages/Commencement';
 import CampusFacilities from './pages/CampusFacilities';
-import Compliance from './pages/Compliance';
 import HeerfReports from './pages/HeerfReports';
 import SafetyWellness from './pages/SafetyWellness';
 import Alumni from './pages/Alumni';
@@ -140,7 +139,7 @@ function App() {
             <Route path="/commencement" element={<Commencement />} />
             <Route path="/commencement-ceremony" element={<Commencement />} />
             <Route path="/campus-facilities" element={<CampusFacilities />} />
-            <Route path="/compliance" element={<Compliance />} />
+            <Route path="/compliance" element={<Navigate to="/policies-disclosures" replace />} />
             <Route path="/heerf-reports" element={<HeerfReports />} />
             <Route path="/safety-and-wellness" element={<SafetyWellness />} />
             <Route path="/alumni" element={<Alumni />} />

@@ -79,14 +79,14 @@ const SafetyWellness: React.FC = () => {
                 canonicalPath="/safety-and-wellness"
                 jsonLd={buildBreadcrumbJsonLd([
                     { name: 'Home', path: '/' },
-                    { name: 'Compliance', path: '/compliance' },
+                    { name: 'Consumer Information', path: '/policies-disclosures' },
                     { name: 'Safety & Wellness', path: '/safety-and-wellness' },
                 ])}
             />
             <PageHeader
                 title="Safety & Wellness"
                 subtitle="Urban College of Boston is committed to promoting learning in a safe, supportive, and respectful environment."
-                breadcrumbs={[{ label: 'Home', path: '/' }, { label: 'Compliance', path: '/compliance' }, { label: 'Safety & Wellness' }]}
+                breadcrumbs={[{ label: 'Home', path: '/' }, { label: 'Consumer Information', path: '/policies-disclosures' }, { label: 'Safety & Wellness' }]}
                 imageSrc="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2940&auto=format&fit=crop"
                 imagePosition="center"
             />

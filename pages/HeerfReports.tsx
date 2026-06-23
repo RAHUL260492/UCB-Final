@@ -62,14 +62,14 @@ const HeerfReports: React.FC = () => {
                 canonicalPath="/heerf-reports"
                 jsonLd={buildBreadcrumbJsonLd([
                     { name: 'Home', path: '/' },
-                    { name: 'Compliance', path: '/compliance' },
+                    { name: 'Consumer Information', path: '/policies-disclosures' },
                     { name: 'HEERF Reports', path: '/heerf-reports' },
                 ])}
             />
             <PageHeader
                 title="HEERF Reports"
                 subtitle="Higher Education Emergency Relief Fund (HEERF) public disclosures and institutional reporting."
-                breadcrumbs={[{ label: 'Home', path: '/' }, { label: 'Compliance', path: '/compliance' }, { label: 'HEERF Reports' }]}
+                breadcrumbs={[{ label: 'Home', path: '/' }, { label: 'Consumer Information', path: '/policies-disclosures' }, { label: 'HEERF Reports' }]}
                 imageSrc="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2940&auto=format&fit=crop"
                 imagePosition="center"
             />

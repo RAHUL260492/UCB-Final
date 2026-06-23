@@ -63,7 +63,6 @@ const Footer: React.FC = () => {
                 { name: 'Admissions Overview', path: '/admissions' },
                 { name: 'Alumni', path: '/alumni' },
                 { name: 'Board of Trustees', path: '/board-of-trustees' },
-                { name: 'Compliance', path: '/compliance' },
                 { name: 'Financial Aid & Funding', path: '/financial-services-and-funding-options' },
                 { name: 'Information Sessions', path: '/info-sessions' },
                 { name: 'Join Our Team', path: '/employment' },
