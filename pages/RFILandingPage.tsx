@@ -67,6 +67,7 @@ const getCampaignDetails = (pathname: string): { id: string; name: string; desc:
             id: 'urbancollege.forms.26190',
             name: 'You Belong in College',
             desc: 'Join students from all over the world in a welcoming, supportive environment.',
+            image: '/assets/images/say-yes-b-header.jpg',
         };
     }
     if (path.includes('say-yes')) {
