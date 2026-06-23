@@ -36,6 +36,7 @@ import PoliciesDisclosures from './pages/PoliciesDisclosures';
 import ConsumerInfoPage from './pages/ConsumerInfoPage';
 import Registration from './pages/Registration';
 import StudentServices from './pages/StudentServices';
+import Welcome from './pages/Welcome';
 import AcademicCalendar from './pages/AcademicCalendar';
 import CollegeTransferPathways from './pages/CollegeTransferPathways';
 import TechnologyAccountGuide from './pages/TechnologyAccountGuide';
@@ -130,6 +131,7 @@ function App() {
             <Route path="/current-students" element={<StudentHome />} />
             <Route path="/student-services-overview" element={<StudentServices />} />
             <Route path="/student-services" element={<StudentServices />} />
+            <Route path="/welcome" element={<Welcome />} />
             <Route path="/academic-calendar-webpage" element={<Navigate to="/academic-calendar" replace />} />
             <Route path="/academic-calendar" element={<AcademicCalendar />} />
             <Route path="/college-transfer-pathways" element={<CollegeTransferPathways />} />
