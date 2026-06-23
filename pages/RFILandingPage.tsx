@@ -59,6 +59,7 @@ const getCampaignDetails = (pathname: string): { id: string; name: string; desc:
             id: 'urbancollege.forms.23661',
             name: 'Learn More. Earn More.',
             desc: 'Career-focused certificates that work for your schedule and your budget.',
+            image: '/assets/images/your-future-header.jpg',
         };
     }
     if (path.includes('say-yes-b')) {
@@ -89,6 +90,7 @@ const getCampaignDetails = (pathname: string): { id: string; name: string; desc:
             id: 'urbancollege.forms.23676',
             name: 'Learn More. Earn More.',
             desc: 'Career-focused certificates that work for your schedule and your budget.',
+            image: '/assets/images/your-future-header.jpg',
         };
     }
 
