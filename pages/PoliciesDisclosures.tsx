@@ -3,10 +3,10 @@ import PageHeader from '../components/PageHeader';
 import ScrollAnimation from '../components/ScrollAnimation';
 import SEO from '../components/SEO';
 import { PAGE_META, buildBreadcrumbJsonLd } from '../components/seo-data';
-import { 
+import {
     Search, Mail, ExternalLink, FileText, ChevronDown, ChevronUp,
-    Lock, BookOpen, UserCheck, DollarSign, Shield, Building, 
-    CreditCard, Users, Cpu, FileClock, Phone
+    Lock, BookOpen, UserCheck, DollarSign, Shield, Building,
+    CreditCard, Users, Cpu, FileClock, Phone, Info, Wallet, LogOut, TrendingUp
 } from 'lucide-react';
 
 interface Contact {
@@ -143,12 +143,15 @@ const PoliciesDisclosures: React.FC = () => {
         { id: 'privacy-policy', label: 'Privacy Policy', icon: Lock },
         { id: 'academic-affairs', label: 'Academic Affairs', icon: BookOpen },
         { id: 'admissions-enrollment', label: 'Admissions & Enrollment', icon: UserCheck },
-        { id: 'financial-aid', label: 'Financial Aid', icon: DollarSign },
-        { id: 'health-safety', label: 'Health & Safety', icon: Shield },
-        { id: 'institutional-information', label: 'Institutional Information', icon: Building },
+        { id: 'financial-aid', label: 'Financial Assistance Information', icon: Wallet },
+        { id: 'financial-information', label: 'Financial Information', icon: DollarSign },
+        { id: 'withdrawal-information', label: 'Withdrawal Information', icon: LogOut },
+        { id: 'health-safety', label: 'Health and Safety', icon: Shield },
+        { id: 'institutional-information', label: 'General College Information', icon: Info },
         { id: 'student-services', label: 'Student Services', icon: Users },
         { id: 'information-technology', label: 'Information Technology', icon: Cpu },
-        { id: 'registration-services', label: 'Registration Services', icon: FileClock }
+        { id: 'registration-services', label: 'Registration Services', icon: FileClock },
+        { id: 'student-outcomes', label: 'Student Outcomes', icon: TrendingUp }
     ];
 
     // Filter categories based on search
@@ -379,7 +382,6 @@ const PoliciesDisclosures: React.FC = () => {
                                 {renderDocLink("NECHE Accreditation Overview", "/accreditation")}
                                 {renderDocLink("Instructional Facilities Details", "/campus-facilities")}
                                 {renderDocLink("Computer and Network Use Policy", "/s/Computer-and-Network-Use-Policy_FINAL.pdf")}
-                                {renderDocLink("Withdrawal Appeal & Tuition Refund Process", "/s/UCB-Withdrawal-Appeal-and-Tuition-Refund-Process.pdf")}
                                 <div className="flex items-center p-4 rounded-xl border border-gray-100 bg-gray-50/50">
                                     <span className="text-sm font-medium text-gray-700">Family Educational Rights and Privacy Act (FERPA) Compliant</span>
                                 </div>
@@ -525,17 +527,74 @@ const PoliciesDisclosures: React.FC = () => {
                                 <div className="w-10 h-10 rounded-2xl bg-ucb-blue/10 flex items-center justify-center text-ucb-blue shrink-0">
                                     <DollarSign className="w-5 h-5" />
                                 </div>
-                                <h2 className="text-2xl font-display font-black text-ucb-blue">Financial Aid</h2>
+                                <h2 className="text-2xl font-display font-black text-ucb-blue">Financial Assistance Information</h2>
                             </div>
 
                             {renderContactCard(contacts.financialAid)}
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 {renderDocLink("Financial Aid Information & Net Price Calculator", "/financial-aid")}
-                                {renderDocLink("Tuition, Fees & Cost of Attendance", "/financial-aid")}
-                                {renderDocLink("Tuition, Fees & Payment Portal Information", "/financial-aid")}
-                                {renderDocLink("Refund & R2T4 Policy (PDF)", "/s/UCB-Financial-Aid-R2T4-Policy-V2-0121.pdf")}
                                 {renderDocLink("Satisfactory Academic Progress Policy", "/s/2021-2022-course-catalogue", false, "Page 17 of the Course Catalogue")}
+                            </div>
+                        </section>
+
+                        {/* Section: Financial Information */}
+                        <section id="financial-information" className="policy-section bg-white rounded-3xl p-8 border border-gray-100 shadow-sm space-y-6">
+                            <div className="flex items-center gap-3 border-b border-gray-100 pb-4">
+                                <div className="w-10 h-10 rounded-2xl bg-ucb-blue/10 flex items-center justify-center text-ucb-blue shrink-0">
+                                    <DollarSign className="w-5 h-5" />
+                                </div>
+                                <h2 className="text-2xl font-display font-black text-ucb-blue">Financial Information</h2>
+                            </div>
+
+                            {renderContactCard(contacts.institutional)}
+
+                            <div className="space-y-6">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    {renderDocLink("Tuition, Fees & Cost of Attendance", "/financial-aid")}
+                                    {renderDocLink("Tuition, Fees & Payment Portal Information", "/financial-aid")}
+                                </div>
+
+                                <div className="space-y-3 pt-4 border-t border-gray-50">
+                                    <h4 className="text-sm font-bold text-gray-800 uppercase tracking-wide">Annual Audited Financial Statements</h4>
+                                    <div className="space-y-4">
+                                        {[
+                                            { year: "FY25", audit: "/s/Urban-College-of-Boston-FS-6-30-2025.pdf", summary: "/s/FY2025-UCB-Financial-Summary.pdf" },
+                                            { year: "FY24", audit: "/s/FY24-Urban-College-of-Boston-Audited-Financials.pdf", summary: "/s/FY2024-Urban-College-Financial-Summary.pdf" },
+                                            { year: "FY23", audit: "/s/FY23-Audited-Financials.pdf", summary: "/s/UCB-Financial-Statement-Summary-2023" },
+                                            { year: "FY22", audit: "/s/FY22-UCB-audited-financial-statements-83122.pdf", summary: "/s/Urban-College-of-Boston-Financial-Summary-08312022.pdf" },
+                                            { year: "FY21", audit: "/s/FY21-Audited-Financial-Statements.pdf", summary: "/s/FY2021-UCB-Financial-Summary.pdf" },
+                                            { year: "FY20", audit: "/s/FY20-UCB-Financial-Audit-FINAL.pdf", summary: "/s/FY2020-UCB-Financial-Summary.pdf" },
+                                            { year: "FY19", audit: "/s/FY19-UCB-Financial-Audit-FINAL.pdf", summary: "/s/FY2019-UCB-Financial-Summary.pdf" }
+                                        ].map((item, idx) => (
+                                            <div key={idx} className="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-xl border border-gray-100 bg-gray-50/30 gap-3">
+                                                <span className="font-display font-bold text-sm text-gray-700 shrink-0">{item.year} Financials</span>
+                                                <div className="flex flex-wrap gap-2">
+                                                    <a href={item.audit} target="_blank" rel="noopener noreferrer" className="px-3.5 py-1.5 bg-white border border-gray-200 hover:border-ucb-blue text-ucb-blue rounded-lg text-xs font-semibold shadow-sm transition-all">Full Audit Report</a>
+                                                    <a href={item.summary} target="_blank" rel="noopener noreferrer" className="px-3.5 py-1.5 bg-white border border-gray-200 hover:border-ucb-blue text-ucb-blue rounded-lg text-xs font-semibold shadow-sm transition-all">Financial Summary</a>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        {/* Section: Withdrawal Information */}
+                        <section id="withdrawal-information" className="policy-section bg-white rounded-3xl p-8 border border-gray-100 shadow-sm space-y-6">
+                            <div className="flex items-center gap-3 border-b border-gray-100 pb-4">
+                                <div className="w-10 h-10 rounded-2xl bg-ucb-blue/10 flex items-center justify-center text-ucb-blue shrink-0">
+                                    <LogOut className="w-5 h-5" />
+                                </div>
+                                <h2 className="text-2xl font-display font-black text-ucb-blue">Withdrawal Information</h2>
+                            </div>
+
+                            {renderContactCard(contacts.registration)}
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                {renderDocLink("Adding/Dropping/Withdrawing from Courses", "https://catalog.urbancollege.edu/content.php?catoid=1&navoid=21", true)}
+                                {renderDocLink("Withdrawal Appeal & Tuition Refund Process", "/s/UCB-Withdrawal-Appeal-and-Tuition-Refund-Process.pdf")}
+                                {renderDocLink("Refund & R2T4 Policy (PDF)", "/s/UCB-Financial-Aid-R2T4-Policy-V2-0121.pdf")}
                                 {renderDocLink("Class Attendance and Withdrawal Policy", "/s/2021-2022-course-catalogue", false, "Page 23 of the Course Catalogue")}
                             </div>
                         </section>
@@ -546,7 +605,7 @@ const PoliciesDisclosures: React.FC = () => {
                                 <div className="w-10 h-10 rounded-2xl bg-ucb-blue/10 flex items-center justify-center text-ucb-blue shrink-0">
                                     <Shield className="w-5 h-5" />
                                 </div>
-                                <h2 className="text-2xl font-display font-black text-ucb-blue">Health & Safety</h2>
+                                <h2 className="text-2xl font-display font-black text-ucb-blue">Health and Safety</h2>
                             </div>
 
                             {renderContactCard(contacts.studentServices)}
@@ -589,7 +648,7 @@ const PoliciesDisclosures: React.FC = () => {
                                 <div className="w-10 h-10 rounded-2xl bg-ucb-blue/10 flex items-center justify-center text-ucb-blue shrink-0">
                                     <Building className="w-5 h-5" />
                                 </div>
-                                <h2 className="text-2xl font-display font-black text-ucb-blue">Institutional Information</h2>
+                                <h2 className="text-2xl font-display font-black text-ucb-blue">General College Information</h2>
                             </div>
 
                             {renderContactCard(contacts.institutional)}
@@ -606,42 +665,6 @@ const PoliciesDisclosures: React.FC = () => {
                                     </div>
                                 </div>
 
-                                <div className="space-y-3 pt-4 border-t border-gray-50">
-                                    <h4 className="text-sm font-bold text-gray-800 uppercase tracking-wide">Annual Audited Financial Statements</h4>
-                                    <div className="space-y-4">
-                                        {[
-                                            { year: "FY25", audit: "/s/Urban-College-of-Boston-FS-6-30-2025.pdf", summary: "/s/FY2025-UCB-Financial-Summary.pdf" },
-                                            { year: "FY24", audit: "/s/FY24-Urban-College-of-Boston-Audited-Financials.pdf", summary: "/s/FY2024-Urban-College-Financial-Summary.pdf" },
-                                            { year: "FY23", audit: "/s/FY23-Audited-Financials.pdf", summary: "/s/UCB-Financial-Statement-Summary-2023" },
-                                            { year: "FY22", audit: "/s/FY22-UCB-audited-financial-statements-83122.pdf", summary: "/s/Urban-College-of-Boston-Financial-Summary-08312022.pdf" },
-                                            { year: "FY21", audit: "/s/FY21-Audited-Financial-Statements.pdf", summary: "/s/FY2021-UCB-Financial-Summary.pdf" },
-                                            { year: "FY20", audit: "/s/FY20-UCB-Financial-Audit-FINAL.pdf", summary: "/s/FY2020-UCB-Financial-Summary.pdf" },
-                                            { year: "FY19", audit: "/s/FY19-UCB-Financial-Audit-FINAL.pdf", summary: "/s/FY2019-UCB-Financial-Summary.pdf" }
-                                        ].map((item, idx) => (
-                                            <div key={idx} className="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-xl border border-gray-100 bg-gray-50/30 gap-3">
-                                                <span className="font-display font-bold text-sm text-gray-700 shrink-0">{item.year} Financials</span>
-                                                <div className="flex flex-wrap gap-2">
-                                                    <a 
-                                                        href={item.audit}
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                        className="px-3.5 py-1.5 bg-white border border-gray-200 hover:border-ucb-blue text-ucb-blue rounded-lg text-xs font-semibold shadow-sm transition-all"
-                                                    >
-                                                        Full Audit Report
-                                                    </a>
-                                                    <a 
-                                                        href={item.summary}
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                        className="px-3.5 py-1.5 bg-white border border-gray-200 hover:border-ucb-blue text-ucb-blue rounded-lg text-xs font-semibold shadow-sm transition-all"
-                                                    >
-                                                        Financial Summary
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
                             </div>
                         </section>
 
@@ -707,6 +730,24 @@ const PoliciesDisclosures: React.FC = () => {
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 {renderDocLink("Student Record Management Policy", "/s/Student-Record-Management-Policy.pdf")}
+                            </div>
+                        </section>
+
+                        {/* Section: Student Outcomes */}
+                        <section id="student-outcomes" className="policy-section bg-white rounded-3xl p-8 border border-gray-100 shadow-sm space-y-6">
+                            <div className="flex items-center gap-3 border-b border-gray-100 pb-4">
+                                <div className="w-10 h-10 rounded-2xl bg-ucb-blue/10 flex items-center justify-center text-ucb-blue shrink-0">
+                                    <TrendingUp className="w-5 h-5" />
+                                </div>
+                                <h2 className="text-2xl font-display font-black text-ucb-blue">Student Outcomes</h2>
+                            </div>
+
+                            <p className="text-gray-600 leading-relaxed font-light text-sm">
+                                Urban College of Boston's graduation, retention, and completion rates will be published here. Updated figures are being finalized. In the meantime, federal student-outcome data is available through the U.S. Department of Education's College Navigator portal.
+                            </p>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                {renderDocLink("College Navigator — Urban College of Boston", "https://nces.ed.gov/collegenavigator/?id=429128&q=urban%20college%20of%20boston&s=all", true, "Federal graduation & retention data")}
                             </div>
                         </section>
                     </div>
