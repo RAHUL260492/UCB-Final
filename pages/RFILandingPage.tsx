@@ -43,7 +43,7 @@ const TESTIMONIALS = [
 ];
 
 // Map pathnames to specific Form IDs and hero headlines
-const getCampaignDetails = (pathname: string) => {
+const getCampaignDetails = (pathname: string): { id: string; name: string; desc: string; image?: string } => {
     const path = pathname.toLowerCase();
 
     if (path.includes('getstarted')) {
@@ -51,6 +51,7 @@ const getCampaignDetails = (pathname: string) => {
             id: 'urbancollege.forms.23660',
             name: 'Get Started Today',
             desc: 'Your educational journey begins here. Discover how Urban College supports your goals with flexible, affordable, and multilingual programs.',
+            image: '/assets/images/get-started-header.jpg',
         };
     }
     if (path.includes('your-future')) {
@@ -79,6 +80,7 @@ const getCampaignDetails = (pathname: string) => {
             id: 'urbancollege.forms.23262',
             name: 'Join Urban College',
             desc: 'Your online community college—accredited, affordable, and multilingual. Start a career-building certificate or degree designed to fit your busy life.',
+            image: '/assets/images/get-started-header.jpg',
         };
     }
     if (path.includes('whav')) {
@@ -99,7 +101,7 @@ const getCampaignDetails = (pathname: string) => {
 
 const RFILandingPage: React.FC = () => {
     const location = useLocation();
-    const { id: formId, name: campaignName, desc: campaignDesc } = getCampaignDetails(location.pathname);
+    const { id: formId, name: campaignName, desc: campaignDesc, image: heroImage } = getCampaignDetails(location.pathname);
     const [openProgram, setOpenProgram] = useState<number | null>(null);
 
     useEffect(() => { window.scrollTo(0, 0); }, [location.pathname]);
@@ -119,6 +121,12 @@ const RFILandingPage: React.FC = () => {
 
             {/* Hero with embedded RFI form */}
             <section className="relative bg-gradient-to-br from-ucb-blue to-blue-950 text-white overflow-hidden">
+                {heroImage && (
+                    <>
+                        <img src={heroImage} alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover object-center" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-ucb-blue/90 via-ucb-blue/80 to-blue-950/85" />
+                    </>
+                )}
                 <div className="absolute -right-20 -top-20 w-96 h-96 rounded-full bg-ucb-orange/20 blur-3xl pointer-events-none" />
                 <div className="container mx-auto px-6 max-w-6xl py-14 md:py-20 relative z-10">
                     <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
