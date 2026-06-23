@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import ScrollAnimation from '../components/ScrollAnimation';
-import { CheckCircle, Plus, Minus, ArrowRight, Phone, GraduationCap, BookOpen, ShieldCheck } from 'lucide-react';
+import { CheckCircle, ArrowRight, Phone, GraduationCap, BookOpen, ShieldCheck, Baby, Users, Heart, Briefcase, BarChart3, Stethoscope, Laptop, BookMarked } from 'lucide-react';
 import SEO from '../components/SEO';
 
 const APPLY_URL = 'https://urbancollege-28708.app451.sites.451.io/';
@@ -30,6 +30,10 @@ const CERTIFICATE_PROGRAMS = [
     { name: "Children's Behavioral Health Certificate", slug: 'childrens-behavioral-health-certificate', desc: 'Train as a Registered Behavior Technician, community health worker, residential counselor, or youth worker.' },
     { name: 'Paraprofessional Educator Certificate', slug: 'paraprofessional-educator-certificate', desc: 'Support teachers in K-12 classrooms, particularly with students who have special needs.' },
 ];
+
+// Icons + accent colors for the certificate cards (mirrors the homepage Programs design)
+const CERT_ICONS = [Baby, BookMarked, Heart, Users, Stethoscope, Briefcase, BarChart3, Laptop, Heart, GraduationCap];
+const CERT_COLORS = ['#0066A2', '#006A3C', '#CC6A14', '#26AB9A', '#6487B0', '#0066A2', '#006A3C', '#CC6A14', '#26AB9A', '#6487B0'];
 
 const PARTNERS = [
     'Fitchburg State University', 'Southern New Hampshire University', 'Lasell University',
@@ -113,7 +117,6 @@ const getCampaignDetails = (pathname: string): { id: string; name: string; desc:
 const RFILandingPage: React.FC = () => {
     const location = useLocation();
     const { id: formId, name: campaignName, desc: campaignDesc, image: heroImage } = getCampaignDetails(location.pathname);
-    const [openProgram, setOpenProgram] = useState<number | null>(null);
 
     useEffect(() => { window.scrollTo(0, 0); }, [location.pathname]);
 
@@ -200,7 +203,7 @@ const RFILandingPage: React.FC = () => {
 
             {/* Online certificate programs (accordion) */}
             <section className="py-16 bg-gray-50 border-b border-gray-100">
-                <div className="container mx-auto px-6 max-w-4xl">
+                <div className="container mx-auto px-6 max-w-6xl">
                     <ScrollAnimation variant="fade-up" className="text-center mb-10">
                         <h2 className="text-2xl md:text-3xl font-display font-bold text-ucb-blue">Online Certificate Programs</h2>
                         <p className="text-gray-500 font-light mt-3 max-w-2xl mx-auto text-sm leading-relaxed">
@@ -210,28 +213,31 @@ const RFILandingPage: React.FC = () => {
                         </p>
                     </ScrollAnimation>
 
-                    <div className="space-y-3">
-                        {CERTIFICATE_PROGRAMS.map((p, idx) => (
-                            <div key={p.slug} className={`bg-white rounded-2xl border overflow-hidden transition-all duration-300 ${openProgram === idx ? 'shadow-md border-ucb-blue/30' : 'shadow-sm border-gray-100 hover:border-ucb-blue/20'}`}>
-                                <button
-                                    onClick={() => setOpenProgram(openProgram === idx ? null : idx)}
-                                    className="w-full flex justify-between items-center p-4 md:p-5 text-left hover:bg-gray-50/50 transition-colors"
-                                >
-                                    <span className={`font-bold text-sm md:text-base ${openProgram === idx ? 'text-ucb-blue' : 'text-ucb-dark'}`}>{p.name}</span>
-                                    <div className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 ml-3 transition-all duration-300 ${openProgram === idx ? 'bg-ucb-blue text-white' : 'bg-gray-100 text-ucb-dark'}`}>
-                                        {openProgram === idx ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
-                                    </div>
-                                </button>
-                                <div className={`transition-all duration-300 overflow-hidden ${openProgram === idx ? 'max-h-[260px] opacity-100' : 'max-h-0 opacity-0'}`}>
-                                    <div className="px-4 md:px-5 pb-5 -mt-1">
-                                        <p className="text-sm text-gray-600 font-light leading-relaxed">{p.desc}</p>
-                                        <Link to={`/programs/${p.slug}`} className="mt-3 inline-flex items-center gap-1 text-ucb-orange font-bold text-xs hover:gap-2 transition-all">
-                                            Learn more <ArrowRight className="w-3.5 h-3.5" />
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+                        {CERTIFICATE_PROGRAMS.map((p, idx) => {
+                            const IconComp = CERT_ICONS[idx % CERT_ICONS.length];
+                            const accent = CERT_COLORS[idx % CERT_COLORS.length];
+                            return (
+                                <ScrollAnimation key={p.slug} delay={`${0.05 + idx * 0.04}s`} variant="fade-up" className="h-full">
+                                    <Link
+                                        to={`/programs/${p.slug}`}
+                                        className="group relative h-full flex flex-col p-5 rounded-xl border border-gray-200 hover:border-transparent shadow-sm hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 overflow-hidden"
+                                        style={{ backgroundColor: 'white', backgroundImage: `linear-gradient(to bottom right, white 70%, ${accent}1A 100%)` }}
+                                    >
+                                        <div className="absolute top-0 left-0 right-0 h-1 group-hover:h-1.5 transition-all" style={{ backgroundColor: accent }} />
+                                        <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-3 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6" style={{ backgroundColor: `${accent}15`, color: accent }}>
+                                            <IconComp className="w-5 h-5" />
+                                        </div>
+                                        <span className="self-start text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-gray-100 text-gray-500 mb-2">Certificate</span>
+                                        <h3 className="font-display font-bold text-base mb-1.5 leading-tight text-ucb-blue">{p.name.replace(' Certificate', '')}</h3>
+                                        <p className="text-xs leading-relaxed text-gray-500 flex-1">{p.desc}</p>
+                                        <span className="mt-3 pt-2.5 border-t border-gray-100 flex items-center font-bold gap-1 uppercase tracking-widest text-[10px]" style={{ color: accent }}>
+                                            View Program <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                                        </span>
+                                    </Link>
+                                </ScrollAnimation>
+                            );
+                        })}
                     </div>
                     <div className="text-center mt-8">
                         <Link to="/programs" className="inline-flex items-center gap-1.5 text-ucb-blue font-bold text-sm hover:text-ucb-orange transition-colors">
