@@ -9,9 +9,10 @@ import React from 'react';
 // renders each under an anchor id, so multiple Consumer Information links can deep-link
 // (page#anchor) into one shared page.
 export interface ConsumerSection {
-  id: string;   // in-page anchor id
+  id: string;       // in-page anchor id
   title: string;
-  ref: string;  // key of another CONSUMER_PAGES entry to pull content from
+  ref?: string;     // key of another CONSUMER_PAGES entry to pull content from
+  html?: string;    // or inline HTML for this section
 }
 
 export interface ConsumerPage {
@@ -764,6 +765,94 @@ export const CONSUMER_PAGES: Record<string, ConsumerPage> = {
     sections: [
       { id: 'disability-accessibility', title: 'Disability and Accessibility Services', ref: 'disability-accessibility-services' },
       { id: 'student-activities', title: 'Student Activities', ref: 'student-activities' },
+    ],
+  },
+
+  'financing-resources': {
+    title: 'Financing and Resources',
+    description: 'Applying for federal financial aid (Title IV), FAFSA, and the Return of Title IV Funds policy at Urban College of Boston.',
+    sourceUrl: 'https://catalog.urbancollege.edu/content.php?catoid=3&navoid=98',
+    sections: [
+      {
+        id: 'federal-financial-aid-application',
+        title: 'Applying for Federal Financial Aid (Title IV)',
+        html: `
+<p><strong>Financial Services Department</strong><br>Email: <a href="mailto:financialservices@urbancollege.edu">financialservices@urbancollege.edu</a><br>Phone: For English 617-449-7429 or for Spanish 617-540-0122<br>Website: <a href="https://www.urbancollege.edu/financial-services-and-funding-options" target="_blank" rel="noopener noreferrer">urbancollege.edu/financial-services-and-funding-options</a></p>
+<p>Urban College of Boston offers several options to help students fund their education. Depending on the program of study, Urban College offers state, City of Boston, and federal financial aid to all eligible students.</p>
+<h3>Free Application for Federal Student Aid (FAFSA)</h3>
+<p>Website: <a href="https://studentaid.gov/h/apply-for-aid/fafsa" target="_blank" rel="noopener noreferrer">studentaid.gov/h/apply-for-aid/fafsa</a> &middot; <strong>Urban College School Code for FAFSA: 031305</strong></p>
+<p>Urban College strongly encourages all eligible students to complete the FAFSA for the appropriate award year. The FAFSA will determine eligibility for need-based aid, such as Pell Grants and Direct Subsidized Loans, and for non-need-based aid, such as Direct Unsubsidized Loans. The FAFSA can be completed at studentaid.gov with the Urban College School Code: 031305.</p>
+<p>To be eligible for federal financial aid, including grants, loans, and work-study funds, a student must meet certain requirements:</p>
+<ul><li>Be enrolled in a degree or certificate program.</li><li>Be a U.S. citizen or eligible non-citizen.</li><li>Not be in default on federal student loans.</li><li>Possess a High School diploma or equivalent.</li><li>Maintain Satisfactory Academic Progress.</li></ul>
+<p>Students will need the following information to complete the FAFSA:</p>
+<ul><li>Their parents' Social Security Numbers (SSNs) if they are a dependent student</li><li>Tax return information, including IRS W-2, IRS Form 1040, a foreign tax return or IRS Form 1040-NR, or a tax return for Puerto Rico, Guam, American Samoa, the U.S. Virgin Islands, the Marshall Islands, the Federated States of Micronesia, or Palau</li><li>Records of child support received</li><li>Current balances of cash, savings, and checking accounts</li><li>Net worth of investments, business, and farms</li><li>The student's driver's license number</li><li>The student's A-number if they are not a U.S. Citizen</li></ul>
+<p><em>If students already have a completed 2025-2026 FAFSA application, they will need to add the Urban College School Code: 031305.</em></p>
+<h4>Assistance with the Financial Aid Application</h4>
+<p>Urban College staff can assist students who encounter difficulty completing the FAFSA. Contact the Financial Services Department at <a href="mailto:financialservices@urbancollege.edu">financialservices@urbancollege.edu</a> or by phone: For English 617-449-7429 or for Spanish 617-540-0122.</p>
+<h4>Dependency Status Criteria</h4>
+<p>The US Department of Education considers the following students to be independent of their parents for the purposes of offering federal financial aid for the 2025-2026 school year (July 1, 2025 through June 30, 2026):</p>
+<ul>
+<li>Students who were born before January 1, 2002.</li>
+<li>Students who are married (and not separated).</li>
+<li>Students who are veterans of the US Armed Forces.</li>
+<li>Students who have children, or will have children, if they provide or will provide more than half of the support for the child.</li>
+<li>Students who have dependents (other than a child or spouse) living with them, if they provide more than half of the support for the dependent.</li>
+<li>Students who will be graduate/professional students in 2025-2026.</li>
+<li>Students who are serving on active duty in the US Armed Forces for purposes other than training.</li>
+<li>Students who are or were emancipated minors as determined by a court.</li>
+<li>Students who are orphans or wards of the court, or were wards of the court as of age 13.</li>
+<li>Students who are or were in a legal guardianship as determined by a court.</li>
+<li>Students who are or were considered an unaccompanied youth who was homeless on or after May 1, 2025.</li>
+</ul>
+<p>Financial independence is not one of the criteria used to determine dependency. Parental data must be provided on the FAFSA for students unable to answer "yes" to one of the listed criteria. Urban College uses the US Department of Education's definition of dependency status for all federal and state aid programs.</p>
+<h4>Prior Bachelor's Degree</h4>
+<p>Students who possess a bachelor's degree prior to enrollment are not eligible for certain grant programs, including the Federal Pell Grant and Federal Supplemental Educational Opportunity Grant.</p>
+<h4>FAFSA Follow Up</h4>
+<p><strong>C-Flags, Verification, Unusual Enrollment History:</strong> In some instances, the College is required by federal and state regulations to verify the information on the FAFSA. After the FAFSA is signed, it is run through database matches (Social Security Administration, National Student Loan Data System, Department of Homeland Security). If a match fails, additional documentation may be required; failure to submit it may delay or cancel an offer. Knowingly submitting falsified information may result in refusal or cancellation of aid and referral to the Office of the Inspector General.</p>
+<p><strong>FAFSA Corrections:</strong> Corrections are reported electronically to the Central Processing System (CPS). The school receives a corrected Institutional Student Information Report (ISIR) and the CPS notifies the student via a Student Aid Report (SAR).</p>
+<p><strong>Duration &amp; Renewal of Aid:</strong> The FAFSA becomes available for the new aid year typically by October 1 (and no later than January 1 by law). Students must complete it each year to meet applicable deadlines.</p>
+<p><strong>Cost of Attendance (COA):</strong> The COA is an estimate of a student's educational expenses for one academic year, including tuition, fees, books, miscellaneous expenses, transportation, and room &amp; board, based on on-campus, off-campus, or with-parent enrollment. For students attending less than half-time, the COA cannot include miscellaneous expenses, and the offer may not exceed the COA.</p>
+<p><strong>Expected Family Contribution (EFC):</strong> The EFC is a measure of a family's financial strength calculated by a federal formula. It is an index number used to determine eligibility, not the amount the family must pay.</p>
+<p><strong>Determining Financial Need:</strong> Financial need = COA minus EFC. Need-based aid includes Direct Subsidized Loans, Federal Pell Grants, and Federal Supplemental Educational Opportunity Grants (FSEOG).</p>
+<p><strong>Financial Aid Offer Package:</strong> Once COA, EFC, and need are determined, the student receives a financial aid offer electronically. After review, the offer may be reduced or canceled by request to the Financial Services Department.</p>
+<p><strong>Outside Resources:</strong> Outside resources (employer reimbursement, tuition waivers, private scholarships, fellowships) must be reported and included in the student's package. If the package exceeds the COA or need, it will be adjusted even if aid has already been disbursed.</p>
+<p><strong>Use of Aid:</strong> Funds may be used only for education-related expenses incurred at the College for the respective academic year.</p>`,
+      },
+      {
+        id: 'return-of-title-iv-funds',
+        title: 'Return of Title IV Funds',
+        html: `
+<p>Return of Title IV funds requirements apply to a Title IV grant and/or loan recipient (or eligible recipient) who withdraws or ceases attendance from Urban College of Boston before completing the payment period. The payment period is the academic period for which financial aid is offered and disbursed.</p>
+<p>Urban College will perform a Return to Title IV calculation and notify the student of any Federal Student Aid (FSA) fund return within 30 days of the date of withdrawal or last date of attendance. Urban College has 45 days from the date of determination that the student withdrew to return all unearned FSA funds it is responsible to return.</p>
+<p>Urban College divides the number of days attended by the number of days scheduled in the period (excluding breaks of five days or more) to determine the percent of earned aid. A student who has earned greater than 60% of the payment period is considered 100% earned. The percent earned multiplied by the total federal aid for the period is the amount earned; if greater than what was disbursed, the College may offer a post-withdrawal disbursement, and if less, the excess is unearned. The College returns the lesser of the unearned institutional charges or the total amount unearned.</p>
+<h4>Return of Funds</h4>
+<p>The College will return FSA to the programs from which the student received aid during the payment period, up to the net amount disbursed from each source, in the following order:</p>
+<ul>
+<li>Direct Unsubsidized Loan</li>
+<li>Direct Subsidized Loan</li>
+<li>Direct PLUS Loan</li>
+<li>Federal Pell Grant</li>
+<li>Federal Supplemental Education Opportunity Grant (FSEOG)</li>
+<li>Iraq and Afghanistan Service Grant</li>
+</ul>
+<p>There is a 50% grant protection allowance built into the calculation, and students are not required to return unearned funds of $50 or less for Title IV grant programs. Students are responsible for immediate payment on resulting account balances. Title IV grant funds are typically repaid by the College, with the student responsible for payment to the College; Direct Loans are repaid per the student's signed Master Promissory Note (MPN).</p>
+<h4>Post-Withdrawal Disbursement</h4>
+<p>A student subject to a return of unearned aid may also be eligible for a portion of earned but undisbursed aid. Grants do not require authorization; Direct Loan funds require student authorization. Student Financial Services will notify the student in writing if they are eligible for a Direct Loan post-withdrawal disbursement; the student must sign and return the authorization within fourteen (14) days of the notice.</p>
+<h4>Return of Title IV Fund Requirements</h4>
+<p>Return of Title IV funds requirements <strong>do apply</strong> to a student who:</p>
+<ul>
+<li>Officially withdraws during a payment period; or</li>
+<li>Unofficially withdraws during a payment period (stops attending without notification); or</li>
+<li>Ceases attendance during a payment period.</li>
+</ul>
+<p>Return of Title IV funds requirements <strong>do not apply</strong> to a student who:</p>
+<ul>
+<li>Graduates during a payment period; or</li>
+<li>Successfully completes 49% (a non-rounded percentage) of a payment period constructed of modules (earning a passing grade); or</li>
+<li>Withdraws from some classes but remains enrolled in other courses during the same payment period; or</li>
+<li>Never attended any classes, or for whom Urban College cannot document academic engagement in at least one class — in which case the student did not establish Title IV eligibility and all funds must be returned.</li>
+</ul>`,
+      },
     ],
   },
 };

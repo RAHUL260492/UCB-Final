@@ -55,12 +55,13 @@ const ConsumerInfoPage: React.FC = () => {
         <div className="bg-white rounded-3xl p-6 md:p-9 border border-gray-100 shadow-sm">
           {page.sections
             ? page.sections.map((s) => {
-                const ref = CONSUMER_PAGES[s.ref];
+                const ref = s.ref ? CONSUMER_PAGES[s.ref] : undefined;
+                const inner = s.html ?? ref?.html;
                 return (
                   <section key={s.id} id={s.id} className="scroll-mt-28 mb-12 last:mb-0">
                     <h2 className="text-xl md:text-2xl font-display font-black text-ucb-blue border-b-2 border-ucb-orange/30 pb-2 mb-4">{s.title}</h2>
-                    {ref?.html
-                      ? <div className="consumer-prose" dangerouslySetInnerHTML={{ __html: ref.html }} />
+                    {inner
+                      ? <div className="consumer-prose" dangerouslySetInnerHTML={{ __html: inner }} />
                       : ref?.content}
                   </section>
                 );

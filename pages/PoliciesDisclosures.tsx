@@ -578,11 +578,11 @@ const PoliciesDisclosures: React.FC = () => {
 
                             <div className="space-y-6">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    {renderDocLink("Applying for Federal Financial Aid (Title IV)", "https://studentaid.gov/h/apply-for-aid/fafsa", true)}
+                                    {renderDocLink("Applying for Federal Financial Aid (Title IV)", "/policies-disclosures/financing-resources#federal-financial-aid-application")}
                                     {renderDocLink("Cost of Attendance", "/financial-aid")}
-                                    {renderDocLink("Financial Aid Programs", "/financial-aid")}
-                                    {renderDocLink("College Financing Plan", "/financial-aid", false, "Net Price Calculator")}
-                                    {renderDocLink("Return to Title IV (R2T4) Process", "/s/UCB-Financial-Aid-R2T4-Policy-V2-0121.pdf")}
+                                    {renderDocLink("Financial Aid Programs", "/policies-disclosures/financing-resources#federal-financial-aid-application")}
+                                    {renderDocLink("College Financing Plan", "https://calculator.studentaidprocess.com/calculator/netpricecalculator?corpid=161", true, "Net Price Calculator")}
+                                    {renderDocLink("Return to Title IV (R2T4) Process", "/policies-disclosures/financing-resources#return-of-title-iv-funds")}
                                 </div>
 
                                 <div className="space-y-3 pt-4 border-t border-gray-50">
