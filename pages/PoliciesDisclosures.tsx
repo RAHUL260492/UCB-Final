@@ -559,8 +559,8 @@ const PoliciesDisclosures: React.FC = () => {
                             {renderContactCard(contacts.financialAid)}
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                {renderDocLink("Direct Loan Counseling", "https://studentaid.gov/entrance-counseling/", true)}
-                                {renderDocLink("Student Financial Aid History — National Student Loan Data System (NSLDS)", "https://studentaid.gov/aid-summary/", true)}
+                                {renderDocLink("Direct Loan Counseling", "/policies-disclosures/financing-resources#loan-counseling")}
+                                {renderDocLink("Student Financial Aid History — National Student Loan Data System (NSLDS)", "https://studentaid.gov/", true)}
                                 {renderDocLink("Standards of Satisfactory Academic Progress (SAP) for Financial Aid", "/s/2021-2022-course-catalogue", false, "Page 17 of the Course Catalogue")}
                             </div>
                         </section>

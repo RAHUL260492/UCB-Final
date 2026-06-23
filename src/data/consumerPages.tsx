@@ -819,6 +819,29 @@ export const CONSUMER_PAGES: Record<string, ConsumerPage> = {
 <p><strong>Use of Aid:</strong> Funds may be used only for education-related expenses incurred at the College for the respective academic year.</p>`,
       },
       {
+        id: 'loan-counseling',
+        title: 'Loan Counseling and Federal Student Loan Repayment Options',
+        html: `
+<h3>Loan Counseling</h3>
+<h4>Entrance Counseling</h4>
+<p>Federal law requires any student who has not previously received a subsidized or unsubsidized loan (or PLUS Loan) to complete Entrance Counseling. Its purpose is to help the student understand their rights and responsibilities in borrowing through the Direct Loan program — what a Direct Loan is, how the loan process works, how to manage educational expenses, other financial resources, and what repayment programs are available. Entrance Counseling can be completed online at <a href="https://studentaid.gov/entrance-counseling/" target="_blank" rel="noopener noreferrer">studentaid.gov</a> or through the Urban College Online Financing Portal.</p>
+<h4>Financial Awareness Counseling</h4>
+<p>Financial Awareness Counseling is not required by federal law, but Urban College encourages all students to complete it routinely to stay up to date with Direct Loan information — including understanding loans, managing spending, repayment plans, avoiding default, and prioritizing finances. It can be completed online at <a href="https://studentaid.gov/" target="_blank" rel="noopener noreferrer">studentaid.gov</a>.</p>
+<h4>Exit Counseling</h4>
+<p>Exit Counseling is a federal requirement for all students who received subsidized, unsubsidized, or PLUS loans under the Direct Loan Program or the Federal Family Education Loan (FFEL) Program, to be completed once the student graduates, leaves school, or drops below half-time enrollment. It reminds borrowers of their obligation to repay and covers deferment, forbearance, and avoiding default. Students receive an Exit Counseling Packet via their Urban College email if they withdraw or graduate, and can complete it online at <a href="https://studentaid.gov/exit-counseling/" target="_blank" rel="noopener noreferrer">studentaid.gov</a>.</p>
+<h3>Federal Loan Repayment Options</h3>
+<h4>Loan Repayment Responsibility</h4>
+<p>It is the responsibility of the student borrower to repay student loans, even if financial circumstances become difficult. Borrowers can find several repayment options at <a href="https://studentaid.gov/" target="_blank" rel="noopener noreferrer">studentaid.gov</a>.</p>
+<h4>Prepayment of Student Loans</h4>
+<p>There are no penalties for paying on student loans prior to repayment or for making larger monthly payments than required; doing so reduces the total interest applied and the amount paid over the repayment period.</p>
+<h4>Federal Student Aid Loan Simulator</h4>
+<p>Urban College encourages students to use the Federal Student Aid Repayment Estimator to review and compare repayment options. It is available online at <a href="https://studentaid.gov/loan-simulator/" target="_blank" rel="noopener noreferrer">studentaid.gov/loan-simulator</a>.</p>
+<h4>Deferment</h4>
+<p>A deferment is a period during which payments of principal are postponed. No interest accrues on Direct Subsidized loans; interest is charged on Direct Unsubsidized Loans and may be paid or allowed to accrue and capitalize. Borrowers must meet specific eligibility criteria and request the deferment from their lender(s).</p>
+<h4>Forbearance</h4>
+<p>Forbearance is a period during which monthly loan payments are temporarily suspended or reduced. During forbearance, principal payments are postponed but interest continues to accrue. Visit <a href="https://studentaid.gov/h/manage-loans" target="_blank" rel="noopener noreferrer">studentaid.gov/h/manage-loans</a> to learn more about payment plans, deferment, and forbearance options.</p>`,
+      },
+      {
         id: 'return-of-title-iv-funds',
         title: 'Return of Title IV Funds',
         html: `
