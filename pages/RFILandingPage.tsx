@@ -14,7 +14,7 @@ const VALUE_PROPS = [
     { title: 'Free Application', desc: 'No application fee, and no SAT or ACT required.' },
     { title: 'Diverse & Inclusive', desc: '92% of students identify as Latine/Hispanic, Black/African American, and Asian.' },
     { title: 'Credit for Experience', desc: 'Receive course credits for your work experience.' },
-    { title: 'Earn As You Go', desc: 'Earn a certificate while getting your degree.' },
+    { title: 'Earn As You Go', desc: 'Earn a certificate while working in your chosen field.' },
     { title: 'Multilingual', desc: 'Courses and support in English, Spanish, and Mandarin.' },
 ];
 
