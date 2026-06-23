@@ -878,4 +878,127 @@ export const CONSUMER_PAGES: Record<string, ConsumerPage> = {
       },
     ],
   },
+
+  'academic-policies': {
+    title: 'Academic Policies',
+    description: 'Standards of Satisfactory Academic Progress (SAP) for financial aid and Credit for Prior Learning (CPL) at Urban College of Boston.',
+    sourceUrl: 'https://catalog.urbancollege.edu/content.php?catoid=3&navoid=103',
+    sections: [
+      {
+        id: 'satisfactory-academic-progress',
+        title: 'Standards of Satisfactory Academic Progress (SAP)',
+        html: `
+<p>Full-time students are expected to complete all requirements for the associate degree within three academic years. Part-time students will normally complete all degree requirements within six academic years.</p>
+<p>The academic year is defined as two semesters and one summer session. Academic semesters or years do not need to be taken consecutively. Satisfactory progress is defined in terms of cumulative grade point average. To remain in good academic standing, the student must earn the minimum cumulative grade point averages outlined in the catalog. Satisfactory Academic Progress (SAP) indicates the successful completion of coursework towards a degree or certificate. (HEA Sec. 484(c); 34 CFR 668.16(e), 668.32(f), 668.34)</p>
+<ul>
+<li>Federal regulations require schools to monitor student progression within a degree or certificate. Students who fail to make satisfactory academic progress will lose their eligibility to receive Federal Student Aid.</li>
+<li>Evaluations are performed based on the grades posted at the end of each payment period (Fall, Spring, Summer) prior to the next term begin date.</li>
+<li>Students who progress to "suspension" will lose their aid eligibility but may appeal provided there are extenuating circumstances that inhibited their academic progress.</li>
+<li>Students who wish to submit an appeal must follow the SAP Appeal Process.</li>
+<li>If an appeal is approved, the student regains eligibility under a "probationary" status for one semester.</li>
+<li>If an appeal is denied, the student can remain in their courses but must apply for another payment method to cover tuition.</li>
+<li>When students change certificates or degrees, only credits that apply to the new program are counted toward qualitative and quantitative calculations.</li>
+</ul>
+<h3>SAP Measurements</h3>
+<ul><li>Cumulative grade point average (qualitative)</li><li>Credit hour completion / program pace (quantitative)</li></ul>
+<h4>Qualitative Standard</h4>
+<p>Cumulative GPA is the qualitative measure of SAP. Students must maintain a minimum cumulative GPA based on the number of credit hours attempted:</p>
+<table><thead><tr><th>Credit Hours Attempted</th><th>Cumulative GPA Required</th></tr></thead><tbody>
+<tr><td>1 – 9</td><td>1.50</td></tr>
+<tr><td>10 – 21</td><td>1.70</td></tr>
+<tr><td>22 – 45</td><td>1.90</td></tr>
+<tr><td>46+</td><td>2.00</td></tr>
+</tbody></table>
+<ul>
+<li>Cumulative GPA is calculated after 3 undergraduate credits are completed.</li>
+<li>Courses that receive a "W" do not calculate into CGPA.</li>
+<li>If a failed course is retaken, the later grade replaces the failed grade in the CGPA.</li>
+<li>Students who fail to meet CGPA requirements also fail SAP and will be denied Federal Student Aid, but may appeal in most cases.</li>
+<li>Remedial/developmental courses are graded A–F but are not calculated into the student's CGPA.</li>
+</ul>
+<h4>Quantitative Standards</h4>
+<p>Credit hour completion is the quantitative measure of SAP — students must complete 67% (standard rounding applies) of courses to maintain eligibility for Federal Student Aid, and cannot exceed the credits needed by more than 150%. The pace of completion ensures students finish within the allowed maximum time frame.</p>
+<h4>Maximum Time Frame / Pace</h4>
+<p>Urban College is a credit-hour school; each program is defined by a set number of credits. To complete within the maximum time frame, students must complete the program within 150% of the published credits. Students become ineligible for federal financial aid once they reach the 150% time frame.</p>
+<ul>
+<li>With the exception of remedial/developmental courses, all grades earned at the College count toward cumulative GPA.</li>
+<li>The credit hours a student may attempt cannot exceed the maximum allowed in their program, less applicable accepted transfer credits.</li>
+<li>All credits attempted count toward the maximum time frame except remedial/developmental or non-degree courses.</li>
+<li>Once a student reaches 110% of their program's published credits and cannot finish within the maximum, all federal financial aid will stop.</li>
+<li>Maximum time frame is not an appealable status.</li>
+</ul>
+<table><thead><tr><th>Program / Certificate</th><th>Credits Required</th><th>150% Maximum</th></tr></thead><tbody>
+<tr><td>Associate Degrees</td><td>60</td><td>90</td></tr>
+<tr><td>Early Childhood Education (Certificate)</td><td>27</td><td>40.5</td></tr>
+<tr><td>Case Management; Clinical Research Coordinator; Elder Care; Human Services; Paraprofessional</td><td>21</td><td>31.5</td></tr>
+<tr><td>Foundations of Early Childhood Education</td><td>19</td><td>28.5</td></tr>
+<tr><td>Project Management; Business; Digital Marketing</td><td>18</td><td>27</td></tr>
+<tr><td>Children's Behavioral Health</td><td>16</td><td>24</td></tr>
+</tbody></table>
+<h4>Coursework Included in the SAP Calculation</h4>
+<ul>
+<li>Undergraduate degree &amp; certificate courses with a final grade of A through F count toward credits attempted and completed.</li>
+<li>Final grades of "W" count as attempted credits toward the completion rate; courses dropped during add/drop are not counted as attempted.</li>
+<li>Grade changes are monitored and SAP is rechecked using new information.</li>
+<li>Incomplete grades ("I") count as attempted but not earned; an incomplete later updated with a grade is picked up at the next SAP evaluation (a re-evaluation may be requested in writing to the Office of the Registrar).</li>
+<li>Repeat coursework: all repeats count as credits attempted; a previously passed course may be repeated once and remain eligible for federal financial aid; the most recent grade is used in the GPA.</li>
+<li>Transfer courses: program-applicable transfer credits count as attempted and completed toward pace/maximum time frame but are not counted toward GPA.</li>
+</ul>
+<h4>SAP Results</h4>
+<ul>
+<li><strong>Satisfactory (SAP Met):</strong> the student is achieving both standards and may continue to receive federal financial aid.</li>
+<li><strong>Financial Aid Warning:</strong> the student is not meeting a standard after the most recent semester (from a SAP Met status) but remains eligible until the next evaluation.</li>
+<li><strong>Financial Aid Suspension:</strong> failure to meet a standard suspends aid eligibility until the next evaluation; the student may continue taking coursework without aid and may appeal under extenuating circumstances.</li>
+<li><strong>Financial Aid Probation:</strong> students placed on suspension with an approved appeal are placed on probation, and aid eligibility is reinstated.</li>
+</ul>
+<h4>SAP Appeals</h4>
+<p>Students notified of financial aid suspension may submit a SAP appeal if extenuating circumstances beyond their control prevented normal academic success, including:</p>
+<ul>
+<li>Death of an immediate family member (spouse, significant other, parent, guardian, sibling, or child)</li>
+<li>Major medical issues, including long-term care due to injury to the student or an immediate family member</li>
+<li>Domestic violence</li>
+<li>Involuntary call to active duty</li>
+<li>National disaster / emergency relief</li>
+<li>Involuntary loss of job</li>
+<li>Homelessness</li>
+<li>Other extraordinary circumstances (case-by-case)</li>
+</ul>
+<p><strong>SAP Appeal Form:</strong> the student must complete the Urban College of Boston Suspension Appeal Form explaining how the circumstance prevented them from meeting requirements, how their situation has changed, and their plan to get back on track.</p>
+<p><strong>Academic Plan:</strong> as part of the appeal, the student must agree to an Academic Plan, which becomes part of the appeal file and must be followed.</p>
+<p><strong>Appeal Committee Review:</strong> appeals are reviewed on an ongoing basis by the Review Committee; a decision is rendered within ten (10) business days of receiving all documentation and delivered via the student's Urban College email. Decisions are final.</p>
+<p><strong>Approved Appeals:</strong> approved for one term only (unless a 2-semester appeal is specially approved). The student retains aid eligibility, is placed on SAP Monitoring (Probation) each subsequent term until reaching good standing, and must follow their academic plan.</p>
+<p><strong>Denied Appeals:</strong> students who are denied are no longer eligible for Federal Financial Aid. To remain in courses, contact the Financial Services Department (<a href="mailto:financialservices@urbancollege.edu">financialservices@urbancollege.edu</a>) to secure other payment methods, or they will be administratively withdrawn by add/drop.</p>`,
+      },
+      {
+        id: 'credit-for-prior-learning',
+        title: 'Credit for Prior Learning (CPL)',
+        html: `
+<p>Phone: 617-960-0257<br>Email: <a href="mailto:academicaffairs@urbancollege.edu">academicaffairs@urbancollege.edu</a></p>
+<p>Many people have developed skills and knowledge that may make them eligible for college credit. Individuals seeking college credits may apply to earn Credit for Prior Learning (CPL) — also known as Prior Learning Assessment (PLA) or life experience credit — based on job, training, military service, or other relevant life experiences. Since each person's situation is unique, students are advised to contact an academic advisor to begin the CPL process.</p>
+<h3>Types of Evaluation and Assessment for CPL</h3>
+<p>CPL is determined on a case-by-case basis by program, department, and course. Examples of how a student may earn CPL include:</p>
+<ul>
+<li>Advanced Placement (AP) exams and national standardized exams (CLEP, DSST, Excelsior)</li>
+<li>Online course services credited by ACE for transfer (e.g., <a href="https://www.straighterline.com/" target="_blank" rel="noopener noreferrer">StraighterLine.com</a>)</li>
+<li>ACE National Guide to College Credit for Workforce Training</li>
+<li>ACE Military Guide and the Joint Services Transcript (JST)</li>
+<li>National College Credit Recommendation Service (NCCRS)</li>
+<li>License or credential review</li>
+<li>Challenge exam or exercise</li>
+<li>Portfolio development and review</li>
+<li>National Portfolio Evaluation Service (<a href="https://www.learningcounts.org/" target="_blank" rel="noopener noreferrer">LearningCounts.org</a>)</li>
+<li>International degrees and credits: Center for Educational Documentation (CED), World Education Services (WES)</li>
+</ul>
+<h3>Limitations of CPL</h3>
+<ul>
+<li>Students seeking an associate degree can apply a maximum of 18 CPL credits; the maximum for a certificate is 25% of the total credits (rounded down).</li>
+<li>These credit limits count toward the total allowed transfer credits (39 for associate students and 9 for certificate students — see the <a href="/policies-disclosures/transfer-credit-policy">Transfer Credit Policy</a>).</li>
+<li>A nominal, nonrefundable fee of $50/student is charged for CPL evaluation and credit.</li>
+<li>CPL may not be transferable to another college, so check with the transfer institution to learn more.</li>
+<li>General Education courses (science, math, humanities, social sciences) are generally not eligible for CPL except through national exams such as CLEP.</li>
+<li>The College cannot evaluate subject areas where it has no matching courses or subject areas offered.</li>
+</ul>`,
+      },
+    ],
+  },
 };

@@ -561,7 +561,7 @@ const PoliciesDisclosures: React.FC = () => {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 {renderDocLink("Direct Loan Counseling", "/policies-disclosures/financing-resources#loan-counseling")}
                                 {renderDocLink("Student Financial Aid History — National Student Loan Data System (NSLDS)", "https://studentaid.gov/", true)}
-                                {renderDocLink("Standards of Satisfactory Academic Progress (SAP) for Financial Aid", "/s/2021-2022-course-catalogue", false, "Page 17 of the Course Catalogue")}
+                                {renderDocLink("Standards of Satisfactory Academic Progress (SAP) for Financial Aid", "/policies-disclosures/academic-policies#satisfactory-academic-progress")}
                             </div>
                         </section>
 
@@ -679,7 +679,7 @@ const PoliciesDisclosures: React.FC = () => {
                                     {renderDocLink("Student Body Diversity", "/policies-disclosures/about-ucb#diversity-equity-inclusion")}
                                     {renderDocLink("Title IX / Sexual Misconduct", "/policies-disclosures/student-rights#title-ix")}
                                     {renderDocLink("Transfer Credit Policy", "/policies-disclosures/transfer-credit-policy")}
-                                    {renderDocLink("Credit for Prior Learning", "https://catalog.urbancollege.edu/content.php?catoid=3&navoid=103#credit-for-prior-learning-cpl-also-known-as-prior-learning-assessment-pla-or-life-experience-credit-policy", true)}
+                                    {renderDocLink("Credit for Prior Learning", "/policies-disclosures/academic-policies#credit-for-prior-learning")}
                                     {renderDocLink("Voter Registration", "/policies-disclosures/student-rights#voter-registration")}
                                 </div>
 
