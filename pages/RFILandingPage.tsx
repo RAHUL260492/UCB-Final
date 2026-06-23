@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import ScrollAnimation from '../components/ScrollAnimation';
+import Stats from '../components/Stats';
 import { CheckCircle, ArrowRight, GraduationCap, BookOpen, ShieldCheck, Baby, Users, Heart, Briefcase, BarChart3, Stethoscope, Laptop, BookMarked } from 'lucide-react';
 import SEO from '../components/SEO';
 
@@ -270,6 +271,9 @@ const RFILandingPage: React.FC = () => {
                     </ScrollAnimation>
                 </div>
             </section>
+
+            {/* Impact stats bar */}
+            <Stats />
 
             {/* Admissions requirements */}
             <section className="py-16 bg-white">
