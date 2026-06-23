@@ -533,8 +533,9 @@ const PoliciesDisclosures: React.FC = () => {
                             {renderContactCard(contacts.financialAid)}
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                {renderDocLink("Financial Aid Information & Net Price Calculator", "/financial-aid")}
-                                {renderDocLink("Satisfactory Academic Progress Policy", "/s/2021-2022-course-catalogue", false, "Page 17 of the Course Catalogue")}
+                                {renderDocLink("Direct Loan Counseling", "https://studentaid.gov/entrance-counseling/", true)}
+                                {renderDocLink("Student Financial Aid History — National Student Loan Data System (NSLDS)", "https://studentaid.gov/aid-summary/", true)}
+                                {renderDocLink("Standards of Satisfactory Academic Progress (SAP) for Financial Aid", "/s/2021-2022-course-catalogue", false, "Page 17 of the Course Catalogue")}
                             </div>
                         </section>
 
@@ -551,8 +552,11 @@ const PoliciesDisclosures: React.FC = () => {
 
                             <div className="space-y-6">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    {renderDocLink("Tuition, Fees & Cost of Attendance", "/financial-aid")}
-                                    {renderDocLink("Tuition, Fees & Payment Portal Information", "/financial-aid")}
+                                    {renderDocLink("Applying for Federal Financial Aid (Title IV)", "https://studentaid.gov/h/apply-for-aid/fafsa", true)}
+                                    {renderDocLink("Cost of Attendance", "/financial-aid")}
+                                    {renderDocLink("Financial Aid Programs", "/financial-aid")}
+                                    {renderDocLink("College Financing Plan", "/financial-aid", false, "Net Price Calculator")}
+                                    {renderDocLink("Return to Title IV (R2T4) Process", "/s/UCB-Financial-Aid-R2T4-Policy-V2-0121.pdf")}
                                 </div>
 
                                 <div className="space-y-3 pt-4 border-t border-gray-50">
@@ -592,10 +596,9 @@ const PoliciesDisclosures: React.FC = () => {
                             {renderContactCard(contacts.registration)}
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                {renderDocLink("Adding/Dropping/Withdrawing from Courses", "https://catalog.urbancollege.edu/content.php?catoid=1&navoid=21", true)}
-                                {renderDocLink("Withdrawal Appeal & Tuition Refund Process", "/s/UCB-Withdrawal-Appeal-and-Tuition-Refund-Process.pdf")}
-                                {renderDocLink("Refund & R2T4 Policy (PDF)", "/s/UCB-Financial-Aid-R2T4-Policy-V2-0121.pdf")}
-                                {renderDocLink("Class Attendance and Withdrawal Policy", "/s/2021-2022-course-catalogue", false, "Page 23 of the Course Catalogue")}
+                                {renderDocLink("Course Withdrawal", "https://catalog.urbancollege.edu/content.php?catoid=1&navoid=21", true)}
+                                {renderDocLink("Semester Withdrawal", "https://catalog.urbancollege.edu/content.php?catoid=1&navoid=21", true)}
+                                {renderDocLink("Withdrawal, Drop and Refund", "/s/UCB-Withdrawal-Appeal-and-Tuition-Refund-Process.pdf")}
                             </div>
                         </section>
 
@@ -610,35 +613,13 @@ const PoliciesDisclosures: React.FC = () => {
 
                             {renderContactCard(contacts.studentServices)}
 
-                            <div className="space-y-6">
-                                <div className="space-y-3">
-                                    <h4 className="text-sm font-bold text-gray-800 uppercase tracking-wide">Annual Clery Security Reports</h4>
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                        {renderDocLink("2025 Annual Clery Security Report", "/s/Final-2025-Clery-Report-to-be-emailed-1.pdf")}
-                                        {renderDocLink("2024 Annual Security Report", "/s/2024-Annual-Security-Report-Urban-College-of-Boston.pdf")}
-                                        {renderDocLink("2023 Annual Security Report", "/s/2023-Final-Annual-Security-Report.pdf")}
-                                        {renderDocLink("2022 Annual Security Report", "/s/2022-Urban-College-of-Boston-Annual-Security-Report.pdf")}
-                                    </div>
-                                </div>
-
-                                <div className="space-y-3 pt-4 border-t border-gray-50">
-                                    <h4 className="text-sm font-bold text-gray-800 uppercase tracking-wide">Emergency Preparedness & Handbook</h4>
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                        {renderDocLink("2025 Emergency Preparedness Handbook", "/s/2025-Emergency-Handbook-1.pdf")}
-                                        {renderDocLink("2024 Emergency Preparedness Handbook", "/s/2025-Emergency-Handbook.pdf")}
-                                        {renderDocLink("Emergency Procedures Handbook", "/s/2025-Emergency-Handbook-nlzf.pdf")}
-                                        {renderDocLink("Evacuation Procedure Manual", "/s/2025-UCBEvacuationProcedure1.pdf")}
-                                    </div>
-                                </div>
-
-                                <div className="space-y-3 pt-4 border-t border-gray-50">
-                                    <h4 className="text-sm font-bold text-gray-800 uppercase tracking-wide">Campus Prevention Policies</h4>
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                        {renderDocLink("Drug and Alcohol Abuse Prevention", "/safety-and-wellness")}
-                                        {renderDocLink("Hazing Policy (Revised 2025)", "/s/UCB-HazingPolicy-2025.pdf", false, "Distributed June 6, 2025")}
-                                        {renderDocLink("Health Insurance & Immunization Policy", "/course-registration")}
-                                    </div>
-                                </div>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                {renderDocLink("Annual Security and Fire Safety Report", "/s/Final-2025-Clery-Report-to-be-emailed-1.pdf", false, "Clery Act report")}
+                                {renderDocLink("Campus Hazing", "/s/UCB-HazingPolicy-2025.pdf", false, "Hazing policy")}
+                                {renderDocLink("Campus Security", "/safety-and-wellness")}
+                                {renderDocLink("Drug and Alcohol Prevention Program", "/safety-and-wellness")}
+                                {renderDocLink("Emergency Preparedness", "/s/2025-Emergency-Handbook-1.pdf")}
+                                {renderDocLink("Public Safety", "/safety-and-wellness")}
                             </div>
                         </section>
 
@@ -763,12 +744,10 @@ const PoliciesDisclosures: React.FC = () => {
                                 <h2 className="text-2xl font-display font-black text-ucb-blue">Student Outcomes</h2>
                             </div>
 
-                            <p className="text-gray-600 leading-relaxed font-light text-sm">
-                                Urban College of Boston's graduation, retention, and completion rates will be published here. Updated figures are being finalized. In the meantime, federal student-outcome data is available through the U.S. Department of Education's College Navigator portal.
-                            </p>
-
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                {renderDocLink("College Navigator — Urban College of Boston", "https://nces.ed.gov/collegenavigator/?id=429128&q=urban%20college%20of%20boston&s=all", true, "Federal graduation & retention data")}
+                                {renderDocLink("Cohort Default Rate", "https://collegescorecard.ed.gov/school/?429128-Urban-College-of-Boston", true, "U.S. Dept. of Education")}
+                                {renderDocLink("Financial Aid & Debt — College Scorecard", "https://collegescorecard.ed.gov/school/?429128-Urban-College-of-Boston", true)}
+                                {renderDocLink("Retention & Graduation Rates", "https://nces.ed.gov/collegenavigator/?id=429128&q=urban%20college%20of%20boston&s=all", true, "College Navigator")}
                             </div>
                         </section>
                     </div>
