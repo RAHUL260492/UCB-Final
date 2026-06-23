@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import ScrollAnimation from '../components/ScrollAnimation';
-import { CheckCircle, ArrowRight, Phone, GraduationCap, BookOpen, ShieldCheck, Baby, Users, Heart, Briefcase, BarChart3, Stethoscope, Laptop, BookMarked } from 'lucide-react';
+import { CheckCircle, ArrowRight, GraduationCap, BookOpen, ShieldCheck, Baby, Users, Heart, Briefcase, BarChart3, Stethoscope, Laptop, BookMarked } from 'lucide-react';
 import SEO from '../components/SEO';
 
 const APPLY_URL = 'https://urbancollege-28708.app451.sites.451.io/';
@@ -265,9 +265,6 @@ const RFILandingPage: React.FC = () => {
                         <div className="mt-7 flex flex-wrap justify-center gap-3">
                             <a href={APPLY_URL} target="_blank" rel="noopener noreferrer" className="bg-ucb-orange hover:bg-ucb-orange-glow text-white font-bold py-3 px-7 rounded-full text-sm uppercase tracking-wider transition-colors shadow-md min-h-[44px] inline-flex items-center">
                                 Get Started
-                            </a>
-                            <a href="tel:617-665-8530" className="bg-white/10 hover:bg-white/20 border border-white/25 text-white font-bold py-3 px-7 rounded-full text-sm uppercase tracking-wider transition-colors min-h-[44px] inline-flex items-center gap-2">
-                                <Phone className="w-4 h-4" /> Call (617) 665-8530
                             </a>
                         </div>
                     </ScrollAnimation>
