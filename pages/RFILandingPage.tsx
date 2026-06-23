@@ -70,6 +70,14 @@ const getCampaignDetails = (pathname: string): { id: string; name: string; desc:
             image: '/assets/images/say-yes-b-header.jpg',
         };
     }
+    if (path.includes('say-yes-a')) {
+        return {
+            id: 'urbancollege.forms.26190',
+            name: 'Skills Today. Stability Tomorrow.',
+            desc: 'Your success builds their future. Say yes to an affordable, flexible, online path to a career you love.',
+            image: '/assets/images/say-yes-a-header.jpg',
+        };
+    }
     if (path.includes('say-yes')) {
         return {
             id: 'urbancollege.forms.26190',
