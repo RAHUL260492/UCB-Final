@@ -636,25 +636,25 @@ const PoliciesDisclosures: React.FC = () => {
 
                             <div className="space-y-6">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    {renderDocLink("Academic Programs", "/programs")}
-                                    {renderDocLink("Acceptable Use Policy", "/s/Computer-and-Network-Use-Policy_FINAL.pdf")}
+                                    {renderDocLink("Academic Programs", "https://catalog.urbancollege.edu/content.php?catoid=3&navoid=100", true)}
+                                    {renderDocLink("Acceptable Use Policy", "https://catalog.urbancollege.edu/content.php?catoid=3&navoid=105&hl=%22computer%22&returnto=search#computer-and-network-usage", true)}
                                     {renderDocLink("Accreditation", "/accreditation")}
-                                    {renderDocLink("Articulation Agreements", "/college-transfer-pathways")}
-                                    {renderDocLink("Grievance Procedure", "/s/Student-Grievance-Procedure.pdf")}
-                                    {renderDocLink("Constitution Day", "/s/Constitution-and-Cookies-2025.pdf")}
+                                    {renderDocLink("Articulation Agreements", "https://catalog.urbancollege.edu/content.php?catoid=3&navoid=95#articulation-agreements", true)}
+                                    {renderDocLink("Grievance Procedure", "https://catalog.urbancollege.edu/content.php?catoid=3&navoid=105&hl=%22health%22&returnto=search#students-disciplinary-and-grievance-procedures", true)}
+                                    {renderDocLink("Constitution Day", "https://static1.squarespace.com/static/5be099a375f9eecbf2753e8d/t/68cc36e79b373b2133946a69/1758213863832/Constitution+and+Cookies+2025.pdf", true)}
                                     {renderDocLink("Copyright Infringement & Peer-to-Peer File Sharing Policy", "/s/2025-2026-URBAN-COLLEGE-OF-BOSTON-STUDENT-HANDBOOK_Final.pdf", false, "See Student Handbook")}
-                                    {renderDocLink("Disability & Accessibility Services", "/student-services")}
-                                    {renderDocLink("Family Educational Rights & Privacy Act (FERPA)", "/s/2025-2026-URBAN-COLLEGE-OF-BOSTON-STUDENT-HANDBOOK_Final.pdf", false, "See Student Handbook")}
-                                    {renderDocLink("Faculty, Administration & Staff", "/team")}
-                                    {renderDocLink("Campus Location & Services", "/campus-facilities")}
-                                    {renderDocLink("Non-Discrimination, Equal Access & Equal Opportunity Statement", "/s/2025-2026-URBAN-COLLEGE-OF-BOSTON-STUDENT-HANDBOOK_Final.pdf", false, "See Student Handbook")}
-                                    {renderDocLink("State Authorization & NC-SARA Information", "/s/2025-2026-URBAN-COLLEGE-OF-BOSTON-STUDENT-HANDBOOK_Final.pdf", false, "See Student Handbook")}
-                                    {renderDocLink("Student Activities", "/student-services")}
-                                    {renderDocLink("Student Body Diversity", "https://nces.ed.gov/collegenavigator/?id=429128&q=urban%20college%20of%20boston&s=all", true, "Federal enrollment demographics")}
-                                    {renderDocLink("Title IX / Sexual Misconduct", "/s/Title-IX.pdf")}
-                                    {renderDocLink("Transfer Credit Policy", "/s/2021-2022-course-catalogue", false, "Page 10 of the Course Catalogue")}
-                                    {renderDocLink("Credit for Prior Learning", "/s/2021-2022-course-catalogue", false, "Page 56 of the Course Catalogue")}
-                                    {renderDocLink("Voter Registration", "https://www.sec.state.ma.us/ele/eleifv/howreg.htm", true)}
+                                    {renderDocLink("Disability and Accessibility Services", "https://catalog.urbancollege.edu/content.php?catoid=3&navoid=101&hl=%22disability%22&returnto=search#accessibility-academic-accommodations", true)}
+                                    {renderDocLink("Family Educational Rights and Privacy Act (FERPA)", "https://catalog.urbancollege.edu/content.php?catoid=3&navoid=105#educational-records-and-privacy", true)}
+                                    {renderDocLink("Faculty, Administration and Staff", "https://catalog.urbancollege.edu/content.php?catoid=3&navoid=106", true)}
+                                    {renderDocLink("Campus Location and Services", "https://catalog.urbancollege.edu/content.php?catoid=3&navoid=95#campus-location-and-services", true)}
+                                    {renderDocLink("Non-Discrimination, Equal Access and Equal Opportunity Statement", "https://catalog.urbancollege.edu/content.php?catoid=3&navoid=95&hl=%22equal%22&returnto=search#diversity-equity-and-inclusion", true)}
+                                    {renderDocLink("State Authorization and NC-SARA Information", "https://catalog.urbancollege.edu/content.php?catoid=3&navoid=95&hl=%22articulation%22&returnto=search#nc-sara-participation-statement", true)}
+                                    {renderDocLink("Student Activities", "https://catalog.urbancollege.edu/content.php?catoid=3&navoid=101&hl=%22activities%22&returnto=search#student-activities-success-workshops", true)}
+                                    {renderDocLink("Student Body Diversity", "https://catalog.urbancollege.edu/content.php?catoid=3&navoid=95&hl=%22equal%22&returnto=search#diversity-equity-and-inclusion", true)}
+                                    {renderDocLink("Title IX / Sexual Misconduct", "https://catalog.urbancollege.edu/content.php?catoid=3&navoid=105&hl=%22health%22&returnto=search#students-disciplinary-and-grievance-procedures", true)}
+                                    {renderDocLink("Transfer Credit Policy", "https://catalog.urbancollege.edu/content.php?catoid=3&navoid=97&hl=%22transfer+credit%22&returnto=search#transfer-credit-evaluation", true)}
+                                    {renderDocLink("Credit for Prior Learning", "https://catalog.urbancollege.edu/content.php?catoid=3&navoid=103#credit-for-prior-learning-cpl-also-known-as-prior-learning-assessment-pla-or-life-experience-credit-policy", true)}
+                                    {renderDocLink("Voter Registration", "https://catalog.urbancollege.edu/content.php?catoid=3&navoid=105&hl=%22health%22&returnto=search#voter-registration", true)}
                                 </div>
 
                                 <div className="space-y-3 pt-4 border-t border-gray-50">
