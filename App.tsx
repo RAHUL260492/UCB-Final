@@ -33,6 +33,7 @@ import Espanol from './pages/Espanol';
 import Mandarin from './pages/Mandarin';
 import Employment from './pages/Employment';
 import PoliciesDisclosures from './pages/PoliciesDisclosures';
+import ConsumerInfoPage from './pages/ConsumerInfoPage';
 import Registration from './pages/Registration';
 import StudentServices from './pages/StudentServices';
 import AcademicCalendar from './pages/AcademicCalendar';
@@ -121,6 +122,7 @@ function App() {
             <Route path="/employment" element={<Employment />} />
             <Route path="/careers" element={<Employment />} />
             <Route path="/policies-disclosures" element={<PoliciesDisclosures />} />
+            <Route path="/policies-disclosures/:slug" element={<ConsumerInfoPage />} />
             <Route path="/policies" element={<PoliciesDisclosures />} />
             <Route path="/disclosures" element={<PoliciesDisclosures />} />
             <Route path="/course-registration" element={<Registration />} />

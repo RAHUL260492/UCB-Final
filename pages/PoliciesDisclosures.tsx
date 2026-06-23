@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import ScrollAnimation from '../components/ScrollAnimation';
 import SEO from '../components/SEO';
@@ -193,13 +194,12 @@ const PoliciesDisclosures: React.FC = () => {
 
     const renderDocLink = (label: string, url: string, isExternal: boolean = false, pageContext?: string) => {
         const LinkIcon = isExternal ? ExternalLink : FileText;
-        return (
-            <a 
-                href={url}
-                target={isExternal || url.endsWith('.pdf') ? "_blank" : undefined}
-                rel={isExternal || url.endsWith('.pdf') ? "noopener noreferrer" : undefined}
-                className="flex items-start justify-between gap-4 p-4 rounded-xl border border-gray-100 bg-white hover:border-ucb-blue/30 hover:shadow-sm transition-all group"
-            >
+        // Internal app routes use react-router <Link> (client-side nav); static
+        // assets (/s/*.pdf) and external URLs use a normal <a>.
+        const isInternal = url.startsWith('/') && !url.startsWith('/s/');
+        const className = "flex items-start justify-between gap-4 p-4 rounded-xl border border-gray-100 bg-white hover:border-ucb-blue/30 hover:shadow-sm transition-all group";
+        const inner = (
+            <>
                 <div className="flex gap-3">
                     <div className="w-9 h-9 rounded-lg bg-ucb-blue/5 border border-ucb-blue/10 flex items-center justify-center text-ucb-blue group-hover:bg-ucb-blue group-hover:text-white transition-all shrink-0">
                         <LinkIcon className="w-4.5 h-4.5" />
@@ -216,9 +216,35 @@ const PoliciesDisclosures: React.FC = () => {
                 <div className="text-gray-400 group-hover:text-ucb-blue transition-colors shrink-0 pt-1.5">
                     <ChevronDown className="w-4 h-4 -rotate-90" />
                 </div>
+            </>
+        );
+        if (isInternal) {
+            return <Link to={url} className={className}>{inner}</Link>;
+        }
+        return (
+            <a
+                href={url}
+                target={isExternal || url.endsWith('.pdf') ? "_blank" : undefined}
+                rel={isExternal || url.endsWith('.pdf') ? "noopener noreferrer" : undefined}
+                className={className}
+            >
+                {inner}
             </a>
         );
     };
+
+    // Flag an item with no destination yet (no matching page / no link provided).
+    const renderFlag = (label: string, note: string = 'Link pending — needs a destination') => (
+        <div className="flex items-start gap-3 p-4 rounded-xl border border-red-200 bg-red-50">
+            <div className="w-9 h-9 rounded-lg bg-red-100 flex items-center justify-center text-red-500 shrink-0">
+                <FileText className="w-4.5 h-4.5" />
+            </div>
+            <div>
+                <span className="font-medium text-red-600 text-sm leading-snug block">{label}</span>
+                <span className="text-[11px] text-red-400 font-light block mt-0.5">{note}</span>
+            </div>
+        </div>
+    );
 
     return (
         <div className="pt-24 lg:pt-32 bg-gray-50/30">
@@ -636,13 +662,13 @@ const PoliciesDisclosures: React.FC = () => {
 
                             <div className="space-y-6">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    {renderDocLink("Academic Programs", "https://catalog.urbancollege.edu/content.php?catoid=3&navoid=100", true)}
-                                    {renderDocLink("Acceptable Use Policy", "https://catalog.urbancollege.edu/content.php?catoid=3&navoid=105&hl=%22computer%22&returnto=search#computer-and-network-usage", true)}
+                                    {renderDocLink("Academic Programs", "/policies-disclosures/academic-programs")}
+                                    {renderDocLink("Acceptable Use Policy", "/policies-disclosures/acceptable-use-policy")}
                                     {renderDocLink("Accreditation", "/accreditation")}
                                     {renderDocLink("Articulation Agreements", "https://catalog.urbancollege.edu/content.php?catoid=3&navoid=95#articulation-agreements", true)}
                                     {renderDocLink("Grievance Procedure", "https://catalog.urbancollege.edu/content.php?catoid=3&navoid=105&hl=%22health%22&returnto=search#students-disciplinary-and-grievance-procedures", true)}
                                     {renderDocLink("Constitution Day", "https://static1.squarespace.com/static/5be099a375f9eecbf2753e8d/t/68cc36e79b373b2133946a69/1758213863832/Constitution+and+Cookies+2025.pdf", true)}
-                                    {renderDocLink("Copyright Infringement & Peer-to-Peer File Sharing Policy", "/s/2025-2026-URBAN-COLLEGE-OF-BOSTON-STUDENT-HANDBOOK_Final.pdf", false, "See Student Handbook")}
+                                    {renderFlag("Copyright Infringement & Peer-to-Peer File Sharing Policy", "Link pending — covered within the Acceptable Use Policy; confirm a destination")}
                                     {renderDocLink("Disability and Accessibility Services", "https://catalog.urbancollege.edu/content.php?catoid=3&navoid=101&hl=%22disability%22&returnto=search#accessibility-academic-accommodations", true)}
                                     {renderDocLink("Family Educational Rights and Privacy Act (FERPA)", "https://catalog.urbancollege.edu/content.php?catoid=3&navoid=105#educational-records-and-privacy", true)}
                                     {renderDocLink("Faculty, Administration and Staff", "https://catalog.urbancollege.edu/content.php?catoid=3&navoid=106", true)}
