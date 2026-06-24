@@ -72,7 +72,7 @@ const CollegeServicesAndResources: React.FC = () => {
     ];
 
     return (
-        <div className="pt-24 lg:pt-32 bg-gray-50/30 min-h-screen">
+        <div className="bg-gray-50/30 min-h-screen">
             <SEO
                 title={PAGE_META.collegeServices.title}
                 description={PAGE_META.collegeServices.description}

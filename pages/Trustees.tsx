@@ -190,7 +190,7 @@ const Trustees: React.FC = () => {
     ];
 
     return (
-        <div className="pt-24 lg:pt-32">
+        <div>
             <SEO
                 title={PAGE_META.trustees.title}
                 description={PAGE_META.trustees.description}

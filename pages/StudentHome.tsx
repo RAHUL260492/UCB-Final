@@ -35,7 +35,7 @@ const StudentHome: React.FC = () => {
     useEffect(() => { window.scrollTo(0, 0); }, []);
 
     return (
-        <div className="pt-24 lg:pt-32 bg-gray-50/40 min-h-screen">
+        <div className="bg-gray-50/40 min-h-screen">
             <SEO
                 title="Current Students | Urban College of Boston"
                 description="Your hub as a current Urban College of Boston student — registration, student services, the academic calendar, the college catalog, transfer pathways, the Learning Resource Center, technology support, commencement, and transcript requests."

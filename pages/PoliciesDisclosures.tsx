@@ -247,7 +247,7 @@ const PoliciesDisclosures: React.FC = () => {
     );
 
     return (
-        <div className="pt-24 lg:pt-32 bg-gray-50/30">
+        <div className="bg-gray-50/30">
             <SEO
                 title={PAGE_META.policies.title}
                 description={PAGE_META.policies.description}

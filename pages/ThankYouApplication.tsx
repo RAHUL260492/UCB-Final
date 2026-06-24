@@ -49,7 +49,7 @@ const ThankYouApplication: React.FC = () => {
     const [openFaq, setOpenFaq] = useState<number | null>(0);
 
     return (
-        <div className="pt-24 lg:pt-32 bg-gray-50/40 min-h-screen">
+        <div className="bg-gray-50/40 min-h-screen">
             <SEO
                 title="Thank You for Your Application | Urban College of Boston"
                 description="Congratulations on applying to Urban College of Boston! Here's what happens next, plus answers to common questions about financial aid and getting started."

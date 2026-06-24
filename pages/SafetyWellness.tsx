@@ -72,7 +72,7 @@ const SafetyWellness: React.FC = () => {
     useEffect(() => { window.scrollTo(0, 0); }, []);
 
     return (
-        <div className="pt-24 lg:pt-32 bg-gray-50/40 min-h-screen">
+        <div className="bg-gray-50/40 min-h-screen">
             <SEO
                 title="Safety & Wellness | Urban College of Boston"
                 description="Campus safety, emergency preparedness, annual security (Clery) reports, drug & alcohol prevention, Title IX, and how to report a crime at Urban College of Boston."

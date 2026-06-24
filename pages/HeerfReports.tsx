@@ -55,7 +55,7 @@ const HeerfReports: React.FC = () => {
     useEffect(() => { window.scrollTo(0, 0); }, []);
 
     return (
-        <div className="pt-24 lg:pt-32 bg-gray-50/40 min-h-screen">
+        <div className="bg-gray-50/40 min-h-screen">
             <SEO
                 title="HEERF Reports | Urban College of Boston"
                 description="Higher Education Emergency Relief Fund (HEERF) public disclosures, quarterly institutional reports, and student aid documents for Urban College of Boston."

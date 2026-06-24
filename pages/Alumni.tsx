@@ -83,7 +83,7 @@ const Alumni: React.FC = () => {
     useEffect(() => { window.scrollTo(0, 0); }, []);
 
     return (
-        <div className="pt-24 lg:pt-32 bg-gray-50/40 min-h-screen">
+        <div className="bg-gray-50/40 min-h-screen">
             <SEO
                 title="Alumni | Urban College of Boston"
                 description="Urban College of Boston alumni stories, ways to get involved, and how to stay connected. Share your story, mentor students, attend events, and give back to the next generation of learners."
