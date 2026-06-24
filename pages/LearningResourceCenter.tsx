@@ -21,7 +21,7 @@ const LearningResourceCenter: React.FC = () => {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     return (
-        <div className="pt-24 lg:pt-32">
+        <div>
             <SEO
                 title={PAGE_META.learningResourceCenter.title}
                 description={PAGE_META.learningResourceCenter.description}

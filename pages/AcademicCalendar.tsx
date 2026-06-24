@@ -115,7 +115,7 @@ const AcademicCalendar: React.FC = () => {
     const activeSem = semesters[activeTab];
 
     return (
-        <div className="pt-24 lg:pt-32 bg-gray-50/30">
+        <div className="bg-gray-50/30">
             <SEO
                 title={PAGE_META.academicCalendar.title}
                 description={PAGE_META.academicCalendar.description}
